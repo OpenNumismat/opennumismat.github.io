@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #github-page a:hover, a:focus {text-decoration: underline;}
+#github-page a.title-link {text-decoration: none;}
 
 #github-page footer a {
   color: #F2F2F2;
@@ -326,8 +327,6 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
 }
-
-a.title-link {text-decoration: none;}
 
 .title-box {
   display: inline;
