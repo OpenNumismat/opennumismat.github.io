@@ -119,7 +119,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #github-page a:hover, a:focus {text-decoration: underline;}
-#github-page a.title-link {text-decoration: none;}
 
 #github-page footer a {
   color: #F2F2F2;
@@ -328,13 +327,28 @@ Full-Width Styles
   background: #212121;
 }
 
-#github-page .logo_container {
-  float: left;
-  margin-right: 20px;
-  margin-top: 12px;
+a.title-link {text-decoration: none;}
+
+.title-box {
+  display: inline;
 }
-
-
+.title-text {
+  line-height: 1.4;
+  display:inline-block;
+}
+.title-logo {
+  line-height: 1;
+  margin-right: 1em;
+  display:inline-block;
+}
+.title-social {
+  line-height: 1;
+  width: 24px;
+  display: inline-block;
+  float: right;
+  margin-left: 1em;
+  display:inline-block;
+}
 
 /*******************************************************************************
 Small Device Styles
