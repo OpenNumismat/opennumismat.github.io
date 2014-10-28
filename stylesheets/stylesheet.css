@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #github-page a:hover, a:focus {text-decoration: underline;}
+#github-page a.title-link {text-decoration: none;}
 
 #github-page footer a {
   color: #F2F2F2;
@@ -132,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 #github-page strong {
   font-weight: bold;
 }
-
+/*
 #github-page img {
   position: relative;
   margin: 0 auto;
@@ -147,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
-
+*/
 #github-page p img {
   display: inline;
   margin: 0;
@@ -325,6 +326,12 @@ Full-Width Styles
 
 #footer_wrap {
   background: #212121;
+}
+
+#github-page .logo_container {
+  float: left;
+  margin-right: 20px;
+  margin-top: 12px;
 }
 
 
