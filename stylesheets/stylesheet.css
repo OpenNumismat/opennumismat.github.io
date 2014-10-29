@@ -35,7 +35,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-ol, ul {
+ol {
   list-style: none;
 }
 
@@ -206,8 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #github-page ul {
-  list-style: inside;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 #github-page ol {
