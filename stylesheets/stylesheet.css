@@ -97,6 +97,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0 15px 0;
 }
 
+#github-page p.title-language {
+  margin-bottom: 20px;
+}
+
 #github-page footer p {
   color: #f2f2f2;
 }
@@ -119,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #github-page a:hover, a:focus {text-decoration: underline;}
-#github-page a.title-link {text-decoration: none;}
+#github-page a.title-link {text-decoration: none; color: #fff;}
 
 #github-page footer a {
   color: #F2F2F2;
@@ -295,7 +299,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 5px 10px 30px 10px;
 }
 
 #project_title {
@@ -347,6 +351,9 @@ Full-Width Styles
   float: right;
   margin-left: 1em;
   display:inline-block;
+}
+.title-language {
+  color: #474747;
 }
 
 /*******************************************************************************
