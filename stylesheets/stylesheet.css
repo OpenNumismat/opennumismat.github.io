@@ -273,6 +273,10 @@ Full-Width Styles
   margin: 0 auto;
 }
 
+.inner img {
+  max-width: 680px;
+}
+
 #forkme_banner {
   display: block;
   position: absolute;
