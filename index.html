@@ -17,13 +17,6 @@ var langcodes=new Array("de", "pt", "ru", "ua");
 var langredirects=new Array("de", "pt", "ru", "ua");
 var languageinfo=navigator.language? navigator.language : navigator.userLanguage;
 
-function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 function redirectpage(dest){
   if (window.location.replace)
     window.location.replace(dest);
@@ -31,12 +24,10 @@ function redirectpage(dest){
     window.location=dest;
 }
 
-if (!getParameterByName('lang')) {
-  for (i=0;i<langcodes.length-1;i++){
-    if (languageinfo.substr(0,2)==langcodes[i]){
-      redirectpage(langredirects[i]);
-      break;
-    }
+for (i=0;i<langcodes.length-1;i++){
+  if (languageinfo.substr(0,2)==langcodes[i]){
+    redirectpage(langredirects[i]);
+    break;
   }
 }
 </script>
@@ -49,11 +40,11 @@ if (!getParameterByName('lang')) {
     <div id="header_wrap" class="outer">
       <header class="inner">
         <p align="right" class="title-language">
-          <a class="title-link" href="/?land=en">English</a> |
-          <a class="title-link" href="/de/?land=de">Deutsch</a> |
-          <a class="title-link" href="/pt/?land=pt">Português</a> |
-          <a class="title-link" href="/ru/?land=ru">Русский</a> |
-          <a class="title-link" href="/uk/?land=uk">Українська</a>
+          <a class="title-link" href="/">English</a> |
+          <a class="title-link" href="/de/">Deutsch</a> |
+          <a class="title-link" href="/pt/">Português</a> |
+          <a class="title-link" href="/ru/">Русский</a> |
+          <a class="title-link" href="/uk/">Українська</a>
         </p>
         <div class="title_box">
           <div class="title-social">
