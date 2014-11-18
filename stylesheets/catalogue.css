@@ -1,0 +1,26 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 1em;
+}
+
+table {
+    font-family: Verdana,Helvetica;
+    font-size: 10px;
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+}
+
+thead { display:table-header-group }
+
+th {
+    background: #ddd;
+}
+
+td {
+    background: #ecf0f6;
+    text-align: right;
+}
