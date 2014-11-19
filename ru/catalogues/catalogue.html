@@ -52,7 +52,7 @@ function setData(arr) {
     row = '<tr>';
     obverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["obverseimg"];
     reverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["reverseimg"];
-    row += '<td><a href="'+obverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"></a>';
+    row += '<td class="img"><a href="'+obverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"></a>';
     row +=     '<a href="'+reverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"></a></td>';
     row += '<td>'+ (arr[i]["title"] == undefined ? '' : arr[i]["title"]) +'</td>'
     row += '<td>'+ (arr[i]["value"] == undefined ? '' : arr[i]["value"]) +'</td>'
