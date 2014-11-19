@@ -18,9 +18,13 @@ thead { display:table-header-group }
 
 th {
     background: #ddd;
+    padding-left: 1px;
+    padding-right: 2px;
 }
 
 td {
     background: #ecf0f6;
     text-align: right;
+    padding-left: 1px;
+    padding-right: 2px;
 }
