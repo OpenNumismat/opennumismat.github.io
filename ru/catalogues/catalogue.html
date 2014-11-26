@@ -1,16 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-  <meta name=viewport content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/catalogue.css">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')</script>
-  <script src="/javascripts/jquery.lazyload.min.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="/stylesheets/catalogue.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')</script><script src="/javascripts/jquery.lazyload.min.js"></script>
 </head>
-
 <body>
 
 <div id="bodyContent">
@@ -21,25 +16,24 @@
 <th>Название</th>
 <th>Номинал</th>
 <th>Валюта</th>
-<th>Буквы</th>
+<th>Мон. двор</th>
 <th>Страна</th>
 <th>Год</th>
 <th>Серия</th>
 <th>Тема</th>
 <th>Тираж</th>
 <th>Материал</th>
-<th>Проба</th>
+<th>Fin</th>
 <th>Качество</th>
-<th>1№</th>
+<th>1 №</th>
 </tr></thead>
 <tbody></tbody>
 </table>
-
 </div>
 
 <script type="text/javascript">
 function urlParam(name) {
-  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
   return results[1] || 0;
 }
 
@@ -52,8 +46,8 @@ function setData(arr) {
     row = '<tr>';
     obverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["obverseimg"];
     reverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["reverseimg"];
-    row += '<td class="img"><a href="'+obverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"></a>';
-    row +=     '<a href="'+reverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"></a></td>';
+    row += '<td class="img">tx_ltsymbola href="'+obverse_url+'"tx_gtsymboltx_ltsymbolimg height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"tx_gtsymboltx_ltsymbol/atx_gtsymbol';
+    row +=     'tx_ltsymbola href="'+reverse_url+'"tx_gtsymboltx_ltsymbolimg height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"tx_gtsymboltx_ltsymbol/atx_gtsymbol</td>';
     row += '<td>'+ (arr[i]["title"] == undefined ? '' : arr[i]["title"]) +'</td>'
     row += '<td>'+ (arr[i]["value"] == undefined ? '' : arr[i]["value"]) +'</td>'
     row += '<td>'+ (arr[i]["unit"] == undefined ? '' : arr[i]["unit"]) +'</td>'
@@ -78,6 +72,5 @@ $.getJSON( url, function( data ) {
   document.title = data["description"]["title"];
 });
 </script>
-
 </body>
 </html>
