@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="OpenNumismat">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')</script>
+
+    <title>OpenNumismat</title>
+  </head>
+
+  <body>
+
+    <div id="github-page">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <p align="right" class="title-language">
+          <a class="title-link" href="/catalogues-mobile/">English</a> |
+          <a class="title-link" href="/de/catalogues-mobile/">Deutsch</a> |
+          <a class="title-link" href="/pl/catalogues-mobile/">Polski</a> |
+          <a class="title-link" href="/pt/catalogues-mobile/">Português</a> |
+          <a class="title-link" href="/ru/catalogues-mobile/">Русский</a> |
+          <a class="title-link" href="/uk/catalogues-mobile/">Українська</a>
+        </p>
+        <div class="title_box">
+          <div class="title-social">
+            <a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+            <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+          </div>
+          <div class="title-logo">
+            <a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a>
+          </div>
+          <div class="title-text">
+            <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+            <a class="title-link" href="/"><h3 id="project_tagline">is a collection of free, open-source coin collecting software</h3></a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div>
+<h2>Каталоги для мобильного</h2>
+<p>Для <a href="../open-numismat-android">мобильной версии</a> OpenNumismat вы можете использовать <a href="../catalogues">существующие каталоги (доступен предпросмотр)</a>, оптимизированные для экрана мобильного.</p>
+<p>Скачайте и скопируйте на ваше устройство любой из следующих каталогов:</p>
+<ul id="catalogues-list"></ul>
+<p>Для выбора требуемого файла используйте следующие виды плотности пикселей экрана:</p>
+<ul>
+<li>mdpi (medium) ~160dpi</li>
+  <li>hdpi (high) ~240dpi</li>
+  <li>xhdpi (extra-high) ~320dpi</li>
+  <li>xxhdpi (extra-extra-high) ~480dpi</li>
+  <li>xxxhdpi (extra-extra-extra-high) ~640dpi</li>
+</ul>
+<p><strong>Внимание:</strong> Все каталоги используют информацию из различных источников с различными лицензиями. Будьте осторожны при использовании не в личных целях. Все материалы принадлежат их владельцам. (Я проверю их и изменю данные или лицензию.)</p>
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OpenNumismat maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+    </div>
+
+<script type="text/javascript">
+var url = "https://cdn.rawgit.com/OpenNumismat/catalogues-mobile/master/list.json";
+
+$.getJSON( url, function( data ) {
+  var i;
+  var arr = data["catalogues"]
+  for (i = 0; i < arr.length; i++) {
+    row = '<li>';
+    row += arr[i]['title'] + ', at ';
+    row += arr[i]['date'] + '. ';
+    row += 'Download for ';
+    row += '<a href="' + arr[i]['url']['MDPI'] + '" rel="nofollow">mdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['HDPI'] + '" rel="nofollow">hdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XHDPI'] + '" rel="nofollow">xhdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XXHDPI'] + '" rel="nofollow">xxhdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XXXHDPI'] + '" rel="nofollow">xxxhdpi</a>;';
+    row += '</li>';
+    $('#catalogues-list').append(row);
+  }
+});
+</script>
+
+<script type="text/javascript">
+var reformalOptions={project_id:795287,project_host:"opennumismat.reformal.ru",
+tab_orientation:"left",tab_indent:"50%",tab_bg_color:"#F05A00",tab_border_color:
+"#FFFFFF",tab_image_url:"http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/2a94cfe6511106e7a48d0af3904e3090/left/1/tab.png",
+tab_border_width:2};(function(){var script=document.createElement('script');
+script.type='text/javascript';script.async = true;script.src=('https:'==
+document.location.protocol?'https://':'http://')+'media.reformal.ru/widgets/v3/reformal.js';
+document.getElementsByTagName('head')[0].appendChild(script);})();
+</script>
+<noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png"/></a><a href="http://opennumismat.reformal.ru">Oтзывы и предложения для OpenNumismat</a></noscript>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
