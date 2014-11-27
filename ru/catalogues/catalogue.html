@@ -23,7 +23,7 @@
 <th>Тема</th>
 <th>Тираж</th>
 <th>Материал</th>
-<th>Fin</th>
+<th>Проба</th>
 <th>Качество</th>
 <th>1 №</th>
 </tr></thead>
@@ -46,8 +46,8 @@ function setData(arr) {
     row = '<tr>';
     obverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["obverseimg"];
     reverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["reverseimg"];
-    row += '<td class="img">tx_ltsymbola href="'+obverse_url+'"tx_gtsymboltx_ltsymbolimg height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"tx_gtsymboltx_ltsymbol/atx_gtsymbol';
-    row +=     'tx_ltsymbola href="'+reverse_url+'"tx_gtsymboltx_ltsymbolimg height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"tx_gtsymboltx_ltsymbol/atx_gtsymbol</td>';
+    row += '<td class="img"><a href="'+obverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"></a>';
+    row +=     '<a href="'+reverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"></a></td>';
     row += '<td>'+ (arr[i]["title"] == undefined ? '' : arr[i]["title"]) +'</td>'
     row += '<td>'+ (arr[i]["value"] == undefined ? '' : arr[i]["value"]) +'</td>'
     row += '<td>'+ (arr[i]["unit"] == undefined ? '' : arr[i]["unit"]) +'</td>'
