@@ -73,14 +73,16 @@ $.getJSON( url, function( data ) {
     row = '<li>';
     row += arr[i]['title'] + ', at ';
     row += arr[i]['date'] + '. ';
-    row += 'tx_ltsymbola href="' + arr[i]['url'] + '" rel="nofollow"tx_gtsymbolDownloadtx_ltsymbol/atx_gtsymbol, ';
+    row += '<a href="' + arr[i]['url'] + '" rel="nofollow">Download</a>, ';
     file = arr[i]['file'];
-    row += 'tx_ltsymbola href="catalogue.html?catalogue=' + file.substr(0, file.length-3) + '" rel="nofollow"tx_gtsymbolPreviewtx_ltsymbol/atx_gtsymbol;';
+    row += '<a href="catalogue.html?catalogue=' + file.substr(0, file.length-3) + '" rel="nofollow">Preview</a>;';
     row += '</li>';
     $('#catalogues-list').append(row);
   }
 });
-</script><script type="text/javascript">
+</script>
+
+<script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
@@ -97,9 +99,8 @@ reformal_wdg_cmline="#E0E0E0";
 reformal_wdg_glcolor="#105895";
 reformal_wdg_tbcolor="#FFFFFF";
 reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
-</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
-<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
-</noscript>
+</script>
+<script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript><a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"/></a></noscript>
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -108,5 +109,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
 </script>
-</body>
+
+  </body>
 </html>
