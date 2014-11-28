@@ -85,7 +85,8 @@ $.getJSON( url, function( data ) {
   for (i = 0; i < arr.length; i++) {
     row = '<li>';
     row += arr[i]['title'] + ', at ';
-    row += arr[i]['date'] + '. ';
+    row += arr[i]['date'] + ', count: ';
+    row += arr[i]['count'] + '. ';
     row += '<a href="' + arr[i]['url'] + '" rel="nofollow">Download</a>, ';
     file = arr[i]['file'];
     row += '<a href="catalogue.html?catalogue=' + file.substr(0, file.length-3) + '" rel="nofollow">Preview</a>;';
