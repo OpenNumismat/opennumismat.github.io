@@ -269,8 +269,34 @@ Full-Width Styles
 .inner {
   position: relative;
   max-width: 680px;
-  padding: 20px 10px 20px 25px;
+  padding: 10px 10px 10px 25px;
   margin: 0 auto;
+}
+
+.inner-image {
+  position: relative;
+  max-width: 880px;
+  padding: 10px 210px 10px 25px;
+  margin: 0 auto;
+}
+
+div.content {
+  max-width: 680px;
+  display: inline-block;
+  min-height: 145px;
+}
+
+div.content-image {
+  width: 200px;
+  display: inline-block;
+  float: left;
+}
+
+div.content-image img {
+  padding-top: 10px;
+  padding-right: 10px;
+  float: right;
+  height: 150px;
 }
 
 .inner img {
@@ -325,10 +351,8 @@ Full-Width Styles
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
-}
-
-#main_content {
-  padding-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #footer_wrap {
@@ -359,9 +383,34 @@ Full-Width Styles
   color: #474747;
 }
 
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
+
+@media screen and (max-width: 1115px) {
+.inner-image {
+  max-width: 680px;
+  padding: 10px 10px 10px 25px;
+}
+
+div.content {
+  min-height: auto;
+  display: auto;
+}
+
+div.content-image {
+  width: auto;
+  display: auto;
+  float: center;
+}
+
+div.content-image img {
+  padding: 0;
+  float: auto;
+  height: 250px;
+}
+}
 
 @media screen and (max-width: 480px) {
   body {
