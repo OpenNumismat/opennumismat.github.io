@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="OpenNumismat">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')</script><title>OpenNumismat</title>
+</head>
+<body>
+
+    <div id="github-page">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/catalogues-mobile/">English</a> |
+          <a class="title-link" href="/de/catalogues-mobile/">Deutsch</a> |
+          <a class="title-link" href="/it/catalogues-mobile/">Italiano</a> |
+          <a class="title-link" href="/pl/catalogues-mobile/">Polski</a> |
+          <a class="title-link" href="/pt/catalogues-mobile/">Português</a> |
+          <a class="title-link" href="/ru/catalogues-mobile/">Русский</a> |
+          <a class="title-link" href="/uk/catalogues-mobile/">Українська</a></p>
+        <div class="title_box">
+          <div class="title-social">
+<a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+            <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+</div>
+          <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
+          <div class="title-text">
+<a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+            <a class="title-link" href="/"><h3 id="project_tagline">Software per collezionare monete open-source e gratuito</h3></a>
+</div>
+        </div>
+      </header>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div>
+<h2>Cataloghi per mobile</h2>
+<p>Per la<a href="../open-numismat-android">versione mobile</a> di OpenNumismat puoi usare <a href="../catalogues">cataloghi esistenti (anteprima disponibile)</a>, ottimizzati per lo schermo mobile.</p>
+<p>Scaricare e copiare sul vostro dispositivo qualsiasi dei seguenti cataloghi:</p>
+<ul id="catalogues-list"></ul>
+<p>Per selezionare il file desiderato usare le seguenti densità:</p>
+<ul>
+<li>mdpi (medium) ~160dpi</li>
+  <li>hdpi (high) ~240dpi</li>
+  <li>xhdpi (extra-high) ~320dpi</li>
+  <li>xxhdpi (extra-extra-high) ~480dpi</li>
+  <li>xxxhdpi (extra-extra-extra-high) ~640dpi</li>
+</ul>
+<p><strong>Nota:</strong> Tutti i cataloghi utilizzano informazioni provenienti da diverse fonti con licenze diverse. Fare attenzione per l'uso non privato. Tutti i materiali appartengono ai rispettivi proprietari. (Posso controllare e modificare dati o licenza.)</p>
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner"><p class="copyright">OpenNumismat a cura di <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
+        <p>Pubblicato con <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+</div>
+    </div>
+
+<script type="text/javascript">
+var url = "https://cdn.rawgit.com/OpenNumismat/catalogues-mobile/master/list.json";
+
+$.getJSON( url, function( data ) {
+  var i;
+  var arr = data["catalogues"]
+  for (i = 0; i < arr.length; i++) {
+    row = '<li>';
+    row += arr[i]['title'] + ', at ';
+    row += arr[i]['date'] + '. ';
+    row += 'Download for ';
+    row += 'tx_ltsymbola href="' + arr[i]['url']['MDPI'] + '" rel="nofollow"tx_gtsymbolmdpitx_ltsymbol/atx_gtsymbol, ';
+    row += 'tx_ltsymbola href="' + arr[i]['url']['HDPI'] + '" rel="nofollow"tx_gtsymbolhdpitx_ltsymbol/atx_gtsymbol, ';
+    row += 'tx_ltsymbola href="' + arr[i]['url']['XHDPI'] + '" rel="nofollow"tx_gtsymbolxhdpitx_ltsymbol/atx_gtsymbol, ';
+    row += 'tx_ltsymbola href="' + arr[i]['url']['XXHDPI'] + '" rel="nofollow"tx_gtsymbolxxhdpitx_ltsymbol/atx_gtsymbol, ';
+    row += 'tx_ltsymbola href="' + arr[i]['url']['XXXHDPI'] + '" rel="nofollow"tx_gtsymbolxxxhdpitx_ltsymbol/atx_gtsymbol;';
+    row += '</li>';
+    $('#catalogues-list').append(row);
+  }
+});
+</script><script type="text/javascript">
+reformal_wdg_domain="OpenNumismat";
+reformal_wdg_mode=0;
+reformal_wdg_title="OpenNumismat";
+reformal_wdg_ltitle="Leave feedback";
+reformal_wdg_lfont="";
+reformal_wdg_lsize="";
+reformal_wdg_color="#FFA000";
+reformal_wdg_bcolor="#516683";
+reformal_wdg_tcolor="#FFFFFF";
+reformal_wdg_align="left";
+reformal_wdg_waction=0;
+reformal_wdg_vcolor="#9FCE54";
+reformal_wdg_cmline="#E0E0E0";
+reformal_wdg_glcolor="#105895";
+reformal_wdg_tbcolor="#FFFFFF";
+reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
+<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+</noscript>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
+</script>
+</body>
+</html>
