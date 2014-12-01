@@ -303,6 +303,11 @@ div.content-image img {
   max-width: 680px;
 }
 
+img.img-logo {
+  padding-left: 5px;
+   padding-right: 5px;
+}
+
 #forkme_banner {
   display: block;
   position: absolute;
