@@ -1,4 +1,4 @@
-var url = "/data/catalogues-list.json";
+var url = "/data/catalogues_list.json";
 
 $(function() {
   $.getJSON( url, function( data ) {
