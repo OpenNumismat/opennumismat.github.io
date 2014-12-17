@@ -304,7 +304,13 @@ div.content-image img {
 
 img.img-logo {
   padding-left: 5px;
-   padding-right: 5px;
+  padding-right: 5px;
+}
+
+img.mobile-screenshot {
+  max-width: 330px;
+  padding-right: 10px;
+  vertical-align: top;
 }
 
 #forkme_banner {
