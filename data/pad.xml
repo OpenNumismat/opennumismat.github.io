@@ -103,7 +103,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/open-numismat_1-5/OpenNumismat-1.5.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.5/OpenNumismat-1.5.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
