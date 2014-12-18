@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>3.10</MASTER_PAD_VERSION>
+		<MASTER_PAD_EDITOR>Online PAD Generator 1.33 - http://www.padbuilder.com</MASTER_PAD_EDITOR>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>Janis</Company_Name>
+		<Address_1 />
+		<Address_2 />
+		<City_Town>St-Petersburg</City_Town>
+		<State_Province />
+		<Zip_Postal_Code />
+		<Country>Russia</Country>
+		<Company_WebSite_URL>http://opennumismat.github.io/</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Vitaly</Author_First_Name>
+			<Author_Last_Name>Ignatov</Author_Last_Name>
+			<Author_Email>opennumismat@gmail.com</Author_Email>
+			<Contact_First_Name>Vitaly</Contact_First_Name>
+			<Contact_Last_Name>Ignatov</Contact_Last_Name>
+			<Contact_Email>opennumismat@gmail.com</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email />
+			<Support_Email>opennumismat@gmail.com</Support_Email>
+			<General_Email />
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>OpenNumismat</Program_Name>
+		<Program_Version>1.5</Program_Version>
+		<Program_Release_Month>12</Program_Release_Month>
+		<Program_Release_Day>19</Program_Release_Day>
+		<Program_Release_Year>2014</Program_Release_Year>
+		<Program_Cost_Dollars>0</Program_Cost_Dollars>
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>New Release</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win7,WinOther,WinVista,WinXP,Win8</Program_OS_Support>
+		<Program_Language>English,Russian,Spanish,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish</Program_Language>
+		<Program_Change_Info />
+		<Program_Specific_Category>Home\/Hobby</Program_Specific_Category>
+		<Program_Category_Class>Home &amp; Hobby::Cataloging</Program_Category_Class>
+		<Program_Categories>Home &amp; Hobby</Program_Categories>
+		<Program_System_Requirements />
+		<File_Info>
+			<File_Size_Bytes>25701290</File_Size_Bytes>
+			<File_Size_K>24969.7</File_Size_K>
+			<File_Size_MB>24.5</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count />
+			<Expire_Based_On />
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>numismatic, numismatist, coin, coins, hobby, collecting, cataloging, coin collecting software, numismatic software, coin collecting, coin collection</Keywords>
+			<Char_Desc_45>A free, open-source coin collecting software</Char_Desc_45>
+			<Char_Desc_80>Coin collecting software for organize and manage your own catalogue</Char_Desc_80>
+			<Char_Desc_250>OpenNumismat is an application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
+You will be able to organize and manage your own coin catalogue with detailed description and photos for each of the items.</Char_Desc_250>
+			<Char_Desc_450>OpenNumismat is a handy and reliable application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
+With OpenNumismat, you will be able to create, organize and manage your own coin catalogue with detailed description and photos for each of the items.</Char_Desc_450>
+			<Char_Desc_2000>OpenNumismat is a handy and reliable application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
+With OpenNumismat, you will be able to create, organize and manage your own coin catalogue with detailed description and photos for each of the items.
+Main features:
+  * More than 60 customizable fields to describe the coin
+  * Up to 7 photos coins (insert image from file, clipboard, download from the Web at URL)
+  * The grouping, filters and sorting to facilitate the retrieval of coins in the catalog
+  * Generate and print reports, saving as HTML, PDF, MS Word
+  * Export customized lists as MS Excel, HTML and CSV
+  * Duplication of coins to quickly add a similar coin
+  * Batch edit coins
+  * Ability to add and customize the lists to display the required data
+  * Does not require additional software to work with a database
+  * Importing from CoinsCollector, Numizmat 2, Cabinet, CoinManage 2011, 2013, Collection Studio 3.65 and Numizmatik_Ru
+    (additional software may be required)
+  * Support languages: English, Russian, German, Spanish, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish
+  * Cross-platform: Windows, Linux, Mac OS X
+			</Char_Desc_2000>
+		</English>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://opennumismat.github.io/</Application_Info_URL>
+			<Application_Order_URL />
+			<Application_Screenshot_URL>http://opennumismat.github.io/images/screenMain.png</Application_Screenshot_URL>
+			<Application_Icon_URL>http://opennumismat.github.io/data/icon.png</Application_Icon_URL>
+			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/open-numismat_1-5/OpenNumismat-1.5.exe</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions>GPLv3 License</Distribution_Permissions>
+		<EULA>GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Full license text at http://www.gnu.org/licenses/gpl.txt</EULA>
+	</Permissions>
+</XML_DIZ_INFO>
