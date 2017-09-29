@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -71,24 +72,40 @@
 <li>CoinsCollector 2.6</li>
     <li>Numizmat 2.1 (необхідно <a href="http://www.firebirdsql.org/en/firebird-2-0/" rel="nofollow">Firebird 2.0</a>)</li>
     <li>Cabinet 2.2.2.1 (з експортного формату)</li>
-    <li>CoinManage 2011, 2013, 2015 (required <a href="http://msdn.microsoft.com/en-us/vfoxpro/bb190233" rel="nofollow">Visual FoxPro ODBC Driver</a>, <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow">Microsoft Access Database Engine</a>, Microsoft Access or any other software with ODBC Microsoft Access Driver)</li>
+    <li>CoinManage 2011, 2013, 2015 (необхідно <a href="http://msdn.microsoft.com/en-us/vfoxpro/bb190233" rel="nofollow">Visual FoxPro ODBC Driver</a>, <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow">Microsoft Access Database Engine</a>, Microsoft Access або будь-який інший додаток з ODBC Microsoft Access Driver)</li>
     <li>Collection Studio 3.65 (з експортного формату XML Table)</li>
     <li>Numizmatik_Ru 1.0.0.82</li>
     <li>uCoin.net</li>
+    <li>Tellico</li>
   </ul>
-<li>Support languages: English, Russian, German, French, Ukranian, Spanish, Hungarian, Portuguese, Greek, Czech</li>
+<li>Support languages: English, Russian, German, French, Ukranian, Spanish, Hungarian, Portuguese, Greek, Czech, Catalan, Dutch</li>
   <li>Cross-platform: Windows, Linux, MacOS and Android.</li>
 </ul>
 <h2><a href="/p/open-numismat/wiki/Auctions?wl=uk">Розбір лотів онлайн-аукціонів</a></h2>
-<p>The latest version: <strong>OpenNumismat 1.5.3</strong>. Release date: 19 February 2016</p>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.3/OpenNumismat-1.5.3.exe" rel="nofollow">Download OpenNumismat 1.5.3</a></strong> for Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.3/open-numismat_1.5.3_all.deb" rel="nofollow">Download OpenNumismat 1.5.3</a> for Debian/Ubuntu</p>
+<p>Остання версія: <strong>OpenNumismat 1.5.4</strong>. Дата релізу: 28 вересня 2017</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.4/OpenNumismat-1.5.4.exe" rel="nofollow">Завантажити OpenNumismat 1.5.4</a></strong> для Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.4/open-numismat_1.5.4_all.deb" rel="nofollow">Завантажити OpenNumismat 1.5.4</a> для Debian/Ubuntu</p>
 <p><a href="http://sourceforge.net/projects/open-numismat/files/OpenNumismat/1.4.9/OpenNumismat-1.4.9.dmg/download" rel="nofollow">Завантажити OpenNumismat 1.4.9</a> для Mac OS X 10.6 (версія 1.5 не готова для Mac OS X)</p>
-<p><a href="http://sourceforge.net/projects/open-numismat/files/OpenNumismat/1.4.9/OpenNumismat-1.4.9.dmg/download" rel="nofollow">Download OpenNumismat 1.4.9</a> для Mac OS X 10.6 и выше</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Older Releases...</a></p>
 <h2>
 <a name="News"></a>Історія змін<a href="#News" class="section_anchor"></a>
 </h2>
-  <h3>What's new in OpenNumismat 1.5.3 (19 February 2016)</h3>
+  <h3>Що нового в OpenNumismat 1.5.4 (28 вересня 2017)</h3>
+  <ul>
+<li>Added exchanging images in Edit coin dialogue (by right-click)</li>
+    <li>Don't change collection file when nothing changed (useful for Dropbox, etc)</li>
+    <li>Added import from Tellico</li>
+    <li>Added Catalan, Dutch translations. Update Greek, Ukrainian translations</li>
+    <li>Added settings for protect extra warnings on save</li>
+    <li>Fix error report</li>
+    <li>Fix pasting in numeric fields</li>
+    <li>Show collection name when entering password</li>
+    <li>Max image side len 0 for storing in original size</li>
+    <li>Enabled inserting *.ico as reference item icon</li>
+    <li>Improved getting boolean settings on MacOS</li>
+    <li>Other minor improvements</li>
+  </ul>
+<h3>What's new in OpenNumismat 1.5.3 (19 February 2016)</h3>
   <ul>
 <li>Fix loosing cursor when inserting records</li>
     <li>Add coins from another collection</li>
@@ -100,24 +117,8 @@
     <li>Fix clearing Date fields</li>
     <li>Added French translations (by Mathieu Martineau, Jean-Claude Kursner)</li>
     <li>Added option for compressing images on export to mobile</li>
-    <li>Update Clear filters icon</li>
-  </ul>
-<h3>What's new in OpenNumismat 1.5.2 (06 February 2015)</h3>
-  <ul>
-<li>Fixed crash with Polish language</li>
-    <li>Fixed storing maximised window state</li>
-  </ul>
-<h3>What's new in OpenNumismat 1.5.1 (02 February 2015)</h3>
-  <ul>
-<li>Fixed crash with saving sort order</li>
-    <li>Added import from uCoin.net</li>
-    <li>Fix import from CoinManage</li>
-    <li>Added filter for empty values in Tree</li>
-    <li>Improve Tree customization dialog</li>
-    <li>Fix navigation with Tree on large denomination (&gt; 1000)</li>
-    <li>Fix date and edge fields</li>
-    <li>Speed-up coin deletion</li>
-    <li>I18n</li>
+    <li>Updated Clear filters icon</li>
+    <li>Updated additional libraries and dependencies</li>
   </ul>
 <a href="history.html">Раніше...</a><h2>
 <a name="%D0%97%D0%BD%D1%96%D0%BC%D0%BA%D0%B8_%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D1%96%D0%B2"></a>Знімки екранів<a href="#%D0%97%D0%BD%D1%96%D0%BC%D0%BA%D0%B8_%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D1%96%D0%B2" class="section_anchor"></a>
@@ -130,8 +131,9 @@
 <ul>
 <li>Використовуйте <strong>OpenNumismat</strong> та рекомендуйте його своїм знайомим.</li>
   <li>
-<a href="http://code.google.com/p/open-numismat/issues/entry" rel="nofollow">Повідомляйте</a> про помилкита нові функції, зо допоможуть покращити <strong>OpenNumismat</strong>.</li>
-  <li>Перекладіть <strong>OpenNumismat</strong> та документацію Вашою мовою с помощью <a href="https://www.transifex.com/projects/p/opennumismat/" rel="nofollow">Transifex</a>.</li>
+<a href="http://opennumismat.idea.informer.com/" rel="nofollow">Повідомляйте</a> про помилкита нові функції, зо допоможуть покращити <strong>OpenNumismat</strong>.</li>
+  <li>
+<a href="https://www.transifex.com/projects/p/opennumismat/" rel="nofollow">Translate</a> <strong>OpenNumismat</strong> and documentation to your own language with Transifex.</li>
   <li>Якщо Ви володієте виключними правами на каталоги, фотографії або інші нумізматичні матеріали, що можуть бути включені в дані програми, зв’яжіться, будь-ласка, з автором.</li>
 </ul>
 <h2>
@@ -148,7 +150,7 @@
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner"><p class="copyright">OpenNumismat підтримуеться <a href="https://github.com/OpenNumismat">GitHub</a></p>
+      <footer class="inner"><p class="copyright">This project is maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
         <p>Публікація проекту на <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
 </div>
