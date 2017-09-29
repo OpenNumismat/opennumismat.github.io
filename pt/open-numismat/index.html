@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -75,22 +76,38 @@
     <li>Collection Studio 3.65 (de um formato de exportação como tabela XML)</li>
     <li>Numizmatik_Ru 1.0.0.82</li>
     <li>uCoin.net</li>
+    <li>Tellico</li>
   </ul>
-<li>Idiomas suportados: Alemão, Checo, Espanhol, Francês, Grego, Húngaro, Inglês, Português, Russo, Ucraniano, </li>
+<li>Support languages: English, Russian, German, French, Ukranian, Spanish, Hungarian, Portuguese, Greek, Czech, Catalan, Dutch</li>
   <li>Multiplataforma: Windows, Linux, MacOS e Android.</li>
 </ul>
 <h2>
 <a name="Transfer%C3%AAncia"></a>Transferência<a href="#Transfer%C3%AAncia" class="section_anchor"></a>
 </h2>
-<p>A última versão: <strong>OpenNumismat 1.5.3</strong>. Data de lançamento: 19 de fevereiro de 2016</p>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.3/OpenNumismat-1.5.3.exe" rel="nofollow">Transferir o OpenNumismat 1.5.3</a></strong> para Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.3/open-numismat_1.5.3_all.deb" rel="nofollow">Transferir o  OpenNumismat 1.5.3</a> para Debian/Ubuntu</p>
+<p>A última versão: <strong>OpenNumismat 1.5.4</strong>. Data de lançamento: 28 de setembro de 2017</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.4/OpenNumismat-1.5.4.exe" rel="nofollow">Transferir o OpenNumismat 1.5.4</a></strong> para Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.5.4/open-numismat_1.5.4_all.deb" rel="nofollow">Transferir o OpenNumismat 1.5.4</a> para Debian/Ubuntu</p>
 <p><a href="http://sourceforge.net/projects/open-numismat/files/OpenNumismat/1.4.9/OpenNumismat-1.4.9.dmg/download" rel="nofollow">Transfira o OpenNumismat 1.4.9</a> para Mac OS X 10.6 e posterior (versão 1.5 ainda não disponível para Mac OS X)</p>
-<p><a href="http://code.google.com/p/open-numismat/downloads/list" rel="nofollow">Versões anteriores...</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Versões anteriores...</a></p>
 <h2>
 <a name="News"></a>Histórico de alterações<a href="#News" class="section_anchor"></a>
 </h2>
-  <h3>O que há de novo no OpenNumismat 1.5.3 (19-02-2016)</h3>
+  <h3>O que há de novo no OpenNumismat 1.5.4 (28 de setembro de 2017)</h3>
+  <ul>
+<li>Added exchanging images in Edit coin dialogue (by right-click)</li>
+    <li>Don't change collection file when nothing changed (useful for Dropbox, etc)</li>
+    <li>Added import from Tellico</li>
+    <li>Added Catalan, Dutch translations. Update Greek, Ukrainian translations</li>
+    <li>Added settings for protect extra warnings on save</li>
+    <li>Fix error report</li>
+    <li>Fix pasting in numeric fields</li>
+    <li>Show collection name when entering password</li>
+    <li>Max image side len 0 for storing in original size</li>
+    <li>Enabled inserting *.ico as reference item icon</li>
+    <li>Improved getting boolean settings on MacOS</li>
+    <li>Other minor improvements</li>
+  </ul>
+<h3>O que há de novo no OpenNumismat 1.5.3 (19-02-2016)</h3>
   <ul>
 <li>Reposto o cursor perdido ao editar registos</li>
     <li>Adicionar moedas de outra coleção</li>
@@ -102,25 +119,8 @@
     <li>Reparada a limpeza de campos de data</li>
     <li>Adicionada a tradução francesa (por Mathieu Martineau, Jean-Claude Kursner)</li>
     <li>Adicionada opção para comprimir imagens ao exportar para móvel</li>
-    <li>Atualizado o ícone Limpar filtros</li>
+    <li>Atualizado ícone de limpeza de filtros</li>
     <li>Atualilizadas bibliotecas e dependências adicionais</li>
-  </ul>
-<h3>O que há de novo no OpenNumismat 1.5.2 (06 de fevereiro de 2015)</h3>
-  <ul>
-<li>Reparado erro com idioma polaco</li>
-    <li>Reparado o armazenamento do estado maximizado da janela</li>
-  </ul>
-<h3>O que há de novo no OpenNumismat 1.5.1 (02 de fevereiro de 2015)</h3>
-  <ul>
-<li>Reparado o erro ao gravar orenação</li>
-    <li>Adicionada importação de uCoin.net</li>
-    <li>Reparada a importação de CoinManage</li>
-    <li>Adicionado filtro para valores vazios na árvore</li>
-    <li>Diálogo de personalização da árvore melhorado</li>
-    <li>Reparada a nevegação na árvore com denominação grande (&gt;1000)</li>
-    <li>Reparados os campos Data e Rebordo</li>
-    <li>Acelerada a remoção de moedas</li>
-    <li>I18n</li>
   </ul>
 <a href="history.html">Antigas...</a><h2>
 <a name="Ecr%C3%A3s"></a>Ecrãs<a href="#Ecr%C3%A3s" class="section_anchor"></a>
@@ -132,8 +132,10 @@
 </h2>
 <ul>
 <li>Use o <strong>OpenNumismat</strong> e recomende-o aos seus amigos.</li>
-  <li>Envie o <a href="http://code.google.com/p/open-numismat/issues/entry" rel="nofollow">Relatório</a> quando encontrar erros e sugira novas funcionalidades que tornarão o <strong>OpenNumismat</strong> ainda melhor.</li>
-  <li>Traduza o <strong>OpenNumismat</strong> e a documentação para o seu idioma <a href="https://www.transifex.com/projects/p/opennumismat/" rel="nofollow">Transifex</a>.</li>
+  <li>
+<a href="http://opennumismat.idea.informer.com/" rel="nofollow">Envie</a> o relatório quando encontrar erros e sugira novas funcionalidades que tornarão o <strong>OpenNumismat</strong> ainda melhor.</li>
+  <li>
+<a href="https://www.transifex.com/projects/p/opennumismat/" rel="nofollow">Translate</a> <strong>OpenNumismat</strong> and documentation to your own language with Transifex.</li>
   <li>Se detém direitos exclusivos sobre catálogos, fotografias ou outro conteúdo numismático que possa ser incluído nod dados da aplicação, por favor, contacte o autor.</li>
 </ul>
 <h2>
@@ -150,7 +152,7 @@
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner"><p class="copyright">OpenNumismat mantido por <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
+      <footer class="inner"><p class="copyright">This project is maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
         <p>Publicado com <a href="http://pages.github.com">páginas GitHub</a></p>
       </footer>
 </div>
