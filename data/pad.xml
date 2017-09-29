@@ -34,10 +34,10 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>OpenNumismat</Program_Name>
-		<Program_Version>1.5.3</Program_Version>
-		<Program_Release_Month>02</Program_Release_Month>
-		<Program_Release_Day>19</Program_Release_Day>
-		<Program_Release_Year>2016</Program_Release_Year>
+		<Program_Version>1.5.4</Program_Version>
+		<Program_Release_Month>09</Program_Release_Month>
+		<Program_Release_Day>28</Program_Release_Day>
+		<Program_Release_Year>2017</Program_Release_Year>
 		<Program_Cost_Dollars>0</Program_Cost_Dollars>
 		<Program_Cost_Other_Code />
 		<Program_Cost_Other />
@@ -45,7 +45,7 @@
 		<Program_Release_Status>New Release</Program_Release_Status>
 		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
 		<Program_OS_Support>Win7,WinOther,WinVista,WinXP,Win8</Program_OS_Support>
-		<Program_Language>English,Russian,Spanish,French,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish</Program_Language>
+		<Program_Language>English,Russian,Spanish,French,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish,Catalan,Dutch</Program_Language>
 		<Program_Change_Info />
 		<Program_Specific_Category>Home\/Hobby</Program_Specific_Category>
 		<Program_Category_Class>Home &amp; Hobby::Cataloging</Program_Category_Class>
@@ -89,7 +89,7 @@ Main features:
   * Does not require additional software to work with a database
   * Importing from CoinsCollector, Numizmat 2, Cabinet, CoinManage 2011, 2013, 2015, Collection Studio 3.65 and Numizmatik_Ru
     (additional software may be required)
-  * Support languages: English, Russian, German, Spanish, French, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish
+  * Support languages: English, Russian, German, Spanish, French, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish, Catalan, Dutch
   * Cross-platform: Windows, Linux, Mac OS X
 			</Char_Desc_2000>
 		</English>
@@ -103,7 +103,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.5.3/OpenNumismat-1.5.3.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.5.4/OpenNumismat-1.5.4.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
