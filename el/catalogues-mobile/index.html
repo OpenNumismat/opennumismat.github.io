@@ -39,10 +39,10 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner"><div>
 <h2>Κατάλογοι για συσκευές Android</h2>
-<p>Για την <a href="../open-numismat-android">έκδοση Android</a> του OpenNumismat μπορείτε να χρησιομοποιήσετε <a href="../catalogues">υπάρχοντες καταλόγους (διαθέσιμη προεπισκόπηση)</a>, βελτιστοποιημένους για οθόνη κινητού τηλεφώνου.</p>
+<p>Για την <a href="../open-numismat-android">έκδοση Android</a> του OpenNumismat μπορείτε να χρησιμοποιήσετε <a href="../catalogues">υπάρχοντες καταλόγους (διαθέσιμη προεπισκόπηση)</a>, βελτιστοποιημένους για οθόνη κινητού τηλεφώνου.</p>
 <p>Κάντε λήψη και αντιγραφή στη συσκευή σας οποιουδήποτε από τους παρακάτω καταλόγους:</p>
 <ul id="catalogues-list"></ul>
-<p>Για την απαιτούμενη επιλογή χρησιμοποιήστε τα παρακάτω αρχεία γενικευμένης πυκνότητας:</p>
+<p>Για την απαιτούμενη επιλογή χρησιμοποιήστε τα παρακάτω αρχεία γενικευμένης ανάλυσης:</p>
 <ul>
 <li>mdpi (μεσαία) ~160dpi</li>
   <li>hdpi (υψηλή) ~240dpi</li>
@@ -50,7 +50,7 @@
   <li>xxhdpi (πάρα πολύ υψηλή) ~480dpi</li>
   <li>xxxhdpi (μέγιστη) ~640dpi</li>
 </ul>
-<p><strong>Σημείωση:</strong> Όλοι οι κατάλογοι χρησιμοποιούν πληροφορίες από πολλές πηγές με διαφορετικές άδειες. Να είστε προσεκτικοί για μη ιδιωτική χρήση. Όλα τα υλικά ανήκουν στους ιδιοκτήτες τους. (Θα ελεγχθεί και θα αλλάξουν τα δεδομένα ή η άδεια.)</p>
+<p><strong>Σημείωση:</strong> Όλοι οι κατάλογοι χρησιμοποιούν πληροφορίες από πολλές πηγές με διαφορετικές άδειες. Να είστε προσεκτικοί για μη ιδιωτική χρήση. Όλα τα υλικά ανήκουν στους ιδιοκτήτες τους. (Θα ελεγχθούν και θα αλλάξουν τα δεδομένα ή η άδεια.)</p>
 </div>
       </section>
 </div>
@@ -74,11 +74,11 @@ $.getJSON( url, function( data ) {
     row += arr[i]['title'] + ', at ';
     row += arr[i]['date'] + '. ';
     row += 'Download for ';
-    row += 'tx_ltsymbola href="' + arr[i]['url']['MDPI'] + '" rel="nofollow"tx_gtsymbolmdpitx_ltsymbol/atx_gtsymbol, ';
-    row += 'tx_ltsymbola href="' + arr[i]['url']['HDPI'] + '" rel="nofollow"tx_gtsymbolhdpitx_ltsymbol/atx_gtsymbol, ';
-    row += 'tx_ltsymbola href="' + arr[i]['url']['XHDPI'] + '" rel="nofollow"tx_gtsymbolxhdpitx_ltsymbol/atx_gtsymbol, ';
-    row += 'tx_ltsymbola href="' + arr[i]['url']['XXHDPI'] + '" rel="nofollow"tx_gtsymbolxxhdpitx_ltsymbol/atx_gtsymbol, ';
-    row += 'tx_ltsymbola href="' + arr[i]['url']['XXXHDPI'] + '" rel="nofollow"tx_gtsymbolxxxhdpitx_ltsymbol/atx_gtsymbol;';
+    row += '<a href="' + arr[i]['url']['MDPI'] + '" rel="nofollow">mdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['HDPI'] + '" rel="nofollow">hdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XHDPI'] + '" rel="nofollow">xhdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XXHDPI'] + '" rel="nofollow">xxhdpi</a>, ';
+    row += '<a href="' + arr[i]['url']['XXXHDPI'] + '" rel="nofollow">xxxhdpi</a>;';
     row += '</li>';
     $('#catalogues-list').append(row);
   }
