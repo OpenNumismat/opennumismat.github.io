@@ -57,19 +57,19 @@
 <h3>1.1 Description</h3>
 <p>OpenNumismat is a handy and reliable application designed for collectors of coins and coin collectors, to create a numismatic collection.
 <p>With OpenNumismat you will be able to create, organize, and manage your own catalogs of coins with detailed descriptions and photos for each item.
-<p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at https://github.com/OpenNumismat/open-numismat
-<p>Official website is located at http://opennumismat.github.io
+<p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.
+<p>Official website is located at <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.
 
 <h3>1.2 Features of the implementation</h3>
 <p>OpenNumismat is based on the PyQt library with the SQLite database engine to store the data collection, which allowed to achieve lightness and responsiveness of the interface and cross-platform.
 <p>A complete list of the used libraries is available here.
-<p>Icons used in the interface, based on the LED Icon Set v1.0, from Soft Scraps Icons deleket icons and Flag.
-<p>Translation of the interface implemented by enthusiasts using the service Transifex. Thank you for the help!
+<p>Icons used in the interface, based on the <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> and <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.
+<p>Translation of the interface implemented by enthusiasts using the service <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Thank you for the help!
 
 <h3>1.3 License</h3>
 <p>OpenNumismat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 <p>OpenNumismat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-<p>You should have received a copy of the GNU General Public License along with OpenNumismat. If not, see http://www.gnu.org/licenses/.
+<p>You should have received a copy of the GNU General Public License along with OpenNumismat. If not, see <a href="http://www.gnu.org/licenses/" target="blank_">http://www.gnu.org/licenses/</a>.
 
 <h2>2 General view</h2>
 <p>When you first start the application, the main window opens with a demo collection:
@@ -86,8 +86,8 @@
 
 <h2>3 Entering coins</h2>
 <h3>3.1 Adding a coin</h3>
-<p>Manage your collection by adding entries about every bought, sold or wished coin
-<p>To add a new coin, select the Coin->Add menu or press the Insert key. After that, the Edit dialog opens:
+<p>Manage your collection by adding entries about every bought, sold or wished coin.
+<p>To add a new coin, select the <i>Coin->Add</i> menu or press the Insert key. After that, the Edit dialog opens:
 <p><img src="/images/manual/new.png"></p>
 <p>The Edit dialog contains 6 tabs with the following fields:
 <ul>
@@ -105,11 +105,11 @@
    <li>Mint mark - a sign of the mint;
    <li>Type;
    <li>Series - a series of commemorative coins;
-   <li>Subject - an event, an object to which a commemorative coin is dedicated.
+   <li>Subject - an event or object to which a commemorative coin is dedicated.
  </ul>
  <li>Coin - State (state of coin from the collection):
  <ul>
-   <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Traffic tab;
+   <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Market tab;
    <li>Grade - the degree of coin wear;
    <li>Storage - a description of the physical location of the coin;
    <li>Quantity - the number of duplicates or coins in the roll;
@@ -164,7 +164,7 @@
    <li>Design (reverse);
    <li>Designer (reverse);
    <li>Edge - the image of the edge;
-   <li>Type (Edge);
+   <li>Type (of edge);
    <li>Label (on the edge);
    <li>Subject - a description of the topic or event to which the coin is dedicated or its design;
  </ul>
@@ -214,28 +214,28 @@
 <p>The coin image in the coin table is automatically generated from the obverse and reverse images.
 
 <h3>3.2 Editing a coin</h3>
-<p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select Edit..., select the coin and press Enter or select the Coin-> Edit ... menu. After that, the Edit dialog will be opened, described in 3.1.
+<p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select <i>Edit...</i>, select the coin and press Enter or select the <i>Coin->Edit...</i> menu. After that, the Edit dialog will be opened, described in 3.1.
 
 <h3>3.3 Clone coins</h3>
 <p>To quickly add a similar coin, you can use cloning. To do this, right click on the coin and select Clone. The Edit window filled with information about the new coin will open, edit the required fields and save.
-<p>You can also copy (using Ctrl + Ins or Ctrl + C) the existing coin and paste it (by pressing Shift + Ins or Ctrl + V) it - the Edit dialog will also open.
+<p>You can also copy (using Ctrl+Ins or Ctrl+C) the existing coin and paste it (by pressing Shift+Ins or Ctrl+V) - the Edit dialog will also open.
 <br>A copied coin or coin group (see below) can be inserted into a third-party application (for example, MS Excel or Notepad). In this case, when inserting into a third-party application, only text fields (without images) will be copied.
-<p>You can also add a new coin with pre-filled fields from the Tree. To do this, right click on the Tree element and select Add new coin ... In the opened Edit dialog all common fields for coins corresponding to this element will be filled.
+<p>You can also add a new coin with pre-filled fields from the Tree. To do this, right click on the Tree element and select <i>Add new coin...</i>. In the opened Edit dialog all common fields for coins corresponding to this element will be filled.
 
 <h3>3.4 Editing Multiple Coins</h3>
-<p>Sometimes you need to change some fields at once for several coins. To do this, select the required coins (to select several coins, use the click with the Shift or Ctrl key pressed, to select all the coins, press Ctrl + A), right-click on the selected coin group and select Multi edit... or the Coin->Edit... menu.
+<p>Sometimes you need to change some fields at once for several coins. To do this, select the required coins (to select several coins, use the click with the Shift or Ctrl key pressed, to select all the coins, press Ctrl+A), right-click on the selected coin group and select <i>Multi edit...</i> or the <i>Coin->Edit...</i> menu.
 <br>In the opened Edit dialog, all matching fields for the selected coin group will be filled. Each field will have a checkbox that allows or denies the application of the field value to the whole group of coins when saving:
 <p><img src="/images/manual/multi_edit.png"></p>
-<p>Also, group editing is available from the Tree - right-click on the tree element and select Edit coins...
+<p>Also, group editing is available from the Tree - right-click on the tree element and select <i>Edit coins...</i>.
 
 <h3>3.5 Removing</h3>
-<p>You can remove coins from the collection one by one or by a group. To delete, select the Coin-> Delete menu, right-click on the selected coin or coin group and select Delete or press the Del key.
+<p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin->Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.
 <br>Removed coins are removed from the collection at once and can not be repaired - be careful.
 
 <h2>4 View Coins</h2>
 <h3>4.1 Table of coins</h3>
 <p>The coin table is the central element of the application, serves to display coin data according to those selected with the settings.
-<p>The number and location of fields can be set in the List-> Select Columns ... menu or by right-clicking on the table header and selecting Select Columns...
+<p>The number and location of fields can be set in the <i>List->Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.
 <p><img src="/images/manual/columns.png"></p>
 <p>In the opened dialog, it is necessary to mark the fields of interest. Dragging the names of fields with a mouse can change the location of the fields relative to each other. You can also drag field headers directly into the coin table. Clicking on the field header sorts the table according to the selected field.
 <br>You can control the width of a column in a table by expanding the border of the column heading with the mouse or by right-clicking on the header and selecting Fit Size.
@@ -247,41 +247,42 @@
 <h3>4.3 Filter</h3>
 <p>Using the menu in the column headings of the table, you can filter coins by the value of the fields.
 <p><img src="/images/manual/filter.png"></p>
-<p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select (All). At the top of the menu is a field that allows you to filter out the menu values.
-<p>To reset all filters in the current list, click the Clear All Filters button on the toolbar:
+<p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select <i>(All)</i>. At the top of the menu is a field that allows you to filter out the menu values.
+<p>To reset all filters in the current list, click the <i>Clear all filters</i> button on the toolbar:
 <p><img src="/images/manual/clear_filters.png"></p>
-<h3>4.4 The Tree</h3>
+<h3>4.4 Tree</h3>
 <p>The tree on the left side of the application window allows you to group coins by field values. When selecting a tree element, the coins corresponding to the selected value are displayed in the table.
-<p>To customize the tree, right-click on the tree element and select Customize Tree ...:
+<p>To customize the tree, right-click on the tree element and select <i>Customize tree...</i>:
 <p><img src="/images/manual/tree.png"></p>
-<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, Value + Unit), hold down the Ctrl key while dragging.
+<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.
 
 <h3>4.5 Lists</h3>
 <p>The lists allow you to have several independent collection views. Each list stores its own settings for fields, columns, filters and tree. This allows the lists to be used as permanent filters.
-<p>Add a new list by clicking on the List-> New ... menu or by double-clicking on the list panel (from the empty space next to the headings of the existing lists) and entering the name of the new list. You can also create a copy of the existing list by right-clicking on the source list and selecting Duplicate.
-<p>You can change the name of the list by selecting the List-> Rename ... menu or by right-clicking on the list title and selecting Rename ...
-<p>Closed lists are not deleted and are available in the List-> Open menu. To permanently delete private lists, select the List-> Open-> Delete All menu
+<p>Add a new list by clicking on the <i>List->New...</i> menu or by double-clicking on the list panel (from the empty space next to the headings of the existing lists) and entering the name of the new list. You can also create a copy of the existing list by right-clicking on the source list and selecting <i>Duplicate</i>.
+<p>You can change the name of the list by selecting the <i>List->Rename...</i> menu or by right-clicking on the list title and selecting <i>Rename...</i>.
+<p>Closed lists are not deleted and are available in the <i>List->Open</i> menu. To permanently delete private lists, select the <i>List->Open->Delete all</i> menu
 
 <h3>4.6 Status Bar</h3>
 <p>At the bottom of the application window there is a status bar showing the name and path to the collection file, the total number of coins in the collection and the current coin table, the number of coins in the selected group.
 <p><img src="/images/manual/status.png"></p>
+
 <h2>5 Managing a collection file</h2>
-<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than directories (see 7). You can copy, move, delete and rename it by means of your OS.
+<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see 7). You can copy, move, delete and rename it by means of your OS.
 
 <h3>5.1 Opening/Creating</h3>
-<p>To create a new collection, select the menu File-> New ... In the dialog that opens, select the location and name of the new collection file.
-<br>To open an existing collection file, select the File-> Open ... menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
+<p>To create a new collection, select the menu <i>File->New...</i>. In the dialog that opens, select the location and name of the new collection file.
+<br>To open an existing collection file, select the <i>File->Open...</i> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
 <br>The File menu displays up to 5 recently opened collections available for quick opening.
 
 <h3>5.2 Backup</h3>
-<p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu File-> Backup. This will create a copy of the current collection with the date and time stamp added (for example, demo_1710121151.db for the copy made at 11:51 on 12/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the label. You can also copy the collection file using your OS.
+<p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File->Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_1710251151.db for the copy made at 11:51 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the label. You can also copy the collection file using your OS.
 <p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes.
 
 <h3>5.3 Vacuum</h3>
-<p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the File-> Vacuum menu.
+<p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <i>File->Vacuum</i> menu.
 
 <h3>5.4 Password</h3>
-<p>In the menu File-> Set password ... you can set the password that will be requested each time the collection is opened.
+<p>In the menu <i>File->Set password...</i> you can set the password that will be requested each time the collection is opened.
 <p><img src="/images/manual/password.png"></p>
 <p>Note: data encryption is not carried out, so the password protection cannot be considered complete.
 
@@ -289,40 +290,39 @@
 <h3>6.1 Generating reports</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
 <br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.
-<p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the Report -> Report menu ...:
+<p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <i>Report->Report...<i> menu:
 <p><img src="/images/manual/report_preview.png"></p>
 <p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).
 
 <h3>6.2 Quick Report</h3>
-<p>By selecting the Report-> Open menu in the browser, you can quickly view the report for the selected coins in HTML format.
+<p>By selecting the <i>Report->View in browser</i> menu, you can quickly view the report for the selected coins in HTML format.
 <p><img src="/images/manual/report.png"></p>
-<p>For a quick report, use the template set in the Settings dialog as the Default Template.
+<p>For a quick report, use the template set in the Settings dialog as the Default template.
 
 <h3>6.3 Editing Templates</h3>
-<p>The mechanism for generating template reports is based on the free Jinja2 library.
-<p>All templates are located in the templates folder at the installation location (usually C: \ Program Files (x86) \ OpenNumismat). Each template is in a separate subfolder, the name of which is used as the template name.
-<p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding.
-<br>Therefore, for editing templates it is recommended to use, for example, Notepad++.
+<p>The engine for generating template reports is based on the open-source Jinja2 library.
+<p>All templates are located in the templates folder at the installation location (usually C:\Program Files (x86)\OpenNumismat). Each template is in a separate subfolder, the name of which is used as the template name.
+<p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.
 <p>Attention: when deleting, reinstalling or updating the application, user templates can be lost. Always back up your templates, if you make changes to them, before these actions.
 
 <h3>6.4 Exporting the current list</h3>
 <p>OpenNumismat allows you to save the current list with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).
-<p>You can export the list in the menu Report-> Save current list ... In the opened dialog select the file name, the required format and save the file.
+<p>You can export the list in the menu <i>Report->Save current list...</i>. In the opened dialog select the file name, the required format and save the file.
 
 <h2>7 References</h2>
 <p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Currency, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).
 <p>Editing references is available from the Edit dialog:
 <p><img src="/images/manual/ref_edit2.png"></p>
-<p>or from menu Reference->Edit...:
+<p>or from menu <i>Reference->Edit...</i>:
 <p><img src="/images/manual/ref_edit1.png"></p>
 <p>Right-clicking on the entry in the directory opens access to adding or deleting the item's icon:
 <p><img src="/images/manual/ref_menu.png"></p>
 <p>The sort check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.
-<p>To quickly fill directories with entered data from the collection, select the Directory-> Fill menu from the collection.
-<p>By default, directories are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the directory file can be specified in the settings dialog.
+<p>To quickly fill references with entered data from the collection, select the <i>Reference->Fill from collection</i> menu.
+<p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the settings dialog.
 
 <h2>8 Settings</h2>
-<p>The settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu File-> Settings:
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File->Settings</i>:
 <p><img src="/images/manual/settings.png"></p>
 <p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.
 
