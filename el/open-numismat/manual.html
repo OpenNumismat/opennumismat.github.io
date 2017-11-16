@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="OpenNumismat">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<title>OpenNumismat</title>
+</head>
+<body>
+
+    <div id="github-page">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/ca/open-numismat/manual.html">Català</a> |
+          <a class="title-link" href="/open-numismat/manual.html">English</a> |
+          <a class="title-link" href="/el/open-numismat/manual.html">Ελληνικά</a> |
+          <a class="title-link" href="/de/open-numismat/manual.html">Deutsch</a> |
+          <a class="title-link" href="/fr/open-numismat/manual.html">Français</a> |
+          <a class="title-link" href="/it/open-numismat/manual.html">Italiano</a> |
+          <a class="title-link" href="/nl/open-numismat/manual.html">Nederlands</a> |
+          <a class="title-link" href="/pl/open-numismat/manual.html">Polski</a> |
+          <a class="title-link" href="/pt/open-numismat/manual.html">Português</a> |
+          <a class="title-link" href="/ru/open-numismat/manual.html">Русский</a> |
+          <a class="title-link" href="/uk/open-numismat/manual.html">Українська</a></p>
+        <div class="title_box">
+          <div class="title-social">
+<a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+            <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+</div>
+          <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
+          <div class="title-text">
+<a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+            <a class="title-link" href="/"><h3 id="project_tagline">Ένα δωρεάν, ανοιχτού κώδικα λογισμικό για συλλογή νομισμάτων</h3></a>
+</div>
+        </div>
+      </header>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div>
+<h1>Εγχειρίδιο χρήστη</h1>
+<h2>1 Εισαγωγή</h2>
+<h3>1.1 Περιγραφή</h3>
+<p>Το OpenNumismat είναι μια εύχρηστη και αξιόπιστη εφαρμογή που σχεδιάστηκε για λάτρεις και συλλέκτες νομισμάτων, για να δημιουργήσουν μια νομισματική συλλογή.</p>
+<p>Με το OpenNumismat θα είστε σε θέση να δημιουργήσετε, να οργανώσετε και να διαχειριστείτε τον δικό σας κατάλογο νομισμάτων με αναλυτική περιγραφή και φωτογραφίες για καθένα από τα στοιχεία.</p>
+<p>Το OpenNumismat διανέμεται πλήρες και απολύτως δωρεάν. Ο πηγαίος κώδικας έχει άδεια χρήσης GPL-3.0 και είναι διαθέσιμος στο <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
+<p>Ο επίσημος ιστότοπος βρίσκεται στο <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
+<h3>1.2 Χαρακτηριστικά της εφαρμογής</h3>
+<p>Το OpenNumismat βασίζεται σε βιβλιοθήκη PyQt με SQLite database engine για την αποθήκευση της συλλογής δεδομένων, με την οποία επιτεύχθηκε η ελαφριά αρχειοθέτηση και ανταπόκριση του περιβάλλοντος εργασίας και η λειτουργία σε διάφορες πλατφόρμες.</p>
+<p>Μια πλήρης λίστα των βιβλιοθηκών που χρησιμοποιούνται, είναι διαθέσιμη εδώ.</p>
+<p>Τα εικονίδια που χρησιμοποιούνται στο περιβάλλον χρήστη, βασίζονται στο <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0 και Soft Scraps Icons του <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> και στα <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
+<p>Η μετάφραση του περιβάλλοντος χρήστη έγινε από ενθουσιώδεις χρήστες, μέσω της υπηρεσίας <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Ευχαριστούμε πολύ για τη βοήθειά σας!</p>
+<h3>1.3 Άδεια χρήστη</h3>
+<p>Το OpenNumismat είναι δωρεάν λογισμικό: Μπορείτε να το αναδιανείμετε και/ή να το τροποποιήσετε υπό τους όρους της Γενικής Δημόσιας Άδειας GNU, όπως αυτή δημοσιεύεται από το Free Software Foundation, είτε της έκδοσης 3 της Άδειας, είτε (κατ' επιλογή σας) οποιασδήποτε μεταγενέστερης έκδοσης.</p>
+<p>Το OpenNumismat διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ και χωρίς καν την ενδεικτική εγγύηση της ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ για ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε την Γενική Δημόσια Άδεια GNU για περισσότερες λεπτομέρειες.</p>
+<p>Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Δημόσιας Άδειας GNU μαζί με το OpenNumismat. Εάν όχι, δείτε το <a href="http://www.gnu.org/licenses/" target="blank_">http://www.gnu.org/licenses/</a>.</p>
+<h2>2 Γενική εικόνα</h2>
+<p>Κατά την πρώτη εκκίνηση της εφαρμογής, ανοίγει το κύριο παράθυρο με μια συλλογή επίδειξης:</p>
+<p><img src="/images/manual/main1234.png"></p>
+<p>Το κύριο παράθυρο αποτελείται από τα ακόλουθα βασικά στοιχεία:</p>
+<ol>
+<li>Πίνακας νομισμάτων</li>
+<li>Πίνακας εικόνων</li>
+<li>Δέντρο</li>
+<li>Πίνακας πληροφοριών</li>
+</ol>
+<p>When you click on any coin in the coin table, detailed information is displayed: in the image panel - coin photographs, the tree unfolds to the element describing the coin, the information panel displays all the entered coin data.</p>
+<p>You can create a new empty collection or edit a demo by entering new data.</p>
+<h2>3 Entering coins</h2>
+<h3>3.1 Adding a coin</h3>
+<p>Manage your collection by adding entries about every bought, sold or wished coin.</p>
+<p>To add a new coin, select the <i>Coin-&gt;Add</i> menu or press the Insert key. After that, the Edit dialog opens:</p>
+<p><img src="/images/manual/new.png"></p>
+<p>The Edit dialog contains 6 tabs with the following fields:</p>
+<ul>
+<li>Coin - Main details:<ul>
+<li>Name - a descriptive name of the coin (can be automatically created from the remaining fields by clicking the "Generate" button);</li>
+<li>Περιοχή;</li>
+<li>Χώρα;</li>
+<li>Period - period in the history of the country;</li>
+<li>Χάρακας;</li>
+<li>Αξία;</li>
+<li>Μονάδα;</li>
+<li>Έτος;</li>
+<li>Νομισματοκοπείο;</li>
+<li>Mint mark - a sign of the mint;</li>
+<li>Τύπος;</li>
+<li>Series - a series of commemorative coins;</li>
+<li>Subject - an event or object to which a commemorative coin is dedicated.</li>
+</ul>
+</li>
+<li>Coin - State (state of coin from the collection):<ul>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Market tab;</li>
+<li>Grade - the degree of coin wear;</li>
+<li>Storage - a description of the physical location of the coin;</li>
+<li>Quantity - the number of duplicates or coins in the roll;</li>
+<li>Γραμμικός κώδικας;</li>
+<li>Defect - a description of the coin barque;</li>
+<li>Χαρακτηριστικά.</li>
+</ul>
+</li>
+<li>Market - Buy:<ul>
+<li>Ημερομηνία;</li>
+<li>Τιμή;</li>
+<li>Paid - final price including commission;</li>
+<li>Commission - additional costs associated with the acquisition of a coin (the field is available only in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
+<li>Πωλητής;</li>
+<li>Τόπος;</li>
+<li>Πληροφορίες.</li>
+</ul>
+</li>
+<li>Market - Sale:<ul>
+<li>Ημερομηνία;</li>
+<li>Τιμή;</li>
+<li>Bailed - the total received amount taking into account the commission;</li>
+<li>Commission - additional costs associated with the sale of coins (the field is only available in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
+<li>Αγοραστής;</li>
+<li>Τόπος;</li>
+<li>Πληροφορίες.</li>
+</ul>
+</li>
+<li>Parameters - Parameters (physical parameters of the coin):<ul>
+<li>Υλικό;</li>
+<li>Λεπτότητα;</li>
+<li>Βάρος;</li>
+<li>Διάμετρος;</li>
+<li>Πάχος;</li>
+<li>Σχήμα;</li>
+<li>Obv/Rev - the ratio of obverse and reverse (medal, coin).</li>
+</ul>
+</li>
+<li>Parameters - Minting (coin release data):<ul>
+<li>Ημερ/νία έκδοσης;</li>
+<li>Mintage;</li>
+<li>Περίοδος έκδοσης;</li>
+<li>Ποιότητα;</li>
+<li>Σημείωση.</li>
+</ul>
+</li>
+<li>Design (description of coin design):<ul>
+<li>Obverse - the obverse image;</li>
+<li>Design (obverse);</li>
+<li>Designer (obverse);</li>
+<li>Reverse - reverse image;</li>
+<li>Design (reverse);</li>
+<li>Designer (reverse);</li>
+<li>Edge - the image of the edge;</li>
+<li>Type (of edge);</li>
+<li>Label (on the edge);</li>
+<li>Subject - a description of the topic or event to which the coin is dedicated or its design;</li>
+</ul>
+</li>
+<li>Classification:<ul>
+<li>1#, 2#, 3#, 4# - numbers of a version of a coin under catalogs;</li>
+<li>Σπανιότητα;</li>
+<li>Fine - the approximate price of a coin in the state F-12, F-15;</li>
+<li>VF - the approximate price of a coin in the state of VF-20, VF-25, VF-30, VF-35;</li>
+<li>XF - the approximate price of a coin in the state EF-40, XF-45;</li>
+<li>Unc - the approximate price of a coin in the state MS-60 and above;</li>
+<li>Variation, Obverse, Reverse, Edge - a brief description of the variety of the coin, its obverse, reverse and edge;</li>
+<li>URL - web-link to information about the coin or to a file on the disk.</li>
+</ul>
+</li>
+<li>Εικόνες;<ul><li>Photo 1, Photo 2, Photo 3, Photo 4 - 4 additional photos or images.</li></ul>
+</li>
+<li>System (not editable, can be displayed only in the table):<ul>
+<li>ID - unique coin number in the collection;</li>
+<li>Created - date the description was created;</li>
+<li>Updated - the date of the last editing of the description;</li>
+<li>Image - an optimized image of the obverse and the reverse of the coin for output in the coin table.</li>
+</ul>
+</li>
+</ul>
+<p>For some fields, values can be obtained from the reference (see 7):</p>
+<p><img src="/images/manual/ref_list.png"></p>
+<p>In the Settings dialog, you can remove some of the unused fields (see 8).</p>
+<p>Some fields (such as Value, Year, Quantity, Price, Fineness, Weight, Diameter, Mintage) are for entering only numeric values. To enter values in the expanded format ("BC" in the Year field, fractions in the Nominal field, range in the Weight field, etc.) in these fields, you must enable the Free format of numeric fields in the Settings dialog.</p>
+<h4>3.1.1 Editing Images</h4>
+<p>The application supports up to 7 images of each coin.</p>
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
+<p><img src="/images/manual/img_menu.png"></p>
+<ul>
+<li>Load - select image from file on disk</li>
+<li>Save as - saves the image to a file on disk</li>
+<li>Rename - set a unique name for the image that will be displayed in the tooltip of the image panel (see 4.2)</li>
+<li>Exchange with - swaps two images</li>
+<li>Paste - paste an image from the clipboard (it can be a graphic file, an image copied to a graphics editor or a web link)</li>
+<li>Copy - copies the image to the clipboard for later paste into the image editor</li>
+<li>Delete - deletes the current image.</li>
+</ul>
+<p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the standard image viewer of your OS.</p>
+<p>The coin image in the coin table is automatically generated from the obverse and reverse images.</p>
+<h3>3.2 Editing a coin</h3>
+<p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select <i>Edit...</i>, select the coin and press Enter or select the <i>Coin-&gt;Edit...</i> menu. After that, the Edit dialog will be opened, described in 3.1.</p>
+<h3>3.3 Clone coins</h3>
+<p>To quickly add a similar coin, you can use cloning. To do this, right click on the coin and select Clone. The Edit window filled with information about the new coin will open, edit the required fields and save.</p>
+<p>You can also copy (using Ctrl+Ins or Ctrl+C) the existing coin and paste it (by pressing Shift+Ins or Ctrl+V) - the Edit dialog will also open.
+<br>A copied coin or coin group (see below) can be inserted into a third-party application (for example, MS Excel or Notepad). In this case, when inserting into a third-party application, only text fields (without images) will be copied.</p>
+<p>You can also add a new coin with pre-filled fields from the Tree. To do this, right click on the Tree element and select <i>Add new coin...</i>. In the opened Edit dialog all common fields for coins corresponding to this element will be filled.</p>
+<h3>3.4 Editing Multiple Coins</h3>
+<p>Sometimes you need to change some fields at once for several coins. To do this, select the required coins (to select several coins, use the click with the Shift or Ctrl key pressed, to select all the coins, press Ctrl+A), right-click on the selected coin group and select <i>Multi edit...</i> or the <i>Coin-&gt;Edit...</i> menu.
+<br>In the opened Edit dialog, all matching fields for the selected coin group will be filled. Each field will have a checkbox that allows or denies the application of the field value to the whole group of coins when saving:</p>
+<p><img src="/images/manual/multi_edit.png"></p>
+<p>Also, group editing is available from the Tree - right-click on the tree element and select <i>Edit coins...</i>.</p>
+<h3>3.5 Removing</h3>
+<p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.
+<br>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
+<h2>4 View Coins</h2>
+<h3>4.1 Table of coins</h3>
+<p>The coin table is the central element of the application, serves to display coin data according to those selected with the settings.</p>
+<p>The number and location of fields can be set in the <i>List-&gt;Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.</p>
+<p><img src="/images/manual/columns.png"></p>
+<p>In the opened dialog, it is necessary to mark the fields of interest. Dragging the names of fields with a mouse can change the location of the fields relative to each other. You can also drag field headers directly into the coin table. Clicking on the field header sorts the table according to the selected field.
+<br>You can control the width of a column in a table by expanding the border of the column heading with the mouse or by right-clicking on the header and selecting Fit Size.</p>
+<h3>4.2 Image Panel</h3>
+<p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
+<br>Double-clicking opens the image in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.</p>
+<h3>4.3 Filter</h3>
+<p>Using the menu in the column headings of the table, you can filter coins by the value of the fields.</p>
+<p><img src="/images/manual/filter.png"></p>
+<p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select <i>(All)</i>. At the top of the menu is a field that allows you to filter out the menu values.</p>
+<p>To reset all filters in the current list, click the <i>Clear all filters</i> button on the toolbar:</p>
+<p><img src="/images/manual/clear_filters.png"></p>
+<h3>4.4 Tree</h3>
+<p>The tree on the left side of the application window allows you to group coins by field values. When selecting a tree element, the coins corresponding to the selected value are displayed in the table.</p>
+<p>To customize the tree, right-click on the tree element and select <i>Customize tree...</i>:</p>
+<p><img src="/images/manual/tree.png"></p>
+<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.</p>
+<h3>4.5 Lists</h3>
+<p>The lists allow you to have several independent collection views. Each list stores its own settings for fields, columns, filters and tree. This allows the lists to be used as permanent filters.</p>
+<p>Add a new list by clicking on the <i>List-&gt;New...</i> menu or by double-clicking on the list panel (from the empty space next to the headings of the existing lists) and entering the name of the new list. You can also create a copy of the existing list by right-clicking on the source list and selecting <i>Duplicate</i>.</p>
+<p>You can change the name of the list by selecting the <i>List-&gt;Rename...</i> menu or by right-clicking on the list title and selecting <i>Rename...</i>.</p>
+<p>Closed lists are not deleted and are available in the <i>List-&gt;Open</i> menu. To permanently delete private lists, select the <i>List-&gt;Open-&gt;Delete all</i> menu</p>
+<h3>4.6 Status Bar</h3>
+<p>At the bottom of the application window there is a status bar showing the name and path to the collection file, the total number of coins in the collection and the current coin table, the number of coins in the selected group.</p>
+<p><img src="/images/manual/status.png"></p>
+
+<h2>5 Managing a collection file</h2>
+<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see 7). You can copy, move, delete and rename it by means of your OS.</p>
+<h3>5.1 Opening/Creating</h3>
+<p>To create a new collection, select the menu <i>File-&gt;New...</i>. In the dialog that opens, select the location and name of the new collection file.
+<br>To open an existing collection file, select the <i>File-&gt;Open...</i> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
+<br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
+<h3>5.2 Backup</h3>
+<p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File-&gt;Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_1710251151.db for the copy made at 11:51 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the label. You can also copy the collection file using your OS.</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes.</p>
+<h3>5.3 Vacuum</h3>
+<p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <i>File-&gt;Vacuum</i> menu.</p>
+<h3>5.4 Password</h3>
+<p>In the menu <i>File-&gt;Set password...</i> you can set the password that will be requested each time the collection is opened.</p>
+<p><img src="/images/manual/password.png"></p>
+<p>Note: data encryption is not carried out, so the password protection cannot be considered complete.</p>
+<h2>6 Reports</h2>
+<h3>6.1 Generating reports</h3>
+<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
+<br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
+<p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <i>Report-&gt;Report...<i> menu:</i></i></p>
+<p><img src="/images/manual/report_preview.png"></p>
+<p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).</p>
+<h3>6.2 Quick Report</h3>
+<p>By selecting the <i>Report-&gt;View in browser</i> menu, you can quickly view the report for the selected coins in HTML format.</p>
+<p><img src="/images/manual/report.png"></p>
+<p>For a quick report, use the template set in the Settings dialog as the Default template.</p>
+<h3>6.3 Editing Templates</h3>
+<p>The engine for generating template reports is based on the open-source Jinja2 library.</p>
+<p>All templates are located in the templates folder at the installation location (usually C:\Program Files (x86)\OpenNumismat). Each template is in a separate subfolder, the name of which is used as the template name.</p>
+<p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
+<p>Attention: when deleting, reinstalling or updating the application, user templates can be lost. Always back up your templates, if you make changes to them, before these actions.</p>
+<h3>6.4 Exporting the current list</h3>
+<p>OpenNumismat allows you to save the current list with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).</p>
+<p>You can export the list in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
+<h2>7 References</h2>
+<p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Currency, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
+<p>Editing references is available from the Edit dialog:</p>
+<p><img src="/images/manual/ref_edit2.png"></p>
+<p>or from menu <i>Reference-&gt;Edit...</i>:</p>
+<p><img src="/images/manual/ref_edit1.png"></p>
+<p>Right-clicking on the entry in the directory opens access to adding or deleting the item's icon:</p>
+<p><img src="/images/manual/ref_menu.png"></p>
+<p>The sort check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.</p>
+<p>To quickly fill references with entered data from the collection, select the <i>Reference-&gt;Fill from collection</i> menu.</p>
+<p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the settings dialog.</p>
+<h2>8 Settings</h2>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File-&gt;Settings</i>:</p>
+<p><img src="/images/manual/settings.png"></p>
+<p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.</p>
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner"><p class="copyright">This project is maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+</div>
+    </div>
+
+<script type="text/javascript">
+reformal_wdg_domain="OpenNumismat";
+reformal_wdg_mode=0;
+reformal_wdg_title="OpenNumismat";
+reformal_wdg_ltitle="Leave feedback";
+reformal_wdg_lfont="";
+reformal_wdg_lsize="";
+reformal_wdg_color="#FFA000";
+reformal_wdg_bcolor="#516683";
+reformal_wdg_tcolor="#FFFFFF";
+reformal_wdg_align="left";
+reformal_wdg_waction=0;
+reformal_wdg_vcolor="#9FCE54";
+reformal_wdg_cmline="#E0E0E0";
+reformal_wdg_glcolor="#105895";
+reformal_wdg_tbcolor="#FFFFFF";
+reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
+<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+</noscript>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
+</script>
+</body>
+</html>
