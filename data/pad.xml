@@ -25,7 +25,7 @@
 		<Support_Info>
 			<Sales_Email />
 			<Support_Email>opennumismat@gmail.com</Support_Email>
-			<General_Email />
+			<General_Email>opennumismat@gmail.com</General_Email>
 			<Sales_Phone />
 			<Support_Phone />
 			<General_Phone />
@@ -68,15 +68,15 @@
 	</Program_Info>
 	<Program_Descriptions>
 		<English>
-			<Keywords>numismatic, numismatist, coin, coins, hobby, collecting, cataloging, coin collecting software, numismatic software, coin collecting, coin collection</Keywords>
+			<Keywords>opennumismat, numismatic, coin, coins, collecting, cataloguing, coin collecting software, numismatic software, coin collecting, coin collection, coin software, free, database</Keywords>
 			<Char_Desc_45>A free, open-source coin collecting software</Char_Desc_45>
-			<Char_Desc_80>Coin collecting software for organize and manage your own catalogue</Char_Desc_80>
-			<Char_Desc_250>OpenNumismat is an application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
-You will be able to organize and manage your own coin catalogue with detailed description and photos for each of the items.</Char_Desc_250>
-			<Char_Desc_450>OpenNumismat is a handy and reliable application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
-With OpenNumismat, you will be able to create, organize and manage your own coin catalogue with detailed description and photos for each of the items.</Char_Desc_450>
-			<Char_Desc_2000>OpenNumismat is a handy and reliable application aimed at coin lovers, numismatists or amateurs looking to create a numismatics collection.
-With OpenNumismat, you will be able to create, organize and manage your own coin catalogue with detailed description and photos for each of the items.
+			<Char_Desc_80>A free coin collecting software for organize and manage your own catalogue</Char_Desc_80>
+			<Char_Desc_250>OpenNumismat is a free, open-source coin collecting software.
+With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.</Char_Desc_250>
+			<Char_Desc_450>OpenNumismat is a free, open-source coin collecting software.
+With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.</Char_Desc_450>
+			<Char_Desc_2000>OpenNumismat is a free, open-source coin collecting software.
+With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.
 Main features:
   * More than 60 customizable fields to describe the coin
   * Up to 7 photos coins (insert image from file, clipboard, download from the Web at URL)
@@ -103,7 +103,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.6.0/OpenNumismat-1.6.0.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.6.1/OpenNumismat-1.6.1.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
