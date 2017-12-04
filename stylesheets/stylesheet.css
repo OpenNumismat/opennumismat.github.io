@@ -159,6 +159,7 @@ p img {
   vertical-align: middle;
   text-align: center;
   border: none;
+  max-width: 100%;
 }
 
 #github-page pre, code {
@@ -298,10 +299,6 @@ div.content-image img {
   height: 150px;
 }
 
-.images img {
-  max-width: 680px;
-  width: 100%;
-}
 .video {
   max-width: 420px;
   width: 100% !important;
