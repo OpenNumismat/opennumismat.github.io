@@ -300,6 +300,7 @@ div.content-image img {
 
 .inner img {
   max-width: 680px;
+  width: 100%;
 }
 
 img.img-logo {
