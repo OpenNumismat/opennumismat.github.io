@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Online viewer - OpenNumismat - free coin collecting software</title>
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="codemirror/lib/codemirror.js"></script>
+
+</head>
+<body>
+
+<h1>Online OpenNumismat viewer</h1>
+
+<label class="button">Load an OpenNumismat collection file: <input type='file' id='dbfile' accept=".db"></label>
+
+<div id="error" class="error"></div>
+
+<pre id="output">Results will be displayed here</pre>
+
+<script src="codemirror/mode/sql/sql.js"></script>
+
+<script type="text/javascript" src="gui.js"></script>
+</body>
+</html>
