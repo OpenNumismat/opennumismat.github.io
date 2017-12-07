@@ -1,15 +1,10 @@
 html {
-	background:#222;
 	margin:auto;
-	width:80%;
+	max-width: 680px;
 }
 
 body{
-	background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
-	border: 1px solid black;
-	padding: 10px 20px;
-	box-shadow: 5px 0px 30px #000;
-	border-radius: 8px;
+    padding: 10px;
 }
 
 h1 {
