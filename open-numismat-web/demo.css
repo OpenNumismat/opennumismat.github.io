@@ -7,7 +7,16 @@ body{
     padding: 10px;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  color:#222222;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 32px;
 	text-align: center;
 	color: #222;
 	margin: 0 0 30px;
@@ -59,15 +68,23 @@ h1 {
 }
 
 table {
-	width:auto;
+	width:100%;
 	margin:auto;
 	border:1px solid black;
  	border-collapse:collapse;
  	margin-bottom:10px;
+    table-layout: fixed;
 }
 
 th, td {
 	border:1px solid #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td.min {
+    width: 90px;
 }
 
 footer {

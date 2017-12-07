@@ -59,9 +59,8 @@ var tableCreate = function () {
   }
   return function (columns, values){
     var tbl  = document.createElement('table');
-    var html = '<thead>' + valconcat(columns, 'th') + '</thead>';
-    var rows = values.map(function(v){ return '<td><img src="data:image/png;base64,' + _arrayBufferToBase64(v[0]) + '"></td><td>' + v[1] + '</td><td>' + v[2] + '</td>'; });
-    html += '<tbody>' + valconcat(rows, 'tr') + '</tbody>';
+    var rows = values.map(function(v){ return '<td class="min"><img src="data:image/png;base64,' + _arrayBufferToBase64(v[0]) + '"></td><td>' + v[1] + '</td><td class="min">' + v[2] + '</td>'; });
+    var html = '<tbody>' + valconcat(rows, 'tr') + '</tbody>';
 	  tbl.innerHTML = html;
     return tbl;
   }
