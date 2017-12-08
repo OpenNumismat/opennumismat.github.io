@@ -41,6 +41,22 @@ function updateTable() {
         else
             applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.status='" + val + "';");
     });
+
+    $('select#country').change(function() {
+        val = $(this).find('option:selected').text();
+        if (val === 'All')
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+        else
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.country='" + val + "';");
+    });
+
+    $('select#series').change(function() {
+        val = $(this).find('option:selected').text();
+        if (val === 'All')
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+        else
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.series='" + val + "';");
+    });
 }
 
 // Run a command in the database
@@ -52,7 +68,7 @@ function applyFilter(commands) {
 
 		tic();
         statusElm.textContent = "";
-        $('.table').replaceWith(tableCreate(results[0].columns, results[0].values));
+        $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
         updateTable();
 
 		toc("Displaying results");
@@ -70,7 +86,9 @@ function execute(commands) {
 		tic();
         statusElm.textContent = "";
 		outputElm.innerHTML = "";
-		outputElm.appendChild(filterCreate(results[1].columns, results[1].values));
+		outputElm.appendChild(filterCreate('status', 'Status', results[1].values));
+		outputElm.appendChild(filterCreate('country', 'Country', results[2].values));
+		outputElm.appendChild(filterCreate('series', 'Series', results[3].values));
 		outputElm.appendChild(tableCreate(results[0].columns, results[0].values));
         updateTable();
 
@@ -82,10 +100,10 @@ function execute(commands) {
 
 // Create an HTML table
 var filterCreate = function () {
-  return function (columns, values){
+  return function (id, label, values){
     var tbl  = document.createElement('div');
     var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-    var html = '<label for="status">Status:</label><select id="status"><option>All</option>' + rows.join('') + '</select>';
+    var html = '<label for="' + id + '">' + label + ':</label><select id="' + id + '"><option>All</option>' + rows.join('') + '</select>';
     tbl.innerHTML = html;
     return tbl;
   }
@@ -94,6 +112,7 @@ var filterCreate = function () {
 var tableCreate = function () {
   return function (columns, values){
     var tbl  = document.createElement('div');
+    tbl.setAttribute("id", "table");
     var rows = values.map(function(v){ return '<tr class="row" data-id="' + v[0] + '"><td class="min"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td><td>' + v[2] + '</td><td class="min">' + v[3] + '</td></tr>'; });
     var html = '<table class="table"><tbody>' + rows.join('') + '</tbody></table>';
     tbl.innerHTML = html;
@@ -110,7 +129,7 @@ function showInfo(id) {
 		tic();
         statusElm.textContent = "";
 		infoElm.innerHTML = "";
-		infoElm.appendChild(infoCreate(results[0].columns, results[0].values));
+		infoElm.appendChild(infoCreate(results[0].values));
 
         $('div.coin-image').click(function() {
             showImages(id);
@@ -128,7 +147,7 @@ function showInfo(id) {
 }
 
 var infoCreate = function () {
-  return function (columns, values){
+  return function (values){
     v = values[0];
     var tbl  = document.createElement('div');
     var title = '<h3>' + v[0] +'</h3>';
@@ -186,7 +205,7 @@ function showImages(id) {
         statusElm.textContent = "";
 		imagesElm.innerHTML = "";
 		for (var i=0; i<results.length; i++) {
-			imagesElm.appendChild(imagesCreate(results[i].columns, results[i].values));
+			imagesElm.appendChild(imagesCreate(results[i].values));
 		}
 
 		toc("Displaying results");
@@ -206,7 +225,7 @@ function showImages(id) {
 }
 
 var imagesCreate = function () {
-  return function (columns, values){
+  return function (values){
     v = values[0];
     var tbl  = document.createElement('div');
     console.log(arrayBufferToBase64(v[3]));
@@ -268,7 +287,7 @@ dbFileElm.onchange = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
             noerror()
-            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins;");
+            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins; SELECT DISTINCT country FROM coins; SELECT DISTINCT series FROM coins;");
 		};
 		tic();
 		try {
