@@ -36,13 +36,20 @@ function execute(commands) {
 
 		tic();
 		outputElm.innerHTML = "";
-		for (var i=0; i<results.length; i++) {
-			outputElm.appendChild(tableCreate(results[i].columns, results[i].values));
-		}
+		outputElm.appendChild(filterCreate(results[1].columns, results[1].values));
+		outputElm.appendChild(tableCreate(results[0].columns, results[0].values));
 
         $('tr.row').click(function() {
             scrollPos = document.documentElement.scrollTop;
             showInfo($( this ).attr('data-id'));
+        });
+
+        $('select#status').change(function() {
+            val = $(this).find('option:selected').text();
+            if (val === 'All')
+                execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins;");
+            else
+                execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.status='" + val + "'; SELECT DISTINCT status FROM coins;");
         });
 
 		toc("Displaying results");
@@ -51,23 +58,22 @@ function execute(commands) {
 	outputElm.textContent = "Fetching results...";
 }
 
-function arrayBufferToBase64( buffer ) {
-    var binary = '';
-    var bytes = new Uint8Array( buffer );
-    var len = bytes.byteLength;
-    for (var i = 0; i < len; i++) {
-        binary += String.fromCharCode( bytes[ i ] );
-    }
-    return window.btoa( binary );
-}
-
 // Create an HTML table
+var filterCreate = function () {
+  return function (columns, values){
+    var tbl  = document.createElement('div');
+    var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
+    var html = '<label for="status">Status:</label><select id="status"><option>All</option>' + rows.join('') + '</select>';
+    tbl.innerHTML = html;
+    return tbl;
+  }
+}();
+
 var tableCreate = function () {
   return function (columns, values){
-    var tbl  = document.createElement('table');
-    tbl.className = "table";
+    var tbl  = document.createElement('div');
     var rows = values.map(function(v){ return '<tr class="row" data-id="' + v[0] + '"><td class="min"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td><td>' + v[2] + '</td><td class="min">' + v[3] + '</td></tr>'; });
-    var html = '<tbody>' + rows.join('') + '</tbody>';
+    var html = '<table class="table"><tbody>' + rows.join('') + '</tbody></table>';
     tbl.innerHTML = html;
     return tbl;
   }
@@ -219,6 +225,16 @@ function toc(msg) {
 	console.log((msg||'toc') + ": " + dt + "ms");
 }
 
+function arrayBufferToBase64( buffer ) {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa( binary );
+}
+
 // Load a db from a file
 dbFileElm.onchange = function() {
 	var f = dbFileElm.files[0];
@@ -228,7 +244,7 @@ dbFileElm.onchange = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
             noerror()
-            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins;");
 		};
 		tic();
 		try {
