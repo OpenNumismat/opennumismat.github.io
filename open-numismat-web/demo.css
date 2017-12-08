@@ -43,7 +43,7 @@ h2 {
 	overflow: auto;
 }
 
-table {
+table.table {
 	width:100%;
 	margin:auto;
 	border:1px solid black;
@@ -52,20 +52,39 @@ table {
     table-layout: fixed;
 }
 
-th, td {
+table.table tr.row {
+    cursor:pointer;
+}
+
+table.table th, td {
 	border:1px solid #777;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-td.min {
+table.table td.min {
     width: 90px;
+}
+
+table.info {
+	border: none;
+	width:100%;
+}
+
+table.info td {
+	border:none;
+    width: 100%;
+}
+
+table.info td.min {
+    width: 1%;
 }
 
 .coin-image {
 	width:50%;
     display: inline-block;
+    cursor:pointer;
 }
 
 .coin-image img {

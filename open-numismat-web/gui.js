@@ -62,6 +62,7 @@ function arrayBufferToBase64( buffer ) {
 var tableCreate = function () {
   return function (columns, values){
     var tbl  = document.createElement('table');
+    tbl.className = "table";
     var rows = values.map(function(v){ return '<tr class="row" data-id="' + v[0] + '"><td class="min"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td><td>' + v[2] + '</td><td class="min">' + v[3] + '</td></tr>'; });
     var html = '<tbody>' + rows.join('') + '</tbody>';
     tbl.innerHTML = html;
@@ -77,9 +78,7 @@ function showInfo(id) {
 
 		tic();
 		infoElm.innerHTML = "";
-		for (var i=0; i<results.length; i++) {
-			infoElm.appendChild(infoCreate(results[i].columns, results[i].values));
-		}
+		infoElm.appendChild(infoCreate(results[0].columns, results[0].values));
 
         $('div.coin-image').click(function() {
             showImages(id);
@@ -88,7 +87,7 @@ function showInfo(id) {
 		toc("Displaying results");
 	}
     location.hash = "info";
-    command = "SELECT coins.title, obverseimg.image, reverseimg.image, country FROM coins\
+    command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
@@ -101,8 +100,43 @@ var infoCreate = function () {
     v = values[0];
     var tbl  = document.createElement('div');
     var title = '<h3>' + v[0] +'</h3>';
-    var images = '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div><div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>';
-    var fields = '<div>Country: <b>' + v[3] + '</b></div>';
+    var images = '';
+    if (v[1])
+        images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div>';
+    if (v[2])
+        images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>';
+    var fields = '<table class="info">';
+    if (v[3])
+        fields += '<tr><td class="min">Status:</td><td><b>' + v[3] + '</b></td></tr>';
+    if (v[4])
+        fields += '<tr><td class="min">Region:</td><td><b>' + v[4] + '</b></td></tr>';
+    if (v[5])
+        fields += '<tr><td class="min">Country:</td><td><b>' + v[5] + '</b></td></tr>';
+    if (v[6])
+        fields += '<tr><td class="min">Period:</td><td><b>' + v[6] + '</b></td></tr>';
+    if (v[7])
+        fields += '<tr><td class="min">Ruler:</td><td><b>' + v[7] + '</b></td></tr>';
+    if (v[8] || v[9])
+        fields += '<tr><td class="min">Denomination:</td><td><b>' + v[8] + ' ' + v[9] + '</b></td></tr>';
+    if (v[10])
+        fields += '<tr><td class="min">Type:</td><td><b>' + v[10] + '</b></td></tr>';
+    if (v[11])
+        fields += '<tr><td class="min">Series:</td><td><b>' + v[11] + '</b></td></tr>';
+    if (v[12])
+        fields += '<tr><td class="min">Subject:</td><td><b>' + v[12] + '</b></td></tr>';
+    if (v[13])
+        fields += '<tr><td class="min">Date of issue:</td><td><b>' + v[13] + '</b></td></tr>';
+    else if (v[14])
+        fields += '<tr><td class="min">Year:</td><td><b>' + v[14] + '</b></td></tr>';
+    if (v[15])
+        fields += '<tr><td class="min">Mintage:</td><td><b>' + v[15] + '</b></td></tr>';
+    if (v[16])
+        fields += '<tr><td class="min">Material:</td><td><b>' + v[16] + '</b></td></tr>';
+    if (v[17])
+        fields += '<tr><td class="min">Mint:</td><td><b>' + v[17] + '</b></td></tr>';
+    else if (v[18])
+        fields += '<tr><td class="min">Mint:</td><td><b>' + v[18] + '</b></td></tr>';
+    fields += '</table>';
     var html = title + images + fields;
     tbl.innerHTML = html;
     return tbl;
@@ -144,20 +178,10 @@ var imagesCreate = function () {
     var tbl  = document.createElement('div');
     console.log(arrayBufferToBase64(v[3]));
     var images = '';
-    if (arrayBufferToBase64(v[0]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[0]) + '"></div>'
-    if (arrayBufferToBase64(v[1]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div>'
-    if (arrayBufferToBase64(v[2]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>'
-    if (arrayBufferToBase64(v[3]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[3]) + '"></div>'
-    if (arrayBufferToBase64(v[4]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[4]) + '"></div>'
-    if (arrayBufferToBase64(v[5]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[5]) + '"></div>'
-    if (arrayBufferToBase64(v[6]))
-        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[6]) + '"></div>'
+    for (var i=0; i<=6; i++) {
+        if (v[i])
+            images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[i]) + '"></div>';
+    }
     var html = images;
     tbl.innerHTML = html;
     return tbl;
