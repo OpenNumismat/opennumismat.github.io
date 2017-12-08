@@ -1,4 +1,6 @@
 var outputElm = document.getElementById('output');
+var infoElm = document.getElementById('info');
+var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
 var dbFileElm = document.getElementById('dbfile');
 
@@ -35,20 +37,18 @@ function execute(commands) {
 		for (var i=0; i<results.length; i++) {
 			outputElm.appendChild(tableCreate(results[i].columns, results[i].values));
 		}
+
+        $('tr.row').click(function() {
+            showInfo($( this ).attr('data-id'));
+        });
+
 		toc("Displaying results");
 	}
 	worker.postMessage({action:'exec', sql:commands});
 	outputElm.textContent = "Fetching results...";
 }
 
-// Create an HTML table
-var tableCreate = function () {
-  function valconcat(vals, tagName) {
-    if (vals.length === 0) return '';
-    var open = '<'+tagName+'>', close='</'+tagName+'>';
-    return open + vals.join(close + open) + close;
-  }
-  function _arrayBufferToBase64( buffer ) {
+function arrayBufferToBase64( buffer ) {
     var binary = '';
     var bytes = new Uint8Array( buffer );
     var len = bytes.byteLength;
@@ -56,15 +56,131 @@ var tableCreate = function () {
         binary += String.fromCharCode( bytes[ i ] );
     }
     return window.btoa( binary );
-  }
+}
+
+// Create an HTML table
+var tableCreate = function () {
   return function (columns, values){
     var tbl  = document.createElement('table');
-    var rows = values.map(function(v){ return '<td class="min"><img src="data:image/png;base64,' + _arrayBufferToBase64(v[0]) + '"></td><td>' + v[1] + '</td><td class="min">' + v[2] + '</td>'; });
-    var html = '<tbody>' + valconcat(rows, 'tr') + '</tbody>';
-	  tbl.innerHTML = html;
+    var rows = values.map(function(v){ return '<tr class="row" data-id="' + v[0] + '"><td class="min"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td><td>' + v[2] + '</td><td class="min">' + v[3] + '</td></tr>'; });
+    var html = '<tbody>' + rows.join('') + '</tbody>';
+    tbl.innerHTML = html;
     return tbl;
   }
 }();
+
+function showInfo(id) {
+	tic();
+	worker.onmessage = function(event) {
+		var results = event.data.results;
+		toc("Executing SQL");
+
+		tic();
+		infoElm.innerHTML = "";
+		for (var i=0; i<results.length; i++) {
+			infoElm.appendChild(infoCreate(results[i].columns, results[i].values));
+		}
+
+        $('div.coin-image').click(function() {
+            showImages(id);
+        });
+
+		toc("Displaying results");
+	}
+    location.hash = "info";
+    command = "SELECT coins.title, obverseimg.image, reverseimg.image, country FROM coins\
+        LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
+        LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
+        WHERE coins.id=" + id + ";";
+	worker.postMessage({action:'exec', sql:command});
+	infoElm.textContent = "Fetching results...";
+}
+
+var infoCreate = function () {
+  return function (columns, values){
+    v = values[0];
+    var tbl  = document.createElement('div');
+    var title = '<h3>' + v[0] +'</h3>';
+    var images = '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div><div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>';
+    var fields = '<div>Country: <b>' + v[3] + '</b></div>';
+    var html = title + images + fields;
+    tbl.innerHTML = html;
+    return tbl;
+  }
+}();
+
+function showImages(id) {
+    console.log(id);
+	tic();
+	worker.onmessage = function(event) {
+		var results = event.data.results;
+		toc("Executing SQL");
+
+		tic();
+		imagesElm.innerHTML = "";
+		for (var i=0; i<results.length; i++) {
+			imagesElm.appendChild(imagesCreate(results[i].columns, results[i].values));
+		}
+
+		toc("Displaying results");
+	}
+    location.hash = "images";
+    command = "SELECT obverseimg.image, reverseimg.image, edgeimg.image, photo1.image, photo2.image, photo3.image, photo4.image FROM coins\
+        LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
+        LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
+        LEFT JOIN photos AS edgeimg ON coins.edgeimg = edgeimg.id\
+        LEFT JOIN photos AS photo1 ON coins.photo1 = photo1.id\
+        LEFT JOIN photos AS photo2 ON coins.photo2 = photo2.id\
+        LEFT JOIN photos AS photo3 ON coins.photo3 = photo3.id\
+        LEFT JOIN photos AS photo4 ON coins.photo4 = photo4.id\
+        WHERE coins.id=" + id + ";";
+	worker.postMessage({action:'exec', sql:command});
+	imagesElm.textContent = "Fetching results...";
+}
+
+var imagesCreate = function () {
+  return function (columns, values){
+    v = values[0];
+    var tbl  = document.createElement('div');
+    console.log(arrayBufferToBase64(v[3]));
+    var images = '';
+    if (arrayBufferToBase64(v[0]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[0]) + '"></div>'
+    if (arrayBufferToBase64(v[1]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div>'
+    if (arrayBufferToBase64(v[2]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>'
+    if (arrayBufferToBase64(v[3]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[3]) + '"></div>'
+    if (arrayBufferToBase64(v[4]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[4]) + '"></div>'
+    if (arrayBufferToBase64(v[5]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[5]) + '"></div>'
+    if (arrayBufferToBase64(v[6]))
+        images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[6]) + '"></div>'
+    var html = images;
+    tbl.innerHTML = html;
+    return tbl;
+  }
+}();
+
+$(window).on('hashchange', function() {
+    if (location.hash === "#info") {
+        outputElm.style.display = "none";
+        imagesElm.style.display = "none";
+        infoElm.style.display = "";
+    }
+    else if (location.hash === "#images") {
+        outputElm.style.display = "none";
+        infoElm.style.display = "none";
+        imagesElm.style.display = "";
+    }
+    else {
+        infoElm.style.display = "none";
+        imagesElm.style.display = "none";
+        outputElm.style.display = "";
+    }
+});
 
 // Performance measurement functions
 var tictime;
@@ -79,11 +195,12 @@ function toc(msg) {
 dbFileElm.onchange = function() {
 	var f = dbFileElm.files[0];
 	var r = new FileReader();
+    location.hash = "";
 	r.onload = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
             noerror()
-            execute ("SELECT images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
 		};
 		tic();
 		try {

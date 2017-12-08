@@ -7,17 +7,20 @@
   <link rel="stylesheet" href="codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="demo.css">
   <script src="codemirror/lib/codemirror.js"></script>
+  <script src="../javascripts/jquery-1.9.1.min.js"></script>
 
 </head>
 <body>
 
 <h2>Online OpenNumismat viewer</h2>
 
-<label class="button">Load an OpenNumismat collection file: <input type='file' id='dbfile' accept=".db"></label>
+<label>Load an OpenNumismat collection file: <input type='file' id='dbfile' accept=".db"></label>
 
 <div id="error" class="error"></div>
 
 <pre id="output">Results will be displayed here</pre>
+<pre id="info" style="display: none;"></pre>
+<pre id="images" style="display: none;"></pre>
 
 <script src="codemirror/mode/sql/sql.js"></script>
 

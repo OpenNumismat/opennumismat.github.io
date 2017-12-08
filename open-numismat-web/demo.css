@@ -3,10 +3,6 @@ html {
 	max-width: 680px;
 }
 
-body{
-    padding: 10px;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 700;
@@ -20,26 +16,6 @@ h2 {
 	text-align: center;
 	color: #222;
 	margin: 0 0 30px;
-}
-
-.button {
-	color: #333;
-	background: linear-gradient(#eee, #ddd);
-	border: 1px solid #222;
-	border-radius: 3px;
-	padding: 7px;
-	margin-right: 5px;
-	transition: .3s;
-	font-family: ubuntu, sans-serif;
-	font-size: 1em;
-}
-
-.button:active {
-	background: linear-gradient(#ddd, #eee);
-}
-
-.button:hover, button:focus {
-	box-shadow: 0 0 2px #222;
 }
 
 #execute {
@@ -87,7 +63,23 @@ td.min {
     width: 90px;
 }
 
-footer {
-	font-size:.8em;
-	color: #222;
+.coin-image {
+	width:50%;
+    display: inline-block;
+}
+
+.coin-image img {
+	max-width:100%;
+    display: block;
+    margin: auto;
+}
+
+.coin-images {
+	width:100%;
+}
+
+.coin-images img {
+	max-width:100%;
+    display: block;
+    margin: auto;
 }
