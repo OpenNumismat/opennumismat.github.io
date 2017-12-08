@@ -4,6 +4,8 @@ var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
 var dbFileElm = document.getElementById('dbfile');
 
+var scrollPos = 0;
+
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql.js");
 worker.onerror = error;
@@ -39,6 +41,7 @@ function execute(commands) {
 		}
 
         $('tr.row').click(function() {
+            scrollPos = document.documentElement.scrollTop;
             showInfo($( this ).attr('data-id'));
         });
 
@@ -203,6 +206,7 @@ $(window).on('hashchange', function() {
         infoElm.style.display = "none";
         imagesElm.style.display = "none";
         outputElm.style.display = "";
+        document.documentElement.scrollTop = scrollPos;
     }
 });
 
