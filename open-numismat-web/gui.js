@@ -2,6 +2,7 @@ var outputElm = document.getElementById('output');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
+var statusElm = document.getElementById('status');
 var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
@@ -27,7 +28,39 @@ function noerror() {
 		errorElm.style.height = '0';
 }
 
+function updateTable() {
+    $('tr.row').click(function() {
+        scrollPos = document.documentElement.scrollTop;
+        showInfo($( this ).attr('data-id'));
+    });
+
+    $('select#status').change(function() {
+        val = $(this).find('option:selected').text();
+        if (val === 'All')
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+        else
+            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.status='" + val + "';");
+    });
+}
+
 // Run a command in the database
+function applyFilter(commands) {
+	tic();
+	worker.onmessage = function(event) {
+		var results = event.data.results;
+		toc("Executing SQL");
+
+		tic();
+        statusElm.textContent = "";
+        $('.table').replaceWith(tableCreate(results[0].columns, results[0].values));
+        updateTable();
+
+		toc("Displaying results");
+	}
+	worker.postMessage({action:'exec', sql:commands});
+	statusElm.textContent = "Fetching results...";
+}
+
 function execute(commands) {
 	tic();
 	worker.onmessage = function(event) {
@@ -35,27 +68,16 @@ function execute(commands) {
 		toc("Executing SQL");
 
 		tic();
+        statusElm.textContent = "";
 		outputElm.innerHTML = "";
 		outputElm.appendChild(filterCreate(results[1].columns, results[1].values));
 		outputElm.appendChild(tableCreate(results[0].columns, results[0].values));
-
-        $('tr.row').click(function() {
-            scrollPos = document.documentElement.scrollTop;
-            showInfo($( this ).attr('data-id'));
-        });
-
-        $('select#status').change(function() {
-            val = $(this).find('option:selected').text();
-            if (val === 'All')
-                execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins;");
-            else
-                execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.status='" + val + "'; SELECT DISTINCT status FROM coins;");
-        });
+        updateTable();
 
 		toc("Displaying results");
 	}
 	worker.postMessage({action:'exec', sql:commands});
-	outputElm.textContent = "Fetching results...";
+	statusElm.textContent = "Fetching results...";
 }
 
 // Create an HTML table
@@ -86,6 +108,7 @@ function showInfo(id) {
 		toc("Executing SQL");
 
 		tic();
+        statusElm.textContent = "";
 		infoElm.innerHTML = "";
 		infoElm.appendChild(infoCreate(results[0].columns, results[0].values));
 
@@ -101,7 +124,7 @@ function showInfo(id) {
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
 	worker.postMessage({action:'exec', sql:command});
-	infoElm.textContent = "Fetching results...";
+	statusElm.textContent = "Fetching results...";
 }
 
 var infoCreate = function () {
@@ -160,6 +183,7 @@ function showImages(id) {
 		toc("Executing SQL");
 
 		tic();
+        statusElm.textContent = "";
 		imagesElm.innerHTML = "";
 		for (var i=0; i<results.length; i++) {
 			imagesElm.appendChild(imagesCreate(results[i].columns, results[i].values));
@@ -178,7 +202,7 @@ function showImages(id) {
         LEFT JOIN photos AS photo4 ON coins.photo4 = photo4.id\
         WHERE coins.id=" + id + ";";
 	worker.postMessage({action:'exec', sql:command});
-	imagesElm.textContent = "Fetching results...";
+	statusElm.textContent = "Fetching results...";
 }
 
 var imagesCreate = function () {
