@@ -204,7 +204,6 @@ var infoCreate = function () {
 }();
 
 function showImages(id) {
-    console.log(id);
 	tic();
 	worker.onmessage = function(event) {
 		var results = event.data.results;
@@ -237,7 +236,6 @@ var imagesCreate = function () {
   return function (values){
     v = values[0];
     var tbl  = document.createElement('div');
-    console.log(arrayBufferToBase64(v[3]));
     var images = '';
     for (var i=0; i<=6; i++) {
         if (v[i])
