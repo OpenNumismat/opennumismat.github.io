@@ -1,4 +1,5 @@
 var outputElm = document.getElementById('output');
+var filtersElm = document.getElementById('filters');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
@@ -14,10 +15,6 @@ worker.onerror = error;
 // Open a database
 worker.postMessage({action:'open'});
 
-// Connect to the HTML element we 'print' to
-function print(text) {
-    outputElm.innerHTML = text.replace(/\n/g, '<br>');
-}
 function error(e) {
   console.log(e);
 	errorElm.style.height = '2em';
@@ -59,11 +56,7 @@ function updateTable() {
         showInfo($( this ).attr('data-id'));
     });
     
-    $('select#status').change(filterChanged);
-    $('select#country').change(filterChanged);
-    $('select#series').change(filterChanged);
-    $('select#type').change(filterChanged);
-    $('select#period').change(filterChanged);
+    $('select.filter').change(filterChanged);
 }
 
 // Run a command in the database
@@ -75,11 +68,14 @@ function applyFilter(commands) {
 
 		tic();
         statusElm.textContent = "";
-        $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
-        updateTable();
+        if (results.length > 0) {
+            $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
+            updateTable();
+        }
 
 		toc("Displaying results");
 	}
+    $('div#table').empty();
 	worker.postMessage({action:'exec', sql:commands});
 	statusElm.textContent = "Fetching results...";
 }
@@ -92,17 +88,20 @@ function execute(commands) {
 
 		tic();
         statusElm.textContent = "";
-		outputElm.innerHTML = "";
-		outputElm.appendChild(filterCreate('status', 'Status', results[1].values));
-		outputElm.appendChild(filterCreate('country', 'Country', results[2].values));
-		outputElm.appendChild(filterCreate('series', 'Series', results[3].values));
-		outputElm.appendChild(filterCreate('type', 'Type', results[4].values));
-		outputElm.appendChild(filterCreate('period', 'Period', results[5].values));
-		outputElm.appendChild(tableCreate(results[0].columns, results[0].values));
-        updateTable();
+		filtersElm.innerHTML = "";
+		filtersElm.appendChild(filterCreate('status', 'Status', results[1].values));
+		filtersElm.appendChild(filterCreate('country', 'Country', results[2].values));
+		filtersElm.appendChild(filterCreate('series', 'Series', results[3].values));
+		filtersElm.appendChild(filterCreate('type', 'Type', results[4].values));
+		filtersElm.appendChild(filterCreate('period', 'Period', results[5].values));
+        if (results.length > 0) {
+            $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
+            updateTable();
+        }
 
 		toc("Displaying results");
 	}
+    $('div#table').empty();
 	worker.postMessage({action:'exec', sql:commands});
 	statusElm.textContent = "Fetching results...";
 }
@@ -112,7 +111,7 @@ var filterCreate = function () {
   return function (id, label, values){
     var tbl  = document.createElement('div');
     var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-    var html = '<label for="' + id + '">' + label + ':</label><select id="' + id + '"><option>All</option>' + rows.join('') + '</select>';
+    var html = '<label for="' + id + '">' + label + ':</label><select class="filter" id="' + id + '"><option>All</option>' + rows.join('') + '</select>';
     tbl.innerHTML = html;
     return tbl;
   }
