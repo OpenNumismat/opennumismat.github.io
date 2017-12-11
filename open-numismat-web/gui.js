@@ -7,6 +7,7 @@ var statusElm = document.getElementById('status');
 var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
+var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins INNER JOIN images on images.id = coins.image";
 
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql.js");
@@ -45,9 +46,9 @@ function filterChanged() {
         filters.push("coins.period='" + period + "'");
 
     if (filters.length > 0)
-        applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE " + filters.join(" AND ") + ";");
+        applyFilter(mainSqlSelect + " WHERE " + filters.join(" AND ") + ";");
     else
-        applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
+        applyFilter(mainSqlSelect + ";");
 }
 
 function updateTable() {
@@ -121,7 +122,21 @@ var tableCreate = function () {
   return function (columns, values){
     var tbl  = document.createElement('div');
     tbl.setAttribute("id", "table");
-    var rows = values.map(function(v){ return '<tr class="row" data-id="' + v[0] + '"><td class="min"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td><td>' + v[2] + '</td><td class="min">' + v[3] + '</td></tr>'; });
+    var rows = values.map(function(v) {
+        var desc = [];
+        if (v[4])
+            desc.push(v[4]);
+        if (v[5] || v[6])
+            desc.push(v[5] + ' ' + v[6]);
+        if (v[7])
+            desc.push(v[7]);
+        if (v[8])
+            desc.push(v[8]);
+        if (v[9])
+            desc.push(v[9]);
+        return '<tr class="row" data-id="' + v[0] + '"><td class="image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td>\
+            <td><div class="title">' + v[2] + '</div><div class="description">' + desc.join(', ') + '</div></td><td class="status">' + v[3] + '</td></tr>';
+    });
     var html = '<table class="table"><tbody>' + rows.join('') + '</tbody></table>';
     tbl.innerHTML = html;
     return tbl;
@@ -293,7 +308,7 @@ dbFileElm.onchange = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
             noerror()
-            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;\
+            execute (mainSqlSelect + ";\
                 SELECT DISTINCT status FROM coins;\
                 SELECT DISTINCT country FROM coins;\
                 SELECT DISTINCT series FROM coins;\

@@ -18,21 +18,6 @@ h2 {
 	margin: 0 0 30px;
 }
 
-#execute {
-	margin-top: 5px;;
-	width: 10%;
-	min-width:100px;
-}
-
-.CodeMirror {
-  border: 1px solid #222;
-  height: auto;
-}
-.CodeMirror-scroll {
-  overflow-y: hidden;
-  overflow-x: auto;
-}
-
 .error {
 	color:red;
 	transition:.5s;
@@ -58,13 +43,19 @@ table.table tr.row {
 
 table.table th, td {
 	border:1px solid #777;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
-table.table td.min {
+td div.title, td div.description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+td.image {
     width: 90px;
+    overflow: hidden;
+}
+td.status {
+    width: 60px;
 }
 
 table.info {
