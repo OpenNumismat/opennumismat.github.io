@@ -25,7 +25,32 @@ function error(e) {
 }
 
 function noerror() {
-		errorElm.style.height = '0';
+	errorElm.style.height = '0';
+}
+
+function filterChanged() {
+    filters = [];
+
+    status = $('select#status').find('option:selected').text();
+    if (status !== 'All')
+        filters.push("coins.status='" + status + "'");
+    country = $('select#country').find('option:selected').text();
+    if (country !== 'All')
+        filters.push("coins.country='" + country + "'");
+    series = $('select#series').find('option:selected').text();
+    if (series !== 'All')
+        filters.push("coins.series='" + series + "'");
+    type = $('select#type').find('option:selected').text();
+    if (type !== 'All')
+        filters.push("coins.type='" + type + "'");
+    period = $('select#period').find('option:selected').text();
+    if (period !== 'All')
+        filters.push("coins.period='" + period + "'");
+
+    if (filters.length > 0)
+        applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE " + filters.join(" AND ") + ";");
+    else
+        applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
 }
 
 function updateTable() {
@@ -33,30 +58,12 @@ function updateTable() {
         scrollPos = document.documentElement.scrollTop;
         showInfo($( this ).attr('data-id'));
     });
-
-    $('select#status').change(function() {
-        val = $(this).find('option:selected').text();
-        if (val === 'All')
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
-        else
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.status='" + val + "';");
-    });
-
-    $('select#country').change(function() {
-        val = $(this).find('option:selected').text();
-        if (val === 'All')
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
-        else
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.country='" + val + "';");
-    });
-
-    $('select#series').change(function() {
-        val = $(this).find('option:selected').text();
-        if (val === 'All')
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;");
-        else
-            applyFilter("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image WHERE coins.series='" + val + "';");
-    });
+    
+    $('select#status').change(filterChanged);
+    $('select#country').change(filterChanged);
+    $('select#series').change(filterChanged);
+    $('select#type').change(filterChanged);
+    $('select#period').change(filterChanged);
 }
 
 // Run a command in the database
@@ -89,6 +96,8 @@ function execute(commands) {
 		outputElm.appendChild(filterCreate('status', 'Status', results[1].values));
 		outputElm.appendChild(filterCreate('country', 'Country', results[2].values));
 		outputElm.appendChild(filterCreate('series', 'Series', results[3].values));
+		outputElm.appendChild(filterCreate('type', 'Type', results[4].values));
+		outputElm.appendChild(filterCreate('period', 'Period', results[5].values));
 		outputElm.appendChild(tableCreate(results[0].columns, results[0].values));
         updateTable();
 
@@ -287,7 +296,12 @@ dbFileElm.onchange = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
             noerror()
-            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image; SELECT DISTINCT status FROM coins; SELECT DISTINCT country FROM coins; SELECT DISTINCT series FROM coins;");
+            execute ("SELECT coins.id, images.image, title, status FROM coins INNER JOIN images on images.id = coins.image;\
+                SELECT DISTINCT status FROM coins;\
+                SELECT DISTINCT country FROM coins;\
+                SELECT DISTINCT series FROM coins;\
+                SELECT DISTINCT type FROM coins;\
+                SELECT DISTINCT period FROM coins;");
 		};
 		tic();
 		try {
