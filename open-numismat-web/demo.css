@@ -32,7 +32,7 @@ table.table tr.row {
     border-top: 1px solid #e0e0e0;;
 }
 
-table.table th, td {
+table.table td {
     vertical-align: middle;
 }
 

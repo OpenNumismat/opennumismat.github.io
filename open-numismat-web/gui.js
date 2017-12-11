@@ -1,5 +1,4 @@
 var outputElm = document.getElementById('output');
-var filtersElm = document.getElementById('filters');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
@@ -89,12 +88,17 @@ function execute(commands) {
 
 		tic();
         statusElm.textContent = "";
-		filtersElm.innerHTML = "";
-		filtersElm.appendChild(filterCreate('status', 'Status', results[1].values));
-		filtersElm.appendChild(filterCreate('country', 'Country', results[2].values));
-		filtersElm.appendChild(filterCreate('series', 'Series', results[3].values));
-		filtersElm.appendChild(filterCreate('type', 'Type', results[4].values));
-		filtersElm.appendChild(filterCreate('period', 'Period', results[5].values));
+
+        $('div#filters').empty();
+        html = "<table>";
+        html += filterCreate('status', 'Status', results[1].values);
+        html += filterCreate('country', 'Country', results[2].values);
+        html += filterCreate('series', 'Series', results[3].values);
+        html += filterCreate('type', 'Type', results[4].values);
+        html += filterCreate('period', 'Period', results[5].values);
+        html += "</table>";
+        $('div#filters').append(html);
+
         if (results.length > 0) {
             $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
             updateTable();
@@ -110,11 +114,9 @@ function execute(commands) {
 // Create an HTML table
 var filterCreate = function () {
   return function (id, label, values){
-    var tbl  = document.createElement('div');
     var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-    var html = '<label for="' + id + '">' + label + ':</label><select class="filter" id="' + id + '"><option>All</option>' + rows.join('') + '</select>';
-    tbl.innerHTML = html;
-    return tbl;
+    var html = '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option>All</option>' + rows.join('') + '</select></td></tr>';
+    return html;
   }
 }();
 
@@ -137,7 +139,7 @@ var tableCreate = function () {
         return '<tr class="row" data-id="' + v[0] + '"><td class="image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td>\
             <td class="data"><div class="title">' + v[2] + '&nbsp;</div><div class="description">' + desc.join(', ') + '&nbsp;</div></td><td class="status">' + v[3] + '</td></tr>';
     });
-    var html = '<table class="table"><tbody>' + rows.join('') + '</tbody></table>';
+    var html = '<table class="table">' + rows.join('') + '</table>';
     tbl.innerHTML = html;
     return tbl;
   }
