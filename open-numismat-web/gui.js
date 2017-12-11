@@ -135,7 +135,7 @@ var tableCreate = function () {
         if (v[9])
             desc.push(v[9]);
         return '<tr class="row" data-id="' + v[0] + '"><td class="image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td>\
-            <td><div class="title">' + v[2] + '</div><div class="description">' + desc.join(', ') + '</div></td><td class="status">' + v[3] + '</td></tr>';
+            <td class="data"><div class="title">' + v[2] + '&nbsp;</div><div class="description">' + desc.join(', ') + '&nbsp;</div></td><td class="status">' + v[3] + '</td></tr>';
     });
     var html = '<table class="table"><tbody>' + rows.join('') + '</tbody></table>';
     tbl.innerHTML = html;

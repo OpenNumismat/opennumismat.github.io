@@ -66,30 +66,30 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-#github-page h1 {
+h1 {
   font-size: 36px;
   font-weight: 700;
 }
 
-#github-page h2 {
+h2 {
   padding-bottom: 10px;
   font-size: 32px;
   background: url('../images/bg_hr.png') repeat-x bottom;
 }
 
-#github-page h3 {
+h3 {
   font-size: 24px;
 }
 
-#github-page h4 {
+h4 {
   font-size: 21px;
 }
 
-#github-page h5 {
+h5 {
   font-size: 18px;
 }
 
-#github-page h6 {
+h6 {
   font-size: 16px;
 }
 

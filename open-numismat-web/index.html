@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="utf-8">
   <title>Online viewer - OpenNumismat - free coin collecting software</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
   <link rel="stylesheet" href="demo.css">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <script src="codemirror/lib/codemirror.js"></script>
@@ -12,6 +13,7 @@
 </head>
 <body>
 
+<div id="main_content_wrap" class="outer">
 <h2>Online OpenNumismat viewer</h2>
 
 <label>Load an OpenNumismat collection file: <input type='file' id='dbfile' accept=".db"></label>
@@ -22,6 +24,7 @@
 <div id="output"><div id="filters"></div><div id="table"></div></div>
 <div id="info" style="display: none;"></div>
 <div id="images" style="display: none;"></div>
+</div>
 
 <script src="codemirror/mode/sql/sql.js"></script>
 

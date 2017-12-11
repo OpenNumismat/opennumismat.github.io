@@ -3,21 +3,6 @@ html {
 	max-width: 680px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 700;
-  color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
-  letter-spacing: -1px;
-}
-
-h2 {
-    font-size: 32px;
-	text-align: center;
-	color: #222;
-	margin: 0 0 30px;
-}
-
 .error {
 	color:red;
 	transition:.5s;
@@ -28,10 +13,14 @@ h2 {
 	overflow: auto;
 }
 
+div#filters {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 table.table {
 	width:100%;
 	margin:auto;
-	border:1px solid black;
  	border-collapse:collapse;
  	margin-bottom:10px;
     table-layout: fixed;
@@ -39,10 +28,12 @@ table.table {
 
 table.table tr.row {
     cursor:pointer;
+    border-bottom: 1px solid #e0e0e0;;
+    border-top: 1px solid #e0e0e0;;
 }
 
 table.table th, td {
-	border:1px solid #777;
+    vertical-align: middle;
 }
 
 td div.title, td div.description {
@@ -50,12 +41,26 @@ td div.title, td div.description {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+td.data {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+td div.title {
+  font-size: 18px;
+  font-weight: bolder;
+}
+td div.description {
+  color:#747474;
+}
 td.image {
     width: 90px;
     overflow: hidden;
 }
+td.image img {
+    vertical-align: middle;
+}
 td.status {
-    width: 60px;
+    width: 50px;
 }
 
 table.info {
