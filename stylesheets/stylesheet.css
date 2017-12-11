@@ -39,11 +39,6 @@ ol {
   list-style: none;
 }
 
-#github-page table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
@@ -162,45 +157,6 @@ p img {
   max-width: 100%;
 }
 
-#github-page pre, code {
-  width: 100%;
-  color: #222;
-  background-color: #fff;
-
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
-
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-}
-
-#github-page pre {
-  width: 100%;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-  overflow: auto;
-}
-
-#github-page code {
-  padding: 3px;
-  margin: 0 3px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-}
-
-#github-page pre code {
-  display: block;
-  box-shadow: none;
-}
-
-#github-page blockquote {
-  color: #666;
-  margin-bottom: 20px;
-  padding: 0 0 0 20px;
-  border-left: 3px solid #bbb;
-}
-
-
 #github-page ul, ol, dl {
   margin-bottom: 15px
 }
@@ -233,29 +189,6 @@ p img {
   margin-bottom: 5px;
   border: none;
   background: url('../images/bg_hr.png') repeat-x center;
-}
-
-#github-page table {
-  border: 1px solid #373737;
-  margin-bottom: 20px;
-  text-align: left;
- }
-
-#github-page th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 10px;
-  background: #373737;
-  color: #fff;
- }
-
-#github-page td {
-  padding: 10px;
-  border: 1px solid #373737;
- }
-
-#github-page form {
-  background: #f2f2f2;
-  padding: 20px;
 }
 
 /*******************************************************************************
@@ -427,34 +360,27 @@ div.content-image img {
   font-size: 32px;
   }
 
-  #github-page h1 {
+  h1 {
     font-size: 28px;
   }
 
-  #github-page h2 {
+  h2 {
     font-size: 24px;
   }
 
-  #github-page h3 {
+  h3 {
     font-size: 21px;
   }
 
-  #github-page h4 {
+  h4 {
     font-size: 18px;
   }
 
-  #github-page h5 {
+  h5 {
     font-size: 14px;
   }
 
-  #github-page h6 {
+  h6 {
     font-size: 12px;
   }
-
-  #github-page code, pre {
-    min-width: 320px;
-    max-width: 480px;
-    font-size: 11px;
-  }
-
 }

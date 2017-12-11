@@ -1,6 +1,5 @@
-html {
-	margin:auto;
-	max-width: 680px;
+#online-viewer {
+    padding: 0 !important;
 }
 
 .error {
@@ -24,12 +23,13 @@ table.table {
  	border-collapse:collapse;
  	margin-bottom:10px;
     table-layout: fixed;
+    border: 1px solid #e0e0e0;
 }
 
 table.table tr.row {
     cursor:pointer;
-    border-bottom: 1px solid #e0e0e0;;
-    border-top: 1px solid #e0e0e0;;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
 }
 
 table.table td {
