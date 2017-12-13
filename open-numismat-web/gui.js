@@ -73,18 +73,14 @@ function updateTable() {
 
 // Run a command in the database
 function applyFilter(commands) {
-	tic();
 	worker.onmessage = function(event) {
 		var results = event.data.results;
-		toc("Executing SQL");
 
-		tic();
         if (results.length > 0) {
             $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
             updateTable();
         }
 
-		toc("Displaying results");
         status();
 	}
     status("Executing SQL");
@@ -93,12 +89,8 @@ function applyFilter(commands) {
 }
 
 function execute(commands) {
-	tic();
 	worker.onmessage = function(event) {
 		var results = event.data.results;
-		toc("Executing SQL");
-
-		tic();
 
         $('div#filters').empty();
         html = "<table>";
@@ -115,7 +107,6 @@ function execute(commands) {
             updateTable();
         }
 
-		toc("Displaying results");
         status();
 	}
     status("Executing SQL");
@@ -158,19 +149,15 @@ var tableCreate = function () {
 }();
 
 function showInfo(id) {
-	tic();
 	worker.onmessage = function(event) {
 		var results = event.data.results;
-		toc("Executing SQL");
 
-		tic();
 		infoElm.appendChild(infoCreate(results[0].values));
 
         $('div.coin-image').click(function() {
             showImages(id);
         });
 
-		toc("Displaying results");
         status();
 	}
     location.hash = "info";
@@ -233,17 +220,13 @@ var infoCreate = function () {
 }();
 
 function showImages(id) {
-	tic();
 	worker.onmessage = function(event) {
 		var results = event.data.results;
-		toc("Executing SQL");
 
-		tic();
 		for (var i=0; i<results.length; i++) {
 			imagesElm.appendChild(imagesCreate(results[i].values));
 		}
 
-		toc("Displaying results");
         status();
 	}
     location.hash = "images";
@@ -296,15 +279,6 @@ $(window).on('hashchange', function() {
     }
 });
 
-// Performance measurement functions
-var tictime;
-if (!window.performance || !performance.now) {window.performance = {now:Date.now}}
-function tic () {tictime = performance.now()}
-function toc(msg) {
-	var dt = performance.now()-tictime;
-	console.log((msg||'toc') + ": " + dt + "ms");
-}
-
 function arrayBufferToBase64( buffer ) {
     var binary = '';
     var bytes = new Uint8Array( buffer );
@@ -321,9 +295,9 @@ dbFileElm.onchange = function() {
 	var r = new FileReader();
     location.hash = "";
     $('div#table').empty();
+    $('div#filters').empty();
 	r.onload = function() {
 		worker.onmessage = function () {
-			toc("Loading database from file");
             noerror()
             execute (mainSqlSelect + ";\
                 SELECT DISTINCT status FROM coins;\
@@ -332,7 +306,6 @@ dbFileElm.onchange = function() {
                 SELECT DISTINCT type FROM coins;\
                 SELECT DISTINCT period FROM coins;");
 		};
-		tic();
 		try {
 			worker.postMessage({action:'open',buffer:r.result}, [r.result]);
 		}
