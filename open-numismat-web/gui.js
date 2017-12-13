@@ -2,7 +2,7 @@ var outputElm = document.getElementById('output');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var errorElm = document.getElementById('error');
-var statusElm = document.getElementById('status');
+var statusElm = document.getElementById('status-text');
 var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
@@ -25,12 +25,22 @@ function noerror() {
 	errorElm.style.height = '0';
 }
 
+function status(text="") {
+    if (text === "") {
+        $("#status").hide();
+    }
+    else {
+        statusElm.textContent = text;
+        $("#status").show();
+    }
+}
+
 function filterChanged() {
     filters = [];
 
-    status = $('select#status').find('option:selected').text();
-    if (status !== 'All')
-        filters.push("coins.status='" + status + "'");
+    status_data = $('select#status').find('option:selected').text();
+    if (status_data !== 'All')
+        filters.push("coins.status='" + status_data + "'");
     country = $('select#country').find('option:selected').text();
     if (country !== 'All')
         filters.push("coins.country='" + country + "'");
@@ -67,17 +77,18 @@ function applyFilter(commands) {
 		toc("Executing SQL");
 
 		tic();
-        statusElm.textContent = "";
         if (results.length > 0) {
             $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
             updateTable();
         }
 
 		toc("Displaying results");
+        status();
 	}
     $('div#table').empty();
+    status("Executing SQL");
 	worker.postMessage({action:'exec', sql:commands});
-	statusElm.textContent = "Fetching results...";
+    status("Fetching results");
 }
 
 function execute(commands) {
@@ -87,7 +98,6 @@ function execute(commands) {
 		toc("Executing SQL");
 
 		tic();
-        statusElm.textContent = "";
 
         $('div#filters').empty();
         html = "<table>";
@@ -105,10 +115,12 @@ function execute(commands) {
         }
 
 		toc("Displaying results");
+        status();
 	}
     $('div#table').empty();
+    status("Executing SQL");
 	worker.postMessage({action:'exec', sql:commands});
-	statusElm.textContent = "Fetching results...";
+    status("Fetching results");
 }
 
 // Create an HTML table
@@ -152,7 +164,6 @@ function showInfo(id) {
 		toc("Executing SQL");
 
 		tic();
-        statusElm.textContent = "";
 		infoElm.innerHTML = "";
 		infoElm.appendChild(infoCreate(results[0].values));
 
@@ -161,14 +172,16 @@ function showInfo(id) {
         });
 
 		toc("Displaying results");
+        status();
 	}
     location.hash = "info";
     command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
+    status("Executing SQL");
 	worker.postMessage({action:'exec', sql:command});
-	statusElm.textContent = "Fetching results...";
+    status("Fetching results");
 }
 
 var infoCreate = function () {
@@ -226,13 +239,13 @@ function showImages(id) {
 		toc("Executing SQL");
 
 		tic();
-        statusElm.textContent = "";
 		imagesElm.innerHTML = "";
 		for (var i=0; i<results.length; i++) {
 			imagesElm.appendChild(imagesCreate(results[i].values));
 		}
 
 		toc("Displaying results");
+        status();
 	}
     location.hash = "images";
     command = "SELECT obverseimg.image, reverseimg.image, edgeimg.image, photo1.image, photo2.image, photo3.image, photo4.image FROM coins\
@@ -244,8 +257,9 @@ function showImages(id) {
         LEFT JOIN photos AS photo3 ON coins.photo3 = photo3.id\
         LEFT JOIN photos AS photo4 ON coins.photo4 = photo4.id\
         WHERE coins.id=" + id + ";";
+    status("Executing SQL");
 	worker.postMessage({action:'exec', sql:command});
-	statusElm.textContent = "Fetching results...";
+    status("Fetching results");
 }
 
 var imagesCreate = function () {
@@ -325,5 +339,6 @@ dbFileElm.onchange = function() {
 			worker.postMessage({action:'open',buffer:r.result});
 		}
 	}
+    status("Loading database from file");
 	r.readAsArrayBuffer(f);
 }
