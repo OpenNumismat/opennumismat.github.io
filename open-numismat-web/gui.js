@@ -38,19 +38,19 @@ function status(text="") {
 function filterChanged() {
     filters = [];
 
-    status_data = $('select#status').find('option:selected').text();
-    if (status_data !== 'All')
-        filters.push("coins.status='" + status_data + "'");
-    country = $('select#country').find('option:selected').text();
+    var status = $('select#status').find('option:selected').text();
+    if (status !== 'All')
+        filters.push("coins.status='" + status + "'");
+    var country = $('select#country').find('option:selected').text();
     if (country !== 'All')
         filters.push("coins.country='" + country + "'");
-    series = $('select#series').find('option:selected').text();
+    var series = $('select#series').find('option:selected').text();
     if (series !== 'All')
         filters.push("coins.series='" + series + "'");
-    type = $('select#type').find('option:selected').text();
+    var type = $('select#type').find('option:selected').text();
     if (type !== 'All')
         filters.push("coins.type='" + type + "'");
-    period = $('select#period').find('option:selected').text();
+    var period = $('select#period').find('option:selected').text();
     if (period !== 'All')
         filters.push("coins.period='" + period + "'");
 
@@ -61,11 +61,13 @@ function filterChanged() {
 }
 
 function updateTable() {
+    $('tr.row').unbind('click');
     $('tr.row').click(function() {
         scrollPos = document.documentElement.scrollTop;
         showInfo($( this ).attr('data-id'));
     });
     
+    $('select.filter').unbind('change');
     $('select.filter').change(filterChanged);
 }
 
@@ -85,7 +87,6 @@ function applyFilter(commands) {
 		toc("Displaying results");
         status();
 	}
-    $('div#table').empty();
     status("Executing SQL");
 	worker.postMessage({action:'exec', sql:commands});
     status("Fetching results");
@@ -117,7 +118,6 @@ function execute(commands) {
 		toc("Displaying results");
         status();
 	}
-    $('div#table').empty();
     status("Executing SQL");
 	worker.postMessage({action:'exec', sql:commands});
     status("Fetching results");
@@ -164,7 +164,6 @@ function showInfo(id) {
 		toc("Executing SQL");
 
 		tic();
-		infoElm.innerHTML = "";
 		infoElm.appendChild(infoCreate(results[0].values));
 
         $('div.coin-image').click(function() {
@@ -175,6 +174,7 @@ function showInfo(id) {
         status();
 	}
     location.hash = "info";
+	infoElm.innerHTML = "";
     command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
@@ -239,7 +239,6 @@ function showImages(id) {
 		toc("Executing SQL");
 
 		tic();
-		imagesElm.innerHTML = "";
 		for (var i=0; i<results.length; i++) {
 			imagesElm.appendChild(imagesCreate(results[i].values));
 		}
@@ -248,6 +247,7 @@ function showImages(id) {
         status();
 	}
     location.hash = "images";
+    imagesElm.innerHTML = "";
     command = "SELECT obverseimg.image, reverseimg.image, edgeimg.image, photo1.image, photo2.image, photo3.image, photo4.image FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
@@ -320,6 +320,7 @@ dbFileElm.onchange = function() {
 	var f = dbFileElm.files[0];
 	var r = new FileReader();
     location.hash = "";
+    $('div#table').empty();
 	r.onload = function() {
 		worker.onmessage = function () {
 			toc("Loading database from file");
