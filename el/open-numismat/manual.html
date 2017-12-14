@@ -29,6 +29,7 @@
           <div class="title-social">
 <a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+            <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
           <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
           <div class="title-text">
@@ -51,7 +52,7 @@
 <p>Ο επίσημος ιστότοπος βρίσκεται στο <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
 <h3>1.2 Χαρακτηριστικά της εφαρμογής</h3>
 <p>Το OpenNumismat βασίζεται σε βιβλιοθήκη PyQt με SQLite database engine για την αποθήκευση της συλλογής δεδομένων, με την οποία επιτεύχθηκε η ελαφριά αρχειοθέτηση και ανταπόκριση του περιβάλλοντος εργασίας και η λειτουργία σε διάφορες πλατφόρμες.</p>
-<p>Μια πλήρη λίστα των βιβλιοθηκών χρησιμοποιούνται, είναι διαθέσιμη <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">εδώ</a>.</p>
+<p>A complete list of the used components and libraries is available <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">here</a>.</p>
 <p>Τα εικονίδια που χρησιμοποιούνται στο περιβάλλον χρήστη, βασίζονται στο <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0 και Soft Scraps Icons του <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> και στα <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>Η μετάφραση του περιβάλλοντος χρήστη έγινε από ενθουσιώδεις χρήστες, μέσω της υπηρεσίας <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Ευχαριστούμε πολύ για τη βοήθειά σας!</p>
 <h3>1.3 Άδεια χρήστη</h3>
@@ -255,6 +256,13 @@
 <p>In the menu <i>File-&gt;Set password...</i> you can set the password that will be requested each time the collection is opened.</p>
 <p><img src="/images/manual/password.png"></p>
 <p>Note: data encryption is not carried out, so the password protection cannot be considered complete.</p>
+<h3>5.4 Synchronization</h3>
+<p>Changes made in multiple copies of a collection file can be merged safely with the menu <i>File-&gt;Synchronize...</i>.</p>
+<p>The most important properties of the synchronization algorithm:</p>
+<ul>
+<li>All new entries will be added (detected by Created field) to opened collection.</li>
+<li>Entries with the same value of ID and Created field will be updated when Updated field value is less in opened collection.</li>
+</ul>
 <h2>6 Reports</h2>
 <h3>6.1 Generating reports</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
@@ -274,21 +282,37 @@
 <h3>6.4 Exporting the Table of coins</h3>
 <p>OpenNumismat allows you to save the current Table of coins with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).</p>
 <p>You can export the Table of coins in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
+<h3>6.5 Statistics</h3>
+
+<h3>6.6 Summary</h3>
+<p><img src="/images/manual/summary.png"></p>
+
 <h2>7 References</h2>
-<p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Currency, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
+<p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
 <p>Editing references is available from the Edit dialog:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>or from menu <i>Reference-&gt;Edit...</i>:</p>
 <p><img src="/images/manual/ref_edit1.png"></p>
 <p>Right-clicking on the entry in the directory opens access to adding or deleting the item's icon:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
+<p>References for Country, Period, Ruler, Unit, Mint, Series is a cross-references and their updating is available only if you select the value of the base field that exists in the reference. For example, to add a new mint, you should first select an existing country.</p>
 <p>The <i>Sort</i> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.</p>
 <p>To quickly fill references with entered data from the collection, select the <i>Reference-&gt;Fill from collection</i> menu.</p>
 <p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the Settings dialog.</p>
+<p>Also you can attach current reference to a collection file. Select <i>Reference-&gt;Attach current reference</i> for attaching or <i>Reference-&gt;Detach current reference</i> for remove reference from collection and use default from Settings.</p>
 <h2>8 Settings</h2>
 <p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File-&gt;Settings</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
+
+<h3>8.1 Fields</h3>
 <p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.</p>
+<h3>8.2 Acceleration of storage</h3>
+<p>The SQLite database engine have a multiple settings that affect the speed and reliability:</p>
+<ul>
+<li>Reliable - all changes will be guaranteed to be saved;</li>
+<li>Fast - changes can be lost when power is turned off during operation (recommended for most cases);</li>
+<li>Extra fast (dangerous) - recommended when you perform a large number of changes, provided that you perform a backup.</li>
+</ul>
 </div>
       </section>
 </div>

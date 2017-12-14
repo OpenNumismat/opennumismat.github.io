@@ -29,6 +29,7 @@
           <div class="title-social">
 <a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+            <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
           <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
           <div class="title-text">
@@ -51,7 +52,7 @@
 <p>A página web oficial é <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
 <h3>1.2 Funcionalidades da implementação</h3>
 <p>O OpenNumismat é baseado na biblioteca PyQt com o motor de base de dados SQLite para armazenar os dados da colecção, o que permitiu alcançar ligeireza e pronta resposta do ambiente de utilização e ser multi-plataforma.</p>
-<p>Está disponível <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">aqui</a> uma lista completa das bibliotecas utilizadas.</p>
+<p>Está disponível <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">aqui</a> uma lista completa de todos os componentes e bibliotecas utilizados.</p>
 <p>Os ícones utilizados são baseados em <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons por <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> e <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>As traduções do programa são implementadas por entusiastas utilizando o serviço <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Obrigado pela ajuda!</p>
 <h3>1.3 Licença</h3>
@@ -137,7 +138,7 @@
 <li>Data de emissão;</li>
 <li>Cunhagem;</li>
 <li>Período de emissão;</li>
-<li>Qualidade;</li>
+<li>Qualidade - técnica de cunhagem;</li>
 <li>Nota.</li>
 </ul>
 </li>
@@ -255,6 +256,13 @@
 <p>No menu <i>Ficheiro -&gt; Definir senha...</i> pode definir uma senha que será pedida sempre que abrir a colecção.</p>
 <p><img src="/images/manual/password.png"></p>
 <p>Nota: os dados não são encriptados, pelo que a senha não pode ser considerada uma protecção completa.</p>
+<h3>5.4 Sincronização</h3>
+<p>Alterações feitas em múltiplas cópias da colecção podem ser unidas com segurança no menu <i>Ficheiro -&gt; Sincronizar...</i>.</p>
+<p>As propriedades mais importantes do algoritmo de sincronização:</p>
+<ul>
+<li>Todas as novas entradas são adicionadas (detectadas pelo campo Criada) à colecção aberta.</li>
+<li>Entradas com o mesmo valor de ID e campo Criada serão actualizadas quando o campo Actualizada for anterior na colecção aberta.</li>
+</ul>
 <h2>6. Relatórios</h2>
 <h3>6.1 Gerar relatórios</h3>
 <p>A aplicação suporta a geração de relatórios em modelos. Pode editar os existentes ou criar os seus próprios modelos.
@@ -274,21 +282,37 @@
 <h3>6.4 Exportar a tabela de moedas</h3>
 <p>O OpenNumismat permite-lhe gravar a actual tabela de moedas com todos os filtros e ordenação aplicados num ficheiro separador em formato MS Excel, HTML ou CSV (nota: na implementação actual, as imagens não são exportadas).</p>
 <p>Pode exportar a tabela de moedas no menu <i>Relatório -&gt; Gravar lista actual...</i>. No diálogo seguinte, seleccione o nome e caminho do ficheiro, o formato desejado e grave o ficheiro.</p>
+<h3>6.5 Estatísticas</h3>
+
+<h3>6.6 Resumo</h3>
+<p><img src="/images/manual/summary.png"></p>
+
 <h2>7 Referências</h2>
-<p>As referências facilitam a inserção de dados ao editar uma moeda e adicionam ícones (tais como bandeiras). Há referências disponíveis para os seguintes campos: Região, País, Período, Régua, Moeda, Cunho, Série, Grau, Material, Forma, Qualidade, Rebordo, Raridade, ObvRev, Tipo, Defeito, Local (compra ou venda).</p>
+<p>As referências facilitam a inserção de dados ao adicionar uma moeda à colecção e juntam ícones (tais como bandeiras) à exibição de dados. Há referências para os seguintes campos: Região, País, Período, Régua, Unidade, Cunho, Série, Grau, Material, Forma, Qualidade, Rebordo, Raridade, ObvRev, Tipo, Defeito, Local (compra ou venda).</p>
 <p>Pode editar as referências no diálogo Editar:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>ou no menu <i>Referência -&gt; Editar...</i>:</p>
 <p><img src="/images/manual/ref_edit1.png"></p>
 <p>Clique direito nas entradas das listas dá acesso a adicionar ou limpar ícones da entrada:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
+<p>Referências para País, Período, Régua, Unidade, Cunho, Série são referências cruzadas e a sua actualização só está disponível se seleccionar o valor no campo base que existe na referência. Por exemplo, para adicionar um novo cunho, deve primeiro seleccionar um país existente.</p>
 <p>A caixa <i>Ordenar</i> ordena alfabeticamente todas as entradas na lista, caso esteja desmarcada, os itens são mostrados pela ordem de inserção.</p>
 <p>Para preencher rapidamente referências com dados inseridos na colecção, seleccione o menu <i>Referência -&gt; Preencher de colecção</i>.</p>
 <p>Por predefinição, as referências são armazenadas num ficheiro separado com a extensão .ref, que pode ser copiado, renomeado ou eliminado através do seu sistema operativo. O caminho do ficheiro pode ser alterado nas definições.</p>
+<p>Pode também anexar a referência actual a outro ficheiro de colecção. Seleccione <i>Referência -&gt; Anexar referência actual</i> para anexar ou <i>Referência -&gt;Desanexar referência actual</i> para remover a referência da colecção e usar a predefinição nas definições.</p>
 <h2>8 Definições</h2>
 <p>O diálogo Definições permite-lhe configurar a aparência e o comportamento da aplicação. Para o abrir, seleccione o menu <i>Ficheiro -&gt; Definições</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
+
+<h3>8.1 Campos</h3>
 <p>O separador Campos deste diálogo permite-lhe renomear e remover parte dos campos da colecção do ambiente. Nest último caso, só os campos marcados serão mostrados no ambiente do programa, mas os dados são gravados em todos os campos.</p>
+<h3>8.2 Aceleração do armazenamento</h3>
+<p>O motor SQLite tem múltiplas definições que afectam a velocidade e estabilidade:</p>
+<ul>
+<li>De confiança - todas as alterações são garantidamente gravadas;</li>
+<li>Rápido - podem-se perder alterações quando falta energia durante a operação (recomendada para a maioria dos casos);</li>
+<li>Extra-rápido (perigoso) - recomendado quando faz um grande número de alterações, desde que tenha uma cópia de segurança.</li>
+</ul>
 </div>
       </section>
 </div>
