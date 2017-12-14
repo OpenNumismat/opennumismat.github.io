@@ -82,6 +82,7 @@ td.image img {
 td.status {
     width: 50px;
     text-align: right;
+    overflow: hidden;
 }
 
 table.info {
