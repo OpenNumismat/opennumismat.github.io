@@ -37,7 +37,6 @@ function status(text="") {
 
 i18next.init({
   lng: $('#lang').text(),
-  debug: true,
   resources: {
     en: {
       translation: {
