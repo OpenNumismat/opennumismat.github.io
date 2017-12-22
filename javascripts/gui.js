@@ -6,7 +6,7 @@ var statusElm = document.getElementById('status-text');
 var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
-var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins INNER JOIN images on images.id = coins.image";
+var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins LEFT OUTER JOIN images on images.id = coins.image";
 
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql.js");
