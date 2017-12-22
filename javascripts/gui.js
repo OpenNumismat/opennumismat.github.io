@@ -434,21 +434,37 @@ i18next.init({
 function filterChanged() {
     filters = [];
 
-    var status = $('select#status').find('option:selected').text();
-    if (status !== 'All')
-        filters.push("coins.status='" + status + "'");
-    var country = $('select#country').find('option:selected').text();
-    if (country !== 'All')
-        filters.push("coins.country='" + country + "'");
-    var series = $('select#series').find('option:selected').text();
-    if (series !== 'All')
-        filters.push("coins.series='" + series + "'");
-    var type = $('select#type').find('option:selected').text();
-    if (type !== 'All')
-        filters.push("coins.type='" + type + "'");
-    var period = $('select#period').find('option:selected').text();
-    if (period !== 'All')
-        filters.push("coins.period='" + period + "'");
+    if ($('select#status').length) {
+        var status = $('select#status').find('option:selected').text();
+        console.log(status)
+        if (status !== 'All')
+            filters.push("coins.status='" + status + "'");
+    }
+    if ($('select#country').length) {
+        var country = $('select#country').find('option:selected').text();
+        if (country !== 'All')
+            filters.push("coins.country='" + country + "'");
+    }
+    if ($('select#series').length) {
+        var series = $('select#series').find('option:selected').text();
+        if (series !== 'All')
+            filters.push("coins.series='" + series + "'");
+    }
+    if ($('select#type').length) {
+        var type = $('select#type').find('option:selected').text();
+        if (type !== 'All')
+            filters.push("coins.type='" + type + "'");
+    }
+    if ($('select#period').length) {
+        var period = $('select#period').find('option:selected').text();
+        if (period !== 'All')
+            filters.push("coins.period='" + period + "'");
+    }
+    if ($('select#mint').length) {
+        var mint = $('select#mint').find('option:selected').text();
+        if (mint !== 'All')
+            filters.push("coins.mint='" + mint + "'");
+    }
 
     if (filters.length > 0)
         applyFilter(mainSqlSelect + " WHERE " + filters.join(" AND ") + ";");
@@ -474,8 +490,11 @@ function applyFilter(commands) {
 
         if (results.length > 0) {
             $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
-            updateTable();
         }
+        else {
+            $('div#table').replaceWith('');
+        }
+        updateTable();
 
         status();
 	}
@@ -495,6 +514,7 @@ function execute(commands) {
         html += filterCreate('series', results[3].values);
         html += filterCreate('type', results[4].values);
         html += filterCreate('period', results[5].values);
+        html += filterCreate('mint', results[6].values);
         html += "</table>";
         $('div#filters').append(html);
 
@@ -513,10 +533,12 @@ function execute(commands) {
 // Create an HTML table
 var filterCreate = function () {
   return function (id, values){
-    var label = i18next.t(id);
-    var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-    var html = '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
-    return html;
+    if (values.length > 1) {
+      var label = i18next.t(id);
+      var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
+      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+    }
+    return '';
   }
 }();
 
@@ -701,7 +723,8 @@ dbFileElm.onchange = function() {
                 SELECT DISTINCT country FROM coins;\
                 SELECT DISTINCT series FROM coins;\
                 SELECT DISTINCT type FROM coins;\
-                SELECT DISTINCT period FROM coins;");
+                SELECT DISTINCT period FROM coins;\
+                SELECT DISTINCT mint FROM coins;");
 		};
 		try {
 			worker.postMessage({action:'open',buffer:r.result}, [r.result]);
