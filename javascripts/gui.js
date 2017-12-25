@@ -432,37 +432,37 @@ i18next.init({
 });
 
 function filterChanged() {
-    filters = [];
+    var filters = [];
+    var def_filter = i18next.t('All');
 
     if ($('select#status').length) {
         var status = $('select#status').find('option:selected').text();
-        console.log(status)
-        if (status !== 'All')
+        if (status !== def_filter)
             filters.push("coins.status='" + status + "'");
     }
     if ($('select#country').length) {
         var country = $('select#country').find('option:selected').text();
-        if (country !== 'All')
+        if (country !== def_filter)
             filters.push("coins.country='" + country + "'");
     }
     if ($('select#series').length) {
         var series = $('select#series').find('option:selected').text();
-        if (series !== 'All')
+        if (series !== def_filter)
             filters.push("coins.series='" + series + "'");
     }
     if ($('select#type').length) {
         var type = $('select#type').find('option:selected').text();
-        if (type !== 'All')
+        if (type !== def_filter)
             filters.push("coins.type='" + type + "'");
     }
     if ($('select#period').length) {
         var period = $('select#period').find('option:selected').text();
-        if (period !== 'All')
+        if (period !== def_filter)
             filters.push("coins.period='" + period + "'");
     }
     if ($('select#mint').length) {
         var mint = $('select#mint').find('option:selected').text();
-        if (mint !== 'All')
+        if (mint !== def_filter)
             filters.push("coins.mint='" + mint + "'");
     }
 
