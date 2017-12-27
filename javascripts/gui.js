@@ -438,32 +438,32 @@ function filterChanged() {
     if ($('select#status').length) {
         var status = $('select#status').find('option:selected').text();
         if (status !== def_filter)
-            filters.push("coins.status='" + status + "'");
+            filters.push("coins.status='" + status.replace("'", "''") + "'");
     }
     if ($('select#country').length) {
         var country = $('select#country').find('option:selected').text();
         if (country !== def_filter)
-            filters.push("coins.country='" + country + "'");
+            filters.push("coins.country='" + country.replace("'", "''") + "'");
     }
     if ($('select#series').length) {
         var series = $('select#series').find('option:selected').text();
         if (series !== def_filter)
-            filters.push("coins.series='" + series + "'");
+            filters.push("coins.series='" + series.replace("'", "''") + "'");
     }
     if ($('select#type').length) {
         var type = $('select#type').find('option:selected').text();
         if (type !== def_filter)
-            filters.push("coins.type='" + type + "'");
+            filters.push("coins.type='" + type.replace("'", "''") + "'");
     }
     if ($('select#period').length) {
         var period = $('select#period').find('option:selected').text();
         if (period !== def_filter)
-            filters.push("coins.period='" + period + "'");
+            filters.push("coins.period='" + period.replace("'", "''") + "'");
     }
     if ($('select#mint').length) {
         var mint = $('select#mint').find('option:selected').text();
         if (mint !== def_filter)
-            filters.push("coins.mint='" + mint + "'");
+            filters.push("coins.mint='" + mint.replace("'", "''") + "'");
     }
 
     if (filters.length > 0)
