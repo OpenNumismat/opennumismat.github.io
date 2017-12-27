@@ -7,6 +7,8 @@ var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
 var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins LEFT OUTER JOIN images on images.id = coins.image";
+var mainSqlFilter = "";
+var mainSqlSort = "";
 
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql.js");
@@ -467,9 +469,19 @@ function filterChanged() {
     }
 
     if (filters.length > 0)
-        applyFilter(mainSqlSelect + " WHERE " + filters.join(" AND ") + ";");
+        mainSqlFilter = " WHERE " + filters.join(" AND ");
     else
-        applyFilter(mainSqlSelect + ";");
+        mainSqlFilter = "";
+    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
+}
+
+function sortChanged() {
+    var field = $('select#sort').find('option:selected').val();
+    if (field !== 'none')
+        mainSqlSort = " ORDER BY " + field;
+    else
+        mainSqlSort = "";
+    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
 }
 
 function updateTable() {
@@ -481,6 +493,9 @@ function updateTable() {
     
     $('select.filter').unbind('change');
     $('select.filter').change(filterChanged);
+    
+    $('select.sort').unbind('change');
+    $('select.sort').change(sortChanged);
 }
 
 // Run a command in the database
@@ -506,7 +521,24 @@ function applyFilter(commands) {
 function execute(commands) {
 	worker.onmessage = function(event) {
 		var results = event.data.results;
-        
+
+        $('div#sort').empty();
+        html = '<table><tr><td>Sort by:</td><td><select class="sort" id="sort">';
+        html += '<option value="none">' + i18next.t('None') + '</option>';
+        html += '<option value="title">' + i18next.t('Title') + '</option>';
+        if (results[1].values.length > 1)
+            html += '<option value="status">' + i18next.t('status') + '</option>';
+        if (results[2].values.length > 1)
+            html += '<option value="country">' + i18next.t('country') + '</option>';
+        if (results[3].values.length > 1)
+            html += '<option value="series">' + i18next.t('series') + '</option>';
+        if (results[4].values.length > 1)
+            html += '<option value="type">' + i18next.t('type') + '</option>';
+        if (results[5].values.length > 1)
+            html += '<option value="period">' + i18next.t('period') + '</option>';
+        html += "</select></td></tr></table>";
+        $('div#sort').append(html);
+
         $('div#filters').empty();
         html = "<table>";
         html += filterCreate('status', results[1].values);
@@ -717,6 +749,9 @@ dbFileElm.onchange = function() {
     location.hash = "";
     $('div#table').empty();
     $('div#filters').empty();
+    mainSqlFilter = "";
+    $('div#sort').empty();
+    mainSqlSort = "";
 	r.onload = function() {
 		worker.onmessage = function () {
             noerror()

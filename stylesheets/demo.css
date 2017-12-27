@@ -33,7 +33,7 @@
 	overflow: auto;
 }
 
-div#filters {
+div#filters, div#sort {
     margin-top: 12px;
     margin-bottom: 12px;
 }
