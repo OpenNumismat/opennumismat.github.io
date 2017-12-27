@@ -627,7 +627,9 @@ var infoCreate = function () {
         fields += '<tr><td class="min">' + i18next.t('mintage') + ':</td><td><b>' + v[15] + '</b></td></tr>';
     if (v[16])
         fields += '<tr><td class="min">' + i18next.t('material') + ':</td><td><b>' + v[16] + '</b></td></tr>';
-    if (v[17])
+    if (v[17] && v[18])
+        fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[17] + ' (' + v[18] + ')</b></td></tr>';
+    else if (v[17])
         fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[17] + '</b></td></tr>';
     else if (v[18])
         fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[18] + '</b></td></tr>';
