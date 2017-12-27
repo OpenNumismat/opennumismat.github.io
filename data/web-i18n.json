@@ -21,4 +21,7 @@
           "mintage": "Mintage",
           "material": "Material",
           "mint": "Mint"
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
 }

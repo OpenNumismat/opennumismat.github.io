@@ -64,6 +64,9 @@ i18next.init({
           mintage: "Mintage",
           material: "Material",
           mint: "Mint",
+          sort_by: "Sort by",
+          None: "None",
+          Title: "Title",
       }
     },
     bg: {
@@ -89,7 +92,10 @@ i18next.init({
           "year": "Година",
           "mintage": "Тираж",
           "material": "Материал",
-          "mint": "Монетен двор"
+          "mint": "Монетен двор",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
       }
     },
     ca: {
@@ -115,7 +121,10 @@ i18next.init({
           "year": "Any",
           "mintage": "Encunyació",
           "material": "Material",
-          "mint": "Seca"
+          "mint": "Seca",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     cs: {
@@ -141,7 +150,10 @@ i18next.init({
           "year": "Rok",
           "mintage": "Mintage",
           "material": "Materiál",
-          "mint": "Mincovna"
+          "mint": "Mincovna",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     de: {
@@ -167,7 +179,10 @@ i18next.init({
           "year": "Jahr",
           "mintage": "Auflage",
           "material": "Material",
-          "mint": "Münzanstalt"
+          "mint": "Münzanstalt",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     el: {
@@ -193,7 +208,10 @@ i18next.init({
           "year": "Έτος",
           "mintage": "Νομισματοκοπία",
           "material": "Υλικό",
-          "mint": "Νομισματοκοπείο"
+          "mint": "Νομισματοκοπείο",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     es: {
@@ -219,7 +237,10 @@ i18next.init({
           "year": "Año",
           "mintage": "Acuñación",
           "material": "Material",
-          "mint": "Ceca"
+          "mint": "Ceca",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     fr: {
@@ -245,7 +266,10 @@ i18next.init({
           "year": "Année",
           "mintage": "Mintage",
           "material": "Matériau",
-          "mint": "Monnaie"
+          "mint": "Monnaie",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     hu: {
@@ -271,7 +295,10 @@ i18next.init({
           "year": "Év",
           "mintage": "Pénzverde",
           "material": "Anyag",
-          "mint": "Pénzverde"
+          "mint": "Pénzverde",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     it: {
@@ -297,7 +324,10 @@ i18next.init({
           "year": "Anno",
           "mintage": "Coniatura",
           "material": "Materiale",
-          "mint": "Condizione"
+          "mint": "Condizione",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     nl: {
@@ -323,7 +353,10 @@ i18next.init({
           "year": "Jaar",
           "mintage": "Gemunt",
           "material": "Materiaal",
-          "mint": "Munthuis"
+          "mint": "Munthuis",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     pl: {
@@ -349,7 +382,10 @@ i18next.init({
           "year": "Rok",
           "mintage": "Nakład",
           "material": "Stop metali",
-          "mint": "Mennica"
+          "mint": "Mennica",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     pt: {
@@ -375,7 +411,10 @@ i18next.init({
           "year": "Ano",
           "mintage": "Cunhagem",
           "material": "Material",
-          "mint": "Cunho"
+          "mint": "Cunho",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
     ru: {
@@ -401,7 +440,10 @@ i18next.init({
           "year": "Год",
           "mintage": "Тираж",
           "material": "Материал",
-          "mint": "Двор"
+          "mint": "Двор",
+          "sort_by": "Сортировать по",
+          "None": "Нет",
+          "Title": "Название"
         }
     },
     uk: {
@@ -427,7 +469,10 @@ i18next.init({
           "year": "Рік",
           "mintage": "Тираж",
           "material": "Матеріал",
-          "mint": "Літери"
+          "mint": "Літери",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title"
         }
     },
   }
@@ -523,7 +568,7 @@ function execute(commands) {
 		var results = event.data.results;
 
         $('div#sort').empty();
-        html = '<table><tr><td>Sort by:</td><td><select class="sort" id="sort">';
+        html = '<table><tr><td><label for="sort">' + i18next.t('sort_by') + ':</label></td><td><select class="sort" id="sort">';
         html += '<option value="none">' + i18next.t('None') + '</option>';
         html += '<option value="title">' + i18next.t('Title') + '</option>';
         if (results[1].values.length > 1)
