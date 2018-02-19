@@ -59,7 +59,7 @@
 <h3>1.3 Licencia</h3>
 <p>OpenNumismat es software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la GNU General Public License publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia o cualquier versión posterior (a tu elección) .</p>
 <p>OpenNumismat se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver la GNU General Public License para más detalles.</p>
-<p>Deberías haber recibido una copia de la GNU General Public License con tu software. Si no la has recibido, puedes verla aquí <a href="http://www.gnu.org/licenses/" target="blank_">http://www.gnu.org/licenses/</a>.</p>
+<p>Deberías haber recibido una copia de la GNU General Public License con tu software. Si no la has recibido, puedes verla aquí <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
 <h2>2 Vista general</h2>
 <p>Cuando inicias por primera vez la aplicación, la pantalla principal aparece con una colección demo:</p>
 <p><img src="/images/manual/main1234.png"></p>
@@ -98,8 +98,10 @@
 <li>Moneda - Estado (estado de una moneda de la colección):<ul>
 <li>Estado: la principal característica que determina la presencia de una moneda en la colección. Puede tomar el valor de Demo, Prestada, Propiedad, Pedida, Vendida, En venta, Deseada. El estado de la moneda afecta la disponibilidad y el contenido de la pestaña Mercado;</li>
 <li>Grado - el grado de desgaste de la moneda;</li>
-<li>Almacenamiento - una descripción de la localización física de la moneda;</li>
 <li>Cantidad - el número de duplicados de una moneda en la lista;</li>
+<li>Format - destribution format (single coin, set or roll);</li>
+<li>Condition;</li>
+<li>Almacenamiento - una descripción de la localización física de la moneda;</li>
 <li>Código de barras;</li>
 <li>Defecto - una descripción de errores de acuñación;</li>
 <li>Características;</li>
@@ -147,9 +149,13 @@
 <li>Anverso - la imagen del anverso;</li>
 <li>Diseño (anverso);</li>
 <li>Diseñador (anverso);</li>
+<li>Engraver (obverse);</li>
+<li>Color (obverse);</li>
 <li>Reverso - la imagen del reverso;</li>
 <li>Diseño (reverso);</li>
 <li>Diseñador (reverso);</li>
+<li>Engraver (reverse);</li>
+<li>Color (reverse);</li>
 <li>Canto - la imagen del canto;</li>
 <li>Tipo (de canto);</li>
 <li>Leyenda (en el canto);</li>
@@ -264,9 +270,9 @@
 <li>Todas las nuevas entradas se añadirán (detectadas por el campo Crear) a la colección abierta.</li>
 <li>Las entradas con el mismo valor de ID y campo Crear se actualizarán cuando el valor del campo Actualizar sea menor en la colección abierta.</li>
 </ul>
-<h3>5.5 Importing</h3>
-<p>OpenNumismat allows you to import data into a collection from an Excel file. To do this, select the menu <i>File-&gt;Import-&gt;Excel</i> and select the source file.
-After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
+<h3>5.5 Importación</h3>
+<p>OpenNumismat le permite importar datos de una colección desde un archivo de Excel.. Para hacerlo, seleccione el menú <i>File-&gt;Import-&gt;Excel</i> y seleccione el archivo.
+Después de eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 10 monedas del archivo fuente:</p>
 <p><img src="/images/manual/import.png"></p>
 
 <h2>6 Reportes</h2>
@@ -326,7 +332,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner"><p class="copyright">Este proyecto es administrado por <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
-        <p>Publicado con <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Publicado con <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
 </div>
     </div>
