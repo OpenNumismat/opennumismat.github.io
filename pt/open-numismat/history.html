@@ -47,18 +47,31 @@
 <h2>Histórico de alterações OpenNumismat</h2>
 <p>
   </p>
-<h3>What's new in OpenNumismat 1.6.9 (31 January 2018)</h3>
+<h3>O que há de novo no OpenNumismat 1.7.0 (19 de Fevereiro de 2018)</h3>
   <ul>
-<li>Reference editor show fields names from settings</li>
-    <li>Statistics support value+unit and material+fineness fields</li>
-    <li>Paste reference icon from clipboard in reference editor (by right-click)</li>
-    <li>Statistics can show multicolor charts</li>
-    <li>Added progress dialog for building stacked bar</li>
-    <li>Improved Statistics tooltips</li>
-    <li>Fixed saving Statistics diagram for PS and EPS</li>
-    <li>Fixed exporting to CSV</li>
-    <li>Reordered price fields in Edit dialog</li>
-    <li>Improved Save as dialogs</li>
+<li>Novos campos: Gravadores, cores, formato, condição, imagem e descrição da variante (desactivado por predefinição)</li>
+    <li>Adicionada procura rápida</li>
+    <li>Definições de alteração da altura da imagem na tabela</li>
+    <li>Definições para mostrar painel de imagem em baixo</li>
+    <li>Definições para total de imagens no painel</li>
+    <li>Diálogo de definições redesenhado. Algumas definições mudadas para a colecção (por favor verifique as suas definições)</li>
+    <li>Armazenamento das definições de cor das estatísticas</li>
+    <li>Activada a edição de referência cruzada quando não seleccionado campo principal</li>
+    <li>Acelerada a gravação de registos</li>
+    <li>Reparado menu de filtragem sem moedas</li>
+  </ul>
+<h3>O que há de novo no OpenNumismat 1.6.9 (31 de Janeiro de 2018)</h3>
+  <ul>
+<li>Editor de referências mostra os nomes de campo das definições</li>
+    <li>Estatísticas suportam campos valor+unidade e material+finura</li>
+    <li>Colagem do ícone de referência no editor de referência com clique direito</li>
+    <li>Estatísticas mostram gráfico multi-cor</li>
+    <li>Adicionada barra de progresso na construção de barra empilhada</li>
+    <li>Sugestões de estatísticas melhoradas</li>
+    <li>Reparada gravação de diagramas de estatísticas para PS e EPS</li>
+    <li>Reparada exportação para CSV</li>
+    <li>Reordenados campos de preço no diálogo de edição</li>
+    <li>Melhorados diálogos Gravar como</li>
   </ul>
 <h3>O que há de novo no OpenNumismat 1.6.8 (22 de Jaeiro de 2018)</h3>
   <ul>
@@ -134,7 +147,7 @@
     <li>Reparada a inserção de valores superiores a 1000</li>
     <li>Reparada a geração de relatórios wikipedia_2</li>
     <li>Novo modelo de relatório: Desejada</li>
-    <li>Adicionada ligação ao <a href="../manual.html">Manual do utilizador</a>
+    <li>Adicionada ligação ao <a href="manual.html">manual do utilizador</a>
 </li>
   </ul>
 <h3>O que há de novo no OpenNumismat 1.5.5 (09 de Outubro de 2017)</h3>
@@ -240,7 +253,7 @@
     <li>Reparado formato livre nos campos de preço. Reparado calculo da comissão na venda</li>
     <li>Adicionado gravar tamanho do editor de referência, antevisão de relatório, diálogos de definições</li>
     <li>Movida a configuração do tamanho da imagem da colecção para as definições globais</li>
-    <li>Melhorado o deslocamento na árvore</li>
+    <li>Melhorado o rolamento da árvore</li>
   </ul>
 <h3>O que há de novo no OpenNumismat 1.4.4 (2 de Abril de 2013)</h3>
   <ul>
@@ -275,13 +288,13 @@
   </ul>
 <h3>O que há de novo no OpenNumismat 1.4.1 (31 de Janeiro de 2013)</h3>
   <ul>
-<li>Reparado erro crítico ao abrir a aplicação quando o registo está limpo (problema 12).</li>
+<li>Reparado erro crítico ao abrir a aplicação com o registo limpo</li>
   </ul>
 <h3>O que há de novo no OpenNumismat 1.4 (31 de Janeiro de 2013)</h3>
   <ul>
-<li>Implementado geração de <a href="/p/open-numismat/wiki/ReportEngine?wl=pt">relatórios</a> (baseado em modelos <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
-    <li>Implementado <a href="/p/open-numismat/wiki/ReportEngine?wl=pt">exportar</a> lista personalizada (<i>Relatório</i>&gt; <i>Gravar lista actual...</i>)</li>
-    <li>Adicionado capacidade de introduzir quaisquer dados em <a href="/p/open-numismat/wiki/Fields?wl=pt">campos</a> numéricos (activar <i>Formato livre em campos numéricos</i> no diálogo Definições) (problema 6, problema 10)</li>
+<li>Implementada a geração de relatórios (baseada em modelos <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
+    <li>Implementada a exportação de lista personalizada (<i>Relatório</i>&gt; <i>Gravar lista actual...</i>)</li>
+    <li>Adicionada a capacidade de inserir quaisquer dados em campos numéricos (active <i>Formato livre em campos numéricos</i> no diálogo de definições)</li>
     <li>Reparada verificação automática de actualizações (com reinício frequente da  aplicação não era efectuado)</li>
     <li>Adicionado comando <i>Vácuo</i> (menu <i>Coleção</i>) que liberta espaço em disco reservado por motores de BD</li>
     <li>Alterado o nome de ficheiro predefinido ao gravar imagens de moedas para um ficheiro</li>
@@ -296,14 +309,14 @@
     <li>Reparado a escolha do valor do diálogo referência ao editar a moeda.</li>
     <li>Reparado formatar a descrição da colecção e campos de texto da moeda (<i>Desenho</i>, <i>Assunto</i>, etc).</li>
     <li>O ficheiro da colecção pode ser passado como argumento da linha de comando.</li>
-    <li>Reparado possível erro ao editar comissões negativas (problema 9).</li>
+    <li>Reparado possível erro ao editar comissões negativas</li>
     <li>Adicionado apagar ficheiros temporários criados ao abrir imagens.</li>
     <li>Outras alterações menores.</li>
   </ul>
 <h3>O que há de novo no OpenNumismat 1.3 (23 de Novembro de 2012)</h3>
   <ul>
 <li>Refeito o formato da base de dados para aumentar o desempenho (conversão de ficheiros de colecção existentes é automática quando os abre numa nova versão do OpenNumismat).</li>
-    <li>Adicionados novos <a href="/p/open-numismat/wiki/Fields?wl=pt">campos</a>: Quantidade, URL, Código de barras.</li>
+    <li>Adicionados novos campos: Quantidade, URL, código de barras</li>
     <li>Adicionada procura automática de actualizações (activada no diálogo Definições).</li>
     <li>Implementada importação de Collection Studio 3.65. Para importar, tem primeiro de exportar a colecção para uma tabela XML usando o menu Collection Studio: <i>Ferramentas</i>&gt; <i>Exportar...</i>.</li>
     <li>Adicionado capacidade de proteger dados da colecção com senha (nota: os dados não são encriptados, pelo que a senha não pode ser considerada protecção completa.) Defina a senha no menu <i>Coleção</i>&gt; <i>Definir senha...</i>.</li>
@@ -331,7 +344,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner"><p class="copyright">Este projecto é mantido por <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
-        <p>Publicado com <a href="http://pages.github.com">páginas GitHub</a></p>
+        <p>Publicado com <a href="https://pages.github.com">Páginas GitHub</a></p>
       </footer>
 </div>
     </div>

@@ -47,6 +47,19 @@
 <h2>Historial de canvis d'OpenNumismat</h2>
 <p>
   </p>
+<h3>What's new in OpenNumismat 1.7.0 (19 February 2018)</h3>
+  <ul>
+<li>New fields: Engravers, Colors, Format, Condition, Variety image and description (disabled by default)</li>
+    <li>Added quick search</li>
+    <li>Settings for change image height in Table of coins</li>
+    <li>Settings for showing Image panel at bottom</li>
+    <li>Settings for default count of images in panel</li>
+    <li>Refactored Settings dialog. Some settings moved to collection (please, check your settings)</li>
+    <li>Store Statistics multicolor settings</li>
+    <li>Enable editing cross reference when not selected main field</li>
+    <li>Speedup saving records</li>
+    <li>Fix filter menu without coins</li>
+  </ul>
 <h3>What's new in OpenNumismat 1.6.9 (31 January 2018)</h3>
   <ul>
 <li>Reference editor show fields names from settings</li>
@@ -134,7 +147,7 @@
     <li>Fixed entering values greater 1000</li>
     <li>Fixed wikipedia_2 report generation</li>
     <li>New report template: Wanted</li>
-    <li>Added link to <a href="../manual.html">User manual</a>
+    <li>Added link to <a href="manual.html">User manual</a>
 </li>
   </ul>
 <h3>What's new in OpenNumismat 1.5.5 (09 October 2017)</h3>
@@ -240,7 +253,7 @@
     <li>S'ha afegit el format lliure a les caselles de preus. S'ha solucionat els problemes en el càlcul de comissions a la part de vendes</li>
     <li>S'ha ampliat la mida de desament de l'editor de referències, de la previsualització d'informes i dels quadres de configuració</li>
     <li>S'ha mogut el paràmetre de configuració de mida de la imatge de la col·lecció a configuració global</li>
-    <li>Millora del desplaçament <a href="/p/open-numismat/w/edit/TreeView?wl=en">?</a> de la visualització de l'arbre</li>
+    <li>Improved TreeView scrolling</li>
   </ul>
 <h3>Novetats a OpenNumismat 1.4.4 (02 de abril de 2013)</h3>
   <ul>
@@ -275,13 +288,13 @@
   </ul>
 <h3>Novetats a OpenNumismat 1.4.1 (31 de gener de 2013)</h3>
   <ul>
-<li>S'ha solucionat un problema greu en obrir l'aplicació quan el registre està buit (<a title="[v1.4] TypeError - C:\Python32\lib\site-packages\cx_Freeze\initscripts\Console3.py:27" class="closed_ref" href="/p/open-numismat/issues/detail?id=12">&nbsp;issue 12&nbsp;</a>).</li>
+<li>Fixed critical bug with opening application when registry is clear.</li>
   </ul>
 <h3>Novetats a OpenNumismat 1.4 (31 de gener de 2013)</h3>
   <ul>
-<li>S'ha implementat la creació d' <a href="/p/open-numismat/wiki/ReportEngine?wl=en">informes</a> (basats en plantilles <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
-    <li>Implementació de l' <a href="/p/open-numismat/wiki/ReportEngine?wl=en">exportació</a> d'una llista personalitzada (<i>Report</i>&gt; <i>Desa llista actual...</i>)</li>
-    <li>S'ha afegit la opció d'inserir informació en camps <a href="/p/open-numismat/wiki/Fields?wl=en">numèrics</a> (habiliteu <i>Camps numèrics de format lliure</i> al quadre de Configuració) (<a title="No s'ha pogut assignar un valor fraccionari" class="closed_ref" href="/p/open-numismat/issues/detail?id=6">&nbsp;issue 6&nbsp;</a>, <a title="Data no vàlida ex. 88 BC" class="closed_ref" href="/p/open-numismat/issues/detail?id=10">&nbsp;issue 10&nbsp;</a>)</li>
+<li>Implemented generation reports (based on templates <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
+    <li>Implemented export customized list (<i>Report</i>&gt; <i>Save current list...</i>)</li>
+    <li>Added the ability to enter any data in numerical fields (enable <i>Free format numeric fields</i> in the Settings dialog)</li>
     <li>S'ha solucionat la comprovació d'actualitzacions (no es duu a terme amb la comprovació freqüent a l'inici de l'aplicació)</li>
     <li>S'ha afegit l'ordre <i>Buida</i> (al menú <i>Col·lecció</i>) que allibera l'espai del disc reservat a motors de BD</li>
     <li>S'ha canviat el nom per defecte del fitxer quan guardem imatges de monedes en un fitxer</li>
@@ -296,14 +309,14 @@
     <li>Millora en l'elecció de valors a les referències del quadres quan editem la moneda.</li>
     <li>S'ha solucionat la formatació de la descripció de col·leccions i els camps de text de les monedes (<i>Disseny</i>, <i>Subjecte</i>, etc).</li>
     <li>El fitxer de la col·lecció es pot passar com a paràmetre de línia de comandament.</li>
-    <li>S'ha solucionat un problema quan guardem comissions negatives (<a title="[v1.2.4] ValueError - EditCoinDialog\DetailsTabWidget.py:625" class="closed_ref" href="/p/open-numismat/issues/detail?id=9">&nbsp;issue 9&nbsp;</a>).</li>
+    <li>Fixed possible bug when editing negative commissions.</li>
     <li>S'ha afegit l'eliminació de fitxers temporals creats quan obrim imatges.</li>
     <li>Altres canvis menors.</li>
   </ul>
 <h3>Novetats a OpenNumismat 1.3 (23 de novembre de 2012)</h3>
   <ul>
 <li>S'ha refacturat el format de la base de dades per millorar el rendiment (conversió automàtica dels fitxers de col·leccions existents quan els obrim amb la nova versió d'OpenNumismat).</li>
-    <li>S'han afegit nous <a href="/p/open-numismat/wiki/Fields?wl=en">canvis</a>: Quantitat, URL, Codi de barres.</li>
+    <li>Added new fields: Quantity, URL, Barcode.</li>
     <li>S'ha afegit la comprovació de novetats automàtica (canviat al quadre de Configuració).</li>
     <li>S'ha implementat la importació des de Collection Studio 3.65. Per importar, heu d'exportar primer la col·lecció existent al format de taula XML fent servir el menú Collection Studio: <i>Eines</i>&gt; <i>Exporta...</i>.</li>
     <li>S'ha afegit la possibilitat de protegir data de la col·lecció amb contrasenya (Nota: no es duu a terme encriptació, així que la protecció de la contrasenya no es pot considerar completa.) La configuració d'una contrasenya es pot fer al menú de <i>Col·lecció</i>&gt; <i>Configurar contrasenya...</i>.</li>
@@ -331,7 +344,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner"><p class="copyright">This project is maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
-        <p>Publicat amb <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
 </div>
     </div>
