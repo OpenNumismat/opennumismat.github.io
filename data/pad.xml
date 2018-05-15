@@ -34,9 +34,9 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>OpenNumismat</Program_Name>
-		<Program_Version>1.7.1</Program_Version>
-		<Program_Release_Month>03</Program_Release_Month>
-		<Program_Release_Day>06</Program_Release_Day>
+		<Program_Version>1.7.2</Program_Version>
+		<Program_Release_Month>05</Program_Release_Month>
+		<Program_Release_Day>04</Program_Release_Day>
 		<Program_Release_Year>2018</Program_Release_Year>
 		<Program_Cost_Dollars>0</Program_Cost_Dollars>
 		<Program_Cost_Other_Code />
@@ -45,7 +45,7 @@
 		<Program_Release_Status>New Release</Program_Release_Status>
 		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
 		<Program_OS_Support>Win7,WinOther,WinVista,WinXP,Win8</Program_OS_Support>
-		<Program_Language>English,Russian,Spanish,French,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish,Catalan,Dutch</Program_Language>
+		<Program_Language>English,Russian,Spanish,French,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish,Catalan,Dutch,Bulgarian,Latvian</Program_Language>
 		<Program_Change_Info />
 		<Program_Specific_Category>Home\/Hobby</Program_Specific_Category>
 		<Program_Category_Class>Home &amp; Hobby::Cataloging</Program_Category_Class>
@@ -87,10 +87,10 @@ Main features:
   * Batch edit coins
   * Ability to add and customize the lists to display the required data
   * Does not require additional software to work with a database
-  * Importing from CoinsCollector, Numizmat 2, Cabinet, CoinManage 2011, 2013, 2015, Collection Studio 3.65 and Numizmatik_Ru
+  * Importing from CoinsCollector, Numizmat 2, Cabinet, CoinManage 2011, 2013, 2015, Collection Studio 3.65, Numizmatik_Ru and Tellico
     (additional software may be required)
-  * Support languages: English, Russian, German, Spanish, French, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish, Catalan, Dutch
-  * Cross-platform: Windows, Linux, Mac OS X
+  * Support languages: English, Russian, German, Spanish, French, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish, Catalan, Dutch, Bulgarian, Latvian
+  * Cross-platform: Windows, Linux, MacOS
 			</Char_Desc_2000>
 		</English>
 	</Program_Descriptions>
@@ -103,7 +103,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.7.1/OpenNumismat-1.7.1.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.7.2/OpenNumismat-1.7.2.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
