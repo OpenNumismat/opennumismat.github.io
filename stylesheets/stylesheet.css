@@ -130,22 +130,7 @@ h6 {
 #github-page strong {
   font-weight: bold;
 }
-/*
-#github-page img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
 
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
-}
-*/
 p img {
   display: inline;
   margin: 0;
@@ -159,7 +144,7 @@ p img {
   margin-bottom: 15px
 }
 
-#github-page ul {
+ul {
   padding-left: 30px;
 }
 
@@ -199,8 +184,8 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 680px;
-  padding: 10px 10px 10px 25px;
+  max-width: 830px;
+  padding: 10px 10px 10px 175px;
   margin: 0 auto;
 }
 
@@ -257,6 +242,7 @@ img.mobile-screenshot {
 
 #header_wrap .inner {
   padding: 5px 10px 30px 25px;
+  max-width: 680px;
 }
 
 #project_title {
@@ -311,12 +297,24 @@ img.mobile-screenshot {
   color: #474747;
 }
 
+.toc {
+  float: right;
+  display: inline-block;
+  max-width: 150px;
+  width: 100%;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 10px;
+  font-weight: bolder;
+}
 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
 
-@media screen and (max-width: 1115px) {
+@media screen and (max-width: 1131px) {
 .inner-image {
   max-width: 680px;
   padding: 10px 10px 10px 25px;
@@ -337,6 +335,21 @@ div.content-image img {
   padding: 0;
   float: auto;
   height: 250px;
+}
+}
+
+@media screen and (max-width: 1030px) {
+.toc {
+  float: none;
+}
+
+.toc ul {
+  padding-left: 0;
+}
+
+.inner {
+  max-width: 680px;
+  padding: 10px 10px 10px 25px;
 }
 }
 
