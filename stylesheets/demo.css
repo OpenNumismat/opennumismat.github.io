@@ -53,6 +53,10 @@ table.table tr.row {
     border-top: 1px solid #e0e0e0;
 }
 
+table.table tr.row:hover {
+    background: #e8e8e8
+}
+
 table.table td {
     vertical-align: middle;
 }

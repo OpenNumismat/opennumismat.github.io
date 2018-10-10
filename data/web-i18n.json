@@ -23,5 +23,8 @@
           "mint": "Mint"
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
 }

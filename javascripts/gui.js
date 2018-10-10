@@ -67,6 +67,9 @@ i18next.init({
           sort_by: "Sort by",
           None: "None",
           Title: "Title",
+          bidding: "Bidding",
+          build_table: "Building table",
+          exec_sql: "Executing SQL"
       }
     },
     bg: {
@@ -95,7 +98,10 @@ i18next.init({
           "mint": "Монетен двор",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
       }
     },
     ca: {
@@ -124,7 +130,10 @@ i18next.init({
           "mint": "Seca",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     cs: {
@@ -153,7 +162,10 @@ i18next.init({
           "mint": "Mincovna",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     de: {
@@ -182,7 +194,10 @@ i18next.init({
           "mint": "Münzanstalt",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     el: {
@@ -211,7 +226,10 @@ i18next.init({
           "mint": "Νομισματοκοπείο",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     es: {
@@ -240,7 +258,10 @@ i18next.init({
           "mint": "Ceca",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     fr: {
@@ -269,7 +290,10 @@ i18next.init({
           "mint": "Monnaie",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     hu: {
@@ -298,7 +322,10 @@ i18next.init({
           "mint": "Pénzverde",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     it: {
@@ -327,7 +354,10 @@ i18next.init({
           "mint": "Condizione",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     nl: {
@@ -356,7 +386,10 @@ i18next.init({
           "mint": "Munthuis",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     pl: {
@@ -385,7 +418,10 @@ i18next.init({
           "mint": "Mennica",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     pt: {
@@ -414,7 +450,10 @@ i18next.init({
           "mint": "Cunho",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     ru: {
@@ -443,7 +482,10 @@ i18next.init({
           "mint": "Двор",
           "sort_by": "Сортировать по",
           "None": "Нет",
-          "Title": "Название"
+          "Title": "Название",
+          "bidding": "Ставка",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
     uk: {
@@ -472,7 +514,10 @@ i18next.init({
           "mint": "Літери",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title"
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL"
         }
     },
   }
@@ -483,8 +528,8 @@ function filterChanged() {
     var def_filter = i18next.t('All');
 
     if ($('select#status').length) {
-        var status = $('select#status').find('option:selected').text();
-        if (status !== def_filter)
+        var status = $('select#status').find('option:selected').val();
+        if (status !== 'all')
             filters.push("coins.status='" + status.replace("'", "''") + "'");
     }
     if ($('select#country').length) {
@@ -558,9 +603,9 @@ function applyFilter(commands) {
 
         status();
 	}
-    status("Executing SQL");
+    status(i18next.t('exec_sql'));
 	worker.postMessage({action:'exec', sql:commands});
-    status("Fetching results");
+    status(i18next.t('build_table'));
 }
 
 function execute(commands) {
@@ -586,7 +631,7 @@ function execute(commands) {
 
         $('div#filters').empty();
         html = "<table>";
-        html += filterCreate('status', results[1].values);
+        html += i18nFilterCreate('status', results[1].values);
         html += filterCreate('country', results[2].values);
         html += filterCreate('series', results[3].values);
         html += filterCreate('type', results[4].values);
@@ -602,9 +647,9 @@ function execute(commands) {
 
         status();
 	}
-    status("Executing SQL");
+    status(i18next.t('exec_sql'));
 	worker.postMessage({action:'exec', sql:commands});
-    status("Fetching results");
+    status(i18next.t('build_table'));
 }
 
 // Create an HTML table
@@ -614,6 +659,17 @@ var filterCreate = function () {
       var label = i18next.t(id);
       var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
       return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+    }
+    return '';
+  }
+}();
+
+var i18nFilterCreate = function () {
+  return function (id, values){
+    if (values.length > 1) {
+      var label = i18next.t(id);
+      var rows = values.map(function(v){ return '<option value="' + v[0] + '">' + i18next.t(v[0]) + '</option>'});
+      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
     }
     return '';
   }
@@ -662,9 +718,9 @@ function showInfo(id) {
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
-    status("Executing SQL");
+    status(i18next.t('exec_sql'));
 	worker.postMessage({action:'exec', sql:command});
-    status("Fetching results");
+    status(i18next.t('build_table'));
 }
 
 var infoCreate = function () {
@@ -738,9 +794,9 @@ function showImages(id) {
         LEFT JOIN photos AS photo3 ON coins.photo3 = photo3.id\
         LEFT JOIN photos AS photo4 ON coins.photo4 = photo4.id\
         WHERE coins.id=" + id + ";";
-    status("Executing SQL");
+    status(i18next.t('exec_sql'));
 	worker.postMessage({action:'exec', sql:command});
-    status("Fetching results");
+    status(i18next.t('build_table'));
 }
 
 var imagesCreate = function () {
