@@ -26,5 +26,6 @@
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
 }

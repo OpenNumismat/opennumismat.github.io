@@ -69,7 +69,8 @@ i18next.init({
           Title: "Title",
           bidding: "Bidding",
           build_table: "Building table",
-          exec_sql: "Executing SQL"
+          exec_sql: "Executing SQL",
+          BC: "BC"
       }
     },
     bg: {
@@ -101,7 +102,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
       }
     },
     ca: {
@@ -133,7 +135,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     cs: {
@@ -165,7 +168,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     de: {
@@ -197,7 +201,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     el: {
@@ -229,7 +234,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     es: {
@@ -261,7 +267,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     fr: {
@@ -293,7 +300,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     hu: {
@@ -325,7 +333,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     it: {
@@ -357,7 +366,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     nl: {
@@ -389,7 +399,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     pl: {
@@ -421,7 +432,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     pt: {
@@ -453,7 +465,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     ru: {
@@ -485,7 +498,8 @@ i18next.init({
           "Title": "Название",
           "bidding": "Ставка",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
     uk: {
@@ -517,7 +531,8 @@ i18next.init({
           "Title": "Title",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL"
+          "exec_sql": "Executing SQL",
+          "BC": "BC"
         }
     },
   }
@@ -686,8 +701,12 @@ var tableCreate = function () {
             desc.push(v[4]);
         if (v[5] || v[6])
             desc.push(v[5] + ' ' + v[6]);
-        if (v[7])
-            desc.push(v[7]);
+        if (v[7]) {
+            if (v[7] < 0)
+                desc.push((-v[7]) + '&nbsp;' + i18next.t("BC"));
+            else
+                desc.push(v[7]);
+        }
         if (v[8])
             desc.push(v[8]);
         if (v[9])
@@ -755,8 +774,12 @@ var infoCreate = function () {
         fields += '<tr><td class="min">' + i18next.t('subject') + ':</td><td><b>' + v[12] + '</b></td></tr>';
     if (v[13])
         fields += '<tr><td class="min">' + i18next.t('date_issue') + ':</td><td><b>' + v[13] + '</b></td></tr>';
-    else if (v[14])
-        fields += '<tr><td class="min">' + i18next.t('year') + ':</td><td><b>' + v[14] + '</b></td></tr>';
+    else if (v[14]) {
+        if (v[14] < 0)
+            fields += '<tr><td class="min">' + i18next.t('year') + ':</td><td><b>' + (-v[14]) + '&nbsp;' + i18next.t('BC') + '</b></td></tr>';
+        else
+            fields += '<tr><td class="min">' + i18next.t('year') + ':</td><td><b>' + v[14] + '</b></td></tr>';
+    }
     if (v[15])
         fields += '<tr><td class="min">' + i18next.t('mintage') + ':</td><td><b>' + v[15] + '</b></td></tr>';
     if (v[16])
