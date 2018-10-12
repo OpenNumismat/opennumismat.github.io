@@ -13,9 +13,10 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="stylesheet" href="/stylesheets/demo.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<script src="/javascripts/codemirror.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.12.4.min.js"><\/script>')</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.12.4.min.js"></script>
 </head>
 <body>
+<p>')</p>
 
     <div id="github-page">
     <!-- HEADER -->
@@ -50,6 +51,15 @@
 
     <!-- MAIN CONTENT -->
 <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Главная</a></li>
+        <li><a href="../open-numismat/#download">Скачать</a></li>
+        <li><a href="../open-numismat/manual.html">Руководство</a></li>
+        <li><a href="../open-numismat/#donate">Поблагодарить</a></li>
+        </ul>
+</div>
+<div class="inner-content">
       <section id="online-viewer" class="inner"><h2>Online OpenNumismat viewer</h2>
 
 <label>Загрузите файл коллекции: <input type="file" id="dbfile" accept=".db"></label>
@@ -67,12 +77,16 @@
 </div>
 <div id="info" style="display: none;"></div>
 <div id="images" style="display: none;"></div>
-</section>
-</div>
 
 <div id="lang" style="display: none;">ru</div>
 
-<script src="/javascripts/sql.js"></script><script src="/javascripts/i18next.min.js"></script><script src="/javascripts/gui.js"></script><!-- FOOTER  --><div id="footer_wrap" class="outer">
+<script src="/javascripts/i18next.min.js"></script><script src="/javascripts/gui.js"></script></section>
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
       <footer class="inner"><p>Исходный код доступен на <a href="https://github.com/OpenNumismat">GitHub</a></p>
         <p>Опубликовано с помощью <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>

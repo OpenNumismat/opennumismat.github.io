@@ -13,14 +13,16 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="stylesheet" href="/stylesheets/demo.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<script src="/javascripts/codemirror.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.12.4.min.js"><\/script>')</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-1.12.4.min.js"></script>
 </head>
 <body>
+<p>')</p>
 
     <div id="github-page">
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/ca/open-numismat-web/">Català</a> |
+      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/bg/open-numismat-web/">Български</a> |
+          <a class="title-link" href="/ca/open-numismat-web/">Català</a> |
           <a class="title-link" href="/de/open-numismat-web/">Deutsch</a> |
           <a class="title-link" href="/open-numismat-web/">English</a> |
           <a class="title-link" href="/el/open-numismat-web/">Ελληνικά</a> |
@@ -42,31 +44,51 @@
           <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
             <a class="title-link" href="/"><h3 id="project_tagline">is a collection of free, open-source coin collecting software</h3></a>
-</div>
+          </div>
         </div>
       </header>
 </div>
 
     <!-- MAIN CONTENT -->
 <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Home</a></li>
+        <li><a href="../open-numismat/#download">Download</a></li>
+        <li><a href="../open-numismat/manual.html">Manual</a></li>
+        <li><a href="../open-numismat/#donate">Donation</a></li>
+        </ul>
+</div>
+<div class="inner-content">
       <section id="online-viewer" class="inner"><h2>Online OpenNumismat viewer</h2>
-<label>Load an OpenNumismat collection file: <input type="file" id="dbfile" accept=".db"></label><div id="error" class="error"></div>
+
+<label>Load an OpenNumismat collection file: <input type="file" id="dbfile" accept=".db"></label>
+
+<div id="error" class="error"></div>
 <div id="status" style="display: none;">
 <div id="loader"></div>
 <div id="status-text"></div>
 </div>
 
-<div id="output"><div id="sort"></div><div id="filters"></div><div id="table"></div></div>
+<div id="output">
+<div id="sort"></div>
+<div id="filters"></div>
+<div id="table"></div>
+</div>
 <div id="info" style="display: none;"></div>
 <div id="images" style="display: none;"></div>
-</section>
-</div>
 
 <div id="lang" style="display: none;">ca</div>
 
-<script src="/javascripts/sql.js"></script><script src="/javascripts/i18next.min.js"></script><script src="/javascripts/gui.js"></script><!-- FOOTER  --><div id="footer_wrap" class="outer">
-      <footer class="inner"><p class="copyright">This project is maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+<script src="/javascripts/i18next.min.js"></script><script src="/javascripts/gui.js"></script></section>
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner"><p>Source code available at <a href="https://github.com/OpenNumismat">GitHub</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
 </div>
     </div>
