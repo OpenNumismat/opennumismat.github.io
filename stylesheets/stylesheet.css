@@ -399,3 +399,20 @@ div.content-image img {
     font-size: 12px;
   }
 }
+
+#logo {
+   background-image: url(/images/logo.png);
+   background-size: 72px;
+   height: 72px;
+   width: 72px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+   #logo {
+     background-image: url(/images/logo@2x.png);
+   }
+}
