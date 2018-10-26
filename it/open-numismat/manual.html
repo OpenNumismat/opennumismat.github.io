@@ -33,7 +33,9 @@
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
             <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
-          <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
+          <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div></a>
+          </div>
           <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
             <a class="title-link" href="/"><h3 id="project_tagline">Software per collezionare monete open-source e gratuito</h3></a>
@@ -44,7 +46,15 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner"><div>
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Home</a></li>
+        <li><a href="../open-numismat/#download">Download</a></li>
+        <li><a href="../open-numismat/manual.html">Manual</a></li>
+        <li><a href="../open-numismat/#donate">Donation</a></li>
+        </ul>
+</div>
+<div class="inner-content">
 <h1>Manuale utente</h1>
 <h2>1 Introduzione</h2>
 <h3>1.1 Descrizione</h3>
@@ -257,7 +267,7 @@
 <br>Il menu File visualizza fino a 5 file aperti di recente disponibili per l'apertura rapida.</p>
 <h3>5.2 Backup</h3>
 <p>Per evitare la perdita dei dati della collezione a causa di hardware, software, errori umani e programmi dannosi, si consiglia di eseguire un backup.  Per creare una copia di backup della collezione, selezionare il menu <i>File-&gt;Backup</i>.  Questo creerà una copia della collezione corrente con l'aggiunta della data e dell'ora (per esempio, demo_171025115112.db per la copia effettuata alle 11:51:12 il 25/10/2017) nella cartella specificata nelle impostazioni. Per ripristinare i dati, basta rinominare il file di backup eliminando data e ora. Puoi anche copiare il file della collezione usando il tuo sistema operativo.</p>
-<p>Nota: si consiglia di archiviare i backup su un supporto fisico diverso dal quale si sta lavorando. La scelta di un archivio cloud, come Dropbox, può essere una buona opzione. È inoltre importante eseguire copie di backup regolarmente, prima o dopo aver apportato un numero elevato di modifiche.</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see 8.4).</p>
 <h3>5.3 Compressione - Eliminazione spazio vuoto</h3>
 <p>In considerazione delle peculiarità del software di SQLite, che fornisce l'archiviazione dei dati della collezione, la memoria non viene liberata automaticamente quando i dati vengono eliminati nel file della collezione. Nel tempo, ciò può comportare un aumento delle dimensioni del file della collezione, la sua frammentazione e il rallentamento dell'applicazione. Se necessario, è possibile ridurre la dimensione del file della collezione eliminando lo spazio vuoto non necessario selezionando il menu <i>File-&gt;Compressione</i>.</p>
 <h3>5.4 Password</h3>
@@ -283,6 +293,7 @@ Successivamente, verrà aperta una finestra per l'assegnazione dei campi con le 
 <p>Per creare un resoconto, è necessario selezionare le monete i cui dati verranno inclusi nel resoconto e aprire la finestra di dialogo Anteprima selezionando il menu <i>Resoconto-&gt;Resoconto...</i>:</p>
 <p><img src="/images/manual/report_preview.png"></p>
 <p>Nella finestra di Anteprima, puoi selezionare un modello di resoconto (l'elenco a sinistra sulla barra degli strumenti), controllare la modalità di anteprima e stampare o salvare il resoconto in un file con il formato desiderato (i pulsanti a destra sulla barra degli strumenti).</p>
+<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see 6.2) for open report in your browser.</p>
 <h3>6.2 Resoconto Rapido</h3>
 <p>Selezionando il menu <i>Resoconto-&gt;Vedi nel browser</i>, puoi visualizzare rapidamente il resoconto per le monete selezionate in formato HTML.</p>
 <p><img src="/images/manual/report.png"></p>
@@ -329,13 +340,17 @@ Successivamente, verrà aperta una finestra per l'assegnazione dei campi con le 
 <h3>8.3 Images count by default</h3>
 Default images count in Image panel.
 
-<h3>8.4 Collection</h3>
+<h3>8.4 Autobackup</h3>
+You can enable autobackup. This feature will make backups after changing specified count of records.
+
+<h3>8.5 Collection</h3>
 Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/settings2.png"></p>
 
 <p>Preview image height:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
+<p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
 <p>Images at bottom:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 

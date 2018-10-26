@@ -33,7 +33,9 @@
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
             <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
-          <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
+          <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div></a>
+          </div>
           <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
             <a class="title-link" href="/"><h3 id="project_tagline">é um programa gratuito e de código aberto para coleccionadores de moedas</h3></a>
@@ -44,7 +46,15 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner"><div>
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Início</a></li>
+        <li><a href="../open-numismat/#download">Transferir</a></li>
+        <li><a href="../open-numismat/manual.html">Manual</a></li>
+        <li><a href="../open-numismat/#donate">Doar</a></li>
+        </ul>
+</div>
+<div class="inner-content">
 <h1>Manual do utilizador</h1>
 <h2>1 Introdução</h2>
 <h3>1.1 Descrição</h3>
@@ -257,7 +267,7 @@
 <br>O menu Ficheiro mostra até 5 colecções recentemente abertas para abertura rápida.</p>
 <h3>5.2 Cópia de segurança</h3>
 <p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma cópia de segurança. Para tal, seleccione o menu <i>Ficheiro -&gt; Cópia de segurança</i>. Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a cópia de segurança, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
-<p>Nota: recomenda-se que guarde as cópias de segurança em unidades físicas diferentes daquela onde trabalha habitualmente. Escolher um armazenamento na nuvem, como o Dropbox, pode ser uma opção. É também importante fazer cópias regularmente, antes e depois de fazer alterações à sua colecção.</p>
+<p>Nota: É recomendável armazenar as seguranças noutro suporte que não aquele onde trabalha habitualmente. Escolher um serviço online, como o Dropbox, pode ser uma opção. Também é importante fazer seguranças regularmente, antes e depois de fazer um grande número de alterações (veja 8.4).</p>
 <h3>5.3 Vácuo</h3>
 <p>Dadas as peculiaridades da implementação SQLite, que fornece o armazenamento dos dados das colecções, a memória não é automaticamente libertada quando apaga dados do ficheiro da colecção. Ao longo do tempo, isto pode levar a um grande aumento do tamanho da colecção e sua fragmentação, abrandando a aplicação. Se necessário, pode reduzir o tamanho da colecção libertando espaço "vazio" desnecessário seleccionando o menu <i>Ficheiro -&gt; Vácuo</i>.</p>
 <h3>5.4 Senha</h3>
@@ -283,6 +293,7 @@ Em seguida, verá o diálogo para atribuir campos com as primeiras dez moedas do
 <p>Para criar um relatório, tem de seleccionar as moedas a incluir no relatório e abrir a antevisão seleccionando o menu <i>Relatório -&gt; Relatório...</i>:</p>
 <p><img src="/images/manual/report_preview.png"></p>
 <p>No diálogo Antever relatório pode seleccionar um modelo de relatório (a lista pendente à esquerda na barra de ferramentas), controlar o modo da antevisão e imprimir ou gravar o relatório num dos formatos disponíveis (usando os botões da barra).</p>
+<p>Nota: o diálogo de antevisão usa uma biblioteca antiga para gerar HTML. A antevisão dos relatórios pode estar corrompida e não reflecte o seu aspecto num navegador moderno. Pode também rebentar em relatórios gransdes (mais de 100 moedas). Para este efeito, use o relatório rápido (veja 6.2) para abrir o relatório no seu anvegador.</p>
 <h3>6.2 Relatório rápido</h3>
 <p>Seleccionando <i>Relatório -&gt; Ver no navegadorr</i>, pode rapidamente ver um relatório para as moedas seleccionadas, em formato HTML.</p>
 <p><img src="/images/manual/report.png"></p>
@@ -329,13 +340,17 @@ Em seguida, verá o diálogo para atribuir campos com as primeiras dez moedas do
 <h3>8.3 Total de imagens por predefinição</h3>
 Predefinição do total de imagens no painel de imagem.
 
-<h3>8.4 Colecção</h3>
+<h3>8.4 Segurança automática</h3>
+Pode activar a segurança automática. Esta funcionalidade faz uma segurança após alterar um dado número de registos.
+
+<h3>8.5 Colecção</h3>
 Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/manual/settings2.png"></p>
 
 <p>Altura da antevisão:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
+<p>Campos numéricos de formato livre - para inserir valores em formato expandido (ponto de interrogação no campo Ano, fracções no campo nominal, intervalo no campo Peso, etc).</p>
 <p>Imagens no fundo:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 

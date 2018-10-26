@@ -33,7 +33,9 @@
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
             <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
-          <div class="title-logo"><a class="title-link" href="/"><img id="project_logo" src="/images/logo.png"></a></div>
+          <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div></a>
+          </div>
           <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
             <a class="title-link" href="/"><h3 id="project_tagline">Ένα δωρεάν, ανοιχτού κώδικα λογισμικό για συλλογή νομισμάτων</h3></a>
@@ -44,7 +46,15 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner"><div>
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Αρχική σελίδα</a></li>
+        <li><a href="../open-numismat/#download">Λήψη</a></li>
+        <li><a href="../open-numismat/manual.html">Εγχειρίδιο χρήστη</a></li>
+        <li><a href="../open-numismat/#donate">Δωρεά</a></li>
+        </ul>
+</div>
+<div class="inner-content">
 <h1>Εγχειρίδιο χρήστη</h1>
 <h2>1 Εισαγωγή</h2>
 <h3>1.1 Περιγραφή</h3>
@@ -257,7 +267,7 @@
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Backup</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File-&gt;Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes.</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see 8.4).</p>
 <h3>5.3 Vacuum</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <i>File-&gt;Vacuum</i> menu.</p>
 <h3>5.4 Password</h3>
@@ -283,6 +293,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <i>Report-&gt;Report...</i> menu:</p>
 <p><img src="/images/manual/report_preview.png"></p>
 <p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).</p>
+<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see 6.2) for open report in your browser.</p>
 <h3>6.2 Quick Report</h3>
 <p>By selecting the <i>Report-&gt;View in browser</i> menu, you can quickly view the report for the selected coins in HTML format.</p>
 <p><img src="/images/manual/report.png"></p>
@@ -329,13 +340,17 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>8.3 Images count by default</h3>
 Default images count in Image panel.
 
-<h3>8.4 Collection</h3>
+<h3>8.4 Autobackup</h3>
+You can enable autobackup. This feature will make backups after changing specified count of records.
+
+<h3>8.5 Collection</h3>
 Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/settings2.png"></p>
 
 <p>Ύψος εικόνας προεπισκόπησης:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
+<p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
 <p>Images at bottom:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
