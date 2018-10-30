@@ -1,6 +1,6 @@
 {
-  "name": "Weather",
-  "short_name": "Weather",
+  "name": "OpenNumismat",
+  "short_name": "OpenNumismat",
   "icons": [{
       "src": "img/icon-192.png",
       "sizes": "192x192",
