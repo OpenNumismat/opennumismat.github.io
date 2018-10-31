@@ -12,27 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v2';
-var cacheName = 'weatherPWA-final-2';
-var filesToCache = [/*
-  '/',
-  '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/images/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
-*/];
+var dataCacheName = 'weatherData-v7';
+var cacheName = 'weatherPWA-final-7';
+var filesToCache = [
+  '/open-numismat-app/',
+  '/open-numismat-app/index.html',
+  '/stylesheets/stylesheet.css',
+  '/stylesheets/demo.css',
+  '/javascripts/jquery-1.12.4.min.js',
+  '/images/facebook.png',
+  '/images/vkontakte.png',
+  '/open-numismat-app/js/i18next.min.js',
+  '/open-numismat-app/js/app.js',
+  '/images/twitter.png',
+  '/images/bg_hr.png',
+  '/images/logo.png',
+  '/open-numismat-app/js/worker.sql.js'
+];
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
@@ -70,8 +66,6 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(e) {
-  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
-  if (e.request.url.indexOf(dataUrl) > -1) {
     /*
      * When the request URL contains dataUrl, the app is asking for fresh
      * weather data. In this case, the service worker always goes to the
@@ -79,6 +73,7 @@ self.addEventListener('fetch', function(e) {
      * network" strategy:
      * https://jakearchibald.com/2014/offline-cookbook/#cache-then-network
      */
+/*
     e.respondWith(
       caches.open(dataCacheName).then(function(cache) {
         return fetch(e.request).then(function(response){
@@ -88,17 +83,18 @@ self.addEventListener('fetch', function(e) {
         });
       })
     );
-  } else {
+*/
     /*
      * The app is asking for app shell files. In this scenario the app uses the
      * "Cache, falling back to the network" offline strategy:
      * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
      */
+
     e.respondWith(
       caches.match(e.request).then(function(response) {
         console.log('[Service Worker] Fetch from cash', e.request.url);
         return response || fetch(e.request);
       })
     );
-  }
+
 });
