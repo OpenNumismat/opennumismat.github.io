@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v7';
-var cacheName = 'weatherPWA-final-7';
+var dataCacheName = 'weatherData-v8';
+var cacheName = 'weatherPWA-final-8';
 var filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
