@@ -5,12 +5,6 @@ if ('serviceWorker' in navigator) {
       console.log('Service Worker Registered');
       registration.update();
     });
-/*
-    navigator.serviceWorker
-             .ready.then(function(registration) {
-      return registration.sync.register('update');
-    });
-*/
 }
 
 var outputElm = document.getElementById('output');

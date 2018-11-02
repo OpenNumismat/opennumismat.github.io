@@ -105,8 +105,3 @@ self.addEventListener('fetch', function(e) {
     );
 
 });
-/*
-self.addEventListener('sync', function(event) {
-  console.log('[ServiceWorker] Sync');
-});
-*/
