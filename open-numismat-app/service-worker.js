@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v8';
-var cacheName = 'weatherPWA-final-8';
+var cacheName = 'weatherPWA-final-19';
 var filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
@@ -33,6 +32,14 @@ var filesToCache = [
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        console.log('[ServiceWorker] Removing old cache', key);
+        caches.delete(key);
+      }));
+    })
+  );
+  e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
       return cache.addAll(filesToCache);
@@ -45,9 +52,9 @@ self.addEventListener('activate', function(e) {
   e.waitUntil(
     caches.keys().then(function(keyList) {
       return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName && key !== dataCacheName) {
+        if (key !== cacheName) {
           console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
+          caches.delete(key);
         }
       }));
     })
@@ -98,3 +105,8 @@ self.addEventListener('fetch', function(e) {
     );
 
 });
+/*
+self.addEventListener('sync', function(event) {
+  console.log('[ServiceWorker] Sync');
+});
+*/

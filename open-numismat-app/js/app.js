@@ -1,8 +1,17 @@
-  if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('./service-worker.js')
-             .then(function() { console.log('Service Worker Registered'); });
-  }
+             .then(function(registration) {
+      console.log('Service Worker Registered');
+      registration.update();
+    });
+/*
+    navigator.serviceWorker
+             .ready.then(function(registration) {
+      return registration.sync.register('update');
+    });
+*/
+}
 
 var outputElm = document.getElementById('output');
 var infoElm = document.getElementById('info');
