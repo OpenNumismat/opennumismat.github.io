@@ -1,0 +1,120 @@
+#main-page .ui-content {
+    padding: 0;
+}
+
+div#sort, #filters {
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 0px;
+    padding-left: 1em;
+}
+
+#table {
+    padding-top: 1em;
+}
+
+#error {
+	color:red;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#output {
+	overflow: auto;
+}
+
+table.table {
+	width:100%;
+	margin:auto;
+ 	border-collapse:collapse;
+ 	margin-bottom:10px;
+    table-layout: fixed;
+    border: 1px solid #e0e0e0;
+}
+
+table.table tr.row {
+    cursor:pointer;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+table.table tr.row:hover {
+    background: #e8e8e8
+}
+
+table.table td {
+    vertical-align: middle;
+}
+
+td div.title, td div.description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+td.data {
+    padding-left: 3px;
+}
+td div.title {
+  font-size: 18px;
+  font-weight: bolder;
+}
+td div.description {
+  color:#747474;
+}
+td.image {
+    width: 90px;
+    overflow: hidden;
+}
+td.image img {
+    vertical-align: middle;
+}
+td.status {
+    width: 50px;
+    text-align: right;
+    overflow: hidden;
+}
+
+table.info {
+	border: none;
+	width:100%;
+}
+
+table.info td {
+	border:none;
+    width: 100%;
+}
+
+table.info td.min {
+    width: 1%;
+}
+
+.coin-image {
+	width:50%;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.coin-image img {
+	max-width:100%;
+    display: block;
+    margin: auto;
+}
+
+.coin-images {
+	width:100%;
+}
+
+.coin-images img {
+	max-width:100%;
+    display: block;
+    margin: auto;
+}

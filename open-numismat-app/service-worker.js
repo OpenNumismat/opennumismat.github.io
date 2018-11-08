@@ -12,20 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var cacheName = 'weatherPWA-final-19';
+var cacheName = 'weatherPWA-final-21';
 var filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
-  '/stylesheets/stylesheet.css',
-  '/stylesheets/demo.css',
+  '/stylesheets/jquery.mobile-1.4.5.min.css',
+  '/stylesheets/mobile.css',
+  '/stylesheets/images/ajax-loader.gif'
+  '/images/logo.png',
   '/javascripts/jquery-1.12.4.min.js',
-  '/images/facebook.png',
-  '/images/vkontakte.png',
+  '/javascripts/jquery.mobile-1.4.5.min.js',
   '/open-numismat-app/js/i18next.min.js',
   '/open-numismat-app/js/app.js',
-  '/images/twitter.png',
-  '/images/bg_hr.png',
-  '/images/logo.png',
   '/open-numismat-app/js/worker.sql.js'
 ];
 

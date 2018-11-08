@@ -10,8 +10,6 @@ if ('serviceWorker' in navigator) {
 var outputElm = document.getElementById('output');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
-var errorElm = document.getElementById('error');
-var statusElm = document.getElementById('status-text');
 var dbFileElm = document.getElementById('dbfile');
 
 var scrollPos = 0;
@@ -27,22 +25,21 @@ worker.onerror = error;
 worker.postMessage({action:'open'});
 
 function error(e) {
-  console.log(e);
-	errorElm.style.height = '2em';
-	errorElm.textContent = e.message;
-}
-
-function noerror() {
-	errorElm.style.height = '0';
+    console.log(e);
+    $.mobile.loading( "hide" );
+    $("#error p").text(e.message);
+    $("#error").popup("open");
 }
 
 function status(text="") {
     if (text === "") {
-        $("#status").hide();
+        $.mobile.loading( "hide" );
     }
     else {
-        statusElm.textContent = text;
-        $("#status").show();
+        $.mobile.loading( "show", {
+                text: text,
+                textVisible: true
+        });
     }
 }
 
@@ -741,7 +738,8 @@ function showInfo(id) {
 
         status();
 	}
-    location.hash = "info";
+//    location.hash = "info";
+    $.mobile.navigate("#info-page");
 	infoElm.innerHTML = "";
     command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
@@ -816,7 +814,8 @@ function showImages(id) {
 
         status();
 	}
-    location.hash = "images";
+//    location.hash = "images";
+    $.mobile.navigate("#images-page");
     imagesElm.innerHTML = "";
     command = "SELECT obverseimg.image, reverseimg.image, edgeimg.image, photo1.image, photo2.image, photo3.image, photo4.image FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
@@ -848,20 +847,21 @@ var imagesCreate = function () {
 }();
 
 $(window).on('hashchange', function() {
+    console.log("hashchange" + location.hash)
     if (location.hash === "#info") {
-        outputElm.style.display = "none";
-        imagesElm.style.display = "none";
-        infoElm.style.display = "";
+//        outputElm.style.display = "none";
+//        imagesElm.style.display = "none";
+//        infoElm.style.display = "";
     }
     else if (location.hash === "#images") {
-        outputElm.style.display = "none";
-        infoElm.style.display = "none";
-        imagesElm.style.display = "";
+//        outputElm.style.display = "none";
+//        infoElm.style.display = "none";
+//        imagesElm.style.display = "";
     }
     else {
-        infoElm.style.display = "none";
-        imagesElm.style.display = "none";
-        outputElm.style.display = "";
+//        infoElm.style.display = "none";
+//        imagesElm.style.display = "none";
+//        outputElm.style.display = "";
         document.documentElement.scrollTop = scrollPos;
     }
 });
@@ -878,32 +878,35 @@ function arrayBufferToBase64( buffer ) {
 
 // Load a db from a file
 dbFileElm.onchange = function() {
-	var f = dbFileElm.files[0];
-	var r = new FileReader();
-    location.hash = "";
-    $('div#table').empty();
-    $('div#filters').empty();
-    mainSqlFilter = "";
-    $('div#sort').empty();
-    mainSqlSort = "";
-	r.onload = function() {
-		worker.onmessage = function () {
-            noerror()
-            execute (mainSqlSelect + ";\
-                SELECT DISTINCT status FROM coins;\
-                SELECT DISTINCT country FROM coins;\
-                SELECT DISTINCT series FROM coins;\
-                SELECT DISTINCT type FROM coins;\
-                SELECT DISTINCT period FROM coins;\
-                SELECT DISTINCT mint FROM coins;");
-		};
-		try {
-			worker.postMessage({action:'open',buffer:r.result}, [r.result]);
-		}
-		catch(exception) {
-			worker.postMessage({action:'open',buffer:r.result});
-		}
-	}
-    status("Loading database from file");
-	r.readAsArrayBuffer(f);
+    file = dbFileElm.files[0];
+    if (file !== undefined) {
+        $.mobile.navigate("#main-page");
+        
+        var r = new FileReader();
+//        location.hash = "";
+        $('div#table').empty();
+        $('div#filters').empty();
+        mainSqlFilter = "";
+        $('div#sort').empty();
+        mainSqlSort = "";
+        r.onload = function() {
+            worker.onmessage = function () {
+                execute (mainSqlSelect + ";\
+                    SELECT DISTINCT status FROM coins;\
+                    SELECT DISTINCT country FROM coins;\
+                    SELECT DISTINCT series FROM coins;\
+                    SELECT DISTINCT type FROM coins;\
+                    SELECT DISTINCT period FROM coins;\
+                    SELECT DISTINCT mint FROM coins;");
+            };
+            try {
+                worker.postMessage({action:'open',buffer:r.result}, [r.result]);
+            }
+            catch(exception) {
+                worker.postMessage({action:'open',buffer:r.result});
+            }
+        }
+        status("Loading database from file");
+        r.readAsArrayBuffer(file);
+    }
 }
