@@ -635,7 +635,7 @@ function execute(commands) {
             html += '<option value="status">' + i18next.t('status') + '</option>';
         if (results[2].values.length > 1)
             html += '<option value="country">' + i18next.t('country') + '</option>';
-        html += '<option value="year">' + i18next.t('Year') + '</option>';
+        html += '<option value="year">' + i18next.t('year') + '</option>';
         if (results[3].values.length > 1)
             html += '<option value="series">' + i18next.t('series') + '</option>';
         if (results[4].values.length > 1)

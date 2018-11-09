@@ -33,51 +33,81 @@ function error(e) {
 
 function status(text="") {
     if (text === "") {
-        $.mobile.loading( "hide" );
+        setTimeout(function() {
+            $.mobile.loading( "hide" );
+        }, 1);
     }
     else {
-        $.mobile.loading( "show", {
-                text: text,
-                textVisible: true
-        });
+        setTimeout(function() {
+            $.mobile.loading("show", {
+                    text: text,
+                    textVisible: true
+            });
+        }, 1);
     }
 }
 
+function detectLang() {
+    if (localStorage.lang !== undefined) {
+        return localStorage.lang;
+    }
+    else {
+        var langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg");
+        var lang = navigator.language || navigator.userLanguage;;
+
+        for (i = 0; i < langcodes.length; i++) {
+            if (lang.substr(0,2) == langcodes[i]) {
+                localStorage.lang = langcodes[i];
+                return langcodes[i];
+            }
+        }
+    }
+    
+    return 'en';
+}
+
 i18next.init({
-  lng: $('#lang').text(),
+  lng: detectLang(),
   resources: {
     en: {
-      translation: {
-          status: "Status",
-          country: "Country",
-          series: "Series",
-          type: "Type",
-          period: "Period",
-          All: "All",
-          owned: "Owned",
-          demo: "Demo",
-          pass: "Pass",
-          ordered: "Ordered",
-          sold: "Sold",
-          sale: "Sale",
-          wish: "Wish",
-          region: "Region",
-          ruler: "Ruler",
-          denomination: "Denomination",
-          subject: "Subject",
-          date_issue: "Date of issue",
-          year: "Year",
-          mintage: "Mintage",
-          material: "Material",
-          mint: "Mint",
-          sort_by: "Sort by",
-          None: "None",
-          Title: "Title",
-          bidding: "Bidding",
-          build_table: "Building table",
-          exec_sql: "Executing SQL",
-          BC: "BC"
-      }
+        translation: {
+          "status": "Status",
+          "country": "Country",
+          "series": "Series",
+          "type": "Type",
+          "period": "Period",
+          "All": "All",
+          "owned": "Owned",
+          "demo": "Demo",
+          "pass": "Pass",
+          "ordered": "Ordered",
+          "sold": "Sold",
+          "sale": "Sale",
+          "wish": "Wish",
+          "region": "Region",
+          "ruler": "Ruler",
+          "denomination": "Denomination",
+          "subject": "Subject",
+          "date_issue": "Date of issue",
+          "year": "Year",
+          "mintage": "Mintage",
+          "material": "Material",
+          "mint": "Mint",
+          "sort_by": "Sort by",
+          "None": "None",
+          "Title": "Title",
+          "bidding": "Bidding",
+          "build_table": "Building table",
+          "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Open",
+            "about": "About",
+            "select_file": "Load an OpenNumismat collection file:"
+          }
+        }
     },
     bg: {
       translation: {
@@ -109,6 +139,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
       }
     },
@@ -142,6 +173,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -175,6 +207,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -208,6 +241,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -241,6 +275,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -274,6 +309,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -307,6 +343,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -340,6 +377,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -373,6 +411,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -406,6 +445,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -439,6 +479,7 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -472,6 +513,7 @@ i18next.init({
           "bidding": "Oferta",
           "build_table": "Tabela de construção",
           "exec_sql": "Executar SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
@@ -505,7 +547,13 @@ i18next.init({
           "bidding": "Ставка",
           "build_table": "Строится таблица",
           "exec_sql": "Выполняется SQL",
-          "BC": "До РХ"
+          "load_db": "Loading database from file",
+          "BC": "До РХ",
+          "content": {
+            "open": "Открыть",
+            "about": "О программе",
+            "select_file": "Load an OpenNumismat collection file:"
+          }
         }
     },
     uk: {
@@ -538,11 +586,19 @@ i18next.init({
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
+          "load_db": "Loading database from file",
           "BC": "BC"
         }
     },
   }
 });
+
+jqueryI18next.init(i18next, $, {
+  handleName: 'localize',
+  selectorAttr: 'data-i18n'
+});
+
+$("body").localize();
 
 function filterChanged() {
     var filters = [];
@@ -641,7 +697,7 @@ function execute(commands) {
             html += '<option value="status">' + i18next.t('status') + '</option>';
         if (results[2].values.length > 1)
             html += '<option value="country">' + i18next.t('country') + '</option>';
-        html += '<option value="year">' + i18next.t('Year') + '</option>';
+        html += '<option value="year">' + i18next.t('year') + '</option>';
         if (results[3].values.length > 1)
             html += '<option value="series">' + i18next.t('series') + '</option>';
         if (results[4].values.length > 1)
@@ -847,7 +903,7 @@ var imagesCreate = function () {
 }();
 
 $(window).on('hashchange', function() {
-    console.log("hashchange" + location.hash)
+    console.log("hashchange" + location.hash + " " + scrollPos)
     if (location.hash === "#info") {
 //        outputElm.style.display = "none";
 //        imagesElm.style.display = "none";
@@ -906,7 +962,24 @@ dbFileElm.onchange = function() {
                 worker.postMessage({action:'open',buffer:r.result});
             }
         }
-        status("Loading database from file");
+        status(i18next.t('load_db'));
         r.readAsArrayBuffer(file);
+        console.log(reader.readAsDataURL(file));
     }
 }
+
+function showDensity() {
+    if (window.devicePixelRatio < 1.5)
+        density = "MDPI";
+    else if (window.devicePixelRatio < 2)
+        density = "HDPI";
+    else if (window.devicePixelRatio < 2.5)
+        density = "XHDPI";
+    else if (window.devicePixelRatio < 3.5)
+        density = "XXHDPI";
+    else
+        density = "XXXHDPI";
+    $("#density").text(i18next.t('density') + density);
+}
+
+showDensity();

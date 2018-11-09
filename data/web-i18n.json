@@ -27,5 +27,12 @@
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
-          "BC": "BC"
+          "load_db": "Loading database from file",
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Open",
+            "about": "About",
+            "select_file": "Load an OpenNumismat collection file:"
+          }
 }

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var cacheName = 'weatherPWA-final-21';
-var filesToCache = [
+var cacheName = 'weatherPWA-final-23';
+var filesToCache = [/*
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
   '/stylesheets/jquery.mobile-1.4.5.min.css',
@@ -23,8 +23,9 @@ var filesToCache = [
   '/javascripts/jquery-1.12.4.min.js',
   '/javascripts/jquery.mobile-1.4.5.min.js',
   '/open-numismat-app/js/i18next.min.js',
+  '/open-numismat-app/js/jquery-i18next.min.js',
   '/open-numismat-app/js/app.js',
-  '/open-numismat-app/js/worker.sql.js'
+  '/open-numismat-app/js/worker.sql.js'*/
 ];
 
 self.addEventListener('install', function(e) {
