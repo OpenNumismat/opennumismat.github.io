@@ -602,7 +602,6 @@ $("body").localize();
 
 function filterChanged() {
     var filters = [];
-    var def_filter = i18next.t('All');
 
     if ($('select#status').length) {
         var status = $('select#status').find('option:selected').val();
@@ -610,28 +609,28 @@ function filterChanged() {
             filters.push("coins.status='" + status.replace("'", "''") + "'");
     }
     if ($('select#country').length) {
-        var country = $('select#country').find('option:selected').text();
-        if (country !== def_filter)
+        var country = $('select#country').find('option:selected').val();
+        if (country !== 'all')
             filters.push("coins.country='" + country.replace("'", "''") + "'");
     }
     if ($('select#series').length) {
-        var series = $('select#series').find('option:selected').text();
-        if (series !== def_filter)
+        var series = $('select#series').find('option:selected').val();
+        if (series !== 'all')
             filters.push("coins.series='" + series.replace("'", "''") + "'");
     }
     if ($('select#type').length) {
-        var type = $('select#type').find('option:selected').text();
-        if (type !== def_filter)
+        var type = $('select#type').find('option:selected').val();
+        if (type !== 'all')
             filters.push("coins.type='" + type.replace("'", "''") + "'");
     }
     if ($('select#period').length) {
-        var period = $('select#period').find('option:selected').text();
-        if (period !== def_filter)
+        var period = $('select#period').find('option:selected').val();
+        if (period !== 'all')
             filters.push("coins.period='" + period.replace("'", "''") + "'");
     }
     if ($('select#mint').length) {
-        var mint = $('select#mint').find('option:selected').text();
-        if (mint !== def_filter)
+        var mint = $('select#mint').find('option:selected').val();
+        if (mint !== 'all')
             filters.push("coins.mint='" + mint.replace("'", "''") + "'");
     }
 
@@ -739,7 +738,7 @@ var filterCreate = function () {
     if (values.length > 1) {
       var label = i18next.t(id);
       var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select data-mini="true" data-inline="true" data-native-menu="false" class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+      return '<tr><td></td><td><select data-mini="true" data-inline="true" data-native-menu="false" class="filter" id="' + id + '"><option data-placeholder="true" value="all">' + label + '</option><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
     }
     return '';
   }
