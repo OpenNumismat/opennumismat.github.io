@@ -608,11 +608,9 @@ function applyFilter(commands) {
 	worker.onmessage = function(event) {
 		var results = event.data.results;
 
+        $('div#table').empty();
         if (results.length > 0) {
-            $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
-        }
-        else {
-            $('div#table').replaceWith('');
+            $('div#table').append(tableCreate(results[0].columns, results[0].values));
         }
         updateTable();
 
@@ -656,8 +654,9 @@ function execute(commands) {
         html += "</table>";
         $('div#filters').append(html);
 
+        $('div#table').empty();
         if (results.length > 0) {
-            $('div#table').replaceWith(tableCreate(results[0].columns, results[0].values));
+            $('div#table').append(tableCreate(results[0].columns, results[0].values));
             updateTable();
         }
 
@@ -693,8 +692,6 @@ var i18nFilterCreate = function () {
 
 var tableCreate = function () {
   return function (columns, values){
-    var tbl  = document.createElement('div');
-    tbl.setAttribute("id", "table");
     var rows = values.map(function(v) {
         var desc = [];
         if (v[4])
@@ -715,8 +712,7 @@ var tableCreate = function () {
             <td class="data"><div class="title">' + v[2] + '&nbsp;</div><div class="description">' + desc.join(', ') + '&nbsp;</div></td><td class="status">' + i18next.t(v[3]) + '</td></tr>';
     });
     var html = '<table class="table">' + rows.join('') + '</table>';
-    tbl.innerHTML = html;
-    return tbl;
+    return html;
   }
 }();
 
