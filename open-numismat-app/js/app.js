@@ -657,12 +657,12 @@ function updateTable() {
         scrollPos = document.documentElement.scrollTop;
         showInfo($( this ).attr('data-id'));
     });
-    
-    $('select.filter').unbind('change');
-    $('select.filter').change(filterChanged);
-    
-    $('select.sort').unbind('change');
-    $('select.sort').change(sortChanged);
+
+//    $('select.filter').unbind('change');
+//    $('select.filter').change(filterChanged);
+
+//    $('select.sort').unbind('change');
+//    $('select.sort').change(sortChanged);
 }
 
 // Run a command in the database
@@ -688,7 +688,7 @@ function execute(commands) {
 		var results = event.data.results;
 
         $('div#sort').empty();
-        html = '<table><tr><td><label for="sort">' + i18next.t('sort_by') + ':</label></td><td><select class="sort" id="sort">';
+        html = '<table><tr><td><label for="sort">' + i18next.t('sort_by') + ':</label></td><td><select data-mini="true" data-inline="true" class="sort" id="sort">';
         html += '<option value="none">' + i18next.t('None') + '</option>';
         html += '<option value="title">' + i18next.t('Title') + '</option>';
         if (results[1].values.length > 1)
@@ -704,6 +704,8 @@ function execute(commands) {
             html += '<option value="period">' + i18next.t('period') + '</option>';
         html += "</select></td></tr></table>";
         $('div#sort').append(html);
+        $('select.sort').change(sortChanged);
+        $('select.sort').selectmenu();
 
         $('div#filters').empty();
         html = "<table>";
@@ -715,7 +717,9 @@ function execute(commands) {
         html += filterCreate('mint', results[6].values);
         html += "</table>";
         $('div#filters').append(html);
-        
+        $('select.filter').change(filterChanged);
+        $('select.filter').selectmenu();
+
         $('div#table').empty();
         if (results.length > 0) {
             $('div#table').append(tableCreate(results[0].columns, results[0].values));
@@ -735,7 +739,7 @@ var filterCreate = function () {
     if (values.length > 1) {
       var label = i18next.t(id);
       var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select data-mini="true" data-inline="true" class="filter" id="' + id + '"><option>' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
     }
     return '';
   }
@@ -746,7 +750,7 @@ var i18nFilterCreate = function () {
     if (values.length > 1) {
       var label = i18next.t(id);
       var rows = values.map(function(v){ return '<option value="' + v[0] + '">' + i18next.t(v[0]) + '</option>'});
-      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select class="filter" id="' + id + '"><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select data-mini="true" data-inline="true" class="filter" id="' + id + '"><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
     }
     return '';
   }
