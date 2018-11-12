@@ -39,12 +39,13 @@
 	<div role="main" class="ui-content">
       <label for='dbfile' data-i18n="content.select_file">Load an OpenNumismat collection file:</label>
       <input type='file' id='dbfile' accept=".db">
+      <p data-i18n="content.security_note">Your file not will be uploaded to the internet. You can disable internet connection.</p>
     </div>
   </div>
 
   <div data-role="page" id="main-page">
 	<div data-role="header" data-position="fixed" role="banner">
-      <h1>OpenNumismat Mobile</h1>
+      <h1 id="main-page-title">OpenNumismat Mobile</h1>
       <a href="#navpanel2" data-icon="bars" data-iconpos="notext" class="ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
     </div>
     <div data-role="panel" data-position-fixed="true" data-display="overlay" id="navpanel2">
@@ -65,7 +66,7 @@
 
   <div data-role="page" id="info-page">
 	<div data-role="header" data-position="fixed" role="banner">
-      <h1>OpenNumismat Mobile</h1>
+      <h1 id="info-page-title">OpenNumismat Mobile</h1>
       <a data-icon="bars" data-rel="back" data-iconpos="notext" class="ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
     </div>
 	<div role="main" class="ui-content">
@@ -75,7 +76,7 @@
 
   <div data-role="page" id="images-page">
 	<div data-role="header" data-position="fixed" role="banner">
-      <h1>OpenNumismat Mobile</h1>
+      <h1 id="images-page-title">OpenNumismat Mobile</h1>
       <a data-icon="bars" data-rel="back" data-iconpos="notext" class="ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Back</a>
     </div>
 	<div role="main" class="ui-content">

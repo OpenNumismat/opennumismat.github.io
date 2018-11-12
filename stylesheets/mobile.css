@@ -118,6 +118,14 @@ table.info td.min {
 	width:100%;
 }
 
+#images-page .ui-content {
+    padding: 0.5em;
+}
+
+.coin-images:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
 .coin-images img {
 	max-width:100%;
     display: block;

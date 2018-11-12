@@ -7,7 +7,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-var outputElm = document.getElementById('output');
 var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var dbFileElm = document.getElementById('dbfile');
@@ -105,7 +104,8 @@ i18next.init({
           "content": {
             "open": "Open",
             "about": "About",
-            "select_file": "Load an OpenNumismat collection file:"
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
         }
     },
@@ -133,14 +133,20 @@ i18next.init({
           "mintage": "Тираж",
           "material": "Материал",
           "mint": "Монетен двор",
-          "sort_by": "Sort by",
-          "None": "None",
-          "Title": "Title",
-          "bidding": "Bidding",
-          "build_table": "Building table",
-          "exec_sql": "Executing SQL",
+          "sort_by": "Сортиране по",
+          "None": "Нито един",
+          "Title": "Заглавие",
+          "bidding": "Наддаване",
+          "build_table": "Изчертаване на таблица",
+          "exec_sql": "Изпълнение на SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
+          "BC": "пр. Хр.",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Отваряне",
+            "about": "Относно",
+            "select_file": "Load an OpenNumismat collection file:"
+          }
       }
     },
     ca: {
@@ -547,12 +553,13 @@ i18next.init({
           "bidding": "Ставка",
           "build_table": "Строится таблица",
           "exec_sql": "Выполняется SQL",
-          "load_db": "Loading database from file",
+          "load_db": "Загрузка базы данных из файла",
           "BC": "До РХ",
+          "density": "Плотность пикселей дисплея: ",
           "content": {
             "open": "Открыть",
             "about": "О программе",
-            "select_file": "Load an OpenNumismat collection file:"
+            "select_file": "Загрузите файл коллекции OpenNumismat:"
           }
         }
     },
@@ -793,7 +800,6 @@ function showInfo(id) {
 
         status();
 	}
-//    location.hash = "info";
     $.mobile.navigate("#info-page");
 	infoElm.innerHTML = "";
     command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
@@ -811,6 +817,10 @@ var infoCreate = function () {
     var tbl  = document.createElement('div');
     var title = '<h3>' + v[0] +'</h3>';
     var images = '';
+
+    $('#info-page-title').text(v[0]);
+    $('#images-page-title').text(v[0]);
+
     if (v[1])
         images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></div>';
     if (v[2])
@@ -869,7 +879,6 @@ function showImages(id) {
 
         status();
 	}
-//    location.hash = "images";
     $.mobile.navigate("#images-page");
     imagesElm.innerHTML = "";
     command = "SELECT obverseimg.image, reverseimg.image, edgeimg.image, photo1.image, photo2.image, photo3.image, photo4.image FROM coins\
@@ -902,7 +911,6 @@ var imagesCreate = function () {
 }();
 
 $(window).on('hashchange', function() {
-    console.log("hashchange" + location.hash + " " + scrollPos)
     if (location.hash === "#info") {
 //        outputElm.style.display = "none";
 //        imagesElm.style.display = "none";
@@ -936,9 +944,11 @@ dbFileElm.onchange = function() {
     file = dbFileElm.files[0];
     if (file !== undefined) {
         $.mobile.navigate("#main-page");
-        
+
+        $('#main-page-title').text(file.name);
+        dbFileElm.value = '';
+
         var r = new FileReader();
-//        location.hash = "";
         $('div#table').empty();
         $('div#filters').empty();
         mainSqlFilter = "";
