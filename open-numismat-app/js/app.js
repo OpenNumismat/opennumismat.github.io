@@ -738,7 +738,7 @@ var filterCreate = function () {
     if (values.length > 1) {
       var label = i18next.t(id);
       var rows = values.map(function(v){ return '<option>' + v[0] + '</option>'});
-      return '<tr><td></td><td><select data-mini="true" data-inline="true" data-native-menu="false" class="filter" id="' + id + '"><option data-placeholder="true" value="all">' + label + '</option><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
+      return '<tr><td><label for="' + id + '">' + label + ':</label></td><td><select data-mini="true" data-inline="true" class="filter" id="' + id + '"><option value="all">' + i18next.t('All') + '</option>' + rows.join('') + '</select></td></tr>';
     }
     return '';
   }
