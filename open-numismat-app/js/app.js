@@ -802,7 +802,7 @@ function showInfo(id) {
 	}
     $.mobile.navigate("#info-page");
 	infoElm.innerHTML = "";
-    command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark FROM coins\
+    command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark, features FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
@@ -863,7 +863,12 @@ var infoCreate = function () {
     else if (v[18])
         fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[18] + '</b></td></tr>';
     fields += '</table>';
-    var html = title + images + fields;
+
+    var info = '';
+    if (v[19])
+        info += '<div class="coin-info">' + v[19] + '</div>';
+
+    var html = title + images + fields + info;
     tbl.innerHTML = html;
     return tbl;
   }
@@ -895,6 +900,15 @@ function showImages(id) {
     status(i18next.t('build_table'));
 }
 
+function newTabImage(img) {
+    var image = new Image();
+    image.src = img;
+
+    var w = window.open("",'_blank');
+    w.document.write(image.outerHTML);
+    w.document.close();
+}
+
 var imagesCreate = function () {
   return function (values){
     v = values[0];
@@ -902,7 +916,7 @@ var imagesCreate = function () {
     var images = '';
     for (var i=0; i<=6; i++) {
         if (v[i])
-            images += '<div class="coin-images"><img src="data:image/png;base64,' + arrayBufferToBase64(v[i]) + '"></div>';
+            images += '<div class="coin-images"><img onclick="newTabImage(this.src)" src="data:image/png;base64,' + arrayBufferToBase64(v[i]) + '"></div>';
     }
     var html = images;
     tbl.innerHTML = html;
