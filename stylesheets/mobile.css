@@ -102,6 +102,10 @@ table.info td.min {
     width: 1%;
 }
 
+.coin-info {
+    padding: 3px;
+}
+
 .coin-image {
 	width:50%;
     display: inline-block;

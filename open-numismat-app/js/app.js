@@ -11,7 +11,6 @@ var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var dbFileElm = document.getElementById('dbfile');
 
-var scrollPos = 0;
 var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins LEFT OUTER JOIN images on images.id = coins.image";
 var mainSqlFilter = "";
 var mainSqlSort = "";
@@ -660,15 +659,8 @@ function sortChanged() {
 function updateTable() {
     $('tr.row').unbind('click');
     $('tr.row').click(function() {
-        scrollPos = document.documentElement.scrollTop;
         showInfo($( this ).attr('data-id'));
     });
-
-//    $('select.filter').unbind('change');
-//    $('select.filter').change(filterChanged);
-
-//    $('select.sort').unbind('change');
-//    $('select.sort').change(sortChanged);
 }
 
 // Run a command in the database
@@ -802,7 +794,7 @@ function showInfo(id) {
 	}
     $.mobile.navigate("#info-page");
 	infoElm.innerHTML = "";
-    command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark, features FROM coins\
+    command = "SELECT coins.title, obverseimg.image, reverseimg.image, status, region, country, period, ruler, value, unit, type, series, subjectshort, issuedate, year, mintage, material, mint, mintmark, features, subject FROM coins\
         LEFT JOIN photos AS obverseimg ON coins.obverseimg = obverseimg.id\
         LEFT JOIN photos AS reverseimg ON coins.reverseimg = reverseimg.id\
         WHERE coins.id=" + id + ";";
@@ -867,6 +859,8 @@ var infoCreate = function () {
     var info = '';
     if (v[19])
         info += '<div class="coin-info">' + v[19] + '</div>';
+    if (v[20])
+        info += '<div class="coin-info">' + v[20] + '</div>';
 
     var html = title + images + fields + info;
     tbl.innerHTML = html;
@@ -923,25 +917,6 @@ var imagesCreate = function () {
     return tbl;
   }
 }();
-
-$(window).on('hashchange', function() {
-    if (location.hash === "#info") {
-//        outputElm.style.display = "none";
-//        imagesElm.style.display = "none";
-//        infoElm.style.display = "";
-    }
-    else if (location.hash === "#images") {
-//        outputElm.style.display = "none";
-//        infoElm.style.display = "none";
-//        imagesElm.style.display = "";
-    }
-    else {
-//        infoElm.style.display = "none";
-//        imagesElm.style.display = "none";
-//        outputElm.style.display = "";
-        document.documentElement.scrollTop = scrollPos;
-    }
-});
 
 function arrayBufferToBase64( buffer ) {
     var binary = '';
