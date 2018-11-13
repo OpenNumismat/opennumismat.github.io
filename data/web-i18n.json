@@ -33,7 +33,7 @@
           "content": {
             "open": "Open",
             "about": "About",
-            "select_file": "Load an OpenNumismat collection file:"
+            "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
 }
