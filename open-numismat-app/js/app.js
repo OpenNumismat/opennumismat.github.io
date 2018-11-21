@@ -138,13 +138,14 @@ i18next.init({
           "bidding": "Наддаване",
           "build_table": "Изчертаване на таблица",
           "exec_sql": "Изпълнение на SQL",
-          "load_db": "Loading database from file",
+          "load_db": "Зарежда се база данни от файл",
           "BC": "пр. Хр.",
-          "density": "Density of the display: ",
+          "density": "Показва плътността на пикселите:",
           "content": {
             "open": "Отваряне",
             "about": "Относно",
-            "select_file": "Load an OpenNumismat collection file:"
+            "select_file": "Заредете файл с колекция от OpenNumismat",
+            "security_note": "Вашият файл няма да бъде качен в интернет. Можете да деактивирате интернет връзката."
           }
       }
     },
@@ -174,13 +175,20 @@ i18next.init({
           "mint": "Seca",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Títol",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Obre",
+            "about": "Quant a",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     cs: {
       translation: {
@@ -203,18 +211,25 @@ i18next.init({
           "subject": "Předmět",
           "date_issue": "Datum vystavení",
           "year": "Rok",
-          "mintage": "Mintage",
+          "mintage": "Mincovní značka",
           "material": "Materiál",
           "mint": "Mincovna",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Název",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Otevřít",
+            "about": "About",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     de: {
       translation: {
@@ -234,7 +249,7 @@ i18next.init({
           "region": "Region",
           "ruler": "Herrscher",
           "denomination": "Nennwert",
-          "subject": "Betreff",
+          "subject": "Thema",
           "date_issue": "Ausgabedatum",
           "year": "Jahr",
           "mintage": "Auflage",
@@ -242,13 +257,20 @@ i18next.init({
           "mint": "Prägestätte",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Titel",
           "bidding": "Bidding",
           "build_table": "Building table",
-          "exec_sql": "Executing SQL",
+          "exec_sql": "Führe SQL aus",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "v. Chr.",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Öffnen",
+            "about": "Über",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     el: {
       translation: {
@@ -276,13 +298,20 @@ i18next.init({
           "mint": "Νομισματοκοπείο",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
-          "bidding": "Bidding",
+          "Title": "Τίτλος",
+          "bidding": "Προσφορά",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "π.Χ.",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Άνοιγμα",
+            "about": "Περί",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     es: {
       translation: {
@@ -310,13 +339,20 @@ i18next.init({
           "mint": "Ceca",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
-          "bidding": "Bidding",
+          "Title": "Título",
+          "bidding": "Pujas",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "AC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Abrir",
+            "about": "Acerca de",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     fr: {
       translation: {
@@ -339,18 +375,25 @@ i18next.init({
           "subject": "Sujet",
           "date_issue": "Date d'émission",
           "year": "Année",
-          "mintage": "Mintage",
+          "mintage": "Émission",
           "material": "Matériau",
           "mint": "Monnaie",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Titre",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Ouvrir",
+            "about": "À propos",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     hu: {
       translation: {
@@ -378,13 +421,20 @@ i18next.init({
           "mint": "Pénzverde",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Cím",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Megnyitás",
+            "about": "About",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     it: {
       translation: {
@@ -412,13 +462,20 @@ i18next.init({
           "mint": "Condizione",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Titolo",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Apri",
+            "about": "A riguardo",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     nl: {
       translation: {
@@ -446,13 +503,20 @@ i18next.init({
           "mint": "Munthuis",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Titel",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Open",
+            "about": "Over",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     pl: {
       translation: {
@@ -480,13 +544,20 @@ i18next.init({
           "mint": "Mennica",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Nazwa",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Otwórz",
+            "about": "O nas",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     pt: {
       translation: {
@@ -518,9 +589,16 @@ i18next.init({
           "bidding": "Oferta",
           "build_table": "Tabela de construção",
           "exec_sql": "Executar SQL",
-          "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "load_db": "A carregar base de dados de ficheiro",
+          "BC": "BC",
+          "density": "Densidade do monitor:",
+          "content": {
+            "open": "Abrir",
+            "about": "Sobre",
+            "select_file": "Carregar uma colecção do OpenNumismat:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
     ru: {
       translation: {
@@ -558,9 +636,10 @@ i18next.init({
           "content": {
             "open": "Открыть",
             "about": "О программе",
-            "select_file": "Загрузите файл коллекции OpenNumismat:"
+            "select_file": "Загрузите файл коллекции OpenNumismat:",
+            "security_note": "Ваш файл не будет загружен в Интернет. Вы можете отключить подключение к Интернету."
           }
-        }
+      }
     },
     uk: {
       translation: {
@@ -588,13 +667,20 @@ i18next.init({
           "mint": "Літери",
           "sort_by": "Sort by",
           "None": "None",
-          "Title": "Title",
+          "Title": "Назва",
           "bidding": "Bidding",
           "build_table": "Building table",
           "exec_sql": "Executing SQL",
           "load_db": "Loading database from file",
-          "BC": "BC"
-        }
+          "BC": "BC",
+          "density": "Density of the display: ",
+          "content": {
+            "open": "Відкрити",
+            "about": "Про программу",
+            "select_file": "Load an OpenNumismat collection file:",
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+          }
+      }
     },
   }
 });
