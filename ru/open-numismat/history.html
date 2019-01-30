@@ -26,6 +26,7 @@
           <a class="title-link" href="/pl/open-numismat/history.html">Polski</a> |
           <a class="title-link" href="/pt/open-numismat/history.html">Português</a> |
           <a class="title-link" href="/ru/open-numismat/history.html">Русский</a> |
+          <a class="title-link" href="/tr/open-numismat/history.html">Türkçe</a> |
           <a class="title-link" href="/uk/open-numismat/history.html">Українська</a></p>
         <div class="title_box">
           <div class="title-social">
@@ -58,6 +59,14 @@
 <h2>История изменений в OpenNumismat</h2>
 <p>
   </p>
+<h3>Что нового в OpenNumismat 1.7.8 (29 января 2019)</h3>
+  <ul>
+<li>Добавлена обработка ссылок file:/// в текстовых полях</li>
+    <li>Добавлена навигация в Таблице (Ctrl+Home, Ctrl+End)</li>
+    <li>Добавлен турецкий язык</li>
+    <li>Добавлена новая сводка (комиссия, количество изображений, средняя цена за единицу)</li>
+    <li>Исправлена возможная ошибка при сортировке Дерева</li>
+  </ul>
 <h3>Что нового в OpenNumismat 1.7.7 (06 ноября 2018)</h3>
   <ul>
 <li>Исправлен импорт из Excel</li>
@@ -317,15 +326,15 @@
     <li>Запоминается количество отображаемых изображений монеты в правой части окна</li>
     <li>Исправлен свободный формат полей Цена. Исправлен расчет комиссии</li>
     <li>Реализовано сохранение размеров диалогов редактирования справочников, предпросмотра отчета, настроек и т.п.</li>
-    <li>Moved image side length configuration parameter from collection to global settings</li>
+    <li>Обновлена иконка приложения</li>
     <li>Улучшена навигация в Дереве</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.4.4 (2 апреля 2013)</h3>
   <ul>
 <li>Добавлен венгерский перевод (от Zalán Csúszó)</li>
     <li>Исправлен редактор справочников</li>
-    <li>Show country flag icon in cross-reference editor combo box</li>
-    <li>Added <i>Help</i> -&gt; <i>Check for updates</i> menu command</li>
+    <li>Команда импорт из CoinCollector теперь доступна только в Windows</li>
+    <li>Улучшена поддержка MacOS</li>
     <li>Улучшен шаблон Numismaster</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.4.3 (5 марта 2013)</h3>
@@ -333,21 +342,25 @@
 <li>Обновлена иконка приложения</li>
     <li>Добавлен перевод на украинский (от Alex Shilyaev)</li>
     <li>Обновлён перевод на испанский (от Carlos Rosi)</li>
-    <li>Added enable sorting flag in references</li>
+    <li>Исправлена ошибка при установке пароля</li>
     <li>Исправлена сортировка в шаблоне cbr</li>
-    <li>Importing from CoinCollector command available only on Windows</li>
+    <li>Обновлен разбор <a href="/p/open-numismat/wiki/Auctions?wl=ru">аукционов</a> (Молоток, Wolmar)</li>
     <li>Исправлен запуск на MacOS</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.4.2 (15 февраля 2013)</h3>
   <ul>
-<li>Debian package for Linux is available</li>
-    <li>Added <i>Clear all filter</i> command to menu and toolbox</li>
-    <li>Added Numismater report template</li>
-    <li>Fixed showing long lines in some fields on <i>Edit coin</i> dialog</li>
-    <li>Fixed bug when setting password</li>
-    <li>Moved export buttons to left of toolbar in <i>Preview report</i> dialog</li>
-    <li>Fixed detecting application resources path</li>
-    <li>Updated creating default folders and files (default reference and demo.db) if missing</li>
+<li>
+<a name="%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.4.1_(31_%D1%8F%D0%BD%D0%B2%D0%B0%D1%80%D1%8F_2013)"></a>Новое в OpenNumismat 1.4.1 (31 января 2013)<a href="#%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.4.1_(31_%D1%8F%D0%BD%D0%B2%D0%B0%D1%80%D1%8F_2013)" class="section_anchor"></a>
+</li>
+    <li>Исправлена критическая ошибка с открытием приложения, когда реестр чист (<a title="[v1.4] TypeError - C:\Python32\lib\site-packages\cx_Freeze\initscripts\Console3.py:27" class="closed_ref" href="/p/open-numismat/issues/detail?id=12">&nbsp;issue 12&nbsp;</a>).</li>
+    <li>
+<a name="%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.4_(31_%D1%8F%D0%BD%D0%B2%D0%B0%D1%80%D1%8F_2013)"></a>Новое в OpenNumismat 1.4 (31 января 2013)<a href="#%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.4_(31_%D1%8F%D0%BD%D0%B2%D0%B0%D1%80%D1%8F_2013)" class="section_anchor"></a>
+</li>
+    <li>Реализована генерация <a href="/p/open-numismat/wiki/ReportEngine?wl=ru">отчетов</a> (на основе шаблонов <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>).</li>
+    <li>Реализован <a href="/p/open-numismat/wiki/ReportEngine?wl=ru">экспорт</a> настроенного списка (<i>Отчет</i> &gt; <i>Сохранить текущий список...</i>).</li>
+    <li>Добавлена возможность вводить любые данные в числовые <a href="/p/open-numismat/wiki/Fields?wl=ru">поля</a> (необходимо разрешить <i>Свободный формат числовых полей</i> в диалоге Настройки) (<a title="Not possible to set fractinal value of coin" class="closed_ref" href="/p/open-numismat/issues/detail?id=6">&nbsp;issue 6&nbsp;</a>, <a title="Year not accepted date eg. 88 BC" class="closed_ref" href="/p/open-numismat/issues/detail?id=10">&nbsp;issue 10&nbsp;</a>).</li>
+    <li>Исправлена автоматическая проверка обновлений (при частом запуске приложения проверка не осуществлялась).</li>
+    <li>Добавлена команда <i>Сжать</i> (меню <i>Коллекция</i>) освобождающая место на диске, зарезервированное движком БД.</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.4.1 (31 января 2013)</h3>
   <ul>
@@ -355,45 +368,48 @@
   </ul>
 <h3>Что нового в OpenNumismat 1.4 (31 января 2013)</h3>
   <ul>
-<li>Implemented generation reports (based on templates <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
+<li>Реализована генерация отчетов (основано на шаблонах <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
     <li>Implemented export customized list (<i>Report</i>&gt; <i>Save current list...</i>)</li>
     <li>Added the ability to enter any data in numerical fields (enable <i>Free format numeric fields</i> in the Settings dialog)</li>
-    <li>Fixed automatic update check (with frequent application startup check is not performed)</li>
-    <li>Added <i>Vacuum</i> command (menu <i>Collection</i>) that frees up the disk space reserved DB engines</li>
-    <li>Changed the default file name when saving images of coins to a file</li>
-    <li>Fixed a possible error opening the file specified in the URL field</li>
-    <li>Fixed a possible error when creating a new collection</li>
-    <li>Updated the application menu - added some commonly used items</li>
+    <li>Исправлено сохранение ширины выводимых столбцов таблицы.</li>
+    <li>Добавлены кнопки открытия URL (раздел <i>Классификация</i>) и вставки ссылки на файл на диске.</li>
+    <li>Исправлен выбор значения из диалога справочника при редактировании монеты.</li>
+    <li>Справочник Качество чеканки переведен на русский язык.</li>
+    <li>Исправлено форматирование описания коллекции и текстовых полей описания монеты (<i>Дизайн</i>, <i>Тема</i> и т.д.).</li>
+    <li>Файл коллекции может быть передан как аргумент командной строки.</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.3.1 (05 декабря 2012)</h3>
   <ul>
-<li>Fixed saving width of table columns.</li>
-    <li>Added a button for opening URL (section <i>Classification</i>) and insert a link to a file on disk.</li>
-    <li>Fixed the choice of the value of dialogue reference when editing the coin.</li>
-    <li>Fixed formatting of collection description and coins text fields (<i>Design</i>, <i>Subject</i>, etc).</li>
-    <li>The collection file can be passed as command line argument.</li>
-    <li>Fixed possible bug when editing negative commissions.</li>
-    <li>Added delete temporary files created when opening images.</li>
-    <li>Other minor changes.</li>
+<li>Добавлено удаление временных файлов, создаваемых при открытии изображений.</li>
+    <li>Другие мелкие изменения.</li>
+    <li>
+<a name="%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.3_(23_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F_2012)"></a>Новое в OpenNumismat 1.3 (23 ноября 2012)<a href="#%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2_OpenNumismat_1.3_(23_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F_2012)" class="section_anchor"></a>
+</li>
+    <li>Переработан формат базы данных для увеличения производительности (конвертирование существующих файлов коллекций происходит автоматически при их открытии в новой версии OpenNumismat).</li>
+    <li>Добавлены новые <a href="/p/open-numismat/wiki/Fields?wl=ru">поля</a>: Количество, URL, Штрих-код.</li>
+    <li>Исправлена возможная ошибка при редактировании отрицательной комиссии</li>
+    <li>Реализован импорт из Collection Studio 3.65. Для импорта необходимо предварительно экспортировать существующую коллекцию в формат XML Table с помощью меню Collection Studio: <i>Инструменты</i> &gt; <i>Экспорт...</i>.</li>
+    <li>Добавлена возможность защитить данные коллекции паролем (Внимание: шифрование данных не осуществляется, поэтому защиту паролем нельзя считать полноценной). Установка пароля осуществляется в меню <i>Коллекция</i> &gt; <i>Установить пароль...</i>.</li>
   </ul>
 <h3>Что нового в OpenNumismat 1.3 (23 ноября 2012)</h3>
   <ul>
-<li>Refactored format of database to improve performance (converting existing collection files happens automatically when you open them in a new version of OpenNumismat).</li>
-    <li>Added new fields: Quantity, URL, Barcode.</li>
-    <li>Added automatic check for updates (switched in the Settings dialog).</li>
-    <li>Implemented import from Collection Studio 3.65. To import, you must first export the existing collection to a format XML Table using the menu Collection Studio: <i>Tools</i>&gt; <i>Export...</i>.</li>
-    <li>Added the ability to protect data on the collection with password (Note: data encryption is not carried out, so the password protection can not be considered complete.) Setting a password is in the menu <i>Collection</i>&gt; <i>Set password...</i>.</li>
-    <li>Improved import from CoinManage:</li>
+<li>поддержка новых полей Количество и Штрих-код;</li>
+    <li>Добавлены новые поля: Количество, URL, Штрихкод.</li>
+    <li>импорт цен.</li>
+    <li>Добавлена кнопка <i>Восстановить по умолчанию</i> в диалоге <i>Настройки</i> для восстановления названий всех полей описания монеты к исходному состоянию.</li>
+    <li>Исправлено вычисление отрицательных комиссий при редактировании информации о покупке/продаже монеты.</li>
+    <li>Исправлено определение текущего языка в диалоге Настройки.</li>
     <ul>
-<li>support for new fields Quantity and Barcode;</li>
-      <li>addition to the coins from the collection of images related to the descriptions (variety list);</li>
-      <li>import prices.</li>
+<li>Исправлено заполнение справочников, зависящих от страны, данными из коллекции.</li>
+      <li>Нажатие клавиши Esc в окне редактирования монеты приводит к закрытию окна.</li>
+      <li>Двойной щелчек в панели вкладок списков создает новый список.</li>
     </ul>
-<li>Added button <i>Revert to default</i> in the <i>Settings</i> dialog to restore the names of all the coin fields to its original values.</li>
-    <li>Fixed calculation of negative commissions for editing information on the purchase/sale of the coins.</li>
-    <li>Fixed detection of the current language in the Settings dialog.</li>
-    <li>Fixed filling references, depending on the country of data collection.</li>
-    <li>Esc key in the edit coin dialog closes dialog.</li>
+<li>Добавлен вывод индикатора выполнения при удалении монет.</li>
+    <li>Улучшен английский перевод.</li>
+    <li>Улучшен вид окна <i>Настройки</i>.</li>
+    <li><a href="http://open-numismat.googlecode.com/git/ChangeLog" rel="nofollow">Список изменений предыдущих версий</a></li>
+    <li>OpenNumismat maintained by <a href="https://github.com/OpenNumismat">OpenNumismat</a>
+</li>
     <li>Double click on the lists tab bar create a new list.</li>
     <li>Added displaying a progress bar when removing coins.</li>
     <li>Улучшен перевод на английский</li>
