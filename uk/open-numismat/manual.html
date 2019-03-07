@@ -7,7 +7,7 @@
 <meta name="description" content="OpenNumismat">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>User manual - OpenNumismat - free coin collecting software</title>
+<title>Керівництво користувача - OpenNumismat - безкоштовне програмне забезпечення для колекціонування монет</title>
 </head>
 <body>
 
@@ -56,46 +56,46 @@
         </ul>
 </div>
 <div class="inner-content">
-<h1>User manual</h1>
-<h2>1 Introduction</h2>
-<h3>1.1 Description</h3>
-<p>OpenNumismat is a handy and reliable application designed for collectors of coins and coin collectors, to create a numismatic collection.</p>
-<p>With OpenNumismat you will be able to create, organize, and manage your own catalogs of coins with detailed descriptions and photos for each item.</p>
-<p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
-<p>Official website is located at <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
-<h3>1.2 Features of the implementation</h3>
-<p>OpenNumismat is based on the PyQt library with the SQLite database engine to store the data collection, which allowed to achieve lightness and responsiveness of the interface and cross-platform.</p>
-<p>A complete list of the used components and libraries is available <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">here</a>.</p>
-<p>Icons used in the interface, based on the <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> and <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
-<p>Translation of the interface implemented by enthusiasts using the service <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Thank you for the help!</p>
-<h3>1.3 License</h3>
+<h1>Посібник користувача</h1>
+<h2>1. Вступ</h2>
+<h3>1.1 Опис</h3>
+<p>OpenNumismat є зручним і надійним додатком, призначеним для колекціонерів монет і нумізматів, щоб створити нумізматичну колекцію.</p>
+<p>Завдяки OpenNumismat ви зможете створювати, організовувати і керувати власними каталогами монет з детальним описом і фотографіями для кожного елемента.</p>
+<p>OpenNumismat поширюється повністю безкоштовно. Вихідний код ліцензований під GPL-3.0 і доступний у <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
+<p>Офіційний веб-сайт знаходиться за адресою <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
+<h3>1.2 Особливості реалізації</h3>
+<p>OpenNumismat базується на бібліотеці PyQt з механізмом бази даних SQLite для зберігання збору даних, що дозволило досягти легкості та швидкості реагування інтерфейсу та крос-платформних програм.</p>
+<p>Повний список використанних компонентів і бібліотек доступний <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">тут</a>.</p>
+<p>Іконки, що використовуються в інтерфейсі, на основі <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons від <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> та <a href="http://www.famfamfam.com" target="blank_">Flag  icons</a>.</p>
+<p>Переклад інтерфейсу, реалізованого ентузіастами за допомогою сервісу <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Дякуємо за допомогу!</p>
+<h3>1.3 Ліцензія</h3>
 <p>OpenNumismat - вільне програмне забезпечення; Ви можете розповсюджувати її та/або вносити зміни відповідно до умов Загальної Публічної Ліцензії GNU (GNU GPL) у тому вигляді, у якому вона була опублікована Фундацією Вільного Програмного Забезпечення (FSF); або 3ї версії Ліцензії, або (на Ваш розсуд) будь-якої більш пізньої версії.</p>
 <p>Програма OpenNumismat розповсюджується із сподіванням, що вона виявиться корисною, але БЕЗ БУДЬ-ЯКОЇ ҐАРАНТІЇ, без навіть УЯВНОЇ ҐАРАНТІЇ КОМЕРЦІЙНОЇ ПРИДАТНОСТІ чи ВІДПОВІДНОСТІ БУДЬ-ЯКОМУ ПЕВНОМУ ЗАСТОСУВАННЮ. Зверніться до Загальної Публічної Ліцензії GNU за подробицями.</p>
-<p>You should have received a copy of the GNU General Public License along with OpenNumismat. If not, see <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 General view</h2>
-<p>When you first start the application, the main window opens with a demo collection:</p>
+<p>Ви повинні були отримати копію Загальної громадської ліцензії GNU разом з OpenNumismat. Якщо ні, дивіться, на <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
+<h2>2 Загальний вигляд</h2>
+<p>Під час першого запуску програми відкриється головне вікно з демонстраційною колекцією:</p>
 <p><img src="/images/manual/main1234.png"></p>
-<p>The main window consists of the following main elements:</p>
+<p>Головне вікно складається з наступних основних елементів:</p>
 <ol>
-<li>Table of coins</li>
-<li>Image panel</li>
-<li>Tree</li>
-<li>Info panel</li>
+<li>Таблиця монет</li>
+<li>Панель "Зображення"</li>
+<li>Дерево</li>
+<li>Інформаційна панель</li>
 </ol>
-<p>When you click on any coin in the Table of coins, detailed information is displayed: in the Image panel - coin photographs, the Tree unfolds to the element describing the coin, the Info panel displays all the entered coin data.</p>
-<p>You can create a new empty collection or edit a demo by entering new data.</p>
-<h2>3 Entering coins</h2>
-<h3>3.1 Adding a coin</h3>
-<p>Manage your collection by adding entries about every bought, sold or wished coin.</p>
-<p>To add a new coin, select the <i>Coin-&gt;Add</i> menu or press the Ins key. After that, the Edit dialog opens:</p>
+<p>При натисканні на будь-яку монету в Таблиці монет відображається докладна інформація: на панелі «Зображення» - фотографія монети, Дерево розгортається до елемента, що описує монету, на панелі «Інформація» відображаються всі введені дані монети.</p>
+<p>Ви можете створити нову порожню колекцію або відредагувати демонстраційну, ввівши нові дані.</p>
+<h2>3 Введення монет</h2>
+<h3>3.1 Додавання монет</h3>
+<p>Керуйте своєю колекцією, додавши записи про кожну куплену, продану або бажану монету.</p>
+<p>Щоб додати нову монету, виберіть меню <i>Coin-&gt; Add</i> або натисніть клавішу Ins. Після цього відкриється діалогове вікно редагування:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>The Edit dialog contains 6 tabs with the following fields:</p>
+<p>Діалогове вікно редагування містить 6 вкладок з такими полями:</p>
 <ul>
-<li>Coin - Main details:<ul>
-<li>Name - a descriptive name of the coin (can be automatically created from the remaining fields by clicking the "Generate" button);</li>
-<li>Region;</li>
-<li>Country;</li>
-<li>Period - period in the history of the country;</li>
+<li>Coin - Основні деталі:<ul>
+<li>Ім'я - описання назви монети (можна автоматично створювати з інших полів, натиснувши кнопку "Створити");</li>
+<li>Регіон;</li>
+<li>Країна;</li>
+<li>Період - період в історії країни;</li>
 <li>Ruler;</li>
 <li>Value;</li>
 <li>Unit;</li>
@@ -103,12 +103,12 @@
 <li>Mint;</li>
 <li>Mint mark - a sign of the mint;</li>
 <li>Type;</li>
-<li>Series - a series of commemorative coins;</li>
-<li>Subject - an event or object to which a commemorative coin is dedicated.</li>
+<li>Серія - серія пам'ятних монет;</li>
+<li>Предмет - подія або об'єкт, якому присвячена пам'ятна монета.</li>
 </ul>
 </li>
 <li>Coin - State (state of coin from the collection):<ul>
-<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Market tab;</li>
+<li>Стан - основна характеристика, що визначає наявність монети в колекції. Можна взяти значення Demo, Pass, Owned, Ordered, Sold, Sale, Wish. Статус монети впливає на доступність і вміст вкладки "Ринок";</li>
 <li>Grade - the degree of coin wear;</li>
 <li>Quantity - the number of duplicates or coins in the roll;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
