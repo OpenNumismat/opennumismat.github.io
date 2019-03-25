@@ -109,14 +109,14 @@
 </li>
 <li>Coin - State (state of coin from the collection):<ul>
 <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Market tab;</li>
-<li>Grade - the degree of coin wear;</li>
-<li>Quantity - the number of duplicates or coins in the roll;</li>
+<li>Zustand - Grad der Abnutzung;</li>
+<li>Menge - Die Anzahl von Doubletten oder Münzen in der Rolle;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Zustand;</li>
 <li>Storage - a description of the physical location of the coin;</li>
 <li>Barcode;</li>
 <li>Defect - a description of the mint-made error;</li>
-<li>Features.</li>
+<li>Eigenschaften der Münze.</li>
 </ul>
 </li>
 <li>Market - Buy:<ul>
@@ -153,22 +153,22 @@
 <li>Ausgabedatum;</li>
 <li>Auflage;</li>
 <li>Ausgabezeitraum;</li>
-<li>Quality - minting technique;</li>
+<li>Qualität - Prägetechnik;</li>
 <li>Bemerkung.</li>
 </ul>
 </li>
-<li>Design (description of coin design):<ul>
-<li>Obverse - the obverse image;</li>
-<li>Design (obverse);</li>
+<li>Design (Beschreibung des Münzdesigns):<ul>
+<li>Avers - Abbildung der Aversseite;</li>
+<li>Design (Avers);</li>
 <li>Designer (Avers);</li>
 <li>Graveur (Avers);</li>
 <li>Farbe (Avers);</li>
-<li>Reverse - reverse image;</li>
-<li>Design (reverse);</li>
+<li>Revers - Abbildung Revers;</li>
+<li>Design (Revers);</li>
 <li>Designer (Revers);</li>
 <li>Graveur (Revers);</li>
 <li>Farbe (Revers);</li>
-<li>Edge - the image of the edge;</li>
+<li>Rand - Abbildung des Rands;</li>
 <li>Type (of edge);</li>
 <li>Label (on the edge);</li>
 <li>Subject - a description of the topic or event to which the coin is dedicated or its design;</li>
@@ -185,11 +185,11 @@
 <li>URL - web-link to information about the coin or to a file on the disk.</li>
 </ul>
 </li>
-<li>Abbildungen:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4 - 4 additional photos or images.</li></ul>
+<li>Abbildungen:<ul><li>Foto 1, Foto 2, Foto 3, Foto 4 - 4 zusätzliche Fotos oder Bilder.</li></ul>
 </li>
 <li>System (not editable, can be displayed only in the Table of coins):<ul>
-<li>ID - unique coin number in the collection;</li>
-<li>Created - date the description was created;</li>
+<li>ID - Eindeutige Nummer der Münze in der Sammlung;</li>
+<li>Erstellt - Zeitpunkt an dem die Beschreibung erstellt wurde;</li>
 <li>Updated - the date of the last editing of the description;</li>
 <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.</li>
 </ul>
@@ -203,30 +203,30 @@
 <p><img src="/images/manual/links.png"></p>
 For paste link to a local file you can drag'n'drop or copy-paste file into text field in Edit dialog.
 
-<h4>3.1.1 Editing Images</h4>
-<p>The application supports up to 7 images of each coin.</p>
+<h4>3.1.1 Bilder bearbeiten</h4>
+<p>Die Anwendung unterstützt bis zu 7 Bilder von jeder Münze.</p>
 <p>The following image formats are supported: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
 <br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
-<li>Load... - select image from file on disk;</li>
-<li>Save as... - saves the image to a file on disk;</li>
+<li>Lade... - Bilddatei von Datenträger auswählen</li>
+<li>Speichern unter... - Bild auf Datenträger speichern;</li>
 <li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see 4.2);</li>
 <li>Exchange with - swaps two images;</li>
 <li>Paste - paste an image from the clipboard (it can be a graphic file, an image copied from a image editor or a web link);</li>
 <li>Copy - copies the image to the clipboard for later paste into the image editor;</li>
-<li>Delete - deletes the current image.</li>
+<li>Löschen - Löscht das aktuelle Bild.</li>
 </ul>
 <p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the standard image viewer of your OS.</p>
 <p>The coin image in the Table of coins is automatically generated from the obverse and reverse images.</p>
-<h3>3.2 Editing a coin</h3>
+<h3>3.2 Eine Münze bearbeiten</h3>
 <p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select <i>Edit...</i>, select the coin and press Enter key or select the <i>Coin-&gt;Edit...</i> menu. After that, the Edit dialog will be opened, described in 3.1.</p>
 <h3>3.3 Münzen duplizieren</h3>
 <p>To quickly add a similar coin, you can use cloning. To do this, right click on the coin and select Clone. The Edit window filled with information about the new coin will open, edit the required fields and save.</p>
 <p>You can also copy (using Ctrl+Ins or Ctrl+C) the existing coin and paste it (by pressing Shift+Ins or Ctrl+V) - the Edit dialog will also open.
 <br>A copied coin or coin group (see below) can be inserted into a third-party application (for example, MS Excel or Notepad). In this case, when inserting into a third-party application, only text fields (without images) will be copied.</p>
 <p>You can also add a new coin with pre-filled fields from the Tree. To do this, right click on the Tree element and select <i>Add new coin...</i>. In the opened Edit dialog all common fields for coins corresponding to this element will be filled.</p>
-<h3>3.4 Editing Multiple Coins</h3>
+<h3>3.4 Mehrere Münzen gleichzeitig bearbeiten</h3>
 <p>Sometimes you need to change some fields at once for several coins. To do this, select the required coins (to select several coins, use the click with the Shift or Ctrl key pressed, to select all the coins, press Ctrl+A), right-click on the selected coin group and select <i>Multi edit...</i> or the <i>Coin-&gt;Edit...</i> menu.
 <br>In the opened Edit dialog, all matching fields for the selected coin group will be filled. Each field will have a checkbox that allows or denies the application of the field value to the whole group of coins when saving:</p>
 <p><img src="/images/manual/multi_edit.png"></p>
@@ -234,8 +234,8 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <h3>3.5 Löschen</h3>
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.</p>
 <p>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
-<h2>4 View Coins</h2>
-<h3>4.1 Table of coins</h3>
+<h2>4 Münzen ansehen</h2>
+<h3>4.1 Münztabelle</h3>
 <p>The Table of coins is the central element of the application, serves to display coin data according to those selected with the settings.</p>
 <p>The number and location of fields can be set in the <i>List-&gt;Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.</p>
 <p><img src="/images/manual/columns.png"></p>
@@ -250,7 +250,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select <i>(All)</i>. At the top of the menu is a field that allows you to filter out the menu values.</p>
 <p>To reset all filters in the current list, click the <i>Clear all filters</i> button on the toolbar:</p>
 <p><img src="/images/manual/clear_filters.png"></p>
-<h3>4.4 Tree</h3>
+<h3>4.4 Verzeichnisbaum</h3>
 <p>The tree on the left side of the application window allows you to group coins by field values. When selecting a tree element, the coins corresponding to the selected value are displayed in the table.</p>
 <p>To customize the tree, right-click on the tree element and select <i>Customize tree...</i>:</p>
 <p><img src="/images/manual/tree.png"></p>
@@ -291,8 +291,8 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Reports</h2>
-<h3>6.1 Generating reports</h3>
+<h2>6 Berichte</h2>
+<h3>6.1 Berichte erstellen</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
 <br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
 <p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <i>Report-&gt;Report...</i> menu:</p>
@@ -311,12 +311,12 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>6.4 Exporting the Table of coins</h3>
 <p>OpenNumismat allows you to save the current Table of coins with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).</p>
 <p>You can export the Table of coins in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
-<h3>6.5 Statistics</h3>
+<h3>6.5 Statistiken</h3>
 <p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see 6.4) and use its functionality.</p>
-<h3>6.6 Summary</h3>
+<h3>6.6 Zusammenfassung</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 References</h2>
+<h2>7. Auswahllisten</h2>
 <p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
 <p>Editing references is available from the Edit dialog:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -333,30 +333,30 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File-&gt;Settings</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 
-<h3>8.1 Fields</h3>
+<h3>8.1 Felder</h3>
 <p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.</p>
-<h3>8.2 Acceleration of storage</h3>
+<h3>8.2 Geschwindigkeit des Speichervorgangs</h3>
 <p>The SQLite database engine have a multiple settings that affect the speed and reliability:</p>
 <ul>
 <li>Reliable - all changes will be guaranteed to be saved;</li>
 <li>Fast - changes can be lost when power is turned off during operation (recommended for most cases);</li>
 <li>Extra fast (dangerous) - recommended when you perform a large number of changes, provided that you perform a backup.</li>
 </ul>
-<h3>8.3 Images count by default</h3>
+<h3>8.3 Anzahl der Bilder standardmässig ermitteln</h3>
 Default images count in Image panel.
 
-<h3>8.4 Autobackup</h3>
+<h3>8.4 Automatische Sicherung</h3>
 You can enable autobackup. This feature will make backups after changing specified count of records.
 
-<h3>8.5 Collection</h3>
+<h3>8.5 Sammlung</h3>
 Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/settings2.png"></p>
 
-<p>Preview image height:</p>
+<p>Vorschaugröße Bilder:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
 <p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
-<p>Images at bottom:</p>
+<p>Bilder unten:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 </div>

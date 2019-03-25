@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="OpenNumismat">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<title>OpenNumismat - gratis myntinsamlingsprogram</title>
+</head>
+<body>
+
+    <div id="github-page">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/bg/open-numismat/manual.html">Bulgariska</a>|
+<a class="title-link" href="/ca/open-numismat/manual.html">Katalanska</a>|
+<a class="title-link" href="/de/open-numismat/manual.html">Tyska</a>|
+<a class="title-link" href="/open-numismat/manual.html">Engelska</a>|
+<a class="title-link" href="/el/open-numismat/manual.html">Grekiska</a>|
+<a class="title-link" href="/es/open-numismat/manual.html">Spanska</a>|
+<a class="title-link" href="/fr/open-numismat/manual.html">Franska</a>|
+<a class="title-link" href="/it/open-numismat/manual.html">Italienska</a>|
+<a class="title-link" href="/nl/open-numismat/manual.html">Nederländska</a>|
+<a class="title-link" href="/pl/open-numismat/manual.html">Polska</a>|
+<a class="title-link" href="/pt/open-numismat/manual.html">Portugisiska</a>|
+<a class="title-link" href="/ru/open-numismat/manual.html">Ryska</a>|
+<a class="title-link" href="/tr/open-numismat/manual.html">Turkiska</a>|
+<a class="title-link" href="/uk/open-numismat/manual.html">Ukrainska</a></p>
+        <div class="title_box">
+          <div class="title-social">
+<a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+<a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+<a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
+</div>
+          <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div></a>
+          </div>
+          <div class="title-text">
+<a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+<a class="title-link" href="/"><h3 id="project_tagline">är en samling gratis, öppen källkodsinsamlingsprogramvara för mynt</h3></a>
+          </div>
+        </div>
+      </header>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Hem</a></li>
+        <li><a href="../open-numismat/#download">Ladda ner</a></li>
+        <li><a href="../open-numismat/manual.html">Manual</a></li>
+        <li><a href="../open-numismat/#donate">Donation</a></li>
+        </ul>
+</div>
+<div class="inner-content">
+<h1>Användar manual</h1>
+<h2>1 Introduktion</h2>
+<h3>1.1 Beskrivning</h3>
+<p>OpenNumismat är en praktisk och pålitlig applikation som syftar till myntsamlare, numismatiker eller amatörer som vill skapa en numismatiksamling.</p>
+<p>Med OpenNumismat kan du organisera och hantera din myntinsamling: skapa en avancerad katalog över dina mynt, önskemål och säljlistor,och se statistik för din samling.</p>
+<p>OpenNumismat distribueras i sin helhet helt gratis. Källkoden är licensierad enligt GPL-3.0 och tillgänglig på <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
+<p>Officiell webbplats finns på<a href="http://opennumismat.github.io" target="blank_"> http://opennumismat.github.io</a>.</p>
+<h3>1.2 Funktioner i genomförandet</h3>
+<p>OpenNumismat är baserat på PyQt-biblioteket med SQLite-databasmotorn för att lagra datainsamlingen, vilket gjorde det möjligt att uppnå ljusstyrka och lyhördhet för gränssnittet och plattformen.</p>
+<p>En komplett lista överanvända komponenter och bibliotek finns <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">här</a>.</p>
+<p>Ikoner som används i användargränssnitt baserat på<a href="http://led24.de/iconset/" target="blank_"> LED-ikonen Set</a> in v1.0, Mjuka Skrap ikoner av <a href="http://deleket.deviantart.com/" target="blank_">Deleket</a> och <a href="http://www.famfamfam.com" target="blank_">Flagg ikoner</a>.</p>
+<p>Översättning av gränssnittet implementerat av entusiaster som använder tjänsten <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Tack för hjälpen!</p>
+<h3>1.3 Licens</h3>
+<p>OpenNumismat är fri programvara: Du kan omfördela den och / eller ändra den enligt villkoren i GNU General Public License som publicerad av Free Software Foundation, antingen version 3 i Licensen eller (eventuellt) senare version.</p>
+<p>OpenNumismat distribueras i hopp om att det kommer att vara användbart, men UTAN NÅGOT GARANTI. utan även den underförstådda garantin för SÄLJBARHET eller EGNETHET FÖR ETT SÄRSKILT SYFTE. Se GNU General Public License för mer information.</p>
+<p>Du borde ha fått en kopia av GNU General Public License tillsammans med OpenNumismat. Om inte, se <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
+<h2>2 Allmänna synpunkter</h2>
+<p>När du startar programmet startar huvudfönstret med en demo-samling:</p>
+<p><img src="/images/manual/main1234.png"></p>
+<p>Huvudfönstret består av följande huvudelement:</p>
+<ol>
+<li>Mynt lista</li>
+<li>Bildpanel</li>
+<li>Träd</li>
+<li>Info panel</li>
+</ol>
+<p>När du klickar på något mynt i mynt listan, visas detaljerad information: I bildpanelen - myntsfotografier, träder ut i trädet till det element som beskriver myntet visar informationspanelen alla inmatade myntdata.</p>
+<p>Du kan skapa en ny tom samling eller redigera en demo genom att skriva in nya data.</p>
+<h2>3 Inmatning av mynt</h2>
+<h3>3.1 Lägga till ett mynt</h3>
+<p> Hantera din samling genom att lägga till poster om alla köpta, sålda eller önskade mynt.</p>
+<p>För att lägga till ett nytt mynt, välj menyn <i>Coin-&gt; Add</i> (Lägg till) eller tryck på Ins-tangenten. Därefter öppnas dialogrutan Redigera:</p>
+<p><img src="/images/manual/new.png"></p>
+<p>Redigeringsdialogrutan innehåller 6 flikar med följande fält:</p>
+<ul>
+<li>Mynt - Huvuduppgifter:<ul>
+<li>Namn - ett beskrivande namn på myntet (kan skapas automatiskt från de återstående fälten genom att klicka på 'Generera' -knappen);</li>
+<li>Område;</li>
+<li>Land;</li>
+<li>Period - period i landets historia;</li>
+<li>Linjal;</li>
+<li>Valör;</li>
+<li>Enhet;</li>
+<li>År;</li>
+<li>Mint;</li>
+<li>Myntmärke - ett tecken på mynten</li>
+<li>Typ;</li>
+<li>Serie - en serie minnesmynt;</li>
+<li>Ämne - En händelse eller ett föremål till vilket ett minnesmynt är dedikerat.</li>
+</ul>
+</li>
+<li>Mynt - Stat (Mynt från samlingen):<ul>
+<li>Status - Huvudegenskapen som bestämmer närvaron av ett mynt i samlingen. Kan ta värdet av Demo, Pass, Owned, Ordered, Sold, Sale, Wish. Myntstatusen påverkar tillgängligheten och innehållet på fliken Marknad;</li>
+<li>Grad - graden av myntslitage</li>
+<li>Mängd - antalet duplikat eller mynt i rullen;</li>
+<li>Format - distributionsformat (enskilt mynt, set eller roll);</li>
+<li>Kondition;</li>
+<li>Lagring - en beskrivning av myntens fysiska läge</li>
+<li>Streckkod;</li>
+<li>Defekt - en beskrivning av den myntgjorda felet;</li>
+<li>Funktioner.</li>
+</ul>
+</li>
+<li>Marknad - Köp:<ul>
+<li>Datum;</li>
+<li>Pris;</li>
+<li>Betald - slutpris inklusive provision</li>
+<li>Kommissionen - Tilläggskostnader i samband med förvärv av ett mynt (fältet är endast tillgängligt i myntredigeringsfönstret). Det är tillåtet att ange provisionbeloppet, liksom procentsatsen av priset (till exempel 10%).</li>
+<li>Säljare;</li>
+<li>Plats;</li>
+<li>Info.</li>
+</ul>
+</li>
+<li>Marknad - Försäljning:<ul>
+<li>Datum;</li>
+<li>Pris;</li>
+<li>Bailed - det totala mottagna beloppet med hänsyn till kommissionen;</li>
+<li>Kommissionen - Tilläggskostnader i samband med förvärv av ett mynt (fältet är endast tillgängligt i myntredigeringsfönstret). Det är tillåtet att ange provisionbeloppet, liksom procentsatsen av priset (till exempel 10%).</li>
+<li>Köpare;</li>
+<li>Plats;</li>
+<li>Info.</li>
+</ul>
+</li>
+<li>Parametrar - Parametrar (Myntens fysiska parametrar):<ul>
+<li>Material;</li>
+<li>Finhet;</li>
+<li>Vikt;</li>
+<li>Diameter;</li>
+<li>Tjocklek;</li>
+<li>Form;</li>
+<li>Obv / Rev - förhållandet mellan framåt och bakåt (medalj, mynt).</li>
+</ul>
+</li>
+<li>Parametrar - Minting (myntfrisättningsdata):<ul>
+<li>Utgivningsdatum</li>
+<li>Mintage</li>
+<li>Utgivnings period;</li>
+<li>Kvalitetsmyntteknik;</li>
+<li>Notering.</li>
+</ul>
+</li>
+<li>Design (beskrivning av myntdesign):<ul>
+<li>Framsidan - den främre bilden;</li>
+<li>Design (framsida);</li>
+<li>Designer (framsida);</li>
+<li>Gravering (omvänd);</li>
+<li>Färg (omvänd);</li>
+<li>Bakåtvänd bild;</li>
+<li>Design (omvänd);</li>
+<li>Designer (omvänd);</li>
+<li>Gravering (omvänd);</li>
+<li>Färg (omvänd);</li>
+<li>Edge - bilden av kanten;</li>
+<li>Typ (av kant);</li>
+<li>Etikett (på kanten);</li>
+<li>Ämne - En beskrivning av ämnet eller händelsen som myntet är tillägnad eller dess design</li>
+</ul>
+</li>
+<li>Klassificering:<ul>
+<li> 1, 2, 3, 4 - nummer av en version av ett mynt under kataloger;</li>
+<li>Sällsynthet;</li>
+<li>Fin - det ungefärliga priset på ett mynt i staten F-12, F-15;</li>
+<li>VF - det ungefärliga priset på ett mynt i tillståndet VF-20, VF-25, VF-30, VF-35;</li>
+<li> XF - det ungefärliga priset på ett mynt i staten EF-40, XF-45;</li>
+<li>Unc - det ungefärliga priset på ett mynt i staten MS-60 och däröver;</li>
+<li>Variation, Baksida, Omvänd, Kant - En kort beskrivning av myntens variation, dess framsida, baksidan och kanten.</li>
+<li>URL - webblänk till information om myntet eller till en fil på disken.</li>
+</ul>
+</li>
+<li>Bilder:<ul><li>Foto 1, Foto 2, Foto 3, Foto 4 - 4 ytterligare foton eller bilder.</li></ul>
+</li>
+<li>System (ej redigerbart, kan bara visas i mynt tabellen):<ul>
+<li>ID - unikt myntnummer i samlingen;</li>
+<li>Skapad - datum beskrivningen skapades;</li>
+<li>Uppdaterad - datum för senaste redigering av beskrivningen</li>
+<li>Bild - En optimerad bild av framsidan och baksidan av myntet för utmatning i myntbordet.</li>
+</ul>
+</li>
+</ul>
+<p>För vissa fält kan värden erhållas från referensen (se 7):</p>
+<p><img src="/images/manual/ref_list.png"></p>
+<p> I dialogrutan Inställningar kan du ta bort några av de oanvända fälten (se 8).</p>
+<p> Vissa fält (till exempel värde, år, antal, pris, finhet, vikt, diameter, utgåva) anger endast numeriska värden. För att ange värden i det expanderade formatet ('BC' i fältet År, fraktioner i Nominellt fält, intervall i viktfältet etc.) i dessa fält måste du <i>aktivera numeriska fält</i> för fria format i dialogrutan Inställningar.</p>
+<p>Textfält (till exempel ämne, funktioner, beskrivning, anmärkning) supportlänkar:</p>
+<p><img src="/images/manual/links.png"></p>
+För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-klistra in fil i textfältet i Redigera-dialogrutan.
+
+<h4>3.11 Redigera Bilder</h4>
+<p>Programmet stöder upp till 7 bilder av varje mynt.</p>
+<p> Följande bildformat stöds: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Bilder sparas i JPEG-format. Stora bilder komprimeras så att maxsidan inte överstiger 1024 pixlar (du kan ändra den i dialogrutan Inställningar). 
+<br>För att infoga eller ändra en bild, högerklicka på fältet och välj ett av rullgardinsmenyerna:</p>
+<p><img src="/images/manual/img_menu.png"></p>
+<ul>
+<li>Ladda ... - välj bild från fil på disk;</li>
+<li>Spara som ... - sparar bilden till en fil på disken;</li>
+<li>Byt namn på ... - Ange ett unikt namn för bilden som kommer att visas i verktygsfältet på bildpanelen (se 4.2).</li>
+<li>Byt ut med - byter två bilder;</li>
+<li>Klistra in - klistra in en bild från klippbordet (det kan vara en grafisk fil, en bild kopierad från en bildredigerare eller en webblänk);</li>
+<li>Kopiera - kopierar bilden till klippbordet för att senare klistra in i bildredigeraren;</li>
+<li>Radera - raderar den aktuella bilden.</li>
+</ul>
+<p>Dubbelklicka i bildfältet öppnar fönstret för filval om bilden ännu inte är installerad eller öppnar bilden i standardbildvisaren för ditt operativsystem.</p>
+<p>Myntbilden i myntbordet genereras automatiskt från framsidan och bakåtvända bilder.</p>
+<h3>3.2 Redigera mynt</h3>
+<p>För att redigera myntdata måste du dubbelklicka på önskat mynt, högerklicka på önskat mynt och välj <i>Redigera ...</i>, välj mynt och tryck på Enter-tangenten eller välj menyn <i>Coin-&gt; Edit ....</i>Därefter öppnas dialogrutan Redigera, beskrivet i 3.1.</p>
+<h3>3.3 Klona mynt</h3>
+<p>För att snabbt lägga till ett liknande mynt kan du använda kloning. För att göra detta, högerklicka på myntet och välj Klon. Redigera fönstret fyllt med information om det nya myntet öppnas, redigerar de obligatoriska fälten och sparar.</p>
+<p>Du kan också kopiera (med Ctrl + Ins eller Ctrl + C) det befintliga myntet och klistra in det (genom att trycka på Skift + Ins eller Ctrl + V) - dialogrutan Redigera öppnas också. 
+<br>En kopierad mynt- eller myntgrupp (se nedan) kan infogas i en tredjepartsapplikation (till exempel MS Excel eller Notepad). I det här fallet kommer bara textfält (utan bilder) att kopieras när de läggs in i en tredje part.
+ 
+ A</p>
+<p>Du kan också lägga till ett nytt mynt med förfyllda fält från trädet. För att göra detta högerklickar du på trädelementet och väljer<i> Lägg till nytt mynt ...</i>. I den öppna redigeringsdialogen fylls alla vanliga fält för mynt som motsvarar detta element.</p>
+<h3> 3.4 Redigering av flera mynt</h3>
+<p> Ibland behöver du ändra några fält på en gång för flera mynt. För att göra detta väljer du de obligatoriska myntarna (för att välja flera mynt, använd klicket med Shift eller Ctrl-tangenten, för att markera alla mynt, tryck Ctrl + A), högerklicka på den valda myntgruppen och välj <i>Fler redigera. ..</i> eller menyn <i>Coin-&gt; Redigera</i> .... 
+<br>I den öppna dialogrutan för redigering fylls alla matchande fält för den valda myntgruppen. Varje fält kommer att ha en kryssruta som tillåter eller nekar tillämpningen av fältvärdet på hela gruppen av mynt när du sparar:</p>
+<p><img src="/images/manual/multi_edit.png"></p>
+<p>Gruppredigering är också tillgänglig från trädet - högerklicka på trädelementet och välj <i>Redigera mynt ...</i>.</p>
+<h3>3.5 Ta bort</h3>
+<p>Du kan ta bort mynt från samlingen en efter en eller en grupp. För att radera, välj menyn <i>Coin-&gt; Delete</i>, högerklicka på den valda mynt- eller myntgruppen och välj<i> Ta bort </i>eller tryck på Del-tangenten.</p>
+<p>Avlägsnade mynt tas bort från samlingen på en gång och kan inte repareras - var försiktig.</p>
+<h2> 4 Visa mynt</h2>
+<h3>4.1 Tabell mynt</h3>
+<p>Myntbordet är det centrala elementet i applikationen, tjänar till att visa myntdata enligt de som valts med inställningarna.</p>
+<p>Antalet och platsen för fält kan ställas in i <i>listan-&gt; Välj kolumner ... </i>-menyn eller genom att högerklicka på tabellrubriken och välja <i>Välj kolumner ...</i>.</p>
+<p><img src="/images/manual/columns.png"></p>
+<p> I den öppna dialogrutan är det nödvändigt att markera intressefälten. Att dra namn på fält med en mus kan ändra fältets placering i förhållande till varandra. Du kan också dra fälthuvud direkt i myntbordet. Genom att klicka på fälthuvudet sorteras tabellen enligt det valda fältet.</p>
+<p>Du kan styra bredden på en kolumn i ett bord genom att expandera gränsen för kolumnrubriken med musen eller högerklicka på rubriken och välja <i>Justera storlek</i>.</p>
+<h3>4.2 Bild Panel</h3>
+<p>Denna panel visar bilder bundna till myntet. Längst ner på panelen är kryssrutor så att du kan styra antalet bilder som visas samtidigt. 
+<br>Dubbelklicka öppnar bilden i standardbildvisaren för ditt operativsystem. När du håller muspekaren över en bild visas ett unikt bildnamn om det anges när du redigerar myntet.</p>
+<h3>4.3 Filter</h3>
+<p>Med menyn i kolumnrubrikerna i tabellen kan du filtrera mynt med värdet av fälten.</p>
+<p><img src="/images/manual/filter.png"></p>
+<p>Filtermenyn innehåller alla kolumnvärden. Markerade värden kommer att visas, resten kommer att döljas. Om du vill markera alla objekt eller ta bort markeringar från alla värden, välj <i>(Alla)</i>. Överst på menyn finns ett fält som låter dig filtrera bort menyns värden.</p>
+<p> För att återställa alla filter i den aktuella listan klickar du på <i>Rensa alla filter </i>på verktygsfältet:</p>
+<p><img src="/images/manual/clear_filters.png"></p>
+<h3>4.4 Träd</h3>
+<p>Träet på vänster sida i programfönstret låter dig gruppera mynt med fältvärden. När du väljer ett trädelement visas de mynt som motsvarar det valda värdet i tabellen.</p>
+<p>För att anpassa trädet, högerklicka på trädelementet och välj <i>Anpassa träd ...</i>:</p>
+<p><img src="/images/manual/tree.png"></p>
+<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.</p>
+<h3>4.5 Listor</h3>
+<p>Listorna låter dig ha flera oberoende samlingsvyer. Varje lista lagrar egna inställningar för fält, kolumner, filter och träd. Detta gör att listorna kan användas som permanenta filter.</p>
+<p> Lägg till en ny lista genom att klicka på menyn<i> Lista-&gt; Ny ...</i> eller dubbelklicka på listpanelen (från det tomma utrymmet bredvid rubrikerna i befintliga listor) och ange namnet på den nya listan. Du kan också skapa en kopia av den befintliga listan genom att högerklicka på källlistan och välja <i>Klon</i>.</p>
+<p> Du kan ändra namnet på listan genom att välja menyn <i>List-&gt; Rename ...</i> eller högerklicka på listans namn och välja <i>Ändra namn ....</i>.</p>
+<p>Slutna listor raderas inte och finns tillgängliga i <i>listan-&gt; Öppna-menyn</i>. Om du vill radera privata listor permanent väljer du<i> List-&gt; Öppna-&gt; Ta bort alla</i> menyer.</p>
+<h3>4.6 Status Bar</h3>
+<p> I botten av programfönstret finns en statusfält som visar namnet och sökvägen till samlingsfilen, det totala antalet mynt i samlingen och i det nuvarande myntbordet, antalet mynt i den valda gruppen.</p>
+<p><img src="/images/manual/status.png"></p>
+
+<h2>5 Hantera en samlingsfil</h2>
+<p>Samlingsfilen är en vanlig fil med förlängningen .db och lagrar all data om samlingen inklusive bilder andra än referenser (se 7). Du kan kopiera, flytta, ta bort och byta namn på det med ditt operativsystem.</p>
+<h3>5.1 Skapa / Öppna</h3>
+<p>För att skapa en ny samling, välj menyn <i>Arkiv-&gt; Ny ....</i>. I dialogrutan som öppnas väljer du plats och namn på den nya samlingsfilen.</p>
+<p>För att öppna en befintlig samlingsfil, välj menyn <i>Arkiv-&gt; Öppna ...</i> och välj önskad fil. Du kan också associera samlingsfiler (till exempel om du väljer lämpligt alternativ när du installerar programmet) och öppnar dem automatiskt när du ringer från filhanteraren. 
+<br>Filmenyn visar upp till 5 nyligen öppnade samlingar tillgängliga för snabb öppning.</p>
+<h3>5.2 Backup</h3>
+<p>För att förhindra dataförlust av samlingen på grund av maskinvara, programvara, mänskliga fel och arbetet med skadliga program rekommenderas det att utföra en säkerhetskopia. För att skapa en säkerhetskopia av samlingen, välj menyn<i> File-&gt; Backup</i>. Detta skapar en kopia av den aktuella samlingen med det tillagda datum- och tidsstämpeln (till exempel demo_171025115112.db för kopian gjord kl. 11:51:12 den 25/10/2017) i den katalog som anges i inställningarna. För att återställa data, byt namn på backupfilen genom att radera tidsstämpeln. Du kan också kopiera samlingsfilen med ditt </p>
+<p>Obs! Det rekommenderas att lagra säkerhetskopior på annat fysiskt medium än arbetaren. Att välja ett molnlagring, som Dropbox, kan vara ett bra alternativ. Det är också viktigt att göra säkerhetskopior regelbundet, före eller efter ett stort antal ändringar (se 8.4).</p>
+<h3>5.3 Vakuum...</h3>
+<p>Med tanke på särdrag hos SQLite-implementering, som tillhandahåller lagring av insamlingsdata, släpps inte minnet automatiskt när data tas bort i samlingsfilen. Över tiden kan detta leda till en ökning av storleken på insamlingsfilen, dess fragmentering och avmattning av applikationen. Om det behövs kan du minska storleken på insamlingsfilen genom att släppa onödigt 'tomt' utrymme genom att välja <i>Arkiv-&gt; Vakuummenyn</i>.</p>
+<h3>5.4 Lösenord</h3>
+<p>I menyn <i>Arkiv-&gt; Ange lösenord ... </i>kan du ställa in lösenordet som begärs varje gång samlingen öppnas.</p>
+<p><img src="/images/manual/password.png"></p>
+<p>Obs! Datakryptering utförs inte, så lösenordsskyddet kan inte betraktas som fullständigt.</p>
+<h3> 5.4 Synkronisering</h3>
+<p>Ändringar som gjorts i flera kopior av en samlingsfil kan slås samman säkert med menyn <i>Arkiv-&gt; Synkronisera ....</i>.</p>
+<p>De viktigaste egenskaperna hos synkroniseringsalgoritmen:</p>
+<ul>
+<li>Alla nya poster läggs till (upptäckt av skapat fält) till öppnad samling.</li>
+<li>Inlägg med samma värde som ID och Skapad fält kommer att uppdateras när Uppdaterat fältvärde är mindre i öppnad samling.</li>
+</ul>
+<h3>5.5 Importera</h3>
+<p>OpenNumismat låter dig importera data till en samling från en Excel-fil. För att göra detta, välj menyn<i> File- &amp; gt; Import- &amp; gt; Excel</i> och välj källfilen. 
+Därefter öppnas dialogrutan för att ange fält med de första 10 mynten från källfilen:</p>
+<p><img src="/images/manual/import.png"></p>
+
+<h2>6 Rapporter</h2>
+<h3>6.1 Generera rapporter</h3>
+<p>Programmet stöder generering av rapporter på mallar. Du kan redigera befintliga eller skapa egna rapportmallar. 
+<br>Den genererade rapporten kan skrivas ut eller sparas i HTML, PDF, MS Word-format från förhandsgranskningsdialogrutan.</p>
+<p>För att skapa en rapport måste du välja de mynt för vilka data som ska ingå i rapporten och öppna förhandsgranskningsdialogrutan genom att välja <i>Rapport-&gt; Rapport ...</i> -menyn:</p>
+<p><img src="/images/manual/report_preview.png"></p>
+<p>I förhandsgranskningsdialogrutan kan du välja en rapportmall (vänsterlistan på verktygsfältet), styra förhandsvisningsläget och skriva ut eller spara rapporten till en fil med önskat format (höger knapp på verktygsfältet).</p>
+<p>Obs! Förhandsgranskningsdialog använd gammalt bibliotek för att generera HTML. Så rapporter i förhandsgranskning kan vara skadade och matchar inte vyn i moderna webbläsare. Det kan också krascha när man genererar stora rapporter (mer än 100 mynt). För visning och utskrift kan du använda Snabbrapport (se 6.2) för öppen rapport i din webbläsare.</p>
+<h3>6.2 Snabb rapport</h3>
+<p>Genom att välja <i>Rapport-&gt; Visa i webbläsarmenyn</i> kan du snabbt se rapporten för de valda mynten i HTML-format.</p>
+<p><img src="/images/manual/report.png"></p>
+<p>For a quick report, used the template set in the Settings dialog as the <i>Default template</i>.</p>
+<h3>6.3 Redigera mallar</h3>
+<p>Motorn för att generera mallrapporter är baserad på open-source Jinja2-biblioteket.</p>
+<p>Alla mallar finns i mallarmappen på installationsplatsen (vanligtvis C: \\ Program Files (x86) \\ OpenNumismat). Varje mall finns i en separat undermapp, vars namn används som mallnamn.</p>
+<p>Rapporterna genereras i UTF-8-kodning och därför borde mallarna vara i samma kodning. Därför rekommenderas att redigera mallar, till exempel Notepad ++.</p>
+<p>Obs! När du raderar, installerar om eller uppdaterar programmet kan användarmallar gå vilse. Säkerhetskopiera alltid dina mallar, om du ändrar dem, före dessa åtgärder.</p>
+<h3>6.4 Exportera mynt tabell</h3>
+<p>OpenNumismat låter dig spara det aktuella myntbordet med alla använda filter och sortera i en separat fil i MS Excel, HTML eller CSV-format (Obs! I den nuvarande implementeringen exporteras bilderna inte).</p>
+<p>Du kan exportera myntbordet i menyn<i> Rapportera-&gt; Spara nuvarande lista .... </i>I den öppnade dialogrutan välj filnamnet, önskat format och spara filen.</p>
+<h3>6.5 Statistik</h3>
+<p>Också för att skapa diagram och beräkningsstatistik kan du använda MS Excel. Kopiera mynt som du behöver från OpenNumismat till MS Excel eller exportera Myntbord till MS Excel-fil (se 6.4) och använd dess funktionalitet.</p>
+<h3>6.6 Sammanfattning</h3>
+<p><img src="/images/manual/summary.png"></p>
+
+<h2>7 Referenser</h2>
+<p>Referenser gör det enkelt att skriva in data när du redigerar ett mynt och lägger till ikoner (till exempel flaggor) till dataskärmen. Referenser är tillgängliga för följande fält: Region, Land, Period, Linjal, Enhet, Mint, Serie, Betyg, Material, Form, Kvalitet, Kant, Sällsynthet, ObvRev, Typ, Fel, Plats (köp eller försäljning).</p>
+<p>Redigeringsreferenser finns i dialogrutan Redigera:</p>
+<p><img src="/images/manual/ref_edit2.png"></p>
+<p>eller från menyn <i>Referens-&gt; Redigera ...</i>:</p>
+<p><img src="/images/manual/ref_edit1.png"></p>
+<p>Högerklicka på posten i katalogen öppnar åtkomst till att lägga till eller ta bort objektets ikon:</p>
+<p><img src="/images/manual/ref_menu.png"></p>
+<p>Referenser för Land, Period, Linjal, Enhet, Mynt, Serie är en korsreferens och deras uppdatering är endast tillgänglig om du väljer värdet av basfältet som finns i referensen. Till exempel, för att lägga till en ny mynt, bör du först välja ett befintligt land.</p>
+<p>Sortera kryssrutan <i>Sorterar</i> alla poster i katalogen, annars kommer alla objekt att visas i den ordning de var angivna.</p>
+<p>För att snabbt fylla referenser med inmatade data från samlingen, <i>välj menyn Referens-&gt; Fyll i samling</i>.</p>
+<p>Som standard lagras referenser i en separat fil med en .ref-förlängning, som kan kopieras, bytas eller raderas med ditt operativsystem. Vägen till referensfilen kan anges i dialogrutan Inställningar.</p>
+<p> Du kan också bifoga aktuell referens till en samlingsfil. Välj <i>Referens-&gt; Fäst aktuell referens</i> för bifogad eller <i>Referens-&gt; Ta bort aktuell referens </i>för att ta bort referens från samling och använd standard från Inställningar.
+ 
+ Alternativ : </p>
+<h2>8 Inställningar</h2>
+<p>I dialogrutan Inställningar kan du konfigurera programmets utseende och beteende. För att öppna dialogrutan, välj menyn <i>Arkiv-&gt; Inställningar</i>:</p>
+<p><img src="/images/manual/settings.png"></p>
+
+<h3>8.1 Fält</h3>
+<p>Fältet Panel i inställningsdialogrutan låter dig byta namn på och ta bort del av samlingsfälten från gränssnittet. I det här fallet visas endast de valda fälten i programgränssnittet, men data sparas för alla fält.</p>
+<h3>8.2 Lagringshastighet</h3>
+<p> SQLite-databasmotorn har flera inställningar som påverkar hastigheten och tillförlitligheten:</p>
+<ul>
+<li>Pålitlig - alla ändringar garanteras sparas</li>
+<li>Snabba ändringar kan gå förlorade när strömmen stängs av under drift (rekommenderas för de flesta fall);</li>
+<li> Extra snabb (farlig) - rekommenderas när du utför ett stort antal ändringar, förutsatt att du utför en säkerhetskopia.</li>
+</ul>
+<h3>8.3 Bilder räknas som standard</h3>
+Standardbilder räknas i bildpanelen.
+
+<h3>8.4 Autobackup</h3>
+Du kan aktivera autobackup. Den här funktionen kommer att göra säkerhetskopior efter att ha ändrat specificerat antal poster.
+
+<h3> 8,5 samling</h3>
+Samlingsspecifika inställningar (lagrade för varje samlingsfil):
+<p><img src="/images/manual/settings2.png"></p>
+
+<p>Förhandsgranska bildhöjd</p>
+<p><img src="/images/manual/main_height.png"></p>
+
+<p> Fältformat för fria format - för att ange värden i det expanderade formatet (frågetecken i fältet År, fraktioner i Nominellt fält, räckvidd i fältet Vikt etc.).</p>
+<p>Bilder längst ner:</p>
+<p><img src="/images/manual/main_bottom.png"></p>
+
+</div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner"><p>Källkod tillgänglig på <a href="https://github.com/OpenNumismat">GitHub</a></p>
+        <p>Publicerad med<a href="https://pages.github.com">GitHub Sidor</a></p>
+      </footer>
+</div>
+    </div>
+
+<script type="text/javascript">
+reformal_wdg_domain="OpenNumismat";
+reformal_wdg_mode=0;
+reformal_wdg_title="OpenNumismat";
+reformal_wdg_ltitle="Leave feedback";
+reformal_wdg_lfont="";
+reformal_wdg_lsize="";
+reformal_wdg_color="#FFA000";
+reformal_wdg_bcolor="#516683";
+reformal_wdg_tcolor="#FFFFFF";
+reformal_wdg_align="left";
+reformal_wdg_waction=0;
+reformal_wdg_vcolor="#9FCE54";
+reformal_wdg_cmline="#E0E0E0";
+reformal_wdg_glcolor="#105895";
+reformal_wdg_tbcolor="#FFFFFF";
+reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
+<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+</noscript>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
+</script>
+</body>
+</html>
