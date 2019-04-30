@@ -84,8 +84,8 @@
 <li>Bilgi paneli</li>
 </ol>
 <p>When you click on any coin in the Table of coins, detailed information is displayed: in the Image panel - coin photographs, the Tree unfolds to the element describing the coin, the Info panel displays all the entered coin data.</p>
-<p>You can create a new empty collection or edit a demo by entering new data.</p>
-<h2>3 Entering coins</h2>
+<p>Yeni boş bir koleksiyon oluşturabilir veya demo koleksiyonlara yeni veriler kaydederek düzenleyebilirsiniz.</p>
+<h2>3 Madeni paraların kaydedilmesi</h2>
 <h3>3.1 Madeni para ekleme</h3>
 <p>Manage your collection by adding entries about every bought, sold or wished coin.</p>
 <p>To add a new coin, select the <i>Coin-&gt;Add</i> menu or press the Ins key. After that, the Edit dialog opens:</p>
@@ -104,7 +104,7 @@
 <li>Darphane;</li>
 <li>Mint mark - a sign of the mint;</li>
 <li>Tip;</li>
-<li>Series - a series of commemorative coins;</li>
+<li>Seri - hatıra paraların bir serisi;</li>
 <li>Subject - an event or object to which a commemorative coin is dedicated.</li>
 </ul>
 </li>
@@ -114,7 +114,7 @@
 <li>Quantity - the number of duplicates or coins in the roll;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Kondisyon;</li>
-<li>Storage - a description of the physical location of the coin;</li>
+<li>Depolama - Madeni paranın bulunduğu konumun açıklaması;</li>
 <li>Barkod;</li>
 <li>Defect - a description of the mint-made error;</li>
 <li>Özellikler.</li>
@@ -126,7 +126,7 @@
 <li>Ödenen - komisyonu içeren son fiyat</li>
 <li>Commission - additional costs associated with the acquisition of a coin (the field is available only in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
 <li>Satıcı;</li>
-<li>Place;</li>
+<li>Yer;</li>
 <li>Bilgi.</li>
 </ul>
 </li>
@@ -136,7 +136,7 @@
 <li>Bailed - the total received amount taking into account the commission;</li>
 <li>Commission - additional costs associated with the sale of coins (the field is only available in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
 <li>Satın Alan;</li>
-<li>Place;</li>
+<li>Yer;</li>
 <li>Bilgi.</li>
 </ul>
 </li>
@@ -232,7 +232,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <br>In the opened Edit dialog, all matching fields for the selected coin group will be filled. Each field will have a checkbox that allows or denies the application of the field value to the whole group of coins when saving:</p>
 <p><img src="/images/manual/multi_edit.png"></p>
 <p>Also, group editing is available from the Tree - right-click on the tree element and select <i>Edit coins...</i>.</p>
-<h3>3.5 Silme</h3>
+<h3>3.5 Kaldırma</h3>
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.</p>
 <p>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
 <h2>4 View Coins</h2>
@@ -306,7 +306,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>For a quick report, used the template set in the Settings dialog as the <i>Default template</i>.</p>
 <h3>6.3 Şablonları Düzenleme</h3>
 <p>The engine for generating template reports is based on the open-source Jinja2 library.</p>
-<p>All templates are located in the templates folder at the installation location (usually C:\Program Files (x86)\OpenNumismat). Each template is in a separate subfolder, the name of which is used as the template name.</p>
+<p>User templates should be placed into Documents folder (usually C:\Users\user\Documents\OpenNumismat\templates). Each template is in a separate subfolder, the name of which is used as the template name.</p>
 <p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>Attention: when deleting, reinstalling or updating the application, user templates can be lost. Always back up your templates, if you make changes to them, before these actions.</p>
 <h3>6.4 Madeni para tablosunu dışa aktarma</h3>
@@ -336,15 +336,15 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 
 <h3>8.1 Alanlar</h3>
 <p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.</p>
-<h3>8.2 Acceleration of storage</h3>
+<h3>8.2 Depolama hızlandırması</h3>
 <p>The SQLite database engine have a multiple settings that affect the speed and reliability:</p>
 <ul>
-<li>Reliable - all changes will be guaranteed to be saved;</li>
+<li>Güvenli - tüm değişikliklerin kaydedileceği güvence altındadır.</li>
 <li>Fast - changes can be lost when power is turned off during operation (recommended for most cases);</li>
 <li>Extra fast (dangerous) - recommended when you perform a large number of changes, provided that you perform a backup.</li>
 </ul>
 <h3>8.3 Varsayılan görsel sayısı</h3>
-Default images count in Image panel.
+Görsel panelindeki varsayılan görsel sayısı.
 
 <h3>8.4 Otomatik yedekleme</h3>
 You can enable autobackup. This feature will make backups after changing specified count of records.
@@ -353,7 +353,7 @@ You can enable autobackup. This feature will make backups after changing specifi
 Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/settings2.png"></p>
 
-<p>Preview image height:</p>
+<p>Önizleme görsel yüksekliği:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
 <p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
