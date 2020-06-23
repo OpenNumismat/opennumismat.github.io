@@ -150,28 +150,28 @@
 <li>Ориентация - ориентация на лицевата и обратната страна (медал, монета).</li>
 </ul>
 </li>
-<li>Parameters - Minting (coin release data):<ul>
+<li>Параметри - Сечене (дата на пускане в обращение)<ul>
 <li>В обращение от</li>
 <li>Тираж;</li>
 <li>Емисионен период;</li>
-<li>Quality - minting technique;</li>
+<li>Качество - техника на отсичане;</li>
 <li>Бележка.</li>
 </ul>
 </li>
 <li>Дизайн (описание на дизайна на монети):<ul>
-<li>Лицева страна - лицевото изображение;</li>
+<li>Лицева страна - изображението на лицевата страна на монетата;</li>
 <li>Дизайн (лицева страна);</li>
 <li>Художник (лицевата страна);</li>
 <li>Гравьор (лицева страна);</li>
 <li>Цвят (лицева страна);</li>
-<li>Reverse - reverse image;</li>
+<li>Обратна страна - изображението на обратната страна на монетата;</li>
 <li>Дизайн (обратна страна);</li>
 <li>Художник (обратна страна);</li>
 <li>Гравьор (обратна страна);</li>
 <li>Цвят (обратна страна);</li>
-<li>Edge - the image of the edge;</li>
-<li>Type (of edge);</li>
-<li>Label (on the edge);</li>
+<li>Гурт - изображението на гурт-а;</li>
+<li>Вид (на гурт-а)</li>
+<li>Надпис (на гурт-а)</li>
 <li>Subject - a description of the topic or event to which the coin is dedicated or its design;</li>
 </ul>
 </li>
@@ -191,7 +191,7 @@
 <li>Системни (не може да се редактират, може да се показва само в таблицата с монети):<ul>
 <li>ID - уникален номер на монетата в колекцията;</li>
 <li>Created - date the description was created;</li>
-<li>Updated - the date of the last editing of the description;</li>
+<li>Актуализирано - датата на последната редакция на описанието;</li>
 <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.</li>
 </ul>
 </li>
@@ -206,19 +206,19 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h4>3.1.1 Редактиране на изображения</h4>
 <p>Приложението поддържа до 7 изображения от всяка монета.</p>
-<p>The following image formats are supported: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
-<br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
+<p>Поддържат се следните формати на изображението: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Изображенията се записват във формат JPEG. Големи изображения са компресирани, така че максималната страна да не надвишава 1024 пиксела (можете да го промените в диалоговия прозорец Настройки).
+<br>За да вмъкнете или промените изображение, щракнете с десния бутон върху полето и изберете един от елементите от падащото меню:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
-<li>Load... - select image from file on disk;</li>
-<li>Save as... - saves the image to a file on disk;</li>
-<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see 4.2);</li>
+<li>Зареждане... - избиране на изображение от файл на диска;</li>
+<li>Запиши като... - запазване на изображението във файл на диска;</li>
+<li>Преименуване... - задаване на уникално име на изображението, което ще бъде показано в подсказката на панела с изображения (вижте 4.2);</li>
 <li>Размяна с - разменя на два изображения;</li>
 <li>Paste - paste an image from the clipboard (it can be a graphic file, an image copied from a image editor or a web link);</li>
 <li>Copy - copies the image to the clipboard for later paste into the image editor;</li>
 <li>Изтриване - изтрива текущото изображение.</li>
 </ul>
-<p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the standard image viewer of your OS.</p>
+<p>Двойното щракване върху полето за изображение отваря прозорец за избор на файл, ако изображението все още не е записано, или отваря изображението с програмата по подразбиране за преглед на изображения настроена в операционната система.</p>
 <p>The coin image in the Table of coins is automatically generated from the obverse and reverse images.</p>
 <h3>3.2 Редактиране на монета</h3>
 <p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select <i>Edit...</i>, select the coin and press Enter key or select the <i>Coin-&gt;Edit...</i> menu. After that, the Edit dialog will be opened, described in 3.1.</p>
@@ -305,7 +305,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p><img src="/images/manual/report.png"></p>
 <p>For a quick report, used the template set in the Settings dialog as the <i>Default template</i>.</p>
 <h3>6.3 Редактиране на шаблони</h3>
-<p>The engine for generating template reports is based on the open-source Jinja2 library.</p>
+<p>Двигателят за генериране на отчети за шаблони се базира на библиотеката с отворен код Jinja 2.</p>
 <p>Потребителските шаблони трябва да бъдат поставени в папка Documents (обикновено C:\Users\user\Documents\OpenNumismat\templates). Всеки шаблон е в отделна подпапка, чието име се използва като име на шаблона.</p>
 <p>Отчетите се генерират в кодировка UTF-8 и съответно шаблоните трябва да са в едно и също кодиране. Следователно, за редактиране на шаблони се препоръчва да използвате например Notepad ++.</p>
 <p>Внимание: при изтриване, преинсталиране или актуализиране на приложението, потребителските шаблони могат да бъдат загубени. Винаги архивирайте шаблоните си, ако правите промени в тях, преди тези действия.</p>
@@ -339,9 +339,9 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>8.2 Ускоряване на съхранението</h3>
 <p>SQLite базата данни има множество настройки, които влияят на скоростта и надеждността:</p>
 <ul>
-<li>Reliable - all changes will be guaranteed to be saved;</li>
-<li>Fast - changes can be lost when power is turned off during operation (recommended for most cases);</li>
-<li>Extra fast (dangerous) - recommended when you perform a large number of changes, provided that you perform a backup.</li>
+<li>Надежден - всички промени ще бъдат гарантирано запазени;</li>
+<li>Бързо - промените могат да бъдат загубени при изключване на захранването по време на работа (препоръчва се в повечето случаи);</li>
+<li>Допълнително бързо (опасно) - препоръчва се, когато извършите голям брой промени, при условие че сте направили резервно копие.</li>
 </ul>
 <h3>8.3 Брой снимки по подразбиране</h3>
 Броя видими изображения по подразбиране в панела с изображения.
