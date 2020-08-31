@@ -121,8 +121,10 @@
   <li>Import vorhandener Sammlungen aus:</li>
   <ul>
 <li>Excel (Bilder als Links in der Quelldatei)</li>
-    <li><a href="https://colnect.com/">Colnect</a></li>
+    <li>
+<a href="https://colnect.com/">Colnect</a> (from <a href="https://colnect.com/en/help/collecting/premium_export_list">lists</a> and directly)</li>
     <li>CoinManage 2011, 2013, 2015 (benötigt <a href="http://msdn.microsoft.com/en-us/vfoxpro/bb190233" rel="nofollow">Visual FoxPro ODBC Treiber</a>, <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow">Microsoft Access Datenbank Engine</a>, Microsoft Access oder jede andere Software, die ODBC Microsoft Access Treiber mitbringt)</li>
+    <li>Numista</li>
     <li>Collection Studio 3.65 (aus dem XML Tabellen export)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
@@ -134,20 +136,29 @@
   <li>Geeignet für andere Arten von Sammlungen, wie <a href="stamps.html">Briefmarken</a>, Banknoten, Postkarten, Abzeichen</li>
 </ul>
 <h2 id="download">Download</h2>
-<p>The latest version: <strong>OpenNumismat 1.8.6</strong>. Release date: 02 June 2020</p>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.exe" rel="nofollow">Download OpenNumismat 1.8.6</a></strong> for Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.zip" rel="nofollow">Download portable OpenNumismat 1.8.6</a> for Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/open-numismat_1.8.6_all.deb" rel="nofollow">Download OpenNumismat 1.8.6</a> for Debian/Ubuntu</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.5/OpenNumismat-1.8.5.dmg" rel="nofollow">Download OpenNumismat 1.8.5</a> für Mac OS X 10.8 und neuer (ohne Statistiken)</p>
+<p>The latest version: <strong>OpenNumismat 1.8.7</strong>. Release date: 28 August 2020</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7.exe" rel="nofollow">Download OpenNumismat 1.8.7</a></strong> for Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7.zip" rel="nofollow">Download portable OpenNumismat 1.8.7</a> for Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/open-numismat_1.8.7_all.deb" rel="nofollow">Download OpenNumismat 1.8.7</a> for Debian/Ubuntu</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.dmg" rel="nofollow">Download OpenNumismat 1.8.6</a> für Mac OS X 10.8 und neuer (ohne Statistiken)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7-win64.exe" rel="nofollow">Download OpenNumismat 1.8.7 (64 bit)</a> experimental version with freshly third-party library dependencies for Windows</p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Ältere Versionen...</a></p>
 <h2>Änderungshistorie</h2>
-  <h3>What's new in OpenNumismat 1.8.6 (02 June 2020)</h3>
+  <h3>What's new in OpenNumismat 1.8.7 (28 August 2020)</h3>
   <ul>
-<li>Fix importing from Colnect</li>
-    <li>Fix GeoChart in Statistics</li>
+<li>Add import from Numista</li>
+    <li>Bulk add items from Colnect</li>
+    <li>Fix für Import von Colnect</li>
+    <li>Fix importing from uCoin.net</li>
+    <li>Update code for support freshly third-party library dependencies</li>
+  </ul>
+<h3>Was ist neu in OpenNumismat 1.8.6 (02. Juni 2020)</h3>
+  <ul>
+<li>Fix für Import von Colnect</li>
+    <li>Fix für den GeoChart in Statistiken</li>
     <li>Fix creating new coin after editing another</li>
-    <li>Fix Linux launch</li>
-    <li>Fix GMaps</li>
+    <li>Fix beim Start unter Linux</li>
+    <li>Fix für GMaps</li>
   </ul>
 <h3>Was ist neu in OpenNumismat 1.8.5 (16. März 2020)</h3>
   <ul>
@@ -162,19 +173,6 @@
 <li>Verbessterte Bearbeitung bei Colnect Fehlern</li>
     <li>Verbessterte Leistung beim Einfügen von Bildern</li>
     <li>Improve switching views menu</li>
-  </ul>
-<h3>Was ist neu in OpenNumismat 1.8.3 (21. Oktober 2019)</h3>
-  <ul>
-<li>Import von Colnect arbeitet mit einem Proxyserver (die alte Version wird abgeschaltet)</li>
-    <li>Import von Colnect <a href="https://colnect.com/help/collecting/premium_export_list">CSV Export Listen</a> (Danke an fftmp)</li>
-    <li>Fix für Sortierung</li>
-    <li>Anzeige von Tooltip im Sortierbaum, wenn das Label abgeschnitten ist</li>
-  </ul>
-<h3>Was ist neu in OpenNumismat 1.8.2 (28. Mai 2019)</h3>
-  <ul>
-<li>Fix für Problem mit Icon/Card Ansicht unter Linux und Mac OS X</li>
-    <li>Fix für Bilder unten</li>
-    <li>Fix für das Sortieren, wenn kein Wert für Status vorhanden ist</li>
   </ul>
 <a href="history.html">Ältere...</a>
 <h2>Screenshots</h2>

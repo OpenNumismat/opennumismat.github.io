@@ -7,7 +7,7 @@
 <meta name="description" content="OpenNumismat">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>Ръководство за потребителя - OpenNumismat - безплатен софтуер за събиране на монети</title>
+<title>Ръководство за потребителя - OpenNumismat - безплатен софтуер за колекциониране на монети</title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
           </div>
           <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
-            <a class="title-link" href="/"><h3 id="project_tagline">е безплатен и с отворен код софтуер за събиране на монети</h3></a>
+            <a class="title-link" href="/"><h3 id="project_tagline">е безплатен и с отворен код софтуер за колекциониране на монети</h3></a>
           </div>
         </div>
       </header>
@@ -93,7 +93,7 @@
 <p>Диалоговият прозорец "Редактиране" съдържа 6 раздела със следните полета:</p>
 <ul>
 <li>Монета - Основни данни:<ul>
-<li>Name - a descriptive name of the coin (can be automatically created from the remaining fields by clicking the "Generate" button);</li>
+<li>Наименование - описателно име на монетата (може да бъде създадено автоматично от останалите полета, като кликнете върху бутона „Генериране“);</li>
 <li>Регион;</li>
 <li>Държава;</li>
 <li>Период - период в историята на страната;</li>
@@ -105,10 +105,10 @@
 <li>Знак на монетния двор - знакът на монетния двор;</li>
 <li>Вид;</li>
 <li>Серия - серия от възпоменателни монети;</li>
-<li>Subject - an event or object to which a commemorative coin is dedicated.</li>
+<li>Тема - събитие или предмет, на който е посветена възпоменателна монета.</li>
 </ul>
 </li>
-<li>Coin - State (state of coin from the collection):<ul>
+<li>Монета - Състояние (състояние на монетата от колекцията):<ul>
 <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish. The coin status affects the availability and content of the Market tab;</li>
 <li>Grade - the degree of coin wear;</li>
 <li>Количество - броят дубликати или монети в ролката;</li>
@@ -190,17 +190,17 @@
 </li>
 <li>Системни (не може да се редактират, може да се показва само в таблицата с монети):<ul>
 <li>ID - уникален номер на монетата в колекцията;</li>
-<li>Created - date the description was created;</li>
+<li>Създаден на - дата на създаване на описанието;</li>
 <li>Актуализирано - датата на последната редакция на описанието;</li>
 <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.</li>
 </ul>
 </li>
 </ul>
-<p>For some fields, values can be obtained from the reference (see 7):</p>
+<p>За някои полета стойностите могат да бъдат получени от номенклатурите (вижте 7):</p>
 <p><img src="/images/manual/ref_list.png"></p>
-<p>In the Settings dialog, you can remove some of the unused fields (see 8).</p>
-<p>Some fields (such as Value, Year, Quantity, Price, Fineness, Weight, Diameter, Mintage) are for entering only numeric values. To enter values in the expanded format ("BC" in the Year field, fractions in the Nominal field, range in the Weight field, etc.) in these fields, you must enable the <i>Free format numeric fields</i> in the Settings dialog.</p>
-<p>Text fields (such as Subject, Features, Description, Note) support links:</p>
+<p>В диалоговия прозорец за настройки можете да премахнете някои от неизползваните полета (вижте 8).</p>
+<p>Някои полета (като стойност, година, количество, цена, проба, тегло, диаметър, тираж) са за въвеждане само на цифрови стойности. За да въведете стойности в разширения формат ("пр. Хр." в полето година, дроби в номиналното поле, диапазон в полето за тегло и т.н.) трябва да активирате <i>Свободен формат на цифровите полета</i> в диалоговия прозорец Настройки.</p>
+<p>Текстови полета (като тема, характеристики, описание, бележка) поддържат връзки:</p>
 <p><img src="/images/manual/links.png"></p>
 For paste link to a local file you can drag'n'drop or copy-paste file into text field in Edit dialog.
 
@@ -246,10 +246,10 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
 <br>Double-clicking opens the image in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.</p>
 <h3>4.3 Филтър</h3>
-<p>Using the menu in the column headings of the table, you can filter coins by the value of the fields.</p>
+<p>Използвайки менюто в заглавията на колоните на таблицата, можете да филтрирате монетите по стойността на полетата.</p>
 <p><img src="/images/manual/filter.png"></p>
 <p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select <i>(All)</i>. At the top of the menu is a field that allows you to filter out the menu values.</p>
-<p>To reset all filters in the current list, click the <i>Clear all filters</i> button on the toolbar:</p>
+<p>За да нулирате всички филтри в текущия списък, щракнете върху бутона <i>Изчистване на всички филтри</i> от лентата с инструменти:</p>
 <p><img src="/images/manual/clear_filters.png"></p>
 <h3>4.4 Дърво</h3>
 <p>The tree on the left side of the application window allows you to group coins by field values. When selecting a tree element, the coins corresponding to the selected value are displayed in the table.</p>
@@ -266,7 +266,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p><img src="/images/manual/status.png"></p>
 
 <h2>5 Управление на файл с колекция</h2>
-<p>Файлът с колекцията е файл с разширението .db и съхранява всички данни за колекцията, включително изображения, различни от номенклатурата (виж 7). Можете да го копирате, премествате, изтривате и преименувате с помощта на вашата операционна система.</p>
+<p>Файлът с колекцията е файл с разширението .db и съхранява всички данни за колекцията, включително изображения, различни от номенклатурата (вижте 7). Можете да го копирате, премествате, изтривате и преименувате с помощта на вашата операционна система.</p>
 <h3>5.1 Creating/Opening</h3>
 <p>To create a new collection, select the menu <i>File-&gt;New...</i>. In the dialog that opens, select the location and name of the new collection file.</p>
 <p>To open an existing collection file, select the <i>File-&gt;Open...</i> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
@@ -313,12 +313,12 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>OpenNumismat ви позволява да запишете текущата таблица с монети с всички приложени филтри и да сортирате в отделен файл в MS Excel, HTML или CSV формат (Забележка: в текущата реализация изображенията не се експортират).</p>
 <p>You can export the Table of coins in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
 <h3>6.5 Статистика</h3>
-<p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see 6.4) and use its functionality.</p>
+<p>Също така за създаване на всяка диаграма и изчисляване на статистически данни можете да използвате MS Excel. Копирайте нужните ви монети от OpenNumismat в MS Excel или експортирайте Таблицата с монети в MS Excel файл (вижте 6.4) и използвайте неговата функционалност.</p>
 <h3>6.6 Oбобщение</h3>
 <p><img src="/images/manual/summary.png"></p>
 
 <h2>7 Номенклатури</h2>
-<p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
+<p>Номенклатурите улесняват въвеждането на данни при редактиране на монета, а също и добавяне на икони (например флагове) към показването на данните. Номенклатурите са достъпни за следните полета: регион, държава, период, владетел, парична единица, монетен двор, серия, качество, материал, форма, качество, гурт, рядкост, ориентация, вид, дефект, място (покупка или продажба).</p>
 <p>Редактирането на номенклатури е налице от диалоговия прозорец Редактиране</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>или от менюто <i>Номенклатури-&gt;Редактиране...</i>:</p>

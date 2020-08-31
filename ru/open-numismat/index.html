@@ -120,8 +120,10 @@
   <li>Импортирование существующих коллекций из</li>
   <ul>
 <li>Excel (включая изображения представленные ссылками в оригинальном файле)</li>
-    <li><a href="https://colnect.com/">Colnect</a></li>
+    <li>
+<a href="https://colnect.com/">Colnect</a> (из <a href="https://colnect.com/en/help/collecting/premium_export_list">списков</a> и напрямую)</li>
     <li>CoinManage 2011, 2013, 2015 (требуется <a href="http://msdn.microsoft.com/en-us/vfoxpro/bb190233" rel="nofollow">Visual FoxPro ODBC Driver</a>, <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow">Microsoft Access Database Engine</a>, Microsoft Access или любое другое приложение с ODBC Microsoft Access Driver)</li>
+    <li>Numista</li>
     <li>Collection Studio 3.65 (из экспортного формата XML Table)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
@@ -133,14 +135,23 @@
   <li>Подходит для других типов коллекционирования, например <a href="stamps.html">марки</a>, банкноты, открытки, значки</li>
 </ul>
 <h2 id="download">Скачать</h2>
-<p>Последняя версия: <strong>OpenNumismat 1.8.6</strong>. Дата выхода: 02 июня 2020</p>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.exe" rel="nofollow">Скачать OpenNumismat 1.8.6</a></strong> для Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.zip" rel="nofollow">Скачать переносимый OpenNumismat 1.8.6</a> для Windows</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/open-numismat_1.8.6_all.deb" rel="nofollow">Скачать OpenNumismat 1.8.6</a> для Debian/Ubuntu</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.5/OpenNumismat-1.8.5.dmg" rel="nofollow">Скачать OpenNumismat 1.8.5</a> для Mac OS X 10.8 и выше (без Статистики)</p>
+<p>Последняя версия: <strong>OpenNumismat 1.8.7</strong>. Дата выхода: 28 августа 2020</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7.exe" rel="nofollow">Скачать OpenNumismat 1.8.7</a></strong> для Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7.zip" rel="nofollow">Скачать переносимый OpenNumismat 1.8.7</a> для Windows</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/open-numismat_1.8.7_all.deb" rel="nofollow">Скачать OpenNumismat 1.8.7</a> для Debian/Ubuntu</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.6/OpenNumismat-1.8.6.dmg" rel="nofollow">Скачать OpenNumismat 1.8.6</a> для Mac OS X 10.8 и выше (без Статистики)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.7/OpenNumismat-1.8.7-win64.exe" rel="nofollow">Скачать OpenNumismat 1.8.7 (64 bit)</a> эксперементальная версия со свежими библиотеками и зависимостями для Windows</p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Более старые версии...</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в OpenNumismat 1.8.6 (02 июня 2020)</h3>
+  <h3>Что нового в OpenNumismat 1.8.7 (28 августа 2020)</h3>
+  <ul>
+<li>Добавлен импорт из Numista</li>
+    <li>Групповое добавление предметов из Colnect</li>
+    <li>Исправлен импорт из Colnect</li>
+    <li>Исправлен импорт из UCoin.net</li>
+    <li>Обновлен код для поддержки свежих сторонних библиотек и зависимостей</li>
+  </ul>
+<h3>Что нового в OpenNumismat 1.8.6 (02 июня 2020)</h3>
   <ul>
 <li>Исправлен импорт из Colnect</li>
     <li>Исправлен GeoChart в Статистике</li>
@@ -161,19 +172,6 @@
 <li>Улучшена обработка ошибок от Colnect</li>
     <li>Ускорено добавление изображений</li>
     <li>Улучшено меню смены вида</li>
-  </ul>
-<h3>Что нового в OpenNumismat 1.8.3 (21 октября 2019)</h3>
-  <ul>
-<li>Импорт из Colnect работает через прокси сервер (старая версия перестанет работать)</li>
-    <li>Импорт из <a href="https://colnect.com/help/collecting/premium_export_list">CSV-списков</a> Colnect (спасибо fftmp)</li>
-    <li>Исправлена сортировка в Дереве</li>
-    <li>Показывается всплывающая подсказка в Дереве, когда часть надписи не видна</li>
-  </ul>
-<h3>Что нового в OpenNumismat 1.8.2 (28 мая 2019)</h3>
-  <ul>
-<li>Исправлена проблема с карточным видов на Linux и Mac OS X</li>
-    <li>Исправлено Изображение снизу</li>
-    <li>Исправлена сортировка при отсутствующем значении Статуса</li>
   </ul>
 <a href="history.html">Ранее...</a>
 <h2>Снимки экранов</h2>
