@@ -7,7 +7,7 @@
 <meta name="description" content="OpenNumismat">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>Ръководство за потребителя - OpenNumismat - безплатен софтуер за колекциониране на монети</title>
+<title>Ръководство за употреба - OpenNumismat - безплатен софтуер за колекциониране на монети</title>
 </head>
 <body>
 
@@ -68,7 +68,7 @@
 <p>OpenNumismat е базиран на библиотеката PyQt с SQLite база данни за съхранение на събраните на данни, което позволи да се постигне лекота и отзивчивост на интерфейса и междуплатформеност.</p>
 <p>Налице е пълен списък на използваните компоненти и библиотеки <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">тук</a>.</p>
 <p>Иконите използвани в потребителския интерфейс са базирани на <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> и <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
-<p>Translation of the interface implemented by enthusiasts using the service <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Thank you for the help!</p>
+<p>Превода на интерфейса е реализиран от ентусиасти, използващи услугата <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Благодаря ви за помощта!</p>
 <h3>1.3 Разрешително</h3>
 <p>OpenNumismat is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 <p>OpenNumismat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
@@ -88,7 +88,7 @@
 <h2>3 Въвеждане на монети</h2>
 <h3>3.1 Добавяне на монета</h3>
 <p>Управлявайте своята колекция, като добавяте записи за всяка закупена, продадена или желана монета.</p>
-<p>To add a new coin, select the <i>Coin-&gt;Add</i> menu or press the Ins key. After that, the Edit dialog opens:</p>
+<p>За да добавите нова монета, изберете <i>Монета-&gt;Добави</i> меню или натиснете клавиша Ins. След това се отваря диалоговият прозорец Нова:</p>
 <p><img src="/images/manual/new.png"></p>
 <p>Диалоговият прозорец "Редактиране" съдържа 6 раздела със следните полета:</p>
 <ul>
@@ -234,10 +234,10 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>Also, group editing is available from the Tree - right-click on the tree element and select <i>Edit coins...</i>.</p>
 <h3>3.5 Премахването</h3>
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.</p>
-<p>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
+<p>Премахнатите монети се премахват наведнъж от колекцията и не могат да бъдат възстановени - бъдете внимателни.</p>
 <h2>4 Преглед на монети</h2>
 <h3>4.1 Таблица с монети</h3>
-<p>The Table of coins is the central element of the application, serves to display coin data according to those selected with the settings.</p>
+<p>Таблицата с монетите е централният елемент на приложението, служи за показване на данните за монетите според избраните в настройките.</p>
 <p>The number and location of fields can be set in the <i>List-&gt;Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.</p>
 <p><img src="/images/manual/columns.png"></p>
 <p>In the opened dialog, it is necessary to mark the fields of interest. Dragging the names of fields with a mouse can change the location of the fields relative to each other. You can also drag field headers directly into the coin table. Clicking on the field header sorts the table according to the selected field.</p>
@@ -277,11 +277,11 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <h3>5.3 Vacuum</h3>
 <p>С оглед на особеностите на реализацията на SQLite, която осигурява съхранение на колекционните данни, паметта не се освобождава автоматично, когато данните се изтрият в колекционния файл. С течение на времето това може да доведе до увеличаване на размера на колекционния файл, неговата фрагментация и забавяне на приложението. Ако е необходимо, можете да намалите размера на колекционния файл, като освободите ненужно "празно" пространство, като изберете от менюто <i>Файл-&gt;Vacuum</i>.</p>
 <h3>5.4 Парола</h3>
-<p>In the menu <i>File-&gt;Set password...</i> you can set the password that will be requested each time the collection is opened.</p>
+<p>В менюто <i>Файл-&gt;Задайте парола...</i> можете да зададете парола, която ще се изисква при всяко отваряне на колекцията.</p>
 <p><img src="/images/manual/password.png"></p>
 <p>Забележка: Шифроването на данни не се извършва, така че защитата с парола не може да се счита за завършена.</p>
 <h3>5.4 Синхронизация</h3>
-<p>Changes made in multiple copies of a collection file can be merged safely with the menu <i>File-&gt;Synchronize...</i>.</p>
+<p>Промените, направени в множество копия на файл с колекция, могат да бъдат обединени безопасно от менюто <i>Файл-&gt;Синхронизиране...</i>.</p>
 <p>Най-важните свойства на синхронизиращия алгоритъм:</p>
 <ul>
 <li>All new entries will be added (detected by Created field) to opened collection.</li>
