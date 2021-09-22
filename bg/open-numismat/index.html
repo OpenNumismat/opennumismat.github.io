@@ -111,7 +111,7 @@
   <li>Групирането, филтрирането и сортирането за улесняване на извличането на монети в каталога</li>
   <li>Генериране и отпечатване на отчети в HTML, PDF, MS Word</li>
   <li>Експортирайте персонализираните списъци в MS Excel, HTML и CSV</li>
-  <li>Дублиране на монети, за да добави бързо подобна монета</li>
+  <li>Дублиране на монети, за бързо добавяне на подобна монета</li>
   <li>Групово редактиране на монети</li>
   <li>Вграден редактор на изображения</li>
   <li>Статистика</li>
@@ -136,26 +136,34 @@
   <li>Подходящ и за други колекционерски предмети, като <a href="stamps.html">марки</a>, банкноти, пощенски картички, значки</li>
 </ul>
 <h2 id="download">Изтегляне</h2>
-<p>The latest version: <strong>OpenNumismat 1.8.9</strong>. Release date: 01 February 2021</p>
+<p>Последната версия: <strong>OpenNumismat 1.8.10</strong>. Дата на излизане: 22 септември 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.9/OpenNumismat-1.8.9.exe" rel="nofollow">OpenNumismat - Standard installer</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.9/OpenNumismat-1.8.9.zip" rel="nofollow">OpenNumismat - .zip (no installer)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.9/OpenNumismat-1.8.9-win64.exe" rel="nofollow">OpenNumismat - Standard installer for 64-bit Windows</a> (experimental version with freshly third-party library dependencies)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.exe" rel="nofollow">OpenNumismat - Стандартен инсталатор</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.zip" rel="nofollow">OpenNumismat - .zip (без инсталация)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10-win64.exe" rel="nofollow">OpenNumismat - Стандартен инсталатор за 64-bit Windows</a> (експериментална версия със свежи библиотеки на трети страни)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.9/open-numismat_1.8.9_all.deb" rel="nofollow">OpenNumismat - for Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/open-numismat_1.8.10_all.deb" rel="nofollow">OpenNumismat - за Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - за Arch Linux</a></p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.9/OpenNumismat-1.8.9.dmg" rel="nofollow">OpenNumismat</a> for OS X 10.8 and later (without Statistics)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.dmg" rel="nofollow">OpenNumismat</a> за OS X 10.8 или по-нова (без статистика)</p>
 <h4>Други</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">По-стари версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Изходен код</a></p>
 <h2>История на промените</h2>
-  <h3>What's new in OpenNumismat 1.8.9 (01 February 2021)</h3>
+  <h3>Какво е новото в OpenNumismat 1.8.10 (22 септември 2021)</h3>
   <ul>
-<li>Fixed report preview in x64 Windows version</li>
-    <li>Fixed Debian package</li>
-    <li>Add timeouts for all HTTP requests</li>
-    <li>Fixed storing last crop tool</li>
+<li>Промяна на прокси сървър за свързване към Colnect</li>
+    <li>Нов статус: Дубликат</li>
+    <li>Нови полета: Оценител, Място, Година на монетата, Снимка 5 and Снимка 6</li>
+    <li>Подобрено запазване на .doc отчет</li>
+    <li>Подобрено запазване на текущия списък</li>
+  </ul>
+<h3>Какво е новото в OpenNumismat 1.8.9 (01 февруари 2021)</h3>
+  <ul>
+<li>Коригирана визуализация на отчета в x64 битовата Windows версия</li>
+    <li>Коригирани Debian пакети</li>
+    <li>Добавено време на изчакване на всички HTTP заявки</li>
+    <li>Фиксирано съхранение на последния инструмент за изрязване</li>
   </ul>
 <h3>Какво е новото в OpenNumismat 1.8.8 (05 октомври 2020)</h3>
   <ul>
@@ -165,22 +173,6 @@
     <li>Маркери на състоянието на глобалната карта</li>
     <li>Коригирано импортиране от Numista</li>
     <li>Fix i18n за Linux</li>
-  </ul>
-<h3>Какво е новото в OpenNumismat 1.8.7 (28 август 2020 г.)</h3>
-  <ul>
-<li>Добавено импортиране от Numista</li>
-    <li>Групово добавяне на елементи от Colnect</li>
-    <li>Коригирано импортиране от Colnect</li>
-    <li>Коригирано импортиране от uCoin.net</li>
-    <li>Актуализиран е кода за поддръжка на прясно зависими библиотеки от трети страни</li>
-  </ul>
-<h3>Какво е новото в OpenNumismat 1.8.6 (02 юни 2020)</h3>
-  <ul>
-<li>Коригирано импортиране от Colnect</li>
-    <li>Коригирано GeoChart в статистиката</li>
-    <li>Коригирано създаване на нов запис след редактиране на предишен запис</li>
-    <li>Коригирано стартиране в Linux</li>
-    <li>Коригиран GMaps</li>
   </ul>
 <a href="history.html">По-стари...</a>
 <h2>Снимка на екрана</h2>
