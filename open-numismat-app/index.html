@@ -60,7 +60,15 @@
         <div id="table"></div>
       </div>
     </div>
-    <div data-role="popup" id="error"><p></p></div>
+	<div data-role="popup" id="popupPassword" data-theme="a" class="ui-corner-all">
+		<form>
+			<div style="padding:10px 20px;">
+				<label for="pw" class="ui-hidden-accessible">Password:</label>
+				<input type="password" name="pass" id="pw" value="" placeholder="Password" data-theme="a">
+				<a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b" class="ui-btn ui-corner-all ui-shadow ui-btn-b" role="button">Ok</a>
+			</div>
+		</form>
+	</div>
   </div>
 
   <div data-role="page" id="info-page">
@@ -97,6 +105,7 @@
     </div>
   </div>
 
+  <div data-role="popup" id="error"><p></p></div>
 
 <script src="js/i18next.min.js"></script>
 <script src="js/jquery-i18next.min.js"></script>
