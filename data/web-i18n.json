@@ -32,8 +32,9 @@
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
+          "failed_read_file": "Failed to read file",
           "content": {
             "open": "Open",
             "about": "About",
