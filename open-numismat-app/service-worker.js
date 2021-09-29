@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var cacheName = 'OpenNumismat-Mobile-0.2';
-var filesToCache = [
+const cacheName = 'OpenNumismat-Mobile-0.3';
+const filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
   '/stylesheets/jquery.mobile-1.4.5.min.css',
@@ -23,6 +23,7 @@ var filesToCache = [
   '/javascripts/jquery.mobile-1.4.5.min.js',
   '/open-numismat-app/js/i18next.min.js',
   '/open-numismat-app/js/jquery-i18next.min.js',
+  '/open-numismat-app/js/i18n.js',
   '/open-numismat-app/js/app.js',
   '/open-numismat-app/js/worker.sql-wasm.js',
   '/open-numismat-app/js/sql-wasm.wasm',
