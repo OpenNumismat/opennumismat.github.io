@@ -66,7 +66,15 @@
       </div>
 <div class="inner-content">
 <h1>User manual</h1>
-<h2>1 Introduction</h2>
+<a href="#sec1">1 Introduction</a><br>
+<a href="#sec2">2 General view</a><br>
+<a href="#sec3">3 Entering coins</a><br>
+<a href="#sec4">4 View Coins</a><br>
+<a href="#sec5">5 Managing a collection file</a><br>
+<a href="#sec6">6 Reports</a><br>
+<a href="#sec7">7 References</a><br>
+<a href="#sec8">8 Settings</a><br>
+<h2 id="sec1">1 Introduction</h2>
 <h3>1.1 Description</h3>
 <p>OpenNumismat is a handy and reliable application designed for collectors of coins and coin collectors, to create a numismatic collection.
 <p>With OpenNumismat you will be able to create, organize, and manage your own catalogs of coins with detailed descriptions and photos for each item.
@@ -84,7 +92,7 @@
 <p>OpenNumismat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 <p>You should have received a copy of the GNU General Public License along with OpenNumismat. If not, see <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.
 
-<h2>2 General view</h2>
+<h2 id="sec2">2 General view</h2>
 <p>When you first start the application, the main window opens with a demo collection:
 <p><img src="/images/manual/main1234.png"></p>
 <p>The main window consists of the following main elements:
@@ -97,12 +105,12 @@
 <p>When you click on any coin in the Table of coins, detailed information is displayed: in the Image panel - coin photographs, the Tree unfolds to the element describing the coin, the Info panel displays all the entered coin data.
 <p>You can create a new empty collection or edit a demo by entering new data.
 
-<h2>3 Entering coins</h2>
+<h2 id="sec3">3 Entering coins</h2>
 <h3>3.1 Adding a coin</h3>
 <p>Manage your collection by adding entries about every bought, sold or wished coin.
 <p>To add a new coin, select the <i>Coin->Add</i> menu or press the Ins key. After that, the Edit dialog opens:
 <p><img src="/images/manual/new.png"></p>
-<p>The Edit dialog contains 6 tabs with the following fields:
+<p>The Edit dialog contains 7 tabs with the following fields:
 <ul>
  <li>Coin - Main details:
  <ul>
@@ -129,6 +137,7 @@
    <li>Condition;
    <li>Storage - a description of the physical location of the coin;
    <li>Barcode;
+   <li>Grader;
    <li>Defect - a description of the mint-made error;
    <li>Features.
  </ul>
@@ -152,6 +161,7 @@
    <li>Place;
    <li>Info.
  </ul>
+ <li>Map
  <li>Parameters - Parameters (physical parameters of the coin):
  <ul>
    <li>Material;
@@ -200,13 +210,14 @@
  </ul>
  <li>Images:
  <ul>
-   <li>Photo 1, Photo 2, Photo 3, Photo 4 - 4 additional photos or images.
+   <li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.
  </ul>
  <li>System (not editable, can be displayed only in the Table of coins):
  <ul>
    <li>ID - unique coin number in the collection;
-   <li>Created - date the description was created;
-   <li>Updated - the date of the last editing of the description;
+   <li>Position - default sort order in Table of coins;
+   <li>Created - date the coin was added;
+   <li>Updated - the date of the last editing of the coin;
    <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.
  </ul>
 </ul>
@@ -221,7 +232,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h4>3.1.1 Editing Images</h4>
 <p>The application supports up to 7 images of each coin.
-<p>The following image formats are supported: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
 <br>To insert or change an image, right-click on the field and select one of the drop-down menu items:
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
@@ -255,7 +266,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin->Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.
 <p>Removed coins are removed from the collection at once and can not be repaired - be careful.
 
-<h2>4 View Coins</h2>
+<h2 id="sec4">4 View Coins</h2>
 <h3>4.1 Table of coins</h3>
 <p>The Table of coins is the central element of the application, serves to display coin data according to those selected with the settings.
 <p>The number and location of fields can be set in the <i>List->Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.
@@ -289,7 +300,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>At the bottom of the application window there is a status bar showing the name and path to the collection file, the total number of coins in the collection and in the current Table of coins, the number of coins in the selected group.
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5 Managing a collection file</h2>
+<h2 id="sec5">5 Managing a collection file</h2>
 <p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see 7). You can copy, move, delete and rename it by means of your OS.
 
 <h3>5.1 Creating/Opening</h3>
@@ -322,7 +333,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Reports</h2>
+<h2 id="sec6">6 Reports</h2>
 <h3>6.1 Generating reports</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
 <br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.
@@ -352,7 +363,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>6.6 Summary</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 References</h2>
+<h2 id="sec7">7 References</h2>
 <p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).
 <p>Editing references is available from the Edit dialog:
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -366,7 +377,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the Settings dialog.
 <p>Also you can attach current reference to a collection file. Select <i>Reference->Attach current reference</i> for attaching or <i>Reference->Detach current reference</i> for remove reference from collection and use default from Settings.
 
-<h2>8 Settings</h2>
+<h2 id="sec8">8 Settings</h2>
 <p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File->Settings</i>:
 <p><img src="/images/manual/settings.png"></p>
 
