@@ -35,7 +35,7 @@
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
-          "reverse": "Reverse",
+          "reverse": "Reverse order",
           "content": {
             "open": "Open",
             "statistics": "Statistics",
