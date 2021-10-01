@@ -82,10 +82,23 @@ td.image {
 td.image img {
     vertical-align: middle;
 }
-td.status {
+td.status-text {
     width: 50px;
     text-align: right;
     overflow: hidden;
+}
+td.status-icon {
+    width: 16px;
+    text-align: right;
+    overflow: hidden;
+}
+td.status-full {
+    width: 70px;
+    overflow: hidden;
+}
+
+#info h3 {
+    margin-block-start: 0;
 }
 
 table.info {
@@ -94,12 +107,16 @@ table.info {
 }
 
 table.info td {
-	border:none;
     width: 100%;
+    vertical-align: top;
 }
 
-table.info td.min {
+table.info th {
     width: 1%;
+    vertical-align: top;
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: left;
 }
 
 .coin-info {
@@ -134,4 +151,8 @@ table.info td.min {
 	max-width:100%;
     display: block;
     margin: auto;
+}
+
+img.status-icon {
+    padding-right: 4px;
 }

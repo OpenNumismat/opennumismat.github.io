@@ -58,8 +58,8 @@ var translations = {
           "sold": "Продадена",
           "sale": "Продава се",
           "wish": "Желана",
-		  "missing": "Липсва",
-		  "duplicate": "Дубликат",
+          "missing": "Липсва",
+          "duplicate": "Дубликат",
           "region": "Регион",
           "ruler": "Владетел",
           "denomination": "Деноминация",
@@ -81,8 +81,12 @@ var translations = {
           "old_version": "Файлът е с по-стара версия. Моля, актуализирайте го с десктоп версията на OpenNumismat",
           "wrong_password": "Грешна парола",
           "failed_read_file": "Неуспешно прочитане на файла",
+          "reverse": "Обратна страна",
           "content": {
             "open": "Отваряне",
+            "statistics": "Статистика",
+            "settings": "Настройки",
+            "language": "Език:",
             "about": "Относно",
             "select_file": "Заредете файл с колекция от OpenNumismat",
             "security_note": "Вашият файл няма да бъде качен в интернет. Можете да деактивирате интернет връзката."
@@ -104,6 +108,8 @@ var translations = {
           "sold": "Venudes",
           "sale": "Venda",
           "wish": "Desitjos",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Denominació",
@@ -122,16 +128,20 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Creu",
           "content": {
             "open": "Obre",
+            "statistics": "Estadístiques",
+            "settings": "Configuració",
+            "language": "Language:",
             "about": "Quant a",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
-      }
+        }
     },
     cs: {
       translation: {
@@ -148,6 +158,8 @@ var translations = {
           "sold": "Prodáno",
           "sale": "Prodej",
           "wish": "Přání",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Hodnota",
@@ -166,16 +178,20 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Rub",
           "content": {
             "open": "Otevřít",
+            "statistics": "Statistics",
+            "settings": "Nastavení",
+            "language": "Language:",
             "about": "About",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
-      }
+        }
     },
     de: {
       translation: {
@@ -192,8 +208,8 @@ var translations = {
           "sold": "Verkauft",
           "sale": "Verkauf",
           "wish": "Gesucht",
-		  "missing": "Fehlt",
-		  "duplicate": "Duplicate",
+          "missing": "Fehlt",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Herrscher",
           "denomination": "Nennwert",
@@ -215,8 +231,12 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Rückseite",
           "content": {
             "open": "Öffnen",
+            "statistics": "Statistiken",
+            "settings": "Einstellungen",
+            "language": "Language:",
             "about": "Über",
             "select_file": "Lade eine OpenNumismat Sammlung-Datei",
             "security_note": "Ihre Datei wird nicht auf einen Server geladen. Sie können die Internetverbindung deaktivieren."
@@ -238,8 +258,8 @@ var translations = {
           "sold": "Πωλείται",
           "sale": "Πώληση",
           "wish": "Επιθυμία",
-		  "missing": "Λείπει",
-		  "duplicate": "Duplicate",
+          "missing": "Λείπει",
+          "duplicate": "Duplicate",
           "region": "Περιοχή",
           "ruler": "Χάρακας",
           "denomination": "Ονομαστική αξία",
@@ -261,8 +281,12 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Οπίσθια όψη",
           "content": {
             "open": "Άνοιγμα",
+            "statistics": "Στατιστικά",
+            "settings": "Ρυθμίσεις",
+            "language": "Language:",
             "about": "Περί",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
@@ -284,8 +308,8 @@ var translations = {
           "sold": "Vendida",
           "sale": "En venta",
           "wish": "Deseada",
-		  "missing": "Desaparecida",
-		  "duplicate": "Duplicado",
+          "missing": "Desaparecida",
+          "duplicate": "Duplicado",
           "region": "Región",
           "ruler": "Regente",
           "denomination": "Denominación",
@@ -307,8 +331,12 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Reverso",
           "content": {
             "open": "Abrir",
+            "statistics": "Estadísticas",
+            "settings": "Configuración",
+            "language": "Language:",
             "about": "Acerca de",
             "select_file": "Cargue un archivo de colección OpenNumismat:",
             "security_note": "Su archivo no será subido a Internet. Puede deshabilitar la conexión a Internet."
@@ -330,8 +358,8 @@ var translations = {
           "sold": "فروخته شده",
           "sale": "فروش",
           "wish": "Wish",
-		  "missing": "گمشده",
-		  "duplicate": "Duplicate",
+          "missing": "گمشده",
+          "duplicate": "Duplicate",
           "region": "منطقه",
           "ruler": "فرمانروا",
           "denomination": "Denomination",
@@ -353,8 +381,12 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "پشت سکه",
           "content": {
             "open": "باز کردن",
+            "statistics": "آمار",
+            "settings": "تنظیمات",
+            "language": "Language:",
             "about": "درباره",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
@@ -376,6 +408,8 @@ var translations = {
           "sold": "Vendu",
           "sale": "Vente",
           "wish": "Envie",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Dénomination",
@@ -394,16 +428,20 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Revers",
           "content": {
             "open": "Ouvrir",
+            "statistics": "Statistiques",
+            "settings": "Paramètres",
+            "language": "Language:",
             "about": "À propos",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
-      }
+        }
     },
     hu: {
       translation: {
@@ -420,6 +458,8 @@ var translations = {
           "sold": "Eladott",
           "sale": "Eladó",
           "wish": "Megszerzendő",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Denomination",
@@ -438,16 +478,20 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Hátlap",
           "content": {
             "open": "Megnyitás",
+            "statistics": "Statistics",
+            "settings": "Beállítások",
+            "language": "Language:",
             "about": "About",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
-      }
+        }
     },
     it: {
       translation: {
@@ -464,8 +508,8 @@ var translations = {
           "sold": "Venduta",
           "sale": "Vendita",
           "wish": "Desiderata",
-		  "missing": "Mancata",
-		  "duplicate": "Duplicate",
+          "missing": "Mancata",
+          "duplicate": "Duplicate",
           "region": "Regione",
           "ruler": "Governatore",
           "denomination": "Denominazione",
@@ -487,8 +531,12 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Rovescio",
           "content": {
             "open": "Apri",
+            "statistics": "Statistiche",
+            "settings": "Impostazioni",
+            "language": "Language:",
             "about": "A riguardo",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
@@ -510,8 +558,10 @@ var translations = {
           "sold": "Verkocht",
           "sale": "Verkoop",
           "wish": "Wens",
-          "region": "Region",
-          "ruler": "Ruler",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
+          "region": "Regio",
+          "ruler": "Heerser",
           "denomination": "Benaming",
           "subject": "Onderwerp",
           "date_issue": "datum van uitgifte",
@@ -519,25 +569,29 @@ var translations = {
           "mintage": "Gemunt",
           "material": "Materiaal",
           "mint": "Munthuis",
-          "sort_by": "Sort by",
-          "None": "None",
+          "sort_by": "Sorteer op",
+          "None": "Geen",
           "Title": "Titel",
-          "bidding": "Bidding",
-          "build_table": "Building table",
-          "exec_sql": "Executing SQL",
-          "load_db": "Loading database from file",
+          "bidding": "Bod",
+          "build_table": "Tabel opbouwen",
+          "exec_sql": "SQL uitvoeren",
+          "load_db": "Database uit bestand laden",
           "BC": "BC",
-          "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "density": "Dichtheid van het scherm",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Achterzijde",
           "content": {
             "open": "Open",
+            "statistics": "Statistieken",
+            "settings": "Instellingen",
+            "language": "Language:",
             "about": "Over",
-            "select_file": "Load an OpenNumismat collection file:",
-            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+            "select_file": "Laad een OpenNumismat collectie bestand:",
+            "security_note": "Uw bestand zal niet naar het internet geüpload worden. U kunt de internet verbinding uit zetten."
           }
-      }
+        }
     },
     pl: {
       translation: {
@@ -554,6 +608,8 @@ var translations = {
           "sold": "Sprzedane",
           "sale": "Sprzedaż",
           "wish": "Chcę",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Denominacja",
@@ -572,16 +628,20 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Rewers",
           "content": {
             "open": "Otwórz",
+            "statistics": "Statystyki",
+            "settings": "Ustawienia",
+            "language": "Language:",
             "about": "O nas",
             "select_file": "Load an OpenNumismat collection file:",
             "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
           }
-      }
+        }
     },
     pt: {
       translation: {
@@ -598,8 +658,8 @@ var translations = {
           "sold": "Vendida",
           "sale": "Vendável",
           "wish": "Desejada",
-		  "missing": "Em falta",
-		  "duplicate": "Duplicar",
+          "missing": "Em falta",
+          "duplicate": "Duplicar",
           "region": "Região",
           "ruler": "Régua",
           "denomination": "Denominação",
@@ -621,8 +681,12 @@ var translations = {
           "old_version": "Versão do ficheiro antiga. Por favor, actualize a versão do OpenNumismat no computador.",
           "wrong_password": "Senha errada",
           "failed_read_file": "Falha ao ler o ficheiro",
+          "reverse": "Reverso",
           "content": {
             "open": "Abrir",
+            "statistics": "Estatísticas",
+            "settings": "Definições",
+            "language": "Idioma:",
             "about": "Sobre",
             "select_file": "Carregar uma colecção do OpenNumismat:",
             "security_note": "O seu ficheiro não será enviado para a Internet. Pode desactivar a ligação."
@@ -644,8 +708,8 @@ var translations = {
           "sold": "Продана",
           "sale": "На продажу",
           "wish": "Нужна",
-		  "missing": "Утеряна",
-		  "duplicate": "Дубликат",
+          "missing": "Утеряна",
+          "duplicate": "Дубликат",
           "region": "Регион",
           "ruler": "Правитель",
           "denomination": "Номинал",
@@ -667,11 +731,69 @@ var translations = {
           "old_version": "Файл старой версии. Обновите его с помощью настольной версии OpenNumismat",
           "wrong_password": "Неверный пароль",
           "failed_read_file": "Не удалось прочитать файл",
+          "reverse": "Обратный порядок",
           "content": {
             "open": "Открыть",
+            "statistics": "Статистика",
+            "settings": "Настройки",
+            "language": "Язык:",
             "about": "О программе",
             "select_file": "Загрузите файл коллекции OpenNumismat:",
-            "security_note": "Ваш файл не будет загружен в Интернет. Вы можете отключить подключение к Интернету."
+            "security_note": "Ваш файл не будет загружен в Интернет. Вы можете отключить подключение к Интернету.",
+            "show_status_as": "Показывать статус как:",
+            "text": "Текст",
+            "icon": "Иконка",
+            "icon_text": "Иконка + текст"
+          }
+        }
+    },
+    tr: {
+      translation: {
+          "status": "Durum",
+          "country": "Ülke",
+          "series": "Seri",
+          "type": "Tip",
+          "period": "Dönem",
+          "All": "Tümü",
+          "owned": "Sahip Olunan",
+          "demo": "Demo",
+          "pass": "Pas",
+          "ordered": "Sipariş Edilmiş",
+          "sold": "Satılmış",
+          "sale": "Satılık",
+          "wish": "İstenen",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
+          "region": "Bölge",
+          "ruler": "Hükümdar",
+          "denomination": "Nominal Değer",
+          "subject": "Konu",
+          "date_issue": "Basım Yılı",
+          "year": "Yıl",
+          "mintage": "Baskı Adedi",
+          "material": "Metal",
+          "mint": "Darphane",
+          "sort_by": "Göre Sırala",
+          "None": "Hiçbiri",
+          "Title": "Başlık",
+          "bidding": "Teklif Verilen",
+          "build_table": "Tablo oluşturuluyor",
+          "exec_sql": "SQL yürütülüyor",
+          "load_db": "Dosyadan veritabanı yükleniyor",
+          "BC": "MÖ",
+          "density": "Ekran Yoğunluğu:",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
+          "failed_read_file": "Failed to read file",
+          "reverse": "Arka Yüz",
+          "content": {
+            "open": "Aç",
+            "statistics": "İstatistikler",
+            "settings": "Ayarlar",
+            "language": "Language:",
+            "about": "Hakkında",
+            "select_file": "OpenNumismat koleksiyon dosyası yükle:",
+            "security_note": "Dosyanız internete yüklenmeyecek. İnternet bağlantısını devre dışı bırakabilirsiniz."
           }
         }
     },
@@ -690,8 +812,10 @@ var translations = {
           "sold": "Продана",
           "sale": "Продаж",
           "wish": "Потрібна",
-          "region": "Region",
-          "ruler": "Ruler",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
+          "region": "Регіон",
+          "ruler": "Лінійка",
           "denomination": "Номінал",
           "subject": "Тема",
           "date_issue": "Дата випуску",
@@ -699,24 +823,28 @@ var translations = {
           "mintage": "Тираж",
           "material": "Матеріал",
           "mint": "Літери",
-          "sort_by": "Sort by",
-          "None": "None",
+          "sort_by": "Сортувати за",
+          "None": "Немає",
           "Title": "Назва",
-          "bidding": "Bidding",
-          "build_table": "Building table",
-          "exec_sql": "Executing SQL",
-          "load_db": "Loading database from file",
+          "bidding": "Торги",
+          "build_table": "Створення таблиці",
+          "exec_sql": "Виконання SQL",
+          "load_db": "Завантаження бази даних з файлу",
           "BC": "BC",
-          "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "density": "Щільність дисплея:",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Реверс",
           "content": {
             "open": "Відкрити",
+            "statistics": "Статистика",
+            "settings": "Налаштування",
+            "language": "Language:",
             "about": "Про программу",
-            "select_file": "Load an OpenNumismat collection file:",
-            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+            "select_file": "Завантажити файл колекції OpenNumismat:",
+            "security_note": "Ваш файл не буде завантажено в Інтернет. Ви можете вимкнути підключення до Інтернету."
           }
-      }
+        }
     },
   };

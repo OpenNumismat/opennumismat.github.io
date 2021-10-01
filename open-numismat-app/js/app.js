@@ -9,13 +9,13 @@ function detectLang() {
         return localStorage.lang;
     }
     else {
-        var langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "fa");
-        var lang = navigator.language || navigator.userLanguage;;
+        let langcodes = ["de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "fa", "tr"];
+        let lang = navigator.language || navigator.userLanguage;;
 
-        for (i = 0; i < langcodes.length; i++) {
-            if (lang.substr(0,2) == langcodes[i]) {
-                localStorage.lang = langcodes[i];
-                return langcodes[i];
+        for (const code of langcodes) {
+            if (lang.substr(0,2) == code) {
+                localStorage.lang = code;
+                return code;
             }
         }
     }
@@ -42,6 +42,7 @@ var dbFileElm = document.getElementById('dbfile');
 var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins LEFT OUTER JOIN images on images.id = coins.image";
 var mainSqlFilter = "";
 var mainSqlSort = "";
+const defaultSqlSort = " ORDER BY sort_id";
 
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql-wasm.js");
@@ -124,11 +125,26 @@ function filterChanged() {
 }
 
 function sortChanged() {
+    $("#reverse_sort").prop('checked', false).checkboxradio('refresh');
+
     var field = $('select#sort').find('option:selected').val();
     if (field !== 'none')
         mainSqlSort = " ORDER BY " + field;
     else
-        mainSqlSort = "";
+        mainSqlSort = defaultSqlSort;
+    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
+}
+
+function reverseChanged() {
+    let order = "";
+    if ($('#reverse_sort').is(':checked'))
+        order = " DESC";
+
+    var field = $('select#sort').find('option:selected').val();
+    if (field !== 'none')
+        mainSqlSort = " ORDER BY " + field + order;
+    else
+        mainSqlSort = defaultSqlSort + order;
     applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
 }
 
@@ -166,7 +182,7 @@ function checkVersion() {
 
 		status();
 			
-		if (version < 7)
+		if (version < 6)
 			error(i18next.t('old_version'));
 		else
 			checkPassword();
@@ -238,10 +254,12 @@ function execute() {
             html += '<option value="type">' + i18next.t('type') + '</option>';
         if (results[5].values.length > 1)
             html += '<option value="period">' + i18next.t('period') + '</option>';
-        html += "</select></td></tr></table>";
+        html += '</select></td></tr></table><div><label><input data-mini="true" type="checkbox" id="reverse_sort">' + i18next.t('reverse') + '</label></div>';
         $('div#sort').append(html);
         $('select.sort').change(sortChanged);
         $('select.sort').selectmenu();
+        $('#reverse_sort').change(reverseChanged);
+        $('#reverse_sort').checkboxradio();
 
         $('div#filters').empty();
         html = "<table>";
@@ -311,7 +329,7 @@ var tableCreate = function () {
         if (v[9])
             desc.push(v[9]);
         return '<tr class="row" data-id="' + v[0] + '"><td class="image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[1]) + '"></td>\
-            <td class="data"><div class="title">' + v[2] + '&nbsp;</div><div class="description">' + desc.join(', ') + '&nbsp;</div></td><td class="status">' + i18next.t(v[3]) + '</td></tr>';
+            <td class="data"><div class="title">' + v[2] + '&nbsp;</div><div class="description">' + desc.join(', ') + '&nbsp;</div></td><td class="status-' + getStatusView() + '">' + htmlStatusView(v[3]) + '</td></tr>';
     });
     var html = '<table class="table">' + rows.join('') + '</table>';
     return html;
@@ -357,41 +375,41 @@ var infoCreate = function () {
         images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[2]) + '"></div>';
     var fields = '<table class="info">';
     if (v[3])
-        fields += '<tr><td class="min">' + i18next.t('status') + ':</td><td><b>' + i18next.t(v[3]) + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('status') + ':</th><td><b>' + htmlStatusViewFull(v[3]) + '</b></td></tr>';
     if (v[4])
-        fields += '<tr><td class="min">' + i18next.t('region') + ':</td><td><b>' + v[4] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('region') + ':</th><td><b>' + v[4] + '</b></td></tr>';
     if (v[5])
-        fields += '<tr><td class="min">' + i18next.t('country') + ':</td><td><b>' + v[5] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('country') + ':</th><td><b>' + v[5] + '</b></td></tr>';
     if (v[6])
-        fields += '<tr><td class="min">' + i18next.t('period') + ':</td><td><b>' + v[6] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('period') + ':</th><td><b>' + v[6] + '</b></td></tr>';
     if (v[7])
-        fields += '<tr><td class="min">' + i18next.t('ruler') + ':</td><td><b>' + v[7] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('ruler') + ':</th><td><b>' + v[7] + '</b></td></tr>';
     if (v[8] || v[9])
-        fields += '<tr><td class="min">' + i18next.t('denomination') + ':</td><td><b>' + v[8] + ' ' + v[9] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('denomination') + ':</th><td><b>' + v[8] + ' ' + v[9] + '</b></td></tr>';
     if (v[10])
-        fields += '<tr><td class="min">' + i18next.t('type') + ':</td><td><b>' + v[10] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('type') + ':</th><td><b>' + v[10] + '</b></td></tr>';
     if (v[11])
-        fields += '<tr><td class="min">' + i18next.t('series') + ':</td><td><b>' + v[11] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('series') + ':</th><td><b>' + v[11] + '</b></td></tr>';
     if (v[12])
-        fields += '<tr><td class="min">' + i18next.t('subject') + ':</td><td><b>' + v[12] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('subject') + ':</th><td><b>' + v[12] + '</b></td></tr>';
     if (v[13])
-        fields += '<tr><td class="min">' + i18next.t('date_issue') + ':</td><td><b>' + v[13] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('date_issue') + ':</th><td><b>' + v[13] + '</b></td></tr>';
     else if (v[14]) {
         if (v[14] < 0)
-            fields += '<tr><td class="min">' + i18next.t('year') + ':</td><td><b>' + (-v[14]) + '&nbsp;' + i18next.t('BC') + '</b></td></tr>';
+            fields += '<tr><th>' + i18next.t('year') + ':</th><td><b>' + (-v[14]) + '&nbsp;' + i18next.t('BC') + '</b></td></tr>';
         else
-            fields += '<tr><td class="min">' + i18next.t('year') + ':</td><td><b>' + v[14] + '</b></td></tr>';
+            fields += '<tr><th>' + i18next.t('year') + ':</th><td><b>' + v[14] + '</b></td></tr>';
     }
     if (v[15])
-        fields += '<tr><td class="min">' + i18next.t('mintage') + ':</td><td><b>' + v[15] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('mintage') + ':</th><td><b>' + v[15] + '</b></td></tr>';
     if (v[16])
-        fields += '<tr><td class="min">' + i18next.t('material') + ':</td><td><b>' + v[16] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('material') + ':</th><td><b>' + v[16] + '</b></td></tr>';
     if (v[17] && v[18])
-        fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[17] + ' (' + v[18] + ')</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[17] + ' (' + v[18] + ')</b></td></tr>';
     else if (v[17])
-        fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[17] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[17] + '</b></td></tr>';
     else if (v[18])
-        fields += '<tr><td class="min">' + i18next.t('mint') + ':</td><td><b>' + v[18] + '</b></td></tr>';
+        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[18] + '</b></td></tr>';
     fields += '</table>';
 
     var info = '';
@@ -493,7 +511,7 @@ dbFileElm.onchange = function() {
             }
         };
         r.onerror = function() {
-            error(i18next.t('failed_read_file') + ": " + file.name + "\n" + r.error);
+            error(i18next.t('failed_read_file') + " " + file.name + "<br>" + r.error);
         };
         status(i18next.t('load_db'));
         r.readAsArrayBuffer(file);
@@ -515,3 +533,56 @@ function showDensity() {
 }
 
 showDensity();
+
+function langChanged() {
+    let lang = $('select#lang').find('option:selected').val();
+    localStorage.lang = lang;
+
+    i18next.changeLanguage(lang);
+    $("body").localize();
+}
+
+$('select.lang').val(detectLang());
+$('select.lang').change(langChanged);
+$('select.lang').selectmenu();
+
+function htmlStatusIcon(status) {
+    return "<img src='../img/" + status + ".png' class='status-icon' title='" + i18next.t(status) + "'>";
+}
+
+function htmlStatusViewFull(status) {
+    return htmlStatusIcon(status) + i18next.t(status);
+}
+
+function htmlStatusView(status) {
+    const status_view = getStatusView();
+    if (status_view == 'full')
+        return htmlStatusViewFull(status);
+    else if (status_view == 'icon')
+        return htmlStatusIcon(status);
+    return i18next.t(status);
+}
+
+function getStatusView() {
+    if (localStorage.status_view !== undefined) {
+        return localStorage.status_view;
+    }
+    
+    return 'text';
+}
+
+function changedStatusView() {
+    let status_view = $('#status_view :checked').val();
+    localStorage.status_view = status_view;
+}
+
+let status_view = getStatusView();
+if (status_view == 'full')
+    $("#status_view_full").attr("checked", true);
+else if (status_view == 'icon')
+    $("#status_view_icon").attr("checked", true);
+else
+    $("#status_view_text").attr("checked", true);
+
+$('#status_view').checkboxradio();
+$('#status_view').change(changedStatusView);

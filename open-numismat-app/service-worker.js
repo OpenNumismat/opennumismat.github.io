@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const cacheName = 'OpenNumismat-Mobile-0.3';
+const cacheName = 'OpenNumismat-Mobile-0.4';
 const filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
@@ -31,7 +31,17 @@ const filesToCache = [
   '/open-numismat-app/img/icon-144.png',
   '/open-numismat-app/img/icon-152.png',
   '/open-numismat-app/img/icon-192.png',
-  '/open-numismat-app/img/icon-512.png'
+  '/open-numismat-app/img/icon-512.png',
+  '/open-numismat-app/img/demo.png',
+  '/open-numismat-app/img/pass.png',
+  '/open-numismat-app/img/owned.png',
+  '/open-numismat-app/img/ordered.png',
+  '/open-numismat-app/img/bidding.png',
+  '/open-numismat-app/img/sold.png',
+  '/open-numismat-app/img/sale.png',
+  '/open-numismat-app/img/wish.png',
+  '/open-numismat-app/img/missing.png',
+  '/open-numismat-app/img/duplicate.png'
 ];
 
 self.addEventListener('install', function(e) {
