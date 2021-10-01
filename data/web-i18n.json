@@ -43,6 +43,10 @@
             "language": "Language:",
             "about": "About",
             "select_file": "Load an OpenNumismat collection file:",
-            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection.",
+            "show_status_as": "Show status as:",
+            "text": "Text",
+            "icon": "Icon",
+            "icon_text": "Icon + text"
           }
 }
