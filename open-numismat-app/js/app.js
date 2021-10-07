@@ -39,10 +39,11 @@ var infoElm = document.getElementById('info');
 var imagesElm = document.getElementById('images');
 var dbFileElm = document.getElementById('dbfile');
 
-var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series FROM coins LEFT OUTER JOIN images on images.id = coins.image";
+var mainSqlSelect = "SELECT coins.id, images.image, title, status, subjectshort, value, unit, year, mintmark, series, country FROM coins LEFT OUTER JOIN images on images.id = coins.image";
 var mainSqlFilter = "";
 var mainSqlSort = "";
-const defaultSqlSort = " ORDER BY sort_id";
+var mainSqlSearch = "";
+const defaultSqlSort = "ORDER BY sort_id";
 
 // Start the worker in which sql.js will run
 var worker = new Worker("js/worker.sql-wasm.js");
@@ -93,35 +94,42 @@ function filterChanged() {
     }
     if ($('select#country').length) {
         var country = $('select#country').find('option:selected').val();
-        if (country !== 'all')
+        if (series == '')
+            filters.push("ifnull(coins.country,'')=''");
+        else if (country !== 'all')
             filters.push("coins.country='" + country.replace("'", "''") + "'");
     }
     if ($('select#series').length) {
         var series = $('select#series').find('option:selected').val();
-        if (series !== 'all')
+        if (series == '')
+            filters.push("ifnull(coins.series,'')=''");
+        else if (series !== 'all')
             filters.push("coins.series='" + series.replace("'", "''") + "'");
     }
     if ($('select#type').length) {
         var type = $('select#type').find('option:selected').val();
-        if (type !== 'all')
+        if (series == '')
+            filters.push("ifnull(coins.type,'')=''");
+        else if (type !== 'all')
             filters.push("coins.type='" + type.replace("'", "''") + "'");
     }
     if ($('select#period').length) {
         var period = $('select#period').find('option:selected').val();
-        if (period !== 'all')
+        if (series == '')
+            filters.push("ifnull(coins.period,'')=''");
+        else if (period !== 'all')
             filters.push("coins.period='" + period.replace("'", "''") + "'");
     }
     if ($('select#mint').length) {
         var mint = $('select#mint').find('option:selected').val();
-        if (mint !== 'all')
+        if (series == '')
+            filters.push("ifnull(coins.mint,'')=''");
+        else if (mint !== 'all')
             filters.push("coins.mint='" + mint.replace("'", "''") + "'");
     }
 
-    if (filters.length > 0)
-        mainSqlFilter = " WHERE " + filters.join(" AND ");
-    else
-        mainSqlFilter = "";
-    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
+    mainSqlFilter = filters.join(" AND ");
+    applyFilter(mainSqlFilter, mainSqlSearch, mainSqlSort);
 }
 
 function sortChanged() {
@@ -129,10 +137,10 @@ function sortChanged() {
 
     var field = $('select#sort').find('option:selected').val();
     if (field !== 'none')
-        mainSqlSort = " ORDER BY " + field;
+        mainSqlSort = "ORDER BY " + field;
     else
         mainSqlSort = defaultSqlSort;
-    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
+    applyFilter(mainSqlFilter, mainSqlSearch, mainSqlSort);
 }
 
 function reverseChanged() {
@@ -142,10 +150,21 @@ function reverseChanged() {
 
     var field = $('select#sort').find('option:selected').val();
     if (field !== 'none')
-        mainSqlSort = " ORDER BY " + field + order;
+        mainSqlSort = "ORDER BY " + field + order;
     else
         mainSqlSort = defaultSqlSort + order;
-    applyFilter(mainSqlSelect + mainSqlFilter + mainSqlSort + ";");
+    applyFilter(mainSqlFilter, mainSqlSearch, mainSqlSort);
+}
+
+function searchChanged() {
+    var search = $('#search-basic').val().trim();
+    console.log(search)
+    if (search == '')
+        mainSqlSearch = "";
+    else
+        mainSqlSearch = "title LIKE '%" + search + "%'";
+    
+    applyFilter(mainSqlFilter, mainSqlSearch, mainSqlSort);
 }
 
 function updateTable() {
@@ -156,7 +175,18 @@ function updateTable() {
 }
 
 // Run a command in the database
-function applyFilter(commands) {
+function applyFilter(filter, search, sort) {
+    command = mainSqlSelect;
+    if (filter != "")
+        command += " WHERE " + filter;
+    if (search != "")
+        if (filter != "")
+            command += " AND " + search;
+        else
+            command += " WHERE " + search;
+    command += " " + sort + ";";
+    
+    console.log(command)
 	worker.onmessage = function(event) {
 		var results = event.data.results;
 
@@ -169,7 +199,7 @@ function applyFilter(commands) {
         status();
 	}
     status(i18next.t('exec_sql'));
-	worker.postMessage({action:'exec', sql:commands});
+	worker.postMessage({action:'exec', sql:command});
     status(i18next.t('build_table'));
 }
 
@@ -228,13 +258,13 @@ function checkPassword() {
 }
 
 function execute() {
-	sql = mainSqlSelect + ";\
+	sql = mainSqlSelect + " " + mainSqlSort + ";\
 				SELECT DISTINCT status FROM coins;\
-				SELECT DISTINCT country FROM coins;\
-				SELECT DISTINCT series FROM coins;\
-				SELECT DISTINCT type FROM coins;\
-				SELECT DISTINCT period FROM coins;\
-				SELECT DISTINCT mint FROM coins;";
+				SELECT DISTINCT IFNULL(country,'') FROM coins;\
+				SELECT DISTINCT IFNULL(series,'') FROM coins;\
+				SELECT DISTINCT IFNULL(type,'') FROM coins;\
+				SELECT DISTINCT IFNULL(period,'') FROM coins;\
+				SELECT DISTINCT IFNULL(mint,'') FROM coins;";
 
 	worker.onmessage = function(event) {
 		var results = event.data.results;
@@ -264,15 +294,25 @@ function execute() {
         $('div#filters').empty();
         html = "<table>";
         html += i18nFilterCreate('status', results[1].values);
+        results[2].values.sort();
         html += filterCreate('country', results[2].values);
+        results[3].values.sort();
         html += filterCreate('series', results[3].values);
         html += filterCreate('type', results[4].values);
+        results[5].values.sort();
         html += filterCreate('period', results[5].values);
+        results[6].values.sort();
         html += filterCreate('mint', results[6].values);
         html += "</table>";
         $('div#filters').append(html);
         $('select.filter').change(filterChanged);
         $('select.filter').selectmenu();
+
+        $('div#search').empty();
+        html = "<input type='search' name='search' id='search-basic' data-mini='true' value='' />";
+        $('div#search').append(html);
+        $('#search-basic').change(searchChanged);
+        $('#search-basic').textinput();
 
         $('div#table').empty();
         if (results.length > 0) {
@@ -310,14 +350,15 @@ var i18nFilterCreate = function () {
   }
 }();
 
-var tableCreate = function () {
-  return function (columns, values){
+var tableCreate = function (columns, values) {
     var rows = values.map(function(v) {
         var desc = [];
         if (v[4])
             desc.push(v[4]);
         if (v[5] || v[6])
             desc.push(v[5] + ' ' + v[6]);
+        if (v[10])
+            desc.push(v[10]);
         if (v[7]) {
             if (v[7] < 0)
                 desc.push((-v[7]) + '&nbsp;' + i18next.t("BC"));
@@ -333,8 +374,7 @@ var tableCreate = function () {
     });
     var html = '<table class="table">' + rows.join('') + '</table>';
     return html;
-  }
-}();
+}
 
 function showInfo(id) {
 	worker.onmessage = function(event) {
@@ -498,7 +538,9 @@ dbFileElm.onchange = function() {
         $('div#filters').empty();
         mainSqlFilter = "";
         $('div#sort').empty();
-        mainSqlSort = "";
+        mainSqlSort = defaultSqlSort;
+        $('div#search').empty();
+        mainSqlSearch = "";
         r.onload = function(e) {
             worker.onmessage = function () {
 				checkVersion();

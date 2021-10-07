@@ -2,7 +2,7 @@
     padding: 0;
 }
 
-div#sort, #filters {
+div#sort, #filters, #search {
     padding-top: 1em;
     padding-right: 1em;
     padding-bottom: 0;

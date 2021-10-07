@@ -14,6 +14,8 @@ var translations = {
           "sold": "Sold",
           "sale": "Sale",
           "wish": "Wish",
+          "missing": "Missing",
+          "duplicate": "Duplicate",
           "region": "Region",
           "ruler": "Ruler",
           "denomination": "Denomination",
@@ -32,14 +34,22 @@ var translations = {
           "load_db": "Loading database from file",
           "BC": "BC",
           "density": "Density of the display: ",
-		  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
-		  "wrong_password": "Wrong password",
+          "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+          "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
+          "reverse": "Reverse order",
           "content": {
             "open": "Open",
+            "statistics": "Statistics",
+            "settings": "Settings",
+            "language": "Language:",
             "about": "About",
             "select_file": "Load an OpenNumismat collection file:",
-            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection."
+            "security_note": "Your file not will be uploaded to the internet. You can disable internet connection.",
+            "show_status_as": "Show status as:",
+            "text": "Text",
+            "icon": "Icon",
+            "full": "Icon + text"
           }
         }
     },
@@ -81,7 +91,7 @@ var translations = {
           "old_version": "Файлът е с по-стара версия. Моля, актуализирайте го с десктоп версията на OpenNumismat",
           "wrong_password": "Грешна парола",
           "failed_read_file": "Неуспешно прочитане на файла",
-          "reverse": "Обратна страна",
+          "reverse": "Обратен ред",
           "content": {
             "open": "Отваряне",
             "statistics": "Статистика",
@@ -89,7 +99,11 @@ var translations = {
             "language": "Език:",
             "about": "Относно",
             "select_file": "Заредете файл с колекция от OpenNumismat",
-            "security_note": "Вашият файл няма да бъде качен в интернет. Можете да деактивирате интернет връзката."
+            "security_note": "Вашият файл няма да бъде качен в интернет. Можете да деактивирате интернет връзката.",
+            "show_status_as": "Показване на състоянието като:",
+            "text": "Текст",
+            "icon": "Икона",
+            "full": "Икона и текст"
           }
         }
     },
@@ -331,15 +345,19 @@ var translations = {
           "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
           "wrong_password": "Wrong password",
           "failed_read_file": "Failed to read file",
-          "reverse": "Reverso",
+          "reverse": "Reverse order",
           "content": {
             "open": "Abrir",
             "statistics": "Estadísticas",
             "settings": "Configuración",
-            "language": "Language:",
+            "language": "Idioma:",
             "about": "Acerca de",
             "select_file": "Cargue un archivo de colección OpenNumismat:",
-            "security_note": "Su archivo no será subido a Internet. Puede deshabilitar la conexión a Internet."
+            "security_note": "Su archivo no será subido a Internet. Puede deshabilitar la conexión a Internet.",
+            "show_status_as": "Show status as:",
+            "text": "Text",
+            "icon": "Icon",
+            "full": "Icon + text"
           }
         }
     },
@@ -681,7 +699,7 @@ var translations = {
           "old_version": "Versão do ficheiro antiga. Por favor, actualize a versão do OpenNumismat no computador.",
           "wrong_password": "Senha errada",
           "failed_read_file": "Falha ao ler o ficheiro",
-          "reverse": "Reverso",
+          "reverse": "Ordem inversa",
           "content": {
             "open": "Abrir",
             "statistics": "Estatísticas",
@@ -689,7 +707,11 @@ var translations = {
             "language": "Idioma:",
             "about": "Sobre",
             "select_file": "Carregar uma colecção do OpenNumismat:",
-            "security_note": "O seu ficheiro não será enviado para a Internet. Pode desactivar a ligação."
+            "security_note": "O seu ficheiro não será enviado para a Internet. Pode desactivar a ligação.",
+            "show_status_as": "Mostrar estado como",
+            "text": "Texto",
+            "icon": "Ícone",
+            "full": "Ícone e texto"
           }
         }
     },
@@ -743,7 +765,7 @@ var translations = {
             "show_status_as": "Показывать статус как:",
             "text": "Текст",
             "icon": "Иконка",
-            "icon_text": "Иконка + текст"
+            "full": "Иконка + текст"
           }
         }
     },

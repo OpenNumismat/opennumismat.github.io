@@ -47,6 +47,6 @@
             "show_status_as": "Show status as:",
             "text": "Text",
             "icon": "Icon",
-            "icon_text": "Icon + text"
+            "full": "Icon + text"
           }
 }
