@@ -58,7 +58,7 @@
 </div>
 <div class="inner-content">
 <h1>Användar manual</h1>
-<h2>1 Introduktion</h2>
+<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1 Introduktion</h2>
 <h3>1.1 Beskrivning</h3>
 <p>OpenNumismat är en praktisk och pålitlig applikation som syftar till myntsamlare, numismatiker eller amatörer som vill skapa en numismatiksamling.</p>
 <p>Med OpenNumismat kan du organisera och hantera din myntinsamling: skapa en avancerad katalog över dina mynt, önskemål och säljlistor,och se statistik för din samling.</p>
@@ -73,7 +73,7 @@
 <p>OpenNumismat är fri programvara: Du kan omfördela den och / eller ändra den enligt villkoren i GNU General Public License som publicerad av Free Software Foundation, antingen version 3 i Licensen eller (eventuellt) senare version.</p>
 <p>OpenNumismat distribueras i hopp om att det kommer att vara användbart, men UTAN NÅGOT GARANTI. utan även den underförstådda garantin för SÄLJBARHET eller EGNETHET FÖR ETT SÄRSKILT SYFTE. Se GNU General Public License för mer information.</p>
 <p>Du borde ha fått en kopia av GNU General Public License tillsammans med OpenNumismat. Om inte, se <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 Allmänna synpunkter</h2>
+<h2 id="sec2">2 Allmänna synpunkter</h2>
 <p>När du startar programmet startar huvudfönstret med en demo-samling:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p>Huvudfönstret består av följande huvudelement:</p>
@@ -85,12 +85,12 @@
 </ol>
 <p>När du klickar på något mynt i mynt listan, visas detaljerad information: I bildpanelen - myntsfotografier, träder ut i trädet till det element som beskriver myntet visar informationspanelen alla inmatade myntdata.</p>
 <p>Du kan skapa en ny tom samling eller redigera en demo genom att skriva in nya data.</p>
-<h2>3 Inmatning av mynt</h2>
+<h2 id="sec3">3 Inmatning av mynt</h2>
 <h3>3.1 Lägga till ett mynt</h3>
 <p> Hantera din samling genom att lägga till poster om alla köpta, sålda eller önskade mynt.</p>
 <p>För att lägga till ett nytt mynt, välj menyn <i>Coin-&gt; Add</i> (Lägg till) eller tryck på Ins-tangenten. Därefter öppnas dialogrutan Redigera:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>Redigeringsdialogrutan innehåller 6 flikar med följande fält:</p>
+<p>The Edit dialog contains 7 tabs with the following fields:</p>
 <ul>
 <li>Mynt - Huvuduppgifter:<ul>
 <li>Namn - ett beskrivande namn på myntet (kan skapas automatiskt från de återstående fälten genom att klicka på 'Generera' -knappen);</li>
@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Mynt - Stat (Mynt från samlingen):<ul>
-<li>Status - Huvudegenskapen som bestämmer närvaron av ett mynt i samlingen. Kan ta värdet av Demo, Pass, Owned, Ordered, Sold, Sale, Wish. Myntstatusen påverkar tillgängligheten och innehållet på fliken Marknad;</li>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
 <li>Grad - graden av myntslitage</li>
 <li>Mängd - antalet duplikat eller mynt i rullen;</li>
 <li>Format - distributionsformat (enskilt mynt, set eller roll);</li>
 <li>Kondition;</li>
 <li>Lagring - en beskrivning av myntens fysiska läge</li>
 <li>Streckkod;</li>
+<li>Grader;</li>
 <li>Defekt - en beskrivning av den myntgjorda felet;</li>
 <li>Funktioner.</li>
 </ul>
@@ -140,6 +141,7 @@
 <li>Info.</li>
 </ul>
 </li>
+<li>Karta</li>
 <li>Parametrar - Parametrar (Myntens fysiska parametrar):<ul>
 <li>Material;</li>
 <li>Finhet;</li>
@@ -186,12 +188,13 @@
 <li>URL - webblänk till information om myntet eller till en fil på disken.</li>
 </ul>
 </li>
-<li>Bilder:<ul><li>Foto 1, Foto 2, Foto 3, Foto 4 - 4 ytterligare foton eller bilder.</li></ul>
+<li>Bilder:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
 </li>
 <li>System (ej redigerbart, kan bara visas i mynt tabellen):<ul>
 <li>ID - unikt myntnummer i samlingen;</li>
-<li>Skapad - datum beskrivningen skapades;</li>
-<li>Uppdaterad - datum för senaste redigering av beskrivningen</li>
+<li>Position - default sort order in Table of coins;</li>
+<li>Created - date the coin was added;</li>
+<li>Updated - the date of the last editing of the coin;</li>
 <li>Bild - En optimerad bild av framsidan och baksidan av myntet för utmatning i myntbordet.</li>
 </ul>
 </li>
@@ -206,8 +209,8 @@ För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-k
 
 <h4>3.11 Redigera Bilder</h4>
 <p>Programmet stöder upp till 7 bilder av varje mynt.</p>
-<p> Följande bildformat stöds: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Bilder sparas i JPEG-format. Stora bilder komprimeras så att maxsidan inte överstiger 1024 pixlar (du kan ändra den i dialogrutan Inställningar). 
-<br>För att infoga eller ändra en bild, högerklicka på fältet och välj ett av rullgardinsmenyerna:</p>
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
 <li>Ladda ... - välj bild från fil på disk;</li>
@@ -237,7 +240,7 @@ För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-k
 <h3>3.5 Ta bort</h3>
 <p>Du kan ta bort mynt från samlingen en efter en eller en grupp. För att radera, välj menyn <i>Coin-&gt; Delete</i>, högerklicka på den valda mynt- eller myntgruppen och välj<i> Ta bort </i>eller tryck på Del-tangenten.</p>
 <p>Avlägsnade mynt tas bort från samlingen på en gång och kan inte repareras - var försiktig.</p>
-<h2> 4 Visa mynt</h2>
+<h2 id="sec4"> 4 Visa mynt</h2>
 <h3>4.1 Tabell mynt</h3>
 <p>Myntbordet är det centrala elementet i applikationen, tjänar till att visa myntdata enligt de som valts med inställningarna.</p>
 <p>Antalet och platsen för fält kan ställas in i <i>listan-&gt; Välj kolumner ... </i>-menyn eller genom att högerklicka på tabellrubriken och välja <i>Välj kolumner ...</i>.</p>
@@ -267,7 +270,7 @@ För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-k
 <p> I botten av programfönstret finns en statusfält som visar namnet och sökvägen till samlingsfilen, det totala antalet mynt i samlingen och i det nuvarande myntbordet, antalet mynt i den valda gruppen.</p>
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5 Hantera en samlingsfil</h2>
+<h2 id="sec5">5 Hantera en samlingsfil</h2>
 <p>Samlingsfilen är en vanlig fil med förlängningen .db och lagrar all data om samlingen inklusive bilder andra än referenser (se 7). Du kan kopiera, flytta, ta bort och byta namn på det med ditt operativsystem.</p>
 <h3>5.1 Skapa / Öppna</h3>
 <p>För att skapa en ny samling, välj menyn <i>Arkiv-&gt; Ny ....</i>. I dialogrutan som öppnas väljer du plats och namn på den nya samlingsfilen.</p>
@@ -294,7 +297,7 @@ För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-k
 Därefter öppnas dialogrutan för att ange fält med de första 10 mynten från källfilen:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Rapporter</h2>
+<h2 id="sec6">6 Rapporter</h2>
 <h3>6.1 Generera rapporter</h3>
 <p>Programmet stöder generering av rapporter på mallar. Du kan redigera befintliga eller skapa egna rapportmallar. 
 <br>Den genererade rapporten kan skrivas ut eller sparas i HTML, PDF, MS Word-format från förhandsgranskningsdialogrutan.</p>
@@ -319,7 +322,7 @@ Därefter öppnas dialogrutan för att ange fält med de första 10 mynten från
 <h3>6.6 Sammanfattning</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 Referenser</h2>
+<h2 id="sec7">7 Referenser</h2>
 <p>Referenser gör det enkelt att skriva in data när du redigerar ett mynt och lägger till ikoner (till exempel flaggor) till dataskärmen. Referenser är tillgängliga för följande fält: Region, Land, Period, Linjal, Enhet, Mint, Serie, Betyg, Material, Form, Kvalitet, Kant, Sällsynthet, ObvRev, Typ, Fel, Plats (köp eller försäljning).</p>
 <p>Redigeringsreferenser finns i dialogrutan Redigera:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -334,7 +337,7 @@ Därefter öppnas dialogrutan för att ange fält med de första 10 mynten från
 <p> Du kan också bifoga aktuell referens till en samlingsfil. Välj <i>Referens-&gt; Fäst aktuell referens</i> för bifogad eller <i>Referens-&gt; Ta bort aktuell referens </i>för att ta bort referens från samling och använd standard från Inställningar.
  
  Alternativ : </p>
-<h2>8 Inställningar</h2>
+<h2 id="sec8">8 Inställningar</h2>
 <p>I dialogrutan Inställningar kan du konfigurera programmets utseende och beteende. För att öppna dialogrutan, välj menyn <i>Arkiv-&gt; Inställningar</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 

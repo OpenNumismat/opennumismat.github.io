@@ -58,7 +58,7 @@
 </div>
 <div class="inner-content">
 <h1>Посібник користувача</h1>
-<h2>1. Вступ</h2>
+<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1. Вступ</h2>
 <h3>1.1 Опис</h3>
 <p>OpenNumismat є зручним і надійним додатком, призначеним для колекціонерів монет і нумізматів, щоб створити нумізматичну колекцію.</p>
 <p>Завдяки OpenNumismat ви зможете створювати, організовувати і керувати власними каталогами монет з детальним описом і фотографіями для кожного елемента.</p>
@@ -73,7 +73,7 @@
 <p>OpenNumismat - вільне програмне забезпечення; Ви можете розповсюджувати її та/або вносити зміни відповідно до умов Загальної Публічної Ліцензії GNU (GNU GPL) у тому вигляді, у якому вона була опублікована Фундацією Вільного Програмного Забезпечення (FSF); або 3ї версії Ліцензії, або (на Ваш розсуд) будь-якої більш пізньої версії.</p>
 <p>Програма OpenNumismat розповсюджується із сподіванням, що вона виявиться корисною, але БЕЗ БУДЬ-ЯКОЇ ҐАРАНТІЇ, без навіть УЯВНОЇ ҐАРАНТІЇ КОМЕРЦІЙНОЇ ПРИДАТНОСТІ чи ВІДПОВІДНОСТІ БУДЬ-ЯКОМУ ПЕВНОМУ ЗАСТОСУВАННЮ. Зверніться до Загальної Публічної Ліцензії GNU за подробицями.</p>
 <p>Ви повинні були отримати копію Загальної громадської ліцензії GNU разом з OpenNumismat. Якщо ні, дивіться, на <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 Загальний вигляд</h2>
+<h2 id="sec2">2 Загальний вигляд</h2>
 <p>Під час першого запуску програми відкриється головне вікно з демонстраційною колекцією:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p>Головне вікно складається з наступних основних елементів:</p>
@@ -85,12 +85,12 @@
 </ol>
 <p>При натисканні на будь-яку монету в Таблиці монет відображається докладна інформація: на панелі «Зображення» - фотографія монети, Дерево розгортається до елемента, що описує монету, на панелі «Інформація» відображаються всі введені дані монети.</p>
 <p>Ви можете створити нову порожню колекцію або відредагувати демонстраційну, ввівши нові дані.</p>
-<h2>3 Введення монет</h2>
+<h2 id="sec3">3 Введення монет</h2>
 <h3>3.1 Додавання монет</h3>
 <p>Керуйте своєю колекцією, додавши записи про кожну куплену, продану або бажану монету.</p>
 <p>Щоб додати нову монету, виберіть меню <i>Coin-&gt; Add</i> або натисніть клавішу Ins. Після цього відкриється діалогове вікно редагування:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>Діалогове вікно редагування містить 6 вкладок з такими полями:</p>
+<p>The Edit dialog contains 7 tabs with the following fields:</p>
 <ul>
 <li>Coin - Основні деталі:<ul>
 <li>Ім'я - описання назви монети (можна автоматично створювати з інших полів, натиснувши кнопку "Створити");</li>
@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Coin - State (state of coin from the collection):<ul>
-<li>Стан - основна характеристика, що визначає наявність монети в колекції. Можна взяти значення Demo, Pass, Owned, Ordered, Sold, Sale, Wish. Статус монети впливає на доступність і вміст вкладки "Ринок";</li>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
 <li>Grade - the degree of coin wear;</li>
 <li>Quantity - the number of duplicates or coins in the roll;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Condition;</li>
 <li>Storage - a description of the physical location of the coin;</li>
 <li>Barcode;</li>
+<li>Grader;</li>
 <li>Defect - a description of the mint-made error;</li>
 <li>Features.</li>
 </ul>
@@ -140,6 +141,7 @@
 <li>Info.</li>
 </ul>
 </li>
+<li>Мапа</li>
 <li>Parameters - Parameters (physical parameters of the coin):<ul>
 <li>Material;</li>
 <li>Fineness;</li>
@@ -186,12 +188,13 @@
 <li>URL - web-link to information about the coin or to a file on the disk.</li>
 </ul>
 </li>
-<li>Images:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4 - 4 additional photos or images.</li></ul>
+<li>Images:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
 </li>
 <li>System (not editable, can be displayed only in the Table of coins):<ul>
 <li>ID - unique coin number in the collection;</li>
-<li>Created - date the description was created;</li>
-<li>Updated - the date of the last editing of the description;</li>
+<li>Position - default sort order in Table of coins;</li>
+<li>Created - date the coin was added;</li>
+<li>Updated - the date of the last editing of the coin;</li>
 <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.</li>
 </ul>
 </li>
@@ -206,7 +209,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h4>3.1.1 Editing Images</h4>
 <p>The application supports up to 7 images of each coin.</p>
-<p>The following image formats are supported: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
 <br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
@@ -235,7 +238,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <h3>3.5 Removing</h3>
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.</p>
 <p>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
-<h2>4 View Coins</h2>
+<h2 id="sec4">4 View Coins</h2>
 <h3>4.1 Table of coins</h3>
 <p>The Table of coins is the central element of the application, serves to display coin data according to those selected with the settings.</p>
 <p>The number and location of fields can be set in the <i>List-&gt;Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.</p>
@@ -265,7 +268,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>At the bottom of the application window there is a status bar showing the name and path to the collection file, the total number of coins in the collection and in the current Table of coins, the number of coins in the selected group.</p>
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5 Managing a collection file</h2>
+<h2 id="sec5">5 Managing a collection file</h2>
 <p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see 7). You can copy, move, delete and rename it by means of your OS.</p>
 <h3>5.1 Creating/Opening</h3>
 <p>To create a new collection, select the menu <i>File-&gt;New...</i>. In the dialog that opens, select the location and name of the new collection file.</p>
@@ -292,7 +295,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Reports</h2>
+<h2 id="sec6">6 Reports</h2>
 <h3>6.1 Generating reports</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
 <br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
@@ -317,7 +320,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>6.6 Summary</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 References</h2>
+<h2 id="sec7">7 References</h2>
 <p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
 <p>Editing references is available from the Edit dialog:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -330,7 +333,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>To quickly fill references with entered data from the collection, select the <i>Reference-&gt;Fill from collection</i> menu.</p>
 <p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the Settings dialog.</p>
 <p>Also you can attach current reference to a collection file. Select <i>Reference-&gt;Attach current reference</i> for attaching or <i>Reference-&gt;Detach current reference</i> for remove reference from collection and use default from Settings.</p>
-<h2>8 Settings</h2>
+<h2 id="sec8">8 Settings</h2>
 <p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File-&gt;Settings</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 

@@ -58,7 +58,7 @@
 </div>
 <div class="inner-content">
 <h1>Manual de usuario</h1>
-<h2>1 Introducción</h2>
+<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1 Introducción</h2>
 <h3>1.1 Descripción</h3>
 <p>OpenNumismat es una aplicación práctica y fiable diseñada para coleccionistas de monedas, para crear colecciones numismáticas.</p>
 <p>Con OpenNumismat podrás crear, organizar y administrar tu propio catálogo de monedas, con descripciones detalladas y fotos para cada artículo.</p>
@@ -73,7 +73,7 @@
 <p>OpenNumismat es software libre: puedes redistribuirlo y/o modificarlo bajo los términos de la GNU General Public License publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia o cualquier versión posterior (a tu elección) .</p>
 <p>OpenNumismat se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver la GNU General Public License para más detalles.</p>
 <p>Deberías haber recibido una copia de la GNU General Public License con tu software. Si no la has recibido, puedes verla aquí <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 Vista general</h2>
+<h2 id="sec2">2 Vista general</h2>
 <p>Cuando inicia por primera vez la aplicación, la pantalla principal aparece con una colección demo:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p>La ventana principal consiste en los elementos principales siguientes:</p>
@@ -85,12 +85,12 @@
 </ol>
 <p>Cuando hace clic en cualquier moneda en la Tabla de monedas, se muestra información detallada: en el panel Imagen - fotografías de monedas, el árbol se despliega en el elemento que describe la moneda, el panel de información muestra todos los datos de moneda introducidos.</p>
 <p>Puede crear una nueva colección vacía o editar una demo introduciendo nuevos datos.</p>
-<h2>3 Introducción de monedas</h2>
+<h2 id="sec3">3 Introducción de monedas</h2>
 <h3>3.1 Añadir una moneda</h3>
 <p>Administre su colección agregando entradas sobre cada moneda comprada, vendida o deseada.</p>
 <p>Para agregar una moneda nueva, seleccione menú <i>Moneda-&gt; Agregar</i> o presione la tecla Ins. Después de eso, se abre el cuadro de diálogo Editar:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>El diálogo Editar contiene 6 pestañas con los siguientes campos:</p>
+<p>The Edit dialog contains 7 tabs with the following fields:</p>
 <ul>
 <li>Moneda - Detalles principales:<ul>
 <li>Nombre: un nombre descriptivo de la moneda (se puede crear automáticamente a partir de los campos restantes haciendo clic en el botón "Generar");</li>
@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Moneda - Estado (estado de una moneda de la colección):<ul>
-<li>Estado: la principal característica que determina la presencia de una moneda en la colección. Puede tomar el valor de Demo, Prestada, Propiedad, Pedida, Vendida, En venta, Deseada. El estado de la moneda afecta la disponibilidad y el contenido de la pestaña Mercado;</li>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
 <li>Grado - el grado de desgaste de la moneda;</li>
 <li>Cantidad - el número de duplicados de una moneda en la lista;</li>
 <li>Formato - formato de distribución (una moneda, set o rollo);</li>
 <li>Condición:</li>
 <li>Almacenamiento - una descripción de la localización física de la moneda;</li>
 <li>Código de barras;</li>
+<li>Grader;</li>
 <li>Defecto - una descripción de errores de acuñación;</li>
 <li>Características;</li>
 </ul>
@@ -140,6 +141,7 @@
 <li>Información.</li>
 </ul>
 </li>
+<li>Mapa</li>
 <li>Parámetros - Parámetros (parámetros físicos de la moneda):<ul>
 <li>Material;</li>
 <li>Ley;</li>
@@ -186,12 +188,13 @@
 <li>URL - vínculo web con información sobre la moneda o a un archivo en el disco.</li>
 </ul>
 </li>
-<li>Imágenes:<ul><li>Foto 1, Foto 2, Foto 3, Foto 4 - 4 fotos o imágenes adicionales.</li></ul>
+<li>Imágenes:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
 </li>
 <li>Sistema (no editable, sólo se puede visualizar en la Tabla de monedas):<ul>
 <li>ID - Número único de una moneda en la colección;</li>
-<li>Creada - fecha en la que la descripción fue creada;</li>
-<li>Actualizado - la fecha de la última edición de la descripción;</li>
+<li>Position - default sort order in Table of coins;</li>
+<li>Created - date the coin was added;</li>
+<li>Updated - the date of the last editing of the coin;</li>
 <li>Imagen - una imagen optimizada del anverso y el reverso de la moneda para la presentación en la Tabla de monedas.</li>
 </ul>
 </li>
@@ -206,8 +209,8 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 
 <h4>3.1.1 Edición de imágenes</h4>
 <p>La aplicación soporta hasta 7 imágenes por cada moneda.</p>
-<p>Se admiten los siguientes formatos de imagen: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Las imágenes se guardan en formato JPEG. Las imágenes grandes se comprimen para que el lado máximo no supere los 1024 píxeles (puede cambiarlo en el cuadro de diálogo Configuración).
-<br>Para insertar o cambiar una imagen, haga clic con el botón derecho en el campo y seleccione uno de los elementos del menú desplegable:</p>
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
 <li>Cargar... - seleccionar imagen desde archivo de disco;</li>
@@ -235,7 +238,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <h3>3.5 Borrado</h3>
 <p>Puede eliminar monedas de la colección una por una o de manera agrupada. Para eliminar, seleccione el menú <i>Moneda-&gt; Eliminar</i>, haga clic con el botón derecho en la moneda o grupo de monedas seleccionado y seleccione <i>Eliminar</i> o presione la tecla Supr.</p>
 <p>Las monedas eliminadas se eliminan de la colección de una vez y no se pueden reparar - tenga cuidado.</p>
-<h2>4 Ver monedas</h2>
+<h2 id="sec4">4 Ver monedas</h2>
 <h3>4.1 Tabla de monedas</h3>
 <p>La Tabla de monedas es el elemento central de la aplicación, sirve para mostrar los datos de la moneda de acuerdo con lo indicado en la configuración.</p>
 <p>El número y la ubicación de los campos se pueden establecer en el menú <i>Lista-&gt; Seleccionar columnas...</i> o haciendo clic con el botón derecho en el encabezado de la tabla y seleccionando <i>Seleccionar columnas ...</i>.</p>
@@ -265,7 +268,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <p>En la parte inferior de la ventana de la aplicación hay una barra de estado que muestra el nombre y la ruta al archivo de colección, el número total de monedas en la colección y en la Tabla actual de monedas, el número de monedas del grupo seleccionado.</p>
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5 Administrar un archivo de colección</h2>
+<h2 id="sec5">5 Administrar un archivo de colección</h2>
 <p>El archivo de colección es un archivo con la extensión .db y almacena todos los datos sobre la colección, incluidas las imágenes que no sean referencias (ver 7). Puede copiarlo, moverlo, eliminarlo y cambiarle el nombre por medio de su sistema operativo.</p>
 <h3>5.1 Creación/Apertura</h3>
 <p>Para crear una nueva colección, seleccione el menú <i>Archivo-&gt; Nuevo...</i>. En el cuadro de diálogo que se abre, seleccione la ubicación y el nombre del nuevo archivo de colección.</p>
@@ -292,7 +295,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 Después de eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 10 monedas del archivo fuente:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Informes</h2>
+<h2 id="sec6">6 Informes</h2>
 <h3>6.1 Generación de informes</h3>
 <p>La aplicación admite la generación de informes sobre plantillas. Puede editar las existentes o crear sus propias plantillas de informes.
 <br>El informe generado se puede imprimir o guardar en formato HTML, PDF, MS Word desde el cuadro de diálogo Vista previa.</p>
@@ -317,7 +320,7 @@ Después de eso, se abrirá el cuadro de diálogo para asignar campos con las pr
 <h3>6.6 Sumario</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 Referencias</h2>
+<h2 id="sec7">7 Referencias</h2>
 <p>Las Referencias facilitan la introducción de datos al editar una moneda, y también agregan iconos (como banderas) a la visualización de datos. Las Referencias están disponibles para los siguientes campos: Región, País, Período, Regente, Unidad, Ceca, Serie, Grado, Material, Forma, Calidad, Borde, Rareza, AnvRev, Tipo, Defecto, Lugar (compra o venta).</p>
 <p>Las referencias se editan desde el diálogo de Edición:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -330,7 +333,7 @@ Después de eso, se abrirá el cuadro de diálogo para asignar campos con las pr
 <p>Para rellenar rápidamente las referencias con los datos introducidos ​​de la colección, seleccione el menú <i>Referencia-&gt; Rellenar desde la colección</i>.</p>
 <p>Por defecto, las referencias se almacenan en un archivo separado con una extensión .ref, que se puede copiar, renombrar o eliminar mediante su sistema operativo. La ruta al archivo de referencias se puede especificar en el cuadro de diálogo Configuración.</p>
 <p>También puede adjuntar la referencia actual a un archivo de colección. Seleccione <i>Referencia-&gt; Adjuntar referencia actual</i> para adjuntar o <i>Referencia-&gt; Separar referencia actual</i> para eliminar la referencia de la colección y usar el valor predeterminado de Configuración.</p>
-<h2>8 Ajustes</h2>
+<h2 id="sec8">8 Ajustes</h2>
 <p>El cuadro de diálogo Ajustes le permite configurar el aspecto y el comportamiento de la aplicación. Para abrir el diálogo, seleccione el menú <i>Archivo-&gt; Ajustes</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 

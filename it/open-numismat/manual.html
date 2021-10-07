@@ -58,7 +58,7 @@
 </div>
 <div class="inner-content">
 <h1>Manuale utente</h1>
-<h2>1 Introduzione</h2>
+<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1 Introduzione</h2>
 <h3>1.1 Descrizione</h3>
 <p>OpenNumismat è un'applicazione pratica e affidabile progettata per collezionatori di monete e collezionisti di monete, per creare una collezione numismatica.</p>
 <p>Con OpenNumismat sarai in grado di creare, organizzare e gestire i tuoi cataloghi di monete con descrizioni dettagliate e foto per ogni oggetto.</p>
@@ -73,7 +73,7 @@
 <p>OpenNumismat è un software gratuito: è possibile ridistribuirlo e/o modificarlo secondo i termini della GNU General Public License pubblicata dalla Free Software Foundation, entrambe le versioni 3 della licenza, o (a propria discrezione) qualsiasi versione successiva.</p>
 <p>OpenNumismat è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA; senza nemmeno la garanzia implicita di COMMERCIABILITÀ o IDONEITÀ PER UN PARTICOLARE SCOPO. Vedi la GNU General Public License per maggiori dettagli.</p>
 <p>Dovresti aver ricevuto una copia della GNU General Public License insieme a OpenNumismat. In caso contrario, vedere <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 Vista generale</h2>
+<h2 id="sec2">2 Vista generale</h2>
 <p>Al primo avvio dell'applicazione, la finestra principale si apre con una collezione demo:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p>La finestra principale è composta dai seguenti elementi principali:</p>
@@ -85,12 +85,12 @@
 </ol>
 <p>Quando fai clic su una qualsiasi moneta nella Tabella delle monete, vengono visualizzate informazioni dettagliate: nel pannello Immagine - le foto delle monete, la Directory si apre sull'elemento che descrive la moneta, il pannello Informazioni mostra tutti i dati inseriti della moneta.</p>
 <p>Puoi creare una nuova raccolta vuota o modificare una demo inserendo nuovi dati.</p>
-<h2>3 Inserimento monete</h2>
+<h2 id="sec3">3 Inserimento monete</h2>
 <h3>3.1 Aggiungere una moneta</h3>
 <p>Gestisci la tua collezione aggiungendo voci su ogni moneta acquistata, venduta o desiderata.</p>
 <p>Per aggiungere una nuova moneta, selezionare il menu <i>Moneta-&gt;Aggiungi</i> o premere il tasto Ins. Successivamente, si apre la finestra Modifica:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>La finestra Modifica contiene 6 schede con i seguenti campi:</p>
+<p>The Edit dialog contains 7 tabs with the following fields:</p>
 <ul>
 <li>Moneta - Dettagli principali:<ul>
 <li>Nome: nome descrittivo della moneta (può essere creato automaticamente compilando i campi successivi facendo clic sul pulsante "Genera");</li>
@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Moneta - Stato (stato della moneta dalla collezione):<ul>
-<li>Status: la caratteristica principale che determina la presenza di una moneta nella collezione. Può assumere il valore di Demo, Scambio, Posseduta, Ordinata, Venduta, Vendita, Desiderata. Lo stato delle monete influisce sulla disponibilità e sul contenuto della scheda Compravendita;</li>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
 <li>Condizione - il grado di conservazione delle monete;</li>
 <li>Quantità - il numero di duplicati o monete nel rotolo;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Condizione;</li>
 <li>Immagazzinamento - una descrizione della posizione fisica della moneta;</li>
 <li>Codice a barre;</li>
+<li>Grader;</li>
 <li>Difetti - una descrizione dell'errore fatto dalla zecca;</li>
 <li>Caratteristiche.</li>
 </ul>
@@ -140,6 +141,7 @@
 <li>Informazioni.</li>
 </ul>
 </li>
+<li>Mappa</li>
 <li>Parametri - Parametri (parametri fisici della moneta):<ul>
 <li>Materiale;</li>
 <li>Bellezza;</li>
@@ -186,12 +188,13 @@
 <li>URL - collegamento Internet alle informazioni sulla moneta o su un file sul disco.</li>
 </ul>
 </li>
-<li>Immagini:<ul><li>Foto 1, Foto 2, Foto 3, Foto 4 - 4 foto o immagini aggiuntive.</li></ul>
+<li>Immagini:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
 </li>
 <li>Sistema (non modificabile, può essere visualizzato solo nella Tabella delle monete):<ul>
 <li>ID - numero della moneta univoco nella collezione;</li>
-<li>Creato - data di creazione della descrizione;</li>
-<li>Aggiornato -  data dell'ultima modifica della descrizione;</li>
+<li>Position - default sort order in Table of coins;</li>
+<li>Created - date the coin was added;</li>
+<li>Updated - the date of the last editing of the coin;</li>
 <li>Immagine - un'immagine ottimizzata del dritto e del rovescio della moneta per la visione nella Tabella delle monete.</li>
 </ul>
 </li>
@@ -206,8 +209,8 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h4>3.1.1 Modifica immagini</h4>
 <p>L'applicazione supporta fino a 7 immagini di ogni moneta.</p>
-<p>Sono supportati i seguenti formati di immagine: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. Le immagini vengono salvate in formato JPEG. Le immagini di grandi dimensioni vengono compresse in modo che il lato massimo non superi i 1024 pixel (può essere modificato nelle Impostazioni).
-<br>Per inserire o modificare un'immagine, fai clic con il pulsante destro del mouse sul campo e seleziona una delle voci del menu a discesa:</p>
+<p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
+<br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
 <li>Carica ... - seleziona l'immagine dal un file sul disco;</li>
@@ -235,7 +238,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <h3>3.5 Rimozione</h3>
 <p>Puoi rimuovere le monete dalla raccolta una alla volta o in gruppo. Per eliminare, selezionare il menu <i>Moneta-&gt;Elimina</i>, fare clic con il tasto destro del mouse sulla moneta o sul gruppo di monete selezionato e selezionare <i>Elimina</i> o premere il tasto Canc.</p>
 <p>Le monete rimosse vengono rimosse immediatamente dalla raccolta e non possono essere recuperate - fare attenzione.</p>
-<h2>4 Visualizza monete</h2>
+<h2 id="sec4">4 Visualizza monete</h2>
 <h3>4.1 Tabella delle monete</h3>
 <p>La tabella delle monete è l'elemento centrale dell'applicazione, serve a visualizzare i dati delle monete in base a quelli selezionati con le impostazioni.</p>
 <p>Il numero e la posizione dei campi possono essere impostati nel menu<i>Lista-&gt; Seleziona colonne ...</i> oppure facendo clic con il pulsante destro del mouse sull'intestazione della tabella e selezionando <i>Seleziona colonne ...</i>.</p>
@@ -265,7 +268,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>Nella parte inferiore della finestra dell'applicazione c'è una barra di stato che mostra il nome e il percorso del file della collezione, il numero totale di monete nella collezione e nella tabella delle monete corrente, il numero di monete nel gruppo selezionato.</p>
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5 Gestione del file di collezione</h2>
+<h2 id="sec5">5 Gestione del file di collezione</h2>
 <p>Il file della collezione è un normale file con estensione .db e memorizza tutti i dati relativi alla collezione, incluse le immagini dai vari riferimenti (vedere punto 7). È possibile copiare, spostare, cancellare e rinominare il file tramite il proprio sistema operativo.</p>
 <h3>5.1 Creazione/Apertura</h3>
 <p>Per creare una nuova raccolta, selezionare il menu <i>File-&gt;Nuovo...</i>. Nella finestra che si apre, selezionare la posizione e il nome del nuovo file della collezione.</p>
@@ -292,7 +295,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 Successivamente, verrà aperta una finestra per l'assegnazione dei campi con le prime 10 monete del file sorgente:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6 Resoconti</h2>
+<h2 id="sec6">6 Resoconti</h2>
 <h3>6.1 Genera resoconti</h3>
 <p>L'applicazione supporta la generazione di resoconti basata su modelli. È possibile modificare quelli esistenti o creare modelli di resoconto personalizzati..
 <br>Il resoconto generato può essere stampato o salvato in formato HTML, PDF, MS Word dalla finestra di Anteprima.</p>
@@ -317,7 +320,7 @@ Successivamente, verrà aperta una finestra per l'assegnazione dei campi con le 
 <h3>6.6 Riepilogo</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 Riferimenti</h2>
+<h2 id="sec7">7 Riferimenti</h2>
 <p>I riferimenti facilitano l'inserimento dei dati quando si modifica una moneta e si aggiungono anche icone (come le bandiere) alla visualizzazione dei dati. I riferimenti sono disponibili per i seguenti campi: Regione, Paese, Periodo, Governatore, Unità, Zecca, Serie, Condizione, Materiale, Forma, Qualità, Bordo, Rarità, Dri/Rov, Tipo, Difetto, Luogo (acquisto o vendita).</p>
 <p>La modifica dei riferimenti è disponibile dalla finestra Modifica:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -330,7 +333,7 @@ Successivamente, verrà aperta una finestra per l'assegnazione dei campi con le 
 <p>Per riempire rapidamente i riferimenti con i dati inseriti nella collezione, selezionare il menu <i>Riferimento-&gt; Carica da collezione</i>.</p>
 <p>Per impostazione predefinita, i riferimenti sono salvati in un file separato con estensione .ref, che può essere copiato, rinominato o cancellato tramite il sistema operativo. Il percorso del file di riferimento può essere specificato nelle Impostazioni.</p>
 <p>Inoltre, puoi allegare il riferimento corrente a un file di collezione. Seleziona <i>Riferimento-&gt; Allega il riferimento corrente</i> per allegare o <i>Riferimento-&gt; Scollega il riferimento corrente</i> per rimuovere il riferimento dalla collezione e usare il valore predefinito dalle Impostazioni.</p>
-<h2>8 Impostazioni</h2>
+<h2 id="sec8">8 Impostazioni</h2>
 <p>La finestra delle Impostazioni consente di configurare l'aspetto e il comportamento dell'applicazione. Per aprire la finestra, selezionare il menu <i>File-&gt;Impostazioni</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 

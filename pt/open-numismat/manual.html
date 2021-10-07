@@ -58,7 +58,7 @@
 </div>
 <div class="inner-content">
 <h1>Manual do utilizador</h1>
-<h2>1 Introdução</h2>
+<a href="#sec1">1 Introdução</a><br><a href="#sec2">2 Visão geral</a><br><a href="#sec3">3 Inserir moedas</a><br><a href="#sec4">4 Ver moedas</a><br><a href="#sec5">5 Gerir o ficheiro da colecção</a><br><a href="#sec6">6 Relatórios</a><br><a href="#sec7">7 Referências</a><br><a href="#sec8">8 Definições</a><br><h2 id="sec1">1 Introdução</h2>
 <h3>1.1 Descrição</h3>
 <p>O OpenNumismat é uma aplicação prática e de confiança, destinada aos amantes de moedas, numismatas ou amadores, tentando criar uma colecção numismática.</p>
 <p>Com o OpenNumismat poderá criar, organizar e gerir os seus próprios catálogos de moedas com uma descrição detalhada e fotografias de cada um dos itens.</p>
@@ -73,7 +73,7 @@
 <p>O OpenNumismat é um programa gratuito: pode distribuí-lo e/ou modificá-lo sob os termos da GNU General Public License tal como publicada pela Free Software Foundation, seja a versão 3 da Licença ou, (por sua opção) qualquer versão posterior.</p>
 <p>O OpenNumismat é distribuído na esperança de ser útil, mas SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A QUALQUER PROPÓSITO. Veja a GNU General Public License para mais detalhes.</p>
 <p>Deverá ter recebido uma cópia da GNU General Public License juntamente com o OpenNumismat. Se não, veja <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2>2 Visão geral</h2>
+<h2 id="sec2">2 Visão geral</h2>
 <p>Quando inicia a aplicação, a janela principal abre com uma colecção de demonstração:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p>A janela principal é composta pelos seguintes elementos:</p>
@@ -85,12 +85,12 @@
 </ol>
 <p>Quando clica numa moeda na tabela de moedas, é mostrada informação detalhada: no painel de imagens, fotografias da moeda, a  árvore desdobra-se até ao elemento que descreve a moeda e o painel informativo mostra todos os dados inseridos para a moeda.</p>
 <p>Pode criar uma nova colecção vazia ou editar a demonstração inserindo novos dados.</p>
-<h2>3 Inserir moedas</h2>
+<h2 id="sec3">3 Inserir moedas</h2>
 <h3>3.1 Adicionar uma moeda</h3>
 <p>Faça a gestão da sua colecção adicionando entradas para cada moeda comprada, vendida ou desejada.</p>
 <p>Para adicionar uma nova moeda, seleccione Moeda-&gt;Adicionar ou prima a tecla Insert. Verá o diálogo Nova:</p>
 <p><img src="/images/manual/new.png"></p>
-<p>Este diálogo tem seis separadores com os seguintes campos:</p>
+<p>O diálogo de edição contém 7 separadores com os seguintes campos:</p>
 <ul>
 <li>Moeda - detalhes principais:<ul>
 <li>Nome - um nome descritivo da moeda (pode ser criado automaticamente a parttir dos restantes campos, clicando em Gerar);</li>
@@ -109,13 +109,14 @@
 </ul>
 </li>
 <li>Moeda - Estado (estado da moeda na colecção):<ul>
-<li>Estado - a característica principal que determina a presença de uma moeda na colecção. Pode ser Demonstração, Troca, Possuída, Encomendada, Vendida, Vendável ou Desejada. O estado da moeda afecta a disponibilidade e o conteúdo do separador Mercado.</li>
+<li>Estado - a p+rincipal característica que determina a presença de uma moeda na colecção. Pode ser Demonstração, Passada, Detida, Ordenada, Vendida, À venda, Desejada, Em leilão, Em falta, Duplicada. O estado da moeda afecta a disponibilidade e o conteúdo do separador Mercado;</li>
 <li>Grau - o grau de uso da moeda;</li>
 <li>Quantidade - o número de duplicados ou moedas no rolo;</li>
 <li>Formato - formato de distribuição (moeda única, conjunto ou rolo);</li>
 <li>Condição;</li>
 <li>Local - uma descrição da localização física da moeda.</li>
 <li>Cód. barras;</li>
+<li>Calibrador;</li>
 <li>Defeito - uma descrição do erro de cunhagem;</li>
 <li>Características.</li>
 </ul>
@@ -140,6 +141,7 @@
 <li>Informação.</li>
 </ul>
 </li>
+<li>Mapa</li>
 <li>Parâmetros - as características físicas da moeda;<ul>
 <li>Material;</li>
 <li>Finura;</li>
@@ -186,12 +188,13 @@
 <li>URL - ligação web a informação sobre a moeda ou a um ficheiro em disco.</li>
 </ul>
 </li>
-<li>Imagens:<ul><li>Imagens 1, 2, 3 e 4 - 4 imagens ou fotografias adicionais</li></ul>
+<li>Imagens:<ul><li>Fotografia 1, Fotografia 2, Fotografia 3, Fotografia 4, Fotografia 5, Fotografia 6 - 6 imagens adicionais. pode adicionar um título específico a uma imagem com duplo clique ou com um clique direito na imagem;</li></ul>
 </li>
 <li>Sistema - (não editável) só pode ser visto na tabela de moedas);<ul>
 <li>ID - número único da moeda na colecção;</li>
-<li>Criada - data em que a descrição foi criada;</li>
-<li>Actualizada - a data da última edição da descrição;</li>
+<li>Posição - ordem predefinida na tabela de moedas;</li>
+<li>Criada - a data em que a moeda foi adicionada;</li>
+<li>Actualizada - a última data em que a moeda foi modificada;</li>
 <li>Imagem - imagens optimizadas do obverso e do reverso da moeda para mostrar na tabela de moedas.</li>
 </ul>
 </li>
@@ -206,8 +209,8 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 
 <h4>3.1.1 Editar imagens</h4>
 <p>A aplicação suporta até 7 imagens de cada moeda.</p>
-<p>São suportados os seguintes formatos de imagem: BMP, GIF, JPEG, PNG, PBM, PGM, PPM, TIFF, XBM, XPM. As imagens são gravadas em formato JPEG. As imagens grandes são comprimidas para que o máximo não exceda os 1024 pixels (pode alterar este valor nas definições).
-<br>Para inserir ou alterar uma imagem, clique no campo com o botão direito e seleccione um dos itens do menu contextual:</p>
+<p>São suportados os seguintes formatos de imagem: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. As imagens são gravadas em formato JPEG. Imagens grandes são comprimidas para que o seu lado máximo não exceda 1024 pixels (pode ser modificado no diálogo Definições).
+<br>Para inserir ou alterar uma imagem, clique com o botão direito no campo e seleccione um dos itens da lista pendente:</p>
 <p><img src="/images/manual/img_menu.png"></p>
 <ul>
 <li>Carregar... - seleccionar uma imagem no disco;</li>
@@ -235,7 +238,7 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <h3>3.5 Eliminar</h3>
 <p>Pode remover moedas da colecção uma a uma ou em grupos. Para eliminar, seleccione o menu Moeda -&gt; Eliminar, faça clique direito na moeda ou grupo a eliminar e seleccione <i>Eliminar</i> ou prima a tecla Delete.</p>
 <p>As moedas eliminadas são removidas da colecção e a acção não pode ser desfeita. Tenha CUIDADO.</p>
-<h2>4. Ver moedas</h2>
+<h2 id="sec4">4. Ver moedas</h2>
 <h3>4.1 Tabela de moedas</h3>
 <p>A tabela de moedas é o elemento central da aplicação, serve para mostrar os dados das moedas escolhidos nas definições.</p>
 <p>O número e localização dos campos pode ser definido no menu <i>Lista -&gt; Seleccionar colunas...</i> ou com um clique direito no cabeçalho da tabela e seleccionando <i>Seleccionar colunas...</i>.</p>
@@ -265,7 +268,7 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <p>Ao fundo da janela da aplicação há uma barra de estado mostrando o nome e o caminho do ficheiro da colecção, o total de moedas na colecção e na tabela de moedas actual e o número de moedas no grupo seleccionado.</p>
 <p><img src="/images/manual/status.png"></p>
 
-<h2>5. Gerir um ficheiro de colecção</h2>
+<h2 id="sec5">5. Gerir um ficheiro de colecção</h2>
 <p>O ficheiro da colecção é um ficheiro com a extensão .db e armazena todos os dados da colecção, incluindo imagens (não só referências, veja 7). Pode copiá-lo, renomeá-lo, movê-lo ou eliminá-lo através do seu sistema operativo.</p>
 <h3>5.1 Criar/Abrir</h3>
 <p>Para criar uma nova colecção, seleccione o menu <i>Ficheiro -&gt; Novo...</i>. No diálogo seguinte, seleccione a localização e o nome do novo ficheiro de colecção.</p>
@@ -292,7 +295,7 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 Em seguida, verá o diálogo para atribuir campos com as primeiras dez moedas do ficheiro fonte:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2>6. Relatórios</h2>
+<h2 id="sec6">6. Relatórios</h2>
 <h3>6.1 Gerar relatórios</h3>
 <p>A aplicação suporta a geração de relatórios em modelos. Pode editar os existentes ou criar os seus próprios modelos.
 <br>O relatório gerado pode ser imprimido ou gravado em formatos HTML, PDF, MS Word a partir do diálogo de antevisão.</p>
@@ -317,7 +320,7 @@ Em seguida, verá o diálogo para atribuir campos com as primeiras dez moedas do
 <h3>6.6 Resumo</h3>
 <p><img src="/images/manual/summary.png"></p>
 
-<h2>7 Referências</h2>
+<h2 id="sec7">7 Referências</h2>
 <p>As referências facilitam a inserção de dados ao adicionar uma moeda à colecção e juntam ícones (tais como bandeiras) à exibição de dados. Há referências para os seguintes campos: Região, País, Período, Régua, Unidade, Cunho, Série, Grau, Material, Forma, Qualidade, Rebordo, Raridade, ObvRev, Tipo, Defeito, Local (compra ou venda).</p>
 <p>Pode editar as referências no diálogo Editar:</p>
 <p><img src="/images/manual/ref_edit2.png"></p>
@@ -330,7 +333,7 @@ Em seguida, verá o diálogo para atribuir campos com as primeiras dez moedas do
 <p>Para preencher rapidamente referências com dados inseridos na colecção, seleccione o menu <i>Referência -&gt; Preencher de colecção</i>.</p>
 <p>Por predefinição, as referências são armazenadas num ficheiro separado com a extensão .ref, que pode ser copiado, renomeado ou eliminado através do seu sistema operativo. O caminho do ficheiro pode ser alterado nas definições.</p>
 <p>Pode também anexar a referência actual a outro ficheiro de colecção. Seleccione <i>Referência -&gt; Anexar referência actual</i> para anexar ou <i>Referência -&gt;Desanexar referência actual</i> para remover a referência da colecção e usar a predefinição nas definições.</p>
-<h2>8 Definições</h2>
+<h2 id="sec8">8 Definições</h2>
 <p>O diálogo Definições permite-lhe configurar a aparência e o comportamento da aplicação. Para o abrir, seleccione o menu <i>Ficheiro -&gt; Definições</i>:</p>
 <p><img src="/images/manual/settings.png"></p>
 
