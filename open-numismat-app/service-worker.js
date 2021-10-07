@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const cacheName = 'OpenNumismat-Mobile-0.5.1';
+const cacheName = 'OpenNumismat-Mobile-0.5.2';
 const filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',

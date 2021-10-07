@@ -589,7 +589,7 @@ $('select.lang').change(langChanged);
 $('select.lang').selectmenu();
 
 function htmlStatusIcon(status) {
-    return "<img src='../img/" + status + ".png' class='status-icon' title='" + i18next.t(status) + "'>";
+    return "<img src='img/" + status + ".png' class='status-icon' title='" + i18next.t(status) + "'>";
 }
 
 function htmlStatusViewFull(status) {
