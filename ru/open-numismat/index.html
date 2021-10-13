@@ -132,26 +132,41 @@
     <li>Cabinet 2.2.2.1 (из экспортного формата)</li>
   </ul>
 <li>Поддержка языков: русский, украинский, английский, испанский, немецкий, французский, венгерский, португальский, греческий, чешский, итальянский, каталонский, нидерландский, болгарский, латвийский, шведский, персидский</li>
-  <li>Cross-platform: Windows, Linux, macOS and Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a> for any browser, including mobile (iPhone, Android)</li>
+  <li>Кросс-платформенность: Windows, Linux, macOS и Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a> для любых браузеров, включая мобильные (iPhone, Android)</li>
   <li><a href="manual.html">Подробное руководство пользователя</a></li>
   <li>Подходит для других типов коллекционирования, например <a href="stamps.html">марки</a>, банкноты, открытки, значки</li>
 </ul>
 <h2 id="download">Скачать</h2>
-<p>Последняя версия: <strong>OpenNumismat 1.8.10</strong>. Дата выхода: 22 сентября 2021</p>
+<p>Последняя версия: <strong>OpenNumismat 1.8.11</strong>. Дата выхода: 12 октября 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.exe" rel="nofollow">OpenNumismat - Стандартный установщик</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.zip" rel="nofollow">OpenNumismat - .zip (без установщика)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10-win64.exe" rel="nofollow">OpenNumismat - Стандартный установщик для 64-bit Windows</a> (экспериментальная версия со свежими библиотеками и зависимостями)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.exe" rel="nofollow">OpenNumismat - Стандартный установщик</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.zip" rel="nofollow">OpenNumismat - .zip (без установщика)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11-win64.exe" rel="nofollow">OpenNumismat - Стандартный установщик для 64-bit Windows</a> (экспериментальная версия со свежими библиотеками и зависимостями)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/open-numismat_1.8.10_all.deb" rel="nofollow">OpenNumismat - для Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/open-numismat_1.8.11_all.deb" rel="nofollow">OpenNumismat - для Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - для Arch Linux</a></p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.10/OpenNumismat-1.8.10.dmg" rel="nofollow">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.dmg" rel="nofollow">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
 <h4>Другие</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Более старые версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Исходный код</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в OpenNumismat 1.8.10 (22 сентября 2021)</h3>
+  <h3>Что нового в OpenNumismat 1.8.11 (12 октября 2021)</h3>
+  <ul>
+<li>Отключена проверка SSL сертификатов для скачивания изображений</li>
+    <li>Сохранение порядка сортировки из панели инструментов. Удалено Сохранение сортировки столбцов в настройках</li>
+    <li>Сводка показывает информацию так же для выбранных монет</li>
+    <li>Отчет генерируется для всех показанных монет</li>
+    <li>Иконки из справочника всегда показываются</li>
+    <li>Улучшена обрезка изображений с учетом перспективы</li>
+    <li>Команды Отменить/Повторить для редактирования изображений</li>
+    <li>Улучшено масштабирование изображений</li>
+    <li>Улучшено контекстное меню у изображений</li>
+    <li>Настройка для размера шрифта</li>
+    <li>Улучшен шаблон postcard</li>
+    <li>Исправлен импорт из Telico</li>
+  </ul>
+<h3>Что нового в OpenNumismat 1.8.10 (22 сентября 2021)</h3>
   <ul>
 <li>Изменен прокси-сервер для Colnect</li>
     <li>Новый статус Дубликат</li>
@@ -165,15 +180,6 @@
     <li>Исправлен Debian пакет</li>
     <li>Добавлены таймауты для всех HTTP-запросов</li>
     <li>Исправлено сохранение последнего варианта обрезания изображений</li>
-  </ul>
-<h3>Что нового в OpenNumismat 1.8.8 (05 октября 2020)</h3>
-  <ul>
-<li>Встроенный редактор изображений</li>
-    <li>Исправлена потеря фокуса на выбранной монете</li>
-    <li>Щелчок по маркеру на карте выбирает монету</li>
-    <li>Маркеры на карте показывают статус монеты</li>
-    <li>Исправлен импорт из Numista</li>
-    <li>Исправлен перевод для Linux</li>
   </ul>
 <a href="history.html">Ранее...</a>
 <h2>Снимки экранов</h2>
