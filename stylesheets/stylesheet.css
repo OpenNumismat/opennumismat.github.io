@@ -271,6 +271,7 @@ img.mobile-screenshot {
 
 #footer_wrap {
   background: #212121;
+  clear: both;
 }
 
 .title-box {
@@ -322,6 +323,7 @@ Small Device Styles
 .inner-image {
   max-width: 680px;
   padding: 10px 10px 10px 25px;
+  clear: both;
 }
 
 div.content {
