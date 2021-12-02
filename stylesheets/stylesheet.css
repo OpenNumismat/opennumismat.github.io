@@ -250,7 +250,7 @@ img.mobile-screenshot {
   color: #fff;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: #111 0 0 10px;
 }
 
 #project_tagline {
@@ -258,7 +258,7 @@ img.mobile-screenshot {
   font-size: 21px;
   font-weight: 300;
   background: none;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: #111 0 0 10px;
 }
 
 #main_content_wrap {
@@ -292,7 +292,6 @@ img.mobile-screenshot {
   display: inline-block;
   float: right;
   margin-left: 1em;
-  display:inline-block;
 }
 .title-language {
   color: #474747;
