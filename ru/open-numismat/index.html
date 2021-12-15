@@ -124,7 +124,7 @@
 <li>Excel (включая изображения представленные ссылками в оригинальном файле)</li>
     <li>
 <a href="https://colnect.com/">Colnect</a> (из <a href="https://colnect.com/en/help/collecting/premium_export_list">списков</a> и напрямую)</li>
-    <li>CoinManage 2011, 2013, 2015 (требуется <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow" target="_blank">Microsoft Access Database Engine</a>, Microsoft Access или любое другое приложение с ODBC Microsoft Access Driver)</li>
+    <li>CoinManage (требуется <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow" target="_blank">Microsoft Access Database Engine</a>, Microsoft Access или любое другое приложение с ODBC Microsoft Access Driver)</li>
     <li><a href="https://en.numista.com/">Numista</a></li>
     <li>Collection Studio 3.65 (из экспортного формата XML Table)</li>
     <li>uCoin.net</li>
@@ -137,21 +137,42 @@
   <li>Подходит для других типов коллекционирования, например <a href="stamps.html">марки</a>, банкноты, открытки, значки</li>
 </ul>
 <h2 id="download">Скачать</h2>
-<p>Последняя версия: <strong>OpenNumismat 1.8.11</strong>. Дата выхода: 12 октября 2021</p>
+<p>Последняя версия: <strong>OpenNumismat 1.8.12</strong>. Дата выхода: 15 декабря 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.exe" rel="nofollow">OpenNumismat - Стандартный установщик</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.zip" rel="nofollow">OpenNumismat - .zip (без установщика)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11-win64.exe" rel="nofollow">OpenNumismat - Стандартный установщик для 64-bit Windows</a> (экспериментальная версия со свежими библиотеками и зависимостями)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.exe" rel="nofollow">OpenNumismat - Стандартный установщик</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.zip" rel="nofollow">OpenNumismat - .zip (без установщика)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-win64.exe" rel="nofollow">OpenNumismat - Стандартный установщик для 64-bit Windows</a> (экспериментальная версия со свежими библиотеками и зависимостями)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/open-numismat_1.8.11_all.deb" rel="nofollow">OpenNumismat - для Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/open-numismat_1.8.12_all.deb" rel="nofollow">OpenNumismat - для Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - для Arch Linux</a></p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.dmg" rel="nofollow">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.dmg" rel="nofollow">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
 <h4>Другие</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Более старые версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Исходный код</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в OpenNumismat 1.8.11 (12 октября 2021)</h3>
+  <h3>Что нового в OpenNumismat 1.8.12 (15 декабря 2021)</h3>
+  <ul>
+<li>Добавлены карты Mapbox (только для версии win64) и Римская империя (DARE)</li>
+    <li>Отмена для вставки изображения в Редакторе изображений</li>
+    <li>Инструмент автоматической подрезки в Редакторе изображений</li>
+    <li>Импортирование толщины и пробы из Colnect</li>
+    <li>Импорт филателистической продукции из Colnect</li>
+    <li>Импорт цвета марки из Colnect</li>
+    <li>Новые шаблоны: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
+    <li>Добавлены кнопки Сегодня и Очистить на календарь</li>
+    <li>Добавлен расчет веса серебра и золота в диалоге Сводка</li>
+    <li>Локализован диалог Сводка</li>
+    <li>Обновлен импорт из Numista с новым API</li>
+    <li>Исправлен импорт из CoinManage</li>
+    <li>Исправлен импорт неверных дат из Excel</li>
+    <li>Добавлено меню Вид</li>
+    <li>Предотвращение скрывания панели инструментов</li>
+    <li>Экспорт в формат JSON</li>
+    <li>Обновлены справочники по умолчанию</li>
+    <li>Обновлены сторонние библиотеки, совместимость с Python 3.10</li>
+  </ul>
+<h3>Что нового в OpenNumismat 1.8.11 (12 октября 2021)</h3>
   <ul>
 <li>Отключена проверка SSL сертификатов для скачивания изображений</li>
     <li>Сохранение порядка сортировки из панели инструментов. Удалено Сохранение сортировки столбцов в настройках</li>
@@ -173,13 +194,6 @@
     <li>Новые поля: Грейдер, Место, Год на монете, Фото 5 и Фото6</li>
     <li>Улучшено сохранение отчетов .doc</li>
     <li>Улучшено сохранение текущего списка</li>
-  </ul>
-<h3>Что нового в OpenNumismat 1.8.9 (01 февраля 2021)</h3>
-  <ul>
-<li>Исправлен предпросмотр отчетов в версии для x64 Windows</li>
-    <li>Исправлен Debian пакет</li>
-    <li>Добавлены таймауты для всех HTTP-запросов</li>
-    <li>Исправлено сохранение последнего варианта обрезания изображений</li>
   </ul>
 <a href="history.html">Ранее...</a>
 <h2>Снимки экранов</h2>

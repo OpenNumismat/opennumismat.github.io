@@ -124,7 +124,7 @@
 <li>Excel (with images presented as links in source file)</li>
     <li>
 <a href="https://colnect.com/">Colnect</a> (from <a href="https://colnect.com/en/help/collecting/premium_export_list">lists</a> and directly)</li>
-    <li>CoinManage 2011, 2013, 2015 (required <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow" target="_blank">Microsoft Access Database Engine</a>, Microsoft Access or any other software with ODBC Microsoft Access Driver)</li>
+    <li>CoinManage (required <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow" target="_blank">Microsoft Access Database Engine</a>, Microsoft Access or any other software with ODBC Microsoft Access Driver)</li>
     <li><a href="https://en.numista.com/">Numista</a></li>
     <li>Collection Studio 3.65 (depuis le format d'exportation XML Table)</li>
     <li>uCoin.net</li>
@@ -137,21 +137,42 @@
   <li>Suitable for other collectibles, like <a href="stamps.html">stamps</a>, banknotes, postcards, badges. And also for organize home inventory</li>
 </ul>
 <h2 id="download">Télécharger</h2>
-<p>The latest version: <strong>OpenNumismat 1.8.11</strong>. Release date: 12 October 2021</p>
+<p>The latest version: <strong>OpenNumismat 1.8.12</strong>. Release date: 15 December 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.exe" rel="nofollow">OpenNumismat - Standard installer</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.zip" rel="nofollow">OpenNumismat - .zip (no installer)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11-win64.exe" rel="nofollow">OpenNumismat - Standard installer for 64-bit Windows</a> (experimental version with freshly third-party library dependencies)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.exe" rel="nofollow">OpenNumismat - Standard installer</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.zip" rel="nofollow">OpenNumismat - .zip (no installer)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-win64.exe" rel="nofollow">OpenNumismat - Standard installer for 64-bit Windows</a> (experimental version with freshly third-party library dependencies)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/open-numismat_1.8.11_all.deb" rel="nofollow">OpenNumismat - for Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/open-numismat_1.8.12_all.deb" rel="nofollow">OpenNumismat - for Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - for Arch Linux</a></p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.11/OpenNumismat-1.8.11.dmg" rel="nofollow">OpenNumismat</a> for OS X 10.8 and later (without Statistics)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.dmg" rel="nofollow">OpenNumismat</a> for OS X 10.8 and later (without Statistics)</p>
 <h4>Autre(s)</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Versions antérieures...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Source code</a></p>
 <h2>Historique des modifications</h2>
-  <h3>What's new in OpenNumismat 1.8.11 (12 October 2021)</h3>
+  <h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
+  <ul>
+<li>Add Mapbox (only win64 version) and Roman Empire (DARE) map</li>
+    <li>Undo for image past in image editor</li>
+    <li>Autocrop tool in image editor</li>
+    <li>Import thickness and fineness from Colnect</li>
+    <li>Import philatelic products from Colnect</li>
+    <li>Import stamp color from Colnect</li>
+    <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
+    <li>Add buttons Today and Clean to calendar</li>
+    <li>Add calculating silver and gold weight in Summary dialog</li>
+    <li>Localize Summary dialog</li>
+    <li>Update importing from Numista for new API</li>
+    <li>Fix importing from CoinManage</li>
+    <li>Fix importing wrong date format from Excel</li>
+    <li>Add View menu</li>
+    <li>Prevent hiding toolbar</li>
+    <li>Export to JSON</li>
+    <li>Update default references</li>
+    <li>Update third-party libraries, Python 3.10 compatible</li>
+  </ul>
+<h3>What's new in OpenNumismat 1.8.11 (12 October 2021)</h3>
   <ul>
 <li>Checking SSL certificate for image downloading always disabled</li>
     <li>Save sort order from toolbar. Removed Store column sorting settings</li>
@@ -173,13 +194,6 @@
     <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6</li>
     <li>Improve saving .doc report</li>
     <li>Improve saving current list</li>
-  </ul>
-<h3>What's new in OpenNumismat 1.8.9 (01 February 2021)</h3>
-  <ul>
-<li>Fixed report preview in x64 Windows version</li>
-    <li>Fixed Debian package</li>
-    <li>Add timeouts for all HTTP requests</li>
-    <li>Fixed storing last crop tool</li>
   </ul>
 <a href="history.html">Historique antérieur...</a>
 <h2>Screenshots</h2>
