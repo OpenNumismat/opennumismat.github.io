@@ -100,15 +100,16 @@
 <p>With <strong>OpenNumismat</strong>, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.</p>
 <h2>Main features</h2>
 <ul>
-<li>Meer dan 70 aanpasbare fvelden om de munt te beschrijven:</li>
+<li>More than 80 customizable fields to describe the coin:</li>
   <ul>
 <li>Kenmerken</li>
     <li>Staat van een muntstuk</li>
     <li>Uitgiftedetails</li>
     <li>Kopen, verkopen, doorgeven veiling informatie</li>
     <li>Prijzen en catalogusnummers</li>
+    <li>Address and point on the map</li>
   </ul>
-<li>Tot 8 foto's van munten (voeg afbeeldingen toe van bestand, clipboard of download van internet)</li>
+<li>Up to 11 photos of a coin (insert image from file, clipboard, download from the Web at URL)</li>
   <li>Groepering, filters en sorteren om het ophalen van munten in de catalogus vergemakkelijken</li>
   <li>Genereer en print rapportage'ss, opslaan als HTML, PDF, MS Word</li>
   <li>Export aangepaste lijsten als MS Excel, HTML en CSV</li>
@@ -153,34 +154,35 @@
 <h2>History of changes</h2>
   <h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
   <ul>
-<li>Add Mapbox (only win64 version) and Roman Empire (DARE) map</li>
-    <li>Undo for image past in image editor</li>
-    <li>Autocrop tool in image editor</li>
-    <li>Import thickness and fineness from Colnect</li>
+<li>New map types: Mapbox (available only for win64 version) and Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
+    <li>Undo/redo works for pasted image in image editor</li>
+    <li>Autocrop tool for removing borders in image editor</li>
+    <li>Import coin thickness and fineness from Colnect</li>
     <li>Import philatelic products from Colnect</li>
     <li>Import stamp color from Colnect</li>
     <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
-    <li>Add buttons Today and Clean to calendar</li>
-    <li>Add calculating silver and gold weight in Summary dialog</li>
-    <li>Localize Summary dialog</li>
-    <li>Update importing from Numista for new API</li>
-    <li>Fix importing from CoinManage</li>
-    <li>Fix importing wrong date format from Excel</li>
-    <li>Add View menu</li>
-    <li>Prevent hiding toolbar</li>
-    <li>Export to JSON</li>
-    <li>Update default references</li>
-    <li>Update third-party libraries, Python 3.10 compatible</li>
+    <li>Buttons Today and Clean on calendar widget</li>
+    <li>Summary dialog show silver and gold coins count and metal weight</li>
+    <li>Localized show of prices in Summary dialog</li>
+    <li>Importing from Numista uses new API. Disabled checking SSL certificate</li>
+    <li>Unrecognized formatted dates are ignored when importing from Excel</li>
+    <li>Added View menu</li>
+    <li>Prevent hiding toolbar by right-click menu</li>
+    <li>Updated importing from CoinManage</li>
+    <li>Export data to JSON format</li>
+    <li>Updated default references</li>
+    <li>Fixed display of the application icon in Ubuntu</li>
+    <li>Updated third-party libraries, compatible with newest Python 3.10</li>
   </ul>
 <h3>What's new in OpenNumismat 1.8.11 (12 October 2021)</h3>
   <ul>
 <li>Checking SSL certificate for image downloading always disabled</li>
-    <li>Save sort order from toolbar. Removed Store column sorting settings</li>
-    <li>Summary dialog show info also for selected coins</li>
-    <li>Report is generated for all showed coins</li>
+    <li>Save current sort order as default order from toolbar. Removed Store column sorting settings</li>
+    <li>Summary dialog show info also for all shows (filtered) coins</li>
+    <li>Report is generated for all shows (filtered) coins</li>
     <li>Icons from reference always shown</li>
     <li>Improve image cropping with perspective transformation</li>
-    <li>Undo/redo for image editor</li>
+    <li>Undo/redo for actions in image editor</li>
     <li>Improve image viewer zooming</li>
     <li>Improve image context menu</li>
     <li>Settings for font size</li>
@@ -189,9 +191,9 @@
   </ul>
 <h3>What's new in OpenNumismat 1.8.10 (22 September 2021)</h3>
   <ul>
-<li>Change proxy-server for Colnect</li>
+<li>Colnect proxy-server now hosted on Amazon Web Services</li>
     <li>New status Duplicate</li>
-    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6</li>
+    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6. Fields Grader and Storage have a reference</li>
     <li>Improve saving .doc report</li>
     <li>Improve saving current list</li>
   </ul>

@@ -63,34 +63,35 @@
   </p>
 <h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
   <ul>
-<li>Add Mapbox (only win64 version) and Roman Empire (DARE) map</li>
-    <li>Undo for image past in image editor</li>
-    <li>Autocrop tool in image editor</li>
-    <li>Import thickness and fineness from Colnect</li>
+<li>New map types: Mapbox (available only for win64 version) and Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
+    <li>Undo/redo works for pasted image in image editor</li>
+    <li>Autocrop tool for removing borders in image editor</li>
+    <li>Import coin thickness and fineness from Colnect</li>
     <li>Import philatelic products from Colnect</li>
     <li>Import stamp color from Colnect</li>
     <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
-    <li>Add buttons Today and Clean to calendar</li>
-    <li>Add calculating silver and gold weight in Summary dialog</li>
-    <li>Localize Summary dialog</li>
-    <li>Update importing from Numista for new API</li>
-    <li>Fix importing from CoinManage</li>
-    <li>Fix importing wrong date format from Excel</li>
-    <li>Add View menu</li>
-    <li>Prevent hiding toolbar</li>
-    <li>Export to JSON</li>
-    <li>Update default references</li>
-    <li>Update third-party libraries, Python 3.10 compatible</li>
+    <li>Buttons Today and Clean on calendar widget</li>
+    <li>Summary dialog show silver and gold coins count and metal weight</li>
+    <li>Localized show of prices in Summary dialog</li>
+    <li>Importing from Numista uses new API. Disabled checking SSL certificate</li>
+    <li>Unrecognized formatted dates are ignored when importing from Excel</li>
+    <li>Added View menu</li>
+    <li>Prevent hiding toolbar by right-click menu</li>
+    <li>Updated importing from CoinManage</li>
+    <li>Export data to JSON format</li>
+    <li>Updated default references</li>
+    <li>Fixed display of the application icon in Ubuntu</li>
+    <li>Updated third-party libraries, compatible with newest Python 3.10</li>
   </ul>
 <h3>What's new in OpenNumismat 1.8.11 (12 October 2021)</h3>
   <ul>
 <li>Checking SSL certificate for image downloading always disabled</li>
-    <li>Save sort order from toolbar. Removed Store column sorting settings</li>
-    <li>Summary dialog show info also for selected coins</li>
-    <li>Report is generated for all showed coins</li>
+    <li>Save current sort order as default order from toolbar. Removed Store column sorting settings</li>
+    <li>Summary dialog show info also for all shows (filtered) coins</li>
+    <li>Report is generated for all shows (filtered) coins</li>
     <li>Icons from reference always shown</li>
     <li>Improve image cropping with perspective transformation</li>
-    <li>Undo/redo for image editor</li>
+    <li>Undo/redo for actions in image editor</li>
     <li>Improve image viewer zooming</li>
     <li>Improve image context menu</li>
     <li>Settings for font size</li>
@@ -99,9 +100,9 @@
   </ul>
 <h3>What's new in OpenNumismat 1.8.10 (22 September 2021)</h3>
   <ul>
-<li>Change proxy-server for Colnect</li>
+<li>Colnect proxy-server now hosted on Amazon Web Services</li>
     <li>New status Duplicate</li>
-    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6</li>
+    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6. Fields Grader and Storage have a reference</li>
     <li>Improve saving .doc report</li>
     <li>Improve saving current list</li>
   </ul>
@@ -485,68 +486,6 @@ Lägg till nyckelnavigering på tabell (Ctrl + Home, Ctrl + End)</li>
     <li>Fast sortering i cbr-mall</li>
     <li> Importerar från CoinCollector-kommandot tillgängligt endast på Windows</li>
     <li>Fast kod för körning på MacOS</li>
-  </ul>
-<h3>Vad är nytt i OpenNumismat 1.4.2 (15 februari 2013)</h3>
-  <ul>
-<li>Debianpaketet för Linux är tillgängligt</li>
-    <li>Lades till <i>Rensa allt filter</i>kommando till meny och verktygslåda</li>
-    <li>Lade till  Numismater rapport mall</li>
-    <li>Fast visade långa rader i vissa fält på<i> Redigera mynt</i>dialogruta</li>
-    <li>Fixat fel när du ställer in lösenord</li>
-    <li>Flyttade exportknapparna till vänster i verktygsfältet i <i>förhandsgranskningsdialogrutan</i>
-</li>
-    <li>Fixat detekteringsprogrammet resursväg</li>
-    <li>Uppdaterad att skapa standardmappar och filer (standardreferens och demo.db) om det saknas</li>
-  </ul>
-<h3>Vad är nytt i OpenNumismat 1.4.1 (31 januari 2013)</h3>
-  <ul>
-<li>Fasta kritiska fel med öppningsapplikation när registret är klart.</li>
-  </ul>
-<h3>Vad är nytt i OpenNumismat 1.4 (31 januari 2013)</h3>
-  <ul>
-<li> Implementerade generationsrapporter (baserat på mallar <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
-    <li> Implementerad exportanpassad lista (<i>Report</i> &amp; gt; <i>Spara nuvarande lista ..</i>.)</li>
-    <li> Lades till möjligheten att mata in data i numeriska fält (aktivera numeriska fält med<i> fria format numeriska fält</i>  i dialogrutan Inställningar)</li>
-    <li> Fixat automatisk uppdateringskontroll (med täta programstartskontroller utförs inte)</li>
-    <li>Tillagd <i>vakuum</i>kommando (meny<i>samling</i>) som frigör diskreserverade DB-motorer</li>
-    <li>Ändrade standardfilnamnet när du sparar bilder av mynt till en fil</li>
-    <li>Fixat ett eventuellt fel att öppna filen som anges i URL-fältet</li>
-    <li>Fixat ett eventuellt fel vid skapandet av en ny samling</li>
-    <li>Uppdaterad applikationsmenyn - lagt till några vanliga föremål</li>
-  </ul>
-<h3>Vad är nytt i OpenNumismat 1.3.1 (05 december 2012)</h3>
-  <ul>
-<li>Fast sparar bredd på tabellkolumner.</li>
-    <li>Lades till en knapp för att öppna URL (avsnitt <i>Klassificering</i>) och infoga en länk till en fil på disken.</li>
-    <li>Fixat valet av värdet av dialogreferens när du redigerar myntet.</li>
-    <li>Fast formatering av samlingsbeskrivningar och mynt textfält (<i>Design</i>, <i>Ämne</i>, etc.).</li>
-    <li>Samlingsfilen kan överföras som kommandoradsargument.</li>
-    <li> Fixad möjlig bugg vid redigering av negativa provisioner.</li>
-    <li>Lades till att ta bort tillfälliga filer som skapats när bilder öppnas.</li>
-    <li>Andra mindre förändringar.</li>
-  </ul>
-<h3>Vad är nytt i OpenNumismat 1.3 (23 november 2012)</h3>
-  <ul>
-<li>Refactored format för databasen för att förbättra prestanda (omvandling av befintliga samlingsfiler sker automatiskt när du öppnar dem i en ny version av OpenNumismat).</li>
-    <li>Lades till nya fält: Kvantitet, URL, Streckkod.</li>
-    <li>Tillagd automatisk kontroll för uppdateringar (omkopplad i dialogrutan Inställningar).</li>
-    <li> Implementerad import från Collection Studio 3.65. För att importera måste du först exportera den befintliga samlingen till ett format XML-tabell med menyn Collection Studio: <i>Tools</i> &amp; gt; <i>Exportera...</i>.</li>
-    <li> Tillagd förmågan att skydda data i samlingen med lösenord (Obs! Datakryptering utförs inte, så lösenordsskyddet kan inte betraktas som fullständigt.) Ange ett lösenord finns i menyn <i>Samling</i> &amp; gt; <i>Välj lösenord...</i>.</li>
-    <li>Förbättrad import från CoinManage:</li>
-    <ul>
-<li>stöd för nya fält Mängd och streckkod;</li>
-      <li>Tillägg till mynt från samlingen av bilder relaterade till beskrivningarna (sortlista);</li>
-      <li>importpriser.</li>
-    </ul>
-<li> Tilläggsknapp<i> Återgå till standard</i> i dialogrutan <i>Inställningar</i> för att återställa namnen på alla myntfälten till dess ursprungliga värden.</li>
-    <li>Fast beräkning av negativa provisioner för redigering av information om köp / försäljning av mynt.</li>
-    <li>Fast detektering av det aktuella språket i dialogrutan Inställningar.</li>
-    <li>Fasta fyllningsreferenser, beroende på landet för datainsamling.</li>
-    <li> Esc-tangenten i dialogrutan Redigera myntdialog stänger dialogrutan.</li>
-    <li>Dubbelklicka på listfliken Skapa en ny lista.</li>
-    <li>Lades till med att visa en framdriftsfält när du tar bort mynt</li>
-    <li>Förbättrad engelsk översättning.</li>
-    <li>Förbättrat utseende på dialogrutan <i>Inställningar</i>.</li>
   </ul>
 <p><a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/0489413653cc8a07b6f1beec0087293d1485a57d/ChangeLog" rel="nofollow">Previous versions changelog</a></p>
 </div>

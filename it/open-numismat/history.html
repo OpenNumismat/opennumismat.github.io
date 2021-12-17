@@ -63,34 +63,35 @@
   </p>
 <h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
   <ul>
-<li>Add Mapbox (only win64 version) and Roman Empire (DARE) map</li>
-    <li>Undo for image past in image editor</li>
-    <li>Autocrop tool in image editor</li>
-    <li>Import thickness and fineness from Colnect</li>
+<li>New map types: Mapbox (available only for win64 version) and Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
+    <li>Undo/redo works for pasted image in image editor</li>
+    <li>Autocrop tool for removing borders in image editor</li>
+    <li>Import coin thickness and fineness from Colnect</li>
     <li>Import philatelic products from Colnect</li>
     <li>Import stamp color from Colnect</li>
     <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
-    <li>Add buttons Today and Clean to calendar</li>
-    <li>Add calculating silver and gold weight in Summary dialog</li>
-    <li>Localize Summary dialog</li>
-    <li>Update importing from Numista for new API</li>
-    <li>Fix importing from CoinManage</li>
-    <li>Fix importing wrong date format from Excel</li>
-    <li>Add View menu</li>
-    <li>Prevent hiding toolbar</li>
-    <li>Export to JSON</li>
-    <li>Update default references</li>
-    <li>Update third-party libraries, Python 3.10 compatible</li>
+    <li>Buttons Today and Clean on calendar widget</li>
+    <li>Summary dialog show silver and gold coins count and metal weight</li>
+    <li>Localized show of prices in Summary dialog</li>
+    <li>Importing from Numista uses new API. Disabled checking SSL certificate</li>
+    <li>Unrecognized formatted dates are ignored when importing from Excel</li>
+    <li>Added View menu</li>
+    <li>Prevent hiding toolbar by right-click menu</li>
+    <li>Updated importing from CoinManage</li>
+    <li>Export data to JSON format</li>
+    <li>Updated default references</li>
+    <li>Fixed display of the application icon in Ubuntu</li>
+    <li>Updated third-party libraries, compatible with newest Python 3.10</li>
   </ul>
 <h3>What's new in OpenNumismat 1.8.11 (12 October 2021)</h3>
   <ul>
 <li>Checking SSL certificate for image downloading always disabled</li>
-    <li>Save sort order from toolbar. Removed Store column sorting settings</li>
-    <li>Summary dialog show info also for selected coins</li>
-    <li>Report is generated for all showed coins</li>
+    <li>Save current sort order as default order from toolbar. Removed Store column sorting settings</li>
+    <li>Summary dialog show info also for all shows (filtered) coins</li>
+    <li>Report is generated for all shows (filtered) coins</li>
     <li>Icons from reference always shown</li>
     <li>Improve image cropping with perspective transformation</li>
-    <li>Undo/redo for image editor</li>
+    <li>Undo/redo for actions in image editor</li>
     <li>Improve image viewer zooming</li>
     <li>Improve image context menu</li>
     <li>Settings for font size</li>
@@ -99,9 +100,9 @@
   </ul>
 <h3>What's new in OpenNumismat 1.8.10 (22 September 2021)</h3>
   <ul>
-<li>Change proxy-server for Colnect</li>
+<li>Colnect proxy-server now hosted on Amazon Web Services</li>
     <li>New status Duplicate</li>
-    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6</li>
+    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6. Fields Grader and Storage have a reference</li>
     <li>Improve saving .doc report</li>
     <li>Improve saving current list</li>
   </ul>
@@ -481,69 +482,6 @@
     <li>Fissato l'ordinamento nel modello cbr</li>
     <li>Comando importazione da CoinCollector disponibile solo su Windows </li>
     <li>Codice fissato per l'esecuzione su MacOS </li>
-  </ul>
-<h3>Cosa c'è di nuovo in OpenNumismat 1.4.2 (15 febbraio 2013)</h3>
-  <ul>
-<li>Il pacchetto Debian per Linux è disponibile</li>
-    <li>Aggiunto il comando <i>Annulla tutti i filtri</i> al menù e agli strumenti</li>
-    <li>Aggiunto modello di resoconto Numismater</li>
-    <li>Fissato lo scorrimento delle frasi lunghe in alcuni campi su <i>Modifica moneta</i>
-</li>
-    <li>Corretto il bug quando si imposta una password</li>
-    <li>Spostati a sinistra i pulsanti di esportazione in <i>Anteprima resoconto</i>
-</li>
-    <li>Corretto il percorso di rilevamento delle risorse dell'applicazione</li>
-    <li>Aggiornata la creazione di cartelle predefinite e file (predefinite di riferimento e demo.db) se mancanti</li>
-  </ul>
-<h3>Cosa c'è di nuovo in OpenNumismat 1.4.1 (31 gennaio 2013)</h3>
-  <ul>
-<li>Fixed critical bug with opening application when registry is clear.</li>
-  </ul>
-<h3>Cosa c'è di nuovo in OpenNumismat 1.4 (31 gennaio 2013)</h3>
-  <ul>
-<li>Implemented generation reports (based on templates <a href="http://jinja.pocoo.org/docs/" rel="nofollow">Jinja2</a>)</li>
-    <li>Implemented export customized list (<i>Report</i>&gt; <i>Save current list...</i>)</li>
-    <li>Added the ability to enter any data in numerical fields (enable <i>Free format numeric fields</i> in the Settings dialog)</li>
-    <li>Corretto controllo aggiornamenti automatico (con frequenti avvii dell'applicazione non funzionava bene)</li>
-    <li>Aggiunto comando <i>Compressione</i>  (menu <i>Collezione</i>) che libera lo spazio su disco riservato ai motori database</li>
-    <li>Cambiato il nome del file di default quando si salvano le immagini di monete in un file</li>
-    <li>Corretto un possibile errore aprendo il file specificato nel campo URL</li>
-    <li>Corretto un possibile errore quando si crea una nuova collezione</li>
-    <li>Aggiornato il menu delle applicazioni -  aggiunti alcuni elementi di uso comune</li>
-  </ul>
-<h3>Cosa c'è di nuovo in OpenNumismat 1.3.1 (05 dicembre 2012)</h3>
-  <ul>
-<li>Corretto risparmio larghezza delle colonne della tabella.</li>
-    <li>Aggiunto un pulsante per l'apertura URL (sezione <i>Classificazione</i>) e inserito un link per aprire file su disco.</li>
-    <li>Corretta la scelta del valore nel riferimento quando si modifica la moneta.</li>
-    <li>Corretta la formattazione nei campi descrizione e testo monete (<i>Disegno</i>, <i>Soggetto</i>, etc).</li>
-    <li>Il file della collezione può essere passato come argomento della riga di comando.</li>
-    <li>Fixed possible bug when editing negative commissions.</li>
-    <li>Aggiunto eliminare i file temporanei creati durante l'apertura delle immagini.</li>
-    <li>Altri minori cambiamenti.</li>
-  </ul>
-<h3>Cosa c'è di nuovo in OpenNumismat 1.3 (23 novembre 2012)</h3>
-  <ul>
-<li>Riscrittura del database per migliorare le prestazioni (la conversione dei file della collezione avviene automaticamente quando li si apre in una nuova versione di OpenNumismat).</li>
-    <li>Added new fields: Quantity, URL, Barcode.</li>
-    <li>Aggiunto controllo automatico degli aggiornamenti (passata nella finestra di dialogo Impostazioni).</li>
-    <li>Implementata l'importazione da Collection Studio 3.65. Per importare, è necessario prima esportare la collezione esistente di una tabella in formato XML utilizzando il menu Collection Studio: <i>Strumenti</i>&gt; <i>Espota...</i>.</li>
-    <li>Aggiunta la possibilità di proteggere i dati sulla collezione con una password (Nota: la crittografia dei dati non viene eseguita, in modo che la password di protezione non può essere considerata completa.) L'impostazione della password è nel menu<i>Collezione</i>&gt; <i>Imposta password...</i>.</li>
-    <li>Migliorata l'importazione da CoinManage:</li>
-    <ul>
-<li>supporto per i nuovi campi Quantità e Codici a barre;</li>
-      <li>aggiunta alle monete da collezione di immagini relative alle descrizioni (elenco varietà); </li>
-      <li>prezzi d'importazione.</li>
-    </ul>
-<li>Aggiunto pulsante <i>Ripristina predefinite</i> in <i>Impostazioni</i> per ripristinare i nomi di tutti i campi moneta ai suoi valori originali.</li>
-    <li>Corretto calcolo delle commissioni negative per modificare le informazioni per l'acquisto / vendita delle monete.</li>
-    <li>Corretto rilevamento della lingua corrente nella finestra delle Impostazioni.</li>
-    <li>Corretto riempimento dei riferimenti, a seconda del paese di raccolta dati.</li>
-    <li>Tasto Esc nella finestra di modifica moneta chiude la finestra.</li>
-    <li>Doppio click sulla barra delle schede crea una nuova lista.</li>
-    <li>Aggiunta la visualizzazione di una barra di avanzamento durante la rimozione delle monete.</li>
-    <li>Migliorata traduzione in inglese.</li>
-    <li>Migliorato l'aspetto della finestra delle <i>impostazioni</i>.</li>
   </ul>
 <p><a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/0489413653cc8a07b6f1beec0087293d1485a57d/ChangeLog" rel="nofollow">Previous versions changelog</a></p>
 </div>
