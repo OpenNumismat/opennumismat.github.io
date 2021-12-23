@@ -338,7 +338,7 @@ div.content-image {
 
 div.content-image img {
   padding: 0;
-  float: auto;
+  float: none;
   height: 250px;
 }
 }
