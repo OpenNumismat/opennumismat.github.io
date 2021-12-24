@@ -63,11 +63,11 @@
 <h3>1.1 Описание</h3>
 <p>OpenNumismat е удобно и надеждно приложение, предназначено за колекционери на монети, за създаване на нумизматична колекция.</p>
 <p>С OpenNumismat ще можете да създавате, организирате и управлявате собствени каталози на монети с подробни описания и снимки за всеки елемент.</p>
-<p>OpenNumismat се разпространява напълно абсолютно безплатно. Изходният код е лицензиран под GPL-3.0 и е достъпен на адрес <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
+<p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">https://github.com/OpenNumismat/open-numismat</a>.</p>
 <p>Официалният сайт се намира на адрес <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
 <h3>1.2 Features of the implementation</h3>
 <p>OpenNumismat е базиран на библиотеката PyQt с SQLite база данни за съхранение на събраните на данни, което позволи да се постигне лекота и отзивчивост на интерфейса и междуплатформеност.</p>
-<p>Налице е пълен списък на използваните компоненти и библиотеки <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/README.txt" target="blank_">тук</a>.</p>
+<p>A complete list of the used components and libraries is available <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/requirements.txt" target="blank_">here</a>.</p>
 <p>Иконите използвани в потребителския интерфейс са базирани на <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> и <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>Превода на интерфейса е реализиран от ентусиасти, използващи услугата <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Благодаря ви за помощта!</p>
 <h3>1.3 Разрешително</h3>
@@ -77,6 +77,7 @@
 <h2 id="sec2">2 Общ изглед</h2>
 <p>Когато стартирате приложението за първи път, основният прозорец се отваря с демонстрационна колекция:</p>
 <p><img src="/images/manual/main1234.png"></p>
+<p><a href="screenshots.html">More screenshots</a></p>
 <p>Основният прозорец се състои от следните основни елементи:</p>
 <ol>
 <li>Таблица с монети</li>
@@ -85,7 +86,7 @@
 <li>Информационен панел</li>
 </ol>
 <p>При натискане на някоя монета в таблицата с монети се показва подробна информация: в панела Изображение - снимки на монети, дървото се разгъва до елемента, описващ монетата, информационният панел показва всички въведени монетни данни.</p>
-<p>Можете да създадете нова празна колекция или да редактирате демо, като въведете нови данни.</p>
+<p>Можете да създадете нова празна колекция или да редактирате демонстрационната, като въведете нови данни.</p>
 <h2 id="sec3">3 Въвеждане на монети</h2>
 <h3>3.1 Добавяне на монета</h3>
 <p>Управлявайте своята колекция, като добавяте записи за всяка закупена, продадена или желана монета.</p>
@@ -110,7 +111,7 @@
 </ul>
 </li>
 <li>Монета - Състояние (състояние на монетата от колекцията):<ul>
-<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
+<li>Статус - основната характеристика, която определя наличието на монета в колекцията. Статуса могат да бъдат - Демонстрация, Наблюдавана, Притежавана, Поръчана, Продадена, Продава се, Желана, Наддаване, Липсваща, Дубликат. Статуса на монетата влияе върху наличността и съдържанието на раздела Пазар;</li>
 <li>Качество - степента на износване на монетите;</li>
 <li>Количество - броят дубликати или монети в ролката;</li>
 <li>Формат - формат на разпространение (единична монета, комплект или ролка);</li>
@@ -277,7 +278,7 @@
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Резервно копие</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File-&gt;Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see 8.4).</p>
+<p>Бележка: Препоръчително е да съхранявате резервни копия на физически носител, различен от работния. Изборът на облачно хранилище, като Dropbox, може да бъде добър вариант. Също така е важно да правите резервни копия редовно, преди или след извършване на голям брой промени (виж 8.4).</p>
 <h3>5.3 Vacuum</h3>
 <p>С оглед на особеностите на реализацията на SQLite, която осигурява съхранение на колекционните данни, паметта не се освобождава автоматично, когато данните се изтрият в колекционния файл. С течение на времето това може да доведе до увеличаване на размера на колекционния файл, неговата фрагментация и забавяне на приложението. Ако е необходимо, можете да намалите размера на колекционния файл, като освободите ненужно "празно" пространство, като изберете от менюто <i>Файл-&gt;Vacuum</i>.</p>
 <h3>5.4 Парола</h3>
