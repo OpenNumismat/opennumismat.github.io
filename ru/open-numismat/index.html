@@ -130,7 +130,6 @@
     <li>Collection Studio 3.65 (из экспортного формата XML Table)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
-    <li>Cabinet 2.2.2.1 (из экспортного формата)</li>
   </ul>
 <li>Поддержка языков: русский, украинский, английский, испанский, немецкий, французский, венгерский, португальский, греческий, чешский, итальянский, каталонский, нидерландский, болгарский, латвийский, шведский, персидский</li>
   <li>Кросс-платформенность: Windows, Linux, macOS и Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a> для любых браузеров, включая мобильные (iPhone, Android)</li>
@@ -138,22 +137,33 @@
   <li>Подходит для других типов коллекционирования, например <a href="stamps.html">марки</a>, банкноты, открытки, значки</li>
 </ul>
 <h2 id="download">Скачать</h2>
-<p>Последняя версия: <strong>OpenNumismat 1.8.12</strong>. Дата выхода: 15 декабря 2021</p>
+<p>Последняя версия: <strong>OpenNumismat 1.8.13</strong>. Дата выхода: 28 декабря 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.exe" rel="nofollow">OpenNumismat - Стандартный установщик</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.zip" rel="nofollow">OpenNumismat - .zip (без установщика)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-win64.exe" rel="nofollow">OpenNumismat - Стандартный установщик для 64-bit Windows</a> (экспериментальная версия со свежими библиотеками и зависимостями)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.exe">OpenNumismat - Стандартный установщик</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.zip">OpenNumismat - .zip (без установщика)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-win64.exe">OpenNumismat</a> для Windows 8.1 x86_64 и выше (экспериментальная версия со свежими библиотеками и зависимостями)</p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.dmg" rel="nofollow">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-macos11.dmg" rel="nofollow">OpenNumismat</a> for macOS 10.13 and later (experimental version with freshly third-party library dependencies)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.dmg">OpenNumismat</a> для OS X 10.8 и выше (без Статистики)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-macos11.dmg">OpenNumismat</a> для macOS 10.13 и выше (экспериментальная версия со свежими библиотеками и зависимостями)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/open-numismat_1.8.12_all.deb" rel="nofollow">OpenNumismat - для Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/open-numismat_1.8.13_all.deb">OpenNumismat - для Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - для Arch Linux</a></p>
 <h4>Другие</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Более старые версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Исходный код</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в OpenNumismat 1.8.12 (15 декабря 2021)</h3>
+  <h3>Что нового в OpenNumismat 1.8.13 (28 декабря 2021)</h3>
+  <ul>
+<li>Исправлено определение правой и нижней границы при автоподрезке</li>
+    <li>Автоподрезка доступна из меню редактора изображений</li>
+    <li>Исправлено расположение для создания файлов и папок по умолчанию при первом запуске на Linux и macOS или когда они удалены</li>
+    <li>Исправлено название приложения в диспетчере задач Windows </li>
+    <li>Удалено дублирующее подменю Список-&gt;Изменить вид. Доступно из меню Вид</li>
+    <li>Отключено контекстное меню и переход по ссылкам на предпросмотре отчетов для версии win64</li>
+    <li>Отключено контекстное меню на картах для версии win64</li>
+    <li>Удален импорт из Cabinet</li>
+  </ul>
+<h3>Что нового в OpenNumismat 1.8.12 (15 декабря 2021)</h3>
   <ul>
 <li>Новые типы карт: Mapbox (доступна только для версии win64) и Римская империя (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
     <li>Отменить/Повторить работает для вставленного изображения в редакторе изображений</li>
@@ -190,14 +200,6 @@
     <li>Улучшен шаблон postcard</li>
     <li>Исправлен импорт из Telico</li>
   </ul>
-<h3>Что нового в OpenNumismat 1.8.10 (22 сентября 2021)</h3>
-  <ul>
-<li>Прокси-сервер для Colnect теперь располагается на Amazon Web Services</li>
-    <li>Новый статус Дубликат</li>
-    <li>Новые поля: Грейдер, Место, Год на монете, Фото 5 и Фото 6. Поля Грейдер и Хранилище имеют справочник</li>
-    <li>Улучшено сохранение отчетов .doc</li>
-    <li>Улучшено сохранение текущего списка</li>
-  </ul>
 <a href="history.html">Ранее...</a>
 <h2>Снимки экранов</h2>
 <div class="images">
@@ -210,7 +212,7 @@
   <li>
 <a href="http://opennumismat.idea.informer.com/" rel="nofollow">Сообщите</a> о найденных ошибках и новых функциях, которые могут сделать <strong>OpenNumismat</strong> лучше.</li>
   <li>
-<a href="https://www.transifex.com/projects/p/opennumismat/">Translate</a> <strong>OpenNumismat</strong> and documentation to your own language with Transifex (please start with lang.ts file).</li>
+<a href="https://www.transifex.com/projects/p/opennumismat/">Переведите</a> <strong>OpenNumismat</strong>  и документацию на ваш язык с помощью Transifex (начните с файла lang.ts).</li>
   <li>Если вы обладаете исключительными правами на каталоги, фотографии или иные нумизматические материалы, которые могут быть включены в данные программы, пожалуйста, свяжитесь с автором.</li>
   <li>С любыми вопросами и предложениями вы можете обратиться к автору: <a href="mailto:opennumismat@gmail.com">opennumismat@gmail.com</a>
 </li>

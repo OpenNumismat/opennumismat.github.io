@@ -130,7 +130,6 @@
     <li>Collection Studio 3.65 (от XML таблица за експортиране)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
-    <li>Cabinet 2.2.2.1 (от формат за експортиране)</li>
   </ul>
 <li>Поддържайте езици: English, Russian, German, French, Ukrainian, Spanish, Hungarian, Portuguese, Greek, Czech, Italian, Catalan, Dutch, Bulgarian, Latvian, Swedish, Persian</li>
   <li>Междуплатформена: Windows, Linux, macOS и Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a> за всеки браузър, включително мобилен (iPhone, Android)</li>
@@ -138,22 +137,33 @@
   <li>Подходящ за други колекционерски предмети, като <a href="stamps.html">пощенски марки</a>, банкноти, пощенски картички, значки. А също и за организиране на инвентаризация на дома</li>
 </ul>
 <h2 id="download">Изтегляне</h2>
-<p>Последна версия: <strong>OpenNumismat 1.8.12</strong>. Дата на излизане: 15 декември 2021</p>
+<p>The latest version: <strong>OpenNumismat 1.8.13</strong>. Release date: 28 December 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.exe" rel="nofollow">OpenNumismat - стандартна инсталация</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.zip" rel="nofollow">OpenNumismat - .zip (без инсталация)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-win64.exe" rel="nofollow">OpenNumismat - стандартна инсталация за 64-bit Windows</a> (експериментална версия с обновени библиотеки на трети страни)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.exe">OpenNumismat - Standard installer</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.zip">OpenNumismat - .zip (no installer)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-win64.exe">OpenNumismat</a> for Windows 8.1 x86_64 and later (experimental version with freshly third-party library dependencies)</p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.dmg" rel="nofollow">OpenNumismat</a> за OS X 10.8 или по-нова (без статистика)</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-macos11.dmg" rel="nofollow">OpenNumismat</a> for macOS 10.13 and later (experimental version with freshly third-party library dependencies)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.dmg">OpenNumismat</a> for OS X 10.8 and later (without Statistics)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-macos11.dmg">OpenNumismat</a> for macOS 10.13 and later (experimental version with freshly third-party library dependencies)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/open-numismat_1.8.12_all.deb" rel="nofollow">OpenNumismat - за Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/open-numismat_1.8.13_all.deb">OpenNumismat - for Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - за Arch Linux</a></p>
 <h4>Други</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">По-стари версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Изходен код</a></p>
 <h2>История на промените</h2>
-  <h3>Какво е новото в OpenNumismat 1.8.12 (15 декември 2021)</h3>
+  <h3>What's new in OpenNumismat 1.8.13 (28 December 2021)</h3>
+  <ul>
+<li>Fixed detecting right and bottom autocrop borders</li>
+    <li>Autocrop action available from image editor menu</li>
+    <li>Fixed path for creating default files and folders on first start on Linux and macOS or when deleted on Windows</li>
+    <li>Fixed application name in Windows Task Manager</li>
+    <li>Removed duplicate sub-menu List-&gt;Change view. Available from menu View</li>
+    <li>Disabled context menu and link clicking on report preview for win64 version</li>
+    <li>Disabled context menu on map widgets for win64 version</li>
+    <li>Removed importing from Cabinet</li>
+  </ul>
+<h3>Какво е новото в OpenNumismat 1.8.12 (15 декември 2021)</h3>
   <ul>
 <li>Нови типове карти: Mapbox (достъпно само за версия на win64) и Римската империя (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
     <li>Отмени/Върни работят за поставено изображение в редактора на изображения</li>
@@ -189,14 +199,6 @@
     <li>Настройки за размера на шрифта</li>
     <li>Подобрения на шаблона за пощенски картички</li>
     <li>Коригирано импортиране от Telico</li>
-  </ul>
-<h3>Какво е новото в OpenNumismat 1.8.10 (22 септември 2021)</h3>
-  <ul>
-<li>Colnect прокси сървъра вече се хоства на Amazon Web Services</li>
-    <li>Нов статус: Дубликат</li>
-    <li>Нови полета: Оценител, Място, Година на монета, Снимка 5 и Снимка 6. Полетата Оценител и Съхранение имат номенклатури</li>
-    <li>Подобрено запазване на .doc отчет</li>
-    <li>Подобрено запазване на текущия списък</li>
   </ul>
 <a href="history.html">По-стари...</a>
 <h2>Снимка на екрана</h2>

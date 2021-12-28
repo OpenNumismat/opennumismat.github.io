@@ -130,7 +130,6 @@
     <li>Collection Studio 3.65 (de um formato de exportação como tabela XML)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
-    <li>Cabinet 2.2.2.1 (de um formato de exportação)</li>
   </ul>
 <li>Suporta os idiomas: Alemão, Búlgaro,  Catalão, Checo, Espanhol, Francês, Grego, Holandês, Húngaro, Inglês, Italiano, Letão, Persa, Português, Russo,  Sueco, Ucraniano</li>
   <li>Multi-plataforma: Windows, Linux, macOS e Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a> para qualquer navegador, incluindo móveis (iPhone, Android)</li>
@@ -138,22 +137,33 @@
   <li>Adequado para outros coleccionáveis, tais como <a href="stamps.html">selos</a>, notas, postais, emblemas. E também para organizar o inventário doméstico</li>
 </ul>
 <h2 id="download">Transferência</h2>
-<p>A última versão: <strong>OpenNumismat 1.8.12</strong>. Data de lançamento: 15 de Dezembro de 2021</p>
+<p>The latest version: <strong>OpenNumismat 1.8.13</strong>. Release date: 28 December 2021</p>
 <h4>Windows</h4>
-<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.exe" rel="nofollow">OpenNumismat - instalador padrão</a></strong></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.zip" rel="nofollow">OpenNumismat - .zip (sem instalador)</a></p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-win64.exe" rel="nofollow">OpenNumismat - instalador padrão para 64-bit Windows</a> (versão experimental com dependências de terceiros actualizadas)</p>
+<p><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.exe">OpenNumismat - Standard installer</a></strong></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.zip">OpenNumismat - .zip (no installer)</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-win64.exe">OpenNumismat</a> for Windows 8.1 x86_64 and later (experimental version with freshly third-party library dependencies)</p>
 <h4>macOS</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12.dmg" rel="nofollow">OpenNumismat</a> para OS X 10.8 e posteriores (sem estatísticas)</p>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/OpenNumismat-1.8.12-macos11.dmg" rel="nofollow">OpenNumismat</a> for macOS 10.13 and later (experimental version with freshly third-party library dependencies)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13.dmg">OpenNumismat</a> for OS X 10.8 and later (without Statistics)</p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/OpenNumismat-1.8.13-macos11.dmg">OpenNumismat</a> for macOS 10.13 and later (experimental version with freshly third-party library dependencies)</p>
 <h4>Linux</h4>
-<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.12/open-numismat_1.8.12_all.deb" rel="nofollow">OpenNumismat - para Debian/Ubuntu</a></p>
+<p><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.13/open-numismat_1.8.13_all.deb">OpenNumismat - for Debian/Ubuntu</a></p>
 <p><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat - para Arch Linux</a></p>
 <h4>Outro</h4>
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Versões anteriores...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Código fonte</a></p>
 <h2>Histórico de alterações</h2>
-  <h3>O que há de novo no OpenNumismat 1.8.12 (15 de Dezembro de 2021)</h3>
+  <h3>What's new in OpenNumismat 1.8.13 (28 December 2021)</h3>
+  <ul>
+<li>Fixed detecting right and bottom autocrop borders</li>
+    <li>Autocrop action available from image editor menu</li>
+    <li>Fixed path for creating default files and folders on first start on Linux and macOS or when deleted on Windows</li>
+    <li>Fixed application name in Windows Task Manager</li>
+    <li>Removed duplicate sub-menu List-&gt;Change view. Available from menu View</li>
+    <li>Disabled context menu and link clicking on report preview for win64 version</li>
+    <li>Disabled context menu on map widgets for win64 version</li>
+    <li>Removed importing from Cabinet</li>
+  </ul>
+<h3>O que há de novo no OpenNumismat 1.8.12 (15 de Dezembro de 2021)</h3>
   <ul>
 <li>Novos tipos de mapas: Mapbox (só para win64) e Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
     <li>Desfazer/Refazer funciona em imagens coladas no editor</li>
@@ -190,14 +200,6 @@
     <li>Melhoria do modelo de postal</li>
     <li>Reparação da importação de Telico</li>
   </ul>
-<h3>O que há de novo no OpenNumismat 1.8.10 (22 de Setembro de 2021)</h3>
-  <ul>
-<li>Servidor proxy de Colnect hospedado no Amazon Web Services</li>
-    <li>Novo estado Duplicada</li>
-    <li>Novos campos: Graduador, Sede, Ano em moeda, Imagem 5 e Imagem 6. Os campos Graduador e Armazém têm uma referência</li>
-    <li>Melhorias na gravação do relatório .doc</li>
-    <li>Melhorias na gravação da lista actual</li>
-  </ul>
 <a href="history.html">Antigas...</a>
 <h2>Capturas de ecrã</h2>
 <div class="images">
@@ -210,7 +212,7 @@
   <li>
 <a href="http://opennumismat.idea.informer.com/" rel="nofollow">Envie</a> o relatório quando encontrar erros e sugira novas funcionalidades que tornarão o <strong>OpenNumismat</strong> ainda melhor.</li>
   <li>
-<a href="https://www.transifex.com/projects/p/opennumismat/">Translate</a> <strong>OpenNumismat</strong> and documentation to your own language with Transifex (please start with lang.ts file).</li>
+<a href="https://www.transifex.com/projects/p/opennumismat/">Traduza</a> o <strong>OpenNumismat</strong> e a documentação para o seu idioma com o Transifex (por favor, comece pelo ficheiro lang.ts file).</li>
   <li>Se detém direitos exclusivos sobre catálogos, fotografias ou outro conteúdo numismático que possa ser incluído nos dados da aplicação, por favor, contacte o autor.</li>
   <li>Pode contactar o autor com quaisquer dúvidas ou sugestões: <a href="mailto:opennumismat@gmail.com">opennumismat@gmail.com</a>
 </li>
