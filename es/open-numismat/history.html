@@ -61,48 +61,59 @@
 <h2>Historial de cambios en OpenNumismat</h2>
 <p>
   </p>
-<h3>What's new in OpenNumismat 1.8.13 (28 December 2021)</h3>
+<h3>What's new in OpenNumismat 1.8.14 (20 April 2022)</h3>
   <ul>
-<li>Fixed detecting right and bottom autocrop borders</li>
-    <li>Autocrop action available from image editor menu</li>
-    <li>Fixed path for creating default files and folders on first start on Linux and macOS or when deleted</li>
-    <li>Fixed displaying application name in Windows Task Manager</li>
-    <li>Removed duplicate sub-menu List-&gt;Change view. Available from menu View</li>
-    <li>Disabled context menu and link clicking on report preview for win64 version</li>
-    <li>Disabled context menu on map widgets for win64 version</li>
-    <li>Removed importing from Cabinet</li>
+<li>Year calculator for Year on coin field (Hebrew, Islamic, Japan, Roman, Nepal, Thai, Burmese, Hijri)</li>
+    <li>Fix converting empty fineness while importing from Colnect</li>
+    <li>Cashing images while importing from Colnect</li>
+    <li>Available enter fractions in Value field (1/24, 1/16, 1/12, 1/10, 1/8, 1/6, 1/5, 1/4, 1/3, 1/2, 2/3, 3/4)</li>
+    <li>Expanded supported fractions converting in Value field (⅒, ⅛, ⅙, ⅕, ⅔, 7½, 12½)</li>
+    <li>Free format numeric fields settings is enabling entering any values in Value field</li>
+    <li>Enable BC settings has a higher priority than Free format numeric fields for Year filed</li>
+    <li>Fixed processing non float weight value in Summary dialog</li>
   </ul>
-<h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
+<h3>Novedades en OpenNumismat 1.8.13 (28 Diciembre 2021)</h3>
   <ul>
-<li>New map types: Mapbox (available only for win64 version) and Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
-    <li>Undo/redo works for pasted image in image editor</li>
-    <li>Autocrop tool for removing borders in image editor</li>
-    <li>Import coin thickness and fineness from Colnect</li>
-    <li>Import philatelic products from Colnect</li>
-    <li>Import stamp color from Colnect</li>
-    <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
-    <li>Buttons Today and Clean on calendar widget</li>
-    <li>Summary dialog show silver and gold coins count and metal weight</li>
-    <li>Localized show of prices in Summary dialog</li>
-    <li>Importing from Numista uses new API. Disabled checking SSL certificate</li>
-    <li>Unrecognized formatted dates are ignored when importing from Excel</li>
-    <li>Added View menu</li>
-    <li>Prevent hiding toolbar by right-click menu</li>
-    <li>Updated importing from CoinManage</li>
-    <li>Export data to JSON format</li>
-    <li>Updated default references</li>
-    <li>Fixed display of the application icon in Ubuntu</li>
-    <li>Updated third-party libraries, compatible with newest Python 3.10</li>
+<li>Corregida la detección de bordes de recorte automático derecho e inferior </li>
+    <li>Acción de recorte automático disponible en el menú de editor de imágenes </li>
+    <li>Corregida la ruta para crear los archivos y carpetas predeterminados en el primer inicio en Linux y macOS, o cuando se eliminan </li>
+    <li>Corregido el nombre de la aplicación que se muestra en el Administrador de tareas de Windows </li>
+    <li>Eliminado sub-menú duplicado Listado-&gt;Cambiar vista. Disponible en el menú Vista</li>
+    <li>Desactivado el menú contextual y el clic en el enlace en la previsualización de informe para la versión Win64</li>
+    <li>Desactivado el menú contextual en widgets de mapa para la versión win64 </li>
+    <li>Eliminada la importación desde Cabinet</li>
+  </ul>
+<h3>Novedades en OpenNumismat 1.8.12 (15 Diciembre 2021)</h3>
+  <ul>
+<li>Nuevos tipos de mapa: Mapbox (sólo en la versión win64) e Imperio Romano (<a href="https://dh.gu.se/dare/">ATREVETE</a>)</li>
+    <li>Desahcer/rehacer funciona para imagen pegada en el editor de imagen</li>
+    <li>Herramienta de recorte automático para quitar bordes en el editor de imagen</li>
+    <li>Importación del grosor y fineza de la moneda desde Colnect</li>
+    <li>Importación de productos filatélicos desde Colnect</li>
+    <li>Importación del color de sello desde Colnect</li>
+    <li>Nuevas plantillas: poseedores, Conmemorativas_PorPais, Conmemorativas_PorAño</li>
+    <li>Botones Hoy y Limpiar en el widget de calendario</li>
+    <li>El diálogo Sumario muestra el recuento de monedas de plata y oro y el peso del metal</li>
+    <li>Muestra localizada de precios en el diálogo Sumario</li>
+    <li>La importación desde Numista usa una nueva API. Desactivada la verificación de certificado SSL</li>
+    <li>Las fechas formateadas no reconocidas se ignoran al importar desde Excel</li>
+    <li>Añadido menú Vista</li>
+    <li>En el menú contextual con clic derecho se evita esconder la barra de herramientas</li>
+    <li>Actualizada la importación desde CoinManage</li>
+    <li>Exportación de datos a formato JSON</li>
+    <li>Actualizadas las referencias por defecto</li>
+    <li>Corregida la visualización del icono de la aplicación en Ubuntu</li>
+    <li>Actualizadas las librerías de terceros, compatibles con el más nuevo Python 3.10</li>
   </ul>
 <h3>Novedades en OpenNumismat 1.8.11 (12 Octubre 2021)</h3>
   <ul>
 <li>Revisión del certificado SSL para descargas de imagen siempre desactivada</li>
-    <li>Save current sort order as default order from toolbar. Removed Store column sorting settings</li>
-    <li>Summary dialog show info also for all shows (filtered) coins</li>
-    <li>Report is generated for all shows (filtered) coins</li>
+    <li>Grabar la ordenación actual como orden por defecto desde la barra de herramientas. Eliminados los ajustes de Guardar ordenación de columna</li>
+    <li>El diálogo Sumario muestra info también para todas las muestras (filtradas) de monedas</li>
+    <li>El informe se genera para todas las muestras (filtradas) de monedas</li>
     <li>Los iconos desde referencia se muestran siempre</li>
     <li>Mejora del recorte de imagen con transformación de perspectiva</li>
-    <li>Undo/redo for actions in image editor</li>
+    <li>Deshacer/rehacer para acciones en el editor de imagen</li>
     <li>Mejora del zoom en el visor de imagen</li>
     <li>Mejora del menú contextual en Imagen</li>
     <li>Ajustes para tamaño de letra</li>
@@ -111,9 +122,9 @@
   </ul>
 <h3>Novedades en OpenNumismat 1.8.10 (22 Septiembre 2021)</h3>
   <ul>
-<li>Colnect proxy-server now hosted on Amazon Web Services</li>
+<li>El servidor proxy de Colnect ahora se aloja en Amazon Web Services</li>
     <li>Nuevo estado Duplicado</li>
-    <li>New fields: Grader, Seat, Year on coin, Photo 5 and Photo 6. Fields Grader and Storage have a reference</li>
+    <li>Nuevos campos: Graduador, Asiento, Año en la moneda, Foto 5 y Foto 6. Los campos Graduador y Almacenamiento tienen una referencia</li>
     <li>Mejora en guardado de informe .doc</li>
     <li>Mejora en guardado de lista actual</li>
   </ul>
@@ -494,7 +505,7 @@
     <li>Comando Importar desde CoinCollector disponible sólo en Windows</li>
     <li>Corregido código para ejecutar en MacOS</li>
   </ul>
-<p><a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/0489413653cc8a07b6f1beec0087293d1485a57d/ChangeLog" rel="nofollow">Previous versions changelog</a></p>
+<p><a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/0489413653cc8a07b6f1beec0087293d1485a57d/ChangeLog" rel="nofollow">Registro de cambios de versiones anteriores</a></p>
 </div>
       </section>
 </div>

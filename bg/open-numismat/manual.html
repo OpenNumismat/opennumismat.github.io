@@ -75,7 +75,7 @@
 <p>OpenNumismat is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>Трябва да сте получили копие от GNU General Public License заедно с OpenNumismat. Ако не, вижте <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
 <h2 id="sec2">2 Общ изглед</h2>
-<p>Когато стартирате приложението за първи път, основният прозорец се отваря с демонстрационна колекция:</p>
+<p>Когато стартирате програмата за първи път, основният прозорец се отваря с демонстрационна колекция:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p><a href="screenshots.html">Още екранни снимки</a></p>
 <p>Основният прозорец се състои от следните основни елементи:</p>
@@ -210,7 +210,7 @@
 За поставяне на връзка към локален файл можете да плъзнете и пуснете или да копирате и поставите файл в текстово поле в диалоговия прозорец Редакция.
 
 <h4>3.1.1 Редактиране на изображения</h4>
-<p>Приложението поддържа до 7 изображения от всяка монета.</p>
+<p>Програмата поддържа до 7 изображения от всяка монета.</p>
 <p>Поддържат се следните формати на изображения: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Изображенията се записват във формат JPEG. Големите изображения се компресират, така че максималната страна да не надвишава 1024 пиксела (можете да го промените в диалоговия прозорец Настройки).
 <br>За да вмъкнете или промените изображение, щракнете с десния бутон върху полето и изберете от падащото меню една от възможните опции:</p>
 <p><img src="/images/manual/img_menu.png"></p>
@@ -258,7 +258,7 @@
 <p><img src="/images/manual/clear_filters.png"></p>
 <h3>4.4 Дърво</h3>
 <p>Дървото от лявата страна на прозореца на приложението ви позволява да групирате монетите по стойностите на полета. Когато избирате елемент от дърво, монетите, съответстващи на избраната стойност, се показват в таблицата.</p>
-<p>За да персонализирате дървото, щракнете с десния бутон върху елемента на дървото и изберете <i>Персонализиране на дървото</i>:</p>
+<p>За да персонализирате дървото, щракнете с десния бутон върху елемента на дървото и изберете <i>Персонализиране на дървото...</i>:</p>
 <p><img src="/images/manual/tree.png"></p>
 <p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.</p>
 <h3>4.5 Списъци</h3>
@@ -293,13 +293,15 @@
 <li>Entries with the same value of ID and Created field will be updated when Updated field value is less in opened collection.</li>
 </ul>
 <h3>5.5 Импортиране</h3>
-<p>OpenNumismat allows you to import data into a collection from an Excel file. To do this, select the menu <i>File-&gt;Import-&gt;Excel</i> and select the source file.
+<p>OpenNumismat allows you to import data from collections creted in another software (MS Excel, CoinManage, Collection Studio and Tellico)
+or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> and uCoin.net).</p>
+<p>For importing from MS Excel select the menu <i>File-&gt;Import-&gt;Excel</i> and select the source file.
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
 <p><img src="/images/manual/import.png"></p>
 
 <h2 id="sec6">6 Отчети</h2>
 <h3>6.1 Генериране на отчет</h3>
-<p>Приложението поддържа генериране на отчети по шаблони. Можете да редактирате съществуващи или да създавате свои собствени шаблони за отчети.
+<p>Програмата поддържа генериране на отчети по шаблони. Можете да редактирате съществуващи или да създавате свои собствени шаблони за отчети.
 <br>Генерираният отчет може да бъде отпечатан или записан във формати HTML, PDF, MS Word от диалоговият прозорец за визуализация.</p>
 <p>За да създадете отчет, трябва да изберете монетите, за които данните ще бъдат включени в отчета и да отворите диалоговия прозорец като изберете от меню <i>Отчет-&gt;Отчет...</i>:</p>
 <p><img src="/images/manual/report_preview.png"></p>
@@ -313,7 +315,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Двигателят за генериране на отчети за шаблони се базира на библиотеката с отворен код Jinja 2.</p>
 <p>Потребителските шаблони трябва да бъдат поставени в папка Documents (обикновено C:\Users\user\Documents\OpenNumismat\templates). Всеки шаблон е в отделна подпапка, чието име се използва като име на шаблона.</p>
 <p>Отчетите се генерират в кодировка UTF-8 и съответно шаблоните трябва да са в едно и също кодиране. Следователно, за редактиране на шаблони се препоръчва да използвате например Notepad ++.</p>
-<p>Внимание: при изтриване, преинсталиране или актуализиране на приложението, потребителските шаблони могат да бъдат загубени. Винаги архивирайте шаблоните си, ако правите промени в тях, преди тези действия.</p>
+<p>Внимание: при изтриване, преинсталиране или актуализиране на програмата, потребителските шаблони могат да бъдат загубени. Винаги архивирайте шаблоните си, ако правите промени в тях, преди тези действия.</p>
 <h3>6.4 Експортиране на таблицата с монети</h3>
 <p>OpenNumismat ви позволява да запишете текущата таблица с монети с всички приложени филтри и да сортирате в отделен файл в MS Excel, HTML или CSV формат (Забележка: в текущата реализация изображенията не се експортират).</p>
 <p>You can export the Table of coins in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
