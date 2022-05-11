@@ -430,7 +430,7 @@ only screen and (min-resolution: 144dpi)  {
 }
 
 .mySlides img {
-  width: 100%;
+  max-width: 100%;
 }
 
 /* Next & previous buttons */
@@ -494,6 +494,7 @@ a.prev:hover, a.next:hover {
   -webkit-animation-duration: 1s;
   animation-name: fade;
   animation-duration: 1s;
+  text-align: center;
 }
 
 @-webkit-keyframes fade {
