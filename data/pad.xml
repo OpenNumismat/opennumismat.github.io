@@ -34,9 +34,9 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>OpenNumismat</Program_Name>
-		<Program_Version>1.8.14</Program_Version>
-		<Program_Release_Month>04</Program_Release_Month>
-		<Program_Release_Day>20</Program_Release_Day>
+		<Program_Version>1.8.15</Program_Version>
+		<Program_Release_Month>05</Program_Release_Month>
+		<Program_Release_Day>11</Program_Release_Day>
 		<Program_Release_Year>2022</Program_Release_Year>
 		<Program_Cost_Dollars>0</Program_Cost_Dollars>
 		<Program_Cost_Other_Code />
@@ -78,16 +78,20 @@ With OpenNumismat, you will be able to organize and manage coin collection: crea
 			<Char_Desc_2000>OpenNumismat is a free, open-source coin collecting software.
 With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.
 Main features:
-  * More than 70 customizable fields to describe the coin
-  * Up to 8 photos coins (insert image from file, clipboard, download from the Web at URL)
+  * More than 80 customizable fields to describe the coin
+  * Up to 11 photos coins (insert image from file, clipboard, download from the Web at URL)
   * The grouping, filters and sorting to facilitate the retrieval of coins in the catalog
   * Generate and print reports, saving as HTML, PDF, MS Word
   * Export customized lists as MS Excel, HTML and CSV
   * Duplication of coins to quickly add a similar coin
   * Batch edit coins
+  * Built-in image editor
+  * Statistics
   * Ability to add and customize the lists to display the required data
   * Does not require additional software to work with a database
-  * Importing from Colnect, CoinManage, Collection Studio 3.65 and Tellico
+  * Search and import coin, banknote, stamp info from Colnect, an online collectors community
+  * Search and import coin, medal info from ANS collections database
+  * Importing from Excel, Colnect, Numista, CoinManage, Collection Studio 3.65 and Tellico
     (additional software may be required)
   * Support languages: English, Russian, German, Spanish, French, Ukranian, Hungarian, Portuguese, Greek, Czech, Italian, Polish, Catalan, Dutch, Bulgarian, Latvian, Swedish, Persian
   * Cross-platform: Windows, Linux, macOS
@@ -103,7 +107,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />

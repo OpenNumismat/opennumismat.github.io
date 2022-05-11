@@ -124,14 +124,15 @@
   <li>İstatistikler</li>
   <li>Ability to add and customize the lists to display the required data</li>
   <li>Does not require additional software to work with a database</li>
-  <li>Çevrimiçi bir koleksiyoncu topluluğu olan <a href="https://colnect.com/">Colnect</a>'ten madeni para, kağıt para ve pul bilgilerini içe aktarma</li>
+  <li>Search and import coin, banknote, stamp info from <a href="https://colnect.com/">Colnect</a>, an online collectors community</li>
+  <li>Search and import coin, medal info from <a href="http://numismatics.org/search/">ANS</a> collections database</li>
   <li>Var olan koleksiyonları içe aktarma:</li>
   <ul>
 <li>Excel (with images presented as links in source file)</li>
     <li>
-<a href="https://colnect.com/">Colnect</a> (from <a href="https://colnect.com/en/help/collecting/premium_export_list">lists</a> and directly)</li>
+<a href="https://colnect.com/">Colnect</a> (from <a href="https://colnect.com/en/help/collecting/premium_export_list">lists</a>)</li>
+    <li><a href="https://numista.com/">Numista</a></li>
     <li>CoinManage (required <a href="http://www.microsoft.com/download/en/details.aspx?id=13255" rel="nofollow" target="_blank">Microsoft Access Database Engine</a>, Microsoft Access or any other software with ODBC Microsoft Access Driver)</li>
-    <li><a href="https://en.numista.com/">Numista</a></li>
     <li>Collection Studio 3.65 (from a export format XML Table)</li>
     <li>uCoin.net</li>
     <li>Tellico</li>
@@ -143,28 +144,28 @@
 </ul>
 <h2 id="download">İndir</h2>
 <p></p>
-<div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.8.14</strong></div>. Release date: <div class="inline">20 April 2022</div>
+<div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.8.15</strong></div>. Release date: <div class="inline">11 May 2022</div>
 <p>
 </p>
 <h4>Windows</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14-win64.exe">OpenNumismat</a></strong></div> for Windows 8.1 x86_64 and later (version with freshly third-party library dependencies)
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15-win64.exe">OpenNumismat</a></strong></div> for Windows 8.1 x86_64 and later (version with freshly third-party library dependencies)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14.exe">OpenNumismat</a></div> - for Windows XP x86 and later
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15.exe">OpenNumismat</a></div> - for Windows XP x86 and later
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14.zip">OpenNumismat</a></div> - .zip (no installer)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15.zip">OpenNumismat</a></div> - .zip (no installer)
 <p>
 </p>
 <h4>macOS</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14-macos11.dmg">OpenNumismat</a></div> for macOS 10.13 and later (version with freshly third-party library dependencies)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15-macos11.dmg">OpenNumismat</a></div> for macOS 10.13 and later (version with freshly third-party library dependencies)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/OpenNumismat-1.8.14.dmg">OpenNumismat</a></div> for OS X 10.8 and later (without Statistics)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/OpenNumismat-1.8.15.dmg">OpenNumismat</a></div> for OS X 10.8 and later (without Statistics)
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.14/open-numismat_1.8.14_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.15/open-numismat_1.8.15_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://aur.archlinux.org/packages/open-numismat-bin/">OpenNumismat</a></div> - for Arch Linux
 <p>
@@ -173,7 +174,18 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Daha önceki yayımlamalar...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Source code</a></p>
 <h2>Değişikliklerin geçmişi</h2>
-  <h3>What's new in OpenNumismat 1.8.14 (20 April 2022)</h3>
+  <h3>What's new in OpenNumismat 1.8.15 (11 May 2022)</h3>
+  <ul>
+<li>Search and import coin info from <a href="http://numismatics.org/search/">ANS</a> collections database</li>
+    <li>Importing from Numista uses API v3</li>
+    <li>Hide unused details pages</li>
+    <li>Free format numeric fields settings is enabling entering any values in Year field</li>
+    <li>Fix converting Japan and Nepal year to Gregorian</li>
+    <li>Fix import to mobile for HDPI density in x64 version</li>
+    <li>Improve labels alignment in coin details forms</li>
+    <li>Add Status icons for select default Status in Settings dialog</li>
+  </ul>
+<h3>What's new in OpenNumismat 1.8.14 (20 April 2022)</h3>
   <ul>
 <li>Year calculator for Year on coin field (Hebrew, Islamic, Japan, Roman, Nepal, Thai, Burmese, Hijri)</li>
     <li>Fix converting empty fineness while importing from Colnect</li>
@@ -194,28 +206,6 @@
     <li>Disabled context menu and link clicking on report preview for win64 version</li>
     <li>Disabled context menu on map widgets for win64 version</li>
     <li>Removed importing from Cabinet</li>
-  </ul>
-<h3>What's new in OpenNumismat 1.8.12 (15 December 2021)</h3>
-  <ul>
-<li>New map types: Mapbox (available only for win64 version) and Roman Empire (<a href="https://dh.gu.se/dare/">DARE</a>)</li>
-    <li>Undo/redo works for pasted image in image editor</li>
-    <li>Autocrop tool for removing borders in image editor</li>
-    <li>Import coin thickness and fineness from Colnect</li>
-    <li>Import philatelic products from Colnect</li>
-    <li>Import stamp color from Colnect</li>
-    <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
-    <li>Buttons Today and Clean on calendar widget</li>
-    <li>Summary dialog show silver and gold coins count and metal weight</li>
-    <li>Localized show of prices in Summary dialog</li>
-    <li>Importing from Numista uses new API. Disabled checking SSL certificate</li>
-    <li>Unrecognized formatted dates are ignored when importing from Excel</li>
-    <li>Added View menu</li>
-    <li>Prevent hiding toolbar by right-click menu</li>
-    <li>Updated importing from CoinManage</li>
-    <li>Export data to JSON format</li>
-    <li>Updated default references</li>
-    <li>Fixed display of the application icon in Ubuntu</li>
-    <li>Updated third-party libraries, compatible with newest Python 3.10</li>
   </ul>
 <a href="history.html">Daha eski...</a>
 <h2>Nasıl yardım edebilirim?</h2>
