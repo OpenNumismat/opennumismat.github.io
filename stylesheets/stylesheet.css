@@ -138,6 +138,8 @@ p img {
   text-align: center;
   border: none;
   max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 #github-page ul, ol, dl {
