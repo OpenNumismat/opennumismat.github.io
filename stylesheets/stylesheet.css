@@ -431,6 +431,8 @@ only screen and (min-resolution: 144dpi)  {
 
 .mySlides img {
   max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 /* Next & previous buttons */
