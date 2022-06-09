@@ -65,7 +65,7 @@
 <p>С OpenNumismat ще можете да създавате, организирате и управлявате собствени каталози на монети с подробни описания и снимки за всеки елемент.</p>
 <p>OpenNumismat се разпространява напълно абсолютно безплатно. Изходният код е лицензиран под GPL-3.0 и е достъпен на адрес <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
 <p>Официалният сайт се намира на адрес <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
-<h3>1.2 Features of the implementation</h3>
+<h3>1.2 Характеристики на изпълнението</h3>
 <p>OpenNumismat е базиран на библиотеката PyQt с SQLite база данни за съхранение на събраните на данни, което позволи да се постигне лекота и отзивчивост на интерфейса и междуплатформеност.</p>
 <p>Наличен е пълен списък на използваните компоненти и библиотеки <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/requirements.txt" target="blank_">тук</a>.</p>
 <p>Иконите използвани в потребителския интерфейс са базирани на <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> и <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
@@ -87,6 +87,16 @@
 </ol>
 <p>При натискане на някоя монета в таблицата с монети се показва подробна информация: в панела Изображение - снимки на монети, дървото се разгъва до елемента, описващ монетата, информационният панел показва всички въведени монетни данни.</p>
 <p>Можете да създадете нова празна колекция или да редактирате демонстрационната, като въведете нови данни.</p>
+<h3>2.1 Изглед на таблица с монети</h3>
+<p>Можете да промените изгледа на таблицата с монети чрез менюто Изглед-&gt;Промяна на изгледа</p>
+<p><img src="/images/iconCard.png"></p>
+<p><img src="/images/iconView.png"></p>
+
+<h3>2.2 Панел с подробности</h3>
+<p>Можете да превключите информационния панел към Статистика или Карта чрез менюто Изглед-&gt;Детайли</p>
+<p><img src="/images/screenStatistics4.png"></p>
+<p><img src="/images/screenMap1.png"></p>
+
 <h2 id="sec3">3 Въвеждане на монети</h2>
 <h3>3.1 Добавяне на монета</h3>
 <p>Управлявайте своята колекция, като добавяте записи за всяка закупена, продадена или желана монета.</p>
@@ -98,7 +108,7 @@
 <li>Наименование - описателно име на монетата (може да бъде създадено автоматично от останалите полета, като кликнете върху бутона „Генериране“);</li>
 <li>Регион;</li>
 <li>Държава;</li>
-<li>Период - период в историята на страната;</li>
+<li>Период - период от историята на страната или период на монетосечене;</li>
 <li>Владетел;</li>
 <li>Стойност;</li>
 <li>Парична единица;</li>
@@ -111,7 +121,7 @@
 </ul>
 </li>
 <li>Монета - Състояние (състояние на монетата от колекцията):<ul>
-<li>Статус - основната характеристика, която определя наличието на монета в колекцията. Статуса могат да бъдат - Демонстрационна, Наблюдавана, Притежавана, Поръчана, Продадена, Продава се, Желана, Наддаване, Липсваща, Дубликат. Статуса на монетата влияе върху наличността и съдържанието на раздела Пазар;</li>
+<li>Статус - основната характеристика, която определя наличието на монета в колекцията. Статуса могат да бъдат - Демонстрационна, Наблюдавана, Притежавана, Поръчана, Продадена, Продажба, Желана, Наддаване, Липсваща, Дубликат. Статуса на монетата влияе върху наличността и съдържанието на раздела Пазар;</li>
 <li>Качество - степента на износване на монетите;</li>
 <li>Количество - броят дубликати или монети в ролката;</li>
 <li>Формат - формат на разпространение (единична монета, комплект или ролка);</li>
@@ -127,17 +137,17 @@
 <li>Дата;</li>
 <li>Цена;</li>
 <li>Платена - окончателна цена, включително комисионна;</li>
-<li>Commission - additional costs associated with the acquisition of a coin (the field is available only in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
+<li>Комисионна - допълнителни разходи, свързани с придобиването на монета (полето е достъпно само в прозореца за редактиране на монети). Позволено е да се въведе размерът на комисионата, както и процентът от цената (например 10%);</li>
 <li>Продавач;</li>
 <li>Място;</li>
 <li>Информация.</li>
 </ul>
 </li>
-<li>Market - Продава се:<ul>
+<li>Пазар - Продажба:<ul>
 <li>Дата;</li>
 <li>Цена;</li>
-<li>Спечелени - общата получена сума, като се вземе предвид комисионната;</li>
-<li>Commission - additional costs associated with the sale of coins (the field is only available in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
+<li>Приход - получената сума, като се вземе предвид комисионната;</li>
+<li>Комисионна -  допълнителни разходи, свързани с продажбата на монети (полето е достъпно само в прозореца за редактиране на монети). Позволено е да се въведе размерът на комисионата, както и процентът от цената (например 10%);</li>
 <li>Купувач;</li>
 <li>Място;</li>
 <li>Информация.</li>
@@ -182,10 +192,10 @@
 <li>Класификация:<ul>
 <li>1#, 2#, 3#, 4# - номера на версии на монетата в каталози;</li>
 <li>Рядкост;</li>
-<li>Fine - the approximate price of a coin in the state F-12, F-15;</li>
-<li>VF - the approximate price of a coin in the state of VF-20, VF-25, VF-30, VF-35;</li>
-<li>XF - the approximate price of a coin in the state EF-40, XF-45;</li>
-<li>Unc - the approximate price of a coin in the state MS-60 and above;</li>
+<li>Fine - приблизителната цена на монета в състояние F-12, F-15;</li>
+<li>VF - приблизителната цена на монета в състояние VF-20, VF-25, VF-30, VF-35;</li>
+<li>XF - приблизителната цена на монета в състояние EF-40, XF-45;</li>
+<li>UNC - приблизителната цена на монета в състояние MS-60 и повече;</li>
 <li>Вариация, лицева страна, обратна страна, гурт - кратко описание на разновидността на монетата, нейната лицева страна, обратна страна и гурт;</li>
 <li>URL адрес - уеб-връзка към информация за монетата или към файл на диска.</li>
 </ul>
@@ -226,11 +236,11 @@
 <p>Двойното щракване върху полето за изображение отваря прозорец за избор на файл, ако изображението все още не е записано, или отваря изображението с програмата по подразбиране за преглед на изображения настроена в операционната система.</p>
 <p>Изображението на монетата в таблицата с монети се генерира автоматично от изображенията на лицевата и обратната страна на монетата.</p>
 <h3>3.2 Редактиране на монета</h3>
-<p>To edit the coin data, you need to double-click on the required coin, right-click on the desired coin and select <i>Edit...</i>, select the coin and press Enter key or select the <i>Coin-&gt;Edit...</i> menu. After that, the Edit dialog will be opened, described in 3.1.</p>
+<p>За да редактирате данните за монетата, трябва да щракнете два пъти върху желаната монета, да щракнете с десния бутон на мишката върху желаната монета и да изберете <i>Редактиране...</i>, да изберете монетата и да натиснете клавиша Enter или да изберете менюто <i>Монета-&gt;Редактиране...</i>. След това ще се отвори диалоговият прозорец Редактиране, описан в 3.1.</p>
 <h3>3.3 Клониране на монети</h3>
 <p>За бързо добавяне на подобна монета можете да използвате клониране. За целта кликнете с десния бутон върху вече запаметена монетата и изберете "Клониране". Прозорецът за редактиране, изпълнен с информация за новата монета, ще се отвори и остава само да редактирайте различната информация от клонираната монета.</p>
-<p>You can also copy (using Ctrl+Ins or Ctrl+C) the existing coin and paste it (by pressing Shift+Ins or Ctrl+V) - the Edit dialog will also open.
-<br>A copied coin or coin group (see below) can be inserted into a third-party application (for example, MS Excel or Notepad). In this case, when inserting into a third-party application, only text fields (without images) will be copied.</p>
+<p>Можете също така да копирате (с Ctrl+Ins или Ctrl+C) съществуващата монета и да я поставите (с натискане на Shift+Ins или Ctrl+V) - ще се отвори и диалоговият прозорец Редактиране.
+<br>Копирана монета или група монети (вж. по-долу) може да се вмъкне в приложение на трета страна (например MS Excel или Notepad). В този случай при вмъкване в приложение на трета страна ще се копират само текстови полета (без изображения).</p>
 <p>Можете също да добавите нова монета с предварително попълнени полета от дървото. За да направите това, щракнете с десния бутон върху елемента <i>Добавяне на монета...</i>. В отворения диалог за редактиране ще бъдат попълнени всички общи полета за монети, съответстващи на този елемент.</p>
 <h3>3.4 Редактиране на няколко монети</h3>
 <p>Понякога трябва да смените няколко полета наведнъж за няколко монети. За да направите това, изберете необходимите монети (за да изберете няколко монети, използвайте щракването с натиснат клавиш Shift или Ctrl, за да изберете всички монети, натиснете Ctrl+A), щракнете с десния бутон върху избраната група монети и изберете от менюто <i>Групова редакция...</i> или <i>Монета-&gt;Редакция...</i>.
@@ -245,25 +255,25 @@
 <p>Таблицата с монетите е централният елемент на приложението, служи за показване на данните за монетите според избраните в настройките.</p>
 <p>Броят и местоположението на полетата могат да бъдат зададени от меню <i>Списък-&gt;Избор на колони...</i> или като щракнете с десния бутон върху заглавката на таблицата и изберете <i>Избор на колони...</i>.</p>
 <p><img src="/images/manual/columns.png"></p>
-<p>In the opened dialog, it is necessary to mark the fields of interest. Dragging the names of fields with a mouse can change the location of the fields relative to each other. You can also drag field headers directly into the coin table. Clicking on the field header sorts the table according to the selected field.</p>
+<p>В отворения диалогов прозорец е необходимо да маркирате полетата, които ви интересуват. Преместването на имената на полетата с мишката може да промени местоположението на полетата едно спрямо друго. Можете също така да плъзгате заглавията на полетата директно в таблицата с монетите. Щракването върху заглавието на полето подрежда таблицата в зависимост от избраното поле.</p>
 <p>Можете да контролирате ширината на колона в таблица, като разширите границата на заглавието на колоната с мишката или като щракнете с десния бутон върху заглавката и изберете <i>Регулиране на размера</i>.</p>
 <h3>4.2 Панел с изображения</h3>
-<p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
-<br>Double-clicking opens the image in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.</p>
+<p>На този панел се показват изображения, свързани с монетата. В долната част на панела има квадратчета за отметка, които ви позволяват да контролирате броя на едновременно показваните изображения.
+<br>Двойното щракване отваря изображението в стандартната програма за преглед на изображения на вашата операционна система. Когато поставите курсора на мишката върху дадено изображение, се показва уникалното име на изображението, ако то е било посочено при редактирането на монетата.</p>
 <h3>4.3 Филтър</h3>
 <p>Използвайки менюто в заглавията на колоните на таблицата, можете да филтрирате монетите по стойността на полетата.</p>
 <p><img src="/images/manual/filter.png"></p>
-<p>The Filter menu contains all column values. Marked values will be displayed, the rest will be hidden. To mark all items or remove marks from all values, select <i>(All)</i>. At the top of the menu is a field that allows you to filter out the menu values.</p>
+<p>Менюто Филтър съдържа всички стойности на колоната. Маркираните стойности ще бъдат показани, а останалите ще бъдат скрити. За да маркирате всички елементи или да премахнете маркировките от всички стойности, изберете <i>(Всички)</i>. В горната част на менюто се намира поле, което ви позволява да филтрирате стойностите от менюто.</p>
 <p>За да нулирате всички филтри в текущия списък, щракнете върху бутона <i>Изчистване на всички филтри</i> от лентата с инструменти:</p>
 <p><img src="/images/manual/clear_filters.png"></p>
 <h3>4.4 Дърво</h3>
 <p>Дървото от лявата страна на прозореца на приложението ви позволява да групирате монетите по стойностите на полета. Когато избирате елемент от дърво, монетите, съответстващи на избраната стойност, се показват в таблицата.</p>
 <p>За да персонализирате дървото, щракнете с десния бутон върху елемента на дървото и изберете <i>Персонализиране на дървото...</i>:</p>
 <p><img src="/images/manual/tree.png"></p>
-<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.</p>
+<p>В отворения диалогов прозорец можете да променяте структурата на дървото, като плъзгате елементите с мишката. Елементите, които са плъзнати отдясно наляво, се добавят в края на дървото. При плъзгане отляво надясно елементите се премахват от дървото. За да обедините две полета (например <i>стойност + парична единица</i>), , задръжте натиснат клавиша Ctrl, докато влачите.</p>
 <h3>4.5 Списъци</h3>
 <p>Списъкът ви позволява да имате няколко независими изгледа на колекция. Всеки списък съхранява свои собствени настройки за полета, колони, филтри и дърво. Това позволява списъците да се използват като постоянни филтри.</p>
-<p>Add a new list by clicking on the <i>List-&gt;New...</i> menu or by double-clicking on the list panel (from the empty space next to the headings of the existing lists) and entering the name of the new list. You can also create a copy of the existing list by right-clicking on the source list and selecting <i>Clone</i>.</p>
+<p>Добавете нов списък, като щракнете върху менюто <i>Списък-&gt;Нов...</i> или като щракнете два пъти върху панела със списъци (от празното място до заглавията на съществуващите списъци) и въведете името на новия списък. Можете също така да създадете копие на съществуващ списък, като щракнете с десния бутон на мишката върху изходния списък и изберете <i>Клониране</i>.</p>
 <p>Можете да промените името на списъка, като изберете от меню <i>Списък-&gt;Преименуване...</i> или като щракнете с десния бутон върху заглавието на списъка и изберете <i>Преименуване...</i>.</p>
 <p>Затворените списъци не се изтриват и са налични от меню <i>Списък-&gt;Отваряне</i>. За да изтриете за постоянно частни списъци, изберете от меню <i>Списък-&gt;Отваряне-&gt;Премахнете всички</i>. </p>
 <h3>4.6 Лента за състоянието</h3>
@@ -272,12 +282,12 @@
 
 <h2 id="sec5">5 Управление на файл с колекция</h2>
 <p>Файлът с колекцията е файл с разширението .db и съхранява всички данни за колекцията, включително изображения, различни от номенклатурата (вижте 7). Можете да го копирате, премествате, изтривате и преименувате с помощта на вашата операционна система.</p>
-<h3>5.1 Creating/Opening</h3>
+<h3>5.1 Създаване/Отваряне</h3>
 <p>За да създадете нова колекция, изберете менюто <i>Файл-&gt;Нова...</i>. В диалоговия прозорец, който се отваря, изберете местоположението и името на новия файл за колекция.</p>
-<p>To open an existing collection file, select the <i>File-&gt;Open...</i> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
-<br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
+<p>За да отворите съществуващ файл на колекция, изберете от менюто <i>Файл-&gt;Отваряне...</i> и изберете желания файл. Можете също така да асоциирате файловете на колекциите (например, ако изберете съответната опция при инсталирането на приложението) и да ги отваряте автоматично при "извикване" от файловия мениджър.
+<br>В менюто Файл се показват до 5 наскоро отворени колекции, достъпни за бързо отваряне.</p>
 <h3>5.2 Резервно копие</h3>
-<p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File-&gt;Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
+<p>За да се предотврати загубата на данни от колекцията поради хардуерен, софтуерен или човешки грешки, както и работата на злонамерени програми, се препоръчва да се направи резервно копие. За да създадете резервно копие на колекцията, изберете менюто <i>Файл-&gt;Резервно копие</i>. Това ще създаде копие на текущата колекция с добавени дата и час (например demo_171025115112.db за копието, направено в 11:51:12 ч. на 25.10.2017 г.) в директорията, посочена в настройките. За да възстановите данните, просто преименувайте архивния файл, като изтриете времевия печат. Можете също така да копирате файла на колекцията, като използвате операционната си система.</p>
 <p>Бележка: Препоръчително е да съхранявате резервни копия на физически носител, различен от работния. Изборът на облачно хранилище, като Dropbox, може да бъде добър вариант. Също така е важно да правите резервни копия редовно, преди или след извършване на голям брой промени (виж 8.4).</p>
 <h3>5.3 Vacuum</h3>
 <p>С оглед на особеностите на реализацията на SQLite, която осигурява съхранение на колекционните данни, паметта не се освобождава автоматично, когато данните се изтрият в колекционния файл. С течение на времето това може да доведе до увеличаване на размера на колекционния файл, неговата фрагментация и забавяне на приложението. Ако е необходимо, можете да намалите размера на колекционния файл, като освободите ненужно "празно" пространство, като изберете от менюто <i>Файл-&gt;Vacuum</i>.</p>
@@ -289,14 +299,14 @@
 <p>Промените, направени в множество копия на файл с колекция, могат да бъдат обединени безопасно от менюто <i>Файл-&gt;Синхронизиране...</i>.</p>
 <p>Най-важните свойства на синхронизиращия алгоритъм:</p>
 <ul>
-<li>All new entries will be added (detected by Created field) to opened collection.</li>
-<li>Entries with the same value of ID and Created field will be updated when Updated field value is less in opened collection.</li>
+<li>Всички нови записи ще бъдат добавени (разпознати от полето Създаден) към отворената колекция.</li>
+<li>Записите с една и съща стойност на полетата ID и Създаден на ще бъдат актуализирани, когато актуализирана стойност на полето е по-малка в отворената колекция.</li>
 </ul>
 <h3>5.5 Импортиране</h3>
-<p>OpenNumismat allows you to import data from collections creted in another software (MS Excel, CoinManage, Collection Studio and Tellico)
-or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> and uCoin.net).</p>
-<p>For importing from MS Excel select the menu <i>File-&gt;Import-&gt;Excel</i> and select the source file.
-After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
+<p>OpenNumismat ви позволява да импортирате данни от колекции, създадени в друг софтуер (MS Excel, CoinManage, Collection Studio и Tellico)
+или сайтовете (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> и uCoin.net).</p>
+<p>За импортиране от MS Excel изберете менюто <i>Файл-&gt;Импортиране-&gt;Excel</i> и изберете изходния файл.
+След това ще се отвори диалоговият прозорец за определяне на полета с първите 10 монети от изходния файл:</p>
 <p><img src="/images/manual/import.png"></p>
 
 <h2 id="sec6">6 Отчети</h2>
@@ -305,8 +315,8 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <br>Генерираният отчет може да бъде отпечатан или записан във формати HTML, PDF, MS Word от диалоговият прозорец за визуализация.</p>
 <p>За да създадете отчет, трябва да изберете монетите, за които данните ще бъдат включени в отчета и да отворите диалоговия прозорец като изберете от меню <i>Отчет-&gt;Отчет...</i>:</p>
 <p><img src="/images/manual/report_preview.png"></p>
-<p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).</p>
-<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see 6.2) for open report in your browser.</p>
+<p>В диалоговия прозорец Преглед можете да изберете шаблон на отчета (левият списък в лентата с инструменти), да управлявате режима на преглед и да отпечатате или да запишете отчета във файл в желания формат (десните бутони в лентата с инструменти).</p>
+<p>Забележка: Диалоговият прозорец за преглед използва стара библиотека за генериране на HTML. Затова отчетите в предварителния преглед могат да бъдат повредени и да не съответстват на изгледа в съвременните браузъри. Също така той може да се срине при генериране на големи отчети (повече от 100 монети). За преглеждане и отпечатване можете да използвате функцията Бърз отчет (виж 6.2) за отваряне на отчета в браузъра.</p>
 <h3>6.2 Бърз отчет</h3>
 <p>Чрез избиране от менюто <i>Отчет-&gt;Преглед в браузъра</i>, можете бързо да прегледате отчета за избраните монети в HTML формат.</p>
 <p><img src="/images/manual/report.png"></p>
@@ -316,7 +326,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Потребителските шаблони трябва да бъдат поставени в папка Documents (обикновено C:\Users\user\Documents\OpenNumismat\templates). Всеки шаблон е в отделна подпапка, чието име се използва като име на шаблона.</p>
 <p>Отчетите се генерират в кодировка UTF-8 и съответно шаблоните трябва да са в едно и също кодиране. Следователно, за редактиране на шаблони се препоръчва да използвате например Notepad ++.</p>
 <p>Внимание: при изтриване, преинсталиране или актуализиране на програмата, потребителските шаблони могат да бъдат загубени. Винаги архивирайте шаблоните си, ако правите промени в тях, преди тези действия.</p>
-<h3>6.4 Report template examples</h3>
+<h3>6.4 Примери за шаблони на отчети</h3>
 <p>Commemoratives_ByCountry</p>
 <p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png"></a></p>
 <p>Commemoratives_ByYear</p>
@@ -324,12 +334,12 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>holders</p>
 <p><a href="/data/holders.pdf"><img src="/images/manual/holders.png"></a></p>
 
-<h3>6.5 Exporting the Table of coins</h3>
+<h3>6.5 Експортиране на таблицата с монети</h3>
 <p>OpenNumismat ви позволява да запишете текущата таблица с монети с всички приложени филтри и да сортирате в отделен файл в MS Excel, HTML или CSV формат (Забележка: в текущата реализация изображенията не се експортират).</p>
-<p>You can export the Table of coins in the menu <i>Report-&gt;Save current list...</i>. In the opened dialog select the file name, the required format and save the file.</p>
-<h3>6.6 Statistics</h3>
-<p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see 6.5) and use its functionality.</p>
-<h3>6.7 Summary</h3>
+<p>Можете да експортирате таблицата с монети от менюто <i>Отчет-&gt;Запазване на текущия списък...</i>. В отворения диалогов прозорец изберете името на файла, необходимия формат и запишете файла.</p>
+<h3>6.6 Статистика</h3>
+<p>Също така за създаване на диаграми и изчисляване на статистически данни можете да използвате MS Excel. Копирайте монетите, които ви трябват, от OpenNumismat в MS Excel или експортирайте таблица с монети във файл на MS Excel (виж 6.5) и използвайте неговата функционалност.</p>
+<h3>6.7 Обобщение</h3>
 <p><img src="/images/manual/summary.png"></p>
 
 <h2 id="sec7">7 Номенклатури</h2>
@@ -340,11 +350,11 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p><img src="/images/manual/ref_edit1.png"></p>
 <p>Щракването с десния бутон върху елемента в директорията отваря достъп за добавяне или изтриване на иконата на елемента:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
-<p>References for Country, Period, Ruler, Unit, Mint, Series is a cross-references and their updating is available only if you select the value of the base field that exists in the reference. For example, to add a new mint, you should first select an existing country.</p>
-<p>The <i>Sort</i> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.</p>
-<p>To quickly fill references with entered data from the collection, select the <i>Reference-&gt;Fill from collection</i> menu.</p>
+<p>Препратките за Държава, Период, Владетел, Парична единица, Монетен двор, Серия са кръстосани препратки и актуализирането им е достъпно само ако изберете стойността на базовото поле, което съществува в препратката. Например, за да добавите нов монетен двор, първо трябва да изберете съществуваща държава.</p>
+<p>Квадратчето за отметка <i>Сортиране</i>  подрежда всички записи в директорията, в противен случай всички елементи ще се показват в реда, в който са въведени.</p>
+<p>За бързо попълване на Номенклатури с въведени данни от колекцията, изберете от менюто <i>Номенклатури-&gt;Попълване от колекцията</i>.</p>
 <p>По подразбиране номенклатурата се съхраняват в отделен файл с разширение .ref, който може да бъде копиран, преименуван или изтриван посредством вашата операционна система. Пътят към файла с номенклатури може да бъде посочен в диалоговия прозорец Настройки.</p>
-<p>Also you can attach current reference to a collection file. Select <i>Reference-&gt;Attach current reference</i> for attaching or <i>Reference-&gt;Detach current reference</i> for remove reference from collection and use default from Settings.</p>
+<p>Също така можете да прикачите текуща номенклатура към файл на колекция. Изберете <i>Номенклатура-&gt;Прикачване на текущата номенклатура</i> за прикрепване или <i>Номенклатура-&gt;Откачване на текущата номенклатура</i> за премахване на номенклатурата от колекцията и използвайте настройките по подразбиране.</p>
 <h2 id="sec8">8 Настройки</h2>
 <p>Диалоговият прозорец Настройки ви позволява да конфигурирате външния вид и поведението на приложението. За да отворите диалоговия прозорец, изберете от менюто <i>Файл-&gt;Настройки</i>:</p>
 <p><img src="/images/settingsMain.png"></p>
