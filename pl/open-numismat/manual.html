@@ -53,14 +53,14 @@
 <li><a href="/">Strona główna</a></li>
         <li><a href="../open-numismat/#download">Pobierz</a></li>
         <li><a href="../open-numismat/manual.html">Manuał</a></li>
-        <li><a href="../open-numismat/faq.html">FAQ</a></li>
+        <li><a href="../open-numismat/faq.html">Najczęściej zadawane pytania</a></li>
         <li><a href="../open-numismat/#donate">Donacja</a></li>
         </ul>
 </div>
 <div class="inner-content">
 <h1>Podręcznik użytkownika</h1>
-<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1 Introduction</h2>
-<h3>1.1 Description</h3>
+<a href="#sec1">1 Wprowadzenie</a><br><a href="#sec2">2 Główny widok</a><br><a href="#sec3">3 Wprowadzanie monet</a><br><a href="#sec4">4 Widok monet </a><br><a href="#sec5">5 Zarządzanie plikiem kolekcji</a><br><a href="#sec6">6 Raporty</a><br><a href="#sec7">7 Odnośniki</a><br><a href="#sec8">8 Ustawienia</a><br><h2 id="sec1">1 Wprowadzenie</h2>
+<h3>1.1 Opis</h3>
 <p>OpenNumismat is a handy and reliable application designed for collectors of coins and coin collectors, to create a numismatic collection.</p>
 <p>With OpenNumismat you will be able to create, organize, and manage your own catalogs of coins with detailed descriptions and photos for each item.</p>
 <p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
@@ -70,11 +70,11 @@
 <p>A complete list of the used components and libraries is available <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/requirements.txt" target="blank_">here</a>.</p>
 <p>Icons used in the interface, based on the <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> and <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>Translation of the interface implemented by enthusiasts using the service <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Thank you for the help!</p>
-<h3>1.3 License</h3>
+<h3>1.3 Licencja</h3>
 <p>OpenNumismat is programem bezpłatnym - może być rozpowszechniany i/lub edytowany na warunkach Powszechnej Licencji Publicznej GNU, opublikowanej przez Fundację Wolnego Oprogramowania, według wersji 3 tej Licencji lub (opcjonalnie) dowolnej późniejszej wersji.</p>
 <p>OpenNumismat jest rozpowszechniany w nadziei, że będzie użyteczny, ale BEZ JAKIEJKOLWIEK GWARANCJI ; bez żadnej gwarancji przydatności HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ . Zobacz GNU General Public License po więcej szczegółów.</p>
 <p>You should have received a copy of the GNU General Public License along with OpenNumismat. If not, see <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
-<h2 id="sec2">2 General view</h2>
+<h2 id="sec2">2 Główny widok</h2>
 <p>When you first start the application, the main window opens with a demo collection:</p>
 <p><img src="/images/manual/main1234.png"></p>
 <p><a href="screenshots.html">More screenshots</a></p>
@@ -107,15 +107,15 @@
 <li>Coin - Main details:<ul>
 <li>Name - a descriptive name of the coin (can be automatically created from the remaining fields by clicking the "Generate" button);</li>
 <li>Region;</li>
-<li>Country;</li>
+<li>Kraj;</li>
 <li>Period - period in the history of the country or coinage period;</li>
 <li>Ruler;</li>
-<li>Value;</li>
-<li>Unit;</li>
+<li>Wartość;</li>
+<li>Jednostka;</li>
 <li>Year;</li>
 <li>Mint;</li>
 <li>Mint mark - a sign of the mint;</li>
-<li>Type;</li>
+<li>Typ;</li>
 <li>Series - a series of commemorative coins;</li>
 <li>Subject - an event or object to which a commemorative coin is dedicated.</li>
 </ul>
@@ -127,45 +127,45 @@
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Condition;</li>
 <li>Storage - a description of the physical location of the coin;</li>
-<li>Barcode;</li>
+<li>Kod kreskowy;</li>
 <li>Grader;</li>
 <li>Defect - a description of the mint-made error;</li>
 <li>Features.</li>
 </ul>
 </li>
-<li>Market - Buy:<ul>
-<li>Date;</li>
-<li>Price;</li>
+<li>Rynek - Kup:<ul>
+<li>Data;</li>
+<li>Cena;</li>
 <li>Paid - final price including commission;</li>
 <li>Commission - additional costs associated with the acquisition of a coin (the field is available only in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
-<li>Seller;</li>
+<li>Sprzedawca;</li>
 <li>Place;</li>
-<li>Info.</li>
+<li>Informacje.</li>
 </ul>
 </li>
-<li>Market - Sale:<ul>
-<li>Date;</li>
-<li>Price;</li>
+<li>Rynek - Sprzedaż:<ul>
+<li>Data;</li>
+<li>Cena;</li>
 <li>Bailed - the total received amount taking into account the commission;</li>
 <li>Commission - additional costs associated with the sale of coins (the field is only available in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);</li>
-<li>Buyer;</li>
+<li>Kupiec;</li>
 <li>Place;</li>
-<li>Info.</li>
+<li>Informacje.</li>
 </ul>
 </li>
-<li>Map</li>
+<li>Mapa</li>
 <li>Parameters - Parameters (physical parameters of the coin):<ul>
-<li>Material;</li>
+<li>Materiał;</li>
 <li>Fineness;</li>
-<li>Weight;</li>
-<li>Diameter;</li>
-<li>Thickness;</li>
-<li>Shape;</li>
+<li>Waga;</li>
+<li>Średnica;</li>
+<li>Grubość;</li>
+<li>Kształt;</li>
 <li>Obv/Rev - the ratio of obverse and reverse (medal, coin).</li>
 </ul>
 </li>
 <li>Parameters - Minting (coin release data):<ul>
-<li>Date of issue;</li>
+<li>Data wydania;</li>
 <li>Mintage;</li>
 <li>Emission period;</li>
 <li>Quality - minting technique;</li>
@@ -176,12 +176,12 @@
 <li>Obverse - the obverse image;</li>
 <li>Design (obverse);</li>
 <li>Designer (obverse);</li>
-<li>Engraver (obverse);</li>
+<li>Grafik (awers);</li>
 <li>Color (obverse);</li>
 <li>Reverse - reverse image;</li>
 <li>Design (reverse);</li>
 <li>Designer (reverse);</li>
-<li>Engraver (reverse);</li>
+<li>Grafik (rewers);</li>
 <li>Color (reverse);</li>
 <li>Edge - the image of the edge;</li>
 <li>Type (of edge);</li>
@@ -191,7 +191,7 @@
 </li>
 <li>Classification:<ul>
 <li>1#, 2#, 3#, 4# - numbers of a version of a coin under catalogs;</li>
-<li>Rarity;</li>
+<li>Rzadkość;</li>
 <li>Fine - the approximate price of a coin in the state F-12, F-15;</li>
 <li>VF - the approximate price of a coin in the state of VF-20, VF-25, VF-30, VF-35;</li>
 <li>XF - the approximate price of a coin in the state EF-40, XF-45;</li>
@@ -200,7 +200,7 @@
 <li>URL - web-link to information about the coin or to a file on the disk.</li>
 </ul>
 </li>
-<li>Images:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
+<li>Obrazy:<ul><li>Photo 1, Photo 2, Photo 3, Photo 4, Photo 5, Photo 6 - 6 additional photos or images. You can add specific title for an image by double-click on image title or right click on image.</li></ul>
 </li>
 <li>System (not editable, can be displayed only in the Table of coins):<ul>
 <li>ID - unique coin number in the collection;</li>
@@ -250,7 +250,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <h3>3.5 Removing</h3>
 <p>You can remove coins from the collection one by one or by a group. To delete, select the <i>Coin-&gt;Delete</i> menu, right-click on the selected coin or coin group and select <i>Delete</i> or press the Del key.</p>
 <p>Removed coins are removed from the collection at once and can not be repaired - be careful.</p>
-<h2 id="sec4">4 View Coins</h2>
+<h2 id="sec4">4 Zobacz monety</h2>
 <h3>4.1 Table of coins</h3>
 <p>The Table of coins is the central element of the application, serves to display coin data according to those selected with the settings.</p>
 <p>The number and location of fields can be set in the <i>List-&gt;Select columns...</i> menu or by right-clicking on the table header and selecting <i>Select columns...</i>.</p>
@@ -271,7 +271,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>To customize the tree, right-click on the tree element and select <i>Customize tree...</i>:</p>
 <p><img src="/images/manual/tree.png"></p>
 <p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the Ctrl key while dragging.</p>
-<h3>4.5 Lists</h3>
+<h3>4.5 Listy</h3>
 <p>The lists allow you to have several independent collection views. Each list stores its own settings for fields, columns, filters and tree. This allows the lists to be used as permanent filters.</p>
 <p>Add a new list by clicking on the <i>List-&gt;New...</i> menu or by double-clicking on the list panel (from the empty space next to the headings of the existing lists) and entering the name of the new list. You can also create a copy of the existing list by right-clicking on the source list and selecting <i>Clone</i>.</p>
 <p>You can change the name of the list by selecting the <i>List-&gt;Rename...</i> menu or by right-clicking on the list title and selecting <i>Rename...</i>.</p>
@@ -288,7 +288,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Backup</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <i>File-&gt;Backup</i>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see 8.4).</p>
+<p>Uwaga: Zaleca się przechowywanie kopii zapasowych na fizycznym nośniku innym niż komputer. Dobrym rozwiązaniem może być wybór magazynu w chmurze, takiego jak Dropbox. Ważne jest również regularne wykonywanie kopii zapasowych przed lub po wprowadzeniu dużej liczby zmian (patrz 8.4).</p>
 <h3>5.3 Vacuum</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <i>File-&gt;Vacuum</i> menu.</p>
 <h3>5.4 Password</h3>
@@ -309,7 +309,7 @@ or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numist
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:</p>
 <p><img src="/images/manual/import.png"></p>
 
-<h2 id="sec6">6 Reports</h2>
+<h2 id="sec6">6 Raporty</h2>
 <h3>6.1 Generating reports</h3>
 <p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
 <br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
@@ -359,9 +359,9 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <i>File-&gt;Settings</i>:</p>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Fields</h3>
+<h3>8.1 Pola</h3>
 <p>The Fields panel of the settings dialog allows you to rename and remove part of the collection fields from the interface. In this case only the selected fields will be displayed in the program interface, but the data will be saved for all fields.</p>
-<h3>8.2 Acceleration of storage</h3>
+<h3>8.2 Przyspieszenie magazynowania danych</h3>
 <p>The SQLite database engine have a multiple settings that affect the speed and reliability:</p>
 <ul>
 <li>Reliable - all changes will be guaranteed to be saved;</li>
@@ -378,11 +378,11 @@ You can enable autobackup. This feature will make backups after changing specifi
 Collection specific settings (stored for each collection file):
 <p><img src="/images/settingsCollection.png"></p>
 
-<p>Preview image height:</p>
+<p>Wysokość podglądu obrazu:</p>
 <p><img src="/images/manual/main_height.png"></p>
 
 <p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
-<p>Images at bottom:</p>
+<p>Obrazy na dole:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 </div>
@@ -391,7 +391,7 @@ Collection specific settings (stored for each collection file):
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner"><p>Source code available at <a href="https://github.com/OpenNumismat">GitHub</a></p>
+      <footer class="inner"><p>Kod źródłowy dostępny na <a href="https://github.com/OpenNumismat">GitHub</a></p>
         <p>Opublikowano przy pomocy <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
 </div>
