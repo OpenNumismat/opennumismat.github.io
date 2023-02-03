@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const cacheName = 'OpenNumismat-Mobile-0.5.2';
+const cacheName = 'OpenNumismat-Mobile-0.6.0';
 const filesToCache = [
   '/open-numismat-app/',
   '/open-numismat-app/index.html',
@@ -41,7 +41,22 @@ const filesToCache = [
   '/open-numismat-app/img/sale.png',
   '/open-numismat-app/img/wish.png',
   '/open-numismat-app/img/missing.png',
-  '/open-numismat-app/img/duplicate.png'
+  '/open-numismat-app/img/duplicate.png',
+  '/open-numismat-app/i18n/web_i18n_bg.json',
+  '/open-numismat-app/i18n/web_i18n_ca.json',
+  '/open-numismat-app/i18n/web_i18n_de.json',
+  '/open-numismat-app/i18n/web_i18n_el.json',
+  '/open-numismat-app/i18n/web_i18n_en.json',
+  '/open-numismat-app/i18n/web_i18n_es.json',
+  '/open-numismat-app/i18n/web_i18n_fa.json',
+  '/open-numismat-app/i18n/web_i18n_fr.json',
+  '/open-numismat-app/i18n/web_i18n_it.json',
+  '/open-numismat-app/i18n/web_i18n_nl.json',
+  '/open-numismat-app/i18n/web_i18n_pl.json',
+  '/open-numismat-app/i18n/web_i18n_pt.json',
+  '/open-numismat-app/i18n/web_i18n_ru.json',
+  '/open-numismat-app/i18n/web_i18n_tr.json',
+  '/open-numismat-app/i18n/web_i18n_uk.json'
 ];
 
 self.addEventListener('install', function(e) {
