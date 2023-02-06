@@ -300,8 +300,14 @@ function readSettings() {
 	sql = "SELECT * FROM settings;";
 
 	worker.onmessage = function(event) {
+        if (event.data["results"] === undefined) {
+            status();
+            error(i18next.t('wrong_version') + ": " + event.data.error);
+            return;
+        }
+
 		var results = event.data.results;
-        
+
         v = results[0].values;
         v.forEach(function(elem) {
             if (elem[0] === 'Version')
@@ -764,7 +770,8 @@ dbFileElm.onchange = function() {
             }
         };
         r.onerror = function() {
-            error(i18next.t('failed_read_file') + " " + file.name + "<br>" + r.error);
+            error(i18next.t('failed_read_file') + " " + file.name + "\n" + r.error);
+            status();
         };
         status(i18next.t('load_db'));
         r.readAsArrayBuffer(file);
