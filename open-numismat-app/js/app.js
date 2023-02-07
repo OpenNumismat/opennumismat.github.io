@@ -411,9 +411,9 @@ function fillSummary() {
           "SELECT count(*) FROM coins WHERE status='missing';" +
           "SELECT SUM(totalpayprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND totalpayprice<>'' AND totalpayprice IS NOT NULL;" +
           "SELECT SUM(payprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND payprice<>'' AND payprice IS NOT NULL;" +
-          "SELECT paydate FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND paydate<>'' AND paydate IS NOT NULL ORDER BY paydate LIMIT 1;" +
           "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate') AND " + gold_filter + ";" +
-          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate') AND " + silver_filter + ";";
+          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate') AND " + silver_filter + ";" +
+          "SELECT paydate FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND paydate<>'' AND paydate IS NOT NULL ORDER BY paydate LIMIT 1;";
 
 	worker.onmessage = function(event) {
 		var results = event.data.results;
@@ -423,10 +423,10 @@ function fillSummary() {
         count_owned = results[1].values[0];
         if (count_owned > 0)
             html += i18next.t('count_owned') + ': ' + count_owned + '<br>';
-        v = results[9].values[0];
+        v = results[8].values[0];
         if (v > 0)
             html += i18next.t('gold_coins') + ': ' + v + '<br>';
-        v = results[10].values[0];
+        v = results[9].values[0];
         if (v > 0)
             html += i18next.t('silver_coins') + ': ' + v + '<br>';
         v = results[2].values[0];
@@ -453,8 +453,8 @@ function fillSummary() {
             if (count_owned > 0)
                 html += i18next.t('average_paid') + ': ' + (paid/count_owned).toLocaleString(undefined, {maximumFractionDigits: 2}) + '<br>';
         }
-        if (results[8].values.length > 1) {
-            date = new Date(results[8].values[0]);
+        if (results[10]) {
+            date = new Date(results[10].values[0]);
             html += i18next.t('first_purchase') + ': ' + date.toLocaleDateString() + '<br>';
         }
 
