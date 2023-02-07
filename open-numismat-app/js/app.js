@@ -51,6 +51,20 @@ function loadTranslation(lang, func) {
     });
 }
 
+function showDensity() {
+    if (window.devicePixelRatio < 1.5)
+        density = "MDPI";
+    else if (window.devicePixelRatio < 2)
+        density = "HDPI";
+    else if (window.devicePixelRatio < 2.5)
+        density = "XHDPI";
+    else if (window.devicePixelRatio < 3.5)
+        density = "XXHDPI";
+    else
+        density = "XXXHDPI";
+    $("#density").text(i18next.t('density') + density);
+}
+
 loadTranslation(lang, function() {
     i18next.init({
       lng: lang,
@@ -63,6 +77,7 @@ loadTranslation(lang, function() {
     });
 
     $("body").localize();
+    showDensity();
 });
 
 function langChanged() {
@@ -72,6 +87,7 @@ function langChanged() {
     loadTranslation(lang, function() {
         i18next.changeLanguage(lang);
         $("body").localize();
+        showDensity();
     });
 }
 
@@ -584,7 +600,8 @@ var tableCreate = function (columns, values) {
 const infoFields = ['coins.title', 'obverseimg.image', 'reverseimg.image',
     'status', 'region', 'country', 'period', 'ruler', 'value', 'unit', 'type',
     'series', 'subjectshort', 'issuedate', 'year', 'mintage', 'material',
-    'mint', 'mintmark', 'features', 'subject'];
+    'mint', 'mintmark', 'features', 'subject', 'grade', 'paydate', 'payprice',
+    'storage', 'condition', 'quantity'];
 function infoFieldIndex(field) {
     return infoFields.findIndex(element => element === field);
 }
@@ -627,46 +644,66 @@ var infoCreate = function () {
         images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[infoFieldIndex('obverseimg.image')]) + '"></div>';
     if (v[infoFieldIndex('reverseimg.image')])
         images += '<div class="coin-image"><img src="data:image/png;base64,' + arrayBufferToBase64(v[infoFieldIndex('reverseimg.image')]) + '"></div>';
-    var fields = '<table class="info">';
+
+    var fields = '<div class="coin-fields">';
+    fields += '<div class="info"><dl>';
     if (v[infoFieldIndex('status')])
-        fields += '<tr><th>' + i18next.t('status') + ':</th><td><b>' + htmlStatusViewFull(v[infoFieldIndex('status')]) + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('status') + '</dt><dd>' + htmlStatusViewFull(v[infoFieldIndex('status')]) + '</dd>';
     if (v[infoFieldIndex('region')])
-        fields += '<tr><th>' + i18next.t('region') + ':</th><td><b>' + v[infoFieldIndex('region')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('region') + '</dt><dd>' + v[infoFieldIndex('region')] + '</dd>';
     if (v[infoFieldIndex('country')])
-        fields += '<tr><th>' + i18next.t('country') + ':</th><td><b>' + v[infoFieldIndex('country')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('country') + '</dt><dd>' + v[infoFieldIndex('country')] + '</dd>';
     if (v[infoFieldIndex('period')])
-        fields += '<tr><th>' + i18next.t('period') + ':</th><td><b>' + v[infoFieldIndex('period')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('period') + '</dt><dd>' + v[infoFieldIndex('period')] + '</dd>';
     if (v[infoFieldIndex('ruler')])
-        fields += '<tr><th>' + i18next.t('ruler') + ':</th><td><b>' + v[infoFieldIndex('ruler')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('ruler') + '</dt><dd>' + v[infoFieldIndex('ruler')] + '</dd>';
     if (v[infoFieldIndex('value')] || v[infoFieldIndex('unit')])
-        fields += '<tr><th>' + i18next.t('denomination') + ':</th><td><b>' + convertFraction(v[infoFieldIndex('value')]) + '&nbsp;' + v[infoFieldIndex('unit')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('denomination') + '</dt><dd>' + convertFraction(v[infoFieldIndex('value')]) + '&nbsp;' + v[infoFieldIndex('unit')] + '</dd>';
     if (v[infoFieldIndex('type')])
-        fields += '<tr><th>' + i18next.t('type') + ':</th><td><b>' + v[infoFieldIndex('type')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('type') + '</dt><dd>' + v[infoFieldIndex('type')] + '</dd>';
     if (v[infoFieldIndex('series')])
-        fields += '<tr><th>' + i18next.t('series') + ':</th><td><b>' + v[infoFieldIndex('series')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('series') + '</dt><dd>' + v[infoFieldIndex('series')] + '</dd>';
     if (v[infoFieldIndex('subjectshort')])
-        fields += '<tr><th>' + i18next.t('subject') + ':</th><td><b>' + v[infoFieldIndex('subjectshort')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('subject') + '</dt><dd>' + v[infoFieldIndex('subjectshort')] + '</dd>';
     if (v[infoFieldIndex('issuedate')]) {
         date = new Date(v[infoFieldIndex('issuedate')]);
-        fields += '<tr><th>' + i18next.t('date_issue') + ':</th><td><b>' + date.toLocaleDateString() + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('date_issue') + '</dt><dd>' + date.toLocaleDateString() + '</dd>';
     }
     else if (v[infoFieldIndex('year')]) {
         if (v[infoFieldIndex('year')] < 0 && collectionSettings.enable_bc)
-            fields += '<tr><th>' + i18next.t('year') + ':</th><td><b>' + (-v[infoFieldIndex('year')]) + '&nbsp;' + i18next.t('BC') + '</b></td></tr>';
+            fields += '<dt>' + i18next.t('year') + '</dt><dd>' + (-v[infoFieldIndex('year')]) + '&nbsp;' + i18next.t('BC') + '</dd>';
         else
-            fields += '<tr><th>' + i18next.t('year') + ':</th><td><b>' + v[infoFieldIndex('year')] + '</b></td></tr>';
+            fields += '<dt>' + i18next.t('year') + '</dt><dd>' + v[infoFieldIndex('year')] + '</dd>';
     }
     if (v[infoFieldIndex('mintage')])
-        fields += '<tr><th>' + i18next.t('mintage') + ':</th><td><b>' + v[infoFieldIndex('mintage')].toLocaleString() + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('mintage') + '</dt><dd>' + v[infoFieldIndex('mintage')].toLocaleString() + '</dd>';
     if (v[infoFieldIndex('material')])
-        fields += '<tr><th>' + i18next.t('material') + ':</th><td><b>' + v[infoFieldIndex('material')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('material') + '</dt><dd>' + v[infoFieldIndex('material')] + '</dd>';
     if (v[infoFieldIndex('mint')] && v[infoFieldIndex('mintmark')])
-        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[infoFieldIndex('mint')] + ' (' + v[infoFieldIndex('mintmark')] + ')</b></td></tr>';
+        fields += '<dt>' + i18next.t('mint') + '</dt><dd>' + v[infoFieldIndex('mint')] + ' (' + v[infoFieldIndex('mintmark')] + ')</dd>';
     else if (v[infoFieldIndex('mint')])
-        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[infoFieldIndex('mint')] + '</b></td></tr>';
+        fields += '<dt>' + i18next.t('mint') + '</dt><dd>' + v[infoFieldIndex('mint')] + '</dd>';
     else if (v[infoFieldIndex('mintmark')])
-        fields += '<tr><th>' + i18next.t('mint') + ':</th><td><b>' + v[infoFieldIndex('mintmark')] + '</b></td></tr>';
-    fields += '</table>';
+        fields += '<dt>' + i18next.t('mint') + '</dt><dd>' + v[infoFieldIndex('mintmark')] + '</dd>';
+    fields += '</dl></div>';
+
+    fields += '<div class="info2"><dl>';
+    if (v[infoFieldIndex('grade')])
+        fields += '<dt>' + i18next.t('grade') + '</dt><dd>' + v[infoFieldIndex('grade')] + '</dd>';
+    if (v[infoFieldIndex('paydate')]) {
+        date = new Date(v[infoFieldIndex('paydate')]);
+        fields += '<dt>' + i18next.t('paydate') + '</dt><dd>' + date.toLocaleDateString() + '</dd>';
+    }
+    if (v[infoFieldIndex('payprice')])
+        fields += '<dt>' + i18next.t('payprice') + '</dt><dd>' + v[infoFieldIndex('payprice')].toLocaleString() + '</dd>';
+    if (v[infoFieldIndex('storage')])
+        fields += '<dt>' + i18next.t('storage') + '</dt><dd>' + v[infoFieldIndex('storage')] + '</dd>';
+    if (v[infoFieldIndex('condition')])
+        fields += '<dt>' + i18next.t('condition') + '</dt><dd>' + v[infoFieldIndex('condition')] + '</dd>';
+    if (v[infoFieldIndex('quantity')])
+        fields += '<dt>' + i18next.t('quantity') + '</dt><dd>' + v[infoFieldIndex('quantity')] + '</dd>';
+    fields += '</dl></div>';
+    fields += '</div>';
 
     var info = '';
     if (v[infoFieldIndex('features')])
@@ -777,22 +814,6 @@ dbFileElm.onchange = function() {
         r.readAsArrayBuffer(file);
     }
 }
-
-function showDensity() {
-    if (window.devicePixelRatio < 1.5)
-        density = "MDPI";
-    else if (window.devicePixelRatio < 2)
-        density = "HDPI";
-    else if (window.devicePixelRatio < 2.5)
-        density = "XHDPI";
-    else if (window.devicePixelRatio < 3.5)
-        density = "XXHDPI";
-    else
-        density = "XXXHDPI";
-    $("#density").text(i18next.t('density') + density);
-}
-
-showDensity();
 
 $('select.lang').val(lang);
 $('select.lang').change(langChanged);
