@@ -25,7 +25,7 @@ function redirectpage(dest) {
 const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
 const path = window.location.pathname;
 var has_lang = false;
-langcodes.foreach(lang => {
+langcodes.forEach(function(lang) {
   if (path.includes(lang))
     has_lang=true;
 });
