@@ -22,17 +22,25 @@ function redirectpage(dest) {
     window.location=dest;
 }
 
-if (window.location.href.includes('opennumismat.github.io/index.html')) {
+const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
+const path = window.location.pathname;
+var has_lang = false;
+langcodes.foreach(lang => {
+  if (path.includes(lang))
+    has_lang=true;
+});
+
+if (!has_lang) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   if (!urlParams.has('en')){
-    const langcodes=new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
-    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
-    const languageinfo=navigator.language? navigator.language : navigator.userLanguage;
+//    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
+    const languageinfo = navigator.language? navigator.language : navigator.userLanguage;
+    const current_lang = languageinfo.substr(0,2);
 
     for (i=0;i<langcodes.length;i++){
-      if (languageinfo.substr(0,2)==langcodes[i]){
-        redirectpage(langredirects[i]);
+      if (current_lang==langcodes[i]){
+        redirectpage(langcodes[i] + '/');
         break;
       }
     }
