@@ -7,7 +7,7 @@
 <meta name="description" content="OpenNumismat">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>Manual do utilizador - OpenNumismat - programa gratuito para coleccionar moedas</title>
+<title>Manual do utilizador - OpenNumismat - programa livre para coleccionar moedas</title>
 </head>
 <body>
 
@@ -61,9 +61,9 @@
 <h1>Manual do utilizador</h1>
 <a href="#sec1">1 Introdução</a><br><a href="#sec2">2 Visão geral</a><br><a href="#sec3">3 Inserir moedas</a><br><a href="#sec4">4 Ver moedas</a><br><a href="#sec5">5 Gerir o ficheiro da colecção</a><br><a href="#sec6">6 Relatórios</a><br><a href="#sec7">7 Referências</a><br><a href="#sec8">8 Definições</a><br><h2 id="sec1">1 Introdução</h2>
 <h3>1.1 Descrição</h3>
-<p>O OpenNumismat é uma aplicação prática e de confiança, destinada aos amantes de moedas, numismatas ou amadores, tentando criar uma colecção numismática.</p>
+<p>O OpenNumismat é uma aplicação prática e de confiança, destinada aos coleccionadores de moedas, numismatas profissionais ou amadores, que tentam criar uma colecção numismática.</p>
 <p>Com o OpenNumismat poderá criar, organizar e gerir os seus próprios catálogos de moedas com uma descrição detalhada e fotografias de cada um dos itens.</p>
-<p>O OpenNumismat é distribuído completamente gratuito. O código fonte está licenciado sob GPL-3.0 e disponível no <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
+<p>O OpenNumismat é distribuído completo e livre. O código fonte está licenciado sob GPL-3.0 e disponível no <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
 <p>A página web oficial é <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
 <h3>1.2 Funcionalidades da implementação</h3>
 <p>O OpenNumismat é baseado na biblioteca PyQt com o motor de base de dados SQLite para armazenar os dados da colecção, o que permitiu alcançar ligeireza e pronta resposta do ambiente de utilização e ser multi-plataforma.</p>
@@ -71,7 +71,7 @@
 <p>Os ícones utilizados são baseados em <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons por <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> e <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>As traduções do programa são implementadas por entusiastas utilizando o serviço <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Obrigado pela ajuda!</p>
 <h3>1.3 Licença</h3>
-<p>O OpenNumismat é um programa gratuito: pode distribuí-lo e/ou modificá-lo sob os termos da GNU General Public License tal como publicada pela Free Software Foundation, seja a versão 3 da Licença ou, (por sua opção) qualquer versão posterior.</p>
+<p>O OpenNumismat é um programa livre: pode distribuí-lo e/ou modificá-lo sob os termos da GNU General Public License tal como publicada pela Free Software Foundation, seja a versão 3 da Licença ou, (por sua opção) qualquer versão posterior.</p>
 <p>O OpenNumismat é distribuído na esperança de ser útil, mas SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A QUALQUER PROPÓSITO. Veja a GNU General Public License para mais detalhes.</p>
 <p>Deverá ter recebido uma cópia da GNU General Public License juntamente com o OpenNumismat. Se não, veja <a href="https://www.gnu.org/licenses/" target="blank_">https://www.gnu.org/licenses/</a>.</p>
 <h2 id="sec2">2 Visão geral</h2>
@@ -100,7 +100,7 @@
 <h2 id="sec3">3 Inserir moedas</h2>
 <h3>3.1 Adicionar uma moeda</h3>
 <p>Faça a gestão da sua colecção adicionando entradas para cada moeda comprada, vendida ou desejada.</p>
-<p>Para adicionar uma nova moeda, seleccione Moeda-&gt;Adicionar ou prima a tecla Insert. Verá o diálogo Nova:</p>
+<p>Para adicionar uma nova moeda, seleccione o menu  <i>Moeda-&gt;Adicionar</i> ou prima a tecla Insert. Verá o diálogo Editar:</p>
 <p><img src="/images/manual/new.png"></p>
 <p>O diálogo de edição contém 7 separadores com os seguintes campos:</p>
 <ul>
@@ -121,7 +121,7 @@
 </ul>
 </li>
 <li>Moeda - Estado (estado da moeda na colecção):<ul>
-<li>Estado - a p+rincipal característica que determina a presença de uma moeda na colecção. Pode ser Demonstração, Passada, Detida, Ordenada, Vendida, À venda, Desejada, Em leilão, Em falta, Duplicada. O estado da moeda afecta a disponibilidade e o conteúdo do separador Mercado;</li>
+<li>Estado - a principal característica que determina a presença de uma moeda na colecção. Pode ser Demonstração, Troca, Possuída, Encomendada, Vendida, À venda, Desejada, Oferta, Em falta, Duplicada. O estado da moeda afecta a disponibilidade e o conteúdo do separador Mercado;</li>
 <li>Grau - o grau de uso da moeda;</li>
 <li>Quantidade - o número de duplicados ou moedas no rolo;</li>
 <li>Formato - formato de distribuição (moeda única, conjunto ou rolo);</li>
@@ -154,14 +154,14 @@
 </ul>
 </li>
 <li>Mapa</li>
-<li>Parâmetros - as características físicas da moeda;<ul>
+<li>Parâmetros - parâmetros (características físicas da moeda);<ul>
 <li>Material;</li>
 <li>Finura;</li>
 <li>Peso;</li>
 <li>Diâmetro;</li>
 <li>Espessura;</li>
 <li>Forma;</li>
-<li>Obv/Rev - a proporção de obverso e reverso (medalha, moeda)</li>
+<li>Anv/Rev - a proporção de anverso e reverso (medalha, moeda)</li>
 </ul>
 </li>
 <li>Parâmetros - Cunhagem (dados de lançamento da moeda):<ul>
@@ -173,11 +173,11 @@
 </ul>
 </li>
 <li>Desenho (descrição da moeda):<ul>
-<li>Obverso - a imagem do obverso da moeda;</li>
-<li>Desenho (obverso);</li>
-<li>Desenhador (obverso);</li>
-<li>Gravador (obverso);</li>
-<li>Cor (obverso);</li>
+<li>Anverso - a imagem do anverso da moeda;</li>
+<li>Desenho (anverso);</li>
+<li>Desenhador (anverso);</li>
+<li>Gravador (anverso);</li>
+<li>Cor (anverso);</li>
 <li>Reverso - imagem do reverso;</li>
 <li>Desenho (reverso);</li>
 <li>Desenhador (reverso);</li>
@@ -193,10 +193,10 @@
 <li>;1#, 2#, 3#, 4# - números de uma versão da moeda em vários catálogos.</li>
 <li>Raridade;</li>
 <li>Fina - o preço aproximado da moeda no estado F-12, F-15;</li>
-<li>Bela - o valor aproximado de uma moeda com muito pouca circulação (VF-20, VF-25, VF-30, VF-35);</li>
-<li>BNC - o valor aproximado de uma moeda "Brilhante não circulada" (EF-40, XF-45);</li>
-<li>S - o valor aproximado de uma moeda soberba, que nunca circulou (MS-60 e acima);</li>
-<li>Variação, Obverso, Reverso, Rebordo - uma breve descrição da variedade da moeda, dos seus obverso, reverso e rebordo;</li>
+<li>Bela - o valor aproximado de uma moeda com muito pouca circulação, VF-20, VF-25, VF-30, VF-35;</li>
+<li>BNC - o valor aproximado de uma moeda "Brilhante não circulada", EF-40, XF-45;</li>
+<li>S - o valor aproximado de uma moeda soberba, que nunca circulou, MS-60 e acima;</li>
+<li>Variação, Anverso, Reverso, Rebordo - uma breve descrição da variedade da moeda, dos seus anverso, reverso e rebordo;</li>
 <li>URL - ligação web a informação sobre a moeda ou a um ficheiro em disco.</li>
 </ul>
 </li>
