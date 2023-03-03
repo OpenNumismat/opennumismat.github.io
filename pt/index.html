@@ -20,17 +20,25 @@ function redirectpage(dest) {
     window.location=dest;
 }
 
-if (window.location.href.includes('opennumismat.github.io/index.html')) {
+const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
+const path = window.location.pathname;
+var has_lang = false;
+langcodes.forEach(function(lang) {
+  if (path.includes(lang))
+    has_lang=true;
+});
+
+if (!has_lang) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   if (!urlParams.has('en')){
-    const langcodes=new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
-    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
-    const languageinfo=navigator.language? navigator.language : navigator.userLanguage;
+//    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
+    const languageinfo = navigator.language? navigator.language : navigator.userLanguage;
+    const current_lang = languageinfo.substr(0,2);
 
     for (i=0;i<langcodes.length;i++){
-      if (languageinfo.substr(0,2)==langcodes[i]){
-        redirectpage(langredirects[i]);
+      if (current_lang==langcodes[i]){
+        redirectpage(langcodes[i] + '/');
         break;
       }
     }
@@ -120,12 +128,13 @@ if (window.location.href.includes('opennumismat.github.io/index.html')) {
       <div class="inner-content">
 <h3><a href="news/">Notícias do projecto</a></h3>
 <ul>
-<li>13.02.2023 - Adicionados novos <a href="../catalogues">catálogos</a>
+<li>27.02.2023 - Versão 1.8.19 lançada<div class="inline"> (<a href="open-numismat/history.html">histórico de alterações</a>)</div>
+</li>
+<li>13.02.2023 - Adicionados novos <a href="catalogues">catálogos</a>
 </li>
 <li>07.02.2023 - Actualizado <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a>
 </li>
-<li>27.01.2023 - Versão 1.8.18 lançada<div class="inline"> (<a href="open-numismat/history.html">histórico de alterações</a>)</div>
-</li>
+<li>27.01.2023 - Versão 1.8.18 lançada</li>
 <li>24.01.2023 - Versão 1.8.17 lançada</li>
 <li>11.08.2022 - Versão 1.8.16 lançada</li>
 <li>06.06.2022 - <a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">Pacote Flatpak</a>
