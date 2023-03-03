@@ -286,9 +286,9 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <p>Para criar uma nova colecção, seleccione o menu <i>Ficheiro -&gt; Novo...</i>. No diálogo seguinte, seleccione a localização e o nome do novo ficheiro de colecção.</p>
 <p>Para abrir um ficheiro de colecção existente, seleccione o menu <i>Ficheiro -&gt; Abrir...</i> e seleccione o ficheiro desejado. Pode também associar ficheiros de colecção (por exemplo, se marcar a opção apropriada ao instalar a aplicação) e abri-los automaticamente com duplo clique a partir do seu explorador de ficheiros.
 <br>O menu Ficheiro mostra até 5 colecções recentemente abertas para abertura rápida.</p>
-<h3>5.2 Cópia de segurança</h3>
-<p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma cópia de segurança. Para tal, seleccione o menu <i>Ficheiro -&gt; Cópia de segurança</i>. Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a cópia de segurança, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
-<p>Nota: É recomendável armazenar as seguranças noutro suporte que não aquele onde trabalha habitualmente. Escolher um serviço online, como o Dropbox, pode ser uma opção. Também é importante fazer seguranças regularmente, antes e depois de fazer um grande número de alterações (veja 8.4).</p>
+<h3>5.2 Salvaguarda</h3>
+<p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma salvaguarda. Para tal, seleccione o menu <i>Ficheiro -&gt; Salvaguarda</i>. Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a salvaguarda, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
+<p>Nota: É recomendável armazenar as salvaguardas noutro suporte que não aquele onde trabalha habitualmente. Escolher um serviço online, como o Dropbox, pode ser uma opção. Também é importante fazer salvaguardas regularmente, antes e depois de fazer um grande número de alterações (veja 8.4).</p>
 <h3>5.3 Vácuo</h3>
 <p>Dadas as peculiaridades da implementação SQLite, que fornece o armazenamento dos dados das colecções, a memória não é automaticamente libertada quando apaga dados do ficheiro da colecção. Ao longo do tempo, isto pode levar a um grande aumento do tamanho da colecção e sua fragmentação, abrandando a aplicação. Se necessário, pode reduzir o tamanho da colecção libertando espaço "vazio" desnecessário seleccionando o menu <i>Ficheiro -&gt; Vácuo</i>.</p>
 <h3>5.4 Senha</h3>
@@ -325,7 +325,7 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <p>O motor para geração de relatórios é baseado na biblioteca de código aberto Jinja2.</p>
 <p>Modelos do utilizador devem ser colocados na pasta Documentos (habitualmente C:\Utilizadores\«utilizador»\Documentos\OpenNumismat\templates). Cada modelo está numa sub-pasta separada, cujo nome é idêntico ao nome do modelo.</p>
 <p>Os relatórios são gerados com codificação UTF-8, logo, os modelos também devem usar esta codificação. Assim, para editar modelos recomenda-se que use um editor apropriado, por exemplo, o Notepad++.</p>
-<p>Atenção: ao eliminar, reinstalar ou actualizar a aplicação, os modelos do utilizador podem-se perder. Faça sempre cópias de segurança dos seus modelos antes de realizar qualquer uma destas acções.</p>
+<p>Atenção: ao eliminar, reinstalar ou actualizar a aplicação, os modelos do utilizador podem-se perder. Faça sempre salvaguardas dos seus modelos antes de realizar qualquer uma destas acções.</p>
 <h3>6.4 Exemplos de modelos de relatório</h3>
 <p>Commemoratives_ByCountry</p>
 <p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png"></a></p>
@@ -366,7 +366,7 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <ul>
 <li>De confiança - todas as alterações são garantidamente gravadas;</li>
 <li>Rápido - podem-se perder alterações quando falta energia durante a operação (recomendada para a maioria dos casos);</li>
-<li>Extra-rápido (perigoso) - recomendado quando faz um grande número de alterações, desde que tenha uma cópia de segurança.</li>
+<li>Extra-rápido (perigoso) - recomendado quando faz um grande número de alterações, desde que tenha uma salvaguarda.</li>
 </ul>
 <h3>8.3 Total de imagens por predefinição</h3>
 Predefinição do total de imagens no painel de imagem.
