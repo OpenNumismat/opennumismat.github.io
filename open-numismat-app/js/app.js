@@ -358,7 +358,7 @@ function checkVersion() {
         error(i18next.t('old_version'));
         return false;
     }
-    else if (collectionSettings.version > 8) {
+    else if (collectionSettings.version > 9) {
         error(i18next.t('newest_version'));
     }
 
