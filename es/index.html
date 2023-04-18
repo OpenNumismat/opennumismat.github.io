@@ -20,17 +20,25 @@ function redirectpage(dest) {
     window.location=dest;
 }
 
-if (window.location.href.includes('opennumismat.github.io/index.html')) {
+const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
+const path = window.location.pathname;
+var has_lang = false;
+langcodes.forEach(function(lang) {
+  if (path.includes(lang))
+    has_lang=true;
+});
+
+if (!has_lang) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   if (!urlParams.has('en')){
-    const langcodes=new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
-    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
-    const languageinfo=navigator.language? navigator.language : navigator.userLanguage;
+//    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
+    const languageinfo = navigator.language? navigator.language : navigator.userLanguage;
+    const current_lang = languageinfo.substr(0,2);
 
     for (i=0;i<langcodes.length;i++){
-      if (languageinfo.substr(0,2)==langcodes[i]){
-        redirectpage(langredirects[i]);
+      if (current_lang==langcodes[i]){
+        redirectpage(langcodes[i] + '/');
         break;
       }
     }
@@ -120,12 +128,14 @@ if (window.location.href.includes('opennumismat.github.io/index.html')) {
       <div class="inner-content">
 <h3><a href="news/">Noticias del proyecto</a></h3>
 <ul>
+<li>03.03.2023 - Version 1.8.20 released<div class="inline"> (<a href="open-numismat/history.html">historial de cambios</a>)</div>
+</li>
+<li>27.02.2023 - Version 1.8.19 released</li>
 <li>13.02.2023 - Añadidos nuevos <a href="catalogues">catálogos</a>
 </li>
 <li>07.02.2023 - Actualizado <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a>
 </li>
-<li>27.01.2023 - Versión 1.8.18 liberada<div class="inline"> (<a href="open-numismat/history.html">historial de cambios</a>)</div>
-</li>
+<li>27.01.2023 - Versión 1.8.18 liberada</li>
 <li>24.01.2023 - Versión 1.8.17 liberada</li>
 <li>11.08.2022 - Versión 1.8.16 liberada</li>
 <li>06.06.2022 - <a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">Paquete Flatpak</a>
@@ -197,12 +207,6 @@ reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 <a href="http://opennumismat.idea.informer.com">Retroalimentación OpenNumismat</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
-</script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
 </body>
 </html>
