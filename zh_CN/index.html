@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.">
+<meta name="keywords" content="opennumismat, numismatic, coin, coins, collecting, cataloguing, coin collecting software, numismatic software, coin collecting, coin collection, coin software, free, database">
+<meta property="og:title" content="OpenNumismat">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://opennumismat.github.io">
+<meta property="og:image" content="http://opennumismat.github.io/images/screenMain.png">
+<meta property="og:description" content="With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.">
+<title>OpenNumismat - 免费的硬币收藏软件</title>
+<script type="text/javascript">
+function redirectpage(dest) {
+  if (window.location.replace)
+    window.location.replace(dest);
+  else
+    window.location=dest;
+}
+
+const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
+const path = window.location.pathname;
+var has_lang = false;
+langcodes.forEach(function(lang) {
+  if (path.includes(lang))
+    has_lang=true;
+});
+
+if (!has_lang) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  if (!urlParams.has('en')){
+//    const langredirects=new Array("de/", "pl/", "pt/", "ru/", "uk/", "it/", "fr/", "el/", "ca/", "nl/", "es/", "bg/", "tr/", "sv/");
+    const languageinfo = navigator.language? navigator.language : navigator.userLanguage;
+    const current_lang = languageinfo.substr(0,2);
+
+    for (i=0;i<langcodes.length;i++){
+      if (current_lang==langcodes[i]){
+        redirectpage(langcodes[i] + '/');
+        break;
+      }
+    }
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OpenNumismat",
+  "image": "http://opennumismat.github.io/images/screenMain.png",
+  "description": "With OpenNumismat, you will be able to organize and manage coin collection: create an advanced catalogue of your coins, wish and selling lists, view statistics for your collection.",
+  "url": "http://opennumismat.github.io",
+  "sameAs": ["https://www.facebook.com/opennumismat", "https://vk.com/opennumismat"],
+  "operatingSystem": "Windows 11, 10, 7, 8, XP | MacOS X | Linux",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  }
+}
+</script><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="alternate" hreflang="x-default" href="http://opennumismat.github.io/">
+<link rel="alternate" hreflang="de" href="http://opennumismat.github.io/de/">
+<link rel="alternate" hreflang="pl" href="http://opennumismat.github.io/pl/">
+<link rel="alternate" hreflang="pt" href="http://opennumismat.github.io/pt/">
+<link rel="alternate" hreflang="ru" href="http://opennumismat.github.io/ru/">
+<link rel="alternate" hreflang="uk" href="http://opennumismat.github.io/uk/">
+<link rel="alternate" hreflang="it" href="http://opennumismat.github.io/it/">
+<link rel="alternate" hreflang="fr" href="http://opennumismat.github.io/fr/">
+<link rel="alternate" hreflang="el" href="http://opennumismat.github.io/el/">
+<link rel="alternate" hreflang="ca" href="http://opennumismat.github.io/ca/">
+<link rel="alternate" hreflang="nl" href="http://opennumismat.github.io/nl/">
+<link rel="alternate" hreflang="es" href="http://opennumismat.github.io/es/">
+<link rel="alternate" hreflang="bg" href="http://opennumismat.github.io/bg/">
+<link rel="alternate" hreflang="tr" href="http://opennumismat.github.io/tr/">
+<link rel="alternate" hreflang="sv" href="http://opennumismat.github.io/sv/">
+</head>
+<body>
+
+    <div id="github-page">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/bg/">Български</a> |
+          <a class="title-link" href="/ca/">Català</a> |
+          <a class="title-link" href="/de/">Deutsch</a> |
+          <a class="title-link" href="/?en">English</a> |
+          <a class="title-link" href="/el/">Ελληνικά</a> |
+          <a class="title-link" href="/es/">Español</a> |
+          <a class="title-link" href="/fr/">Français</a> |
+          <a class="title-link" href="/it/">Italiano</a> |
+          <a class="title-link" href="/nl/">Nederlands</a> |
+          <a class="title-link" href="/pl/">Polski</a> |
+          <a class="title-link" href="/pt/">Português</a> |
+          <a class="title-link" href="/ru/">Русский</a> |
+          <a class="title-link" href="/sv/">Svenska</a> |
+          <a class="title-link" href="/tr/">Türkçe</a> |
+          <a class="title-link" href="/uk/">Українська</a></p>
+        <div class="title_box">
+          <div class="title-social">
+<a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+            <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+            <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
+</div>
+          <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div></a>
+          </div>
+          <div class="title-text">
+<a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+            <a class="title-link" href="/"><h3 id="project_tagline">免费开源硬币收藏软件</h3></a>
+          </div>
+        </div>
+      </header>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section class="inner"><div class="toc">
+        <ul>
+<li><a href="/">首页</a></li>
+        <li><a href="open-numismat/#download">下载</a></li>
+        <li><a href="open-numismat/manual.html">手册</a></li>
+        <li><a href="open-numismat/faq.html">常见问题</a></li>
+        <li><a href="open-numismat/#donate">捐赠</a></li>
+        </ul>
+</div>
+      <div class="inner-content">
+<h3><a href="news/">Project news</a></h3>
+<ul>
+<li>05.05.2023 - Version 1.9.0 released<div class="inline">(<a href="open-numismat/history.html">历史更新</a>)</div>
+</li>
+<li>05.05.2023 - Version 1.8.21 released</li>
+<li>18.04.2023 - Site analitics based on <a href="https://umami.is/">umami</a>
+</li>
+<li>03.03.2023 - Version 1.8.20 released</li>
+<li>27.02.2023 - Version 1.8.19 released</li>
+<li>13.02.2023 - Added new <a href="catalogues">catalogues</a>
+</li>
+<li>07.02.2023 - Updated <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a>
+</li>
+<li>27.01.2023 - Version 1.8.18 released</li>
+<li>24.01.2023 - Version 1.8.17 released</li>
+<li>11.08.2022 - Version 1.8.16 released</li>
+<li>06.06.2022 - <a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">Flatpak package</a>
+</li>
+</ul>
+<a href="news/">Older...</a>
+      </div>
+      </section><section class="inner-image"><div class="content">
+<h3><a href="open-numismat/">OpenNumismat</a></h3>
+<p><b>OpenNumismat</b> 是一款方便可靠的应用程序，面向钱币收藏家、钱币爱好者或希望创建钱币收藏。</p>
+<p>With <b>OpenNumismat</b>, y你将能够组织和管理硬币收藏：创建你的硬币、愿望和销售清单的高级目录，查看你收藏的统计数据。</p>
+      </div>
+      <div class="content-image"><img src="/images/screenMain.png"></div>
+      </section><section class="inner-image"><div class="content">
+<h3><a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Mobile</a></h3>
+<p>在这个页面上，你可以在任何浏览器的任何地方查看你的收藏，包括手机（iPhone、Android）。</p>
+<p><b>安全提醒:</b> 你的文件不会被上传到互联网上。您可以在打开页面后禁用internet连接。</p>
+<p>作为应用程序安装，可无需internet连接即可工作。</p>
+      </div>
+      <div class="content-image"><img src="/images/PWA.png"></div>
+      </section><section class="inner-image"><div class="content">
+<h3><a href="open-numismat-web/">Online OpenNumismat viewer</a></h3>
+<p>在这个页面上，你可以在任何浏览器的任何地方查看你的收藏，包括手机（iPhone、Android）。</p>
+<p><b>安全提醒:</b> 你的文件不会被上传到互联网上。您可以在打开页面后禁用internet连接。</p>
+      </div>
+      <div class="content-image"><img src="/images/viewer.png"></div>
+      </section><section class="inner-image"><div class="content">
+<h3><a href="open-numismat-android/">OpenNumismat for Android</a></h3>
+<p>使用此应用程序，您的硬币收集始终在手机中。您可以使用现有的目录，也可以使用桌面版的OpenNummist创建自己的目录。</p>
+      </div>
+      <div class="content-image"><img src="/images/android-main.png"></div>
+      </section><section class="inner-image"><div class="content">
+<h3><a href="catalogues/">Catalogues</a></h3>
+<p>一套钱币目录。</p>
+
+<h3><a href="catalogues-mobile/">Catalogues for mobile</a></h3>
+<p>安卓版的一套钱币目录。</p>
+      </div>
+      <div class="content-image"><img src="/images/catalogues.png"></div>
+      </section>
+</div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner"><p>Source code available at <a href="https://github.com/OpenNumismat">GitHub</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+</div>
+    </div>
+
+<script type="text/javascript">
+reformal_wdg_domain="OpenNumismat";
+reformal_wdg_mode=0;
+reformal_wdg_title="OpenNumismat";
+reformal_wdg_ltitle="Leave feedback";
+reformal_wdg_lfont="";
+reformal_wdg_lsize="";
+reformal_wdg_color="#FFA000";
+reformal_wdg_bcolor="#516683";
+reformal_wdg_tcolor="#FFFFFF";
+reformal_wdg_align="left";
+reformal_wdg_waction=0;
+reformal_wdg_vcolor="#9FCE54";
+reformal_wdg_cmline="#E0E0E0";
+reformal_wdg_glcolor="#105895";
+reformal_wdg_tbcolor="#FFFFFF";
+reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
+<a href="http://opennumismat.idea.informer.com">OpenNumismat 溯源</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+</noscript>
+
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
+</body>
+</html>
