@@ -162,19 +162,19 @@ Main features
 <h2 id="download">
 Download
 </h2>
-<p><div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.8.20</strong></div>. Release date: <div class="inline">03 March 2023</div>
+<p><div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.8.21</strong></div>. Release date: <div class="inline">05 May 2023</div>
 <p>
 <h4>Windows</h4>
-<p><div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20-win64.exe">OpenNumismat</a></strong></div> for Windows 8.1 x86_64 and later (version with freshly third-party library dependencies)
-<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.exe">OpenNumismat</a></div> - for Windows XP x86 and later
-<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.zip">OpenNumismat</a></div> - .zip (no installer)
+<p><div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21-win64.exe">OpenNumismat</a></strong></div> for Windows 8.1 x86_64 and later (version with freshly third-party library dependencies)
+<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.exe">OpenNumismat</a></div> - for Windows XP x86 and later
+<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.zip">OpenNumismat</a></div> - .zip (no installer)
 <p>
 <h4>macOS</h4>
-<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20-macos11.dmg">OpenNumismat</a></div> for macOS 10.13 and later (version with freshly third-party library dependencies)
-<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.dmg">OpenNumismat</a></div> for OS X 10.8 and later (without Statistics)
+<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21-macos11.dmg">OpenNumismat</a></div> for macOS 10.13 and later (version with freshly third-party library dependencies)
+<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.dmg">OpenNumismat</a></div> for OS X 10.8 and later (without Statistics)
 <p>
 <h4>Linux</h4>
-<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/open-numismat_1.8.20_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu
+<p><div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/open-numismat_1.8.21_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu
 <p><div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Flatpak package (without Statistics)
 <p>
 <h4>Other</h4>
@@ -183,6 +183,27 @@ Download
 <h2>
 History of changes
 </h2>
+  <h3>What's new in <div class="inline">OpenNumismat 1.8.21</div> (<div class="inline">05 May 2023</div>)</h3>
+  <ul>
+    <li>New Circulation report template</li>
+    <li>New fields: Category, Composition, Material 2, Width, Height, Technique, Modification, Weight (real), Diameter (real), buy/sale invoice links</li>
+    <li>New status Replacement</li>
+    <li>Fixed showing disabled statuses in Info panel and Edit dialog</li>
+    <li>Fixed importing large coin value in CSV from uCoin.net</li>
+    <li>Speedup saving image while generating report</li>
+    <li>Fixed All reference editor tabs on macOS</li>
+    <li>Progress chart support Date of issue field</li>
+    <li>Default status is always enabled in settings</li>
+    <li>Fixed plotting progress chart whith empty values</li>
+    <li>Add some actions from context menu to main menu</li>
+    <li>Dbl-click on empty space on card view don't open edit dialog</li>
+    <li>Disable context menu on GeoChart</li>
+    <li>Updated default references</li>
+    <li>Fixed export to JSON with different file extension</li>
+    <li>Export DB version to JSON</li>
+    <li>Compatibility with 1.9</li>
+    <li>Amazing 1.9 coming soon</li>
+  </ul>
   <h3>What's new in <div class="inline">OpenNumismat 1.8.20</div> (<div class="inline">03 March 2023</div>)</h3>
   <ul>
     <li>Fixed importing from Colnect for countries with large count if series of items</li>
@@ -191,7 +212,6 @@ History of changes
     <li>Don't show countries without items while importing from Colnect</li>
     <li>Fixed context menu on image page on macOS</li>
     <li>Fixed year calculator for japans dates before 1948</li>
-    <li>Amazing 1.9 coming soon</li>
   </ul>
   <h3>What's new in <div class="inline">OpenNumismat 1.8.19</div> (<div class="inline">27 February 2023</div>)</h3>
   <ul>
@@ -203,23 +223,6 @@ History of changes
     <li>Fix Windows x86_64 distributive</li>
     <li>Added new template Artemis</li>
     <li>Fix Summary dialog on macOS</li>
-  </ul>
-  <h3>What's new in <div class="inline">OpenNumismat 1.8.17</div> (<div class="inline">24 January 2023</div>)</h3>
-  <ul>
-    <li>Change Colnect proxy</li>
-    <li>Improve parsing fineness for Summary dialog</li>
-    <li>Show done message for clearing import cache</li>
-  </ul>
-  <h3>What's new in <div class="inline">OpenNumismat 1.8.16</div> (<div class="inline">11 August 2022</div>)</h3>
-  <ul>
-    <li>All references editor has vertical tab bar</li>
-    <li>Fix Summary dialog on macOS</li>
-    <li>Removed duplicate menu Report->Statistics</li>
-    <li>Check that coin title present on save and Check coin duplicates on save settings moved to message box</li>
-    <li>Show done message when backup completed</li>
-    <li>Show done message for saving report as pdf</li>
-    <li>Fix print report to pdf when printer not detected</li>
-    <li>Fix importing from Numista</li>
   </ul>
   <a href="history.html">Older...</a>
 <h2>
