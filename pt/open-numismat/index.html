@@ -145,28 +145,33 @@
 </ul>
 <h2 id="download">Transferir</h2>
 <p></p>
-<div class="inline">A última versão: </div> <div class="inline"><strong>OpenNumismat 1.8.20</strong></div>. Data de lançamento:  <div class="inline">03 de Março de 2023</div>
+<div class="inline">The pre-release of newest version:</div> <div class="inline"><strong>OpenNumismat 1.9.0</strong></div>. Data de lançamento:  <div class="inline">05 May 2023</div>
+<h4>Windows</h4>
+<p></p>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.0/OpenNumismat-1.9.0-win64.exe">OpenNumismat</a></div> for Windows 10 and later (version with freshly third-party library dependencies)
+<br><p></p>
+<div class="inline">A última versão: </div> <div class="inline"><strong>OpenNumismat 1.8.21</strong></div>. Data de lançamento:  <div class="inline">05 May 2023</div>
 <p>
 </p>
 <h4>Windows</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20-win64.exe">OpenNumismat</a></strong></div> para Windows 8.1 x86_64 e posteriores (versão com bibliotecas de terceiros actualizadas)
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21-win64.exe">OpenNumismat</a></strong></div> for Windows 8.1 x86_64 and later
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.exe">OpenNumismat</a></div> - para Windows XP x86 e posteriores
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.exe">OpenNumismat</a></div> - para Windows XP x86 e posteriores
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.zip">OpenNumismat</a></div> - .zip (sem instalador)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.zip">OpenNumismat</a></div> - .zip (sem instalador)
 <p>
 </p>
 <h4>macOS</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20-macos11.dmg">OpenNumismat</a></div> para macOS 10.13 e posteriores (versão com bibliotecas de terceiros actualizadas)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21-macos11.dmg">OpenNumismat</a></div> para macOS 10.13 e posteriores (versão com bibliotecas de terceiros actualizadas)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/OpenNumismat-1.8.20.dmg">OpenNumismat</a></div> para OS X 10.8 e posteriores (sem estatísticas)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/OpenNumismat-1.8.21.dmg">OpenNumismat</a></div> para OS X 10.8 e posteriores (sem estatísticas)
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.20/open-numismat_1.8.20_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.8.21/open-numismat_1.8.21_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - pacote Flatpak (sem estatísticas)
 <p>
@@ -175,7 +180,46 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases" rel="nofollow">Versões anteriores...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/" rel="nofollow">Código fonte</a></p>
 <h2>Histórico de alterações</h2>
-  <h3>O que há de novo no <div class="inline">OpenNumismat 1.8.20</div> (<div class="inline">03 de Março de 2023</div>)</h3>
+  <h3>O que há de novo no <div class="inline">OpenNumismat 1.9.0</div> (<div class="inline">05 May 2023</div>)</h3>
+  <ul>
+<li>Port code to newest PySide6 library</li>
+    <li>Port statistics charts to QtCharts</li>
+    <li>New area chart</li>
+    <li>Import from Excel support .xlsx insted .xls</li>
+    <li>Import from Excel accept images in cell</li>
+    <li>Save list to Excel support .xlsx insted .xls</li>
+    <li>Storing images while saving list to Excel</li>
+    <li>New field: Die Axis</li>
+    <li>Add template for title generation</li>
+    <li>Rename statuses from Settings dialog</li>
+    <li>Rename pages and field groups from settings</li>
+    <li>Use quantity instead count in statistics charts</li>
+    <li>Accept drop images in edit dialog</li>
+    <li>Improved sorting statuses in some controls</li>
+    <li>Ranamed coin to record in menu and status bar</li>
+    <li>Improved storing dialog positions</li>
+  </ul>
+<h3>O que há de novo no <div class="inline">OpenNumismat 1.8.21</div> (<div class="inline">05 May 2023</div>)</h3>
+  <ul>
+<li>New Circulation report template</li>
+    <li>New fields: Category, Composition, Material 2, Width, Height, Technique, Modification, Weight (real), Diameter (real), buy/sale invoice links</li>
+    <li>New status Replacement</li>
+    <li>Fixed showing disabled statuses in Info panel and Edit dialog</li>
+    <li>Fixed importing large coin value in CSV from uCoin.net</li>
+    <li>Speedup saving image while generating report</li>
+    <li>Fixed All reference editor tabs on macOS</li>
+    <li>Progress chart support Date of issue field</li>
+    <li>Default status is always enabled in settings</li>
+    <li>Fixed plotting progress chart whith empty values</li>
+    <li>Add some actions from context menu to main menu</li>
+    <li>Dbl-click on empty space on card view don't open edit dialog</li>
+    <li>Disable context menu on GeoChart</li>
+    <li>Referências predefinidas actualizadas</li>
+    <li>Fixed export to JSON with different file extension</li>
+    <li>Export DB version to JSON</li>
+    <li>Compatibility with 1.9</li>
+  </ul>
+<h3>O que há de novo no <div class="inline">OpenNumismat 1.8.20</div> (<div class="inline">03 de Março de 2023</div>)</h3>
   <ul>
 <li>Reparada importação de Colnect para países com total grande de séries de itens</li>
     <li>Melhorada a filtragem da importação Colnect</li>
@@ -183,7 +227,6 @@
     <li>Ocultados países sem itens na importação Colnect</li>
     <li>Reparado menu contextual na página de imagem em macOS</li>
     <li>Reparada calculadora de anos para data japonesas anteriores a 1948</li>
-    <li>Brevemente a fantástica 1.9</li>
   </ul>
 <h3>O que há de novo no <div class="inline">OpenNumismat 1.8.19</div> (<div class="inline">27 de Fevereiro de 2023</div>)</h3>
   <ul>
@@ -195,23 +238,6 @@
 <li>Reparada a distribuição Windows x86_64</li>
     <li>Adicionado novo modelo</li>
     <li>Diálogo de resumo reparado em macOS</li>
-  </ul>
-<h3>O que há de novo no <div class="inline">OpenNumismat 1.8.17</div> (<div class="inline">24 de Janeiro de 2023</div>)</h3>
-  <ul>
-<li>Alterado o proxy da Colnect</li>
-    <li>Melhorada a afinação no diálogo de resumo</li>
-    <li>Mostrada mensagem de conclusão após limpeza da memória de importação</li>
-  </ul>
-<h3>O que há de novo no <div class="inline">OpenNumismat 1.8.16</div> (<div class="inline">11 de Agosto de 2022</div>)</h3>
-  <ul>
-<li>Editores de referências com barra de separadores vertical</li>
-    <li>Diálogo de resumo reparado em macOS</li>
-    <li>Removido menu duplicado Relatórios -&gt; Estatísticas</li>
-    <li>Definições de verificação de presença do título da moeda e de duplicados da moeda ao gravar movidos para caixa de mensagem</li>
-    <li>Mostrar mensagem de conclusão da salvaguarda</li>
-    <li>Mostrar mensagem de conclusão de relatório em PDF</li>
-    <li>Reparada a impressão de relatório em PDF quando não há impressora detectada</li>
-    <li>Reparada importação de Numista</li>
   </ul>
 <a href="history.html">Antigas...</a>
 <h2>Como é que posso ajudar?</h2>
@@ -270,12 +296,6 @@ reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 <a href="http://opennumismat.idea.informer.com">Comentários ao OpenNumismat</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
-</script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
 </body>
 </html>
