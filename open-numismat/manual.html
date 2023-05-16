@@ -126,14 +126,17 @@
 <ul>
  <li>Coin - Main details:
  <ul>
+   <li>Category - type of collectable item;
    <li>Name - a descriptive name of the coin (can be automatically created from the remaining fields by clicking the "Generate" button);
    <li>Region;
    <li>Country;
    <li>Period - period in the history of the country or coinage period;
+   <li>Emitent;
    <li>Ruler;
    <li>Value;
    <li>Unit;
-   <li>Year;
+   <li>Year - gregorian year;
+   <li>Year on coin;
    <li>Mint;
    <li>Mint mark - a sign of the mint;
    <li>Type;
@@ -142,11 +145,12 @@
  </ul>
  <li>Coin - State (state of coin from the collection):
  <ul>
-   <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;
+   <li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate, Replacement. The coin status affects the availability and content of the Market tab;
    <li>Grade - the degree of coin wear;
    <li>Quantity - the number of duplicates or coins in the roll;
    <li>Format - destribution format (single coin, set or roll);
    <li>Condition;
+   <li>Seat - ;
    <li>Storage - a description of the physical location of the coin;
    <li>Barcode;
    <li>Grader;
@@ -161,6 +165,7 @@
    <li>Commission - additional costs associated with the acquisition of a coin (the field is available only in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);
    <li>Seller;
    <li>Place;
+   <li>Invoice - link to the purchaise invoice document on disk or URL;
    <li>Info.
  </ul>
  <li>Market - Sale:
@@ -171,20 +176,37 @@
    <li>Commission - additional costs associated with the sale of coins (the field is only available in the coin editing window). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%);
    <li>Buyer;
    <li>Place;
+   <li>Invoice - link to the sales invoice document on disk or URL;
    <li>Info.
  </ul>
  <li>Map
- <li>Parameters - Parameters (physical parameters of the coin):
  <ul>
+   <li>Address;
+   <li>Latitude;
+   <li>Longitude;
+ </ul>
+ <li>Technical data - Parameters (physical parameters of the coin):
+ <ul>
+   <li>Composition;
    <li>Material;
+   <li>Material 2;
    <li>Fineness;
    <li>Weight;
    <li>Diameter;
    <li>Thickness;
+   <li>Width;
+   <li>Height;
    <li>Shape;
    <li>Obv/Rev - the ratio of obverse and reverse (medal, coin).
  </ul>
- <li>Parameters - Minting (coin release data):
+ <li>Technical data - Specificity:
+ <ul>
+   <li>Diameter - real coin diameter;
+   <li>Weight - real coin weight;
+   <li>Die Axis;
+   <li>Modification.
+ </ul>
+ <li>Technical data - Minting (coin release data):
  <ul>
    <li>Date of issue;
    <li>Mintage;
@@ -243,7 +265,7 @@
 For paste link to a local file you can drag'n'drop or copy-paste file into text field in Edit dialog.
 
 <h4>3.1.1 Editing Images</h4>
-<p>The application supports up to 7 images of each coin.
+<p>The application supports up to 11 images of each coin.
 <p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
 <br>To insert or change an image, right-click on the field and select one of the drop-down menu items:
 <p><img src="/images/manual/img_menu.png"></p>
