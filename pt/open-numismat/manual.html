@@ -104,15 +104,18 @@
 <p><img src="/images/manual/new.png"></p>
 <p>O diálogo de edição contém 7 separadores com os seguintes campos:</p>
 <ul>
-<li>Moeda - detalhes principais:<ul>
+<li>Resumo - detalhes principais:<ul>
+<li>Categoria - tipo de coleccionável:</li>
 <li>Nome - um nome descritivo da moeda (pode ser criado automaticamente a parttir dos restantes campos, clicando em Gerar);</li>
 <li>Região;</li>
 <li>País;</li>
 <li>Período - período histórico do país ou período de cunhagem;</li>
+<li>Emissor:</li>
 <li>Régua;</li>
 <li>Valor;</li>
 <li>Unidade;</li>
-<li>Ano;</li>
+<li>Ano - gregoriano:</li>
+<li>Ano na moeda:</li>
 <li>Cunho;</li>
 <li>Marca de cunho - um símbolo da cunhagem;</li>
 <li>Tipo;</li>
@@ -120,12 +123,13 @@
 <li>Assunto - um evento ou objecto ao qual uma moeda comemorativa é dedicada.</li>
 </ul>
 </li>
-<li>Moeda - Estado (estado da moeda na colecção):<ul>
-<li>Estado - a principal característica que determina a presença de uma moeda na colecção. Pode ser Demonstração, Troca, Possuída, Encomendada, Vendida, À venda, Desejada, Oferta, Em falta, Duplicada. O estado da moeda afecta a disponibilidade e o conteúdo do separador Mercado;</li>
+<li>Resumo - estado (da moeda na colecção):<ul>
+<li>Estado - a característica principal que determina a presença de uma moeda na colecção. Pode ser Demo, Troca, Possuída, Encomendada, Vendida, À venda, Desejada, Em licitação, Em falta, Duplicada, Substituição. O estado afecta a disponibilidade e o conteúdo do separador Mercado;</li>
 <li>Grau - o grau de uso da moeda;</li>
 <li>Quantidade - o número de duplicados ou moedas no rolo;</li>
 <li>Formato - formato de distribuição (moeda única, conjunto ou rolo);</li>
 <li>Condição;</li>
+<li>Assento - :</li>
 <li>Local - uma descrição da localização física da moeda.</li>
 <li>Cód. barras;</li>
 <li>Calibrador;</li>
@@ -140,6 +144,7 @@
 <li>Comissão - custos adicionais com a aquisição de uma moeda (o campo só está disponível no diálogo de edição de moeda). Pode inserir o montante da comissão, assim como a percentagem do preço (por exemplo, 10%). O cálculo é automático;</li>
 <li>Vendedor;</li>
 <li>Local;</li>
+<li>Factura - ligação ao documento de compra no disco ou a URL:</li>
 <li>Informação.</li>
 </ul>
 </li>
@@ -150,21 +155,38 @@
 <li>Comissão - custos adicionais com a venda de uma moeda (o campo só está disponível no diálogo de edição de moeda). Pode inserir o montante da comissão, assim como a percentagem do preço (por exemplo, 10%). O cálculo é automático;</li>
 <li>Comprador;</li>
 <li>Local;</li>
+<li>Factura - ligação ao documento de venda no disco ou a URL:</li>
 <li>Informação.</li>
 </ul>
 </li>
-<li>Mapa</li>
-<li>Parâmetros - parâmetros (características físicas da moeda);<ul>
+<li>Mapa<ul>
+<li>Morada:</li>
+<li>Latitude:</li>
+<li>Longitude:</li>
+</ul>
+</li>
+<li>Dados técnicos - parâmetros físicos da moeda:<ul>
+<li>Composição:</li>
 <li>Material;</li>
+<li>Material 2:</li>
 <li>Finura;</li>
 <li>Peso;</li>
 <li>Diâmetro;</li>
 <li>Espessura;</li>
+<li>Largura:</li>
+<li>Altura:</li>
 <li>Forma;</li>
 <li>Anv/Rev - a proporção de anverso e reverso (medalha, moeda)</li>
 </ul>
 </li>
-<li>Parâmetros - Cunhagem (dados de lançamento da moeda):<ul>
+<li>Dados técnicos - especificidade:<ul>
+<li>Diâmetro - real:</li>
+<li>Peso - real:</li>
+<li>Eixo de matriz:</li>
+<li>Modificação:</li>
+</ul>
+</li>
+<li>Dados técnicos - cunhagem:<ul>
 <li>Data de emissão;</li>
 <li>Cunhagem;</li>
 <li>Período de emissão;</li>
@@ -178,14 +200,17 @@
 <li>Desenhador (anverso);</li>
 <li>Gravador (anverso);</li>
 <li>Cor (anverso);</li>
-<li>Reverso - imagem do reverso;</li>
+<li>Reverso - imagem:</li>
 <li>Desenho (reverso);</li>
 <li>Desenhador (reverso);</li>
 <li>Gravador (reverso);</li>
 <li>Cor (reverso);</li>
-<li>Rebordo - imagem do rebordo</li>
-<li>Tipo (de rebordo);</li>
-<li>Rótulo (no rebordo);</li>
+<li>Rebordo - imagem ou assinatura da nota:</li>
+<li>Tipo - tipo de rebordo ou título do signatário da nota:</li>
+<li>Rótulo - rótulo no rebordo ou nome do signatário da nota:</li>
+<li>Assinatura - imagem da assinatura da nota:</li>
+<li>Tipo - tipo de margem ou título do signatário da nota:</li>
+<li>Assinatura - nome do signatário da nota:</li>
 <li>Assunto - uma descrição do tópico ou evento a que a moeda ou o seu desenho são dedicados;</li>
 </ul>
 </li>
@@ -220,7 +245,7 @@
 Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e colar o ficheiro no campo de texto, no diálogo de edição
 
 <h4>3.1.1 Editar imagens</h4>
-<p>A aplicação suporta até 7 imagens de cada moeda.</p>
+<p>A aplicação suporta até 11 imagens de cada item.</p>
 <p>São suportados os seguintes formatos de imagem: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. As imagens são gravadas em formato JPEG. Imagens grandes são comprimidas para que o seu lado máximo não exceda 1024 pixels (pode ser modificado no diálogo Definições).
 <br>Para inserir ou alterar uma imagem, clique com o botão direito no campo e seleccione um dos itens da lista pendente:</p>
 <p><img src="/images/manual/img_menu.png"></p>
@@ -418,12 +443,6 @@ reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 <a href="http://opennumismat.idea.informer.com">Comentários ao OpenNumismat</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
-</script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
 </body>
 </html>
