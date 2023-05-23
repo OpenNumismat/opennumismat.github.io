@@ -404,16 +404,16 @@ function fillSummary() {
     const gold_filter = materialFilter(['Gold', i18next.t('Gold'), 'Au']);
     const silver_filter = materialFilter(['Silver', i18next.t('Silver'), 'Ag']);
 	const sql = "SELECT count(*) FROM coins;" +
-          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate');" +
+          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate', 'replacement');" +
           "SELECT count(*) FROM coins WHERE status='wish';" +
           "SELECT count(*) FROM coins WHERE status='sold';" +
           "SELECT count(*) FROM coins WHERE status='bidding';" +
           "SELECT count(*) FROM coins WHERE status='missing';" +
-          "SELECT SUM(totalpayprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND totalpayprice<>'' AND totalpayprice IS NOT NULL;" +
-          "SELECT SUM(payprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND payprice<>'' AND payprice IS NOT NULL;" +
-          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate') AND " + gold_filter + ";" +
-          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate') AND " + silver_filter + ";" +
-          "SELECT paydate FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate') AND paydate<>'' AND paydate IS NOT NULL ORDER BY paydate LIMIT 1;";
+          "SELECT SUM(totalpayprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate', 'replacement') AND totalpayprice<>'' AND totalpayprice IS NOT NULL;" +
+          "SELECT SUM(payprice) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate', 'replacement') AND payprice<>'' AND payprice IS NOT NULL;" +
+          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate', 'replacement') AND " + gold_filter + ";" +
+          "SELECT count(*) FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'duplicate', 'replacement') AND " + silver_filter + ";" +
+          "SELECT paydate FROM coins WHERE status IN ('owned', 'ordered', 'sale', 'sold', 'missing', 'duplicate', 'replacement') AND paydate<>'' AND paydate IS NOT NULL ORDER BY paydate LIMIT 1;";
 
 	worker.onmessage = function(event) {
 		var results = event.data.results;
