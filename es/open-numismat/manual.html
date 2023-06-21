@@ -104,15 +104,18 @@
 <p><img src="/images/manual/new.png"></p>
 <p>El diálogo Editar contiene 7 pestañas con los siguientes campos:</p>
 <ul>
-<li>Moneda - Detalles principales:<ul>
+<li>Conjunto - Detalles principales:<ul>
+<li>Categoría - tipo de ítem coleccionable</li>
 <li>Nombre: un nombre descriptivo de la moneda (se puede crear automáticamente a partir de los campos restantes haciendo clic en el botón "Generar");</li>
 <li>Región;</li>
 <li>País;</li>
 <li>Período - período en la historia del país o período de acuñación;</li>
+<li>Emisor;</li>
 <li>Autoridad / Regente;</li>
 <li>Valor;</li>
 <li>Unidad;</li>
-<li>Año;</li>
+<li>Año - año gregoriano;</li>
+<li>Año en la moneda;</li>
 <li>Ceca;</li>
 <li>Marca de ceca - un símbolo de la ceca;</li>
 <li>Tipo;</li>
@@ -120,12 +123,24 @@
 <li>Motivo: un evento u objeto al que se dedica una moneda conmemorativa.</li>
 </ul>
 </li>
-<li>Moneda - Estado (estado de una moneda de la colección):<ul>
-<li>Estado: la principal característica que determina la presencia de una moneda en la colección. Puede tomar el valor de Demo, Prestada, Propiedad, Pedida, Vendida, En venta, Deseada, En puja, Perdida, Duplicada. El estado de la moneda afecta la disponibilidad y el contenido de la pestaña Mercado;</li>
+<li>Conjunto - Estado (estado de la moneda en la colección):<ul>
+<li>Estado - la característica principal que determina la presencia de una moneda en la colección. El estado de la moneda determina la disponibilidad y contenido en la pestaña Mercado. Valores disponibles (renombrables desde Ajustes):
+       <br><img src="/open-numismat-app/img/demo.png"> Demo - un ítem que existe, no está en la colección ni se necesita;
+       <br><img src="/open-numismat-app/img/bidding.png"> Puja - un artículo por el que se está pujando actualmente;
+       <br><img src="/open-numismat-app/img/ordered.png"> Pedido - un artículo que ya ha sido pedido;
+       <br><img src="/open-numismat-app/img/owned.png"> Propiedad - un artículo que se posee en la colección;
+       <br><img src="/open-numismat-app/img/duplicate.png"> Duplicado - copia o repuesto de la colección;
+       <br><img src="/open-numismat-app/img/replacement.png"> Reemplazo - un artículo que se desea cambiar por un ejemplar mejor;
+       <br><img src="/open-numismat-app/img/sold.png"> Vendido - un ítem que ha sido vendido;
+       <br><img src="/open-numismat-app/img/wish.png"> Deseo - un objeto que se desea comprar;
+       <br><img src="/open-numismat-app/img/sale.png"> Venta - un ítem que se ha puesto en venta;
+       <br><img src="/open-numismat-app/img/missing.png"> Falta - un artículo que falta en la colección (robado o perdido);
+       <br><img src="/open-numismat-app/img/pass.png"> Pase - objeto que está bajo vigilancia en subasta o tienda.</li>
 <li>Grado - el grado de desgaste de la moneda;</li>
 <li>Cantidad - el número de duplicados de una moneda en la lista;</li>
 <li>Formato - formato de distribución (una moneda, set o rollo);</li>
 <li>Condición:</li>
+<li>Asiento - un asiento de la moneda en el almacenamiento;</li>
 <li>Almacenamiento - una descripción de la localización física de la moneda;</li>
 <li>Código de barras;</li>
 <li>Graduador</li>
@@ -140,6 +155,7 @@
 <li>Comisión - coste adicional asociado a la adquisición de una moneda (el campo sólo aparece en la ventana de edición de la moneda). Está permitido introducir tanto la cantidad total de la comisión, como el porcentaje del precio (por ejemplo, 10%): </li>
 <li>Vendedor;</li>
 <li>Lugar;</li>
+<li>Factura - enlace al documento de factura de compra en disco o URL;</li>
 <li>Información.</li>
 </ul>
 </li>
@@ -150,21 +166,38 @@
 <li>Comisión - coste adicional asociado a la adquisición de una moneda (el campo sólo aparece en la ventana de edición de la moneda). Está permitido introducir tanto la cantidad total de la comisión, como el porcentaje del precio (por ejemplo, 10%): </li>
 <li>Comprador;</li>
 <li>Lugar;</li>
+<li>Factura - enlace al documento de factura de venta en disco o URL;</li>
 <li>Información.</li>
 </ul>
 </li>
-<li>Mapa</li>
-<li>Parámetros - Parámetros (parámetros físicos de la moneda):<ul>
+<li>Mapa<ul>
+<li>Dirección;</li>
+<li>Latitud;</li>
+<li>Longitud;</li>
+</ul>
+</li>
+<li>Datos técnicos - Parámetros (parámetros físicos de la moneda):<ul>
+<li>Composición;</li>
 <li>Material;</li>
+<li>Material 2;</li>
 <li>Ley;</li>
 <li>Peso;</li>
 <li>Diámetro;</li>
 <li>Grosor;</li>
+<li>Ancho;</li>
+<li>Alto;</li>
 <li>Forma;</li>
 <li>Anv/Rev - la relación de orientación del anverso y reverso (medalla, moneda).</li>
 </ul>
 </li>
-<li>Parámetros - Acuñación (datos de lanzamiento de moneda):<ul>
+<li>Datos técnicos - Especificidad:<ul>
+<li>Diámetro - diámetro real de la moneda;</li>
+<li>Peso - peso real de la moneda;</li>
+<li>Eje de alineación - describe cómo fueron alineados anverso y reverso de la moneda al acuñarla. Casi siempre expresado en grados, pero se puede indicar en posición de las horaas de un reloj analógico;</li>
+<li>Modificación.</li>
+</ul>
+</li>
+<li>Datos técnicos - Acuñación (fecha de emisión de la  moneda):<ul>
 <li>Fecha de emisión;</li>
 <li>Tirada o acuñación;</li>
 <li>Periodo de emisión;</li>
@@ -183,9 +216,12 @@
 <li>Diseñador (reverso);</li>
 <li>Grabador (reverso);</li>
 <li>Color (reverso);</li>
-<li>Canto - la imagen del canto;</li>
-<li>Tipo (de canto);</li>
-<li>Leyenda (en el canto);</li>
+<li>Canto: la imagen del canto o la firma del billete;</li>
+<li>Tipo - tipo de canto de la moneda o título del firmante del billete;</li>
+<li>Etiqueta: etiqueta en el canto de la moneda o nombre del firmante del billete;</li>
+<li>Firma - la imagen de la firma del billete;</li>
+<li>Tipo - tipo de canto de la moneda o título del firmante del billete;</li>
+<li>Firma - nombre del firmante del billete;</li>
 <li>Motivo - una descrición del evento u objeto al que se dedica una moneda o su diseño. </li>
 </ul>
 </li>
@@ -220,7 +256,7 @@
 Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y pegar un archivo en el campo de texto en el cuadro de diálogo Editar.
 
 <h4>3.1.1 Edición de imágenes</h4>
-<p>La aplicación soporta hasta 7 imágenes por cada moneda.</p>
+<p>La aplicación soporta hasta 11 imágenes por cada moneda.</p>
 <p>Se admiten los siguientes formatos de imagen: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Las imágenes se guardan en formato JPEG. Las imágenes grandes se comprimen para que el lado máximo no supere los 1024 píxeles (puede cambiarlo en el cuadro de diálogo Configuración).
 <br>Para insertar o cambiar una imagen, haga clic con el botón derecho en el campo y seleccione uno de los elementos del menú desplegable:</p>
 <p><img src="/images/manual/img_menu.png"></p>
@@ -418,12 +454,6 @@ reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 <a href="http://opennumismat.idea.informer.com">Retroalimentación OpenNumismat</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
-</script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
 </body>
 </html>
