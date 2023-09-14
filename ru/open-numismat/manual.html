@@ -104,15 +104,18 @@
 <p><img src="/images/manual/new.png"></p>
 <p>Диалог Редактирования содержит 7 вкладок со следующими полями:</p>
 <ul>
-<li>Монета - Основное:<ul>
+<li>Overall - Main details:<ul>
+<li>Категория - тип коллекционного предмета</li>
 <li>Название - описательное название монеты (может быть автоматически создано из остальных полей по нажатию кнопки "Генерировать");</li>
 <li>Регион;</li>
 <li>Страна;</li>
 <li>Период - период в истории страны или чеканки монеты;</li>
+<li>Эмитент;</li>
 <li>Правитель;</li>
 <li>Номинал;</li>
 <li>Валюта;</li>
-<li>Год;</li>
+<li>Year - gregorian year;</li>
+<li>Год на монете;</li>
 <li>Монетный двор;</li>
 <li>Буквы - знак монетного двора;</li>
 <li>Тип;</li>
@@ -120,12 +123,24 @@
 <li>Тема - событие, объект которому посвящена памятная монета.</li>
 </ul>
 </li>
-<li>Монета - Состояние (состояние монеты из коллекции):<ul>
-<li>Статус - основная характеристика, определяющая наличие монеты в коллекции. Может принимать значение Демо, Проход, Есть, Заказана, Продана, На продажу, Нужна, Ставка, Потеряна, Дубликат. Статус монеты влияет на доступность и содержание вкладки Рынок;</li>
+<li>Overall - State (state of coin from the collection):<ul>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. The coin status affects the availability and content of the Market tab. Available values (can be renamed from Settings):
+       <br><img src="/open-numismat-app/img/demo.png"> Demo - an existing item that is not present and is not needed in the collection;
+       <br><img src="/open-numismat-app/img/bidding.png"> Bidding - an item that is currently being bid on;
+       <br><img src="/open-numismat-app/img/ordered.png"> Ordered - an object that has been ordered;
+       <br><img src="/open-numismat-app/img/owned.png"> Owned -  an object that is owned in the collection;
+       <br><img src="/open-numismat-app/img/duplicate.png"> Duplicate - copy or spare item of the collection;
+       <br><img src="/open-numismat-app/img/replacement.png"> Replacement - an item that is for exchange with a better item;
+       <br><img src="/open-numismat-app/img/sold.png"> Sold - item that has been sold;
+       <br><img src="/open-numismat-app/img/wish.png"> Wish - an object that is desired for purchase;
+       <br><img src="/open-numismat-app/img/sale.png"> Sale - an item that has been put up for sale;
+       <br><img src="/open-numismat-app/img/missing.png"> Missing - an item that is missing from the collection (stolen or lost);
+       <br><img src="/open-numismat-app/img/pass.png"> Pass - object that is under watched in auction or store.</li>
 <li>Сохранность - степень износа монеты;</li>
 <li>Количество - количество дубликатов или монет в ролле;</li>
 <li>Формат - формат распространения (одиночная монета или в наборе);</li>
 <li>Состояние;</li>
+<li>Seat - a seat of the coin in the storage;</li>
 <li>Хранилище - описание физического местоположения монеты;</li>
 <li>Штрих-код;</li>
 <li>Грейдер;</li>
@@ -140,6 +155,7 @@
 <li>Комиссия - дополнительные затраты, связанные с приобретением монеты (поле доступно только в окне редактирования монеты). Допускается как ввод суммы комиссии, так и процент от цены (например, 10%);</li>
 <li>Продавец;</li>
 <li>Место;</li>
+<li>Invoice - link to the purchaise invoice document on disk or URL;</li>
 <li>Информация.</li>
 </ul>
 </li>
@@ -150,21 +166,38 @@
 <li>Комиссия - дополнительные затраты, связанные с продажей монеты (поле доступно только в окне редактирования монеты). Допускается как ввод суммы комиссии, так и процент от цены (например, 10%);</li>
 <li>Покупатель;</li>
 <li>Место;</li>
+<li>Invoice - link to the sales invoice document on disk or URL;</li>
 <li>Информация.</li>
 </ul>
 </li>
-<li>Карта</li>
-<li>Параметры - Параметры (физические параметры монеты):<ul>
+<li>Карта<ul>
+<li>Адрес;</li>
+<li>Широта;</li>
+<li>Долгота;</li>
+</ul>
+</li>
+<li>Technical data - Parameters (physical parameters of the coin):<ul>
+<li>Состав;</li>
 <li>Материал;</li>
+<li>Материал 2;</li>
 <li>Проба;</li>
 <li>Масса;</li>
 <li>Диаметр;</li>
 <li>Толщина;</li>
+<li>Ширина;</li>
+<li>Высота;</li>
 <li>Форма;</li>
 <li>Ав/Рев - соотношение аверса и реверса (медальное, монетное).</li>
 </ul>
 </li>
-<li>Параметры - Чеканка (данные о выпуске монеты):<ul>
+<li>Technical data - Specificity:<ul>
+<li>Diameter - real coin diameter;</li>
+<li>Weight - real coin weight;</li>
+<li>Die Axis - describes how the obverse and reverse dies were aligned to each other when the coin was struck. Most often expressed in degrees, but can also be expressed as the face of a clock in hours;</li>
+<li>Modification.</li>
+</ul>
+</li>
+<li>Technical data - Minting (coin release data):<ul>
 <li>Дата выпуска;</li>
 <li>Тираж;</li>
 <li>Период выпуска;</li>
@@ -178,14 +211,17 @@
 <li>Художник (аверса);</li>
 <li>Гравер (аверса);</li>
 <li>Цвет (аверса);</li>
-<li>Реверс - изображение реверса;</li>
+<li>Reverse - the reverse image;</li>
 <li>Дизайн (реверса);</li>
 <li>Художник (реверса);</li>
 <li>Гравер (реверса);</li>
 <li>Цвет (реверса);</li>
-<li>Гурт - изображение гурта;</li>
-<li>Тип (гурта);</li>
-<li>Надпись (на гурте);</li>
+<li>Edge - the image of the edge or the banknote signature;</li>
+<li>Type - type of coin edge or title of the banknote signatory;</li>
+<li>Label - label on the coin edge or banknote signatory name;</li>
+<li>Signature - the image of the banknote signature;</li>
+<li>Type - type of coin rim or title of the banknote signatory;</li>
+<li>Signature - banknote signatory name;</li>
 <li>Тема - описание темы или события, которой посвящена монета или ее дизайн;</li>
 </ul>
 </li>
@@ -220,7 +256,7 @@
 Для вставки ссылки на файл вы можете перетащить или скопировать и вставить файл в текстовое поле диалога редактирования.
 
 <h4>3.1.1 Редактирование изображений</h4>
-<p>Приложение поддерживает до 7 изображений каждой монеты.</p>
+<p>The application supports up to 11 images of each coin.</p>
 <p>Поддерживаются следующие форматы изображений: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Изображения сохраняются в формате JPEG. Большие изображения сжимаются так, что максимальная сторона не превосходит 1024 пикселя (можно изменить в диалоге Настройки).
 <br>Для вставки или изменения изображения нажмите правой кнопкой мыши на поле и выберите один из пунктов выпадающего меню:</p>
 <p><img src="/images/manual/img_menu.png"></p>
@@ -295,14 +331,14 @@
 <p>В меню <i>Файл-&gt;Установить пароль...</i> можно задать пароль, который будет запрашиваться при каждом открытии коллекции.</p>
 <p><img src="/images/manual/password.png"></p>
 <p>Внимание: шифрование данных не выполняется, так что защита паролем не может считаться полной.</p>
-<h3>5.4 Синхронизация</h3>
+<h3>5.5 Синхронизация</h3>
 <p>Изменения, сделанные в нескольких копиях файла коллекции, можно безопасно объединить, воспользовавшись меню <i>Файл-&gt;Синхронизировать...</i>.</p>
 <p>Наиболее важные свойства алгоритма синхронизации:</p>
 <ul>
 <li>Все новые записи будут добавлены (определяются по полю Создано) в открытую коллекцию.</li>
 <li>Записи с одинаковым значением поля ID и Создано будут обновлены, если значение поля Обновлено меньше в открытой коллекции.</li>
 </ul>
-<h3>5.5 Импорт</h3>
+<h3>5.6 Импорт</h3>
 <p>OpenNumismat позволяет вам импортировать данные из коллекций созданных в других приложениях (MS Excel, CoinManage, Collection Studio и Tellico)
 или сайтах (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> и uCoin.net).</p>
 <p>Для импорта из MS Excel необходимо выбрать меню <i>Файл-&gt;Импортировать-&gt;Excel</i> и выбрать исходный файл.
