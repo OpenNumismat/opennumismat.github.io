@@ -34,9 +34,9 @@
 	</Company_Info>
 	<Program_Info>
 		<Program_Name>OpenNumismat</Program_Name>
-		<Program_Version>1.8.22</Program_Version>
-		<Program_Release_Month>05</Program_Release_Month>
-		<Program_Release_Day>10</Program_Release_Day>
+		<Program_Version>1.9.4</Program_Version>
+		<Program_Release_Month>09</Program_Release_Month>
+		<Program_Release_Day>29</Program_Release_Day>
 		<Program_Release_Year>2023</Program_Release_Year>
 		<Program_Cost_Dollars>0</Program_Cost_Dollars>
 		<Program_Cost_Other_Code />
@@ -44,7 +44,7 @@
 		<Program_Type>Freeware</Program_Type>
 		<Program_Release_Status>New Release</Program_Release_Status>
 		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
-		<Program_OS_Support>Win7,WinOther,Win8,Win10</Program_OS_Support>
+		<Program_OS_Support>Win10,Win11</Program_OS_Support>
 		<Program_Language>English,Russian,Spanish,French,Ukranian,Hungarian,Portuguese,German,Greek,Italian,Polish,Catalan,Dutch,Bulgarian,Latvian,Swedish,Persian</Program_Language>
 		<Program_Change_Info />
 		<Program_Specific_Category>Home\/Hobby</Program_Specific_Category>
@@ -107,7 +107,7 @@ Main features:
 			<Application_XML_File_URL>http://opennumismat.github.io/data/pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.8.22/OpenNumismat-1.8.22.exe</Primary_Download_URL>
+			<Primary_Download_URL>https://github.com/OpenNumismat/open-numismat/releases/download/1.9.4/OpenNumismat-1.9.4-win64.exe</Primary_Download_URL>
 			<Secondary_Download_URL />
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
