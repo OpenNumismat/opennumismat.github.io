@@ -40,7 +40,7 @@
   "density": "Punktdichte des Displays:",
   "wrong_version": "Datei hat unbekanntes Format",
   "old_version": "Datei hat eine alte Version. Bitte mit der Desktop-Version von OpenNumismat aktualisieren",
-  "newest_version": "File has a newest version than app",
+  "newest_version": "Datei hat neuere Version als App",
   "wrong_password": "Falsches Passwort",
   "failed_read_file": "Fehler beim Lesen der Datei",
   "reverse": "Reverse order",
