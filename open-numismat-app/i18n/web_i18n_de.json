@@ -69,7 +69,7 @@
     "security_note": "Ihre Datei wird nicht auf einen Server geladen. Sie können die Internetverbindung deaktivieren.",
     "show_status_as": "Zeige Status als:",
     "text": "Text",
-    "icon": "Symbol",
+    "icon": "Icon (Piktogramm)",
     "full": "Icon + text"
   }
 }
