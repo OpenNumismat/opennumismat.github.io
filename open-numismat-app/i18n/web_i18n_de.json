@@ -39,7 +39,7 @@
   "BC": "v. Chr.",
   "density": "Punktdichte des Displays:",
   "wrong_version": "Datei hat unbekanntes Format",
-  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+  "old_version": "Datei hat eine alte Version. Bitte mit der Desktop-Version von OpenNumismat aktualisieren",
   "newest_version": "File has a newest version than app",
   "wrong_password": "Falsches Passwort",
   "failed_read_file": "Fehler beim Lesen der Datei",
