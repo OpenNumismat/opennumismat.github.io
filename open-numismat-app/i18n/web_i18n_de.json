@@ -38,7 +38,7 @@
   "load_db": "Lade Datenbank aus Datei",
   "BC": "v. Chr.",
   "density": "Punktdichte des Displays:",
-  "wrong_version": "File has wrong or unknown format",
+  "wrong_version": "Datei hat unbekanntes Format",
   "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
   "newest_version": "File has a newest version than app",
   "wrong_password": "Falsches Passwort",
