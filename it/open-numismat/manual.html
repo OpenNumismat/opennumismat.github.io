@@ -59,7 +59,7 @@
 </div>
 <div class="inner-content">
 <h1>Manuale utente</h1>
-<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><h2 id="sec1">1 Introduzione</h2>
+<a href="#sec1">1 Introduction</a><br><a href="#sec2">2 General view</a><br><a href="#sec3">3 Entering coins</a><br><a href="#sec4">4 View Coins</a><br><a href="#sec5">5 Managing a collection file</a><br><a href="#sec6">6 Reports</a><br><a href="#sec7">7 References</a><br><a href="#sec8">8 Settings</a><br><a href="#sec9">9 Image Editor</a><br><h2 id="sec1">1 Introduzione</h2>
 <h3>1.1 Descrizione</h3>
 <p>OpenNumismat è un'applicazione pratica e affidabile progettata per collezionatori di monete e collezionisti di monete, per creare una collezione numismatica.</p>
 <p>Con OpenNumismat sarai in grado di creare, organizzare e gestire i tuoi cataloghi di monete con descrizioni dettagliate e foto per ogni oggetto.</p>
@@ -104,15 +104,18 @@
 <p><img src="/images/manual/new.png"></p>
 <p>The Edit dialog contains 7 tabs with the following fields:</p>
 <ul>
-<li>Moneta - Dettagli principali:<ul>
+<li>Overall - Main details:<ul>
+<li>Category - type of collectable item;</li>
 <li>Nome: nome descrittivo della moneta (può essere creato automaticamente compilando i campi successivi facendo clic sul pulsante "Genera");</li>
 <li>Regione;</li>
 <li>Nazione;</li>
 <li>Period - period in the history of the country or coinage period;</li>
+<li>Emitent;</li>
 <li>Governatore</li>
 <li>Valore;</li>
 <li>Unità;</li>
-<li>Anno;</li>
+<li>Year - gregorian year;</li>
+<li>Year on coin;</li>
 <li>Zecca;</li>
 <li>Marchio della zecca - un segno della zecca;</li>
 <li>Tipo;</li>
@@ -120,12 +123,24 @@
 <li>Soggetto - un evento o oggetto a cui è dedicata la moneta commemorativa.</li>
 </ul>
 </li>
-<li>Moneta - Stato (stato della moneta dalla collezione):<ul>
-<li>Status - the main characteristic that determines the presence of a coin in the collection. Can take the value of Demo, Pass, Owned, Ordered, Sold, Sale, Wish, Bidding, Missing, Duplicate. The coin status affects the availability and content of the Market tab;</li>
+<li>Overall - State (state of coin from the collection):<ul>
+<li>Status - the main characteristic that determines the presence of a coin in the collection. The coin status affects the availability and content of the Market tab. Available values (can be renamed from Settings):
+       <br><img src="/open-numismat-app/img/demo.png"> Demo - an existing item that is not present and is not needed in the collection;
+       <br><img src="/open-numismat-app/img/bidding.png"> Bidding - an item that is currently being bid on;
+       <br><img src="/open-numismat-app/img/ordered.png"> Ordered - an object that has been ordered;
+       <br><img src="/open-numismat-app/img/owned.png"> Owned -  an object that is owned in the collection;
+       <br><img src="/open-numismat-app/img/duplicate.png"> Duplicate - copy or spare item of the collection;
+       <br><img src="/open-numismat-app/img/replacement.png"> Replacement - an item that is for exchange with a better item;
+       <br><img src="/open-numismat-app/img/sold.png"> Sold - item that has been sold;
+       <br><img src="/open-numismat-app/img/wish.png"> Wish - an object that is desired for purchase;
+       <br><img src="/open-numismat-app/img/sale.png"> Sale - an item that has been put up for sale;
+       <br><img src="/open-numismat-app/img/missing.png"> Missing - an item that is missing from the collection (stolen or lost);
+       <br><img src="/open-numismat-app/img/pass.png"> Pass - object that is under watched in auction or store.</li>
 <li>Condizione - il grado di conservazione delle monete;</li>
 <li>Quantità - il numero di duplicati o monete nel rotolo;</li>
 <li>Format - destribution format (single coin, set or roll);</li>
 <li>Condizione;</li>
+<li>Seat - a seat of the coin in the storage;</li>
 <li>Immagazzinamento - una descrizione della posizione fisica della moneta;</li>
 <li>Codice a barre;</li>
 <li>Grader;</li>
@@ -140,6 +155,7 @@
 <li>Commissione - costi aggiuntivi associati all'acquisizione di una moneta (il campo è disponibile solo nella finestra di modifica delle monete). È consentito inserire l'importo della commissione, nonché la percentuale del prezzo (ad esempio il 10%);</li>
 <li>Venditore;</li>
 <li>Luogo;</li>
+<li>Invoice - link to the purchaise invoice document on disk or URL;</li>
 <li>Informazioni.</li>
 </ul>
 </li>
@@ -150,21 +166,38 @@
 <li>Commissione - costi aggiuntivi associati alla vendita di monete (il campo è disponibile solo nella finestra di modifica delle monete). È consentito inserire l'importo della commissione, nonché la percentuale del prezzo (ad esempio il 10%);</li>
 <li>Compratore;</li>
 <li>Luogo;</li>
+<li>Invoice - link to the sales invoice document on disk or URL;</li>
 <li>Informazioni.</li>
 </ul>
 </li>
-<li>Mappa</li>
-<li>Parametri - Parametri (parametri fisici della moneta):<ul>
+<li>Mappa<ul>
+<li>Address;</li>
+<li>Latitude;</li>
+<li>Longitude;</li>
+</ul>
+</li>
+<li>Technical data - Parameters (physical parameters of the coin):<ul>
+<li>Composition;</li>
 <li>Materiale;</li>
+<li>Material 2;</li>
 <li>Bellezza;</li>
 <li>Peso;</li>
 <li>Diametro;</li>
 <li>Spessore;</li>
+<li>Width;</li>
+<li>Height;</li>
 <li>Forma;</li>
 <li>Dri/Rov - il rapporto tra diritto e rovescio (medaglia, moneta).</li>
 </ul>
 </li>
-<li>Parametri - Coniazione (dati di conio della moneta):<ul>
+<li>Technical data - Specificity:<ul>
+<li>Diameter - real coin diameter;</li>
+<li>Weight - real coin weight;</li>
+<li>Die Axis - describes how the obverse and reverse dies were aligned to each other when the coin was struck. Most often expressed in degrees, but can also be expressed as the face of a clock in hours;</li>
+<li>Modification.</li>
+</ul>
+</li>
+<li>Technical data - Minting (coin release data):<ul>
 <li>Data di emissione;</li>
 <li>Tiratura;</li>
 <li>Periodo di emissione;</li>
@@ -178,14 +211,17 @@
 <li>Disegnatore (dritto);</li>
 <li>Engraver (obverse);</li>
 <li>Color (obverse);</li>
-<li>Rovescio - immagine del rovescio</li>
+<li>Reverse - the reverse image;</li>
 <li>Disegno (rovescio);</li>
 <li>Disegnatore (rovescio);</li>
 <li>Engraver (reverse);</li>
 <li>Color (reverse);</li>
-<li>Bordo - immagine del bordo;</li>
-<li>Tipo (di bordo);</li>
-<li>Etichetta (sul bordo);</li>
+<li>Edge - the image of the edge or the banknote signature;</li>
+<li>Type - type of coin edge or title of the banknote signatory;</li>
+<li>Label - label on the coin edge or banknote signatory name;</li>
+<li>Signature - the image of the banknote signature;</li>
+<li>Type - type of coin rim or title of the banknote signatory;</li>
+<li>Signature - banknote signatory name;</li>
 <li>Soggetto - una descrizione dell'argomento o dell'evento a cui è dedicata la moneta o il suo disegno;</li>
 </ul>
 </li>
@@ -220,7 +256,7 @@
 For paste link to a local file you can drag'n'drop or copy-paste file into text field in Edit dialog.
 
 <h4>3.1.1 Modifica immagini</h4>
-<p>L'applicazione supporta fino a 7 immagini di ogni moneta.</p>
+<p>The application supports up to 11 images of each coin.</p>
 <p>The following image formats are supported: BMP, GIF, JPEG, PNG, TIFF, WEBP, JPEG2000, PBM, PGM, PPM, XBM, XPM. Images are saved in JPEG format. Large images are compressed so that the maximum side does not exceed 1024 pixels (you can change it in the Settings dialog).
 <br>To insert or change an image, right-click on the field and select one of the drop-down menu items:</p>
 <p><img src="/images/manual/img_menu.png"></p>
@@ -295,14 +331,14 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>Nel menu <i>File-&gt;Imposta password...</i>  puoi impostare la password che verrà richiesta ogni volta che la collezione viene aperta.</p>
 <p><img src="/images/manual/password.png"></p>
 <p>Nota: la crittografia dei dati non viene eseguita, quindi la protezione della password non può essere considerata completa.</p>
-<h3>5.4 Sincronizzazione</h3>
+<h3>5.5 Synchronization</h3>
 <p>Le modifiche apportate in più copie di un file di collezione possono essere unite in modo sicuro con il menu <i>File-&gt;Sincronizza...</i>.</p>
 <p>Le proprietà più importanti dell'algoritmo di sincronizzazione:</p>
 <ul>
 <li>Tutte le nuove voci verranno aggiunte (rilevate dal campo Creato) alla raccolta aperta.</li>
 <li>Le voci con lo stesso valore di ID e campo creato verranno aggiornate quando il valore del campo aggiornato è inferiore nella raccolta aperta.</li>
 </ul>
-<h3>5.5 Importazione</h3>
+<h3>5.6 Importing</h3>
 <p>OpenNumismat allows you to import data from collections creted in another software (MS Excel, CoinManage, Collection Studio and Tellico)
 or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> and uCoin.net).</p>
 <p>For importing from MS Excel select the menu <i>File-&gt;Import-&gt;Excel</i> and select the source file.
@@ -384,6 +420,22 @@ Collection specific settings (stored for each collection file):
 <p>Free format numeric fields - for entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
 <p>Images at bottom:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h2 id="sec9">9 Image Editor</h2>
+<p>OpenNumismat has a built-in Image editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), that can be enabled from Settings.</p>
+<p><img src="/images/imageEdit.png"></p>
+
+<h4>Caratteristiche</h4>
+<ul>
+<li>Support popular image formats: JPEG, PNG, BMP, TIFF, GIF, WebP</li>
+<li>Full Screen mode</li>
+<li>Image editing tools: resize, rotate, crop (rectangle, ellipse, perspective transformation)</li>
+<li>Up to 10 Undo/Redo actions</li>
+<li>Single click to switch between best fit and actual size mode</li>
+<li>Mouse wheel zoom</li>
+</ul>
+<h4>Keyboard Shortcuts</h4>
+<p><code>Ctrl</code>+<code>O</code> - Open file<br><code>Ctrl</code>+<code>S</code> - Save<br><code>Ctrl</code>+<code>C</code>, <code>Ctrl</code>+<code>Insert</code> - Copy<br><code>Ctrl</code>+<code>V</code>, <code>Shift</code>+<code>Insert</code> - Paste<br><code>Ctrl</code>+<code>Z</code> - Undo<br><code>Ctrl</code>+<code>Y</code> - Redo<br><code>Ctrl</code>+<code>Right</code> - Rotate to right<br><code>Ctrl</code>+<code>Left</code> - Rotate to left<br><code>C</code> - Open crop tool<br><code>R</code> - Open rotate tool<br><code>+</code> - Zoom in<br><code>-</code> - Zoom out<br><code>0</code> - Fit to window<br><code>1</code>, <code>A</code> - Scale 100%<br><code>2</code> - Scale 200%<br><code>3</code> - Scale 300%<br><code>4</code> - Scale 400%<br><code>5</code> - Scale 500%<br><code>6</code> - Scale 600%<br><code>F11</code> - Full screen<br><code>Esc</code> - Quit</p>
 
 </div>
       </section>
