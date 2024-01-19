@@ -120,8 +120,10 @@
   <li>Экспорт настроенных списков в форматы MS Excel, HTML и CSV</li>
   <li>Дублирование монет для быстрого добавления сходной монеты</li>
   <li>Групповое редактирование монет</li>
-  <li>Встроенный редактор изображений</li>
+  <li>Built-in <a href="https://github.com/OpenNumismat/ImageEditor/">Image Editor</a>
+</li>
   <li>Статистика</li>
+  <li>Поиск по изображению</li>
   <li>Возможность добавления и настройки списков для отображения требуемых данных</li>
   <li>Не требует установки дополнительных программ для работы с базой данных</li>
   <li>Поиск и импорт информации о монетах, банкнотах, марках из <a href="https://colnect.com/">Colnect</a>, онлайн-сообщества коллекционеров</li>
@@ -129,7 +131,7 @@
 </li>
   <li>Импортирование существующих коллекций из</li>
   <ul>
-<li>Excel (включая изображения представленные ссылками в оригинальном файле)</li>
+<li>Excel</li>
     <li>
 <a href="https://colnect.com/">Colnect</a> (из <a href="https://colnect.com/en/help/collecting/premium_export_list">списков</a>)</li>
     <li><a href="https://numista.com/">Numista</a></li>
@@ -146,24 +148,24 @@
 <h2 id="download">Скачать</h2>
 <h3>Новейшая версия со свежими библиотеками и зависимостями</h3>
 <p></p>
-<div class="inline">Новейшая версия:</div> <div class="inline"><strong>OpenNumismat 1.9.5</strong></div>. Дата выхода: <div class="inline">26 октября 2023</div>
+<div class="inline">Новейшая версия:</div> <div class="inline"><strong>OpenNumismat 1.9.6</strong></div>. Дата выхода: <div class="inline">18 January 2024</div>
 <p>
 </p>
 <h4>Windows 10 и выше</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5.exe">OpenNumismat</a></strong></div> установщик
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.exe">OpenNumismat</a></strong></div> установщик
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5.zip">OpenNumismat</a></div> портативная
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.zip">OpenNumismat</a></div> портативная
 <p>
 </p>
 <h4>macOS 11 и выше</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/open-numismat_1.9.5_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/open-numismat_1.9.6_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - пакет Flatpak
 <p>
@@ -198,7 +200,42 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Latest Development Build and Older Releases...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Source code</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в <div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26 октября 2023</div>)</h3>
+  <h3>Что нового в <div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 January 2024</div>)</h3>
+  <ul>
+<li>Added tool for searching coins by similar photo (more info at <a href="https://github.com/OpenNumismat/SimilarImageFinder/">SimilarImageFinder</a>)</li>
+    <li>Improved processing BC ranges in Year field</li>
+    <li>Changed Duplicate and Replacement Status icons</li>
+    <li>Color the coin frame with Status color in Card and Icon view</li>
+    <li>Fixed showing Status icon in Tree</li>
+    <li>Added settings for image transparent color replacement</li>
+    <li>Fixed resizing Customize Tree dialog</li>
+    <li>Don't suggest saving image as .gif (Qt not support saving as .gif)</li>
+    <li>Fixed importing from CoinManage on non Windows platforms</li>
+    <li>Improved storing latest image folder</li>
+    <li>Improved selecting saving image format</li>
+    <li>Fixed saving GeoChart</li>
+    <li>Many improvements in built-in <a href="https://github.com/OpenNumismat/ImageEditor/">Image Editor</a><ul>
+<li>Circle crop with antialiasing</li>
+        <li>Improved perspective transformation algorithm</li>
+        <li>Improved auto detecting borders algorithm in crop tool</li>
+        <li>Set undo depth to 10 actions</li>
+        <li>Remove alpha when saving or copying after transformation</li>
+        <li>Setting for background color</li>
+        <li>Added gray mask for cropping tool</li>
+        <li>Added cut left-, right-half actions</li>
+        <li>Improved zoom steps</li>
+        <li>Added zoom spin on toolbar</li>
+        <li>Zoom in/out by mouse dbl click</li>
+        <li>Zooming by middle mouse button press</li>
+        <li>Improved keyboard shortcuts</li>
+        <li>Mark window title when image changed</li>
+        <li>Enable drag-n-drop image to window</li>
+        <li>Use field name as image name</li>
+        <li>Protect from croping unconvex rectangle</li>
+      </ul>
+</li>
+  </ul>
+<h3>Что нового в <div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26 октября 2023</div>)</h3>
   <ul>
 <li>Исправлен дистрибутив для Windows</li>
     <li>Добавлена обработка тэгов при редактировании нескольких записей</li>
@@ -221,12 +258,8 @@
     <li>Убирается ч-символ в повороте осей в часах при создании новой записи</li>
     <li>Исправлено максимальное значение для 'Количество изображений по умолчанию' в Настройках</li>
   </ul>
-<h3>Что нового в <div class="inline">OpenNumismat 1.9.3</div> (<div class="inline">15 сентября 2023</div>)</h3>
-  <ul>
-<li>Исправлено создание первого тэга</li>
-    <li>Исправлен перевод статусов для демонстрационных коллекций</li>
-  </ul>
-<a href="history.html">Ранее...</a>
+<a href="history.html">Older...</a>
+  <a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>Как я могу помочь?</h2>
 <ul>
 <li>Используйте <strong>OpenNumismat</strong> и рекомендуйте его своим знакомым.</li>
@@ -247,7 +280,7 @@
 <h2>Детали</h2>
 <p><strong>OpenNumismat</strong> это:</p>
 <p><img src="/images/qt-logo.png" class="img-logo"><img src="/images/python-logo.png" class="img-logo"><img src="/images/sqlite-logo.png" class="img-logo"><img src="/images/gplv3-logo.png" class="img-logo"></p>
-<p><strong>OpenNumismat</strong> основывается на <a href="https://riverbankcomputing.com/software/pyqt/intro" rel="nofollow">библиотеке PyQt</a> с <a href="https://www.sqlite.org/" rel="nofollow">SQLite database engine</a> для хранения данных коллекции.</p>
+<p><strong>OpenNumismat</strong> based on <a href="https://doc.qt.io/qtforpython-6/" rel="nofollow">PySide6 module</a> with <a href="https://www.sqlite.org/" rel="nofollow">SQLite database engine</a> to store data collection.</p>
 <p>Иконки, используемые в интерфейсе, основываются на <a href="http://led24.de/iconset/" rel="nofollow">LED Icon Set</a> v1.0, Soft Scraps Icons от <a href="http://deleket.deviantart.com/" rel="nofollow">deleket</a> и <a href="http://www.famfamfam.com" rel="nofollow">Flag и Silk icons</a>.</p>
 <p>Все изображения и описания монет в демо-коллекциях с <a href="http://ec.europa.eu/economy_finance/euro/" rel="nofollow">официального сайта Европейской Комиссии</a>, <a href="http://cbr.ru/" rel="nofollow">сайта Центрального банка Российской Федерации</a>, <a href="http://www.usmint.gov" rel="nofollow">информационного сайта монетного двора США</a> и <a href="http://ru.wikipedia.org/" rel="nofollow">Википедии</a>.</p>
 </div>
