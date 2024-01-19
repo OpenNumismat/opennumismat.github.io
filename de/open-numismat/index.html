@@ -120,15 +120,17 @@
   <li>Export benutzerdefinierter Listen in Form von MS-Excel-, HTML- oder CSV-Dateien.</li>
   <li>Duplizierung von Münzen, um schnell ähnliche Münzen einzugeben.</li>
   <li>Bearbeiten von Münzen im Stapelverfahren.</li>
-  <li>Integrierte Bildbearbeitung</li>
+  <li>Built-in <a href="https://github.com/OpenNumismat/ImageEditor/">Image Editor</a>
+</li>
   <li>Statistiken</li>
+  <li>Search by image</li>
   <li>Möglichkeit, benutzerdefinierte Listen zu konfigurieren und zu speichern, um die gewünschten Daten anzuzeigen.</li>
   <li>Für die Arbeit mit der Datenbank wird keine zusätzliche Software benötigt.</li>
   <li>Suche und Import von Infos zu Münzen, Banknoten und Briefmarken aus <a href="https://colnect.com/">Colnect</a>, einer Online-Sammler-Community</li>
   <li>Suche und Import von Infos zu Münzen und Medaillen aus der <a href="http://numismatics.org/search/">ANS </a>-Sammlungsdatenbank</li>
   <li>Import vorhandener Sammlungen aus:</li>
   <ul>
-<li>Excel (Bilder als Links in der Quelldatei)</li>
+<li>Excel</li>
     <li>
 <a href="https://colnect.com/">Colnect</a> (aus <a href="https://colnect.com/en/help/collecting/premium_export_list">Listen</a>)</li>
     <li><a href="https://numista.com/">Numista</a></li>
@@ -145,24 +147,24 @@
 <h2 id="download">Download</h2>
 <h3>Neueste Version mit neuen Bibliotheksabhängigkeiten von Drittanbietern</h3>
 <p></p>
-<div class="inline">Die neueste Version:</div> <div class="inline"><strong>OpenNumismat 1.9.5</strong></div>Veröffentlichung am <div class="inline">26. Oktober 2023</div>
+<div class="inline">Die neueste Version:</div> <div class="inline"><strong>OpenNumismat 1.9.6</strong></div>Veröffentlichung am <div class="inline">18 January 2024</div>
 <p>
 </p>
 <h4>Windows 10 und neuer</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5.exe">OpenNumismat</a></strong></div> installer
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.exe">OpenNumismat</a></strong></div> installer
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5.zip">OpenNumismat</a></div> transportabel
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.zip">OpenNumismat</a></div> transportabel
 <p>
 </p>
 <h4>macOS 11 und neuer</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/OpenNumismat-1.9.5-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/open-numismat_1.9.5_all.deb">OpenNumismat</a></div> - für Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/open-numismat_1.9.6_all.deb">OpenNumismat</a></div> - für Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Flatpak package
 <p>
@@ -197,7 +199,42 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Neueste Entwicklungsversion und ältere Versionen...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Quellcode</a></p>
 <h2>Änderungshistorie</h2>
-  <h3>Was ist neu in<div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26. Oktober 2023</div>)</h3>
+  <h3>Was ist neu in<div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 January 2024</div>)</h3>
+  <ul>
+<li>Added tool for searching coins by similar photo (more info at <a href="https://github.com/OpenNumismat/SimilarImageFinder/">SimilarImageFinder</a>)</li>
+    <li>Improved processing BC ranges in Year field</li>
+    <li>Changed Duplicate and Replacement Status icons</li>
+    <li>Color the coin frame with Status color in Card and Icon view</li>
+    <li>Fixed showing Status icon in Tree</li>
+    <li>Added settings for image transparent color replacement</li>
+    <li>Fixed resizing Customize Tree dialog</li>
+    <li>Don't suggest saving image as .gif (Qt not support saving as .gif)</li>
+    <li>Fixed importing from CoinManage on non Windows platforms</li>
+    <li>Improved storing latest image folder</li>
+    <li>Improved selecting saving image format</li>
+    <li>Fixed saving GeoChart</li>
+    <li>Many improvements in built-in <a href="https://github.com/OpenNumismat/ImageEditor/">Image Editor</a><ul>
+<li>Circle crop with antialiasing</li>
+        <li>Improved perspective transformation algorithm</li>
+        <li>Improved auto detecting borders algorithm in crop tool</li>
+        <li>Set undo depth to 10 actions</li>
+        <li>Remove alpha when saving or copying after transformation</li>
+        <li>Setting for background color</li>
+        <li>Added gray mask for cropping tool</li>
+        <li>Added cut left-, right-half actions</li>
+        <li>Improved zoom steps</li>
+        <li>Added zoom spin on toolbar</li>
+        <li>Zoom in/out by mouse dbl click</li>
+        <li>Zooming by middle mouse button press</li>
+        <li>Improved keyboard shortcuts</li>
+        <li>Mark window title when image changed</li>
+        <li>Enable drag-n-drop image to window</li>
+        <li>Use field name as image name</li>
+        <li>Protect from croping unconvex rectangle</li>
+      </ul>
+</li>
+  </ul>
+<h3>Was ist neu in<div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26. Oktober 2023</div>)</h3>
   <ul>
 <li>Die Windows-Verteilung wurde korrigiert</li>
     <li>Verarbeitungs-Tags im Mehrfachbearbeitungsdialog hinzugefügt</li>
@@ -220,12 +257,8 @@
     <li>Hide h-postfix in hour axis field while creating new record</li>
     <li>Fixed max value for 'Images count by default' in Settings</li>
   </ul>
-<h3>Was ist neu in<div class="inline">OpenNumismat 1.9.3</div> (<div class="inline">15. September 2023</div>)</h3>
-  <ul>
-<li>Fixed creating first tag</li>
-    <li>Fixed statuses translations in demo collection</li>
-  </ul>
-<a href="history.html">Ältere...</a>
+<a href="history.html">Older...</a>
+  <a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>Wie kann ich helfen?</h2>
 <ul>
 <li>Benutzen Sie <strong>OpenNumismat</strong> und empfehlen Sie es weiter.</li>
@@ -246,7 +279,7 @@ Novocherkassky, 9, 47
 <h2>Details</h2>
 <p><strong>OpenNumismat</strong> ist:</p>
 <p><img src="/images/qt-logo.png" class="img-logo"><img src="/images/python-logo.png" class="img-logo"><img src="/images/sqlite-logo.png" class="img-logo"><img src="/images/gplv3-logo.png" class="img-logo"></p>
-<p><strong>OpenNumismat</strong>, basierend auf dem <a href="https://riverbankcomputing.com/software/pyqt/intro" rel="nofollow">PyQt-Framework</a> mit <a href="https://www.sqlite.org/" rel="nofollow">SQLite-Datenbank-Engine</a> zum Speichern der Datenerfassung.</p>
+<p><strong>OpenNumismat</strong> based on <a href="https://doc.qt.io/qtforpython-6/" rel="nofollow">PySide6 module</a> with <a href="https://www.sqlite.org/" rel="nofollow">SQLite database engine</a> to store data collection.</p>
 <p>Die im Benutzerinterface benutzten Icons basieren auf <a href="http://led24.de/iconset/" rel="nofollow">LED Icon Set</a> v1.0, Soft Scraps Icons by <a href="http://deleket.deviantart.com/" rel="nofollow">deleket</a> und <a href="http://www.famfamfam.com" rel="nofollow">Flag and Silk icons</a>.</p>
 <p>Alle Abbildungen und Beschreibungen von Münzen in der Demo-Sammlung entstammen folgenden Seiten: <a href="http://ec.europa.eu/economy_finance/euro/" rel="nofollow">Official website of the European Commission</a>, <a href="http://cbr.ru/eng/" rel="nofollow">The Central Bank of the Russian Federation website</a>, <a href="http://www.usmint.gov" rel="nofollow">United States Mint's public information Website</a> und <a href="http://en.wikipedia.org/" rel="nofollow">Wikipedia</a>.</p>
 </div>
