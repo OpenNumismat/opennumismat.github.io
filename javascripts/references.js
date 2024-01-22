@@ -81,76 +81,8 @@ $(function() {
   });
 });
 
-// Start the worker in which sql.js will run
-var worker = new Worker("/javascripts/worker.sql-wasm.js");
-worker.onerror = error;
-
-// Open a database
-worker.postMessage({ action: 'open' });
-
-function error(e) {
-	console.log(e);
-}
-
-// Run a command in the database
-function execute(commands, onsuccess) {
-	worker.onmessage = function (event) {
-		var results = event.data.results;
-		if (!results) {
-			error({message: event.data.error});
-			return;
-		}
-
-        if (onsuccess !== undefined)
-            onsuccess();
-	}
-	worker.postMessage({ action: 'exec', sql: commands });
-}
-
-// Save the db to a file
-function savedb() {
-	worker.onmessage = function (event) {
-		var arraybuff = event.data.buffer;
-		var blob = new Blob([arraybuff]);
-		var a = document.createElement("a");
-		document.body.appendChild(a);
-		a.href = window.URL.createObjectURL(blob);
-		a.download = "reference.ref";
-		a.onclick = function () {
-			setTimeout(function () {
-				window.URL.revokeObjectURL(a.href);
-			}, 1500);
-		};
-		a.click();
-	};
-	worker.postMessage({ action: 'export' });
-}
-
-function createdb() {
-    var region_id = 0;
-    var insert_regions_sql = "";
-    var country_id = 0;
-    var insert_countries_sql = "";
-    regions = $('#references').find('.data-region');
-    for (region of regions) {
-        if ($(region).is(':checked') || $(region).prop('indeterminate')) {
-            region_id ++;
-            insert_regions_sql += `INSERT INTO ref_region (id, value)
-                VALUES (${region_id}, "${$(region).data('value')}");`
-
-            countries = $('#references').find('.data-country');
-            for (country of countries) {
-                if ($(country).is(':checked') || $(country).prop('indeterminate')) {
-                    country_id ++;
-                    insert_countries_sql += `INSERT INTO ref_country (id, value, parentid)
-                        VALUES (${country_id}, "${$(country).data('value')}", ${region_id});`
-
-                }
-            }
-        }
-    }
-
-    execute(`
+function create_tables(db) {
+    db.run(`
 DROP TABLE IF EXISTS ref;
 CREATE TABLE ref (
             title CHAR NOT NULL UNIQUE,
@@ -161,17 +93,87 @@ DROP TABLE IF EXISTS ref_region;
 CREATE TABLE ref_region (
             id INTEGER PRIMARY KEY,
             value TEXT, icon BLOB);
-${insert_regions_sql}
 
 DROP TABLE IF EXISTS ref_country;
 CREATE TABLE ref_country (
             id INTEGER PRIMARY KEY,
             parentid INTEGER,
             value TEXT, icon BLOB);
-${insert_countries_sql}
-    `, savedb);
+
+DROP TABLE IF EXISTS ref_unit;
+CREATE TABLE ref_unit (
+            id INTEGER PRIMARY KEY,
+            parentid INTEGER,
+            value TEXT, icon BLOB);
+    `);
 }
 
-$('#savedb').click(function(){
-    createdb();
+function createdb(db) {
+    create_tables(db);
+
+    var region_id = 0;
+    var insert_regions_sql = "";
+    var country_id = 0;
+    var insert_countries_sql = "";
+    var unit_id = 0;
+    var insert_units_sql = "";
+    regions = $('#references').find('.data-region');
+    for (region of regions) {
+        if ($(region).is(':checked') || $(region).prop('indeterminate')) {
+            region_id ++;
+            insert_regions_sql += `INSERT INTO ref_region (id, value)
+                VALUES (${region_id}, "${$(region).data('value')}");`
+
+            countries = $(region).parent().find('.data-country');
+            for (country of countries) {
+                if ($(country).is(':checked') || $(country).prop('indeterminate')) {
+                    country_id ++;
+                    insert_countries_sql += `INSERT INTO ref_country (id, value, parentid)
+                        VALUES (${country_id}, "${$(country).data('value')}", ${region_id});`
+
+                    units = $(country).parent().find('.data-unit');
+                    for (unit of units) {
+                        if ($(unit).is(':checked') || $(unit).prop('indeterminate')) {
+                            unit_id ++;
+                            insert_units_sql += `INSERT INTO ref_unit (id, value, parentid)
+                                VALUES (${unit_id}, "${$(unit).data('value')}", ${country_id});`
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    db.run(insert_regions_sql);
+    db.run(insert_countries_sql);
+    db.run(insert_units_sql);
+}
+
+// Save the db to a file
+function savedb(db, file_name) {
+    const data = db.export();
+    var arraybuff = data.buffer;
+    var blob = new Blob([arraybuff]);
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.href = window.URL.createObjectURL(blob);
+    a.download = file_name;
+    a.onclick = function () {
+        setTimeout(function () {
+            window.URL.revokeObjectURL(a.href);
+        }, 1500);
+    };
+    a.click();
+}
+
+$('#savedb').click(function() {
+    const config = { locateFile: file => "/javascripts/sql-wasm.wasm" };
+    initSqlJs(config).then(function(SQL){
+        // Create the database
+        const db = new SQL.Database();
+
+        createdb(db);
+
+        savedb(db, "reference.ref");
+    });
 });
