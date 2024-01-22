@@ -5,17 +5,17 @@ $(function() {
     row = '<ul>';
     for (region of data["regions"]) {
       row += '<li class="caret">';
-      row += '<input type="checkbox" id="' + region['name'] + '" checked>' + region['name'];
+      row += `<input type="checkbox" id="${region['name']}" checked>${region['name']}`;
 
       row += '<ul class="nested">';
       for (country of region["countries"]) {
         row += '<li class="caret">';
-        row += '<input type="checkbox" id="' + country['code'] + '" checked>' + country['name'];
+      row += `<input type="checkbox" id="${country['code']}" checked>${country['name']}`;
 
         row += '<ul class="nested">';
         for (unit of country["units"]) {
           row += '<li>';
-          row += '<input type="checkbox" id="' + unit + '" checked>' + unit;
+          row += `<input type="checkbox" id="${unit}" checked>${unit}`;
           row += '</li>';
         }
         row += '</ul>';
