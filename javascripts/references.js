@@ -10,7 +10,9 @@ $(function() {
       row += '<ul class="nested">';
       for (country of region["countries"]) {
         row += '<li class="caret">';
-        row += `<input type="checkbox" id="${country['code']}" class="data-country" data-value="${country['name']}" checked>${country['name']}`;
+        row += `<input type="checkbox" id="${country['code']}" class="data-country" data-value="${country['name']}" checked>`;
+        row += `<img src="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/tools/ref/flags/${country['code'].toLowerCase()}.png">`;
+        row += ` ${country['name']}`;
 
         row += '<ul class="nested">';
         for (unit of country["units"]) {
