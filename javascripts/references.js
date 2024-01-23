@@ -85,6 +85,40 @@ $(function() {
 
 function create_tables(db) {
     db.run(`
+DROP TABLE IF EXISTS sections;
+CREATE TABLE sections (
+            id INTEGER PRIMARY KEY,
+            name TEXT, icon BLOB,
+            letter TEXT, parent TEXT,
+            sort INTEGER);
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('1', 'category', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('2', 'region', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('3', 'country', 'C', 'region', '1');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('4', 'period', 'P', 'country', '1');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('5', 'emitent', '…', 'country', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('6', 'ruler', '…', 'country', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('7', 'unit', 'U', 'country', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('8', 'mint', '…', 'country', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('9', 'series', 'S', 'country', '1');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('10', 'grade', 'G', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('11', 'shape', 'F', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('12', 'quality', 'Q', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('13', 'rarity', 'R', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('14', 'obvrev', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('15', 'type', 'T', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('16', 'defect', 'D', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('17', 'format', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('18', 'condition', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('19', 'grader', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('20', 'storage', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('21', 'composition', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('22', 'technique', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('23', 'modification', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('24', 'place', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('25', 'color', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('26', 'edge', '…', '', '0');
+INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('27', 'material', 'M', '', '0');
+
 DROP TABLE IF EXISTS ref;
 CREATE TABLE ref (
             title CHAR NOT NULL UNIQUE,
