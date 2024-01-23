@@ -80,6 +80,22 @@ $(function() {
       }
     });
 
+    $('.collapse-button').click(function(){
+      $(this).parent().parent().find('.nested').removeClass('expand');
+      $(this).parent().parent().find('.caret').removeClass('caret-down');
+    });
+    $('.expand-button').click(function(){
+      $(this).parent().parent().find('.nested').addClass('expand');
+      $(this).parent().parent().find('.caret').addClass('caret-down');
+    });
+    $('.select-button').click(function(){
+      $(this).parent().parent().find('input:checkbox').prop('checked', true);
+      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
+    });
+    $('.clear-button').click(function(){
+      $(this).parent().parent().find('input:checkbox').prop('checked', false);
+      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
+    });
   });
 });
 

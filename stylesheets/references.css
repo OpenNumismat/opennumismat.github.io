@@ -7,8 +7,25 @@ ul, #references {
   padding: 0;
 }
 
+fieldset {
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+  padding: 6px 12px 10px 12px;
+
+  border-width: 2px;
+  border-style: groove;
+  border-radius: 5px;
+}
+
+legend {
+  padding: 0 2px;
+}
+
 #references ul {
     margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .caret {
@@ -38,4 +55,9 @@ ul, #references {
 
 .expand {
   display: block;
+}
+
+.ctrl-button-box {
+  text-align: center;
+  margin-bottom: 15px;
 }
