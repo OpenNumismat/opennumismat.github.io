@@ -102,7 +102,7 @@ var mainSqlSearch = "";
 const defaultSqlSort = "ORDER BY sort_id";
 
 // Start the worker in which sql.js will run
-var worker = new Worker("js/worker.sql-wasm.js");
+var worker = new Worker("/javascripts/worker.sql-wasm.js");
 worker.onerror = errorSql;
 
 // Open a database
