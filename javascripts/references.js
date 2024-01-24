@@ -1,4 +1,4 @@
-var url = "https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/tools/ref/countries.json";
+var url = "https://raw.githubusercontent.com/OpenNumismat/references/main/data/countries.json";
 
 $(function() {
   $.getJSON( url, function( data ) {
@@ -11,7 +11,7 @@ $(function() {
       for (country of region["countries"]) {
         row += '<li class="caret">';
         row += `<input type="checkbox" id="${country['code']}" class="data-country" data-value="${country['name']}" checked>`;
-        row += `<img src="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/tools/ref/flags/${country['code'].toLowerCase()}.png">`;
+        row += `<img src="https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${country['code'].toLowerCase()}.png">`;
         row += ` ${country['name']}`;
 
         row += '<ul class="nested">';
@@ -96,6 +96,21 @@ $(function() {
       $(this).parent().parent().find('input:checkbox').prop('checked', false);
       $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
     });
+
+    $("#flag-source").change(function(){
+      const flag_source = $("#flag-source option:selected").text();
+      imgs = $('#references').find('img');
+      for (img of imgs) {
+        code = $(img).prev().attr('id');
+        if (flag_source === 'famfamfam')
+            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${code.toLowerCase()}.png`);
+        else if (flag_source === 'Flagpedia')
+            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/Flagpedia/${code.toLowerCase()}.png`);
+        else if (flag_source === 'GoSquared')
+            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/GoSquared/${code.toUpperCase()}.png`);
+      }
+    }
+    );
   });
 });
 
@@ -160,7 +175,15 @@ CREATE TABLE ref_unit (
     `);
 }
 
-function createdb(db) {
+async function url2bytes(url) {
+  const response = await fetch(url);
+  const arrayBuffer = await response.arrayBuffer();
+  const byteArray = new Uint8Array(arrayBuffer);
+
+  return Array.from(byteArray);
+}
+
+async function createdb(db) {
     create_tables(db);
 
     var region_id = 0;
@@ -179,9 +202,17 @@ function createdb(db) {
             countries = $(region).parent().find('.data-country');
             for (country of countries) {
                 if ($(country).is(':checked') || $(country).prop('indeterminate')) {
+                    img_url = $(country).next().attr("src");
+                    img_bytes = await url2bytes(img_url)
+
                     country_id ++;
-                    insert_countries_sql += `INSERT INTO ref_country (id, value, parentid)
-                        VALUES (${country_id}, "${$(country).data('value')}", ${region_id});`
+                    insert_countries_sql = `INSERT INTO ref_country (id, value, parentid, icon)
+                        VALUES (${country_id}, "${$(country).data('value')}", ${region_id}, ?);`
+
+                    if (img_bytes !== undefined)
+                        db.run(insert_countries_sql, [img_bytes,]);
+                    else
+                        db.run(insert_countries_sql);
 
                     units = $(country).parent().find('.data-unit');
                     for (unit of units) {
@@ -197,7 +228,7 @@ function createdb(db) {
     }
 
     db.run(insert_regions_sql);
-    db.run(insert_countries_sql);
+    //db.run(insert_countries_sql);
     db.run(insert_units_sql);
 }
 
@@ -216,6 +247,7 @@ function savedb(db, file_name) {
         }, 1500);
     };
     a.click();
+    a.remove();
 }
 
 $('#savedb').click(function() {
@@ -224,8 +256,8 @@ $('#savedb').click(function() {
         // Create the database
         const db = new SQL.Database();
 
-        createdb(db);
-
-        savedb(db, "reference.ref");
+        createdb(db).then(function() {
+            savedb(db, "reference.ref");
+        });
     });
 });
