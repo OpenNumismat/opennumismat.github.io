@@ -291,6 +291,8 @@ function convertFraction(value) {
             return '1½';
         else if (value == 2.5)
             return '2½';
+        else if (value == 4.5)
+            return '4½';
         else if (value == 7.5)
             return '7½';
         else if (value == 12.5)
