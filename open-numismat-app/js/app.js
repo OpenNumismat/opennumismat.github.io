@@ -861,3 +861,49 @@ $('#status_view').checkboxradio();
 $('#status_view').change(changedStatusView);
 
 $('.summary-button').css("display", "none");
+
+function open_url(file_url) {
+    const url = new URL(file_url)
+    $.mobile.navigate("#main-page");
+
+    $('.summary-button').css("display", "none");
+    $('#main-page-title').text(url.pathname);
+    dbFileElm.value = '';
+
+    $('div#table').empty();
+    $('div#filters').empty();
+    mainSqlFilter = "";
+    $('div#sort').empty();
+    mainSqlSort = defaultSqlSort;
+    $('div#search').empty();
+    mainSqlSearch = "";
+
+    status(i18next.t('load_db'))
+
+    fetch(file_url).then(function(response) {
+        if (!response.ok) {
+            error(i18next.t('failed_read_file') + " " + file_url + "\n" + response.statusText);
+            return;
+        }
+        response.arrayBuffer().then(function(arrayBuffer) {
+            worker.onmessage = function () {
+                readSettings();
+            };
+            try {
+                worker.postMessage({action:'open',buffer:arrayBuffer}, [arrayBuffer]);
+            }
+            catch(exception) {
+                worker.postMessage({action:'open',buffer:arrayBuffer});
+            }
+        });
+    });
+}
+
+$(document).bind('pageinit', function() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('file')) {
+        var file_url = urlParams.get('file')
+        open_url(file_url);
+    }
+});
