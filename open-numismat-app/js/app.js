@@ -759,7 +759,7 @@ var imagesCreate = function () {
     var images = '';
     for (var i=0; i<=6; i++) {
         if (v[i])
-            images += '<div class="coin-images"><img onclick="newTabImage(this.src)" src="data:image/png;base64,' + arrayBufferToBase64(v[i]) + '"></div>';
+            images += `<div class="coin-images"><img onclick="newTabImage(this.src)" src="data:image/png;base64,${arrayBufferToBase64(v[i])}"></div>`;
     }
     var html = images;
     tbl.innerHTML = html;
@@ -807,7 +807,7 @@ dbFileElm.onchange = function() {
             }
         };
         r.onerror = function() {
-            error(i18next.t('failed_read_file') + " " + file.name + "\n" + r.error);
+            error(`${i18next.t('failed_read_file')} ${file.name}\n${r.error}`);
             status();
         };
         status(i18next.t('load_db'));
@@ -820,7 +820,7 @@ $('select.lang').change(langChanged);
 $('select.lang').selectmenu();
 
 function htmlStatusIcon(status) {
-    return "<img src='img/" + status + ".png' class='status-icon' title='" + i18next.t(status) + "'>";
+    return `<img src='img/${status}.png' class='status-icon' title='${i18next.t(status)}'>`;
 }
 
 function htmlStatusViewFull(status) {
@@ -882,7 +882,7 @@ function open_url(file_url) {
 
     fetch(file_url).then(function(response) {
         if (!response.ok) {
-            error(i18next.t('failed_read_file') + " " + file_url + "\n" + response.statusText);
+            error(`${i18next.t('failed_read_file')} ${file_url}\n${response.statusText}`);
             return;
         }
         response.arrayBuffer().then(function(arrayBuffer) {
