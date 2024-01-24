@@ -1,17 +1,20 @@
-var url = "https://raw.githubusercontent.com/OpenNumismat/references/main/data/countries.json";
+function reload() {
+  var region_source = $("#region-source").val();
+  var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}.json`
 
-$(function() {
   $.getJSON( url, function( data ) {
-    row = '<ul>';
+    row = '<ul id="regions-tree">';
     for (region of data["regions"]) {
       row += '<li class="caret">';
       row += `<input type="checkbox" id="${region['name']}" class="data-region" data-value="${region['name']}" checked>${region['name']}`;
 
       row += '<ul class="nested">';
       for (country of region["countries"]) {
+        var flag_source = $("#flag-source option:selected").text();
+
         row += '<li class="caret">';
         row += `<input type="checkbox" id="${country['code']}" class="data-country" data-value="${country['name']}" checked>`;
-        row += `<img src="https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${country['code'].toLowerCase()}.png">`;
+        row += `<img src="${code2img_url(flag_source, country['code'])}">`;
         row += ` ${country['name']}`;
 
         row += '<ul class="nested">';
@@ -69,7 +72,7 @@ $(function() {
           else
             unchecked = true;
         }
-      
+
         if (checked && unchecked) {
           $(parent_input).prop('indeterminate', true);
         }
@@ -96,22 +99,36 @@ $(function() {
       $(this).parent().parent().find('input:checkbox').prop('checked', false);
       $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
     });
+  });
+}
 
-    $("#flag-source").change(function(){
+function code2img_url(flag_source, code) {
+    if (flag_source === 'famfamfam')
+        return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${code.toLowerCase()}.png`;
+    else if (flag_source === 'Flagpedia')
+        return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/Flagpedia/${code.toLowerCase()}.png`;
+    else if (flag_source === 'GoSquared')
+        return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/GoSquared/${code.toUpperCase()}.png`;
+    else if (flag_source === 'StefanGabos')
+        return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/StefanGabos/${code.toLowerCase()}.png`;
+}
+
+$(function() {
+    reload();
+
+    $("#region-source").change(function() {
+        $("#regions-tree").remove();
+        reload();
+    });
+
+    $("#flag-source").change(function() {
       const flag_source = $("#flag-source option:selected").text();
       imgs = $('#references').find('img');
       for (img of imgs) {
         code = $(img).prev().attr('id');
-        if (flag_source === 'famfamfam')
-            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${code.toLowerCase()}.png`);
-        else if (flag_source === 'Flagpedia')
-            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/Flagpedia/${code.toLowerCase()}.png`);
-        else if (flag_source === 'GoSquared')
-            $(img).attr("src", `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/GoSquared/${code.toUpperCase()}.png`);
+        $(img).attr("src", code2img_url(flag_source, code));
       }
-    }
-    );
-  });
+    });
 });
 
 function create_tables(db) {
