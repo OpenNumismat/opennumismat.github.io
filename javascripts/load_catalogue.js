@@ -5,14 +5,14 @@ function urlParam(name) {
 
 var col_name = urlParam("catalogue");
 var col_date = urlParam("date");
-var url = "https://cdn.rawgit.com/OpenNumismat/catalogues/" + col_name + "_" + col_date + "/" + col_name + "/" + col_name + ".json";
+var url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + ".json";
 
 function setData(arr) {
   var i;
   for (i = 0; i < arr.length; i++) {
     row = '<tr>';
-    obverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/" + col_name + "_" + col_date + "/" + col_name + "/" + col_name + "_images/"+arr[i]["obverseimg"];
-    reverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/" + col_name + "_" + col_date + "/" + col_name + "/" + col_name + "_images/"+arr[i]["reverseimg"];
+    obverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["obverseimg"];
+    reverse_url = "https://raw.githubusercontent.com/OpenNumismat/catalogues/master/" + col_name + "/" + col_name + "_images/"+arr[i]["reverseimg"];
     row += '<td class="img"><a href="'+obverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+obverse_url+'"></a>';
     row +=     '<a href="'+reverse_url+'"><img height="49px" src="/images/loader.gif" data-original="'+reverse_url+'"></a></td>';
     row += '<td>'+ (arr[i]["title"] == undefined ? '' : arr[i]["title"]) +'</td>'
