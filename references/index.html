@@ -79,21 +79,62 @@
 Reference generator
 </h2>
 <p>
-  <label for="region-source">Regions:</label>
-  <select id="region-source">
-    <option value="countries">Regions (UN)</option>
-    <option value="Subregions (UN)">Subregions (UN)</option>
-  </select>
+  <label>Language:
+    <select id="language" disabled>
+      <option value="bg">Български</option>
+      <option value="ca">Català</option>
+      <option value="cs">Čeština</option>
+      <option value="de">Deutsch</option>
+      <option value="en" selected>English</option>
+      <option value="el">Ελληνικά</option>
+      <option value="es">Español</option>
+      <option value="fa">فارسی</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="lv">Latviešu</option>
+      <option value="hu">Magyar</option>
+      <option value="nl">Nederlands</option>
+      <option value="pl">Polski</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+      <option value="sv">Svenska</option>
+      <option value="tr">Türkçe</option>
+      <option value="uk">Український</option>
+    </select>
+  </label>
 </p>
 <p>
-  <label for="flag-source">Flag set:</label>
-  <select id="flag-source">
-    <option>famfamfam</option>
-    <option>Flagpedia</option>
-    <option>GoSquared</option>
-    <option>StefanGabos</option>
-  </select>
+  <label>Regions:
+    <select id="region-source">
+      <option value="countries">Regions (UN)</option>
+      <option value="Subregions (UN)">Subregions (UN)</option>
+    </select>
+  </label>
 </p>
+<p>
+  <label>Flag set:
+    <select id="flag-source">
+      <option>famfamfam</option>
+      <option>Flagpedia</option>
+      <option>GoSquared</option>
+      <option>StefanGabos</option>
+    </select>
+  </label>
+</p>
+
+  <label>Historical era:</label>
+  <ul>
+    <li><input type="checkbox" disabled checked>Present</li>
+    <li><input type="checkbox" disabled>Contemporary</li>
+    <li><input type="checkbox" disabled>Modern</li>
+    <li><input type="checkbox" disabled>Middle Ages</li>
+    <li><input type="checkbox" disabled>Ancient</li>
+  </ul>
+
+<p><label><input type="checkbox" id="include-depended" checked disabled>Include depended countries</label></p>
+<p><label><input type="checkbox" id="include-unrecognized" disabled>Include unrecognized countries</label></p>
+<p><label><input type="checkbox" id="include-without-coins" checked disabled>Include countries without coins</label></p>
+<p><label><input type="checkbox" id="include-without-circulation" disabled>Include countries without circulation coins</label></p>
 
   <fieldset>
     <legend>Countries</legend>
