@@ -13,8 +13,8 @@ function reload() {
         var flag_source = $("#flag-source option:selected").text();
 
         row += '<li class="caret">';
-        row += `<input type="checkbox" id="${country['code']}" class="data-country" data-value="${country['name']}" checked>`;
-        row += `<img src="${code2img_url(flag_source, country['code'])}">`;
+        row += `<input type="checkbox" id="${country['alpha2']}" class="data-country" data-value="${country['name']}" checked>`;
+        row += `<img src="${code2img_url(flag_source, country['alpha2'])}">`;
         row += ` ${country['name']}`;
 
         row += '<ul class="nested">';
