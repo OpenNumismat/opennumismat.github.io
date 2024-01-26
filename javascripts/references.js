@@ -14,7 +14,7 @@ function reload() {
 
         row += '<li class="caret">';
         row += `<input type="checkbox" id="${country['alpha2']}" class="data-country" data-value="${country['name']}" checked>`;
-        row += `<img src="${code2img_url(flag_source, country['alpha2'])}">`;
+        row += `<img>`;
         row += ` ${country['name']}`;
 
         row += '<ul class="nested">';
@@ -33,6 +33,8 @@ function reload() {
     }
     row += '</ul>';
     $('#references').append(row);
+
+    update_flags();
 
     $('.caret').click(function(e){
       if (e.target !== this)
@@ -102,6 +104,47 @@ function reload() {
   });
 }
 
+var flag_images = {};
+
+async function url2blob(url, code) {
+  const response = await fetch(url);
+  const blob = await response.blob();
+
+  return blob;
+}
+
+function update_flag(img, url, code) {
+  url2blob(url, code).then(function(blob) {
+    var base64Reader = new FileReader();
+    base64Reader.onload = function() {
+      var base64data = base64Reader.result;
+      $(img).attr("src", base64data);
+    };
+    base64Reader.readAsDataURL(blob);
+
+    var bytesReader = new FileReader();
+    bytesReader.onload = function(event) {
+      arrayBuffer = bytesReader.result;
+      byteArray = new Uint8Array(arrayBuffer);
+      Array.from(byteArray);
+      flag_images[code] = Array.from(byteArray);
+    };
+    bytesReader.readAsArrayBuffer(blob);
+  });
+}
+
+function update_flags() {
+  flag_images = {};
+
+  var flag_source = $("#flag-source option:selected").text();
+  imgs = $('#references').find('img');
+  for (img of imgs) {
+    code = $(img).prev().attr('id');
+    url = code2img_url(flag_source, code);
+    update_flag(img, url, code);
+  }
+}
+
 function code2img_url(flag_source, code) {
     if (flag_source === 'famfamfam')
         return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/famfamfam/${code.toLowerCase()}.png`;
@@ -122,12 +165,7 @@ $(function() {
     });
 
     $("#flag-source").change(function() {
-      const flag_source = $("#flag-source option:selected").text();
-      imgs = $('#references').find('img');
-      for (img of imgs) {
-        code = $(img).prev().attr('id');
-        $(img).attr("src", code2img_url(flag_source, code));
-      }
+      update_flags();
     });
 });
 
@@ -192,14 +230,6 @@ CREATE TABLE ref_unit (
     `);
 }
 
-async function url2bytes(url) {
-  const response = await fetch(url);
-  const arrayBuffer = await response.arrayBuffer();
-  const byteArray = new Uint8Array(arrayBuffer);
-
-  return Array.from(byteArray);
-}
-
 async function createdb(db) {
     create_tables(db);
 
@@ -219,8 +249,7 @@ async function createdb(db) {
             countries = $(region).parent().find('.data-country');
             for (country of countries) {
                 if ($(country).is(':checked') || $(country).prop('indeterminate')) {
-                    img_url = $(country).next().attr("src");
-                    img_bytes = await url2bytes(img_url)
+                    img_bytes = flag_images[$(country).attr('id')];
 
                     country_id ++;
                     insert_countries_sql = `INSERT INTO ref_country (id, value, parentid, icon)
