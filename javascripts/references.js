@@ -206,31 +206,93 @@ INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('26', 'e
 INSERT INTO sections ("id", "name", "letter", "parent", "sort") VALUES ('27', 'material', 'M', '', '0');
 
 DROP TABLE IF EXISTS ref;
-CREATE TABLE ref (
-            title CHAR NOT NULL UNIQUE,
-            value CHAR);
+CREATE TABLE ref (title CHAR NOT NULL UNIQUE, value CHAR);
 INSERT INTO ref VALUES ("version", "1");
 
-DROP TABLE IF EXISTS ref_region;
-CREATE TABLE ref_region (
-            id INTEGER PRIMARY KEY,
-            value TEXT, icon BLOB);
+DROP TABLE IF EXISTS ref_category;
+CREATE TABLE ref_category (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_color;
+CREATE TABLE ref_color (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_composition;
+CREATE TABLE ref_composition (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_condition;
+CREATE TABLE ref_condition (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
 
 DROP TABLE IF EXISTS ref_country;
-CREATE TABLE ref_country (
-            id INTEGER PRIMARY KEY,
-            parentid INTEGER,
-            value TEXT, icon BLOB);
+CREATE TABLE ref_country (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_defect;
+CREATE TABLE ref_defect ( id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_edge;
+CREATE TABLE ref_edge (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_emitent;
+CREATE TABLE ref_emitent (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_format;
+CREATE TABLE ref_format (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_grade;
+CREATE TABLE ref_grade (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_grader;
+CREATE TABLE ref_grader (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_material;
+CREATE TABLE ref_material (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_mint;
+CREATE TABLE ref_mint (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_modification;
+CREATE TABLE ref_modification (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_obvrev;
+CREATE TABLE ref_obvrev (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_period;
+CREATE TABLE ref_period (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_place;
+CREATE TABLE ref_place (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_quality;
+CREATE TABLE ref_quality (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_rarity;
+CREATE TABLE ref_rarity (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_region;
+CREATE TABLE ref_region (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_ruler;
+CREATE TABLE ref_ruler (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_series;
+CREATE TABLE ref_series (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_shape;
+CREATE TABLE ref_shape (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_storage;
+CREATE TABLE ref_storage (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_technique;
+CREATE TABLE ref_technique (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
+
+DROP TABLE IF EXISTS ref_type;
+CREATE TABLE ref_type (id INTEGER PRIMARY KEY, value TEXT, icon BLOB);
 
 DROP TABLE IF EXISTS ref_unit;
-CREATE TABLE ref_unit (
-            id INTEGER PRIMARY KEY,
-            parentid INTEGER,
-            value TEXT, icon BLOB);
+CREATE TABLE ref_unit (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, icon BLOB);
     `);
 }
 
-async function createdb(db) {
+function createdb(db) {
     create_tables(db);
 
     var region_id = 0;
@@ -302,8 +364,7 @@ $('#savedb').click(function() {
         // Create the database
         const db = new SQL.Database();
 
-        createdb(db).then(function() {
-            savedb(db, "reference.ref");
-        });
+        createdb(db);
+        savedb(db, "reference.ref");
     });
 });
