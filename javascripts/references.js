@@ -1,4 +1,4 @@
-function reload() {
+function reload_regions() {
   var region_source = $("#region-source").val();
   var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}.json`
 
@@ -14,8 +14,8 @@ function reload() {
 
         row += '<li class="caret">';
         row += `<input type="checkbox" id="${country['alpha2']}" class="data-country" data-value="${country['name']}" checked>`;
-        row += `<img>`;
-        row += ` ${country['name']}`;
+        row += '<img> ';
+        row += country['name'];
 
         row += '<ul class="nested">';
         for (unit of country["units"]) {
@@ -32,11 +32,15 @@ function reload() {
       row += '</li>';
     }
     row += '</ul>';
-    $('#references').append(row);
+    $('#countries-references').append(row);
+    init_tree($('#regions-tree'));
 
     update_flags();
+  });
+}
 
-    $('.caret').click(function(e){
+function init_tree(tree) {
+    $(tree).find('.caret').click(function(e){
       if (e.target !== this)
         return;
 
@@ -45,7 +49,7 @@ function reload() {
       $(this).toggleClass("caret-down");
     });
 
-    $('input:checkbox').click(function(){
+    $(tree).find('input:checkbox').click(function(){
       if ($(this).is(':checked')){
         children = $(this).parent().find('ul').find('input:checkbox');
         for (child of children) {
@@ -60,7 +64,7 @@ function reload() {
       }
     });
 
-    $('input:checkbox').click(function(){
+    $(tree).find('input:checkbox').click(function(){
       parent = $(this).parent().parent().parent('li')
       if (parent.length) {
         parent_input = $(parent).find('input:checkbox')[0];
@@ -84,27 +88,42 @@ function reload() {
         }
       }
     });
+}
 
-    $('.collapse-button').click(function(){
-      $(this).parent().parent().find('.nested').removeClass('expand');
-      $(this).parent().parent().find('.caret').removeClass('caret-down');
-    });
-    $('.expand-button').click(function(){
-      $(this).parent().parent().find('.nested').addClass('expand');
-      $(this).parent().parent().find('.caret').addClass('caret-down');
-    });
-    $('.select-button').click(function(){
-      $(this).parent().parent().find('input:checkbox').prop('checked', true);
-      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
-    });
-    $('.clear-button').click(function(){
-      $(this).parent().parent().find('input:checkbox').prop('checked', false);
-      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
-    });
+function reload_other_references() {
+  var url = `https://raw.githubusercontent.com/OpenNumismat/references/master/data/reference_en.json`
+
+  $.getJSON( url, function( data ) {
+    row = '<ul id="other-references-tree">';
+    for (reference of data) {
+      row += '<li class="caret">';
+      row += `<input type="checkbox" id="${reference['name']}" class="data-references" data-value="${reference['name']}" checked>${reference['title']}`;
+
+      row += '<ul class="nested">';
+      for (key in reference['values']) {
+        var val = reference['values'][key]
+        row += '<li>';
+        row += `<input type="checkbox" id="${reference['name']}_${key}" class="data-references-value" data-value="${key}" checked>`;
+        if (reference['has_icons'])
+            row += '<img> ';
+        row += val;
+        row += '</li>';
+      }
+      row += '</ul>';
+
+      row += '</li>';
+    }
+    row += '</ul>';
+
+    $('#other-references').append(row);
+    init_tree($('#other-references-tree'));
+
+    update_other_images();
   });
 }
 
 var flag_images = {};
+var other_images = {};
 
 async function url2blob(url, code) {
   const response = await fetch(url);
@@ -137,11 +156,43 @@ function update_flags() {
   flag_images = {};
 
   var flag_source = $("#flag-source option:selected").text();
-  imgs = $('#references').find('img');
+  imgs = $('#countries-references').find('img');
   for (img of imgs) {
     code = $(img).prev().attr('id');
     url = code2img_url(flag_source, code);
     update_flag(img, url, code);
+  }
+}
+
+function update_other_image(img, url, code) {
+  url2blob(url, code).then(function(blob) {
+    var base64Reader = new FileReader();
+    base64Reader.onload = function() {
+      var base64data = base64Reader.result;
+      $(img).attr("src", base64data);
+    };
+    base64Reader.readAsDataURL(blob);
+
+    var bytesReader = new FileReader();
+    bytesReader.onload = function(event) {
+      arrayBuffer = bytesReader.result;
+      byteArray = new Uint8Array(arrayBuffer);
+      Array.from(byteArray);
+      other_images[code] = Array.from(byteArray);
+    };
+    bytesReader.readAsArrayBuffer(blob);
+  });
+}
+
+function update_other_images() {
+  other_images = {};
+
+  imgs = $('#other-references').find('img');
+  for (img of imgs) {
+    value = $(img).prev().data('value');
+    reference = $(img).parent().parent().prev().data('value');
+    url = other_reference2img_url(reference, value);
+    update_other_image(img, url, `${reference}_${value}`);
   }
 }
 
@@ -156,16 +207,38 @@ function code2img_url(flag_source, code) {
         return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/StefanGabos/${code.toLowerCase()}.png`;
 }
 
+function other_reference2img_url(reference, value) {
+    return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/${reference}/${value}.png`;
+}
+
 $(function() {
-    reload();
+    reload_regions();
+    reload_other_references();
 
     $("#region-source").change(function() {
         $("#regions-tree").remove();
-        reload();
+        reload_regions();
     });
 
     $("#flag-source").change(function() {
-      update_flags();
+        update_flags();
+    });
+
+    $('.collapse-button').click(function(){
+      $(this).parent().parent().find('.nested').removeClass('expand');
+      $(this).parent().parent().find('.caret').removeClass('caret-down');
+    });
+    $('.expand-button').click(function(){
+      $(this).parent().parent().find('.nested').addClass('expand');
+      $(this).parent().parent().find('.caret').addClass('caret-down');
+    });
+    $('.select-button').click(function(){
+      $(this).parent().parent().find('input:checkbox').prop('checked', true);
+      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
+    });
+    $('.clear-button').click(function(){
+      $(this).parent().parent().find('input:checkbox').prop('checked', false);
+      $(this).parent().parent().find('input:checkbox').prop('indeterminate', false);
     });
 });
 
@@ -301,7 +374,7 @@ function createdb(db) {
     var insert_countries_sql = "";
     var unit_id = 0;
     var insert_units_sql = "";
-    regions = $('#references').find('.data-region');
+    regions = $('#countries-references').find('.data-region');
     for (region of regions) {
         if ($(region).is(':checked') || $(region).prop('indeterminate')) {
             region_id ++;
@@ -338,6 +411,28 @@ function createdb(db) {
     db.run(insert_regions_sql);
     //db.run(insert_countries_sql);
     db.run(insert_units_sql);
+
+    insert_references_sql = "";
+    references = $('#other-references').find('.data-references');
+    for (reference of references) {
+        if ($(reference).is(':checked') || $(reference).prop('indeterminate')) {
+            var reference_name = $(reference).data('value');
+            values = $(reference).parent().find('.data-references-value');
+            for (value of values) {
+                if ($(value).is(':checked') || $(value).prop('indeterminate')) {
+                    img_bytes = other_images[$(value).attr('id')];
+
+                    insert_references_sql = `INSERT INTO ref_${reference_name} (value, icon)
+                        VALUES ("${$(value).parent().text().trim()}", ?);`
+
+                    if (img_bytes !== undefined)
+                        db.run(insert_references_sql, [img_bytes,]);
+                    else
+                        db.run(insert_references_sql);
+                }
+            }
+        }
+    }
 }
 
 // Save the db to a file
