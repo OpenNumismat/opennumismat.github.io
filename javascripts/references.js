@@ -4,13 +4,18 @@ function reload_regions() {
 
   $.getJSON( url, function( data ) {
     row = '<ul id="regions-tree">';
+
+    if (!("regions" in data)) {
+      data["regions"] = [{"name": "All", "countries": data["countries"]}];
+    }
+
     for (region of data["regions"]) {
       row += '<li class="caret">';
       row += `<input type="checkbox" id="${region['name']}" class="data-region" data-value="${region['name']}" checked>${region['name']}`;
 
       row += '<ul class="nested">';
       for (country of region["countries"]) {
-        var flag_source = $("#flag-source option:selected").text();
+        var flag_source = $("#flag-source option:selected").val();
 
         county_state_class = '';
         if ('unrecognized' in country)
@@ -186,9 +191,11 @@ function update_flags() {
   var flag_source = $("#flag-source option:selected").text();
   imgs = $('#countries-references').find('img');
   for (img of imgs) {
+    $(img).attr("src", "");
     code = $(img).prev().attr('id');
     url = code2img_url(flag_source, code);
-    update_flag(img, url, code);
+    if (url !== undefined)
+      update_flag(img, url, code);
   }
 }
 
