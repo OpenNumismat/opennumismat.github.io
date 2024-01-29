@@ -12,8 +12,12 @@ function reload_regions() {
       for (country of region["countries"]) {
         var flag_source = $("#flag-source option:selected").text();
 
+        county_state_class = '';
+        if ('unrecognized' in country)
+            county_state_class += ' data-country-unrecognized'
+
         row += '<li class="caret">';
-        row += `<input type="checkbox" id="${country['alpha2']}" class="data-country" data-value="${country['name']}" checked>`;
+        row += `<input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
         row += '<img> ';
         row += country['name'];
 
@@ -36,6 +40,7 @@ function reload_regions() {
     init_tree($('#regions-tree'));
 
     update_flags();
+    update_unrecognized();
   });
 }
 
@@ -122,33 +127,45 @@ function reload_other_references() {
   });
 }
 
+function update_unrecognized() {
+  var include_unrecognized = $("#include-unrecognized").is(":checked");
+  if (include_unrecognized)
+    $('.data-country-unrecognized').parent().show();
+  else
+    $('.data-country-unrecognized').parent().hide();
+}
+
 var flag_images = {};
 var other_images = {};
 
 async function url2blob(url, code) {
   const response = await fetch(url);
-  const blob = await response.blob();
+  var blob = undefined;
+  if (response.ok)
+    blob = await response.blob();
 
   return blob;
 }
 
 function update_flag(img, url, code) {
   url2blob(url, code).then(function(blob) {
-    var base64Reader = new FileReader();
-    base64Reader.onload = function() {
-      var base64data = base64Reader.result;
-      $(img).attr("src", base64data);
-    };
-    base64Reader.readAsDataURL(blob);
+    if (blob !== undefined) {
+        var base64Reader = new FileReader();
+        base64Reader.onload = function() {
+          var base64data = base64Reader.result;
+          $(img).attr("src", base64data);
+        };
+        base64Reader.readAsDataURL(blob);
 
-    var bytesReader = new FileReader();
-    bytesReader.onload = function(event) {
-      arrayBuffer = bytesReader.result;
-      byteArray = new Uint8Array(arrayBuffer);
-      Array.from(byteArray);
-      flag_images[code] = Array.from(byteArray);
-    };
-    bytesReader.readAsArrayBuffer(blob);
+        var bytesReader = new FileReader();
+        bytesReader.onload = function(event) {
+          arrayBuffer = bytesReader.result;
+          byteArray = new Uint8Array(arrayBuffer);
+          Array.from(byteArray);
+          flag_images[code] = Array.from(byteArray);
+        };
+        bytesReader.readAsArrayBuffer(blob);
+    }
   });
 }
 
@@ -222,6 +239,10 @@ $(function() {
 
     $("#flag-source").change(function() {
         update_flags();
+    });
+
+    $('#include-unrecognized').change(function() {
+        update_unrecognized();
     });
 
     $('.collapse-button').click(function(){
@@ -368,6 +389,7 @@ CREATE TABLE ref_unit (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, ico
 function createdb(db) {
     create_tables(db);
 
+    var include_unrecognized = $("#include-unrecognized").is(":checked");
     var region_id = 0;
     var insert_regions_sql = "";
     var country_id = 0;
@@ -383,6 +405,9 @@ function createdb(db) {
 
             countries = $(region).parent().find('.data-country');
             for (country of countries) {
+                if (!include_unrecognized && $(country).hasClass('data-country-unrecognized'))
+                    continue;
+
                 if ($(country).is(':checked') || $(country).prop('indeterminate')) {
                     img_bytes = flag_images[$(country).attr('id')];
 

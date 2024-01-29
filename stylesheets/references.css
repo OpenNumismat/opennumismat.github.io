@@ -40,7 +40,8 @@ legend {
   content: "\25B6";
   color: "#373737";
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 0.4em;
+  font-size: .9em;
 }
 
 .caret-down::before {
