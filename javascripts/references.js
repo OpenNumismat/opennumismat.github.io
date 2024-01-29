@@ -15,6 +15,8 @@ function reload_regions() {
         county_state_class = '';
         if ('unrecognized' in country)
             county_state_class += ' data-country-unrecognized'
+        if ('dependent' in country)
+            county_state_class += ' data-country-dependent'
 
         row += '<li class="caret">';
         row += `<input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
@@ -41,6 +43,7 @@ function reload_regions() {
 
     update_flags();
     update_unrecognized();
+    update_dependent();
   });
 }
 
@@ -125,6 +128,14 @@ function reload_other_references() {
 
     update_other_images();
   });
+}
+
+function update_dependent() {
+  var include_dependent = $("#include-dependent").is(":checked");
+  if (include_dependent)
+    $('.data-country-dependent').parent().show();
+  else
+    $('.data-country-dependent').parent().hide();
 }
 
 function update_unrecognized() {
@@ -243,6 +254,10 @@ $(function() {
 
     $('#include-unrecognized').change(function() {
         update_unrecognized();
+    });
+
+    $('#include-dependent').change(function() {
+        update_dependent();
     });
 
     $('.collapse-button').click(function(){
@@ -390,6 +405,7 @@ function createdb(db) {
     create_tables(db);
 
     var include_unrecognized = $("#include-unrecognized").is(":checked");
+    var include_dependent = $("#include-dependent").is(":checked");
     var region_id = 0;
     var insert_regions_sql = "";
     var country_id = 0;
@@ -406,6 +422,8 @@ function createdb(db) {
             countries = $(region).parent().find('.data-country');
             for (country of countries) {
                 if (!include_unrecognized && $(country).hasClass('data-country-unrecognized'))
+                    continue;
+                if (!include_dependent && $(country).hasClass('data-country-dependent'))
                     continue;
 
                 if ($(country).is(':checked') || $(country).prop('indeterminate')) {
