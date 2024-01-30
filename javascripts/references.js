@@ -48,7 +48,10 @@ function reload_regions() {
       row += `<label><input type="checkbox" id="${region['name']}" class="data-region" data-value="${region['name']}" checked>${region['name']}</label>`;
 
       row += '<ul class="nested">';
-      for (country of region["countries"]) {
+      counties = region["countries"].sort(function (a, b) {
+        return a["name"].localeCompare(b["name"]);
+      });
+      for (country of counties) {
         var flag_source = $("#flag-source option:selected").val();
 
         county_state_class = '';
