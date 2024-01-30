@@ -62,3 +62,8 @@ legend {
   text-align: center;
   margin-bottom: 15px;
 }
+
+.img-flagicon, .img-icon {
+  margin-left: 0.1em;
+  margin-right: 0.3em;
+}

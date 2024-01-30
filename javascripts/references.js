@@ -1,3 +1,37 @@
+function slugify(text) {
+    var from = "ãàáäâāẽèéëêìíïîõòóöôồøùúüûçđłñşřÃÀÁÄÂĀẼÈÉËÊÌÍÏÎÕÒÓÖÔỒØÙÚÜÛÑÇĐŁŞŘʻ";
+    var to   = "aaaaaaeeeeeiiiiooooooouuuucdlnsrAAAAAAEEEEEIIIIOOOOOOOUUUUNCDLSR'";
+    for (var i = 0, len = from.length; i < len; i++)
+        text = text.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    return text;
+}
+
+function replace_nonlatin() {
+  if ($("#replace-nonlatin").is(":hidden"))
+    return;
+
+  if ($("#replace-nonlatin").is(":checked")) {
+    for (el of $.find(".data-country")) {
+        text = $(el).data("value");
+        $(el).next().next().text(slugify(text));
+    }
+    for (el of $.find(".data-unit")) {
+        text = $(el).data("value");
+        $(el).next().text(slugify(text));
+    }
+  }
+  else {
+    for (el of $.find(".data-country")) {
+        text = $(el).data("value");
+        $(el).next().next().text(text);
+    }
+    for (el of $.find(".data-unit")) {
+        text = $(el).data("value");
+        $(el).next().text(text);
+    }
+  }
+}
+
 function reload_regions() {
   var region_source = $("#region-source").val();
   var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}.json`
@@ -11,7 +45,7 @@ function reload_regions() {
 
     for (region of data["regions"]) {
       row += '<li class="caret">';
-      row += `<input type="checkbox" id="${region['name']}" class="data-region" data-value="${region['name']}" checked>${region['name']}`;
+      row += `<label><input type="checkbox" id="${region['name']}" class="data-region" data-value="${region['name']}" checked>${region['name']}</label>`;
 
       row += '<ul class="nested">';
       for (country of region["countries"]) {
@@ -24,14 +58,17 @@ function reload_regions() {
             county_state_class += ' data-country-dependent'
 
         row += '<li class="caret">';
-        row += `<input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
-        row += '<img> ';
-        row += country['name'];
+        row += `<label><input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
+        row += '<img class="img-flagicon">';
+        row += `<span>${country['name']}</span>`;
+        row += '</label>';
 
         row += '<ul class="nested">';
         for (unit of country["units"]) {
           row += '<li>';
-          row += `<input type="checkbox" id="${unit}" class="data-unit" data-value="${unit}" checked>${unit}`;
+          row += `<label><input type="checkbox" id="${unit}" class="data-unit" data-value="${unit}" checked>`;
+          row += `<span>${unit}</span>`;
+          row += '</label>';
           row += '</li>';
         }
         row += '</ul>';
@@ -49,6 +86,7 @@ function reload_regions() {
     update_flags();
     update_unrecognized();
     update_dependent();
+    replace_nonlatin();
   });
 }
 
@@ -64,13 +102,13 @@ function init_tree(tree) {
 
     $(tree).find('input:checkbox').click(function(){
       if ($(this).is(':checked')){
-        children = $(this).parent().find('ul').find('input:checkbox');
+        children = $(this).parent().parent().find('ul').find('input:checkbox');
         for (child of children) {
           $(child).prop('checked', true);
         }
       }
       else {
-        children = $(this).parent().find('ul').find('input:checkbox');
+        children = $(this).parent().parent().find('ul').find('input:checkbox');
         for (child of children) {
           $(child).prop('checked', false);
         }
@@ -78,7 +116,7 @@ function init_tree(tree) {
     });
 
     $(tree).find('input:checkbox').click(function(){
-      parent = $(this).parent().parent().parent('li')
+      parent = $(this).parent().parent().parent().parent('li')
       if (parent.length) {
         parent_input = $(parent).find('input:checkbox')[0];
 
@@ -110,17 +148,17 @@ function reload_other_references() {
     row = '<ul id="other-references-tree">';
     for (reference of data) {
       row += '<li class="caret">';
-      row += `<input type="checkbox" id="${reference['name']}" class="data-references" data-value="${reference['name']}" checked>${reference['title']}`;
+      row += `<label><input type="checkbox" id="${reference['name']}" class="data-references" data-value="${reference['name']}" checked>${reference['title']}</label>`;
 
       row += '<ul class="nested">';
       for (key in reference['values']) {
         var val = reference['values'][key]
         row += '<li>';
-        row += `<input type="checkbox" id="${reference['name']}_${key}" class="data-references-value" data-value="${key}" checked>`;
+        row += `<label><input type="checkbox" id="${reference['name']}_${key}" class="data-references-value" data-value="${key}" checked>`;
         if (reference['has_icons'])
-            row += '<img> ';
+            row += '<img class="img-icon">';
         row += val;
-        row += '</li>';
+        row += '</label></li>';
       }
       row += '</ul>';
 
@@ -138,17 +176,17 @@ function reload_other_references() {
 function update_dependent() {
   var include_dependent = $("#include-dependent").is(":checked");
   if (include_dependent)
-    $('.data-country-dependent').parent().show();
+    $('.data-country-dependent').parent().parent().show();
   else
-    $('.data-country-dependent').parent().hide();
+    $('.data-country-dependent').parent().parent().hide();
 }
 
 function update_unrecognized() {
   var include_unrecognized = $("#include-unrecognized").is(":checked");
   if (include_unrecognized)
-    $('.data-country-unrecognized').parent().show();
+    $('.data-country-unrecognized').parent().parent().show();
   else
-    $('.data-country-unrecognized').parent().hide();
+    $('.data-country-unrecognized').parent().parent().hide();
 }
 
 var flag_images = {};
@@ -225,7 +263,7 @@ function update_other_images() {
   imgs = $('#other-references').find('img');
   for (img of imgs) {
     value = $(img).prev().data('value');
-    reference = $(img).parent().parent().prev().data('value');
+    reference = $(img).parent().parent().parent().prev().children().data('value');
     url = other_reference2img_url(reference, value);
     update_other_image(img, url, `${reference}_${value}`);
   }
@@ -247,6 +285,10 @@ function other_reference2img_url(reference, value) {
 }
 
 $(function() {
+    $("#replace-nonlatin").change(function() {
+      replace_nonlatin();
+    });
+
     reload_regions();
     reload_other_references();
 
@@ -411,6 +453,7 @@ CREATE TABLE ref_unit (id INTEGER PRIMARY KEY, parentid INTEGER, value TEXT, ico
 function createdb(db) {
     create_tables(db);
 
+    var replace_nonlatin = $("#replace-nonlatin").is(":checked") && $("#replace-nonlatin").is(":visible");
     var include_unrecognized = $("#include-unrecognized").is(":checked");
     var include_dependent = $("#include-dependent").is(":checked");
     var region_id = 0;
@@ -426,7 +469,7 @@ function createdb(db) {
             insert_regions_sql += `INSERT INTO ref_region (id, value)
                 VALUES (${region_id}, "${$(region).data('value')}");`
 
-            countries = $(region).parent().find('.data-country');
+            countries = $(region).parent().parent().find('.data-country');
             for (country of countries) {
                 if (!include_unrecognized && $(country).hasClass('data-country-unrecognized'))
                     continue;
@@ -437,20 +480,26 @@ function createdb(db) {
                     img_bytes = flag_images[$(country).attr('id')];
 
                     country_id ++;
+                    text = $(country).data('value');
+                    if (replace_nonlatin)
+                        text = slugify(text);
                     insert_countries_sql = `INSERT INTO ref_country (id, value, parentid, icon)
-                        VALUES (${country_id}, "${$(country).data('value')}", ${region_id}, ?);`
+                        VALUES (${country_id}, "${text}", ${region_id}, ?);`
 
                     if (img_bytes !== undefined)
                         db.run(insert_countries_sql, [img_bytes,]);
                     else
                         db.run(insert_countries_sql);
 
-                    units = $(country).parent().find('.data-unit');
+                    units = $(country).parent().parent().find('.data-unit');
                     for (unit of units) {
                         if ($(unit).is(':checked') || $(unit).prop('indeterminate')) {
                             unit_id ++;
+                            text = $(unit).data('value');
+                            if (replace_nonlatin)
+                                text = slugify(text);
                             insert_units_sql += `INSERT INTO ref_unit (id, value, parentid)
-                                VALUES (${unit_id}, "${$(unit).data('value')}", ${country_id});`
+                                VALUES (${unit_id}, "${text}", ${country_id});`
                         }
                     }
                 }
@@ -467,13 +516,13 @@ function createdb(db) {
     for (reference of references) {
         if ($(reference).is(':checked') || $(reference).prop('indeterminate')) {
             var reference_name = $(reference).data('value');
-            values = $(reference).parent().find('.data-references-value');
+            values = $(reference).parent().parent().find('.data-references-value');
             for (value of values) {
                 if ($(value).is(':checked') || $(value).prop('indeterminate')) {
                     img_bytes = other_images[$(value).attr('id')];
 
                     insert_references_sql = `INSERT INTO ref_${reference_name} (value, icon)
-                        VALUES ("${$(value).parent().text().trim()}", ?);`
+                        VALUES ("${$(value).parent().text()}", ?);`
 
                     if (img_bytes !== undefined)
                         db.run(insert_references_sql, [img_bytes,]);
