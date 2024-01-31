@@ -84,35 +84,33 @@
 <option value="sv">Svenska</option>
 <option value="tr">Türkçe</option>
 <option value="uk">Український</option></select></label>
+  <label><input type="checkbox" id="replace-nonlatin">Replace non-Latin chars</label>
 </p>
 <p><label>Regiões:
-    <select id="region-source"><option value="countries">Regiões (UN)</option>
-<option value="Subregions (UN)">Sub-regiões (UN)</option>
-<option value="Regions (World Bank)">Regiões (Banco mundial)</option>
-<option value="Regions (World Factbook)">Regiões (Livro de Factos Mundial)</option>
+    <select id="region-source"><option value="regions_UN">Regiões (UN)</option>
+<option value="subregions_UN">Sub-regiões (UN)</option>
+<option value="regions_WorldBank">Regiões (Banco mundial)</option>
+<option value="regions_World_Factbook">Regiões (Livro de Factos Mundial)</option>
 <option value="Regions (OBJECTIVE LISTS)">Regiões (LISTAS DE OBJECTIVOS)</option>
 <option value="Subregions (OBJECTIVE LISTS)">Sub-regiões (LISTAS DE OBJECTIVOS)</option>
-<option value="Macroregions (OBJECTIVE LISTS)">Macro-regiões (LISTAS DE OBJECTIVOS)</option></select></label>
+<option value="Macroregions (OBJECTIVE LISTS)">Macro-regiões (LISTAS DE OBJECTIVOS)</option>
+<option value="countries">Nada</option></select></label>
 </p>
 <p><label>Bandeira:
-    <select id="flag-source"><option>famfamfam</option>
-<option>Flagpedia</option>
-<option>GoSquared</option>
-<option>StefanGabos</option></select></label>
+    <select id="flag-source"><option value="famfamfam">famfamfam</option>
+<option value="Flagpedia">Flagpedia</option>
+<option value="GoSquared">GoSquared</option>
+<option value="StefanGabos">StefanGabos</option>
+<option value="None">Nada</option></select></label>
 </p>
 
   <label>Era histórica:</label>
   <ul>
-<li>
-<input type="checkbox" id="era-present" disabled checked>Presente</li>
-    <li>
-<input type="checkbox" id="era-contemporary" disabled>Contemporânea</li>
-    <li>
-<input type="checkbox" id="era-modern" disabled>Moderna</li>
-    <li>
-<input type="checkbox" id="era-middle" disabled>Idade média</li>
-    <li>
-<input type="checkbox" id="era-ancient" disabled>Antiguidade</li>
+<li><label><input type="checkbox" id="era-present" disabled checked>Present</label></li>
+    <li><label><input type="checkbox" id="era-contemporary" disabled>Contemporary</label></li>
+    <li><label><input type="checkbox" id="era-modern" disabled>Modern</label></li>
+    <li><label><input type="checkbox" id="era-middle" disabled>Middle Ages</label></li>
+    <li><label><input type="checkbox" id="era-ancient" disabled>Ancient</label></li>
   </ul>
 <p><label><input type="checkbox" id="include-dependent" checked>Incluir países dependentes</label></p>
 <p><label><input type="checkbox" id="include-unrecognized" checked>Incluir países não reconhecidos</label></p>
