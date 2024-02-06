@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="description" content="OpenNumismat">
-<title>Reference generator - OpenNumismat - free collecting software</title>
+<title>Генератор на номенклатура - OpenNumismat - безплатен софтуер за колекционери</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/references.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -61,10 +61,10 @@
 </div>
 <div class="inner-content">
 
-  <noscript>This page requires JavaScript! Please enable it in your browser.</noscript>
+  <noscript>Тази страница изисква JavaScript! Моля, активирайте го във вашия браузър.</noscript>
 
-<h2>Reference generator</h2>
-<p><label>Language:
+<h2>Генератор на номенклатура</h2>
+<p><label>Език:
     <select id="language" disabled><option value="bg">Български</option>
 <option value="ca">Català</option>
 <option value="cs">Čeština</option>
@@ -84,19 +84,19 @@
 <option value="sv">Svenska</option>
 <option value="tr">Türkçe</option>
 <option value="uk">Український</option></select></label>
-  <label><input type="checkbox" id="replace-nonlatin">Replace non-Latin chars</label>
+  <label><input type="checkbox" id="replace-nonlatin">Замяна на не латински знаци</label>
 </p>
-<p><label>Regions:
-    <select id="region-source"><option value="regions_UN">Regions (UN)</option>
-<option value="subregions_UN">Subregions (UN)</option>
-<option value="regions_WorldBank">Regions (World Bank)</option>
-<option value="regions_World_Factbook">Regions (World Factbook)</option>
-<option value="Regions (OBJECTIVE LISTS)">Regions (OBJECTIVE LISTS)</option>
-<option value="Subregions (OBJECTIVE LISTS)">Subregions (OBJECTIVE LISTS)</option>
-<option value="Macroregions (OBJECTIVE LISTS)">Macro-regions (OBJECTIVE LISTS)</option>
+<p><label>Региони:
+    <select id="region-source"><option value="regions_UN">Региони (UN)</option>
+<option value="subregions_UN">Подрегиони (UN)</option>
+<option value="regions_WorldBank">Региони (World Bank)</option>
+<option value="regions_World_Factbook">Региони (World Factbook)</option>
+<option value="Regions (OBJECTIVE LISTS)">Региони (OBJECTIVE LISTS)</option>
+<option value="Subregions (OBJECTIVE LISTS)">Подрегиони (OBJECTIVE LISTS)</option>
+<option value="Macroregions (OBJECTIVE LISTS)">Макрорегиони (OBJECTIVE LISTS)</option>
 <option value="countries">Нито един</option></select></label>
 </p>
-<p><label>Flag set:
+<p><label>Колекция от знамена:
     <select id="flag-source"><option value="famfamfam">famfamfam</option>
 <option value="Flagpedia">Flagpedia</option>
 <option value="GoSquared">GoSquared</option>
@@ -104,27 +104,27 @@
 <option value="None">Нито един</option></select></label>
 </p>
 
-  <label>Historical era:</label>
+  <label>Историческа епоха:</label>
   <ul>
-<li><label><input type="checkbox" id="era-present" disabled checked>Present</label></li>
-    <li><label><input type="checkbox" id="era-contemporary" disabled>Contemporary</label></li>
-    <li><label><input type="checkbox" id="era-modern" disabled>Modern</label></li>
-    <li><label><input type="checkbox" id="era-middle" disabled>Middle Ages</label></li>
-    <li><label><input type="checkbox" id="era-ancient" disabled>Ancient</label></li>
+<li><label><input type="checkbox" id="era-present" disabled checked>Настояще</label></li>
+    <li><label><input type="checkbox" id="era-contemporary" disabled>Съвременна</label></li>
+    <li><label><input type="checkbox" id="era-modern" disabled>Ново време</label></li>
+    <li><label><input type="checkbox" id="era-middle" disabled>Средновековие</label></li>
+    <li><label><input type="checkbox" id="era-ancient" disabled>Античност</label></li>
   </ul>
-<p><label><input type="checkbox" id="include-dependent" checked>Include dependent countries</label></p>
-<p><label><input type="checkbox" id="include-unrecognized" checked>Include unrecognized countries</label></p>
-<p><label><input type="checkbox" id="include-without-coins" checked disabled>Include countries without coins</label></p>
-<p><label><input type="checkbox" id="include-without-circulation" disabled>Include countries without circulation coins</label></p>
+<p><label><input type="checkbox" id="include-dependent" checked>Включване на зависимите държави</label></p>
+<p><label><input type="checkbox" id="include-unrecognized" checked>Включване на непризнати държави</label></p>
+<p><label><input type="checkbox" id="include-without-coins" checked disabled>Включване на държави без монети</label></p>
+<p><label><input type="checkbox" id="include-without-circulation" disabled>Включване на държави без разменни монети</label></p>
 
   <fieldset>
 <legend>Държави</legend>
     <div id="countries-references">
       <div class="ctrl-button-box">
-<button class="expand-button">Expand all</button>
-        <button class="collapse-button">Collapse all</button>
-        <button class="select-button">Select all</button>
-        <button class="clear-button">Clear all</button>
+<button class="expand-button">Разгъване на всички</button>
+        <button class="collapse-button">Свиване на всички</button>
+        <button class="select-button">Избор на всички</button>
+        <button class="clear-button">Изчистване на всичко</button>
 </div>
     </div>
   </fieldset>
@@ -132,14 +132,14 @@
 <legend>Други</legend>
     <div id="other-references">
       <div class="ctrl-button-box">
-<button class="expand-button">Expand all</button>
-        <button class="collapse-button">Collapse all</button>
-        <button class="select-button">Select all</button>
-        <button class="clear-button">Clear all</button>
+<button class="expand-button">Разгъване на всички</button>
+        <button class="collapse-button">Свиване на всички</button>
+        <button class="select-button">Избор на всички</button>
+        <button class="clear-button">Изчистване на всичко</button>
 </div>
     </div>
   </fieldset>
-<button id="savedb" class="button">Download reference</button>
+<button id="savedb" class="button">Изтегляне на номенклатура</button>
 
 </div>
       </section>
