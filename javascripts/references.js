@@ -33,8 +33,9 @@ function replace_nonlatin() {
 }
 
 function reload_regions() {
+  var lang = $("#language").val();
   var region_source = $("#region-source").val();
-  var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}.json`
+  var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}_${lang}.json`
 
   $.getJSON( url, function( data ) {
     row = '<ul id="regions-tree">';
@@ -234,9 +235,10 @@ function update_flags() {
   for (img of imgs) {
     $(img).attr("src", "");
     code = $(img).prev().attr('id');
-    url = code2img_url(flag_source, code);
-    if (url !== undefined)
+    if (code) {
+      url = code2img_url(flag_source, code);
       update_flag(img, url, code);
+    }
   }
 }
 
@@ -288,8 +290,31 @@ function other_reference2img_url(reference, value) {
 }
 
 $(function() {
+    const langcodes = new Array("de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv");
+    const path = window.location.pathname;
+    var has_lang = false;
+    for (lang of langcodes) {
+      if (path.includes(`/${lang}/`)) {
+        $("#language").val(lang);
+        $("#replace-nonlatin").parent().hide();
+      }
+    }
+
+    $("#language").change(function() {
+        var lang = $("#language").val();
+        if (lang === 'en') {
+            $("#replace-nonlatin").parent().show();
+        }
+        else {
+            $("#replace-nonlatin").parent().hide();
+        }
+
+        $("#regions-tree").remove();
+        reload_regions();
+    });
+
     $("#replace-nonlatin").change(function() {
-      replace_nonlatin();
+        replace_nonlatin();
     });
 
     reload_regions();
