@@ -36,6 +36,7 @@ function reload_regions() {
   var lang = $("#language").val();
   var region_source = $("#region-source").val();
   var url = `https://raw.githubusercontent.com/OpenNumismat/references/main/data/${region_source}_${lang}.json`
+  var mint_names = $("#mint-names").val();
 
   $.getJSON( url, function( data ) {
     row = '<ul id="regions-tree">';
@@ -74,6 +75,21 @@ function reload_regions() {
           row += `<span>${unit}</span>`;
           row += '</label>';
           row += '</li>';
+        }
+
+        if ("mints" in country) {
+            row += '<br>';
+            for (mint of country["mints"]) {
+              row += '<li>';
+              if ('local_name' in mint)
+                local_name = mint['local_name'];
+              else
+                local_name = mint['name'];
+              row += `<label><input type="checkbox" id="${mint[mint_names]}" class="data-mint" data-value="${mint[mint_names]}" data-name="${mint['name']}" data-local_name="${local_name}" data-location="${mint['location']}" checked>`;
+              row += `<span>${mint[mint_names]}</span>`;
+              row += '</label>';
+              row += '</li>';
+            }
         }
         row += '</ul>';
 
@@ -191,6 +207,16 @@ function update_unrecognized() {
     $('.data-country-unrecognized').parent().parent().show();
   else
     $('.data-country-unrecognized').parent().parent().hide();
+}
+
+function update_mints() {
+    var mint_names = $("#mint-names").val();
+    mints = $('#regions-tree').find('.data-mint');
+    for (mint of mints) {
+        name = $(mint).data(mint_names);
+        $(mint).next().text(name);
+        $(mint).data('value', name);
+    }
 }
 
 var flag_images = {};
@@ -335,6 +361,10 @@ $(function() {
 
     $('#include-dependent').change(function() {
         update_dependent();
+    });
+
+    $('#mint-names').change(function() {
+        update_mints();
     });
 
     $('.collapse-button').click(function(){
@@ -489,6 +519,7 @@ function createdb(db) {
     var country_id = 0;
     var insert_countries_sql = "";
     var unit_id = 0;
+    var mint_id = 0;
     var insert_units_sql = "";
     regions = $('#countries-references').find('.data-region');
     for (region of regions) {
@@ -528,6 +559,16 @@ function createdb(db) {
                                 text = slugify(text);
                             insert_units_sql += `INSERT INTO ref_unit (id, value, parentid)
                                 VALUES (${unit_id}, "${text}", ${country_id});`
+                        }
+                    }
+
+                    mints = $(country).parent().parent().find('.data-mint');
+                    for (mint of mints) {
+                        if ($(mint).is(':checked') || $(mint).prop('indeterminate')) {
+                            mint_id ++;
+                            text = $(mint).data('value');
+                            insert_units_sql += `INSERT INTO ref_mint (id, value, parentid)
+                                VALUES (${mint_id}, "${text}", ${country_id});`
                         }
                     }
                 }
