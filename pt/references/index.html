@@ -103,7 +103,7 @@
   <label>Era histórica:</label>
   <ul>
 <li><label><input type="checkbox" id="era-present" disabled checked>Presente</label></li>
-    <li><label><input type="checkbox" id="era-contemporary" disabled>Contemporânea</label></li>
+    <li><label><input type="checkbox" id="era-contemporary">Contemporary</label></li>
     <li><label><input type="checkbox" id="era-modern" disabled>Moderna</label></li>
     <li><label><input type="checkbox" id="era-middle" disabled>Idade média</label></li>
     <li><label><input type="checkbox" id="era-ancient" disabled>Antiguidade</label></li>
@@ -111,7 +111,14 @@
 <p><label><input type="checkbox" id="include-dependent" checked>Incluir países dependentes</label></p>
 <p><label><input type="checkbox" id="include-unrecognized" checked>Incluir países não reconhecidos</label></p>
 <p><label><input type="checkbox" id="include-without-coins" checked disabled>Incluir países sem moeda própria</label></p>
-<p><label><input type="checkbox" id="include-without-circulation" checked disabled>Incluir países sem moeda em circulação</label></p>
+<!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-circulation" checked disabledtx_gtsymbolInclude countries without circulation coinstx_ltsymbol/labeltx_gtsymbol</p-->
+
+<p><label>Mint names:
+    <select id="mint-names"><option value="name">English names</option>
+<option value="local_name">Local names</option>
+<option value="location">Location</option>
+<option value="none">Nada</option></select></label>
+</p>
 
   <fieldset>
 <legend>Países</legend>
