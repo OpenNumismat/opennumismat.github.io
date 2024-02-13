@@ -76,19 +76,35 @@ function reload_regions() {
           row += '</label>';
           row += '</li>';
         }
-
-        if ("mints" in country) {
-            row += '<br>';
-            for (mint of country["mints"]) {
+        if ("contemporary_units" in country) {
+            for (unit of country["contemporary_units"]) {
               row += '<li>';
-              if ('local_name' in mint)
-                local_name = mint['local_name'];
-              else
-                local_name = mint['name'];
-              row += `<label><input type="checkbox" id="${mint[mint_names]}" class="data-mint" data-value="${mint[mint_names]}" data-name="${mint['name']}" data-local_name="${local_name}" data-location="${mint['location']}" checked>`;
-              row += `<span>${mint[mint_names]}</span>`;
+              row += `<label><input type="checkbox" id="${unit}" class="data-unit data-unit-contemporary" data-value="${unit}" checked>`;
+              row += `<span>${unit}</span>`;
               row += '</label>';
               row += '</li>';
+            }
+        }
+
+        if ("mints" in country) {
+            actual_mints = [];
+            for (mint of country["mints"]) {
+                if (!('to_year' in mint))
+                    actual_mints.push(mint);
+            }
+            if (actual_mints.length > 0) {
+                row += '<br>';
+                for (mint of actual_mints) {
+                  row += '<li>';
+                  if ('local_name' in mint)
+                    local_name = mint['local_name'];
+                  else
+                    local_name = mint['name'];
+                  row += `<label><input type="checkbox" id="${mint[mint_names]}" class="data-mint" data-value="${mint[mint_names]}" data-name="${mint['name']}" data-local_name="${local_name}" data-location="${mint['location']}" checked>`;
+                  row += `<span>${mint[mint_names]}</span>`;
+                  row += '</label>';
+                  row += '</li>';
+                }
             }
         }
         row += '</ul>';
@@ -106,6 +122,8 @@ function reload_regions() {
     update_flags();
     update_unrecognized();
     update_dependent();
+    update_contemporary_era();
+    update_mints();
     replace_nonlatin();
   });
 }
@@ -213,10 +231,25 @@ function update_mints() {
     var mint_names = $("#mint-names").val();
     mints = $('#regions-tree').find('.data-mint');
     for (mint of mints) {
-        name = $(mint).data(mint_names);
-        $(mint).next().text(name);
-        $(mint).data('value', name);
+        if (mint_names !== 'none') {
+            name = $(mint).data(mint_names);
+            $(mint).next().text(name);
+            $(mint).data('value', name);
+            $(mint).parent().parent().show();
+        }
+        else {
+            $(mint).data('value', '');
+            $(mint).parent().parent().hide();
+        }
     }
+}
+
+function update_contemporary_era() {
+  var include_contemporary = $("#era-contemporary").is(":checked");
+  if (include_contemporary)
+    $('.data-unit-contemporary').parent().parent().show();
+  else
+    $('.data-unit-contemporary').parent().parent().hide();
 }
 
 var flag_images = {};
@@ -367,6 +400,10 @@ $(function() {
         update_mints();
     });
 
+    $('#era-contemporary').change(function() {
+        update_contemporary_era();
+    });
+
     $('.collapse-button').click(function(){
       $(this).parent().parent().find('.nested').removeClass('expand');
       $(this).parent().parent().find('.caret').removeClass('caret-down');
@@ -514,6 +551,7 @@ function createdb(db) {
     var replace_nonlatin = $("#replace-nonlatin").is(":checked") && $("#replace-nonlatin").is(":visible");
     var include_unrecognized = $("#include-unrecognized").is(":checked");
     var include_dependent = $("#include-dependent").is(":checked");
+    var include_contemporary = $("#era-contemporary").is(":checked");
     var region_id = 0;
     var insert_regions_sql = "";
     var country_id = 0;
@@ -552,6 +590,9 @@ function createdb(db) {
 
                     units = $(country).parent().parent().find('.data-unit');
                     for (unit of units) {
+                        if (!include_contemporary && $(unit).hasClass('data-unit-contemporary'))
+                            continue;
+
                         if ($(unit).is(':checked') || $(unit).prop('indeterminate')) {
                             unit_id ++;
                             text = $(unit).data('value');
@@ -567,8 +608,10 @@ function createdb(db) {
                         if ($(mint).is(':checked') || $(mint).prop('indeterminate')) {
                             mint_id ++;
                             text = $(mint).data('value');
-                            insert_units_sql += `INSERT INTO ref_mint (id, value, parentid)
-                                VALUES (${mint_id}, "${text}", ${country_id});`
+                            if (text) {
+                                insert_units_sql += `INSERT INTO ref_mint (id, value, parentid)
+                                    VALUES (${mint_id}, "${text}", ${country_id});`
+                            }
                         }
                     }
                 }
