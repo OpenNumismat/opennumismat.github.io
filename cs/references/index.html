@@ -103,7 +103,7 @@
   <label>Historical era:</label>
   <ul>
 <li><label><input type="checkbox" id="era-present" disabled checked>Present</label></li>
-    <li><label><input type="checkbox" id="era-contemporary" disabled>Contemporary</label></li>
+    <li><label><input type="checkbox" id="era-contemporary">Contemporary</label></li>
     <li><label><input type="checkbox" id="era-modern" disabled>Modern</label></li>
     <li><label><input type="checkbox" id="era-middle" disabled>Middle Ages</label></li>
     <li><label><input type="checkbox" id="era-ancient" disabled>Ancient</label></li>
@@ -111,7 +111,14 @@
 <p><label><input type="checkbox" id="include-dependent" checked>Include dependent countries</label></p>
 <p><label><input type="checkbox" id="include-unrecognized" checked>Include unrecognized countries</label></p>
 <p><label><input type="checkbox" id="include-without-coins" checked disabled>Include countries without own coins</label></p>
-<p><label><input type="checkbox" id="include-without-circulation" checked disabled>Include countries without circulation coins</label></p>
+<!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-circulation" checked disabledtx_gtsymbolInclude countries without circulation coinstx_ltsymbol/labeltx_gtsymbol</p-->
+
+<p><label>Mint names:
+    <select id="mint-names"><option value="name">English names</option>
+<option value="local_name">Local names</option>
+<option value="location">Location</option>
+<option value="none">None</option></select></label>
+</p>
 
   <fieldset>
 <legend>Země</legend>
