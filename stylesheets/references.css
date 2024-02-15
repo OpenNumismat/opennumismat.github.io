@@ -22,10 +22,10 @@ legend {
 }
 
 #references ul {
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .caret {
@@ -46,8 +46,8 @@ legend {
 
 .caret-down::before {
   -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */'
-  transform: rotate(90deg);  
+  -webkit-transform: rotate(90deg); /* Safari */
+' transform: rotate(90 deg);
 }
 
 .nested {
