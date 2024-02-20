@@ -338,6 +338,8 @@ function code2img_url(flag_source, code) {
     return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/GoSquared/${code.toUpperCase()}.png`;
   else if (flag_source === 'StefanGabos')
     return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/StefanGabos/${code.toLowerCase()}.png`;
+  else if (flag_source === 'Wikipedia')
+    return `https://raw.githubusercontent.com/OpenNumismat/references/main/data/icons/flags/Wikipedia/${code.toLowerCase()}.png`;
 }
 
 function other_reference2img_url(reference, value) {
