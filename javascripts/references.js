@@ -60,6 +60,8 @@ function reload_regions() {
           county_state_class += ' data-country-unrecognized'
         if ('dependent' in country)
           county_state_class += ' data-country-dependent'
+        if ('disappeared' in country)
+          county_state_class += ' data-country-disappeared'
 
         row += '<li class="caret">';
         row += `<label><input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
@@ -242,10 +244,14 @@ function update_mints() {
 
 function update_contemporary_era() {
   var include_contemporary = $("#era-contemporary").is(":checked");
-  if (include_contemporary)
+  if (include_contemporary) {
     $('.data-unit-contemporary').parent().parent().show();
-  else
+    $('.data-country-disappeared').parent().parent().show();
+  }
+  else {
     $('.data-unit-contemporary').parent().parent().hide();
+    $('.data-country-disappeared').parent().parent().hide();
+  }
 }
 
 var flag_images = {};
