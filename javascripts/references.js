@@ -64,7 +64,7 @@ function reload_regions() {
           county_state_class += ' data-country-disappeared'
 
         row += '<li class="caret">';
-        row += `<label><input type="checkbox" id="${country['alpha2']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
+        row += `<label><input type="checkbox" id="${country['key']}" class="data-country${county_state_class}" data-value="${country['name']}" checked>`;
         row += '<img class="img-flagicon">';
         row += `<span>${country['name']}</span>`;
         row += '</label>';
@@ -284,6 +284,12 @@ function update_flag(img, url, code) {
         flag_images[code] = Array.from(byteArray);
       };
       bytesReader.readAsArrayBuffer(blob);
+    }
+    else {
+      if (!url.includes('Wikipedia')) {
+        url = code2img_url('Wikipedia', code);
+        update_flag(img, url, code);
+      }
     }
   });
 }
