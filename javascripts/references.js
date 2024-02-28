@@ -53,8 +53,6 @@ function reload_regions() {
         return a["name"].localeCompare(b["name"]);
       });
       for (country of counties) {
-        var flag_source = $("#flag-source option:selected").val();
-
         county_state_class = '';
         if ('unrecognized' in country)
           county_state_class += ' data-country-unrecognized'
@@ -298,14 +296,16 @@ function update_flag(img, url, code) {
 function update_flags() {
   flag_images = {};
 
-  var flag_source = $("#flag-source option:selected").text();
-  imgs = $('#countries-references').find('img');
-  for (img of imgs) {
+  const flag_source = $("#flag-source option:selected").text();
+  const imgs = $('#countries-references').find('img');
+  for (const img of imgs) {
     $(img).attr("src", "");
-    code = $(img).prev().attr('id');
-    if (code) {
-      url = code2img_url(flag_source, code);
-      update_flag(img, url, code);
+    if (flag_source !== "None") {
+      const code = $(img).prev().attr('id');
+      if (code) {
+        url = code2img_url(flag_source, code);
+        update_flag(img, url, code);
+      }
     }
   }
 }
@@ -362,7 +362,6 @@ function other_reference2img_url(reference, value) {
 $(function () {
   const langcodes = ["de", "pl", "pt", "ru", "uk", "it", "fr", "el", "ca", "nl", "es", "bg", "tr", "sv"];
   const path = window.location.pathname;
-  var has_lang = false;
   for (lang of langcodes) {
     if (path.includes(`/${lang}/`)) {
       $("#language").val(lang);
