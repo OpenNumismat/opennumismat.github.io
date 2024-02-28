@@ -179,10 +179,11 @@ function init_tree(tree) {
 }
 
 function reload_other_references() {
-  var url = `https://raw.githubusercontent.com/OpenNumismat/references/master/data/reference_en.json`
+  const lang = $("#language").val();
+  const url = `https://raw.githubusercontent.com/OpenNumismat/references/master/data/reference_${lang}.json`
 
   $.getJSON(url, function (data) {
-    row = '<ul id="other-references-tree">';
+    let row = '<ul id="other-references-tree">';
     for (reference of data) {
       row += '<li class="caret">';
       row += `<label><input type="checkbox" id="${reference['name']}" class="data-references" data-value="${reference['name']}" checked>${reference['title']}</label>`;
@@ -379,6 +380,9 @@ $(function () {
 
     $("#regions-tree").remove();
     reload_regions();
+
+    $("#other-references-tree").remove();
+    reload_other_references();
   });
 
   $("#replace-nonlatin").change(function () {
