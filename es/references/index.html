@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="description" content="OpenNumismat">
-<title>References generator - OpenNumismat - free collecting software</title>
+<title>Generador de referencias - OpenNumismat - software libre para coleccionismo</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/references.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -43,8 +43,7 @@
         </div>
         <div class="title-text">
 <a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
-          <a class="title-link" href="/"><h3 id="project_tagline">is a collection of free, open-source coin
-            collecting software</h3></a>
+          <a class="title-link" href="/"><h3 id="project_tagline">es una colección gratuita de software de colección de monedas de código abierto.</h3></a>
         </div>
       </div>
     </header>
@@ -63,10 +62,10 @@
 </div>
       <div class="inner-content">
 
-        <noscript>This page requires JavaScript! Please enable it in your browser.</noscript>
+        <noscript>¡Esta página requiere JavaScript! Por favor, actívalo en tu navegador.</noscript>
 
-        <h2>References generator</h2>
-        <p><label>Language:
+        <h2>Generador de referencias</h2>
+        <p><label>Idioma:
             <select id="language"><option value="bg">Български</option>
 <!--option value="ca">Català</option--><option value="cs">Čeština</option>
 <option value="de">Deutsch</option>
@@ -82,19 +81,19 @@
 <option value="pt">Português</option>
 <!--option value="ru">Русский</option--><option value="sv">Svenska</option>
 <!--option value="tr">Türkçe</option--><!--option value="uk">Український</option--></select></label>
-          <label><input type="checkbox" id="replace-nonlatin">Replace non-Latin chars</label>
+          <label><input type="checkbox" id="replace-nonlatin">Reemplazar cars. no latinos</label>
         </p>
-        <p><label>Regions:
-            <select id="region-source"><option value="regions_UN">Regions (UN)</option>
-<option value="subregions_UN">Subregions (UN)</option>
-<option value="regions_WorldBank">Regions (World Bank)</option>
-<option value="regions_World_Factbook">Regions (World Factbook)</option>
-<option value="Regions (OBJECTIVE LISTS)">Regions (OBJECTIVE LISTS)</option>
-<option value="Subregions (OBJECTIVE LISTS)">Subregions (OBJECTIVE LISTS)</option>
-<option value="Macroregions (OBJECTIVE LISTS)">Macro-regions (OBJECTIVE LISTS)</option>
+        <p><label>Regiones:
+            <select id="region-source"><option value="regions_UN">Regiones (NU)</option>
+<option value="subregions_UN">Subregiones (NU)</option>
+<option value="regions_WorldBank">Regiones (Banco Mundial)</option>
+<option value="regions_World_Factbook">Regiones (Libro de datos mundial)</option>
+<option value="Regions (OBJECTIVE LISTS)">Regiones (LISTAS OBJETIVAS)</option>
+<option value="Subregions (OBJECTIVE LISTS)">Subregiones (LISTAS OBJETIVAS)</option>
+<option value="Macroregions (OBJECTIVE LISTS)">Macro-regiones (LISTAS OBJETIVAS)</option>
 <option value="countries">Ninguno</option></select></label>
         </p>
-        <p><label>Flag set:
+        <p><label>Conjunto bandera:
             <select id="flag-source"><option value="famfamfam">famfamfam</option>
 <option value="Flagpedia">Flagpedia</option>
 <option value="GoSquared">GoSquared</option>
@@ -103,25 +102,24 @@
 <option value="None">Ninguno</option></select></label>
         </p>
 
-        <label>Historical era:</label>
+        <label>Era histórica:</label>
         <ul>
-<li><label><input type="checkbox" id="era-present" disabled checked>Present</label></li>
-          <li><label><input type="checkbox" id="era-contemporary">Contemporary</label></li>
-          <li><label><input type="checkbox" id="era-modern" disabled>Modern</label></li>
-          <li><label><input type="checkbox" id="era-middle" disabled>Middle Ages</label></li>
-          <li><label><input type="checkbox" id="era-ancient" disabled>Ancient</label></li>
+<li><label><input type="checkbox" id="era-present" disabled checked>Presente</label></li>
+          <li><label><input type="checkbox" id="era-contemporary">Contemporánea</label></li>
+          <li><label><input type="checkbox" id="era-modern" disabled>Moderna</label></li>
+          <li><label><input type="checkbox" id="era-middle" disabled>Edad Media</label></li>
+          <li><label><input type="checkbox" id="era-ancient" disabled>Antigüedad</label></li>
         </ul>
-<p><label><input type="checkbox" id="include-dependent" checked>Include dependent countries</label></p>
-        <p><label><input type="checkbox" id="include-unrecognized" checked>Include unrecognized
-          countries</label></p>
+<p><label><input type="checkbox" id="include-dependent" checked>Incluir países dependientes</label></p>
+        <p><label><input type="checkbox" id="include-unrecognized" checked>Incluir países no reconocidos</label></p>
         <!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-coins" checked disabledtx_gtsymbolInclude countries without
           own coinstx_ltsymbol/labeltx_gtsymbol</p-->
         <!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-circulation" checked disabledtx_gtsymbolInclude countries without circulation coinstx_ltsymbol/labeltx_gtsymbol</p-->
 
-        <p><label>Mint names:
-            <select id="mint-names"><option value="name">English names</option>
-<option value="local_name">Local names</option>
-<option value="location">Location</option>
+        <p><label>Nombres de ceca:
+            <select id="mint-names"><option value="name">Nombres en inglés</option>
+<option value="local_name">Nombres locales</option>
+<option value="location">Localización</option>
 <option value="none">Ninguno</option></select></label>
         </p>
 
@@ -129,10 +127,10 @@
 <legend>Países</legend>
           <div id="countries-references">
             <div class="ctrl-button-box">
-<button class="expand-button">Expand all</button>
-              <button class="collapse-button">Collapse all</button>
-              <button class="select-button">Select all</button>
-              <button class="clear-button">Clear all</button>
+<button class="expand-button">Expandir todo</button>
+              <button class="collapse-button">Contraer todo</button>
+              <button class="select-button">Seleccionar todo</button>
+              <button class="clear-button">Limpiar todo</button>
 </div>
           </div>
         </fieldset>
@@ -140,14 +138,14 @@
 <legend>Otros</legend>
           <div id="other-references">
             <div class="ctrl-button-box">
-<button class="expand-button">Expand all</button>
-              <button class="collapse-button">Collapse all</button>
-              <button class="select-button">Select all</button>
-              <button class="clear-button">Clear all</button>
+<button class="expand-button">Expandir todo</button>
+              <button class="collapse-button">Contraer todo</button>
+              <button class="select-button">Seleccionar todo</button>
+              <button class="clear-button">Limpiar todo</button>
 </div>
           </div>
         </fieldset>
-<button id="savedb" class="button">Download reference</button>
+<button id="savedb" class="button">Descargar referencia</button>
 
       </div>
     </section>
@@ -179,7 +177,7 @@
   reformal_wdg_tbcolor = "#FFFFFF";
   reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 </script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
-<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+<a href="http://opennumismat.idea.informer.com">Retroalimentación OpenNumismat</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
 <script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
