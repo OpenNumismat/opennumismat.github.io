@@ -122,10 +122,10 @@
   <li>Edición por lotes de monedas</li>
   <li>
 <a href="https://github.com/OpenNumismat/ImageEditor/">Editor de imagen</a> integrado</li>
+  <li>Webcam support for taking a photo or scan a barcode (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
   <li>Estadísticas</li>
   <li>Búsqueda por imagen</li>
   <li>Posibilidad de agregar y personalizar las listas para mostrar los datos requeridos</li>
-  <li>No requiere software adicional para trabajar con una base de datos</li>
   <li>Busca e importa información de monedas, billetes, sellos desde <a href="https://colnect.com/">Colnect</a>, una comunidad de coleccionistas en línea.</li>
   <li>Busca e importa información de monedas, medallas desde la base de datos de colecciones <a href="http://numismatics.org/search/">ANS</a> </li>
   <li>Importe colecciones existentes desde:</li>
@@ -141,35 +141,36 @@
   </ul>
 <li>Idiomas soportados: inglés, ruso, alemán, francés, ucraniano, español, húngaro, portugués, griego, checo, italiano, catalán, holandés, búlgaro, lituano, sueco, persa</li>
   <li>Multi-plataforma: Windows, Linux, macOS y Android. <a href="https://opennumismat.github.io/open-numismat-app/">OpenNumismat Móvil</a> para cualquier navegador, incluyendo móviles (iPhone, Android)</li>
+  <li>No requiere software adicional para trabajar con una base de datos</li>
   <li><a href="manual.html">Manual de usuario detallado</a></li>
   <li>Válido para otros coleccionables, como <a href="stamps.html">sellos</a>, billetes, <a href="postcards.html">postales</a>, escudos, modelos a escala. Y también para organizar un inventario doméstico</li>
 </ul>
 <h2 id="download">Descargar</h2>
 <h3>La versión más nueva con dependencias renovadas de librerías de terceros</h3>
 <p></p>
-<div class="inline">Última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.6</strong></div>. Fecha de liberación: <div class="inline">18 enero 2024</div>
+<div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.7</strong></div>. Fecha de liberación: <div class="inline">28 March 2024</div>
 <p>
 </p>
 <h4>Windows 10 y posterior</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.exe">OpenNumismat</a></strong></div> instalador
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/OpenNumismat-1.9.7.exe">OpenNumismat</a></strong></div> instalador
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6.zip">OpenNumismat</a></div> portable
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/OpenNumismat-1.9.7.zip">OpenNumismat</a></div> portable
 <p>
 </p>
 <h4>macOS 11 y posterior</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/OpenNumismat-1.9.7-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/open-numismat_1.9.6_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/open-numismat_1.9.7_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Paquete Flatpak
 <p>
 </p>
-<h3>Versión estable para sistemas antiguos</h3>
+<h3>Version for old systems</h3>
 <p></p>
 <div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.8.22</strong></div>. Fecha de liberación: <div class="inline">10 Mayo 2023</div>
 <p>
@@ -199,7 +200,21 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Última versión en desarrollo y versiones antiguas...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Código fuente</a></p>
 <h2>Historial de cambios</h2>
-  <h3>Novedades en<div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 enero 2024</div>)</h3>
+  <h3>Novedades en<div class="inline">OpenNumismat 1.9.7</div> (<div class="inline">28 March 2024</div>)</h3>
+  <ul>
+<li>Added navigation through photos and records into Image editor</li>
+    <li>Image editor can take a photo from webcam (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
+    <li>Added barcode scanner from webcam. Fill grade, grader and URL from NGC/PCGS scanned barcode</li>
+    <li>Fixed saving image after editing from Image panel</li>
+    <li>Added keyboard shortcuts for move coins (Alt + Up/Down)</li>
+    <li>Fixed default Status translations in non-English languages</li>
+    <li>Added Tools menu with link to YearCalculator and <a href="../references/">References generator</a>
+</li>
+    <li>New template 'labels'</li>
+    <li>Added opening ASG barcode link</li>
+    <li>Nuitka build available (may be faster)</li>
+  </ul>
+<h3>Novedades en<div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 enero 2024</div>)</h3>
   <ul>
 <li>Añadida herramienta para buscar monedas por foto similar (más info en <a href="https://github.com/OpenNumismat/SimilarImageFinder/">BuscadorImagenSimilar</a>)</li>
     <li>Mejorada la ordenación de rangos aC en el campo Año</li>
@@ -241,24 +256,11 @@
     <li>Corregida creación de nuevo registro desde menú contextual Árbol</li>
     <li>Corregido mostrar etiquetas vacías en la vista Detalles</li>
     <li>Corregido guardado de una moneda cuando el campo País está desactivado</li>
-    <li>Añadido soporte para los símbolos Barra de fracción y Numerador de fracción uno en el campo Valor</li>
+    <li>Added support for fraction slash and fraction numerator one Unicode symbols in Value field</li>
     <li>Añadido soporte para las fracciones 1/48, 1/20, 4 1/2 en el campo Valor</li>
     <li>Corregida importación desde Numista</li>
   </ul>
-<h3>Novedades en<div class="inline">OpenNumismat 1.9.4</div> (<div class="inline">29 Septiembre 2023</div>)</h3>
-  <ul>
-<li>Corregido rellenado automático de campos desde la referencia cuando se reabre el diálogo Editar. Mejorada respuesta.</li>
-    <li>Mejorado el formato de Motivo al importar de Colnect</li>
-    <li>Importación de 'Tipo de billetes' desde Colnect</li>
-    <li>Guarda Ancho/Largo de billete/sello de Colnect en el campo apropiado</li>
-    <li>Corregida la creación de la colección demo al instalar en Windows</li>
-    <li>Corregida la creación de la colección demo para idiomas no soportados</li>
-    <li>Corregida la re-ejecución de la acción de referencia adjuntar/desadjuntar</li>
-    <li>Esconde h-postfix en el campo eje horario al crear un nuevo registro</li>
-    <li>Corregido el valor máximo de 'Conteo de imágenes por defecto' en Ajustes</li>
-  </ul>
-<a href="history.html">Antiguos...</a>
-  <a href="https://github.com/OpenNumismat/open-numismat/issues/147">Planes de desarrollo del proyecto</a>
+<a href="history.html">Older...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>¿Cómo puedo ayudar?</h2>
 <ul>
 <li>Usa <strong>OpenNumismat</strong> y recomiéndaselo a tus amigos.</li>
