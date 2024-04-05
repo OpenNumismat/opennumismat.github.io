@@ -294,6 +294,7 @@ img.mobile-screenshot {
   display: inline-block;
   float: right;
   margin-left: 1em;
+  margin-top: -16px;
 }
 .title-language {
   color: #474747;
