@@ -150,24 +150,24 @@
 <h2 id="download">Скачать</h2>
 <h3>Новейшая версия со свежими библиотеками и зависимостями</h3>
 <p></p>
-<div class="inline">Последняя версия:</div> <div class="inline"><strong>OpenNumismat 1.9.7</strong></div>. Дата выхода: <div class="inline">28 марта 2024</div>
+<div class="inline">Последняя версия:</div> <div class="inline"><strong>OpenNumismat 1.9.8</strong></div>. Дата выхода: <div class="inline">20 May 2024</div>
 <p>
 </p>
 <h4>Windows 10 и выше</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/OpenNumismat-1.9.7.exe">OpenNumismat</a></strong></div> установщик
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.exe">OpenNumismat</a></strong></div> установщик
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/OpenNumismat-1.9.7.zip">OpenNumismat</a></div> портативная
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.zip">OpenNumismat</a></div> портативная
 <p>
 </p>
 <h4>macOS 11 и выше</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.6/OpenNumismat-1.9.6-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.7/open-numismat_1.9.7_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/open-numismat_1.9.8_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/details/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - пакет Flatpak
 <p>
@@ -202,7 +202,22 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Последняя версия в разработке и более старые версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Исходный код</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в <div class="inline">OpenNumismat 1.9.7</div> (<div class="inline">28 марта 2024</div>)</h3>
+  <h3>Что нового в <div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 May 2024</div>)</h3>
+  <ul>
+<li>Refactor building Tree</li>
+    <li>Fix memory leaks</li>
+    <li>Save record image after editing via Image panel</li>
+    <li>Raise Main window before opening latest collection</li>
+    <li>Fix macOS package</li>
+    <li>Fix showing current zoom in Image editor</li>
+    <li>Image always can be zoomed out less than 100% in Image editor</li>
+    <li>Improve disabling actions in crop/rotate mode in Image editor</li>
+    <li>Fix closing crop/rotate dialog via Image editor dialog close button</li>
+    <li>Fix showing Summary when Quantity filed contain text value</li>
+    <li>Fix detecting default calendar in Year calculator</li>
+    <li>Clear import cache on uninstall</li>
+  </ul>
+<h3>Что нового в <div class="inline">OpenNumismat 1.9.7</div> (<div class="inline">28 марта 2024</div>)</h3>
   <ul>
 <li>Добавлена навигация по фотографиям и записям в Редакторе изображений</li>
     <li>Редактор изображений может получать фотографии из веб-камеры (для лучшего результата попробуйте <a href="https://reincubate.com/camo/">Camo</a>)</li>
@@ -250,17 +265,6 @@
         <li>Защита от обрезки невыпуклого прямоугольника</li>
       </ul>
 </li>
-  </ul>
-<h3>Что нового в <div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26 октября 2023</div>)</h3>
-  <ul>
-<li>Исправлен дистрибутив для Windows</li>
-    <li>Добавлена обработка тэгов при редактировании нескольких записей</li>
-    <li>Исправлено создание новых записей из контекстного меню Дерева</li>
-    <li>Исправлено отображение пустых тегов в Деталях</li>
-    <li>Исправлено сохранение монет когда поле Страна отключено</li>
-    <li>Добавлена поддержка Unicode символов дроби в поле Номинал</li>
-    <li>Добавлена поддержка дробей 1/48, 1/20, 4 1/2 в поле Номинал</li>
-    <li>Исправлен импорт из Numista</li>
   </ul>
 <a href="history.html">Ранее...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">План разработки проекта</a>
 <h2>Как я могу помочь?</h2>
