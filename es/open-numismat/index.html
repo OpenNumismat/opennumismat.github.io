@@ -149,28 +149,28 @@
 <h2 id="download">Descargar</h2>
 <h3>La versión más nueva con dependencias renovadas de librerías de terceros</h3>
 <p></p>
-<div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.8</strong></div>. Fecha de liberación: <div class="inline">20 May 2024</div>
+<div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.9</strong></div>. Fecha de liberación: <div class="inline">14 June 2024</div>
 <p>
 </p>
 <h4>Windows 10 y posterior</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.exe">OpenNumismat</a></strong></div> instalador
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9.exe">OpenNumismat</a></strong></div> instalador
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.zip">OpenNumismat</a></div> portable
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9.zip">OpenNumismat</a></div> portable
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-nuitka.exe">OpenNumismat</a></div> Nuitka installer (experimental optimized version)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-nuitka.exe">OpenNumismat</a></div> Nuitka installer (experimental optimized version)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-nuitka.zip">OpenNumismat</a></div> Nuitka portable (experimental optimized version)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-nuitka.zip">OpenNumismat</a></div> Nuitka portable (experimental optimized version)
 <p>
 </p>
 <h4>macOS 11 y posterior</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/open-numismat_1.9.8_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/open-numismat_1.9.9_all.deb">OpenNumismat</a></div> - para Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Paquete Flatpak
 <p>
@@ -205,7 +205,15 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Última versión en desarrollo y versiones antiguas...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Código fuente</a></p>
 <h2>Historial de cambios</h2>
-  <h3>Novedades en<div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 May 2024</div>)</h3>
+  <h3>Novedades en<div class="inline">OpenNumismat 1.9.9</div> (<div class="inline">14 June 2024</div>)</h3>
+  <ul>
+<li>Import from Colnect uses new proxy</li>
+    <li>Save all for importing from Colnect and ANS</li>
+    <li>Speedup importing from Colnect, ANS, Numista</li>
+    <li>Save latest opened page in collection</li>
+    <li>Change all links from HTTP to HTTPS</li>
+  </ul>
+<h3>Novedades en<div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 May 2024</div>)</h3>
   <ul>
 <li>Refactor building Tree</li>
     <li>Fix memory leaks</li>
@@ -233,41 +241,6 @@
     <li>New template 'labels'</li>
     <li>Added opening ASG barcode link</li>
     <li>Nuitka build available (may be faster)</li>
-  </ul>
-<h3>Novedades en<div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 enero 2024</div>)</h3>
-  <ul>
-<li>Añadida herramienta para buscar monedas por foto similar (más info en <a href="https://github.com/OpenNumismat/SimilarImageFinder/">BuscadorImagenSimilar</a>)</li>
-    <li>Mejorada la ordenación de rangos aC en el campo Año</li>
-    <li>Cambiados los iconos de los estados Duplicado y Reemplazo</li>
-    <li>Coloreado el marco de la moneda con el color de su Estado en las vistas Tarjeta e Icono</li>
-    <li>Corregido: mostrar icono de Estado en el Árbol</li>
-    <li>Añadido: Configuraciones para el reemplazo de color transparente de imagen</li>
-    <li>Corregido: cambio de tamaño del diálogo Personalizar Árbol</li>
-    <li>No sugerir guardar imagen como .gif (Qt no soporta guardar como .gif)</li>
-    <li>Corregido: importación desde CoinManage en plataformas no Windows</li>
-    <li>Mejorado: guardar la última carpeta de imagen</li>
-    <li>Mejorado: seleccionar el formato de guardado de imagen</li>
-    <li>Corregido: guardar GeoCuadro</li>
-    <li>Muchas mejoras en el <a href="https://github.com/OpenNumismat/ImageEditor/">Editor de Imagen</a> integrado<ul>
-<li>Recorte circular con antialias</li>
-        <li>Mejorado: algoritmo de transformación de perspectiva</li>
-        <li>Mejorado: algoritmo de autodetección de bordes en la herramienta recorte</li>
-        <li>Ajustado Deshacer hasta 10 acciones</li>
-        <li>Eliminación de alfa al grabar o copiar tras transformación</li>
-        <li>Ajuste para el color de fondo</li>
-        <li>Añadido: máscara gris para la herramienta recorte</li>
-        <li>Añadido: acciones de cortar mitad derecha-izquierda</li>
-        <li>Mejorado: pasos de zoom</li>
-        <li>Añadido: giro de zoom en la barra de herramientas.</li>
-        <li>Zoom +/- con doble clic del ratón</li>
-        <li>Zoom presionando el botón central del ratón</li>
-        <li>Mejorado: atajos de teclado</li>
-        <li>Marcar título de la ventana al cambiar imagen</li>
-        <li>Permitir arrastrar imagen a la ventana</li>
-        <li>Usar el nombre de campo como nombre de la imagen</li>
-        <li>Proteger de recortar rectángulo no convexo</li>
-      </ul>
-</li>
   </ul>
 <a href="history.html">Older...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>¿Cómo puedo ayudar?</h2>

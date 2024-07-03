@@ -150,28 +150,28 @@
 <h2 id="download">Скачать</h2>
 <h3>Новейшая версия со свежими библиотеками и зависимостями</h3>
 <p></p>
-<div class="inline">Последняя версия:</div> <div class="inline"><strong>OpenNumismat 1.9.8</strong></div>. Дата выхода: <div class="inline">20 мая 2024</div>
+<div class="inline">Последняя версия:</div> <div class="inline"><strong>OpenNumismat 1.9.9</strong></div>. Дата выхода: <div class="inline">14 июня 2024</div>
 <p>
 </p>
 <h4>Windows 10 и выше</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.exe">OpenNumismat</a></strong></div> установщик
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9.exe">OpenNumismat</a></strong></div> установщик
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8.zip">OpenNumismat</a></div> портативная
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9.zip">OpenNumismat</a></div> портативная
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-nuitka.exe">OpenNumismat</a></div> Nuitka установщик (экспериментальная оптимизированная версия)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-nuitka.exe">OpenNumismat</a></div> Nuitka установщик (экспериментальная оптимизированная версия)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-nuitka.zip">OpenNumismat</a></div> Nuitka портативная (экспериментальная оптимизированная версия)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-nuitka.zip">OpenNumismat</a></div> Nuitka портативная (экспериментальная оптимизированная версия)
 <p>
 </p>
 <h4>macOS 11 и выше</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/OpenNumismat-1.9.8-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/OpenNumismat-1.9.9-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.8/open-numismat_1.9.8_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.9/open-numismat_1.9.9_all.deb">OpenNumismat</a></div> - для Debian/Ubuntu
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - пакет Flatpak
 <p>
@@ -206,7 +206,15 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Последняя версия в разработке и более старые версии...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Исходный код</a></p>
 <h2>История изменений</h2>
-  <h3>Что нового в <div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 мая 2024</div>)</h3>
+  <h3>Что нового в <div class="inline">OpenNumismat 1.9.9</div> (<div class="inline">14 июня 2024</div>)</h3>
+  <ul>
+<li>Импорт из Colnect использует новый прокси</li>
+    <li>Сохранить все для импорта из Colnect и ANS</li>
+    <li>Ускорен импорт из Colnect, ANS, Numista</li>
+    <li>Сохраняется последняя открытая страница в коллекции</li>
+    <li>Все ссылки изменены с HTTP на HTTPS</li>
+  </ul>
+<h3>Что нового в <div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 мая 2024</div>)</h3>
   <ul>
 <li>Переработано построение Дерева</li>
     <li>Исправлены утечки памяти</li>
@@ -234,41 +242,6 @@
     <li>Новый шаблон 'labels'</li>
     <li>Добавлено открытие ссылки по ASG штрихкоду</li>
     <li>Добавлена сборка на Nuitka (может быть быстрее)</li>
-  </ul>
-<h3>Что нового в <div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 января 2024</div>)</h3>
-  <ul>
-<li>Добавлен инструмент для поиска монет по похожей фотографии (больше информации в <a href="https://github.com/OpenNumismat/SimilarImageFinder/">SimilarImageFinder</a>)</li>
-    <li>Улучшена сортировка диапазонов до РХ в поле Год</li>
-    <li>Изменена иконка для статусов Дубликат и Замена</li>
-    <li>Цвет рамки монеты в карточном виде совпадает с цветом Статуса</li>
-    <li>Исправлено отображение иконки статуса в Дереве</li>
-    <li>Добавлена настройка для замены прозрачного цвета изображений</li>
-    <li>Исправлено изменение размеров диалога Настроить дерево</li>
-    <li>Больше не предлагается сохранять изображение как .gif (Qt не поддерживает сохранение как .gif)</li>
-    <li>Исправлен импорт из CoinManage на платформах, отличных от Windows</li>
-    <li>Улучшено запоминание последней папки с изображениями</li>
-    <li>Улучшен выбор формата изображения при сохранении</li>
-    <li>Исправлено сохранение GeoChart</li>
-    <li>Много улучшений во встроенном <a href="https://github.com/OpenNumismat/ImageEditor/">Редакторе изображений</a><ul>
-<li>Обрезка круга со сглаживанием</li>
-        <li>Улучшен алгоритм трансформации перспективы</li>
-        <li>Улучшен алгоритм автоматического определения границ в инструменте обрезки</li>
-        <li>Глубина отмены - 10 действий</li>
-        <li>Удаляется прозрачный слой при сохранении или копировании после трансформаций</li>
-        <li>Настройка для цвета фона</li>
-        <li>Добавлена серая маска в инструменте обрезки</li>
-        <li>Добавлено действие Вырезать левую/правую сторону</li>
-        <li>Улучшены шаги масштабирования</li>
-        <li>Добавлено управление масштабом на панели инструментов</li>
-        <li>Увеличение/уменьшение масштаба по двойному щелчку мыши</li>
-        <li>Масштабирование по нажатию средней кнопки мыши</li>
-        <li>Улучшены горячие клавиши</li>
-        <li>Помечается название окна когда изображение изменено</li>
-        <li>Разрешено перемещение изображений в окно редактирования</li>
-        <li>Используется название поля как название изображения</li>
-        <li>Защита от обрезки невыпуклого прямоугольника</li>
-      </ul>
-</li>
   </ul>
 <a href="history.html">Ранее...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">План разработки проекта</a>
 <h2>Как я могу помочь?</h2>
