@@ -150,30 +150,31 @@
 <h2 id="download">Descargar</h2>
 <h3>La versión más nueva con dependencias renovadas de librerías de terceros</h3>
 <p></p>
-<div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.11</strong></div>. Fecha de liberación: <div class="inline">05 Agosto 2024</div>
+<div class="inline">La última versión:</div> <div class="inline"><strong>OpenNumismat 1.9.12</strong></div>. Fecha de liberación: <div class="inline">10 October 2024</div>
 <p>
 </p>
 <h4>Windows 10 y posterior</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/OpenNumismat-1.9.11.exe">OpenNumismat</a></strong></div> instalador
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12.exe">OpenNumismat</a></strong></div> instalador
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/OpenNumismat-1.9.11.zip">OpenNumismat</a></div> portable
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12.zip">OpenNumismat</a></div> portable
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/OpenNumismat-1.9.11-nuitka.exe">OpenNumismat</a></div> Instalador Nuitka (versión optimizada experimental)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-nuitka.exe">OpenNumismat</a></div> Instalador Nuitka (versión optimizada experimental)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/OpenNumismat-1.9.11-nuitka.zip">OpenNumismat</a></div> Portable Nuitka (versión optimizada experimental)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-nuitka.zip">OpenNumismat</a></div> Portable Nuitka (versión optimizada experimental)
+<p>Free code signing provided by <a href="https://about.signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a></p>
 <p>
 </p>
 <h4>macOS 11 y posterior</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/OpenNumismat-1.9.11-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.11/open-numismat_1.9.11_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/open-numismat_1.9.12_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/latest/open-numismat_1.9.11.19_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/open-numismat_1.9.12_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Paquete Flatpak
 <p></p>
@@ -210,7 +211,16 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Última versión en desarrollo y versiones antiguas...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Código fuente</a></p>
 <h2>Historial de cambios</h2>
-  <h3>Novedades en<div class="inline">OpenNumismat 1.9.11</div> (<div class="inline">05 Agosto 2024</div>)</h3>
+  <h3>Novedades en<div class="inline">OpenNumismat 1.9.12</div> (<div class="inline">10 October 2024</div>)</h3>
+  <ul>
+<li>Windows binaries now are signed with <a href="https://about.signpath.io/">SignPath.io</a>
+</li>
+    <li>Fix filling Tree</li>
+    <li>Avoid empty first line when saving list as Excel</li>
+    <li>Add Year on coin field to Tree</li>
+    <li>Add deb-package for Ubuntu 24.04</li>
+  </ul>
+<h3>Novedades en<div class="inline">OpenNumismat 1.9.11</div> (<div class="inline">05 Agosto 2024</div>)</h3>
   <ul>
 <li>Añadida importación desde CoinSnap</li>
     <li>Mejorada la gestión de memoria durante la importación de monedas</li>
@@ -233,43 +243,6 @@
     <li>Corregida la grabación de algunos caracteres en Excel</li>
     <li>Corregido el proceso de texto en formato RichText</li>
     <li>Actualizadas las colecciones y referencias por defecto</li>
-  </ul>
-<h3>Novedades en<div class="inline">OpenNumismat 1.9.9</div> (<div class="inline">14 Junio 2024</div>)</h3>
-  <ul>
-<li>La importación desde Colnect usa un nuevo proxy</li>
-    <li>Grabar todo para importación desde Colnect y ANS</li>
-    <li>Acelerada importación desde Colnect, ANS, Numista</li>
-    <li>Se graba la última página abierta en colección</li>
-    <li>Cambiados todos los enlaces de HTTP a HTTPS</li>
-  </ul>
-<h3>Novedades en<div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 Mayo 2024</div>)</h3>
-  <ul>
-<li>Refactorización construyendo Árbol</li>
-    <li>Corregidos fallos de memoria</li>
-    <li>Guarda la imagen del registro después de editarla vía panel Imagen</li>
-    <li>Lanza la ventana Principal antes de abrir la última colección</li>
-    <li>Corregido el paquete macOS</li>
-    <li>Corregido mostrar zoom actual en el Editor de imagen</li>
-    <li>La imagen siempre se puede reducir menos del 100% en el Editor de imagen</li>
-    <li>Mejora la desactivación de acciones en modo recortar/rotar en el Editor de imagen</li>
-    <li>Corregido el cierre del cuadro de diálogo recortar/rotar mediante el botón cerrar del cuadro de diálogo del Editor de imagen</li>
-    <li>Corregido mostrar Resumen cuando el campo Cantidad contiene un valor de texto</li>
-    <li>Corregida la detección del calendario por defecto en la calculadora Año</li>
-    <li>Limpia la caché de importación al desinstalar</li>
-  </ul>
-<h3>Novedades en<div class="inline">OpenNumismat 1.9.7</div> (<div class="inline">28 Marzo 2024</div>)</h3>
-  <ul>
-<li>Añadida navegación por las fotos y registros en Editor de imagen</li>
-    <li>El Editor de imagen puede tomar una foto desde la webcam (para mejor resultado prueba <a href="https://reincubate.com/camo/">Camo</a>)</li>
-    <li>Añadido escáner de códigos de barras desde webcam. Rellena grado, gradador y URL desde el código de barras  NGC/PCGS escaneado</li>
-    <li>Corregida la grabación de imagen tras editarla en el panel Imagen</li>
-    <li>Añadidos atajos de teclado para mover monedas (Alt + Up/Down)</li>
-    <li>Corregidas traducciones por defecto en Estado en lenguas distintas del inglés</li>
-    <li>Añadido menú Herramientas con enlace a Calculadora de Año y <a href="../references/">generador de Referencias</a>
-</li>
-    <li>Nueva plantilla 'etiquetas'</li>
-    <li>Añadida apertura de enlace de código de barras ASG</li>
-    <li>Versión Nuitka disponible (quizá más rápida)</li>
   </ul>
 <a href="history.html">Antiguos..</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">Planes de desarrollo del proyecto</a>
 <h2>¿Cómo puedo ayudar?</h2>
