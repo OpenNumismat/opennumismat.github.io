@@ -67,7 +67,7 @@
 <p>O OpenNumismat é distribuído completo e livre. O código fonte está licenciado sob GPL-3.0 e disponível no <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
 <p>A página web oficial é <a href="http://opennumismat.github.io" target="blank_">http://opennumismat.github.io</a>.</p>
 <h3>1.2 Funcionalidades da implementação</h3>
-<p>O OpenNumismat é baseado na biblioteca PyQt com o motor de base de dados SQLite para armazenar os dados da colecção, o que permitiu alcançar ligeireza e pronta resposta do ambiente de utilização e ser multi-plataforma.</p>
+<p>O OpenNumismat é baseado na biblioteca PySide6 com o motor de bases de dados SQLite para armazenar os dados, permitindo um ambiente leve e responsivo, disponível para vários sistemas operativos.</p>
 <p>Está disponível uma lista completa de componentes e bibliotecas usadas <a href="https://raw.githubusercontent.com/OpenNumismat/open-numismat/master/requirements.txt" target="blank_">aqui</a>.</p>
 <p>Os ícones utilizados são baseados em <a href="http://led24.de/iconset/" target="blank_">LED Icon Set</a> v1.0, Soft Scraps Icons por <a href="http://deleket.deviantart.com/" target="blank_">deleket</a> e <a href="http://www.famfamfam.com" target="blank_">Flag icons</a>.</p>
 <p>As traduções do programa são implementadas por entusiastas utilizando o serviço <a href="https://www.transifex.com/projects/p/opennumismat/" target="blank_">Transifex</a>. Obrigado pela ajuda!</p>
@@ -101,7 +101,7 @@
 <h2 id="sec3">3 Inserir moedas</h2>
 <h3>3.1 Adicionar uma moeda</h3>
 <p>Faça a gestão da sua colecção adicionando entradas para cada moeda comprada, vendida ou desejada.</p>
-<p>Para adicionar uma nova moeda, seleccione o menu  <i>Moeda-&gt;Adicionar</i> ou prima a tecla Insert. Verá o diálogo Editar:</p>
+<p>Para adicionar uma nova moeda, seleccione <i>Moeda-&gt;Adicionar</i> ou prima a tecla <kbd>Insert</kbd>. Verá o diálogo de edição:</p>
 <p><img src="/images/manual/new.png"></p>
 <p>O diálogo de edição contém 7 separadores com os seguintes campos:</p>
 <ul>
@@ -270,22 +270,22 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <li>Copiar - copia a imagem para a área de transferência para colar posteriormente;</li>
 <li>Eliminar - elimina a imagem actual.</li>
 </ul>
-<p>Um duplo clique no campo de imagem abre o diálogo de selecção de ficheiro, se ainda não tiver uma imagem escolhida. Ou abre a imagem no visualizador predefinido do seu sistema.</p>
+<p>Um duplo clique no campo de imagem abre o diálogo de selecção se ainda não tiver uma imagem já escolhida. Ou abre o editor de imagens (ver 9), ou o programa pré-definido do seu sistema operativo.</p>
 <p>A imagem da moeda na tabela é gerada automaticamente a partir das imagens do anverso e do reverso.</p>
 <h3>3.2 Editar uma moeda</h3>
 <p>Para editar os dados da moeda, tem quatro formas: fazer duplo clique na moeda, clique direito na moeda e seleccionar <i>Editar...</i>, seleccionar a moeda e premir Enter ou seleccionar o menu <i>Moeda -&gt; Editar...</i>. Verá o diálogo Editar, descrito em 3.1.</p>
 <h3>3.3 Clonar moedas</h3>
 <p>Para adicionar rapidamente uma moeda igual, pode usar a clonagem. Para tal, faça clique direito na moeda desejada e seleccione Clonar. Verá o diálogo Editar, com a informação sobre a nova moeda já preenchida, edite os campos necessários e grave.</p>
-<p>Pode também copiar (usando Ctrl+Ins ou Ctrl+C) a moeda existente e colála (premindo Shift+Ins ou Ctrl+V) - o diálogo Editar abre igualmente.
-<br>Uma moeda (ou grupo de moedas, veja abaixo) copiada pode ser inserida noutra aplicação (por exemplo, no MS Excel ou Bloco de notas). Neste caso, ao inserir noutra aplicação, só os campos de texto (sem imagens) serão copiados.</p>
+<p>Também pode copiar (usando <kbd>Ctrl</kbd> + <kbd>Ins</kbd> ou <kbd>Ctrl</kbd> + <kbd>C</kbd>) a moeda existente e colá-la (premindo <kbd>Shift</kbd> + <kbd>Ins</kbd> ou <kbd>Ctrl</kbd> + <kbd>V</kbd>) - o diálogo de edição também abre.
+<br>Uma moeda (ou grupo de moedas) copiada (veja abaixo) pode ser inserida noutro programa (por exemplo, MS Excel ou Bloco de notas). Neste caso, ao inserir nesse programa, só os campos de texto (sem imagens) serão copiados.</p>
 <p>Pode também adicionar uma nova moeda com campos pré-preenchidos a partir da árvore. Para tal, faça clique direito no elemento da árvore e seleccione <i>Adicionar nova moeda......</i>. No diálogo Editar todos os campos comuns para moedas correspondentes a esse elemento estarão preenchidos.</p>
 <h3>3.4 Editar múltiplas moedas</h3>
-<p>Por vezes é necessário alterar alguns campos em várias moedas em simultâneo. Para tal, seleccione as moedas desejadas (para seleccionar várias moedas, clique com as teclas Shift ou Ctrl premidas, para seleccionar todas as moedas, prima Ctrl+A), faça clique direito no grupo de moedas e seleccione <i>Editar várias...</i> ou o menu <i>Moeda-&gt;Editar...</i>.
-<br>No diálogo Editar aberto, todos os campos coincidentes do grupo de moedas seleccionadas estarão preenchidos. Cada campo terá uma caixa que activa ou desactiva a aplicação do valor do campo a todo o grupo ao gravar:</p>
+<p>Por vezes, precisará de alterar alguns campos de uma só vez para várias moedas. Para tal, seleccione as moedas desejadas (use o clique com  <kbd>Shift</kbd> ou <kbd>Ctrl</kbd> premidos, para seleccionar todas as moedas, prima <kbd>Ctrl</kbd> + <kbd>A</kbd>), clique direito no grupo seleccionado e seleccione<i>Edição múltipla...</i> ou <i>Moeda-&gt;Editar...</i>.
+<br>No diálogo de edição aberto, todos os campos correspondentes serão preenchidos. Cada campo terá uma caixa que permite ou nega a aplicação do valor do campo a todo o grupo seleccionado ao gravar:</p>
 <p><img src="/images/manual/multi_edit.png"></p>
 <p>Também pode editar um grupo a partir da árvore - faça clique direito no elemento da árvore e seleccione  <i>Editar moedas...</i>.</p>
 <h3>3.5 Eliminar</h3>
-<p>Pode remover moedas da colecção uma a uma ou em grupos. Para eliminar, seleccione o menu  <i>Moeda-&gt;Eliminar</i>, faça clique direito na moeda ou grupo a eliminar e seleccione <i>Eliminar</i> ou prima a tecla Delete.</p>
+<p>Pode remover moedas da colecção uma a uma ou em grupos. Para tal, seleccione <i>Moeda-&gt;Eliminar</i>, façã clique direito na moeda ou grupo desejado e seleccione <i>Eliminar</i> ou prima a tecla <kbd>Del</kbd>.</p>
 <p>As moedas eliminadas são removidas da colecção e a acção não pode ser desfeita. Tenha CUIDADO.</p>
 <h2 id="sec4">4. Ver moedas</h2>
 <h3>4.1 Tabela de moedas</h3>
@@ -295,8 +295,8 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <p>No diálogo aberto, tem de marcar os campos desejados. Pode arrastar os nomes dos campos para alterar a sua ordem relativa. Pode também arrastar os cabeçalhos das colunas na tabela de moedas. Clicar no cabeçalho de uma coluna ordena a tabela pelo campo seleccionado, ascendente ou descendentemente.</p>
 <p>Pode ajustar a largura das colunas deslocando a margem da coluna com o rato ou com um clique direito sobre o cabeçalho da coluna e seleccionando <i>Ajustar tamanho</i>.</p>
 <h3>4.2 Painel de imagens</h3>
-<p>Este painel mostra imagens ligadas à moeda. Ao fundo do painel estão caixas que lhe permitem controlar o número de imagens mostradas em simultâneo.
-<br>Duplo clique na imagem abre o programa predefinido do seu sistema. Ao pôr o rato sobre uma imagem, é mostrado um nome exclusivo da imagem, se o especificou ao editar a moeda.</p>
+<p>Este painel mostra as imagens ligadas  à moeda. Ao fundo, estão caixas que permitem controlar o número de imagens mostradas simultaneamente.
+<br>Um duplo clique abre a imagem no editor interno (veja 9) ou no programa pré-definido do seu sistema operativo. Ao pairar com o rato sobre uma imagem, verá um nome de imagem único, se foi especificado durante a edição.</p>
 <h3>4.3 Filtrar</h3>
 <p>Usando a lista pendente nos cabeçalhos das colunas na tabela, pode filtrar as moedas por valor dos campos.</p>
 <p><img src="/images/manual/filter.png"></p>
@@ -423,7 +423,7 @@ Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h2 id="sec9">9 Editor de imagens</h2>
-<p>OpenNumismat tem um editor de imagens incorporado (o projecto principal é <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), que pode ser activado nas definições.</p>
+<p>O OpenNumismat tem um editor de imagem interno (o projecto principal está em<a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), que pode ser activado nas definições.</p>
 <p><img src="/images/imageEdit.png"></p>
 
 <h4>Características</h4>
