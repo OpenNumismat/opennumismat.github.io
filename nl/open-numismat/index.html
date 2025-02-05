@@ -150,31 +150,31 @@
 <h2 id="download">Download</h2>
 <h3>Newest version with freshly third-party library dependencies</h3>
 <p></p>
-<div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.9.12</strong></div>. Release date: <div class="inline">10 October 2024</div>
+<div class="inline">The latest version:</div> <div class="inline"><strong>OpenNumismat 1.9.13</strong></div>. Release date: <div class="inline">15 January 2025</div>
 <p>
 </p>
 <h4>Windows 10 and later</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12.exe">OpenNumismat</a></strong></div> installer
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/OpenNumismat-1.9.13.exe">OpenNumismat</a></strong></div> installer
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12.zip">OpenNumismat</a></div> portable
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/OpenNumismat-1.9.13.zip">OpenNumismat</a></div> portable
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-nuitka.exe">OpenNumismat</a></div> Nuitka installer (experimental optimized version)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/OpenNumismat-1.9.13-nuitka.exe">OpenNumismat</a></div> Nuitka installer (optimized version)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-nuitka.zip">OpenNumismat</a></div> Nuitka portable (experimental optimized version)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/OpenNumismat-1.9.13-nuitka.zip">OpenNumismat</a></div> Nuitka portable (optimized version)
 <p>Free code signing provided by <a href="https://about.signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a></p>
 <p>
 </p>
 <h4>macOS 11 and later</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/OpenNumismat-1.9.12-macos11.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/OpenNumismat-1.9.13-macos11.dmg">OpenNumismat</a></div>
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/open-numismat_1.9.12_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/open-numismat_1.9.13_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.12/open-numismat_1.9.12_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.9.13/open-numismat_1.9.13_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/org.opennumismat.OpenNumismat">OpenNumismat</a></div> - Flatpak package
 <p></p>
@@ -211,7 +211,16 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Latest Development Build and Older Releases...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Source code</a></p>
 <h2>History of changes</h2>
-  <h3>What's new in<div class="inline">OpenNumismat 1.9.12</div> (<div class="inline">10 October 2024</div>)</h3>
+  <h3>What's new in<div class="inline">OpenNumismat 1.9.13</div> (<div class="inline">15 January 2025</div>)</h3>
+  <ul>
+<li>Improve processing Colnect proxy errors</li>
+    <li>Use mask for storing showed images in ImageView</li>
+    <li>Extend Latitude and Longitude fields to 6 d.p.</li>
+    <li>Extend Mintmark field to 15 characters</li>
+    <li>Fix installation of Nuitka on top of pyinstaller version</li>
+    <li>Read/save JPEG XL image files when available</li>
+  </ul>
+<h3>What's new in<div class="inline">OpenNumismat 1.9.12</div> (<div class="inline">10 October 2024</div>)</h3>
   <ul>
 <li>Windows binaries now are signed with <a href="https://about.signpath.io/">SignPath.io</a>
 </li>
@@ -228,21 +237,6 @@
     <li>Fix importing from Numista when issuer missed</li>
     <li>Fix importing from ANS</li>
     <li>Fix some checkboxes</li>
-  </ul>
-<h3>What's new in<div class="inline">OpenNumismat 1.9.10</div> (<div class="inline">03 July 2024</div>)</h3>
-  <ul>
-<li>Improve import from Colnect</li>
-    <li>Fix sorting year periods</li>
-    <li>Add counter into Tree and Statistics</li>
-    <li>Fix open file in Image editor</li>
-    <li>Header filter uses case insensitive search</li>
-    <li>Add field name to Statistics charts title</li>
-    <li>Fix show legend in pie chart</li>
-    <li>Fix multi edit single record from Tree</li>
-    <li>Fix filling default statuses for new collection</li>
-    <li>Fix saving some characters into Excel</li>
-    <li>Fix processing text in RichText format</li>
-    <li>Update default collections and references</li>
   </ul>
 <a href="history.html">Older...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>How can I help?</h2>
