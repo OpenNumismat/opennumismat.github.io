@@ -66,7 +66,7 @@
     "summary": "Riepilogo",
     "language": "Lingua",
     "about": "A riguardo",
-    "select_file": "Load an OpenNumismat collection file:",
+    "select_file": "Carica una collezione di OpenNumismat",
     "security_note": "Your file not will be uploaded to the internet. You can disable internet connection.",
     "show_status_as": "Show status as:",
     "text": "Text",
