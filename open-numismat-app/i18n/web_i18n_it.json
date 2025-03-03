@@ -68,8 +68,8 @@
     "about": "A riguardo",
     "select_file": "Carica una collezione di OpenNumismat",
     "security_note": "Il tuo file non verrà caricato su Internet. Puoi disconnettere la connessione a Internet.",
-    "show_status_as": "Show status as:",
-    "text": "Text",
+    "show_status_as": "Mostra stato come:",
+    "text": "Testo",
     "icon": "Icon",
     "full": "Icon + text"
   }
