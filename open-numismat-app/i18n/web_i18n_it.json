@@ -35,7 +35,7 @@
   "None": "Nessuno",
   "Title": "Titolo",
   "build_table": "Building table",
-  "exec_sql": "Executing SQL",
+  "exec_sql": "SQL in esecuzione",
   "load_db": "Loading database from file",
   "BC": "a.C.",
   "density": "Density of the display: ",
