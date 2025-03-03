@@ -36,7 +36,7 @@
   "Title": "Titolo",
   "build_table": "Building table",
   "exec_sql": "SQL in esecuzione",
-  "load_db": "Loading database from file",
+  "load_db": "Database in caricamento dal file",
   "BC": "a.C.",
   "density": "Density of the display: ",
   "wrong_version": "File has wrong or unknown format",
