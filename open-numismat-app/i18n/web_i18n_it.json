@@ -42,7 +42,7 @@
   "wrong_version": "Il file ha un formato errato o sconosciuto",
   "old_version": "Il file è di una versione troppo vecchia. Aggiornalo con la versione desktop di OpenNumismat",
   "newest_version": "Il file è di una versione più recente dell'app installata",
-  "wrong_password": "Wrong password",
+  "wrong_password": "Password errata",
   "failed_read_file": "Failed to read file",
   "reverse": "Reverse order",
   "total_count": "Conteggio totale",
