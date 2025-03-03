@@ -40,7 +40,7 @@
   "BC": "a.C.",
   "density": "Density of the display: ",
   "wrong_version": "Il file ha un formato errato o sconosciuto",
-  "old_version": "File has an old version. Please update it with desktop version of OpenNumismat",
+  "old_version": "Il file è di una versione troppo vecchia. Aggiornalo con la versione desktop di OpenNumismat",
   "newest_version": "File has a newest version than app",
   "wrong_password": "Wrong password",
   "failed_read_file": "Failed to read file",
