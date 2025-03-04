@@ -31,7 +31,8 @@
           <a class="title-link" href="/uk/open-numismat/history.html">Українська</a></p>
         <div class="title_box">
           <div class="title-social">
-<a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+<a href="https://github.com/OpenNumismat" target="blank_"><img src="/images/github.png"></a>
+            <a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
             <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
             <a href="https://twitter.com/OpenNumismat" target="blank_"><img src="/images/twitter.png"></a>
 </div>
@@ -52,28 +53,251 @@
         <ul>
 <li><a href="/">Home</a></li>
         <li><a href="../open-numismat/#download">Download</a></li>
-        <li><a href="../open-numismat/manual.html">Manual</a></li>
+        <li><a href="../open-numismat/manual.html">Manuale</a></li>
         <li><a href="../open-numismat/faq.html">FAQ</a></li>
-        <li><a href="../open-numismat/#donate">Donation</a></li>
+        <li><a href="../open-numismat/#donate">Donazioni</a></li>
         </ul>
 </div>
 <div class="inner-content">
 <h2>Cronologia dei cambiamenti OpenNumismat</h2>
 <p>
   </p>
-<h3>What's new in OpenNumismat 1.8.18 (27 January 2023)</h3>
+<h3>Novità<div class="inline">OpenNumismat 1.9.13</div> (<div class="inline">15 Gennaio 2025</div>)</h3>
+  <ul>
+<li>Risoluzione degli errori di acquisizione da Colnect</li>
+    <li>Utilizza la maschera per memorizzare le immagini mostrate in Veduta Immagine</li>
+    <li>Estesi i campi di Latitudine e Longitudine a 6 d.p.</li>
+    <li>Campo del Marchio di Zecca esteso a 15 caratteri</li>
+    <li>Correggi l'installazione di Nuitka sulla versione pyinstaller</li>
+    <li>Leggi/salva i file immagine JPEG XL quando disponibili</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.12</div> (<div class="inline">10 Ottobre 2024</div>)</h3>
+  <ul>
+<li>I file binari di Windows ora sono firmati con <a href="https://about.signpath.io/">SignPath.io</a>
+</li>
+    <li>Correggi il riempimento dell'albero.</li>
+    <li>Evita la prima riga vuota quando salvi l'elenco come Excel</li>
+    <li>Aggiungi l'anno sul campo monete all'albero</li>
+    <li>Add deb-package for Ubuntu 24.04</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.11</div> (<div class="inline">05 Agosto 2024</div>)</h3>
+  <ul>
+<li>Aggiunta importazione da CoinSnap</li>
+    <li>Improve memory managment while import coins</li>
+    <li>Fix filling URL field from Colnect</li>
+    <li>Fix importing from Numista when issuer missed</li>
+    <li>Fix importing from ANS</li>
+    <li>Fix some checkboxes</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.10</div> (<div class="inline">03 Luglio 2024</div>)</h3>
+  <ul>
+<li>Improve import from Colnect</li>
+    <li>Fix sorting year periods</li>
+    <li>Add counter into Tree and Statistics</li>
+    <li>Fix open file in Image editor</li>
+    <li>Header filter uses case insensitive search</li>
+    <li>Add field name to Statistics charts title</li>
+    <li>Fix show legend in pie chart</li>
+    <li>Fix multi edit single record from Tree</li>
+    <li>Fix filling default statuses for new collection</li>
+    <li>Fix saving some characters into Excel</li>
+    <li>Fix processing text in RichText format</li>
+    <li>Update default collections and references</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.9</div> (<div class="inline">14 Giugno 2024</div>)</h3>
+  <ul>
+<li>Import from Colnect uses new proxy</li>
+    <li>Save all for importing from Colnect and ANS</li>
+    <li>Speedup importing from Colnect, ANS, Numista</li>
+    <li>Save latest opened page in collection</li>
+    <li>Change all links from HTTP to HTTPS</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.8</div> (<div class="inline">20 Maggio 2024</div>)</h3>
+  <ul>
+<li>Refactor building Tree</li>
+    <li>Fix memory leaks</li>
+    <li>Save record image after editing via Image panel</li>
+    <li>Raise Main window before opening latest collection</li>
+    <li>Fix macOS package</li>
+    <li>Fix showing current zoom in Image editor</li>
+    <li>Image always can be zoomed out less than 100% in Image editor</li>
+    <li>Improve disabling actions in crop/rotate mode in Image editor</li>
+    <li>Fix closing crop/rotate dialog via Image editor dialog close button</li>
+    <li>Fix showing Summary when Quantity filed contain text value</li>
+    <li>Fix detecting default calendar in Year calculator</li>
+    <li>Clear import cache on uninstall</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.7</div> (<div class="inline">28 Marzo 2024</div>)</h3>
+  <ul>
+<li>Added navigation through photos and records into Image editor</li>
+    <li>Image editor can take a photo from webcam (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
+    <li>Added barcode scanner from webcam. Fill grade, grader and URL from NGC/PCGS scanned barcode</li>
+    <li>Fixed saving image after editing from Image panel</li>
+    <li>Added keyboard shortcuts for move coins (Alt + Up/Down)</li>
+    <li>Fixed default Status translations in non-English languages</li>
+    <li>Added Tools menu with link to YearCalculator and <a href="../references/">References generator</a>
+</li>
+    <li>New template 'labels'</li>
+    <li>Added opening ASG barcode link</li>
+    <li>Nuitka build available (may be faster)</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.6</div> (<div class="inline">18 Gennaio 2024</div>)</h3>
+  <ul>
+<li>Added tool for searching coins by similar photo (more info at <a href="https://github.com/OpenNumismat/SimilarImageFinder/">SimilarImageFinder</a>)</li>
+    <li>Improved sorting BC ranges in Year field</li>
+    <li>Changed Duplicate and Replacement Status icons</li>
+    <li>Color the coin frame with Status color in Card and Icon view</li>
+    <li>Fixed showing Status icon in Tree</li>
+    <li>Added settings for image transparent color replacement</li>
+    <li>Fixed resizing Customize Tree dialog</li>
+    <li>Don't suggest saving image as .gif (Qt not support saving as .gif)</li>
+    <li>Fixed importing from CoinManage on non Windows platforms</li>
+    <li>Improved storing latest image folder</li>
+    <li>Improved selecting saving image format</li>
+    <li>Fixed saving GeoChart</li>
+    <li>Many improvements in built-in <a href="https://github.com/OpenNumismat/ImageEditor/">Image Editor</a><ul>
+<li>Circle crop with antialiasing</li>
+        <li>Improved perspective transformation algorithm</li>
+        <li>Improved auto detecting borders algorithm in crop tool</li>
+        <li>Set undo depth to 10 actions</li>
+        <li>Remove alpha when saving or copying after transformation</li>
+        <li>Setting for background color</li>
+        <li>Added gray mask for cropping tool</li>
+        <li>Added cut left-, right-half actions</li>
+        <li>Improved zoom steps</li>
+        <li>Added zoom spin on toolbar</li>
+        <li>Zoom in/out by mouse dbl click</li>
+        <li>Zooming by middle mouse button press</li>
+        <li>Improved keyboard shortcuts</li>
+        <li>Mark window title when image changed</li>
+        <li>Enable drag-n-drop image to window</li>
+        <li>Use field name as image name</li>
+        <li>Protect from croping unconvex rectangle</li>
+      </ul>
+</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.5</div> (<div class="inline">26 Ottobre 2023</div>)</h3>
+  <ul>
+<li>Fixed Windows distribution</li>
+    <li>Added processing tags in multi edit dialog</li>
+    <li>Fixed creating new record from Tree context menu</li>
+    <li>Fixed showing empty tags in Details view</li>
+    <li>Fixed saving coin when Country field is disabled</li>
+    <li>Added support for fraction slash and fraction numerator one Unicode symbols in Value field</li>
+    <li>Added support for fractions 1/48, 1/20, 4 1/2 in Value field</li>
+    <li>Fixed importing from Numista</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.4</div> (<div class="inline">29 Settembre 2023</div>)</h3>
+  <ul>
+<li>Fixed automatic filling of fields from the reference when re-opening the edit dialog. Improved performance</li>
+    <li>Improved formatting Subject while import from Colnect</li>
+    <li>Import 'Type of banknotes' from Colnect</li>
+    <li>Store Colnect width/height of banknote/stamp in appropriate field</li>
+    <li>Fixed creating demo collection while installing on Windows</li>
+    <li>Fixed creating demo collection for non supported languages</li>
+    <li>Fixed re-execution of attach/detach reference action</li>
+    <li>Hide h-postfix in hour axis field while creating new record</li>
+    <li>Fixed max value for 'Images count by default' in Settings</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.3</div> (<div class="inline">15 Settembre 2023</div>)</h3>
+  <ul>
+<li>Fixed creating first tag</li>
+    <li>Fixed statuses translations in demo collection</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.2</div> (<div class="inline">14 Settembre 2023</div>)</h3>
+  <ul>
+<li>Added tags (can be disabled in Settings)</li>
+    <li>Added rating field</li>
+    <li>Fixed opening collections with password</li>
+    <li>Fixed possible error while importing from Colnect</li>
+    <li>Fixed clearing tree in customization Tree dialog</li>
+    <li>Fixed commission calculation when free numeric mode is enabled</li>
+    <li>Fixed Circulation template for non-numeric denominations</li>
+    <li>Fixed vacuum command</li>
+    <li>Fixed showing signature image in multi-edit dialog</li>
+    <li>Fixed importing from CollectionStudio where &amp; in data</li>
+    <li>Added Grader field to Tree and Statistics</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.1</div> (<div class="inline">17 Maggio 2023</div>)</h3>
+  <ul>
+<li>Fixed showing Die Axis fields</li>
+    <li>Replaced "Number of coins" to "Quantity" in Statistics charts</li>
+    <li>Changed starting demo collection name to MyCollection</li>
+    <li>Fixed translation</li>
+    <li>Improved checking for new versions</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.8.22</div> (<div class="inline">10 Maggio 2023</div>)</h3>
+  <ul>
+<li>Fixed context menu on image in edit coin dialog</li>
+    <li>Updated default references</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.9.0</div> (<div class="inline">05 Maggio 2023</div>)</h3>
+  <ul>
+<li>Port code to newest PySide6 library</li>
+    <li>Port statistics charts to QtCharts</li>
+    <li>New area chart</li>
+    <li>Import from Excel support .xlsx insted .xls</li>
+    <li>Import from Excel accept images in cell</li>
+    <li>Save list to Excel support .xlsx insted .xls</li>
+    <li>Storing images while saving list to Excel</li>
+    <li>New field: Die Axis</li>
+    <li>UI styles</li>
+    <li>Added template for title generation</li>
+    <li>Rename statuses from Settings dialog</li>
+    <li>Rename pages and field groups from Settings dialog</li>
+    <li>Use Quantity field for plotting statistics charts</li>
+    <li>Accept drag-n-drop images in edit dialog</li>
+    <li>Improved sorting statuses in some controls</li>
+    <li>Ranamed coin to record in menu and status bar</li>
+    <li>Improved storing dialog positions</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.8.21</div> (<div class="inline">05 Maggio 2023</div>)</h3>
+  <ul>
+<li>New Circulation report template</li>
+    <li>New fields: Category, Composition, Material 2, Width, Height, Technique, Modification, Weight (real), Diameter (real), buy/sale invoice links</li>
+    <li>New status Replacement</li>
+    <li>Fixed showing disabled statuses in Info panel and Edit dialog</li>
+    <li>Fixed importing large coin value in CSV from uCoin.net</li>
+    <li>Speedup saving image while generating report</li>
+    <li>Fixed All reference editor tabs on macOS</li>
+    <li>Progress chart support Date of issue field</li>
+    <li>Default status is always enabled in settings</li>
+    <li>Fixed plotting progress chart whith empty values</li>
+    <li>Add some actions from context menu to main menu</li>
+    <li>Dbl-click on empty space on card view don't open edit dialog</li>
+    <li>Disable context menu on GeoChart</li>
+    <li>Updated default references</li>
+    <li>Fixed export to JSON with missed or different file extension</li>
+    <li>Export DB version to JSON</li>
+    <li>Compatibility with 1.9</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.8.20</div> (<div class="inline">03 Marzo 2023</div>)</h3>
+  <ul>
+<li>Fixed importing from Colnect for countries with large count if series of items</li>
+    <li>Improved filters on import from Colnect dialog</li>
+    <li>Fixed processing BC years while importing from Colnect</li>
+    <li>Don't show countries without items while importing from Colnect</li>
+    <li>Fixed context menu on image page on macOS</li>
+    <li>Fixed year calculator for japans dates before 1948</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.8.19</div> (<div class="inline">27 Febbraio 2023</div>)</h3>
+  <ul>
+<li>Fix Windows x86_64 distributive</li>
+    <li>Clearing status bar when opening nonexistent collection</li>
+  </ul>
+<h3>Novità<div class="inline">OpenNumismat 1.8.18</div> (<div class="inline">27 Gennaio 2023</div>)</h3>
   <ul>
 <li>Fix Windows x86_64 distributive</li>
     <li>Added new template Artemis</li>
     <li>Fix Summary dialog on macOS</li>
   </ul>
-<h3>What's new in OpenNumismat 1.8.17 (24 January 2023)</h3>
+<h3>Novità<div class="inline">OpenNumismat 1.8.17</div> (<div class="inline">24 Gennaio 2023</div>)</h3>
   <ul>
 <li>Change Colnect proxy</li>
     <li>Improve parsing fineness for Summary dialog</li>
     <li>Show done message for clearing import cache</li>
   </ul>
-<h3>What's new in OpenNumismat 1.8.16 (11 August 2022)</h3>
+<h3>Novità<div class="inline">OpenNumismat 1.8.16</div> (<div class="inline">11 Agosto 2022</div>)</h3>
   <ul>
 <li>All references editor has vertical tab bar</li>
     <li>Fix Summary dialog on macOS</li>
@@ -82,7 +306,7 @@
     <li>Show done message when backup completed</li>
     <li>Show done message for saving report as pdf</li>
     <li>Fix print report to pdf when printer not detected</li>
-    <li>Fix importing from Numista</li>
+    <li>Risolti problemi nell'importazione da Numista</li>
   </ul>
 <h3>What's new in OpenNumismat 1.8.15 (11 May 2022)</h3>
   <ul>
@@ -123,8 +347,8 @@
     <li>Undo/redo works for pasted image in image editor</li>
     <li>Autocrop tool for removing borders in image editor</li>
     <li>Import coin thickness and fineness from Colnect</li>
-    <li>Import philatelic products from Colnect</li>
-    <li>Import stamp color from Colnect</li>
+    <li>Importazione di prodotti filatelici da Colnect</li>
+    <li>Importazione del colore dei francobolli da Colnect</li>
     <li>New templates: holders, Commemoratives_ByCountry, Commemoratives_ByYear</li>
     <li>Buttons Today and Clean on calendar widget</li>
     <li>Summary dialog show silver and gold coins count and metal weight</li>
@@ -347,8 +571,8 @@
   <ul>
 <li>Importazione da Excel</li>
     <li>Importazione da uCoin.net in formato Microsoft Excel (XLS)</li>
-    <li>Migliorata la navigazione dell'albero per il campo Valore vuoto</li>
-    <li>Migliorata lo stato della memorizzazione nella finestra principale</li>
+    <li>Migliorata la navigazione nella direcory per il campo Valore vuoto</li>
+    <li>Migliorata lo stato nella finestra principale di memorizzazione</li>
   </ul>
 <h3>Cosa c'è di nuovo in OpenNumismat 1.6.6 (09 gennaio 2018)</h3>
   <ul>
@@ -571,15 +795,9 @@ reformal_wdg_glcolor="#105895";
 reformal_wdg_tbcolor="#FFFFFF";
 reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
 </script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
-<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+<a href="http://opennumismat.idea.informer.com">Feedback su OpenNumismat </a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
 </noscript>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-56163289-1', 'auto');ga('send', 'pageview');
-</script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
 </body>
 </html>
