@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="OpenNumismat">
+<title>References generator - OpenNumismat - free collecting software</title>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/references.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/javascripts/jquery-3.7.1.min.js"><\/script>')</script><script src="/javascripts/sql-wasm.js"></script>
+</head>
+<body>
+
+<div id="github-page">
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+    <header class="inner"><p align="right" class="title-language"><a class="title-link" href="/bg/references/">Български</a> |
+        <a class="title-link" href="/ca/references/">Català</a> |
+        <a class="title-link" href="/de/references/">Deutsch</a> |
+        <a class="title-link" href="/references/">English</a> |
+        <a class="title-link" href="/el/references/">Ελληνικά</a> |
+        <a class="title-link" href="/es/references/">Español</a> |
+        <a class="title-link" href="/fr/references/">Français</a> |
+        <a class="title-link" href="/it/references/">Italiano</a> |
+        <a class="title-link" href="/nl/references/">Nederlands</a> |
+        <a class="title-link" href="/pl/references/">Polski</a> |
+        <a class="title-link" href="/pt/references/">Português</a> |
+        <a class="title-link" href="/ru/references/">Русский</a> |
+        <a class="title-link" href="/sv/references/">Svenska</a> |
+        <a class="title-link" href="/tr/references/">Türkçe</a> |
+        <a class="title-link" href="/uk/references/">Українська</a></p>
+      <div class="title_box">
+          <div class="title-social">
+<a href="https://github.com/OpenNumismat" target="blank_"><img src="/images/github.png"></a>
+            <a href="https://www.facebook.com/opennumismat" target="blank_"><img src="/images/facebook.png"></a>
+            <a href="https://vk.com/opennumismat" target="blank_"><img src="/images/vkontakte.png"></a>
+</div>
+        <div class="title-logo">
+<a class="title-link" href="/"><div id="logo"></div>
+          </a>
+        </div>
+        <div class="title-text">
+<a class="title-link" href="/"><h1 id="project_title">OpenNumismat</h1></a>
+          <a class="title-link" href="/"><h3 id="project_tagline">is a collection of free, open-source coin
+            collecting software</h3></a>
+        </div>
+      </div>
+    </header>
+</div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner"><div class="toc">
+        <ul>
+<li><a href="/">Home</a></li>
+          <li><a href="../open-numismat/#download">Download</a></li>
+          <li><a href="../open-numismat/manual.html">Manual</a></li>
+          <li><a href="../open-numismat/faq.html">FAQ</a></li>
+          <li><a href="../open-numismat/#donate">Donation</a></li>
+        </ul>
+</div>
+      <div class="inner-content">
+
+        <noscript>This page requires JavaScript! Please enable it in your browser.</noscript>
+
+        <h2>References generator</h2>
+        <p><label>Language:
+            <select id="language"><option value="bg">Български</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="de">Deutsch</option>
+<option value="en" selected>English</option>
+<option value="el">Ελληνικά</option>
+<option value="es">Español</option>
+<option value="et">Eesti</option>
+<option value="fa">فارسی</option>
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="lv">Latviešu</option>
+<option value="hu">Magyar</option>
+<option value="nl">Nederlands</option>
+<option value="pl">Polski</option>
+<option value="pt">Português</option>
+<option value="ru">Русский</option>
+<!--option value="sk">Slovenčina</option--><option value="sl">Slovenščina</option>
+<option value="sv">Svenska</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Український</option></select></label>
+          <label><input type="checkbox" id="replace-nonlatin">Replace non-Latin chars</label>
+        </p>
+        <p><label>Regions:
+            <select id="region-source"><option value="regions_UN">Regions (UN)</option>
+<option value="subregions_UN">Subregions (UN)</option>
+<option value="regions_WorldBank">Regions (World Bank)</option>
+<option value="regions_World_Factbook">Regions (World Factbook)</option>
+<option value="Regions (OBJECTIVE LISTS)">Regions (OBJECTIVE LISTS)</option>
+<option value="Subregions (OBJECTIVE LISTS)">Subregions (OBJECTIVE LISTS)</option>
+<option value="Macroregions (OBJECTIVE LISTS)">Macro-regions (OBJECTIVE LISTS)</option>
+<option value="countries">None</option></select></label>
+        </p>
+        <p><label>Flag set:
+            <select id="flag-source"><option value="famfamfam">famfamfam</option>
+<option value="Flagpedia">Flagpedia</option>
+<option value="GoSquared">GoSquared</option>
+<option value="StefanGabos">StefanGabos</option>
+<option value="Wikipedia">Wikipedia</option>
+<option value="None">None</option></select></label>
+        </p>
+
+        <label>Historical era:</label>
+        <ul>
+<li><label><input type="checkbox" id="era-present" disabled checked>Present</label></li>
+          <li><label><input type="checkbox" id="era-contemporary">Contemporary</label></li>
+          <li><label><input type="checkbox" id="era-modern" disabled>Modern</label></li>
+          <li><label><input type="checkbox" id="era-middle" disabled>Middle Ages</label></li>
+          <li><label><input type="checkbox" id="era-ancient" disabled>Ancient</label></li>
+        </ul>
+<p><label><input type="checkbox" id="include-dependent" checked>Include dependent countries</label></p>
+        <p><label><input type="checkbox" id="include-unrecognized" checked>Include unrecognized
+          countries</label></p>
+        <!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-coins" checked disabledtx_gtsymbolInclude countries without
+          own coinstx_ltsymbol/labeltx_gtsymbol</p-->
+        <!--p>tx_ltsymbollabeltx_gtsymboltx_ltsymbolinput type="checkbox" id="include-without-circulation" checked disabledtx_gtsymbolInclude countries without circulation coinstx_ltsymbol/labeltx_gtsymbol</p-->
+
+        <p><label>Mint names:
+            <select id="mint-names"><option value="name">English names</option>
+<option value="local_name">Local names</option>
+<option value="location">Location</option>
+<option value="none">None</option></select></label>
+        </p>
+
+        <fieldset>
+<legend>Countries</legend>
+          <div id="countries-references">
+            <div class="ctrl-button-box">
+<button class="expand-button">Expand all</button>
+              <button class="collapse-button">Collapse all</button>
+              <button class="select-button">Select all</button>
+              <button class="clear-button">Clear all</button>
+</div>
+          </div>
+        </fieldset>
+<fieldset>
+<legend>Other</legend>
+          <div id="other-references">
+            <div class="ctrl-button-box">
+<button class="expand-button">Expand all</button>
+              <button class="collapse-button">Collapse all</button>
+              <button class="select-button">Select all</button>
+              <button class="clear-button">Clear all</button>
+</div>
+          </div>
+        </fieldset>
+<button id="savedb" class="button">Download reference</button>
+
+      </div>
+    </section>
+</div>
+</div>
+
+<script src="/javascripts/references.js"></script><script type="text/javascript">
+  reformal_wdg_domain = "OpenNumismat";
+  reformal_wdg_mode = 0;
+  reformal_wdg_title = "OpenNumismat";
+  reformal_wdg_ltitle = "Leave feedback";
+  reformal_wdg_lfont = "";
+  reformal_wdg_lsize = "";
+  reformal_wdg_color = "#FFA000";
+  reformal_wdg_bcolor = "#516683";
+  reformal_wdg_tcolor = "#FFFFFF";
+  reformal_wdg_align = "left";
+  reformal_wdg_waction = 0;
+  reformal_wdg_vcolor = "#9FCE54";
+  reformal_wdg_cmline = "#E0E0E0";
+  reformal_wdg_glcolor = "#105895";
+  reformal_wdg_tbcolor = "#FFFFFF";
+  reformal_wdg_bimage = "8489db229aa0a66ab6b80ebbe0bb26cd.png";
+</script><script type="text/javascript" language="JavaScript" src="http://idea.informer.com/tab6.js?domain=OpenNumismat"></script><noscript>
+<a href="http://opennumismat.idea.informer.com">OpenNumismat feedback</a><a href="http://idea.informer.com"><img src="http://widget.idea.informer.com/tmpl/images/widget_logo.jpg"></a>
+</noscript>
+
+<script async src="https://analytics.umami.is/script.js" data-website-id="99138ee4-60a5-4764-8c43-e5318ebea945"></script>
+</body>
+</html>
