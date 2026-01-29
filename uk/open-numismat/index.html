@@ -149,33 +149,33 @@
 <h2 id="download">Завантаження</h2>
 <h3>Newest version with freshly third-party library dependencies</h3>
 <p></p>
-<div class="inline">Остання версія:</div> <div class="inline"><strong>OpenNumismat 1.10.3</strong></div>. Дата виходу: <div class="inline">24 October 2025</div>
+<div class="inline">Остання версія:</div> <div class="inline"><strong>OpenNumismat 1.10.4</strong></div>. Дата виходу: <div class="inline">23 January 2026</div>
 <p>
 </p>
 <h4>Windows 10 and later</h4>
 <p></p>
-<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3-nuitka.exe">OpenNumismat</a></strong></div> Nuitka installer (optimized version)
+<div class="inline"><strong><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4-nuitka.exe">OpenNumismat</a></strong></div> Nuitka installer (optimized version)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3-nuitka.zip">OpenNumismat</a></div> Nuitka portable (optimized version)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4-nuitka.zip">OpenNumismat</a></div> Nuitka portable (optimized version)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3.exe">OpenNumismat</a></div> installer
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4.exe">OpenNumismat</a></div> installer
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3.zip">OpenNumismat</a></div> portable
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4.zip">OpenNumismat</a></div> portable
 <p>Free code signing provided by <a href="https://about.signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a></p>
 <p>
 </p>
-<h4>macOS 13 and later</h4>
+<h4>macOS 15 and later</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3-macos13.dmg">OpenNumismat</a></div>
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4-macos15.dmg">OpenNumismat</a></div>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/OpenNumismat-1.10.3-macos14-arm64.dmg">OpenNumismat</a></div> - for macOS ARM64
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.4/OpenNumismat-1.10.4-macos15-arm64.dmg">OpenNumismat</a></div> - for macOS ARM64
 <p>
 </p>
 <h4>Linux</h4>
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/open-numismat_1.10.3_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.5/open-numismat_1.10.4_all_24.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.12)
 <p></p>
-<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.3/open-numismat_1.10.3_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
+<div class="inline"><a href="https://github.com/OpenNumismat/open-numismat/releases/download/1.10.5/open-numismat_1.10.4_all.deb">OpenNumismat</a></div> - for Debian/Ubuntu (Python 3.10)
 <p></p>
 <div class="inline"><a href="https://flathub.org/apps/io.github.opennumismat.open-numismat">OpenNumismat</a></div> - Flatpak package
 <p></p>
@@ -212,7 +212,23 @@
 <p><a href="https://github.com/OpenNumismat/open-numismat/releases">Latest Development Build and Older Releases...</a></p>
 <p><a href="https://github.com/OpenNumismat/open-numismat/">Source code</a></p>
 <h2>Історія змін</h2>
-  <h3>Що нового в<div class="inline">OpenNumismat 1.10.3</div> (<div class="inline">24 October 2025</div>)</h3>
+  <h3>Що нового в<div class="inline">OpenNumismat 1.10.4</div> (<div class="inline">23 January 2026</div>)</h3>
+  <ul>
+<li>Add settings for image quality</li>
+    <li>Changing image quality or image side length allows to recalculate all images in collection</li>
+    <li>Fix copying image with transparency into Windows 11 clipboard</li>
+    <li>Fix adjust column width for image fields</li>
+    <li>Fix creating photos and tags in new collection</li>
+    <li>Fix clearing cache after importing from Colnect</li>
+    <li>Fix import from CoinSnap</li>
+    <li>Improve checking Colnect connection while importing existent collection</li>
+    <li>Add hotkey B for remove background in ImageEditor</li>
+    <li>On Windows default style is windowsvista</li>
+    <li>Disable importing existent collection from Colnect in Snap package</li>
+    <li>Build macOS on 15</li>
+    <li>Remove exporting to mobile</li>
+  </ul>
+<h3>Що нового в<div class="inline">OpenNumismat 1.10.3</div> (<div class="inline">24 October 2025</div>)</h3>
   <ul>
 <li>Виправлено імпорт із Colnect</li>
     <li>Support trillions in Value field</li>
@@ -224,32 +240,6 @@
     <li>Fix removing background with AI</li>
     <li>Fix saving GeoChart statistics as PNG</li>
     <li>Fix processing fineness while importing from Colnect</li>
-  </ul>
-<h3>Що нового в<div class="inline">OpenNumismat 1.10.1</div> (<div class="inline">03 June 2025</div>)</h3>
-  <ul>
-<li>Remove background with AI in ImageEditor</li>
-    <li>Fix saving image format while importing</li>
-    <li>Fix export WebP images to Excel</li>
-    <li>Fix export WebP images to JSON</li>
-    <li>Process WebP format when external image viewer is used</li>
-    <li>Fix perspective transformation crash when equal rects</li>
-    <li>Виправлено імпорт із Colnect</li>
-    <li>Fix opening coin editor dialog when adding coins from ANS or Colnect</li>
-    <li>Numista import supports de, it, nl, pt, ru languages</li>
-    <li>Warn when import from Numista reach requests limit</li>
-    <li>Fix importing from ANS when xml:id starts from digit instead letter</li>
-  </ul>
-<h3>Що нового в<div class="inline">OpenNumismat 1.10.0</div> (<div class="inline">15 April 2025</div>)</h3>
-  <ul>
-<li>Store images in WebP format with support transparent color</li>
-    <li>Add icon to tags</li>
-    <li>Reference items can be sorted manually by drag'n'drop or context menu</li>
-    <li>Apply reference items position for sorting in Tree</li>
-    <li>Fix edit fields color and material</li>
-    <li>Add settings for color scheme</li>
-    <li>Improve processing Colnect proxy errors</li>
-    <li>Add package for macOS ARM64</li>
-    <li>Upgrade Flatpak package</li>
   </ul>
 <a href="history.html">Older...</a><br><a href="https://github.com/OpenNumismat/open-numismat/issues/147">Project development plans</a>
 <h2>Чим я можу допомогти?</h2>
