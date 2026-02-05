@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="theme-color" content="#373737">
 <meta name="description" content="OpenNumismat">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -112,8 +113,8 @@
 <li>Період - період в історії країни або період карбування монети;</li>
 <li>Емітент;</li>
 <li>Правитель;</li>
-<li>Одиниця вимірювання</li>
-<li>Назва грошової одиниці</li>
+<li>Value <a href="#footnote-denomination"><sup>*</sup></a>;</li>
+<li>Unit <a href="#footnote-denomination"><sup>*</sup></a>;</li>
 <li>Рік - рік по григоріанському календарю </li>
 <li>Рік на монеті</li>
 <li>Монетний двір</li>
@@ -249,10 +250,15 @@
 <p>Для деяких полів значення можна отримати з довідника (див. 7):</p>
 <p><img src="/images/manual/ref_list.png"></p>
 <p>У діалоговому вікні «Параметри» ви можете видалити поля що не використовуються (див. 8).</p>
+<p id="footnote-denomination"><sup>*</sup> You can delete the Value field and rename the Unit field to Denomination in the Settings dialog. Then you can add denomination icons through the reference:</p>
+<p><img src="/images/manual/denomination.png"></p>
+
 <p>Some fields (such as Value, Year, Quantity, Price, Fineness, Weight, Diameter, Mintage) are for entering only numeric values. To enter values in the expanded format ("BC" in the Year field, fractions in the Nominal field, range in the Weight field, etc.) in these fields, you must enable the <samp>Free format numeric fields</samp> in the Settings dialog.</p>
 <p>Текстові поля (наприклад, Тема, Особливості, Опис, Примітка) підтримують посилання:</p>
 <p><img src="/images/manual/links.png"></p>
 For paste link to a local file you can drag'n'drop or copy-paste file into text field in Edit dialog.
+
+
 
 <h4>3.1.1 Editing Images</h4>
 <p>The application supports up to 11 images of each coin.</p>
