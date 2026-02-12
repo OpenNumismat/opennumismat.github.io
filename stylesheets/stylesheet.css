@@ -545,3 +545,7 @@ samp {
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
+
+summary {
+    cursor: pointer;
+}
