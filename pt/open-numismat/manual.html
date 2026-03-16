@@ -445,6 +445,7 @@ Definições específicas da colecção (armazenadas para cada colecção):
 <li>Um único clique para alternar entre o modo de melhor ajuste e o modo de tamanho real</li>
 <li>Modo de ecrã completo</li>
 <li>Ampliação com a roda do rato</li>
+<li>Navigating through images in a record and through the records themselves</li>
 </ul>
 <h4>Atalhos de teclado</h4>
 <p><kbd>Ctrl</kbd> + <kbd>O</kbd> — Abrir ficheiro<br><kbd>Ctrl</kbd> + <kbd>S</kbd> — Gravar<br><kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>Insert</kbd> — Copiar<br><kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Shift</kbd> + <kbd>Insert</kbd> — Colar<br><kbd>Ctrl</kbd> + <kbd>Z</kbd> — Desfazer<br><kbd>Ctrl</kbd> + <kbd>Y</kbd> — Refazer<br><kbd>Alt</kbd> + <kbd>←</kbd> — Rodar à esquerda<br><kbd>Alt</kbd> + <kbd>→</kbd> — Rodar à direita<br><kbd>C</kbd> — Abrir ferramenta de recorte<br><kbd>R</kbd> — Abrir ferramenta de rotação<br><kbd>B</kbd> — Remover fundo com IA<br><kbd>Ctrl</kbd> + <kbd>←</kbd> — Imagem anterior<br><kbd>Ctrl</kbd> + <kbd>→</kbd> — Imagem seguinte<br><kbd>Ctrl</kbd> + <kbd>↑</kbd> — Registo anterior<br><kbd>Ctrl</kbd> + <kbd>↓</kbd> — Registo seguinte<br><kbd>+</kbd> — Ampliar<br><kbd>-</kbd> — Reduzir<br><kbd>0</kbd> — Ajustar à janela<br><kbd>1</kbd>, <kbd>A</kbd> — Escala 100%<br><kbd>2</kbd> — Escala 200%<br><kbd>3</kbd> — Escala 300%<br><kbd>4</kbd> — Escala 400%<br><kbd>5</kbd> — Escala 500%<br><kbd>6</kbd> — Escala 600%<br><kbd>F11</kbd> — Ecrã completo
@@ -456,6 +457,57 @@ Botão esquerdo, duplo clique — Ampliar<br>
 Botão do meio, premir — Ampliar<br>
 Botão direito, duplo clique — Reduzir</p>
 
+<h4>Definições</h4>
+<p>Image Editor settings are available under <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<p><img src="/images/imageEditSettings.png"></p>
+
+<p>Available background remover AI model:</p>
+<table class="data-table">
+<thead><tr>
+<th>Nome</th>
+<th>Descrição</th>
+<th>Feature</th>
+<th>Estimated time, s</th>
+<th>Model size, Mb</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>u2net</td>
+<td>pre-trained model for general use cases</td>
+<td>optimal</td>
+<td>4.1</td>
+<td>171</td>
+</tr>
+<tr>
+<td>silueta</td>
+<td>same as u2net but the size is reduced to 43Mb</td>
+<td>fastest</td>
+<td>1.4</td>
+<td>43</td>
+</tr>
+<tr>
+<td>isnet-general-use</td>
+<td>new pre-trained model for general use cases</td>
+<td></td>
+<td>3.3</td>
+<td>174</td>
+</tr>
+<tr>
+<td>birefnet-general</td>
+<td>pre-trained model for general use cases</td>
+<td>best quality</td>
+<td>66.8</td>
+<td>949</td>
+</tr>
+<tr>
+<td>birefnet-general-lite</td>
+<td>light pre-trained model for general use cases</td>
+<td>high quality</td>
+<td>21.5</td>
+<td>218</td>
+</tr>
+</tbody>
+</table>
 </div>
       </section>
 </div>
