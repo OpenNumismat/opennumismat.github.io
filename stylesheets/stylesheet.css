@@ -549,3 +549,13 @@ samp {
 summary {
     cursor: pointer;
 }
+
+.data-table {
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+
+.data-table th, .data-table td {
+    border: 1px solid black;
+    padding: 2px;
+}
