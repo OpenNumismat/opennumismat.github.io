@@ -445,6 +445,7 @@
 <li>С едно кликване превключвате между режим за най-добро побиране и режим за действителен размер на изображението</li>
 <li>Режим на цял екран</li>
 <li>Увеличаване с колелцето на мишката</li>
+<li>Navigating through images in a record and through the records themselves</li>
 </ul>
 <h4>Клавишни комбинации</h4>
 <p><kbd>Ctrl</kbd> + <kbd>O</kbd> — Open file<br><kbd>Ctrl</kbd> + <kbd>S</kbd> — Save<br><kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>Insert</kbd> — Copy<br><kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Shift</kbd> + <kbd>Insert</kbd> — Paste<br><kbd>Ctrl</kbd> + <kbd>Z</kbd> — Undo<br><kbd>Ctrl</kbd> + <kbd>Y</kbd> — Redo<br><kbd>Alt</kbd> + <kbd>←</kbd> — Rotate to left<br><kbd>Alt</kbd> + <kbd>→</kbd> — Rotate to right<br><kbd>C</kbd> — Open crop tool<br><kbd>R</kbd> — Open rotate tool<br><kbd>B</kbd> — Remove backgroud with AI<br><kbd>Ctrl</kbd> + <kbd>←</kbd> — Previous image<br><kbd>Ctrl</kbd> + <kbd>→</kbd> — Next image<br><kbd>Ctrl</kbd> + <kbd>↑</kbd> — Previous record<br><kbd>Ctrl</kbd> + <kbd>↓</kbd> — Next record<br><kbd>+</kbd> — Zoom in<br><kbd>-</kbd> — Zoom out<br><kbd>0</kbd> — Fit to window<br><kbd>1</kbd>, <kbd>A</kbd> — Scale 100%<br><kbd>2</kbd> — Scale 200%<br><kbd>3</kbd> — Scale 300%<br><kbd>4</kbd> — Scale 400%<br><kbd>5</kbd> — Scale 500%<br><kbd>6</kbd> — Scale 600%<br><kbd>F11</kbd> — Full screen<br><kbd>Esc</kbd> — Quit</p>
@@ -455,6 +456,57 @@
 Натискане на средния бутон на мишката - увеличаване на мащаба<br>
 Двойно щракване с десния бутон на мишката - намаляване на мащаба</p>
 
+<h4>Настройки</h4>
+<p>Image Editor settings are available under <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<p><img src="/images/imageEditSettings.png"></p>
+
+<p>Available background remover AI model:</p>
+<table class="data-table">
+<thead><tr>
+<th>Наименование</th>
+<th>Описание</th>
+<th>Feature</th>
+<th>Estimated time, s</th>
+<th>Model size, Mb</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>u2net</td>
+<td>pre-trained model for general use cases</td>
+<td>optimal</td>
+<td>4.1</td>
+<td>171</td>
+</tr>
+<tr>
+<td>silueta</td>
+<td>same as u2net but the size is reduced to 43Mb</td>
+<td>fastest</td>
+<td>1.4</td>
+<td>43</td>
+</tr>
+<tr>
+<td>isnet-general-use</td>
+<td>new pre-trained model for general use cases</td>
+<td></td>
+<td>3.3</td>
+<td>174</td>
+</tr>
+<tr>
+<td>birefnet-general</td>
+<td>pre-trained model for general use cases</td>
+<td>best quality</td>
+<td>66.8</td>
+<td>949</td>
+</tr>
+<tr>
+<td>birefnet-general-lite</td>
+<td>light pre-trained model for general use cases</td>
+<td>high quality</td>
+<td>21.5</td>
+<td>218</td>
+</tr>
+</tbody>
+</table>
 </div>
       </section>
 </div>
