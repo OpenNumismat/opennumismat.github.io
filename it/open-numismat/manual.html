@@ -62,7 +62,7 @@
 <h1>Manuale utente</h1>
 <a href="#sec1">1 Introduzione</a><br><a href="#sec2">2 Vista generale</a><br><a href="#sec3">3 Inserimento monete</a><br><a href="#sec4">4 Visualizza monete</a><br><a href="#sec5">5 Gestione di un file di collezione</a><br><a href="#sec6">6 Rapporti</a><br><a href="#sec7">7 Riferimenti</a><br><a href="#sec8">8 Impostazioni</a><br><a href="#sec9">9 Editor di immagini</a><br><h2 id="sec1">1 Introduzione</h2>
 <h3>1.1 Descrizione</h3>
-<p>OpenNumismat è un'applicazione pratica e affidabile progettata per collezionatori di monete e collezionisti di monete, per creare una collezione numismatica.</p>
+<p>OpenNumismat is a handy and reliable application designed for numismatists and coin collectors, to create a numismatic collection.</p>
 <p>Con OpenNumismat sarai in grado di creare, organizzare e gestire i tuoi cataloghi di monete con descrizioni dettagliate e foto per ogni oggetto.</p>
 <p>OpenNumismat è distribuito completamente gratis. Il codice sorgente è concesso in licenza con GPL-3.0 e disponibile su <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.</p>
 <p>Il sito ufficiale è <a href="https://opennumismat.github.io" target="blank_">https://opennumismat.github.io</a>.</p>
@@ -145,14 +145,14 @@
 <li>Commissione - costi aggiuntivi associati all'acquisto di una moneta (commissione d'asta e/o costo di spedizione). È consentito inserire l'importo della commissione, così come la percentuale del prezzo (ad esempio, 10%). Il campo è disponibile solo nella finestra di modifica della moneta;</li>
 <li>Venditore;</li>
 <li>Luogo;</li>
-<li>Ricevuta - link alla ricevuta sul disco o online;</li>
+<li>Invoice - link to the purchase invoice document on disk or URL;</li>
 <li>Informazioni.</li>
 </ul>
 </li>
 <li>Compravendita - Vendita;<ul>
 <li>Data;</li>
 <li>Prezzo;</li>
-<li>Anticipo - l'importo totale ricevuto tenendo conto della commissione;</li>
+<li>Bailed - the total received amount after commission;</li>
 <li>Commissione - costi aggiuntivi associati all'acquisto di una moneta (commissione d'asta e/o costo di spedizione). È consentito inserire l'importo della commissione, così come la percentuale del prezzo (ad esempio, 10%). Il campo è disponibile solo nella finestra di modifica della moneta;</li>
 <li>Compratore;</li>
 <li>Luogo;</li>
@@ -216,7 +216,7 @@
 </ul>
 </li>
 <li>Classificazione:<ul>
-<li>1#, 2#, 3#, 4# - numeri di versione di una moneta secondo altri cataloghi;</li>
+<li>1#, 2#, 3#, 4# - catalog numbers for a coin;</li>
 <li>Rarità;</li>
 <li>Molto bella - il prezzo approssimativo di una moneta nello stato F-12, F-15;</li>
 <li>Bellissima - il prezzo approssimativo di una moneta nello stato di VF-20, VF-25, VF-30, VF-35;</li>
@@ -237,9 +237,9 @@
 </ul>
 </li>
 </ul>
-<p>Per alcuni campi, i valori possono essere ottenuti dai riferimenti (vedere punto 7):</p>
+<p>For some fields, values can be obtained from the reference (see <a href="#sec7">7</a>):</p>
 <p><img src="/images/manual/ref_list.png"></p>
-<p>Nelle Impostazioni, puoi rimuovere alcuni dei campi non utilizzati (vedere punto 8).</p>
+<p>In the Settings dialog, you can remove some of the unused fields (see <a href="#sec8">8</a>).</p>
 <p id="footnote-denomination"><sup>*</sup> È possibile eliminare il campo Valore e rinominare il campo Unità in Denominazione nella finestra Impostazioni. Successivamente, è possibile aggiungere le icone di denominazione tramite il riferimento:</p>
 <p><img src="/images/manual/denomination.png"></p>
 
@@ -264,7 +264,7 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <li>Copia - copia l'immagine negli appunti per poi incollarla nell'editor di immagini;</li>
 <li>Elimina - elimina l'immagine corrente.</li>
 </ul>
-<p>Fare doppio clic sul campo immagine apre la finestra di selezione del file se l'immagine non è ancora installata, oppure apre l'immagine nell'Editor di Immagini (vedi 9) o nel visualizzatore di immagini predefinito del tuo sistema operativo.</p>
+<p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS.</p>
 <p>L'immagine della moneta nella tabella delle monete viene generata automaticamente dalle immagini del dritto e del rovescio.</p>
 <h3>3.2 Modifica di una moneta.</h3>
 <p>Per modificare i dati della moneta, è necessario fare doppio clic sulla moneta desiderata, oppure fare clic destro sulla moneta e selezionare <samp>Edit...</samp>, seleziona la moneta e premi il tasto Invio oppure seleziona <samp>Record</samp> &rarr; <samp>Edit...</samp> menu. Dopo di ciò, si aprirà la finestra di modifica, descritta al paragrafo 3.1.</p>
@@ -288,7 +288,8 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <p>Nella finestra che si apre, è necessario contrassegnare i campi di interesse. Trascinando i nomi dei campi con un mouse è possibile modificare la posizione dei campi l'uno rispetto all'altro. Puoi anche trascinare le intestazioni di campo direttamente nella tabella delle monete. Cliccando sull'intestazione del campo si ordina la tabella in base al campo selezionato.</p>
 <p>Puoi regolare la larghezza di una colonna in una tabella trascinando il bordo dell’intestazione con il mouse oppure facendo clic destro sull’intestazione e selezionando <samp>Adjust size</samp>.</p>
 <h3>4.2 Pannello immagini</h3>
-<p>Questo pannello mostra le immagini collegate alla moneta. In fondo al pannello ci sono caselle di controllo che permettono di controllare il numero di immagini visualizzate contemporaneamente. <br>Fare doppio clic apre l'immagine nell'Editor di Immagini (vedi 9) o nel visualizzatore di immagini predefinito del tuo sistema operativo. Quando passi il mouse sopra un'immagine, viene visualizzato il nome univoco dell'immagine, se è stato specificato durante la modifica della moneta.</p>
+<p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
+<br>Double-clicking opens the imagen in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.</p>
 <h3>4.3 Filtro</h3>
 <p>Usando il menu nelle intestazioni delle colonne della tabella, puoi filtrare le monete in base al valore dei campi.</p>
 <p><img src="/images/manual/filter.png"></p>
@@ -299,7 +300,7 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <p>La directory sul lato sinistro della finestra dell'applicazione consente di raggruppare monete per valori di campo. Quando si seleziona un elemento della directory, le monete corrispondenti al valore di campo selezionato vengono visualizzate nella tabella.</p>
 <p>Per personalizzare la Struttura, fai clic destro sull’elemento della Struttura e seleziona <samp>Customize tree...</samp>:</p>
 <p><img src="/images/manual/tree.png"></p>
-<p>Nella finestra di dialogo aperta puoi modificare la struttura della Struttura trascinando gli elementi con il mouse. Gli elementi trascinati da destra verso sinistra vengono aggiunti alla fine della Struttura. Trascinandoli da sinistra verso destra, gli elementi vengono rimossi dalla Struttura. Per unire due campi (ad esempio, <i>Value+Unit</i>), tieni premuto il tasto <kbd>Ctrl<kbd> durante il trascinamento.</kbd></kbd></p>
+<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the <kbd>Ctrl</kbd> key while dragging.</p>
 <h3>4.5 Liste</h3>
 <p>Le liste consentono di avere contemporaneamente più collezioni indipendenti l'una dalle altre. Ogni lista memorizza le proprie impostazioni per campi, colonne, filtri e directory. Questo consente alle liste di essere utilizzate come filtri permanenti.</p>
 <p>Aggiungi una nuova lista facendo clic sul menu <samp>List</samp> &rarr; <samp>New...</samp> oppure facendo doppio clic sul pannello delle liste (sullo spazio vuoto accanto alle intestazioni delle liste esistenti) e inserendo il nome della nuova lista. È anche possibile creare una copia di una lista esistente facendo clic destro sulla lista di origine e selezionando <samp>Clone</samp>.</p>
@@ -310,14 +311,14 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <p><img src="/images/manual/status.png"></p>
 
 <h2 id="sec5">5 Gestione del file di collezione</h2>
-<p>Il file della collezione è un normale file con estensione .db e memorizza tutti i dati relativi alla collezione, incluse le immagini dai vari riferimenti (vedere punto 7). È possibile copiare, spostare, cancellare e rinominare il file tramite il proprio sistema operativo.</p>
+<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see <a href="#sec7">7</a>). You can copy, move, delete and rename it by means of your OS.</p>
 <h3>5.1 Creazione/Apertura</h3>
 <p>Per creare una nuova collezione, seleziona il menu <samp>File</samp> &rarr; <samp>New...</samp>. Nella finestra di dialogo che si apre, seleziona la posizione e il nome del file della nuova collezione.</p>
 <p>Per aprire un file di collezione esistente, seleziona il menu <samp>File &rarr; Open...</samp> e scegli il file desiderato. È anche possibile associare i file di collezione (ad esempio selezionando l’opzione appropriata durante l’installazione dell’applicazione) e aprirli automaticamente dal file manager.
 <br>Il menu File mostra fino a 5 collezioni aperte di recente, disponibili per un’apertura rapida.</p>
 <h3>5.2 Backup</h3>
 <p>Per evitare la perdita dei dati della collezione a causa di errori hardware, software, umani o dell’azione di programmi dannosi, è consigliato eseguire un backup. Per creare una copia di backup della collezione, seleziona il menu <samp>File</samp> &rarr; <samp>Backup</samp>. Questo creerà una copia della collezione corrente con aggiunta la data e l’ora (ad esempio, demo_171025115112.db per la copia effettuata alle 11:51:12 del 25/10/2017) nella directory specificata nelle impostazioni. Per ripristinare i dati, è sufficiente rinominare il file di backup eliminando il timestamp. È anche possibile copiare il file della collezione utilizzando il sistema operativo.</p>
-<p>Nota: È consigliato conservare i backup su un supporto fisico diverso da quello di lavoro. Scegliere un servizio di archiviazione cloud, come Dropbox, può essere una buona opzione. È anche importante fare copie di backup regolarmente, prima o dopo aver effettuato un gran numero di modifiche (vedi 8.4).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
 <h3>5.3 Compressione - Eliminazione spazio vuoto</h3>
 <p>A causa delle peculiarità di SQLite, che gestisce l’archiviazione dei dati della collezione, la memoria non viene rilasciata automaticamente quando i dati vengono eliminati dal file della collezione. Col tempo, ciò può comportare un aumento delle dimensioni del file della collezione, la sua frammentazione e un rallentamento dell’applicazione. Se necessario, è possibile ridurre le dimensioni del file della collezione liberando lo spazio “vuoto” non utilizzato selezionando il menu <samp>File</samp> &rarr; <samp>Vacuum</samp> .</p>
 <h3>5.4 Password</h3>
@@ -332,7 +333,8 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <li>Le voci con lo stesso valore di ID e campo creato verranno aggiornate quando il valore del campo aggiornato è inferiore nella raccolta aperta.</li>
 </ul>
 <h3>5.6 Importazione</h3>
-<p>OpenNumismat consente di importare dati da collezioni create in un altro software (MS Excel, CoinManage, Collection Studio e Tellico)o da siti (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> e uCoin.net).</p>
+<p>OpenNumismat allows you to import data from collections created in another software (MS Excel, CoinManage, Collection Studio and Tellico)
+or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> and uCoin.net).</p>
 <p>Per importare da MS Excel, seleziona <samp>File</samp> &rarr; <samp>Import</samp> &rarr; <samp>Excel</samp> e scegli il file sorgente.
 Successivamente, verrà aperta la finestra di dialogo per assegnare i campi con le prime 10 monete del file sorgente:</p>
 <p><img src="/images/manual/import.png"></p>
@@ -344,8 +346,8 @@ Successivamente, verrà aperta la finestra di dialogo per assegnare i campi con 
 <p>Per creare un report, è necessario selezionare le monete di cui i dati saranno inclusi nel report e aprire la finestra Anteprima selezionando<samp>Report</samp> &rarr; <samp>Report...</samp> :</p>
 <p><img src="/images/manual/report_preview.png"></p>
 <p>Nella finestra di Anteprima, puoi selezionare un modello di resoconto (l'elenco a sinistra sulla barra degli strumenti), controllare la modalità di anteprima e stampare o salvare il resoconto in un file con il formato desiderato (i pulsanti a destra sulla barra degli strumenti).</p>
-<p>Nota: La finestra di anteprima usa una libreria vecchia per generare l'HTML. Quindi i rapporti in anteprima potrebbero essere danneggiati e non corrispondere alla visualizzazione nei browser moderni. Potrebbe anche andare in crash quando si generano rapporti di grandi dimensioni (più di 100 monete). Per visualizzare e stampare puoi usare il Rapporto rapido (vedi 6.2) per aprire il rapporto nel tuo browser.</p>
-<h3>6.2 Resoconto Rapido</h3>
+<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see <a href="#sec6_2">6.2</a>) for open report in your browser.</p>
+<h3 id="sec6_2">6.2 Resoconto Rapido</h3>
 <p>Selezionando <samp>Report</samp> &rarr; <samp>View in browser</samp> , è possibile visualizzare rapidamente il report per le monete selezionate in formato HTML.</p>
 <p><img src="/images/manual/report.png"></p>
 <p>Per un report rapido, viene utilizzato il modello impostato nella finestra Impostazioni come<samp>Default template</samp>.</p>
@@ -364,11 +366,11 @@ Successivamente, verrà aperta la finestra di dialogo per assegnare i campi con 
 <p>Circulation</p>
 <p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png"></a></p>
 
-<h3>6.5 Esportazione della tabella delle monete</h3>
+<h3 id="sec6_5">6.5 Esportazione della tabella delle monete</h3>
 <p>OpenNumismat consente di salvare l'attuale Tabella delle monete con tutti i filtri applicati e l'ordinamento delle colonne in un file separato in formato MS Excel, HTML o CSV (Nota: nell'attuale versione, le immagini non vengono esportate).</p>
 <p>È possibile esportare la Tabella delle monete tramite <samp>Report</samp> &rarr; <samp>Save current list...</samp>. Nella finestra di dialogo aperta, seleziona il nome del file, il formato desiderato e salva il file.</p>
 <h3>6.6 Statistiche</h3>
-<p>Per creare diagrammi e calcolare statistiche, puoi usare anche MS Excel. Copia le monete necessarie da OpenNumismat in MS Excel o esporta la Tabella delle monete in un file MS Excel (vedi 6.5) e usa la sua funzionalità.</p>
+<p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see <a href="#sec6_5">6.5</a>) and use its functionality.</p>
 <h3>6.7 Sommario</h3>
 <p><img src="/images/manual/summary.png"></p>
 
@@ -402,7 +404,7 @@ Successivamente, verrà aperta la finestra di dialogo per assegnare i campi con 
 <h3>8.3 Conteggio delle immagini di default</h3>
 Numero di immagini predefinito nel pannello delle immagini.
 
-<h3>8.4 Autobackup</h3>
+<h3 id="sec8_4">8.4 Autobackup</h3>
 Puoi abilitare il backup automatico. Questa funzione farà il backup dopo aver modificato un numero specificato di record.
 
 <h3>8.5 Collezione</h3>
@@ -417,13 +419,14 @@ Impostazioni specifiche della collezione (memorizzate per ogni file di collezion
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h2 id="sec9">9 Editore delle immagini</h2>
-<p>OpenNumismat ha un Editor di Immagini integrato (il progetto principale è <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), che può essere abilitato dalle Impostazioni.</p>
+<p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
+<p><img src="/images/imageEdit2.png"></p>
 <p><img src="/images/imageEdit.png"></p>
 
 <h4>Caratteristiche</h4>
 <ul>
-<li>Supporta i formati di immagine più comuni: JPEG, PNG, BMP, TIFF, GIF, WebP</li>
-<li>Scatta una foto dalla webcam (per risultati migliori prova <a href="https://reincubate.com/camo/">Camo</a>)</li>
+<li>Supports popular image formats: JPEG, PNG, BMP, TIFF, GIF, WebP</li>
+<li>Capture a photo from webcam (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
 <li>Strumenti di modifica delle immagini: ridimensiona, ruota, ritaglia (rettangolo, ellisse, trasformazione prospettica)</li>
 <li>Rimuovi lo sfondo con <a href="https://github.com/danielgatis/rembg">rembg</a>
 </li>
@@ -434,9 +437,13 @@ Impostazioni specifiche della collezione (memorizzate per ogni file di collezion
 <li>Navigating through images in a record and through the records themselves</li>
 </ul>
 <h4>Scorciatoie da tastiera</h4>
-<p><kbd>Ctrl</kbd> + <kbd>O</kbd> — Apri<br><kbd>Ctrl</kbd> + <kbd>S</kbd> — Salva<br><kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>Insert</kbd> — Copia<br><kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Shift</kbd> + <kbd>Insert</kbd> — Incolla<br><kbd>Ctrl</kbd> + <kbd>Z</kbd> — Annulla<br><kbd>Ctrl</kbd> + <kbd>Y</kbd> — Ripristina<br><kbd>Alt</kbd> + <kbd>←</kbd> — Ruota a sinistra<br><kbd>Alt</kbd> + <kbd>→</kbd> — Ruota a destra<br><kbd>C</kbd> — Ritaglia<br><kbd>R</kbd> — Ruota<br><kbd>B</kbd> — Rimuovi lo sfondo con l'IA<br><kbd>Ctrl</kbd> + <kbd>←</kbd> — Immagine precedente<br><kbd>Ctrl</kbd> + <kbd>→</kbd> — Immagine seguente<br><kbd>Ctrl</kbd> + <kbd>↑</kbd> — Elemento precedente<br><kbd>Ctrl</kbd> + <kbd>↓</kbd> — Elemento seguente<br><kbd>+</kbd> — Ingrandisci<br><kbd>-</kbd> — Rimpicciolisci<br><kbd>0</kbd> — Adatta<br><kbd>1</kbd>, <kbd>A</kbd> — Zoom 100%<br><kbd>2</kbd> — Zoom 200%<br><kbd>3</kbd> — Zoom 300%<br><kbd>4</kbd> — Zoom 400%<br><kbd>5</kbd> — Zoom 500%<br><kbd>6</kbd> — Xoom 600%<br><kbd>F11</kbd> — Pieno schermo<br><kbd>Esc</kbd> — Esci</p>
+<p><kbd>Ctrl</kbd> + <kbd>O</kbd> — Open file<br><kbd>Ctrl</kbd> + <kbd>S</kbd> — Save<br><kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>Insert</kbd> — Copy<br><kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Shift</kbd> + <kbd>Insert</kbd> — Paste<br><kbd>Ctrl</kbd> + <kbd>Z</kbd> — Undo<br><kbd>Ctrl</kbd> + <kbd>Y</kbd> — Redo<br><kbd>Alt</kbd> + <kbd>←</kbd> — Rotate to left<br><kbd>Alt</kbd> + <kbd>→</kbd> — Rotate to right<br><kbd>C</kbd> — Open crop tool<br><kbd>R</kbd> — Open rotate tool<br><kbd>B</kbd> — Remove background with AI<br><kbd>Ctrl</kbd> + <kbd>←</kbd> — Previous image<br><kbd>Ctrl</kbd> + <kbd>→</kbd> — Next image<br><kbd>Ctrl</kbd> + <kbd>↑</kbd> — Previous record<br><kbd>Ctrl</kbd> + <kbd>↓</kbd> — Next record<br><kbd>+</kbd> — Zoom in<br><kbd>-</kbd> — Zoom out<br><kbd>0</kbd> — Fit to window<br><kbd>1</kbd>, <kbd>A</kbd> — Scale 100%<br><kbd>2</kbd> — Scale 200%<br><kbd>3</kbd> — Scale 300%<br><kbd>4</kbd> — Scale 400%<br><kbd>5</kbd> — Scale 500%<br><kbd>6</kbd> — Scale 600%<br><kbd>F11</kbd> — Full screen<br><kbd>Esc</kbd> — Quit</p>
 
-<p>Rotella del mouse verso l'alto — Zoom avanti<br> Rotella del mouse verso il basso — Zoom indietro<br> Doppio click sul bottone sinistro del mouse — Zoom avanti<br> Tasto centrale del mouse — Zoom avanti<br> Doppio click sul bottone destro del mouse — Zoom indietro</p>
+<p>Mouse wheel upward — Zoom in<br>
+Mouse wheel downward — Zoom out<br>
+Mouse left button dbl click — Zoom in<br>
+Mouse middle button click — Zoom in<br>
+Mouse right button dbl click — Zoom out</p>
 
 <h4>Impostazioni</h4>
 <p>Image Editor settings are available under <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
@@ -489,6 +496,7 @@ Impostazioni specifiche della collezione (memorizzate per ogni file di collezion
 </tr>
 </tbody>
 </table>
+<p>The AI model will be loaded automatically upon first use.</p>
 </div>
       </section>
 </div>
