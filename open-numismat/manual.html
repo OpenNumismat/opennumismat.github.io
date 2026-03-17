@@ -79,7 +79,7 @@
 <a href="#sec9">9 Image Editor</a><br>
 <h2 id="sec1">1 Introduction</h2>
 <h3>1.1 Description</h3>
-<p>OpenNumismat is a handy and reliable application designed for collectors of coins and coin collectors, to create a numismatic collection.
+<p>OpenNumismat is a handy and reliable application designed for numismatists and coin collectors, to create a numismatic collection.
 <p>With OpenNumismat you will be able to create, organize, and manage your own catalogs of coins with detailed descriptions and photos for each item.
 <p>OpenNumismat is distributed in full absolutely free. The source code is licensed under the GPL-3.0 and available at <a href="https://github.com/OpenNumismat/open-numismat" target="blank_">GitHub</a>.
 <p>Official website is located at <a href="https://opennumismat.github.io" target="blank_">https://opennumismat.github.io</a>.
@@ -178,14 +178,14 @@
    <li>Commission - additional costs associated with the acquisition of a coin (auction fee and/or shipping cost). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%). The field is available only in the coin editing window;
    <li>Seller;
    <li>Place;
-   <li>Invoice - link to the purchaise invoice document on disk or URL;
+   <li>Invoice - link to the purchase invoice document on disk or URL;
    <li>Info.
  </ul>
  <li>Market - Sale:
  <ul>
    <li>Date;
    <li>Price;
-   <li>Bailed - the total received amount taking into account the commission;
+   <li>Bailed - the total received amount after commission;
    <li>Commission - additional costs associated with the acquisition of a coin (auction fee and/or shipping cost). It is allowed to enter the commission amount, as well as the percentage of the price (for example, 10%). The field is available only in the coin editing window;
    <li>Buyer;
    <li>Place;
@@ -249,7 +249,7 @@
  </ul>
  <li>Classification:
  <ul>
-   <li>1#, 2#, 3#, 4# - numbers of a version of a coin under catalogs;
+   <li>1#, 2#, 3#, 4# - catalog numbers for a coin;
    <li>Rarity;
    <li>Fine - the approximate price of a coin in the state F-12, F-15;
    <li>VF - the approximate price of a coin in the state of VF-20, VF-25, VF-30, VF-35;
@@ -271,9 +271,9 @@
    <li>Image - an optimized image of the obverse and the reverse of the coin for output in the Table of coins.
  </ul>
 </ul>
-<p>For some fields, values can be obtained from the reference (see 7):
+<p>For some fields, values can be obtained from the reference (see <a href="#sec7">7</a>):
 <p><img src="/images/manual/ref_list.png"></p>
-<p>In the Settings dialog, you can remove some of the unused fields (see 8).
+<p>In the Settings dialog, you can remove some of the unused fields (see <a href="#sec8">8</a>).
 
 <p id="footnote-denomination">
 <sup>*</sup> You can delete the Value field and rename the Unit field to Denomination in the Settings dialog. Then you can add denomination icons through the reference:
@@ -301,7 +301,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <li>Copy - copies the image to the clipboard for later paste into the image editor;
 <li>Delete - deletes the current image.
 </ul>
-<p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the Image Editor (see 9) or in the standard image viewer of your OS.
+<p>Double clicking on the image field opens the file selection window if the image is not yet installed, or opens the image in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS.
 <p>The coin image in the Table of coins is automatically generated from the obverse and reverse images.
 
 <h3>3.2 Editing a coin</h3>
@@ -333,7 +333,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h3>4.2 Image Panel</h3>
 <p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
-<br>Double-clicking opens the imagen in the Image Editor (see 9) or in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.
+<br>Double-clicking opens the imagen in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.
 
 <h3>4.3 Filter</h3>
 <p>Using the menu in the column headings of the table, you can filter coins by the value of the fields.
@@ -345,7 +345,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>The tree on the left side of the application window allows you to group coins by field values. When selecting a tree element, the coins corresponding to the selected value are displayed in the table.
 <p>To customize the tree, right-click on the tree element and select <samp>Customize tree...</samp>:
 <p><img src="/images/manual/tree.png"></p>
-<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the <kbd>Ctrl<kbd> key while dragging.
+<p>In the opened dialog you can change the structure of the tree by dragging the elements with the mouse. Items that are dragged from right to left are added to the end of the tree. Dragging from left to right removes items from the tree. To merge two fields (for example, <i>Value+Unit</i>), hold down the <kbd>Ctrl</kbd> key while dragging.
 
 <h3>4.5 Lists</h3>
 <p>The lists allow you to have several independent collection views. Each list stores its own settings for fields, columns, filters and tree. This allows the lists to be used as permanent filters.
@@ -358,7 +358,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p><img src="/images/manual/status.png"></p>
 
 <h2 id="sec5">5 Managing a collection file</h2>
-<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see 7). You can copy, move, delete and rename it by means of your OS.
+<p>The collection file is a regular file with the extension .db and stores all data about the collection including images other than references (see <a href="#sec7">7</a>). You can copy, move, delete and rename it by means of your OS.
 
 <h3>5.1 Creating/Opening</h3>
 <p>To create a new collection, select the menu <samp>File</samp> &rarr; <samp>New...</samp>. In the dialog that opens, select the location and name of the new collection file.
@@ -367,7 +367,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 
 <h3>5.2 Backup</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see 8.4).
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).
 
 <h3>5.3 Vacuum</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.
@@ -386,7 +386,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 </ul>
 
 <h3>5.6 Importing</h3>
-<p>OpenNumismat allows you to import data from collections creted in another software (MS Excel, CoinManage, Collection Studio and Tellico)
+<p>OpenNumismat allows you to import data from collections created in another software (MS Excel, CoinManage, Collection Studio and Tellico)
 or sites (<a href="https://colnect.com/">Colnect</a>, <a href="https://en.numista.com/">Numista</a> and uCoin.net).
 <p>For importing from MS Excel select the menu <samp>File</samp> &rarr; <samp>Import</samp> &rarr; <samp>Excel</samp> and select the source file.
 After that, the dialog for assigning fields with the first 10 coins from the source file will be opened:
@@ -399,9 +399,9 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <samp>Report</samp> &rarr; <samp>Report...</samp> menu:
 <p><img src="/images/manual/report_preview.png"></p>
 <p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).
-<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see 6.2) for open report in your browser.
+<p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see <a href="#sec6_2">6.2</a>) for open report in your browser.
 
-<h3>6.2 Quick Report</h3>
+<h3 id="sec6_2">6.2 Quick Report</h3>
 <p>By selecting the <samp>Report</samp> &rarr; <samp>View in browser</samp> menu, you can quickly view the report for the selected coins in HTML format.
 <p><img src="/images/manual/report.png"></p>
 <p>For a quick report, used the template set in the Settings dialog as the <samp>Default template</samp>.
@@ -422,12 +422,12 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Circulation
 <p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png"></a></p>
 
-<h3>6.5 Exporting the Table of coins</h3>
+<h3 id="sec6_5">6.5 Exporting the Table of coins</h3>
 <p>OpenNumismat allows you to save the current Table of coins with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).
 <p>You can export the Table of coins in the menu <samp>Report</samp> &rarr; <samp>Save current list...</samp>. In the opened dialog select the file name, the required format and save the file.
 
 <h3>6.6 Statistics</h3>
-<p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see 6.5) and use its functionality.
+<p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see <a href="#sec6_5">6.5</a>) and use its functionality.
 
 <h3>6.7 Summary</h3>
 <p><img src="/images/manual/summary.png"></p>
@@ -465,7 +465,7 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>8.3 Images count by default</h3>
 Default images count in Image panel.
 
-<h3>8.4 Autobackup</h3>
+<h3 id="sec8_4">8.4 Autobackup</h3>
 You can enable autobackup. This feature will make backups after changing specified count of records.
 
 <h3>8.5 Collection</h3>
@@ -481,15 +481,15 @@ Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h2 id="sec9">9 Image Editor</h2>
-<p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), that can be enabled from Settings.
+<p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.
 
 <p><img src="/images/imageEdit2.png"></p>
 <p><img src="/images/imageEdit.png"></p>
 
 <h4>Features</h4>
 <ul>
-<li>Support popular image formats: JPEG, PNG, BMP, TIFF, GIF, WebP</li>
-<li>Takes a photo from webcam (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
+<li>Supports popular image formats: JPEG, PNG, BMP, TIFF, GIF, WebP</li>
+<li>Capture a photo from webcam (for better results try <a href="https://reincubate.com/camo/">Camo</a>)</li>
 <li>Image editing tools: resize, rotate, crop (rectangle, ellipse, perspective transformation)</li>
 <li>Remove background with <a href="https://github.com/danielgatis/rembg">rembg</a></li>
 <li>Up to 10 Undo/Redo actions</li>
@@ -511,7 +511,7 @@ Collection specific settings (stored for each collection file):
 <kbd>Alt</kbd> + <kbd>→</kbd> — Rotate to right<br>
 <kbd>C</kbd> — Open crop tool<br>
 <kbd>R</kbd> — Open rotate tool<br>
-<kbd>B</kbd> — Remove backgroud with AI<br>
+<kbd>B</kbd> — Remove background with AI<br>
 <kbd>Ctrl</kbd> + <kbd>←</kbd> — Previous image<br>
 <kbd>Ctrl</kbd> + <kbd>→</kbd> — Next image<br>
 <kbd>Ctrl</kbd> + <kbd>↑</kbd> — Previous record<br>
@@ -533,7 +533,7 @@ Collection specific settings (stored for each collection file):
 Mouse wheel upward — Zoom in<br>
 Mouse wheel downward — Zoom out<br>
 Mouse left button dbl click — Zoom in<br>
-Mouse middle button press — Zoom in<br>
+Mouse middle button click — Zoom in<br>
 Mouse right button dbl click — Zoom out
 </p>
 
@@ -564,6 +564,7 @@ Mouse right button dbl click — Zoom out
 </tr>
 </tbody>
 </table>
+<p>The AI model will be loaded automatically upon first use.
 
 </div>
       </section>
