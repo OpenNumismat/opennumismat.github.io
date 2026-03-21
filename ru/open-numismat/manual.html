@@ -330,7 +330,7 @@
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Резервное копирование</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Сжатие</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.</p>
 <h3>5.4 Пароль</h3>
@@ -401,25 +401,21 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Also you can attach current reference to a collection file. Select <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> for attaching or <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> for remove reference from collection and use default from Settings.</p>
 <p>Вы можете настроить справочник по умолчанию с помощью <a href="https://opennumismat.github.io/references/">Генератор справочников</a>.</p>
 <h2 id="sec8">8 Настройки</h2>
-<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Поля</h3>
-<p>Панель Поля диалога настроек позволяет переименовывать и убирать из интерфейса часть полей коллекции. При этом в интерфейсе программы будут отображаться только выбранные поля, но данные буду сохранены для всех полей.</p>
-<h3>8.2 Ускорение хранилища</h3>
+<h4>Ускорение хранилища</h4>
 <p>SQLite database engine имеют несколько настроек, которые влияют на скорость и надежность:</p>
 <ul>
 <li>Надежно - все изменения будут гарантированно сохранены;</li>
 <li>Быстро - изменения могут быть потеряны при отключении питания во время операции (рекомендуется в большинстве случаев);</li>
 <li>Очень быстро (опасно) - рекомендуется при выполнении большого количества изменений при условии, что вы выполняете резервное копирование.</li>
 </ul>
-<h3>8.3 Количество изображений по умолчанию</h3>
-Количество изображений в панели Изображений по умолчанию.
-
-<h3 id="sec8_4">8.4 Автоматические резервные копии</h3>
+<h4>Автоматические резервные копии</h4>
 Вы можете включить автоматическое резервное копирование. При этом резервные копии будут выполняться после изменения указанного количества записей.
 
-<h3>8.5 Коллекция</h3>
+<h3 id="sec8_2">8.2 Collection</h3>
 Настройки для коллекции (хранятся для каждого файла коллекции)
 <p><img src="/images/settingsCollection.png"></p>
 
@@ -429,6 +425,12 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Свободный формат числовых полей - для ввода значений в расширенном формате (знак вопроса в поле Год, дроби в поле Номинал, диапазон в поле Вес и т.п.).</p>
 <p>Изображения снизу:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>Панель Поля диалога настроек позволяет переименовывать и убирать из интерфейса часть полей коллекции. При этом в интерфейсе программы будут отображаться только выбранные поля, но данные буду сохранены для всех полей.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Редактор изображений</h2>
 <p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
