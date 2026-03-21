@@ -330,7 +330,7 @@ Para editar os dados da moeda, faça duplo clique ou clique direito sobre ela e 
 <br>O menu Ficheiro mostra até 5 colecções recentemente abertas para abertura rápida.</p>
 <h3>5.2 Salvaguarda</h3>
 <p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma salvaguarda. Para tal, seleccione o menu <samp>Ficheiro</samp> &rarr; <samp>Salvaguarda</samp>.  Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a salvaguarda, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
-<p>Nota: É recomendável armazenar as salvaguardas noutro suporte que não aquele onde trabalha habitualmente. Escolher um serviço online, como o Dropbox, pode ser uma opção. Também é importante fazer salvaguardas regularmente, antes e depois de fazer um grande número de alterações (veja <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Vácuo</h3>
 <p>Dadas as peculiaridades da implementação SQLite, que fornece o armazenamento dos dados das colecções, a memória não é automaticamente liberta quando apaga dados do ficheiro da colecção. Ao longo do tempo, isto pode levar a um grande aumento do tamanho da colecção e da sua fragmentação, abrandando a aplicação. Se necessário, pode reduzir o tamanho da colecção libertando espaço "vazio" desnecessário seleccionando o menu <samp>Ficheiro</samp> &rarr; <samp>Vácuo</samp>.</p>
 <h3>5.4 Senha</h3>
@@ -401,25 +401,21 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <p>Pode também anexar a referência actual a outro ficheiro de colecção. Seleccione <samp>Referência</samp> &rarr; <samp>Anexar referência actual</samp> para anexar ou <samp>Referência</samp> &rarr; <samp>Desanexar referência actual</samp> para remover a referência da colecção e usar a predefinição nas definições.</p>
 <p>Pode personalizar referências pré-definidas com o  <a href="https://opennumismat.github.io/references/">gerador de referências</a>.</p>
 <h2 id="sec8">8 Definições</h2>
-<p>O diálogo Definições permite-lhe configurar a aparência e o comportamento da aplicação. Para o abrir, seleccione o menu<samp>Ficheiro</samp> &rarr; <samp>Definiçõess</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Campos</h3>
-<p>O separador Campos deste diálogo permite-lhe renomear e remover parte dos campos da colecção do ambiente. Nest último caso, só os campos marcados serão mostrados no ambiente do programa, mas os dados são gravados em todos os campos.</p>
-<h3>8.2 Aceleração do armazenamento</h3>
+<h4>Aceleração do armazenamento</h4>
 <p>O motor SQLite tem múltiplas definições que afectam a velocidade e estabilidade:</p>
 <ul>
 <li>De confiança - todas as alterações são garantidamente gravadas;</li>
 <li>Rápido - podem-se perder alterações quando falta energia durante a operação (recomendada para a maioria dos casos);</li>
 <li>Extra-rápido (perigoso) - recomendado quando faz um grande número de alterações, desde que tenha uma salvaguarda.</li>
 </ul>
-<h3>8.3 Total de imagens por predefinição</h3>
-Predefinição do total de imagens no painel de imagem.
-
-<h3 id="sec8_4">8.4 Segurança automática</h3>
+<h4>Seguranças automáticas</h4>
 Pode activar a segurança automática. Esta funcionalidade faz uma segurança após alterar um dado número de registos.
 
-<h3>8.5 Colecção</h3>
+<h3 id="sec8_2">8.2 Collection</h3>
 Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/settingsCollection.png"></p>
 
@@ -429,6 +425,12 @@ Definições específicas da colecção (armazenadas para cada colecção):
 <p>Campos numéricos de formato livre - para inserir valores em formato expandido (ponto de interrogação no campo Ano, fracções no campo nominal, intervalo no campo Peso, etc).</p>
 <p>Imagens no fundo:</p>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>O separador Campos deste diálogo permite-lhe renomear e remover parte dos campos da colecção do ambiente. Nest último caso, só os campos marcados serão mostrados no ambiente do programa, mas os dados são gravados em todos os campos.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Editor de imagens</h2>
 <p>O OpenNumismat tem um editor de imagem interno (o projecto principal está em <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), que pode ser activado nas definições.</p>
