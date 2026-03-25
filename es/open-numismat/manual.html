@@ -330,7 +330,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <br>El menú Archivo muestra hasta 5 colecciones abiertas recientemente, disponibles para abrir rápidamente.</p>
 <h3>5.2 Copia de seguridad</h3>
 <p>Para evitar la pérdida de datos de la colección debido a errores de hardware, software, errores humanos o programas maliciosos, se recomienda realizar una copia de seguridad. Para crear una copia de seguridad de la colección, seleccione el menú <samp>Archivo</samp> &rarr; <samp>Backup</samp>. Esto creará una copia de la colección actual con la fecha y hora agregadas (por ejemplo, demo_171025115112.db para la copia realizada a las 11:51:12 del 25/10/2017) en el directorio especificado en la configuración. Para restaurar los datos, simplemente renombra el archivo de copia de seguridad eliminando la fecha y hora. También puedes copiar el archivo de la colección usando tu sistema operativo.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Vaciado</h3>
 <p>Dadas las peculiaridades de la implementación de SQLite, que permite el almacenamiento de datos de colección, la memoria no se libera automáticamente al eliminar datos del archivo de colección. Con el tiempo, esto puede provocar un aumento del tamaño del archivo de colección, su fragmentación y la ralentización de la aplicación. Si es necesario, puede reducir el tamaño del archivo de colección liberando espacio vacío innecesario seleccionando el menú <samp>Archivo</samp> &rarr; <samp>Vaciado</samp> .</p>
 <h3>5.4 Contraseña</h3>
@@ -401,34 +401,36 @@ Tras eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 
 <p>También puedes adjuntar la referencia actual a un archivo de colección. Selecciona <samp>Referencia</samp> &rarr; <samp>Adjuntar referencia actual</samp> para adjuntar o <samp>Referencia</samp> &rarr; <samp>Desvincular referencia actual</samp> para eliminar la referencia de la colección y usar la configuración predeterminada de Ajustes.</p>
 <p>Puedes personalizar la referencia predeterminada con <a href="https://opennumismat.github.io/references/">Generador de referencias</a>.</p>
 <h2 id="sec8">8 Ajustes</h2>
-<p>El diálogo Ajustes permite configurar la apariencia y el comportamiento de la aplicación. Para abrirlo, selecciona el menú <samp>Archivo</samp> &rarr; <samp>Ajustes</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Campos</h3>
-<p>El panel Campos del cuadro de diálogo de ajustes le permite cambiar el nombre y eliminar de la interfaz parte de los campos de la colección. En este caso, sólo los campos seleccionados se mostrarán en la interfaz del programa, pero los datos se guardarán para todos los campos.</p>
-<h3>8.2 Aceleración de almacenamiento</h3>
+<h4>Aceleración de almacenamiento</h4>
 <p>El motor de base de datos SQLite tiene una configuración múltiple que afecta la velocidad y la fiabilidad:</p>
 <ul>
 <li>Fiable: se garantiza que todos los cambios se guardan;</li>
 <li>Rápido:- los cambios pueden perderse cuando se desconecta la alimentación durante el funcionamiento (recomendado para la mayoría de los casos);</li>
 <li>Extra rápido (peligroso): se recomienda cuando realiza una gran cantidad de cambios, siempre que realice una copia de seguridad previa.</li>
 </ul>
-<h3>8.3 Imágenes contadas por defecto</h3>
-Imagenes contadas por defecto en el panel de Imagen
-
-<h3 id="sec8_4">8.4 Copia de seguridad automática</h3>
-Puede habilitar la copia de seguridad automática. Esta característica hará copias de seguridad después de cambiar un número especificado de registros.
-
-<h3>8.5 Colección</h3>
+<h4>Copia de seguridad automática</h4>
+<p>Puede habilitar la copia de seguridad automática. Esta característica hará copias de seguridad después de cambiar un número especificado de registros.</p>
+<h3 id="sec8_2">8.2 Collection</h3>
 Configuración específica para colección (almacenada para cada archivo de colección):
 <p><img src="/images/settingsCollection.png"></p>
 
-<p>Altura de imagen previa:</p>
+<h4>Altura de imagen previa</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<p>Campos numéricos de formato libre: para introducir valores en el formato expandido (signo de interrogación en el campo Año, fracciones en el campo Nominal, rango en el campo Peso, etc.).</p>
-<p>Imágenes al fondo:</p>
+<h4>Campos numéricos de formato libre</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
+<h4>Imágenes al fondo</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>El panel Campos del cuadro de diálogo de ajustes le permite cambiar el nombre y eliminar de la interfaz parte de los campos de la colección. En este caso, sólo los campos seleccionados se mostrarán en la interfaz del programa, pero los datos se guardarán para todos los campos.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Editor de Imagen</h2>
 <p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
@@ -508,7 +510,7 @@ Mouse right button dbl click — Zoom out</p>
 </tr>
 </tbody>
 </table>
-<p>The AI model will be loaded automatically upon first use.</p>
+<p>The AI model will be downloaded automatically upon first use.</p>
 </div>
       </section>
 </div>

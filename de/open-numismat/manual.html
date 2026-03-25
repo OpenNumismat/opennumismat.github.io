@@ -332,7 +332,7 @@ Um einen Link zu einer lokalen Datei einzufügen, können Sie die Datei per Drag
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Sicherung</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Komprimieren</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.</p>
 <h3>5.4 Passwort</h3>
@@ -402,34 +402,36 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Also you can attach current reference to a collection file. Select <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> for attaching or <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> for remove reference from collection and use default from Settings.</p>
 <p>You can customize default reference with <a href="https://opennumismat.github.io/references/">Reference generator</a>.</p>
 <h2 id="sec8">8 Einstellungen</h2>
-<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Felder</h3>
-<p>Im Bereich „Felder“ des Einstellungsdialogs können Sie Teile der Sammlungsfelder umbenennen und aus der Benutzeroberfläche entfernen. In diesem Fall werden nur die ausgewählten Felder in der Programmoberfläche angezeigt, die Daten aller Felder bleiben jedoch erhalten.</p>
-<h3>8.2 Geschwindigkeit des Speichervorgangs</h3>
+<h4>Beschleunigen des Speichervorgangs</h4>
 <p>Die SQLite-Datenbank-Engine verfügt über zahlreiche Einstellungen, die die Geschwindigkeit und Zuverlässigkeit beeinflussen:</p>
 <ul>
 <li>Zuverlässig – alle Änderungen werden garantiert gespeichert;</li>
 <li>Schnell - Änderungen können verloren gehen, wenn die Stromzufuhr während des Betriebs unterbrochen wird (für die meisten Fälle empfohlen);</li>
 <li>Besonders schnell (gefährlich) - empfohlen, wenn Sie eine große Anzahl von Änderungen vornehmen, vorausgesetzt, Sie erstellen vorher eine Datensicherung.</li>
 </ul>
-<h3>8.3 Anzahl der Bilder standardmässig ermitteln</h3>
-Standardmäßig werden im Bildbereich Bilder gezählt.
-
-<h3 id="sec8_4">8.4 Automatische Sicherung</h3>
-Sie können die automatische Datensicherung aktivieren. Diese Funktion erstellt nach jeder Änderung einer festgelegten Anzahl von Datensätzen eine Sicherungskopie.
-
-<h3>8.5 Sammlung</h3>
+<h4>Automatische Sicherung</h4>
+<p>Sie können die automatische Datensicherung aktivieren. Diese Funktion erstellt nach jeder Änderung einer festgelegten Anzahl von Datensätzen eine Sicherungskopie.</p>
+<h3 id="sec8_2">8.2 Collection</h3>
 Sammlungsspezifische Einstellungen (für jede Sammlungsdatei gespeichert):
 <p><img src="/images/settingsCollection.png"></p>
 
-<p>Vorschaugröße Bilder:</p>
+<h4>Vorschaugröße Bilder</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<p>Freiformat-Zahlenfelder – zur Eingabe von Werten im erweiterten Format (Fragezeichen im Feld „Jahr“, Brüche im Feld „Nominal“, Bereich im Feld „Gewicht“ usw.).</p>
-<p>Bilder unten:</p>
+<h4>Freies Format in numerischen Feldern</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
+<h4>Bilder unten</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>Im Bereich „Felder“ des Einstellungsdialogs können Sie Teile der Sammlungsfelder umbenennen und aus der Benutzeroberfläche entfernen. In diesem Fall werden nur die ausgewählten Felder in der Programmoberfläche angezeigt, die Daten aller Felder bleiben jedoch erhalten.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Bildeditor</h2>
 <p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
@@ -509,7 +511,7 @@ Mouse right button dbl click — Zoom out</p>
 </tr>
 </tbody>
 </table>
-<p>The AI model will be loaded automatically upon first use.</p>
+<p>The AI model will be downloaded automatically upon first use.</p>
 </div>
       </section>
 </div>

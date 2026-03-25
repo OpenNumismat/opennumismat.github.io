@@ -330,7 +330,7 @@ För att klistra in länk till en lokal fil kan du dra en 'drop' eller kopiera-k
 <br>The File menu displays up to 5 recently opened collections available for quick opening.</p>
 <h3>5.2 Backup</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Vakuum...</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.</p>
 <h3>5.4 Lösenord</h3>
@@ -401,34 +401,36 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Also you can attach current reference to a collection file. Select <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> for attaching or <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> for remove reference from collection and use default from Settings.</p>
 <p>You can customize default reference with <a href="https://opennumismat.github.io/references/">Reference generator</a>.</p>
 <h2 id="sec8">8 Inställningar</h2>
-<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Fält</h3>
-<p>Fältet Panel i inställningsdialogrutan låter dig byta namn på och ta bort del av samlingsfälten från gränssnittet. I det här fallet visas endast de valda fälten i programgränssnittet, men data sparas för alla fält.</p>
-<h3>8.2 Lagringshastighet</h3>
+<h4>Acceleration av lagring</h4>
 <p> SQLite-databasmotorn har flera inställningar som påverkar hastigheten och tillförlitligheten:</p>
 <ul>
 <li>Pålitlig - alla ändringar garanteras sparas</li>
 <li>Snabba ändringar kan gå förlorade när strömmen stängs av under drift (rekommenderas för de flesta fall);</li>
 <li> Extra snabb (farlig) - rekommenderas när du utför ett stort antal ändringar, förutsatt att du utför en säkerhetskopia.</li>
 </ul>
-<h3>8.3 Bilder räknas som standard</h3>
-Standardbilder räknas i bildpanelen.
-
-<h3 id="sec8_4">8.4 Autobackup</h3>
-Du kan aktivera autobackup. Den här funktionen kommer att göra säkerhetskopior efter att ha ändrat specificerat antal poster.
-
-<h3> 8,5 samling</h3>
+<h4>Autobackup</h4>
+<p>Du kan aktivera autobackup. Den här funktionen kommer att göra säkerhetskopior efter att ha ändrat specificerat antal poster.</p>
+<h3 id="sec8_2">8.2 Collection</h3>
 Samlingsspecifika inställningar (lagrade för varje samlingsfil):
 <p><img src="/images/settingsCollection.png"></p>
 
-<p>Förhandsgranska bildhöjd</p>
+<h4>Förhandsgranska bildhöjd</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<p> Fältformat för fria format - för att ange värden i det expanderade formatet (frågetecken i fältet År, fraktioner i Nominellt fält, räckvidd i fältet Vikt etc.).</p>
-<p>Bilder längst ner:</p>
+<h4>Gratis format numeriska fält</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
+<h4>Bilder längst ner</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>Fältet Panel i inställningsdialogrutan låter dig byta namn på och ta bort del av samlingsfälten från gränssnittet. I det här fallet visas endast de valda fälten i programgränssnittet, men data sparas för alla fält.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Image Editor</h2>
 <p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
@@ -509,7 +511,7 @@ Mouse right button dbl click — Zoom out</p>
 </tr>
 </tbody>
 </table>
-<p>The AI model will be loaded automatically upon first use.</p>
+<p>The AI model will be downloaded automatically upon first use.</p>
 </div>
       </section>
 </div>

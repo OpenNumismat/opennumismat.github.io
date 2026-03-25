@@ -318,7 +318,7 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <br>Il menu File mostra fino a 5 collezioni aperte di recente, disponibili per un’apertura rapida.</p>
 <h3>5.2 Backup</h3>
 <p>Per evitare la perdita dei dati della collezione a causa di errori hardware, software, umani o dell’azione di programmi dannosi, è consigliato eseguire un backup. Per creare una copia di backup della collezione, seleziona il menu <samp>File</samp> &rarr; <samp>Backup</samp>. Questo creerà una copia della collezione corrente con aggiunta la data e l’ora (ad esempio, demo_171025115112.db per la copia effettuata alle 11:51:12 del 25/10/2017) nella directory specificata nelle impostazioni. Per ripristinare i dati, è sufficiente rinominare il file di backup eliminando il timestamp. È anche possibile copiare il file della collezione utilizzando il sistema operativo.</p>
-<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_4">8.4</a>).</p>
+<p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
 <h3>5.3 Compressione - Eliminazione spazio vuoto</h3>
 <p>A causa delle peculiarità di SQLite, che gestisce l’archiviazione dei dati della collezione, la memoria non viene rilasciata automaticamente quando i dati vengono eliminati dal file della collezione. Col tempo, ciò può comportare un aumento delle dimensioni del file della collezione, la sua frammentazione e un rallentamento dell’applicazione. Se necessario, è possibile ridurre le dimensioni del file della collezione liberando lo spazio “vuoto” non utilizzato selezionando il menu <samp>File</samp> &rarr; <samp>Vacuum</samp> .</p>
 <h3>5.4 Password</h3>
@@ -389,34 +389,36 @@ Successivamente, verrà aperta la finestra di dialogo per assegnare i campi con 
 <p>È anche possibile collegare il riferimento corrente a un file di collezione. Seleziona <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> per collegare o <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> per rimuovere il riferimento dalla collezione e usare quello predefinito dalle Impostazioni.</p>
 <p>Puoi personalizzare il riferimento predefinito con <a href="https://opennumismat.github.io/references/">Reference generator</a>.</p>
 <h2 id="sec8">8 Impostazioni</h2>
-<p>La finestra Impostazioni consente di configurare l’aspetto e il comportamento dell’applicazione. Per aprirla, seleziona il menu <samp>File</samp> &rarr; <samp>Settings</samp>:</p>
+<p>The Settings dialog allows you to configure the appearance and behavior of the application. To open the dialog, select the menu <samp>File</samp> &rarr; <samp>Settings</samp>.</p>
+<h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png"></p>
 
-<h3>8.1 Campi</h3>
-<p>Il pannello Campi nella finestra delle impostazioni consente di rinominare e rimuovere parte dei campi della collezione dall'interfaccia. In questo caso, solo i campi selezionati verranno visualizzati nell'interfaccia del programma, ma i dati verranno salvati per tutti i campi.</p>
-<h3>8.2 Accelerazione della memorizzazione</h3>
+<h4>Accelerazione della memorizzazione</h4>
 <p>Il motore di database SQLite ha più impostazioni che influenzano la velocità e l'affidabilità:</p>
 <ul>
 <li>Affidabile - tutte le modifiche saranno garantite per essere salvate;</li>
 <li>Veloce - i cambiamenti possono essere persi quando l'alimentazione viene spenta durante il funzionamento (consigliato per la maggior parte dei casi);</li>
 <li>Extra veloce (pericoloso) - consigliato quando si esegue un gran numero di modifiche, purché si esegua un backup.</li>
 </ul>
-<h3>8.3 Conteggio delle immagini di default</h3>
-Numero di immagini predefinito nel pannello delle immagini.
-
-<h3 id="sec8_4">8.4 Autobackup</h3>
-Puoi abilitare il backup automatico. Questa funzione farà il backup dopo aver modificato un numero specificato di record.
-
-<h3>8.5 Collezione</h3>
+<h4>Backup automatico</h4>
+<p>Puoi abilitare il backup automatico. Questa funzione farà il backup dopo aver modificato un numero specificato di record.</p>
+<h3 id="sec8_2">8.2 Collection</h3>
 Impostazioni specifiche della collezione (memorizzate per ogni file di collezione):
 <p><img src="/images/settingsCollection.png"></p>
 
-<p>Anteprima dell'altezza immagine:</p>
+<h4>Anteprima altezza immagine</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<p>Campi numerici in formato libero - per inserire valori in formato esteso (punto interrogativo nel campo Anno, frazioni nel campo Nominale, intervallo nel campo Peso, ecc.).</p>
-<p>Immagini in basso:</p>
+<h4>Campi numerici in formato libero</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
+<h4>Immagini in basso</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h3 id="sec8_3">8.3 Fields</h3>
+<p><img src="/images/settingsFields.png"></p>
+<p>Il pannello Campi nella finestra delle impostazioni consente di rinominare e rimuovere parte dei campi della collezione dall'interfaccia. In questo caso, solo i campi selezionati verranno visualizzati nell'interfaccia del programma, ma i dati verranno salvati per tutti i campi.</p>
+<h3>8.4 Import</h3>
+<p><img src="/images/settingsImport.png"></p>
 
 <h2 id="sec9">9 Editore delle immagini</h2>
 <p>OpenNumismat has a built-in Image Editor (main project is <a href="https://github.com/OpenNumismat/ImageEditor">https://github.com/OpenNumismat/ImageEditor</a>), which can be enabled from Settings.</p>
@@ -496,7 +498,7 @@ Mouse right button dbl click — Zoom out</p>
 </tr>
 </tbody>
 </table>
-<p>The AI model will be loaded automatically upon first use.</p>
+<p>The AI model will be downloaded automatically upon first use.</p>
 </div>
       </section>
 </div>
