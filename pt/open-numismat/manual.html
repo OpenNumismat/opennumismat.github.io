@@ -268,7 +268,7 @@ Para colar a ligação num ficheiro local, pode arrastar e largar ou copiar e co
 <ul>
 <li>Carregar... - seleccionar uma imagem no disco;</li>
 <li>Gravar como... - gravar a imagem no disco;</li>
-<li>Renomear... - definir um nome único para a imagem, que será mostrado na sugestão do painel de imagens (veja 4.2);</li>
+<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see <a href="#sec4_2">4.2</a>);</li>
 <li>Trocar com - troca duas imagens;</li>
 <li>Colar - colar uma imagem da área de transferência (pode ser um ficheiro gráfico, uma imagem copiada de um editor ou uma hiperligação);</li>
 <li>Copiar - copia a imagem para a área de transferência para colar posteriormente;</li>
@@ -299,7 +299,7 @@ Para editar os dados da moeda, faça duplo clique ou clique direito sobre ela e 
 <p><img src="/images/manual/columns.png"></p>
 <p>No diálogo aberto, tem de marcar os campos desejados. Pode arrastar os nomes dos campos para alterar a sua ordem relativa. Pode também arrastar os cabeçalhos das colunas na tabela de moedas. Clicar no cabeçalho de uma coluna ordena a tabela pelo campo seleccionado, ascendente ou descendentemente.</p>
 <p>Pode ajustar a largura das colunas deslocando a margem da coluna com o rato ou com um clique direito sobre o cabeçalho da coluna e seleccionando <samp>Ajustar tamanho</samp>.</p>
-<h3>4.2 Painel de imagens</h3>
+<h3 id="sec4_2">4.2 Painel de imagens</h3>
 <p>Este painel mostra as imagens ligadas à moeda. Ao fundo, estão caixas que permitem controlar o número de imagens mostradas simultaneamente..
 <br>Um duplo clique abre a imagem no editor interno (veja <a href="#sec9">9</a>)  ou no programa pré-definido do seu sistema operativo. Ao pairar com o rato sobre uma imagem, verá um nome de imagem único, se foi especificado durante a edição.</p>
 <h3>4.3 Filtrar</h3>
@@ -331,7 +331,7 @@ Para editar os dados da moeda, faça duplo clique ou clique direito sobre ela e 
 <h3>5.2 Salvaguarda</h3>
 <p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma salvaguarda. Para tal, seleccione o menu <samp>Ficheiro</samp> &rarr; <samp>Salvaguarda</samp>.  Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a salvaguarda, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
 <p>Nota: recomenda-se guardar as salvaguardas num suporte físico diferente do computador de trabalho. Optar por um serviço de armazenamento na nuvem pode ser uma boa opção. É igualmente importante fazer salvaguardas regularmente, antes e depois de efectuar um grande número de alterações (veja <a href="#sec8_1">8.1</a>).</p>
-<h3>5.3 Vácuo</h3>
+<h3 id="sec5_3">5.3 Vácuo</h3>
 <p>Dadas as peculiaridades da implementação SQLite, que fornece o armazenamento dos dados das colecções, a memória não é automaticamente liberta quando apaga dados do ficheiro da colecção. Ao longo do tempo, isto pode levar a um grande aumento do tamanho da colecção e da sua fragmentação, abrandando a aplicação. Se necessário, pode reduzir o tamanho da colecção libertando espaço "vazio" desnecessário seleccionando o menu <samp>Ficheiro</samp> &rarr; <samp>Vácuo</samp>.</p>
 <h3>5.4 Senha</h3>
 <p>No menu <samp>Ficheiro</samp> &rarr; <samp>Definir senha...</samp> pode definir uma senha que será pedida sempre que abrir a colecção.</p>
@@ -382,6 +382,9 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <p>O OpenNumismat permite-lhe gravar a actual tabela de moedas com todos os filtros e ordenação aplicados num ficheiro separador em formato MS Excel, HTML ou CSV (nota: na implementação actual, as imagens não são exportadas).</p>
 <p>Pode exportar a tabela de moedas no menu <samp>Relatórios</samp> &rarr; <samp>Gravar lista actual..</samp>. No diálogo seguinte, seleccione o nome e caminho do ficheiro, o formato desejado e grave o ficheiro.</p>
 <h3>6.6 Estatísticas</h3>
+<p><a href="screenshots.html">Screenshots</a> of example statistics charts.</p>
+<p>Additional settings for statistics charts:</p>
+<p><img src="/images/manual/chartSettings.png"></p>
 <p>Para criar qualquer diagrama e calcular estatísticas pode usar o MS Excel. Copie moedas de que necessita do OpenNumismat para o MS Excel ou exporte a tabela de moedas para um ficheiro MS Excel (ver <a href="#sec6_5">6.5</a>) e utilize as suas funcionalidades.</p>
 <h3>6.7 Resumo</h3>
 <p><img src="/images/manual/summary.png"></p>
@@ -392,10 +395,10 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>ou no menu <samp>Referência</samp> &rarr; <samp>Editar...</samp>:</p>
 <p><img src="/images/manual/ref_edit1.png"></p>
-<p>Clique direito nas entradas das listas dá acesso a adicionar ou limpar ícones da entrada:</p>
+<p>Right-clicking on the entry in the reference opens access to adding or deleting the item's icon:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
 <p>Referências para País, Período, Régua, Unidade, Cunho, Série são referências cruzadas e a sua actualização só está disponível se seleccionar o valor no campo base que existe na referência. Por exemplo, para adicionar um novo cunho, deve primeiro seleccionar um país existente.</p>
-<p>A caixa <samp>Ordenar</samp> ordena alfabeticamente todas as entradas na lista, caso esteja desmarcada, os itens são mostrados pela ordem de inserção.</p>
+<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered. This order can be changed by <samp>Move up</samp>/<samp>Move down</samp> in context menu.</p>
 <p>Para preencher rapidamente referências com dados inseridos na colecção, seleccione o menu<samp>Referência</samp> &rarr; <samp>Preencher de colecção</samp>.</p>
 <p>Por predefinição, as referências são armazenadas num ficheiro separado com a extensão .ref, que pode ser copiado, renomeado ou eliminado através do seu sistema operativo. O caminho do ficheiro pode ser alterado nas definições.</p>
 <p>Pode também anexar a referência actual a outro ficheiro de colecção. Seleccione <samp>Referência</samp> &rarr; <samp>Anexar referência actual</samp> para anexar ou <samp>Referência</samp> &rarr; <samp>Desanexar referência actual</samp> para remover a referência da colecção e usar a predefinição nas definições.</p>
@@ -418,14 +421,19 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/settingsCollection.png"></p>
 
+<h4>Max image side len, Image quality</h4>
+<p>These settings control images in the collection file and affect its size.</p>
+<p>Setting <samp>Max image side len</samp> to 0 will preserve the original size.</p>
+<p>Setting <samp>Image quality</samp> to 100% will will use lossless compression.</p>
+<p>Decreasing <samp>Max image side len</samp> or <samp>Image quality</samp> allows to recalculate all images in collection to reduce collection file size (see <a href="#sec5_3">5.3</a>).</p>
 <h4>Antever altura da imagem</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<h4>Formato livre em campos numéricos</h4>
-<p>Para inserir valores no formato expandido (ponto de interrogação no campo Ano, fracções no campo Nominal, intervalo no campo Peso, etc.).</p>
 <h4>Imagens no fundo</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
 
+<h4>Formato livre em campos numéricos</h4>
+<p>Para inserir valores no formato expandido (ponto de interrogação no campo Ano, fracções no campo Nominal, intervalo no campo Peso, etc.).</p>
 <h3 id="sec8_3">8.3 Campos</h3>
 <p><img src="/images/settingsFields.png"></p>
 <p>O separador Campos deste diálogo permite-lhe renomear e remover parte dos campos da colecção do ambiente. Nest último caso, só os campos marcados serão mostrados no ambiente do programa, mas os dados são gravados em todos os campos.</p>
