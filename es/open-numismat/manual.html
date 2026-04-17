@@ -269,7 +269,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <ul>
 <li>Cargar... - seleccionar imagen desde archivo de disco;</li>
 <li>Guardar como... - guarda la imagen a un archivo de disco;</li>
-<li>Renormbrar ... - establece un nombre único para la imagen que se mostrará en la información del panel de imágenes (ver 4.2);</li>
+<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see <a href="#sec4_2">4.2</a>);</li>
 <li>Intercambia con - intercambia dos imágenes;</li>
 <li>Pegar - pegar una imagen del portapapeles (puede ser un archivo gráfico, una imagen copiada de un editor de imágenes o un enlace web);</li>
 <li>Copiar - copia la imagen al portapapeles para posterior pegado en el editor de imagen;</li>
@@ -299,7 +299,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <p><img src="/images/manual/columns.png"></p>
 <p>En el diálogo abierto, es necesario marcar los campos de interés. Se puede cambiar la ubicación de los campos entre sí arrastrando los nombres de los campos con el ratón . También puede arrastrar encabezados de campo directamente a la tabla de monedas. Al hacer clic en el encabezado del campo, ordena la tabla de acuerdo con el campo seleccionado.</p>
 <p>Puedes controlar la anchura de una columna en una tabla expandiendo con el ratón el borde de la cabecera de la columna o haciendo clic derecho en la cabecera y seleccionando <samp>Ajustar tamaño</samp>.</p>
-<h3>4.2 Panel de imagen</h3>
+<h3 id="sec4_2">4.2 Panel de imagen</h3>
 <p>Este panel muestra imágenes relacionadas con la moneda. En la parte inferior del panel hay casillas de verificación que permiten controlar la cantidad de imágenes que se muestran simultáneamente.
 <br>Doble clic abre la imagen en el Editor de Imagen (ver <a href="#sec9">9</a>) o en el visor de imágenes predeterminado de tu SO. Al pasar el ratón por encima de una imagen, se muestra un nombre único para la imagen, si éste se especificó al editar la moneda.</p>
 <h3>4.3 Filtrado</h3>
@@ -331,7 +331,7 @@ Para pegar un enlace a un archivo local, puede arrastrar y soltar o copiar y peg
 <h3>5.2 Copia de seguridad</h3>
 <p>Para evitar la pérdida de datos de la colección debido a errores de hardware, software, errores humanos o programas maliciosos, se recomienda realizar una copia de seguridad. Para crear una copia de seguridad de la colección, seleccione el menú <samp>Archivo</samp> &rarr; <samp>Backup</samp>. Esto creará una copia de la colección actual con la fecha y hora agregadas (por ejemplo, demo_171025115112.db para la copia realizada a las 11:51:12 del 25/10/2017) en el directorio especificado en la configuración. Para restaurar los datos, simplemente renombra el archivo de copia de seguridad eliminando la fecha y hora. También puedes copiar el archivo de la colección usando tu sistema operativo.</p>
 <p>Nota: Se recomienda almacenar las copias de seguridad en un soporte físico distinto al del trabajador. Elegir un servicio de almacenamiento en la nube, como Dropbox, puede ser una buena opción. También es importante realizar copias de seguridad periódicamente, antes o después de realizar un gran número de cambios (ver <a href="#sec8_1">8.1</a>).</p>
-<h3>5.3 Vaciado</h3>
+<h3 id="sec5_3">5.3 Vaciado</h3>
 <p>Dadas las peculiaridades de la implementación de SQLite, que permite el almacenamiento de datos de colección, la memoria no se libera automáticamente al eliminar datos del archivo de colección. Con el tiempo, esto puede provocar un aumento del tamaño del archivo de colección, su fragmentación y la ralentización de la aplicación. Si es necesario, puede reducir el tamaño del archivo de colección liberando espacio vacío innecesario seleccionando el menú <samp>Archivo</samp> &rarr; <samp>Vaciado</samp> .</p>
 <h3>5.4 Contraseña</h3>
 <p>En el menú <samp>Archivo</samp> &rarr; <samp>Asignar contraseña...</samp> puedes asignar la contraseña que se pedirá cada vez que se abra la colección.</p>
@@ -382,6 +382,9 @@ Tras eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 
 <p>OpenNumismat le permite guardar la Tabla actual de monedas con todos los filtros aplicados y ordenarlos en un archivo separado en formato MS Excel, HTML o CSV (Nota: en la implementación actual, las imágenes no se exportan).</p>
 <p>Puedes exportar la Tabla de monedas en el menú <samp>Informe</samp> &rarr; <samp>Guardar lista actual...</samp>. En el cuadro de diálogo que se abre, selecciona el nombre del archivo, el formato requerido y guarda el archivo.</p>
 <h3>6.6 Estadística</h3>
+<p><a href="screenshots.html">Screenshots</a> of example statistics charts.</p>
+<p>Additional settings for statistics charts:</p>
+<p><img src="/images/manual/chartSettings.png"></p>
 <p>También puedes usar MS Excel para crear diagramas y calcular estadísticas. Copia las monedas que necesites de OpenNumismat a MS Excel o exporta la tabla de monedas a un archivo de MS Excel (ver <a href="#sec6_5">6.5</a>) y usa sus funcionalidades.</p>
 <h3>6.7 Sumario</h3>
 <p><img src="/images/manual/summary.png"></p>
@@ -392,10 +395,10 @@ Tras eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>o desde el menú <samp>Referencia</samp> &rarr; <samp>Editar...</samp>:</p>
 <p><img src="/images/manual/ref_edit1.png"></p>
-<p>Al hacer clic con el botón derecho en la entrada del directorio, se abre el acceso para agregar o eliminar el icono del elemento:</p>
+<p>Right-clicking on the entry in the reference opens access to adding or deleting the item's icon:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
 <p>Las referencias para País, Período, Autoridad, Unidad, Ceca, Serie, son referencias cruzadas y su actualización está disponible sólo si selecciona el valor del campo base que existe en la referencia. Por ejemplo, para agregar una nueva acuñación, primero debe seleccionar un país existente.</p>
-<p>La casilla de verificación <samp>Ordenar</samp> ordena todas las entradas del directorio; de lo contrario, todos los elementos se mostrarán en el orden en que se ingresaron.</p>
+<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered. This order can be changed by <samp>Move up</samp>/<samp>Move down</samp> in context menu.</p>
 <p>Para llenar rápidamente las referencias con los datos ingresados ​​desde la colección, selecciona el menú <samp>Referencia</samp> &rarr; <samp>Rellenar desde colección</samp>.</p>
 <p>Por defecto, las referencias se almacenan en un archivo separado con una extensión .ref, que se puede copiar, renombrar o eliminar mediante su sistema operativo. La ruta al archivo de referencias se puede especificar en el cuadro de diálogo Configuración.</p>
 <p>También puedes adjuntar la referencia actual a un archivo de colección. Selecciona <samp>Referencia</samp> &rarr; <samp>Adjuntar referencia actual</samp> para adjuntar o <samp>Referencia</samp> &rarr; <samp>Desvincular referencia actual</samp> para eliminar la referencia de la colección y usar la configuración predeterminada de Ajustes.</p>
@@ -418,14 +421,19 @@ Tras eso, se abrirá el cuadro de diálogo para asignar campos con las primeras 
 Configuración específica para colección (almacenada para cada archivo de colección):
 <p><img src="/images/settingsCollection.png"></p>
 
+<h4>Max image side len, Image quality</h4>
+<p>These settings control images in the collection file and affect its size.</p>
+<p>Setting <samp>Max image side len</samp> to 0 will preserve the original size.</p>
+<p>Setting <samp>Image quality</samp> to 100% will will use lossless compression.</p>
+<p>Decreasing <samp>Max image side len</samp> or <samp>Image quality</samp> allows to recalculate all images in collection to reduce collection file size (see <a href="#sec5_3">5.3</a>).</p>
 <h4>Altura de imagen previa</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<h4>Campos numéricos de formato libre</h4>
-<p>Para introducir valores en el formato expandido (signo de interrogación en el campo Año, fracciones en el campo Nominal, rango en el campo Peso, etc.).</p>
 <h4>Imágenes al fondo</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
 
+<h4>Campos numéricos de formato libre</h4>
+<p>Para introducir valores en el formato expandido (signo de interrogación en el campo Año, fracciones en el campo Nominal, rango en el campo Peso, etc.).</p>
 <h3 id="sec8_3">8.3 Campos</h3>
 <p><img src="/images/settingsFields.png"></p>
 <p>El panel Campos del cuadro de diálogo de ajustes le permite cambiar el nombre y eliminar de la interfaz parte de los campos de la colección. En este caso, sólo los campos seleccionados se mostrarán en la interfaz del programa, pero los datos se guardarán para todos los campos.</p>
