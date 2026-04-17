@@ -271,7 +271,7 @@ Um einen Link zu einer lokalen Datei einzufügen, können Sie die Datei per Drag
 <ul>
 <li>Lade... - Bilddatei von Datenträger auswählen</li>
 <li>Speichern unter... - Bild auf Datenträger speichern;</li>
-<li>Umbenennen... - Legen Sie einen eindeutigen Namen für das Bild fest, der in der QuickInfo des Bildbedienfelds angezeigt wird (siehe 4.2);</li>
+<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see <a href="#sec4_2">4.2</a>);</li>
 <li>Tausche mit - Vertauscht zwei Bilder;</li>
 <li>Einfügen - fügt ein Bild aus der Zwischenablage ein (möglich sind eine Bilddatei, ein Bild aus einem Bildbearbeitungsprogramm oder ein Hyperlink);</li>
 <li>Kopieren - Kopiert das Bild für eine spätere Bearbeitung in die Zwischenablage;</li>
@@ -301,7 +301,7 @@ Um einen Link zu einer lokalen Datei einzufügen, können Sie die Datei per Drag
 <p><img src="/images/manual/columns.png"></p>
 <p>Im geöffneten Dialogfeld müssen Sie die gewünschten Felder markieren. Durch Ziehen der Feldnamen mit der Maus können Sie die Position der Felder zueinander ändern. Sie können Feldüberschriften auch direkt in die Münztabelle ziehen. Ein Klick auf die Feldüberschrift sortiert die Tabelle nach dem ausgewählten Feld.</p>
 <p>You can control the width of a column in a table by expanding the border of the column heading with the mouse or by right-clicking on the header and selecting <samp>Adjust size</samp>.</p>
-<h3>4.2 Bildbereich</h3>
+<h3 id="sec4_2">4.2 Bildbereich</h3>
 <p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
 <br>Double-clicking opens the imagen in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.</p>
 <h3>4.3 Filter</h3>
@@ -333,7 +333,7 @@ Um einen Link zu einer lokalen Datei einzufügen, können Sie die Datei per Drag
 <h3>5.2 Sicherung</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.</p>
 <p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).</p>
-<h3>5.3 Komprimieren</h3>
+<h3 id="sec5_3">5.3 Komprimieren</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.</p>
 <h3>5.4 Passwort</h3>
 <p>In the menu <samp>File</samp> &rarr; <samp>Set password...</samp> you can set the password that will be requested each time the collection is opened.</p>
@@ -383,6 +383,9 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>Mit OpenNumismat können Sie die aktuelle Münztabelle mit allen angewendeten Filtern und Sortierungen in einer separaten Datei im MS Excel-, HTML- oder CSV-Format speichern (Hinweis: In der aktuellen Implementierung werden keine Bilder exportiert).</p>
 <p>You can export the Table of coins in the menu <samp>Report</samp> &rarr; <samp>Save current list...</samp>. In the opened dialog select the file name, the required format and save the file.</p>
 <h3>6.6 Statistiken</h3>
+<p><a href="screenshots.html">Screenshots</a> of example statistics charts.</p>
+<p>Additional settings for statistics charts:</p>
+<p><img src="/images/manual/chartSettings.png"></p>
 <p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see <a href="#sec6_5">6.5</a>) and use its functionality.</p>
 <h3>6.7 Zusammenfassung</h3>
 <p><img src="/images/manual/summary.png"></p>
@@ -393,10 +396,10 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>or from menu <samp>Reference</samp> &rarr; <samp>Edit...</samp>:</p>
 <p><img src="/images/manual/ref_edit1.png"></p>
-<p>Ein Rechtsklick auf den Eintrag im Verzeichnis öffnet die Möglichkeit, das Symbol des Elements hinzuzufügen oder zu löschen:</p>
+<p>Right-clicking on the entry in the reference opens access to adding or deleting the item's icon:</p>
 <p><img src="/images/manual/ref_menu.png"></p>
 <p>Die Verweise für Land, Periode, Herrscher, Einheit, Prägestätte und Serie sind Querverweise und können nur aktualisiert werden, wenn Sie den Wert des Basisfelds auswählen, das in dem Verweis vorhanden ist. Um beispielsweise eine neue Prägestätte hinzuzufügen, müssen Sie zuerst ein vorhandenes Land auswählen.</p>
-<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.</p>
+<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered. This order can be changed by <samp>Move up</samp>/<samp>Move down</samp> in context menu.</p>
 <p>To quickly fill references with entered data from the collection, select the <samp>Reference</samp> &rarr; <samp>Fill from collection</samp> menu.</p>
 <p>Standardmäßig werden Verweise in einer separaten Datei mit der Endung .ref gespeichert, die über Ihr Betriebssystem kopiert, umbenannt oder gelöscht werden kann. Der Pfad zur Verweisdatei kann im Einstellungsdialog festgelegt werden.</p>
 <p>Also you can attach current reference to a collection file. Select <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> for attaching or <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> for remove reference from collection and use default from Settings.</p>
@@ -419,14 +422,19 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 Sammlungsspezifische Einstellungen (für jede Sammlungsdatei gespeichert):
 <p><img src="/images/settingsCollection.png"></p>
 
+<h4>Max image side len, Image quality</h4>
+<p>These settings control images in the collection file and affect its size.</p>
+<p>Setting <samp>Max image side len</samp> to 0 will preserve the original size.</p>
+<p>Setting <samp>Image quality</samp> to 100% will will use lossless compression.</p>
+<p>Decreasing <samp>Max image side len</samp> or <samp>Image quality</samp> allows to recalculate all images in collection to reduce collection file size (see <a href="#sec5_3">5.3</a>).</p>
 <h4>Vorschaugröße Bilder</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<h4>Freies Format in numerischen Feldern</h4>
-<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
 <h4>Bilder unten</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
 
+<h4>Freies Format in numerischen Feldern</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).</p>
 <h3 id="sec8_3">8.3 Fields</h3>
 <p><img src="/images/settingsFields.png"></p>
 <p>Im Bereich „Felder“ des Einstellungsdialogs können Sie Teile der Sammlungsfelder umbenennen und aus der Benutzeroberfläche entfernen. In diesem Fall werden nur die ausgewählten Felder in der Programmoberfläche angezeigt, die Daten aller Felder bleiben jedoch erhalten.</p>
