@@ -295,7 +295,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <ul>
 <li>Load... - select image from file on disk;
 <li>Save as... - saves the image to a file on disk;
-<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see 4.2);
+<li>Rename... - set a unique name for the image that will be displayed in the tooltip of the image panel (see <a href="#sec4_2">4.2</a>);
 <li>Exchange with - swaps two images;
 <li>Paste - paste an image from the clipboard (it can be a graphic file, an image copied from a image editor or a web link);
 <li>Copy - copies the image to the clipboard for later paste into the image editor;
@@ -331,7 +331,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>In the opened dialog, it is necessary to mark the fields of interest. Dragging the names of fields with a mouse can change the location of the fields relative to each other. You can also drag field headers directly into the coin table. Clicking on the field header sorts the table according to the selected field.
 <p>You can control the width of a column in a table by expanding the border of the column heading with the mouse or by right-clicking on the header and selecting <samp>Adjust size</samp>.
 
-<h3>4.2 Image Panel</h3>
+<h3 id="sec4_2">4.2 Image Panel</h3>
 <p>This panel displays images tied to the coin. At the bottom of the panel are checkboxes allowing you to control the number of simultaneously displayed images.
 <br>Double-clicking opens the imagen in the Image Editor (see <a href="#sec9">9</a>) or in the standard image viewer of your OS. When you hover your mouse over an image, a unique image name is displayed, if it was specified when editing the coin.
 
@@ -369,7 +369,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.
 <p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).
 
-<h3>5.3 Vacuum</h3>
+<h3 id="sec5_3">5.3 Vacuum</h3>
 <p>In view of the peculiarities of SQLite implementation, which provides storage of collection data, memory is not automatically released when data is deleted in the collection file. Over time, this can lead to an increase in the size of the collection file, its fragmentation and slowdown of the application. If necessary, you can reduce the size of the collection file by releasing unnecessary "empty" space by selecting the <samp>File</samp> &rarr; <samp>Vacuum</samp> menu.
 
 <h3>5.4 Password</h3>
@@ -427,6 +427,9 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>You can export the Table of coins in the menu <samp>Report</samp> &rarr; <samp>Save current list...</samp>. In the opened dialog select the file name, the required format and save the file.
 
 <h3>6.6 Statistics</h3>
+<p><a href="screenshots.html">Screenshots</a> of example statistics charts.
+<p>Additional settings for statistics charts:
+<p><img src="/images/manual/chartSettings.png">
 <p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see <a href="#sec6_5">6.5</a>) and use its functionality.
 
 <h3>6.7 Summary</h3>
@@ -438,10 +441,10 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p><img src="/images/manual/ref_edit2.png"></p>
 <p>or from menu <samp>Reference</samp> &rarr; <samp>Edit...</samp>:
 <p><img src="/images/manual/ref_edit1.png"></p>
-<p>Right-clicking on the entry in the directory opens access to adding or deleting the item's icon:
+<p>Right-clicking on the entry in the reference opens access to adding or deleting the item's icon:
 <p><img src="/images/manual/ref_menu.png"></p>
 <p>References for Country, Period, Ruler, Unit, Mint, Series is a cross-references and their updating is available only if you select the value of the base field that exists in the reference. For example, to add a new mint, you should first select an existing country.
-<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered.
+<p>The <samp>Sort</samp> check box sorts all the entries in the directory, otherwise all items will be displayed in the order they were entered. This order can be changed by <samp>Move up</samp>/<samp>Move down</samp> in context menu.
 <p>To quickly fill references with entered data from the collection, select the <samp>Reference</samp> &rarr; <samp>Fill from collection</samp> menu.
 <p>By default, references are stored in a separate file with a .ref extension, which can be copied, renamed or deleted by means of your OS. The path to the references file can be specified in the Settings dialog.
 <p>Also you can attach current reference to a collection file. Select <samp>Reference</samp> &rarr; <samp>Attach current reference</samp> for attaching or <samp>Reference</samp> &rarr; <samp>Detach current reference</samp> for remove reference from collection and use default from Settings.
@@ -468,14 +471,20 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 Collection specific settings (stored for each collection file):
 <p><img src="/images/settingsCollection.png"></p>
 
+<h4>Max image side len, Image quality</h4>
+<p>These settings control images in the collection file and affect its size.
+<p>Setting <samp>Max image side len</samp> to 0 will preserve the original size.
+<p>Setting <samp>Image quality</samp> to 100% will will use lossless compression.
+<p>Decreasing <samp>Max image side len</samp> or <samp>Image quality</samp> allows to recalculate all images in collection to reduce collection file size (see <a href="#sec5_3">5.3</a>).
+
 <h4>Preview image height</h4>
 <p><img src="/images/manual/main_height.png"></p>
 
-<h4>Free format numeric fields</h4>
-<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).
-
 <h4>Images at bottom</h4>
 <p><img src="/images/manual/main_bottom.png"></p>
+
+<h4>Free format numeric fields</h4>
+<p>For entering values in the expanded format (question mark in the Year field, fractions in the Nominal field, range in the Weight field, etc.).
 
 <h3 id="sec8_3">8.3 Fields</h3>
 <p><img src="/images/settingsFields.png"></p>
