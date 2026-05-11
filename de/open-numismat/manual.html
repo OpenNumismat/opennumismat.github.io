@@ -365,19 +365,23 @@ Anschließend öffnet sich der Dialog zur Feldzuordnung, der die ersten 10 Münz
 <p><img src="/images/manual/report.png"></p>
 <p>Für einen Schnellbericht wurde die im Dialogfeld „Einstellungen“ als <samp>Standardvorlage</samp>festgelegte Vorlage verwendet. </p>
 <h3>6.3 Bearbeitungsvorlagen</h3>
-<p>Die Engine zur Generierung von Berichtsvorlagen basiert auf der Open-Source-Bibliothek Jinja2.</p>
-<p>Benutzervorlagen sollten im Ordner „Dokumente“ (üblicherweise C:\Benutzer\Benutzername\Dokumente\OpenNumismat\Vorlagen) abgelegt werden. Jede Vorlage befindet sich in einem separaten Unterordner, dessen Name als Vorlagenname verwendet wird.</p>
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.</p>
+<p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.</p>
 <p>Die Berichte werden in UTF-8-Kodierung erstellt, daher sollten auch die Vorlagen in derselben Kodierung vorliegen. Für die Bearbeitung der Vorlagen empfiehlt sich daher beispielsweise die Verwendung von Notepad++.</p>
-<p>Achtung: Beim Löschen, Neuinstallieren oder Aktualisieren der Anwendung können Benutzervorlagen verloren gehen. Sichern Sie Ihre Vorlagen daher immer, bevor Sie Änderungen an der Anwendung vornehmen.</p>
+<p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.</p>
+<p>The context variables</p>
+<pre>records</pre> and <pre>titles</pre> are passed to the generator. <pre>titles</pre> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
+ <pre>records</pre> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).
+
 <h3>6.4 Beispiele für Berichtvorlagen</h3>
 <p>Commemoratives_ByCountry</p>
-<p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png"></a></p>
+<p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png" alt="Commemoratives_ByCountry template screenshot"></a></p>
 <p>Commemoratives_ByYear</p>
-<p><a href="/data/Commemoratives_ByYear.pdf"><img src="/images/manual/Commemoratives_ByYear.png"></a></p>
+<p><a href="/data/Commemoratives_ByYear.pdf"><img src="/images/manual/Commemoratives_ByYear.png" alt="Commemoratives_ByYear template screenshot"></a></p>
 <p>holders</p>
-<p><a href="/data/holders.pdf"><img src="/images/manual/holders.png"></a></p>
+<p><a href="/data/holders.pdf"><img src="/images/manual/holders.png" alt="holders template screenshot"></a></p>
 <p>Circulation</p>
-<p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png"></a></p>
+<p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png" alt="circulation template screenshot"></a></p>
 
 <h3 id="sec6_5">6.5 Exportieren der Münztabelle</h3>
 <p>Mit OpenNumismat können Sie die aktuelle Münztabelle mit allen angewendeten Filtern und Sortierungen in einer separaten Datei im MS Excel-, HTML- oder CSV-Format speichern (Hinweis: In der aktuellen Implementierung werden keine Bilder exportiert).</p>
