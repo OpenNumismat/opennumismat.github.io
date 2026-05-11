@@ -407,20 +407,22 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <p>For a quick report, used the template set in the Settings dialog as the <samp>Default template</samp>.
 
 <h3>6.3 Editing Templates</h3>
-<p>The engine for generating template reports is based on the open-source Jinja2 library.
-<p>User templates should be placed into Documents folder (usually C:\Users\user\Documents\OpenNumismat\templates). Each template is in a separate subfolder, the name of which is used as the template name.
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+<p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.
 <p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.
-<p>Attention: when deleting, reinstalling or updating the application, user templates can be lost. Always back up your templates, if you make changes to them, before these actions.
+<p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.
+<p>The context variables <pre>records</pre> and <pre>titles</pre> are passed to the generator. <pre>titles</pre> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
+ <pre>records</pre> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).
 
 <h3>6.4 Report template examples</h3>
 <p>Commemoratives_ByCountry
-<p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png"></a></p>
+<p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png" alt="Commemoratives_ByCountry template screenshot"></a></p>
 <p>Commemoratives_ByYear
-<p><a href="/data/Commemoratives_ByYear.pdf"><img src="/images/manual/Commemoratives_ByYear.png"></a></p>
+<p><a href="/data/Commemoratives_ByYear.pdf"><img src="/images/manual/Commemoratives_ByYear.png" alt="Commemoratives_ByYear template screenshot"></a></p>
 <p>holders
-<p><a href="/data/holders.pdf"><img src="/images/manual/holders.png"></a></p>
+<p><a href="/data/holders.pdf"><img src="/images/manual/holders.png" alt="holders template screenshot"></a></p>
 <p>Circulation
-<p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png"></a></p>
+<p><a href="/data/Circulation.pdf"><img src="/images/manual/Circulation.png" alt="circulation template screenshot"></a></p>
 
 <h3 id="sec6_5">6.5 Exporting the Table of coins</h3>
 <p>OpenNumismat allows you to save the current Table of coins with all applied filters and sorting in a separate file in MS Excel, HTML or CSV format (Note: in the current implementation, images are not exported).
