@@ -367,7 +367,7 @@
 <p>За да редактирате шаблони, е необходимо да имате базови познания по HTML. Механизмът за генериране на отчетите от шаблони е базиран на библиотеката с отворен код <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a>.</p>
 <p>Потребителските шаблони трябва да бъдат поставени в папката Documents (Документи) — обикновено <code>%UserProfile%\Documents\OpenNumismat\templates</code>. Всеки шаблон се намира в отделна подпапка, чието име се използва като име на шаблона.</p>
 <p>Отчетите се генерират в кодировка UTF-8 и съответно шаблоните трябва да са в едно и също кодиране. Следователно, за редактиране на шаблони се препоръчва да използвате например Notepad++.</p>
-<p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.</p>
+<p>Примери за шаблони могат да бъдат намерени в папката на програмата (обикновено <code>C:\Program Files\OpenNumismat\templates</code>) или в <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">изходния код</a> на приложението.</p>
 <p>The context variables</p>
 <pre>records</pre> and <pre>titles</pre> are passed to the generator. <pre>titles</pre> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
  <pre>records</pre> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).
