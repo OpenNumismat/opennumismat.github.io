@@ -353,21 +353,22 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 
 <h2 id="sec6">6 Raporlar</h2>
 <h3>6.1 Rapor oluşturma</h3>
-<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.
-<br>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
+<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.</p>
+<p>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
 <p>To create a report, you need to select the coins for which data will be included in the report and open the Preview dialog by selecting the <samp>Report</samp> &rarr; <samp>Report...</samp> menu:</p>
-<p><img src="/images/manual/report_preview.png"></p>
+<p><img src="/images/manual/report_preview.png" alt="screenshot of report preview dialog"></p>
 <p>In the Preview dialog, you can select a report template (the left list on the toolbar), control the preview mode, and print or save the report to a file of the desired format (right buttons on the toolbar).</p>
 <p>Note: Preview dialog use old library for generating HTML. So reports in preview may be corrupted and do not match the view in modern browsers. Also it may crash when generating large reports (more than 100 coins). For viewing and printing you can use Quick report (see <a href="#sec6_2">6.2</a>) for open report in your browser.</p>
 <h3 id="sec6_2">6.2 Hızlı rapor</h3>
 <p>By selecting the <samp>Report</samp> &rarr; <samp>View in browser</samp> menu, you can quickly view the report for the selected coins in HTML format. The report will be opened in the system browser.</p>
-<p><img src="/images/manual/report.png"></p>
+<p><img src="/images/manual/report.png" alt="full template screenshot"></p>
 <p>For a quick report, used the template set in the Settings dialog as the <samp>Default template</samp>.</p>
 <h3>6.3 Şablonları Düzenleme</h3>
-<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.</p>
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.</p>
-<p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.</p>
+<p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
 <p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
  <code>records</code> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).</p>
 <h3>6.4 Report template examples</h3>
@@ -386,10 +387,10 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 <h3>6.6 Statistics</h3>
 <p><a href="screenshots.html">Screenshots</a> of example statistics charts.</p>
 <p>Additional settings for statistics charts:</p>
-<p><img src="/images/manual/chartSettings.png"></p>
+<p><img src="/images/manual/chartSettings.png" alt="chart settings dialog screenshot"></p>
 <p>Also for create any diagram and calculating statistics you can use MS Excel. Copy coins that you need from OpenNumismat to MS Excel or export Table of coins to MS Excel file (see <a href="#sec6_5">6.5</a>) and use its functionality.</p>
 <h3>6.7 Summary</h3>
-<p><img src="/images/manual/summary.png"></p>
+<p><img src="/images/manual/summary.png" alt="summary dialog screenshot"></p>
 
 <h2 id="sec7">7 Tercihler</h2>
 <p>References make it easy to enter data when editing a coin, and also add icons (such as flags) to the data display. References are available for the following fields: Region, Country, Period, Ruler, Unit, Mint, Series, Grade, Material, Shape, Quality, Edge, Rarity, ObvRev, Type, Defect, Place (purchase or sale).</p>
