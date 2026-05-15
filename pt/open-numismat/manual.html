@@ -370,8 +370,8 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <p>Os modelos do utilizador devem ser colocados na pasta «Documentos» (normalmente <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Cada modelo encontra-se numa subpasta separada, cujo nome é utilizado como nome do modelo.</p>
 <p>Podem encontrar-se exemplos de modelos na pasta do programa (normalmente <code>C:\Program Files\OpenNumismat\templates</code>) oou no <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">código-fonte</a>.</p>
 <p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
-<p>As variáveis de contexto <code>records</code> e <code>titles</code> são passadas ao gerador. <code>titles</code> contém os nomes dos campos a mostrar (e.g. <code>titles.subjectshort</code> - Assunto).
- <code>records</code> - uma matriz com todas as moedas a apresentar. Cada elemento da matriz contém uma moeda com todos os campos (e.g. <code>{{records[0].subjectshort}}</code> - Assunto da primeira moeda).</p>
+<p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>{{titles.subjectshort}}</code> - Subject).
+ <code>records</code> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).</p>
 <h3>6.4 Exemplos de modelos de relatório</h3>
 <p>Commemoratives_ByCountry</p>
 <p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png" alt="Commemoratives_ByCountry template screenshot"></a></p>
