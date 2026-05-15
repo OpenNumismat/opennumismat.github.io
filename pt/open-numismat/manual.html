@@ -354,21 +354,22 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 
 <h2 id="sec6">6. Relatórios</h2>
 <h3>6.1 Gerar relatórios</h3>
-<p>A aplicação suporta a geração de relatórios em modelos. Pode editar os existentes ou criar os seus próprios modelos.
-<br>O relatório gerado pode ser imprimido ou gravado em formatos HTML, PDF, MS Word a partir do diálogo de antevisão.</p>
+<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.</p>
+<p>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
 <p>Para criar um relatório, tem de seleccionar as moedas a incluir no relatório e abrir a antevisão seleccionando o menu <samp>Relatórios</samp> &rarr; <samp>Relatório...</samp>:</p>
-<p><img src="/images/manual/report_preview.png"></p>
+<p><img src="/images/manual/report_preview.png" alt="screenshot of report preview dialog"></p>
 <p>No diálogo Antever relatório pode seleccionar um modelo de relatório (a lista pendente à esquerda na barra de ferramentas), controlar o modo da antevisão e imprimir ou gravar o relatório num dos formatos disponíveis (usando os botões da barra).</p>
 <p>Nota: o diálogo de antevisão usa uma biblioteca antiga para gerar HTML. A antevisão dos relatórios pode estar corrompida e não reflecte o seu aspecto num navegador moderno. Pode também rebentar em relatórios gransdes (mais de 100 moedas). Para este efeito, use o relatório rápido (veja <a href="#sec6_2">6.2</a>)para abrir o relatório no seu anvegador.</p>
 <h3 id="sec6_2">6.2 Relatório rápido</h3>
 <p>Seleccionando <samp>Relatório</samp> &rarr; <samp>Ver no navegador</samp>, pode ver rapidamente o relatório das moedas seleccionadas em formato HTML. O relatório será aberto no navegador do sistema.</p>
-<p><img src="/images/manual/report.png"></p>
+<p><img src="/images/manual/report.png" alt="full template screenshot"></p>
 <p>Para um relatório rápido, use o conjunto de modelos no diálogo Definições como <samp>Modelo pré-definido</samp>.</p>
 <h3>6.3 Editar modelos</h3>
-<p>Para editar modelos, é necessário ter conhecimentos básicos de HTML. O mecanismo de geração de relatórios de modelos baseia-se na biblioteca de código aberto <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a>.</p>
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>Os modelos do utilizador devem ser colocados na pasta «Documentos» (normalmente <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Cada modelo encontra-se numa subpasta separada, cujo nome é utilizado como nome do modelo.</p>
-<p>Os relatórios são gerados com codificação UTF-8, logo, os modelos também devem usar esta codificação. Assim, para editar modelos recomenda-se que use um editor apropriado, por exemplo, o Notepad++.</p>
 <p>Podem encontrar-se exemplos de modelos na pasta do programa (normalmente <code>C:\Program Files\OpenNumismat\templates</code>) oou no <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">código-fonte</a>.</p>
+<p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
 <p>As variáveis de contexto <code>records</code> e <code>titles</code> são passadas ao gerador. <code>titles</code> contém os nomes dos campos a mostrar (e.g. <code>titles.subjectshort</code> - Assunto).
  <code>records</code> - uma matriz com todas as moedas a apresentar. Cada elemento da matriz contém uma moeda com todos os campos (e.g. <code>{{records[0].subjectshort}}</code> - Assunto da primeira moeda).</p>
 <h3>6.4 Exemplos de modelos de relatório</h3>
@@ -387,10 +388,10 @@ Em seguida, verá o diálogo para atribuir os campos das primeiras 10 moedas:</p
 <h3>6.6 Estatísticas</h3>
 <p><a href="screenshots.html">Capturas de ecrã</a> de gráficos de estatísticas.</p>
 <p>Definições adicionais para gráficos de estatísticas</p>
-<p><img src="/images/manual/chartSettings.png"></p>
+<p><img src="/images/manual/chartSettings.png" alt="chart settings dialog screenshot"></p>
 <p>Para criar qualquer diagrama e calcular estatísticas pode usar o MS Excel. Copie moedas de que necessita do OpenNumismat para o MS Excel ou exporte a tabela de moedas para um ficheiro MS Excel (ver <a href="#sec6_5">6.5</a>) e utilize as suas funcionalidades.</p>
 <h3>6.7 Resumo</h3>
-<p><img src="/images/manual/summary.png"></p>
+<p><img src="/images/manual/summary.png" alt="summary dialog screenshot"></p>
 
 <h2 id="sec7">7 Referências</h2>
 <p>As referências facilitam a inserção de dados ao adicionar uma moeda à colecção e juntam ícones (tais como bandeiras) à exibição de dados. Há referências para os seguintes campos: Região, País, Período, Régua, Unidade, Cunho, Série, Grau, Material, Forma, Qualidade, Rebordo, Raridade, AnvRev, Tipo, Defeito, Local (compra ou venda).</p>
