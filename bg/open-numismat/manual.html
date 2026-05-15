@@ -370,7 +370,7 @@
 <p>Примери за шаблони могат да бъдат намерени в папката на програмата (обикновено <code>C:\Program Files\OpenNumismat\templates</code>) или в <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">изходния код</a> на приложението.</p>
 <p>Основният файл на шаблона трябва да се казва <code>coins.htm</code>. Ако е наличен файлът <code>coin.htm</code>, той ще бъде използван като шаблон за генериране на отчет за отделна монета. Също така, ако се генерира отчет за няколко монети, този шаблон ще бъде използван за всяка отделна монета, в допълнение към общия отчет, базиран на шаблона <code>coins.htm</code>.</p>
 <p>Към генератора се подават контекстните променливи <code>records</code> и <code>titles</code>. <code>titles</code> съдържа имената на полетата за показване (например <code>{{titles.subjectshort}}</code> - Тема).
- <code>records</code> - представлява масив с всички монети за показване. Всеки елемент от масива съдържа една монета с всички нейни полета (например <code>{{records[0].subjectshort}}</code> - Тема на първата монета).</p>
+ <code>records</code> представлява масив с всички монети за показване. Всеки елемент от масива съдържа една монета с всички нейни полета (например <code>{{records[0].subjectshort}}</code> - Тема на първата монета).</p>
 <h3>6.4 Примери за шаблони на отчети</h3>
 <p>Commemoratives_ByCountry</p>
 <p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png" alt="Commemoratives_ByCountry template screenshot"></a></p>
