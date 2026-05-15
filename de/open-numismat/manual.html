@@ -355,20 +355,22 @@ Anschließend öffnet sich der Dialog zur Feldzuordnung, der die ersten 10 Münz
 
 <h2 id="sec6">6 Berichte</h2>
 <h3>6.1 Berichte erstellen</h3>
-<p>Die Anwendung unterstützt die Erstellung von Berichten anhand von Vorlagen. Sie können bestehende Vorlagen bearbeiten oder eigene Berichtsvorlagen erstellen. <br>Der generierte Bericht kann über den Vorschau-Dialog gedruckt oder in den Formaten HTML, PDF und MS Word gespeichert werden.</p>
+<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.</p>
+<p>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
 <p>Um einen Bericht zu erstellen, müssen Sie die Münzen auswählen, deren Daten in den Bericht aufgenommen werden sollen, und den Vorschau-Dialog über das Menü  <samp>Bericht</samp> &rarr; <samp>Bericht...</samp> öffnen:</p>
-<p><img src="/images/manual/report_preview.png"></p>
+<p><img src="/images/manual/report_preview.png" alt="screenshot of report preview dialog"></p>
 <p>Im Vorschau-Dialog können Sie eine Berichtsvorlage auswählen (die linke Liste in der Symbolleiste), den Vorschaumodus steuern und den Bericht drucken oder in einer Datei des gewünschten Formats speichern (rechte Schaltflächen in der Symbolleiste).</p>
 <p>Hinweis: Der Vorschau-Dialog verwendet eine veraltete Bibliothek zur HTML-Generierung. Daher können Berichte in der Vorschau fehlerhaft dargestellt werden und stimmen möglicherweise nicht mit der Ansicht in modernen Browsern überein. Zudem kann es beim Generieren umfangreicher Berichte (mit mehr als 100 Münzen) zu Programmabstürzen kommen. Zum Betrachten und Ausdrucken können Sie die Funktion „Schnellbericht“ (siehe<a href="#sec6_2">6.2</a>) verwenden, um den Bericht in Ihrem Browser zu öffnen. </p>
 <h3 id="sec6_2">6.2 Kurzbericht</h3>
 <p>By selecting the <samp>Report</samp> &rarr; <samp>View in browser</samp> menu, you can quickly view the report for the selected coins in HTML format. The report will be opened in the system browser.</p>
-<p><img src="/images/manual/report.png"></p>
+<p><img src="/images/manual/report.png" alt="full template screenshot"></p>
 <p>Für einen Schnellbericht wurde die im Dialogfeld „Einstellungen“ als <samp>Standardvorlage</samp>festgelegte Vorlage verwendet. </p>
 <h3>6.3 Bearbeitungsvorlagen</h3>
-<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.</p>
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.</p>
-<p>Die Berichte werden in UTF-8-Kodierung erstellt, daher sollten auch die Vorlagen in derselben Kodierung vorliegen. Für die Bearbeitung der Vorlagen empfiehlt sich daher beispielsweise die Verwendung von Notepad++.</p>
 <p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.</p>
+<p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
 <p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
  <code>records</code> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).</p>
 <h3>6.4 Beispiele für Berichtvorlagen</h3>
@@ -387,10 +389,10 @@ Anschließend öffnet sich der Dialog zur Feldzuordnung, der die ersten 10 Münz
 <h3>6.6 Statistiken</h3>
 <p><a href="screenshots.html">Screenshots</a> von Beispiel-Statistikdiagrammen.</p>
 <p>Zusätzliche Einstellungen für Statistikdiagramme:</p>
-<p><img src="/images/manual/chartSettings.png"></p>
+<p><img src="/images/manual/chartSettings.png" alt="chart settings dialog screenshot"></p>
 <p>Auch zur Erstellung von Diagrammen und zur Berechnung von Statistiken können Sie MS Excel verwenden. Kopieren Sie die benötigten Münzen aus OpenNumismat nach MS Excel oder exportieren Sie die Münztabelle in eine MS Excel-Datei (siehe<a href="#sec6_5">6.5</a>) und nutzen Sie dort dessen Funktionalität.</p>
 <h3>6.7 Zusammenfassung</h3>
-<p><img src="/images/manual/summary.png"></p>
+<p><img src="/images/manual/summary.png" alt="summary dialog screenshot"></p>
 
 <h2 id="sec7">7. Auswahllisten</h2>
 <p>Referenzen erleichtern die Dateneingabe beim Bearbeiten einer Münze und fügen der Datenanzeige Symbole (z. B. Flaggen) hinzu. Referenzen sind für folgende Felder verfügbar: Region, Land, Periode, Herrscher, Einheit, Prägestätte, Serie, Erhaltungsgrad, Material, Form, Qualität, Rand, Seltenheit, Vorderseite/Rückseite, Typ, Defekt, Ort (Kauf oder Verkauf).</p>
