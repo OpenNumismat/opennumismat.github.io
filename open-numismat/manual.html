@@ -408,8 +408,8 @@ After that, the dialog for assigning fields with the first 10 coins from the sou
 
 <h3>6.3 Editing Templates</h3>
 <p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.
 <p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.
-<p>The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.
 <p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.
 <p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.
 <p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
