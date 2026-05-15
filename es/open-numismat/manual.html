@@ -369,7 +369,7 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <p>User templates should be placed into Documents folder (usually <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Each template is in a separate subfolder, the name of which is used as the template name.</p>
 <p>Examples of templates can be found in the program folder (usually <code>C:\Program Files\OpenNumismat\templates</code>) or in the <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">source codes</a>.</p>
 <p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
-<p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>titles.subjectshort</code> - Subject).
+<p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>{{titles.subjectshort}}</code> - Subject).
  <code>records</code> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin).</p>
 <h3>6.4 Ejemplos de plantilla de informe</h3>
 <p>Commemoratives_ByCountry</p>
