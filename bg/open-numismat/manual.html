@@ -353,21 +353,22 @@
 
 <h2 id="sec6">6 Отчети</h2>
 <h3>6.1 Генериране на отчет</h3>
-<p>Приложението поддържа генериране на отчети по шаблони. Можете да редактирате съществуващи или да създавате свои собствени шаблони за отчети.
-<br>Генерираният отчет може да бъде отпечатан или записан във формати HTML, PDF, MS Word от диалоговият прозорец за визуализация.</p>
+<p>The application supports the generation of reports on templates. You can edit existing ones or create your own report templates.</p>
+<p>The generated report can be printed or saved in HTML, PDF, MS Word formats from the Preview dialog.</p>
 <p>За да създадете отчет, трябва да изберете монетите, за които данните ще бъдат включени в отчета и да отворите диалоговия прозорец като изберете от менюто <samp>Отчет</samp> &rarr; <samp>Отчет...</samp>:</p>
-<p><img src="/images/manual/report_preview.png"></p>
+<p><img src="/images/manual/report_preview.png" alt="screenshot of report preview dialog"></p>
 <p>В диалоговия прозорец Преглед можете да изберете шаблон на отчета (левият списък в лентата с инструменти), да управлявате режима на преглед и да отпечатате или да запишете отчета във файл в желания формат (десните бутони в лентата с инструменти).</p>
 <p>Забележка: Диалоговият прозорец за преглед използва стара библиотека за генериране на HTML. Затова отчетите в предварителния преглед могат да бъдат повредени и да не съответстват на изгледа в съвременните браузъри. Също така той може да се срине при генериране на големи отчети (повече от 100 монети). За преглеждане и отпечатване можете да използвате функцията „Бърз отчет“ (вижте <a href="#sec6_2">6.2</a>) за отваряне на отчета в браузъра.</p>
 <h3 id="sec6_2">6.2 Бърз отчет</h3>
 <p>Изберете <samp>Отчет</samp> &rarr; <samp>Преглед в браузъра</samp>, за да прегледате бързо отчета за избраните монети в HTML формат. Отчетът ще се отвори в системния браузър.</p>
-<p><img src="/images/manual/report.png"></p>
+<p><img src="/images/manual/report.png" alt="full template screenshot"></p>
 <p>За бърз отчет използвайте шаблона, зададен в диалоговия прозорец „Настройки“ като <samp>Шаблон по подразбиране</samp>.</p>
 <h3>6.3 Редактиране на шаблони</h3>
-<p>За да редактирате шаблони, е необходимо да имате базови познания по HTML. Механизмът за генериране на отчетите от шаблони е базиран на библиотеката с отворен код <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a>.</p>
+<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
 <p>Потребителските шаблони трябва да бъдат поставени в папката Documents (Документи) — обикновено <code>%UserProfile%\Documents\OpenNumismat\templates</code>. Всеки шаблон се намира в отделна подпапка, чието име се използва като име на шаблона.</p>
-<p>Отчетите се генерират в кодировка UTF-8 и съответно шаблоните трябва да са в едно и също кодиране. Следователно, за редактиране на шаблони се препоръчва да използвате например Notepad++.</p>
 <p>Примери за шаблони могат да бъдат намерени в папката на програмата (обикновено <code>C:\Program Files\OpenNumismat\templates</code>) или в <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">изходния код</a> на приложението.</p>
+<p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
 <p>Контекстните променливи <code>records</code> и <code>titles</code> се подават към генератора. <code>titles</code> съдържа имената на полетата за показване (напр. <code>titles.subjectshort</code> - Тема).
  <code>records</code> е масив с всички монети за показване. Всеки елемент от масива съдържа една монета с всички нейни полета (напр. <code>{{records[0].subjectshort}}</code> - темата на първата монета).</p>
 <h3>6.4 Примери за шаблони на отчети</h3>
@@ -386,10 +387,10 @@
 <h3>6.6 Статистика</h3>
 <p><a href="screenshots.html">Снимки</a> на примерни статистически диаграми</p>
 <p>Допълнителни настройки за статистическите диаграми:</p>
-<p><img src="/images/manual/chartSettings.png"></p>
+<p><img src="/images/manual/chartSettings.png" alt="chart settings dialog screenshot"></p>
 <p>Също така за създаване на диаграми и изчисляване на статистически данни можете да използвате MS Excel. Копирайте монетите, които ви трябват, от OpenNumismat в MS Excel или експортирайте таблица с монети във файл на MS Excel (вижте <a href="#sec6_5">6.5</a>) и използвайте неговата функционалност.</p>
 <h3>6.7 Обобщение</h3>
-<p><img src="/images/manual/summary.png"></p>
+<p><img src="/images/manual/summary.png" alt="summary dialog screenshot"></p>
 
 <h2 id="sec7">7 Номенклатури</h2>
 <p>Номенклатурите улесняват въвеждането на данни при редактиране на монета, а също и добавяне на икони (например флагове) към показването на данните. Номенклатурите са достъпни за следните полета: регион, държава, период, владетел, парична единица, монетен двор, серия, оценка, материал, форма, качество, гурт, рядкост, ориентация, вид, дефект, място (покупка или продажба).</p>
