@@ -369,8 +369,8 @@
 <p>Потребителските шаблони трябва да бъдат поставени в папката Documents (Документи) — обикновено <code>%UserProfile%\Documents\OpenNumismat\templates</code>. Всеки шаблон се намира в отделна подпапка, чието име се използва като име на шаблона.</p>
 <p>Примери за шаблони могат да бъдат намерени в папката на програмата (обикновено <code>C:\Program Files\OpenNumismat\templates</code>) или в <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">изходния код</a> на приложението.</p>
 <p>Основният файл на шаблона трябва да се казва <code>coins.htm</code>. Ако е наличен файлът <code>coin.htm</code>, той ще бъде използван като шаблон за генериране на отчет за отделна монета. Също така, ако се генерира отчет за няколко монети, този шаблон ще бъде използван за всяка отделна монета, в допълнение към общия отчет, базиран на шаблона <code>coins.htm</code>.</p>
-<p>The context variables <code>records</code> and <code>titles</code> are passed to the generator. <code>titles</code> contains the names of the fields to display (e.g. <code>{{titles.subjectshort}}</code> - Subject).
- <code>records</code> - an array of all coins to display. Each array element contains one coin with all fields (e.g. <code>{{records[0].subjectshort}}</code> - Subject of first coin). The correspondence of fields can be found in the <a href="fields.html">table</a>.</p>
+<p>Към генератора се подават контекстните променливи <code>records</code> и <code>titles</code>. <code>titles</code> съдържа имената на полетата за показване (например <code>{{titles.subjectshort}}</code> - Тема).
+ <code>records</code> представлява масив с всички монети за показване. Всеки елемент от масива съдържа една монета с всички нейни полета (например <code>{{records[0].subjectshort}}</code> - „Тема“ на първата монета). Съответствието между полетата може да бъде намерено в <a href="fields.html">таблицата</a>.</p>
 <h3>6.4 Примери за шаблони на отчети</h3>
 <p>Commemoratives_ByCountry</p>
 <p><a href="/data/Commemoratives_ByCountry.pdf"><img src="/images/manual/Commemoratives_ByCountry.png" alt="Commemoratives_ByCountry template screenshot"></a></p>
