@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css"></head>
+<body>
+    <div id="main_content_wrap" class="outer">
+<table class="data-table">
+<tr>
+<th>Name in template</th>
+<th>Title in interface</th>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Overall</span> - <span>Main details</span>
+</td></tr>
+<tr>
+<td>title</td>
+<td>Όνομα</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Αξία</td>
+</tr>
+<tr>
+<td>unit</td>
+<td>Μονάδα</td>
+</tr>
+<tr>
+<td>country</td>
+<td>Χώρα</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Έτος</td>
+</tr>
+<tr>
+<td>period</td>
+<td>Περίοδος</td>
+</tr>
+<tr>
+<td>mint</td>
+<td>Νομισματοκοπείο</td>
+</tr>
+<tr>
+<td>mintmark</td>
+<td>Σήμανση νομ/κοπείου</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Τύπος</td>
+</tr>
+<tr>
+<td>series</td>
+<td>Σειρά</td>
+</tr>
+<tr>
+<td>subjectshort</td>
+<td>Θέμα</td>
+</tr>
+<tr>
+<td>ruler</td>
+<td>Χάρακας</td>
+</tr>
+<tr>
+<td>region</td>
+<td>Περιοχή</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Category</td>
+</tr>
+<tr>
+<td>emitent</td>
+<td>Emitent</td>
+</tr>
+<tr>
+<td>native_year</td>
+<td>Year on coin</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Overall</span> - <span>State</span>
+</td></tr>
+<tr>
+<td>status</td>
+<td>Κατάσταση</td>
+</tr>
+<tr>
+<td>grade</td>
+<td>Αξιολόγηση</td>
+</tr>
+<tr>
+<td>defect</td>
+<td>Ελάττωμα</td>
+</tr>
+<tr>
+<td>storage</td>
+<td>Αποθήκευση</td>
+</tr>
+<tr>
+<td>features</td>
+<td>Χαρακτηριστικά</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Ποσότητα</td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Γραμμοκώδικας</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Μορφή</td>
+</tr>
+<tr>
+<td>condition</td>
+<td>Κατάσταση</td>
+</tr>
+<tr>
+<td>grader</td>
+<td>Grader</td>
+</tr>
+<tr>
+<td>seat</td>
+<td>Seat</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>Rating</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Market</span> - <span>Buy</span>
+</td></tr>
+<tr>
+<td>paydate</td>
+<td>Ημερομηνία</td>
+</tr>
+<tr>
+<td>payprice</td>
+<td>Τιμή</td>
+</tr>
+<tr>
+<td>totalpayprice</td>
+<td>Πληρώθηκε</td>
+</tr>
+<tr>
+<td>saller</td>
+<td>Πωλητής</td>
+</tr>
+<tr>
+<td>payplace</td>
+<td>Τόπος</td>
+</tr>
+<tr>
+<td>payinfo</td>
+<td>Πληροφορίες</td>
+</tr>
+<tr>
+<td>buying_invoice</td>
+<td>Invoice</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Market</span> - <span>Sale</span>
+</td></tr>
+<tr>
+<td>saledate</td>
+<td>Ημερομηνία</td>
+</tr>
+<tr>
+<td>saleprice</td>
+<td>Τιμή</td>
+</tr>
+<tr>
+<td>totalsaleprice</td>
+<td>Revenue</td>
+</tr>
+<tr>
+<td>buyer</td>
+<td>Αγοραστής</td>
+</tr>
+<tr>
+<td>saleplace</td>
+<td>Τόπος</td>
+</tr>
+<tr>
+<td>saleinfo</td>
+<td>Πληροφορίες</td>
+</tr>
+<tr>
+<td>sale_invoice</td>
+<td>Invoice</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">Map</td></tr>
+<tr>
+<td>address</td>
+<td>Address</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Latitude</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitude</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Technical data</span> - <span>Parameters</span>
+</td></tr>
+<tr>
+<td>material</td>
+<td>Υλικό</td>
+</tr>
+<tr>
+<td>fineness</td>
+<td>Λεπτότητα</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>Σχήμα</td>
+</tr>
+<tr>
+<td>diameter</td>
+<td>Διάμετρος</td>
+</tr>
+<tr>
+<td>thickness</td>
+<td>Πάχος</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>Βάρος</td>
+</tr>
+<tr>
+<td>obvrev</td>
+<td>Γωνία όψεων</td>
+</tr>
+<tr>
+<td>composition</td>
+<td>Composition</td>
+</tr>
+<tr>
+<td>material2</td>
+<td>Material 2</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Height</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Technical data</span> - <span>Specificity</span>
+</td></tr>
+<tr>
+<td>modification</td>
+<td>Modification</td>
+</tr>
+<tr>
+<td>axis</td>
+<td>Die axis</td>
+</tr>
+<tr>
+<td>real_weight</td>
+<td>Βάρος</td>
+</tr>
+<tr>
+<td>real_diameter</td>
+<td>Διάμετρος</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Technical data</span> - <span>Minting</span>
+</td></tr>
+<tr>
+<td>issuedate</td>
+<td>Ημερ/νία έκδοσης</td>
+</tr>
+<tr>
+<td>quality</td>
+<td>Ποιότητα</td>
+</tr>
+<tr>
+<td>mintage</td>
+<td>Νομισματοκοπεία</td>
+</tr>
+<tr>
+<td>dateemis</td>
+<td>Περίοδος έκδοσης</td>
+</tr>
+<tr>
+<td>technique</td>
+<td>Technique</td>
+</tr>
+<tr>
+<td>note</td>
+<td>Σημείωση</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Design</span> - <span>Obverse</span>
+</td></tr>
+<tr>
+<td>obverseimg</td>
+<td>Πρόσθια όψη</td>
+</tr>
+<tr>
+<td>obversedesign</td>
+<td>Σχέδιο</td>
+</tr>
+<tr>
+<td>obversedesigner</td>
+<td>Σχεδιαστής</td>
+</tr>
+<tr>
+<td>obverseengraver</td>
+<td>Χαράκτης</td>
+</tr>
+<tr>
+<td>obversecolor</td>
+<td>Χρώμα</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Design</span> - <span>Reverse</span>
+</td></tr>
+<tr>
+<td>reverseimg</td>
+<td>Οπίσθια όψη</td>
+</tr>
+<tr>
+<td>reversedesign</td>
+<td>Σχέδιο</td>
+</tr>
+<tr>
+<td>reversedesigner</td>
+<td>Σχεδιαστής</td>
+</tr>
+<tr>
+<td>reverseengraver</td>
+<td>Χαράκτης</td>
+</tr>
+<tr>
+<td>reversecolor</td>
+<td>Χρώμα</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Design</span> - <span>Edge</span>
+</td></tr>
+<tr>
+<td>edge</td>
+<td>Τύπος</td>
+</tr>
+<tr>
+<td>edgelabel</td>
+<td>Ετικέτα</td>
+</tr>
+<tr>
+<td>edgeimg</td>
+<td>Περιφέρεια</td>
+</tr>
+<tr>
+<td>signaturetype</td>
+<td>Τύπος</td>
+</tr>
+<tr>
+<td>signature</td>
+<td>Signature</td>
+</tr>
+<tr>
+<td>signatureimg</td>
+<td>Signature</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>Θέμα</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Classification</span> - <span>Catalogue</span>
+</td></tr>
+<tr>
+<td>catalognum1</td>
+<td>1#</td>
+</tr>
+<tr>
+<td>catalognum2</td>
+<td>N° 2</td>
+</tr>
+<tr>
+<td>catalognum3</td>
+<td>N° 3</td>
+</tr>
+<tr>
+<td>catalognum4</td>
+<td>N° 4</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Classification</span> - <span>Price</span>
+</td></tr>
+<tr>
+<td>price1</td>
+<td>Καλό</td>
+</tr>
+<tr>
+<td>price2</td>
+<td>VF</td>
+</tr>
+<tr>
+<td>price3</td>
+<td>XF</td>
+</tr>
+<tr>
+<td>price4</td>
+<td>Unc</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">
+<span>Classification</span> - <span>Variation</span>
+</td></tr>
+<tr>
+<td>variety</td>
+<td>Ποικιλία</td>
+</tr>
+<tr>
+<td>obversevar</td>
+<td>Πρόσθια όψη</td>
+</tr>
+<tr>
+<td>reversevar</td>
+<td>Οπίσθια όψη</td>
+</tr>
+<tr>
+<td>edgevar</td>
+<td>Περιφέρεια</td>
+</tr>
+<tr>
+<td>varietydesc</td>
+<td>Περιγραφή</td>
+</tr>
+<tr>
+<td>varietyimg</td>
+<td>Ποικιλία</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Σπανιότητα</td>
+</tr>
+<tr>
+<td>url</td>
+<td>Διεύθυνση URL</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">Εικόνες</td></tr>
+<tr>
+<td>photo1</td>
+<td>Φωτογραφία 1</td>
+</tr>
+<tr>
+<td>photo2</td>
+<td>Φωτογραφία 2</td>
+</tr>
+<tr>
+<td>photo3</td>
+<td>Φωτογραφία 3</td>
+</tr>
+<tr>
+<td>photo4</td>
+<td>Φωτογραφία 4</td>
+</tr>
+<tr>
+<td>photo5</td>
+<td>Photo 5</td>
+</tr>
+<tr>
+<td>photo6</td>
+<td>Photo 6</td>
+</tr>
+<tr><td colspan="2" style="text-align: center;">System</td></tr>
+<tr>
+<td>id</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Εικόνα</td>
+</tr>
+<tr>
+<td>createdat</td>
+<td>Δημιουργήθηκε</td>
+</tr>
+<tr>
+<td>updatedat</td>
+<td>Ενημερώθηκε</td>
+</tr>
+<tr>
+<td>sort_id</td>
+<td>Position</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
