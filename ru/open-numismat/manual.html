@@ -362,8 +362,8 @@
 <p><img src="/images/manual/report.png" alt="full template screenshot"></p>
 <p>Для быстрого отчета используется шаблон, установленный в диалоге Настройки в качестве <samp>Шаблона по умолчанию</samp>.</p>
 <h3>6.3 Редактирование шаблонов</h3>
-<p>To edit templates you need to have basic HTML skills. The engine for generating template reports is based on the open-source <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
-The reports are generated in UTF-8 encoding and, accordingly, the templates should be in the same encoding. Therefore, for editing templates it is recommended to use, for example, Notepad++.</p>
+<p>Для редактирования шаблонов необходимы базовые навыки работы с HTML. Механизм генерации отчетов основан на открытой библиотеке <a href="https://jinja.palletsprojects.com/en/stable/">Jinja2</a> library.
+Отчеты генерируются в кодировке UTF-8, и, соответственно, шаблоны должны быть в той же кодировке. Поэтому для редактирования шаблонов рекомендуется использовать, например, Notepad++.</p>
 <p>Пользовательские шаблоны должны располагаться в паке Документы (обычно <code>%UserProfile%\Documents\OpenNumismat\templates</code>). Каждый шаблон в отдельной папке, имя которой используется как название шаблона.</p>
 <p>Примеры шаблонов могут быть найдены в папке программы (обычно <code>C:\Program Files\OpenNumismat\templates</code>) или в <a href="https://github.com/OpenNumismat/open-numismat/tree/master/OpenNumismat/templates">исходных кодах</a>.</p>
 <p>The main template file name must be <code>coins.htm</code>. If <code>coin.htm</code> is present, it will be used as a template for generating a report for a single coin. Also, if a report is generated for multiple coins, it will be used for each individual coin, in addition to the overall report based on the <code>coins.htm</code> template.</p>
