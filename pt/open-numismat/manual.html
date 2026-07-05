@@ -328,7 +328,7 @@ unico para a imagem, que será mostrado como dica do painel de imagens (veja <a 
 <p>Para criar uma colecção, seleccione o menu <samp>Ficheiro</samp> &rarr; <samp>Novo...</samp>. No diálogo seguinte, seleccione a localização e o nome do novo ficheiro de colecção.</p>
 <p>Para abrir um ficheiro de colecção já existente, seleccione <samp>Ficheiro</samp> &rarr; <samp>Abrir...</samp> e seleccione o ficheiro pretendido. Também pode associar ficheiros de colecção (por exemplo, se seleccionar a opção adequada durante a instalação da aplicação) e abri-los automaticamente quando os chamar a partir do gestor de ficheiros.
 <br>O menu Ficheiro mostra até 7 colecções abertas recentemente, disponíveis para abertura rápida.</p>
-<h3>5.2 Salvaguarda</h3>
+<h3 id="sec5_2">5.2 Salvaguarda</h3>
 <p>Para prevenir a perda de dados da colecção devido a problemas de equipamento, do programa, erros humanos ou até mesmo provocados por programas maliciosos, recomenda-se que realize uma salvaguarda. Para tal, seleccione o menu <samp>Ficheiro</samp> &rarr; <samp>Salvaguarda</samp>.  Isto criará uma cópia da colecção actual com o carimbo de data e hora (por exemplo, demo_171026115112.db para uma cópia feita às 11:51:12 a 26/10/2017) na pasta especificada nas definições. Para restaurar os dados, basta renomear a salvaguarda, eliminando este carimbo. Pode também fazer uma cópia utilizando o seu sistema operativo.</p>
 <p>Nota: recomenda-se guardar as salvaguardas num suporte físico diferente do computador de trabalho. Optar por um serviço de armazenamento na nuvem pode ser uma boa opção. É igualmente importante fazer salvaguardas regularmente, antes e depois de efectuar um grande número de alterações (veja <a href="#sec8_1">8.1</a>).</p>
 <h3 id="sec5_3">5.3 Vácuo</h3>
@@ -411,6 +411,12 @@ Os relatórios são gerados com codificação UTF-8 e, por conseguinte, os model
 <h3 id="sec8_1">8.1 Principal</h3>
 <p><img src="/images/settingsMain.png" alt="Settings dialog Main section screenshot"></p>
 
+<h4>Pasta de segurança</h4>
+<p>The folder where backups will be saved. See <a href="#sec5_2">5.2</a>.</p>
+<h4>Make autobackup after record changes</h4>
+<p>You can enable autobackup. This feature will make backups upon closing the collection after changing specified count of records.</p>
+<h4>Enviar informação de erros para o autor</h4>
+<p>Enabling this flag allows internal error information to be sent to the author's website. This helps improve OpenNumismat. To better understand and quickly fix the error, please include a description of when the error occurs.</p>
 <h4>Aceleração do armazenamento</h4>
 <p>O motor SQLite tem múltiplas definições que afectam a velocidade e estabilidade:</p>
 <ul>
@@ -418,8 +424,13 @@ Os relatórios são gerados com codificação UTF-8 e, por conseguinte, os model
 <li>Rápido - podem-se perder alterações quando falta energia durante a operação (recomendada para a maioria dos casos);</li>
 <li>Extra-rápido (perigoso) - recomendado quando faz um grande número de alterações, desde que tenha uma salvaguarda.</li>
 </ul>
-<h4>Salvaguardas automáticas</h4>
-<p>Pode activar a segurança automática. Esta funcionalidade faz uma segurança após alterar um dado número de registos.</p>
+<h4>Utilizar a câmara</h4>
+<p>Allows the use of a webcam for scanning barcodes or capturing images in the Image Editor.</p>
+<h4>Show counters in Tree and Statistics</h4>
+<p><img src="/images/manual/counters_in_tree.png" alt="Screenshot shows counters in Tree"></p>
+
+<h4>Cor de fundo da imagem</h4>
+<p>When adding an image with a transparency or removing background in the Image Editor, the background will be replaced with the specified color.</p>
 <h3 id="sec8_2">8.2 Colecção</h3>
 Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/settingsCollection.png" alt="Settings dialog Collection section screenshot"></p>
@@ -433,6 +444,7 @@ Definições específicas da colecção (armazenadas para cada colecção):
 <p><img src="/images/manual/main_height.png"></p>
 
 <h4>Imagens no fundo</h4>
+<p>Swaps the Image and Info panels.</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h4>Formato livre em campos numéricos</h4>
