@@ -316,7 +316,7 @@ Per incollare un link a un file locale, puoi fare drag'n'drop o copiare e incoll
 <p>Per creare una nuova collezione, seleziona il menu <samp>File</samp> &rarr; <samp>New...</samp>. Nella finestra di dialogo che si apre, seleziona la posizione e il nome del file della nuova collezione.</p>
 <p>To open an existing collection file, select the <samp>File</samp> &rarr; <samp>Open...</samp> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
 <br>The File menu displays up to 7 recently opened collections available for quick opening.</p>
-<h3>5.2 Backup</h3>
+<h3 id="sec5_2">5.2 Backup</h3>
 <p>Per evitare la perdita dei dati della collezione a causa di errori hardware, software, umani o dell’azione di programmi dannosi, è consigliato eseguire un backup. Per creare una copia di backup della collezione, seleziona il menu <samp>File</samp> &rarr; <samp>Backup</samp>. Questo creerà una copia della collezione corrente con aggiunta la data e l’ora (ad esempio, demo_171025115112.db per la copia effettuata alle 11:51:12 del 25/10/2017) nella directory specificata nelle impostazioni. Per ripristinare i dati, è sufficiente rinominare il file di backup eliminando il timestamp. È anche possibile copiare il file della collezione utilizzando il sistema operativo.</p>
 <p>Nota: conserva i backup su un supporto diverso da quello di lavoro. Anche un servizio cloud come Dropbox è una buona scelta. Esegui backup regolari, soprattutto prima o dopo molte modifiche (vedi <a href="#sec8_1">8.1</a>).</p>
 <h3 id="sec5_3">5.3 Compressione - Eliminazione spazio vuoto</h3>
@@ -399,6 +399,12 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <h3 id="sec8_1">8.1 Principale</h3>
 <p><img src="/images/settingsMain.png" alt="Settings dialog Main section screenshot"></p>
 
+<h4>Cartella di backup</h4>
+<p>The folder where backups will be saved. See <a href="#sec5_2">5.2</a>.</p>
+<h4>Make autobackup after record changes</h4>
+<p>You can enable autobackup. This feature will make backups upon closing the collection after changing specified count of records.</p>
+<h4>Manda informazione dell'errore all'autore</h4>
+<p>Enabling this flag allows internal error information to be sent to the author's website. This helps improve OpenNumismat. To better understand and quickly fix the error, please include a description of when the error occurs.</p>
 <h4>Accelerazione della memorizzazione</h4>
 <p>Il motore di database SQLite ha più impostazioni che influenzano la velocità e l'affidabilità:</p>
 <ul>
@@ -406,8 +412,13 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <li>Veloce - i cambiamenti possono essere persi quando l'alimentazione viene spenta durante il funzionamento (consigliato per la maggior parte dei casi);</li>
 <li>Extra veloce (pericoloso) - consigliato quando si esegue un gran numero di modifiche, purché si esegua un backup.</li>
 </ul>
-<h4>Backup automatico</h4>
-<p>Puoi abilitare il backup automatico. Questa funzione farà il backup dopo aver modificato un numero specificato di record.</p>
+<h4>Usa la fotocamera</h4>
+<p>Allows the use of a webcam for scanning barcodes or capturing images in the Image Editor.</p>
+<h4>Show counters in Tree and Statistics</h4>
+<p><img src="/images/manual/counters_in_tree.png" alt="Screenshot shows counters in Tree"></p>
+
+<h4>Colore di sfondo dell'immagine</h4>
+<p>When adding an image with a transparency or removing background in the Image Editor, the background will be replaced with the specified color.</p>
 <h3 id="sec8_2">8.2 Collezione</h3>
 Impostazioni specifiche della collezione (memorizzate per ogni file di collezione):
 <p><img src="/images/settingsCollection.png" alt="Settings dialog Collection section screenshot"></p>
@@ -421,6 +432,7 @@ Impostazioni specifiche della collezione (memorizzate per ogni file di collezion
 <p><img src="/images/manual/main_height.png"></p>
 
 <h4>Immagini in basso</h4>
+<p>Swaps the Image and Info panels.</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h4>Campi numerici in formato libero</h4>
