@@ -365,7 +365,7 @@ For paste link to a local file you can drag'n'drop or copy-paste file into text 
 <p>To open an existing collection file, select the <samp>File</samp> &rarr; <samp>Open...</samp> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
 <br>The File menu displays up to 7 recently opened collections available for quick opening.
 
-<h3>5.2 Backup</h3>
+<h3 id="sec5_2">5.2 Backup</h3>
 <p>To prevent data loss of the collection due to hardware, software, human errors, as well as the work of malicious programs, it is recommended to perform a backup. To create a backup copy of the collection, select the menu <samp>File</samp> &rarr; <samp>Backup</samp>. This will create a copy of the current collection with the date and time stamp added (for example, demo_171025115112.db for the copy made at 11:51:12 on 25/10/2017) in the directory specified in the settings. To restore the data, just rename the backup file by deleting the time stamp. You can also copy the collection file using your OS.
 <p>Note: It is recommended to store backups on a physical medium other than the worker. Choosing a cloud storage, such as Dropbox, can be a good option. It is also important to make backup copies on a regular basis, before or after making a large number of changes (see <a href="#sec8_1">8.1</a>).
 
@@ -459,6 +459,15 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <h3 id="sec8_1">8.1 Main</h3>
 <p><img src="/images/settingsMain.png" alt="Settings dialog Main section screenshot"></p>
 
+<h4>Backup folder</h4>
+<p>The folder where backups will be saved. See <a href="#sec5_2">5.2</a>.
+
+<h4>Make autobackup after record changes</h4>
+<p>You can enable autobackup. This feature will make backups upon closing the collection after changing specified count of records.
+
+<h4>Send error info to author</h4>
+<p>Enabling this flag allows internal error information to be sent to the author's website. This helps improve OpenNumismat. To better understand and quickly fix the error, please include a description of when the error occurs.
+
 <h4>Acceleration of storage</h4>
 <p>The SQLite database engine have a multiple settings that affect the speed and reliability:
 <ul>
@@ -467,8 +476,14 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <li>Extra fast (dangerous) - recommended when you perform a large number of changes, provided that you perform a backup.
 </ul>
 
-<h4>Autobackup</h4>
-<p>You can enable autobackup. This feature will make backups after changing specified count of records.
+<h4>Use webcam</h4>
+<p>Allows the use of a webcam for scanning barcodes or capturing images in the Image Editor.
+
+<h4>Show counters in Tree and Statistics</h4>
+<p><img src="/images/manual/counters_in_tree.png" alt="Screenshot shows counters in Tree"></p>
+
+<h4>Image background color</h4>
+<p>When adding an image with a transparency or removing background in the Image Editor, the background will be replaced with the specified color.
 
 <h3 id="sec8_2">8.2 Collection</h3>
 Collection specific settings (stored for each collection file):
@@ -484,6 +499,7 @@ Collection specific settings (stored for each collection file):
 <p><img src="/images/manual/main_height.png"></p>
 
 <h4>Images at bottom</h4>
+<p>Swaps the Image and Info panels.
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h4>Free format numeric fields</h4>
