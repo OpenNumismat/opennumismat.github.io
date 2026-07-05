@@ -330,7 +330,7 @@ Um einen Link zu einer lokalen Datei einzufügen, können Sie die Datei per Drag
 <p>Um eine neue Sammlung zu erstellen, wählen Sie das Menü <samp>Datei</samp> &rarr; <samp>Neu...</samp>. Wählen Sie im sich öffnenden Dialog den Speicherort und den Namen der neuen Sammlungsdatei aus.</p>
 <p>To open an existing collection file, select the <samp>File</samp> &rarr; <samp>Open...</samp> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
 <br>The File menu displays up to 7 recently opened collections available for quick opening.</p>
-<h3>5.2 Sicherung</h3>
+<h3 id="sec5_2">5.2 Sicherung</h3>
 <p>Um einen Datenverlust der Sammlung durch Hardware-, Software- oder Bedienfehler sowie durch die Einwirkung bösartiger Programme zu verhindern, wird die Erstellung einer Sicherungskopie empfohlen. Um eine Sicherungskopie der Sammlung zu erstellen, wählen Sie im Menü <samp>Datei</samp> &rarr; <samp>Sicherung</samp>. Hierbei wird eine Kopie der aktuellen Sammlung – versehen mit einem Datums- und Zeitstempel (z. B. demo_171025115112.db für eine am 25.10.2017 um 11:51:12 Uhr erstellte Kopie) – in dem in den Einstellungen festgelegten Verzeichnis abgelegt. Um die Daten wiederherzustellen, benennen Sie die Sicherungsdatei einfach um, indem Sie den Zeitstempel entfernen. Alternativ können Sie die Sammlungsdatei auch direkt über das Betriebssystem kopieren.</p>
 <p>Hinweis: Es wird empfohlen, Backups auf einem physischen Speichermedium zu sichern, auf der nicht die Arbeitsdatei  ist. Die Wahl eines Cloud-Speichers – z.B. Dropbox, iCloud – kann hierfür eine gute Option sein. Zudem ist es wichtig, regelmäßig Sicherungskopien zu erstellen – entweder vor oder nach der Vornahme einer größeren Anzahl von Änderungen (siehe<a href="#sec8_1">8.1</a>).</p>
 <h3 id="sec5_3">5.3 Komprimieren</h3>
@@ -413,6 +413,12 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <h3 id="sec8_1">8.1 Hauptteil</h3>
 <p><img src="/images/settingsMain.png" alt="Settings dialog Main section screenshot"></p>
 
+<h4>Backup-Ordner</h4>
+<p>The folder where backups will be saved. See <a href="#sec5_2">5.2</a>.</p>
+<h4>Make autobackup after record changes</h4>
+<p>You can enable autobackup. This feature will make backups upon closing the collection after changing specified count of records.</p>
+<h4>Fehlerbericht an den Autor senden</h4>
+<p>Enabling this flag allows internal error information to be sent to the author's website. This helps improve OpenNumismat. To better understand and quickly fix the error, please include a description of when the error occurs.</p>
 <h4>Beschleunigen des Speichervorgangs</h4>
 <p>Die SQLite-Datenbank-Engine verfügt über zahlreiche Einstellungen, die die Geschwindigkeit und Zuverlässigkeit beeinflussen:</p>
 <ul>
@@ -420,8 +426,13 @@ The reports are generated in UTF-8 encoding and, accordingly, the templates shou
 <li>Schnell - Änderungen können verloren gehen, wenn die Stromzufuhr während des Betriebs unterbrochen wird (für die meisten Fälle empfohlen);</li>
 <li>Besonders schnell (gefährlich) - empfohlen, wenn Sie eine große Anzahl von Änderungen vornehmen, vorausgesetzt, Sie erstellen vorher eine Datensicherung.</li>
 </ul>
-<h4>Automatische Sicherung</h4>
-<p>Sie können die automatische Datensicherung aktivieren. Diese Funktion erstellt nach jeder Änderung einer festgelegten Anzahl von Datensätzen eine Sicherungskopie.</p>
+<h4>Webcam benutzen</h4>
+<p>Allows the use of a webcam for scanning barcodes or capturing images in the Image Editor.</p>
+<h4>Show counters in Tree and Statistics</h4>
+<p><img src="/images/manual/counters_in_tree.png" alt="Screenshot shows counters in Tree"></p>
+
+<h4>Bild Hintergrundfarbe</h4>
+<p>When adding an image with a transparency or removing background in the Image Editor, the background will be replaced with the specified color.</p>
 <h3 id="sec8_2">8.2 Sammlung</h3>
 Sammlungsspezifische Einstellungen (für jede Sammlungsdatei gespeichert):
 <p><img src="/images/settingsCollection.png" alt="Settings dialog Collection section screenshot"></p>
@@ -435,6 +446,7 @@ Sammlungsspezifische Einstellungen (für jede Sammlungsdatei gespeichert):
 <p><img src="/images/manual/main_height.png"></p>
 
 <h4>Bilder unten</h4>
+<p>Swaps the Image and Info panels.</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h4>Freies Format in numerischen Feldern</h4>
