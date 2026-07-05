@@ -328,7 +328,7 @@
 <p>За да създадете нова колекция, изберете менюто <samp>Файл</samp> &rarr; <samp>Нова...</samp>. В диалоговия прозорец, който се отваря, изберете местоположението и името на новия файл за колекция.</p>
 <p>To open an existing collection file, select the <samp>File</samp> &rarr; <samp>Open...</samp> menu and select the desired file. You can also associate collection files (for example, if you select the appropriate option when installing the application) and open them automatically when you "call" from the file manager.
 <br>The File menu displays up to 7 recently opened collections available for quick opening.</p>
-<h3>5.2 Резервно копие</h3>
+<h3 id="sec5_2">5.2 Резервно копие</h3>
 <p>За да се предотврати загубата на данни от колекцията поради хардуерен, софтуерен или човешки грешки, както и работата на злонамерени програми, се препоръчва да се направи резервно копие. За да създадете резервно копие на колекцията, изберете менюто <samp>Файл</samp> &rarr; <samp>Резервно копие</samp>. Това ще създаде копие на текущата колекция с добавени дата и час (например demo_171025115112.db за копието, направено в 11:51:12 ч. на 25.10.2017 г.) в директорията, посочена в настройките. За да възстановите данните, просто преименувайте архивния файл, като изтриете времевия печат. Можете също така да копирате файла на колекцията, като използвате операционната си система.</p>
 <p>Бележка: Препоръчително е да съхранявате резервни копия на физически носител, различен от работния. Изборът на облачно хранилище, като Dropbox, може да бъде добър вариант. Също така е важно да правите резервни копия редовно, преди или след извършване на голям брой промени (вижте <a href="#sec8_1">8.1</a>).</p>
 <h3 id="sec5_3">5.3 Vacuum</h3>
@@ -411,6 +411,12 @@
 <h3 id="sec8_1">8.1 Основни</h3>
 <p><img src="/images/settingsMain.png" alt="Settings dialog Main section screenshot"></p>
 
+<h4>Папка за резервно копие</h4>
+<p>The folder where backups will be saved. See <a href="#sec5_2">5.2</a>.</p>
+<h4>Make autobackup after record changes</h4>
+<p>You can enable autobackup. This feature will make backups upon closing the collection after changing specified count of records.</p>
+<h4>Изпращане на информация за грешка на автора</h4>
+<p>Enabling this flag allows internal error information to be sent to the author's website. This helps improve OpenNumismat. To better understand and quickly fix the error, please include a description of when the error occurs.</p>
 <h4>Ускоряване на съхранението</h4>
 <p>SQLite базата данни има множество настройки, които влияят на скоростта и надеждността:</p>
 <ul>
@@ -418,8 +424,13 @@
 <li>Бързо - промените могат да бъдат загубени при изключване на захранването по време на работа (препоръчва се в повечето случаи);</li>
 <li>Изключително бързо (опасно) - препоръчва се, когато извършите голям брой промени, при условие че сте направили резервно копие.</li>
 </ul>
-<h4>Автоматично създаване на резервно копие</h4>
-<p>Можете да активирате автоматично създаване на резервно копие. Тази функция ще направи резервно копие след промяна на определен брой записи.</p>
+<h4>Използване на уеб камера</h4>
+<p>Allows the use of a webcam for scanning barcodes or capturing images in the Image Editor.</p>
+<h4>Show counters in Tree and Statistics</h4>
+<p><img src="/images/manual/counters_in_tree.png" alt="Screenshot shows counters in Tree"></p>
+
+<h4>Фонов цвят на изображението</h4>
+<p>When adding an image with a transparency or removing background in the Image Editor, the background will be replaced with the specified color.</p>
 <h3 id="sec8_2">8.2 Колекция</h3>
 Специфични настройки на колекцията (съхраняват се за всеки колекционен файл):
 <p><img src="/images/settingsCollection.png" alt="Settings dialog Collection section screenshot"></p>
@@ -433,6 +444,7 @@
 <p><img src="/images/manual/main_height.png"></p>
 
 <h4>Изображенията в долната част на прозореца</h4>
+<p>Swaps the Image and Info panels.</p>
 <p><img src="/images/manual/main_bottom.png"></p>
 
 <h4>Свободен формат в цифровите полета</h4>
