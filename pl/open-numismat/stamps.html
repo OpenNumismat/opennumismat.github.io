@@ -4,11 +4,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="theme-color" content="#373737">
 <meta name="description" content="With OpenNumismat, you will be able to organize and manage your collection: create an advanced catalogue, wish and selling lists, view statistics for your collection.">
 <meta name="keywords" content="opennumismat, numismatic, coin, coins, collecting, cataloguing, coin collecting software, numismatic software, coin collecting, coin collection, coin software, free, database">
 <title>Stamp collecting software - OpenNumismat - free collecting software</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
 </head>
 <body>
 
@@ -69,9 +72,11 @@
 <h2>Zrzuty ekranu</h2>
 <div class="images">
 <p>Główne okno</p>
-<p><a href="/images/screenMain-stamp.png"><img src="/images/screenMain-stamp.png"></a></p>
+<p><a href="/images/screenMain-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenMain-stamp.png"></a></p>
 <p>Edit stamp details</p>
-<p><a href="/images/screenEdit-stamp.png"><img src="/images/screenEdit-stamp.png"></a></p>
+<p><a href="/images/screenEdit-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenEdit-stamp.png"></a></p>
 </div>
 </div>
       </section>
@@ -85,7 +90,11 @@
 </div>
     </div>
 
-<script type="text/javascript">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script><script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
