@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
   </head>
 
   <body>
@@ -86,9 +88,17 @@ Screenshots
 </h2>
 <div class="images">
 <p>Main window</p>
-<p><a href="/images/screenMain-stamp.png"><img src="/images/screenMain-stamp.png"></a></p>
+<p>
+  <a href="/images/screenMain-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenMain-stamp.png">
+  </a>
+</p>
 <p>Edit stamp details</p>
-<p><a href="/images/screenEdit-stamp.png"><img src="/images/screenEdit-stamp.png"></a></p>
+<p>
+  <a href="/images/screenEdit-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenEdit-stamp.png">
+  </a>
+</p>
 </div>
 </div>
       </section>
@@ -103,6 +113,11 @@ Screenshots
     </div>
     </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script>
 <script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;

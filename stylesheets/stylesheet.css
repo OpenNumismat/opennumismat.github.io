@@ -139,7 +139,7 @@ p img {
   border: none;
   max-width: 100%;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+/*image-rendering: crisp-edges;*/
 }
 
 #github-page ul, ol, dl {
@@ -432,10 +432,10 @@ only screen and (min-resolution: 144dpi)  {
   margin: auto;
 }
 
-.mySlides img {
+.splide__slide img {
   max-width: 100%;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+/*image-rendering: crisp-edges;*/
 }
 
 /* Next & previous buttons */
