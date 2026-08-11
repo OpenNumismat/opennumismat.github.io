@@ -10,6 +10,8 @@
 <title>Software per la collezione di francobolli - OpenNumismat - software gratuito per collezionare</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
 </head>
 <body>
 
@@ -70,9 +72,11 @@
 <h2>Anteprime</h2>
 <div class="images">
 <p>Finestra principale</p>
-<p><a href="/images/screenMain-stamp.png"><img src="/images/screenMain-stamp.png"></a></p>
+<p><a href="/images/screenMain-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenMain-stamp.png"></a></p>
 <p>Dettagli modifica francobolli</p>
-<p><a href="/images/screenEdit-stamp.png"><img src="/images/screenEdit-stamp.png"></a></p>
+<p><a href="/images/screenEdit-stamp.png" class="glightbox" data-gallery="edit-gallery">
+    <img src="/images/screenEdit-stamp.png"></a></p>
 </div>
 </div>
       </section>
@@ -87,7 +91,11 @@
 </div>
     </div>
 
-<script type="text/javascript">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script><script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
