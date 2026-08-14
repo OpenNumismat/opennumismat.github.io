@@ -6,9 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="theme-color" content="#373737">
 <meta name="description" content="OpenNumismat">
+<title>Pytania i Odpowiedzi - OpenNumismat - bezpłatny program numizmatyczny</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>Pytania i Odpowiedzi - OpenNumismat - bezpłatny program numizmatyczny</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
 </head>
 <body>
 
@@ -99,7 +101,8 @@ Or coin and medal information with images from <a href="http://numismatics.org/s
 <p>Pole obrazka składa się z dwóch zdjęć - awersu i rewersu ze strony Projekt. Pozostałe obrazy można wyświetlić oddzielnie w tabeli monet lub wyświetlić w okienku obrazu.</p>
 <h3>Image panel is not shown</h3>
 <p>Drag left on this red dot:</p>
-<p><img src="/images/fixHiddenImages.png"></p>
+<p><a href="/images/fixHiddenImages.png" class="glightbox">
+    <img src="/images/fixHiddenImages.png"></a></p>
 
 <h3>Czy mogę używać różnych referencji dla różnych kolekcji? Czy mogę dołączyć odniesienie do kolekcji?</h3>
 <p>Yes, menu <samp>Reference</samp> &rarr; <samp>Attach current reference</samp>.</p>
@@ -116,7 +119,11 @@ Or coin and medal information with images from <a href="http://numismatics.org/s
 </div>
 </div>
 
-<script type="text/javascript">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script><script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
