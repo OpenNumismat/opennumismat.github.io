@@ -176,6 +176,55 @@ function init_tree(tree) {
   });
 }
 
+const sheldon_grade_scale = [
+  "MS-70",
+  "PF-70",
+  "MS-69",
+  "PF-69",
+  "MS-68",
+  "PF-68",
+  "MS-67",
+  "PF-67",
+  "MS-66",
+  "PF-66",
+  "MS-65",
+  "PF-65",
+  "MS-64",
+  "PF-64",
+  "MS-63",
+  "PF-63",
+  "MS-62",
+  "PF-62",
+  "MS-61",
+  "PF-61",
+  "MS-60",
+  "PF-60",
+  "AU-58",
+  "AU-55",
+  "AU-53",
+  "AU-50",
+  "EF-45",
+  "EF-40",
+  "VF-35",
+  "VF-30",
+  "VF-25",
+  "VF-20",
+  "F-15",
+  "F-12",
+  "VG-10",
+  "VG-8",
+  "G-6",
+  "G-4",
+];
+
+function add_sheldon_grade_references() {
+  let row = '';
+  for (data of sheldon_grade_scale) {
+    row += `<li style="display: none;"><label><input type="checkbox" id="grade" class="data-references-value data-sheldon-grade" data-value="grade" checked>${data}</label></li>`;
+  }
+  return row;
+}
+
 function reload_other_references() {
   const lang = $("#language").val();
   const url = `https://raw.githubusercontent.com/OpenNumismat/references/master/data/reference_${lang}.json`
@@ -187,10 +236,17 @@ function reload_other_references() {
       row += `<label><input type="checkbox" id="${reference['name']}" class="data-references" data-value="${reference['name']}" checked>${reference['title']}</label>`;
 
       row += '<ul class="nested">';
+
+      class_name = 'data-references-value';
+      if (reference['name'] === 'grade') {
+        class_name += ' data-base-grade';
+        row += add_sheldon_grade_references();
+      }
+
       for (key in reference['values']) {
         var val = reference['values'][key]
         row += '<li>';
-        row += `<label><input type="checkbox" id="${reference['name']}_${key}" class="data-references-value" data-value="${key}" checked>`;
+        row += `<label><input type="checkbox" id="${reference['name']}_${key}" class="${class_name}" data-value="${key}" checked>`;
         if (reference['has_icons'])
           row += '<img class="img-icon">';
         row += val;
@@ -250,6 +306,18 @@ function update_contemporary_era() {
   else {
     $('.data-unit-contemporary').parent().parent().hide();
     $('.data-country-disappeared').parent().parent().hide();
+  }
+}
+
+function update_sheldon_grade() {
+  var use_sheldon_grade = $("#sheldon-grade").is(":checked");
+  if (use_sheldon_grade) {
+    $('.data-base-grade').parent().parent().hide();
+    $('.data-sheldon-grade').parent().parent().show();
+  }
+  else {
+    $('.data-base-grade').parent().parent().show();
+    $('.data-sheldon-grade').parent().parent().hide();
   }
 }
 
@@ -416,6 +484,10 @@ $(function () {
     update_contemporary_era();
   });
 
+  $('#sheldon-grade').change(function () {
+    update_sheldon_grade();
+  });
+
   $('.collapse-button').click(function () {
     $(this).parent().parent().find('.nested').removeClass('expand');
     $(this).parent().parent().find('.caret').removeClass('caret-down');
@@ -564,6 +636,7 @@ function createdb(db) {
   var include_unrecognized = $("#include-unrecognized").is(":checked");
   var include_dependent = $("#include-dependent").is(":checked");
   var include_contemporary = $("#era-contemporary").is(":checked");
+  var use_sheldon_grade = $("#sheldon-grade").is(":checked");
   var region_id = 0;
   var insert_regions_sql = "";
   var country_id = 0;
@@ -640,7 +713,13 @@ function createdb(db) {
   for (reference of references) {
     if ($(reference).is(':checked') || $(reference).prop('indeterminate')) {
       var reference_name = $(reference).data('value');
-      values = $(reference).parent().parent().find('.data-references-value');
+      var grade_class = '';
+      if (reference_name == 'grade')
+        if (use_sheldon_grade)
+          grade_class = '.data-sheldon-grade';
+        else
+          grade_class = '.data-base-grade';
+      values = $(reference).parent().parent().find('.data-references-value'+grade_class);
       for (value of values) {
         if ($(value).is(':checked') || $(value).prop('indeterminate')) {
           img_bytes = other_images[$(value).attr('id')];
