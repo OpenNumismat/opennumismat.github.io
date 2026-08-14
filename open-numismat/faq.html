@@ -8,10 +8,13 @@
     <meta name="theme-color" content="#373737">
     <meta name="description" content="OpenNumismat">
 
+    <title>FAQ - OpenNumismat - free coin collecting software</title>
+
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-    <title>FAQ - OpenNumismat - free coin collecting software</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
   </head>
 
   <body>
@@ -121,7 +124,11 @@ Or coin and medal information with images from <a href="http://numismatics.org/s
 
 <h3>Image panel is not shown</h3>
 <p>Drag left on this red dot:
-<p><img src="/images/fixHiddenImages.png"></p>
+<p>
+  <a href="/images/fixHiddenImages.png" class="glightbox">
+    <img src="/images/fixHiddenImages.png">
+  </a>
+</p>
 
 <h3>Can I use different reference for different collections? Can I attach reference to collection?</h3>
 <p>Yes, menu <samp>Reference</samp> &rarr; <samp>Attach current reference</samp>.
@@ -142,6 +149,11 @@ Or coin and medal information with images from <a href="http://numismatics.org/s
     </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script>
 <script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
