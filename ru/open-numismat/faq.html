@@ -6,9 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="theme-color" content="#373737">
 <meta name="description" content="OpenNumismat">
+<title>FAQ - OpenNumismat - бесплатная программа для коллекционеров монет</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>FAQ - OpenNumismat - бесплатная программа для коллекционеров монет</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
 </head>
 <body>
 
@@ -99,7 +101,8 @@
 <p>Поле изображения формируется из двух фотографий - аверса и реверса со страницы Дизайн. Остальные изображения можно вывести отдельно в таблице монет или просматривать на панели изображений.</p>
 <h3>Не видно панель Изображений</h3>
 <p>Перетащите влево в этой красной точке:</p>
-<p><img src="/images/fixHiddenImages.png"></p>
+<p><a href="/images/fixHiddenImages.png" class="glightbox">
+    <img src="/images/fixHiddenImages.png"></a></p>
 
 <h3>Могу ли я использовать разные справочники для разных коллекций? Могу ли я прикрепить справочник к коллекции?</h3>
 <p>Да, меню <samp>Справочник</samp> &rarr; <samp>Прикрепить текущий справочник</samp>.</p>
@@ -116,7 +119,11 @@
 </div>
 </div>
 
-<script type="text/javascript">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script><script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
