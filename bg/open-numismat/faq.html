@@ -6,9 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="theme-color" content="#373737">
 <meta name="description" content="OpenNumismat">
+<title>Често задавани въпроси - OpenNumismat - безплатен софтуер за колекциониране на монети</title>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<title>Често задавани въпроси - OpenNumismat - безплатен софтуер за колекциониране на монети</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3/dist/js/glightbox.min.js"></script>
 </head>
 <body>
 
@@ -99,7 +101,8 @@
 <p>Изображението се създава автоматично от лицевата и обратната снимка, добавени в раздел „Дизайн“. Всички останали изображения могат да се показват отделно в таблицата с монети или да се преглеждат в панела с изображения.</p>
 <h3>Панелът с изображения не се показва</h3>
 <p>Дръпнете наляво от тази червена точка:</p>
-<p><img src="/images/fixHiddenImages.png"></p>
+<p><a href="/images/fixHiddenImages.png" class="glightbox">
+    <img src="/images/fixHiddenImages.png"></a></p>
 
 <h3>Мога ли да използвам различна номенклатура за различни колекции? Мога ли да прикача номенклатура към колекция?</h3>
 <p>Да, меню <samp>Номенклатура</samp> &rarr; <samp>Прикачване на текущата номенклатура</samp>.</p>
@@ -116,7 +119,11 @@
 </div>
 </div>
 
-<script type="text/javascript">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox();
+  });
+</script><script type="text/javascript">
 reformal_wdg_domain="OpenNumismat";
 reformal_wdg_mode=0;
 reformal_wdg_title="OpenNumismat";
